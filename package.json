@@ -1,0 +1,24 @@
+{
+  "name": "cocos2dx-docs-pre-test",
+  "version": "1.16",
+  "description": "Documentation",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-wrapclass": "0.0.3",
+    "gitment": "0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "gitbook install && gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drelaptop/just4test.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/drelaptop/just4test/issues"
+  },
+  "homepage": "https://github.com/drelaptop/just4test#readme"
+}
