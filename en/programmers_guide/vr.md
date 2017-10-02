@@ -69,7 +69,7 @@ of the [__Cocos Command-Line Tool__](../editors_and_tools/cocosCLTool/) to add _
 You always need to __import__ the `vrsdkbase`. This step takes care of modifying your projects
 to support __VR__.
 
-{% codetabs name="shell", type="sh" -%}
+{% codetabs name="shell", type="sh -%}
 $ cocos package import -v -b vrsdkbase --anysdk
 {%- endcodetabs %}
 
@@ -118,7 +118,7 @@ your projects root directory will take care of everything. Here is an example fo
 installing __GearVR__ in C++, JavaScript and Lua:
 
 {% codetabs name="shell", type="sh" -%}
-## in C++
+# in C++
 
 # first, install vrsdkbase
 $ cocos package import -v -b vrsdkbase --anysdk
@@ -132,7 +132,7 @@ $ python vrsdks/switchVRPlatform.py -p gearvr-sdk
 
 {% codetabs name="shell", type="sh" -%}
 
-## in JavaScript and Lua
+# in JavaScript and Lua
 
 # first, install vrsdkbase
 $ cocos package import -v -b vrsdkbase --anysdk
@@ -156,7 +156,7 @@ upon your __Runtime Platform__. Please refer to the table at the start of this d
 Running __GearVR__, __Deepoon VR__ or __Google VR__ on __Android__ requires a change
 in compile flags. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+{% codetabs name="shell", type="sh" -%}
 # from a command-line
 $ cocos run -p android --app-abi armeabi-v7a
 
