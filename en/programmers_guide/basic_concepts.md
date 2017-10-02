@@ -508,11 +508,3 @@ We have gone through a lot of Cocos2d-x concepts. Take a deep breath.
 Don't worry. Just dive in with your ideas and take it one step at a time.
 Cocos2d-x and programming in general are not skills that are learned
 overnight. These take practice and understanding. Remember that the [forums](http://discuss.cocos2d-x.org) are also there to help you with questions.-->
-
-  </span>
-
-  <span class="tab-js tab_content">
-
-## 中文
-
-  </span>
