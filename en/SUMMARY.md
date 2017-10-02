@@ -94,15 +94,17 @@
 - [Audio operations]()
 - [SimpleAudio Engine vs Audio Engine]()
 
-## #Advanced Topics
+### Advanced Topics
 - [File System Access](programmers_guide/advanced_topics.md)
 - [Networking with HTTP]()
 - [Shaders and Materials]()
 - [Optimizing Graphics]()
 - SQLite
 
-### Installations
+### VR (virtual reality)
+- [Getting Started](programmers_guide/vr.md)
 
+### Installations
 * [Prerequisites](installation/A.md)
 * [Android](installation/Android-terminal.md)
   * [Android - command-line](installation/Android-terminal.md)
