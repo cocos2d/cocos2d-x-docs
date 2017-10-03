@@ -1,7 +1,11 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Android with Eclipse Installation and Setup
 
 ## Prerequisites
-* Complete steps in **[Android Command-Line Installation and Setup](./Android-terminal.md)**
+* Completed the **[Android Command-Line Instructions](Android-terminal/index.html)**
 
 * Eclipse ADT Bundle [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/)
 

@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Virtual Reality (VR)
 You have probably heard the term __Virtual Reality__ or __VR__ used before.
 __VR__ isn't new. Its roots can be traced back to earlier than the 1970's. The

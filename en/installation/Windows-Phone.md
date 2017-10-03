@@ -1,9 +1,11 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Windows Phone 8 Installation and Setup
 
 ## Prerequisites
 * A supported environment. See **[Installation Prerequisites](A/index.html)**
-
-* Cocos2d-x v3.x [http://cocos2d-x.org/download](http://cocos2d-x.org/download)
 
 * Register to be a Windows Phone Developer [http://msdn.microsoft.com/en-us/library/windowsphone/help/jj206719(v=vs.105](http://msdn.microsoft.com/en-us/library/windowsphone/help/jj206719(v=vs.105)
 

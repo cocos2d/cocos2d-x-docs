@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Actions
 `Action` objects are just like they sound. They make a `Node` perform a change
 to its properties. `Action` objects allow the transformation of `Node` properties

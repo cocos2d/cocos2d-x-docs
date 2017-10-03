@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Event Dispatcher
 
 ## What is the EventDispatch mechanism?

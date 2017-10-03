@@ -1,9 +1,11 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Windows Installation and Setup
 
 ## Prerequisites
-* A supported environment. See **[Installation Prerequisites](A/index.html)**
-
-* Cocos2d-x v3.x [http://cocos2d-x.org/download](http://cocos2d-x.org/download)
+A supported environment. See **[Installation Prerequisites](A/index.html)**
 
 ## Setting up Cocos2d-x
 * Download Cocos2d-x and unzip it. (maybe: ~/)

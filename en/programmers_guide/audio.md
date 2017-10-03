@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Audio
 
 Your game will surely need sound! Cocos2d-x provides an audio engine called

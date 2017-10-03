@@ -1,11 +1,15 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Android with Command-line Installation and Setup
 
 ## Environment Requirements
 A supported environment. See **[Installation Prerequisites](A/index.html)**
 
 ## Starting decisions
-Android development is a complicated beast. Not only are there several development 
-environment options, each also requires several dependencies. These all need to be 
+Android development is a complicated beast. Not only are there several development
+environment options, each also requires several dependencies. These all need to be
 working before you can attempt to build a Cocos2d-x project. Read these steps __a few__
 times and take a few minutes to think about what workflow best suites you.
 
@@ -21,14 +25,14 @@ environment. This includes:
 
 * Python 2.7.5 [https://www.python.org/downloads/](https://www.python.org/downloads/) __NOT PYTHON 3__
 
-Your system may already have some of these items. Download the items that you need 
+Your system may already have some of these items. Download the items that you need
 to inorder to have a complete environment. Nothing on this list can be missing.
 
 ## OS X Instructions
 
 ### Python
 OS X systems come with __Python__ installed by default. Verify that your system
-has __Python__ and ensusre that it is a version __less than 3__. From *Terminal.app* 
+has __Python__ and ensusre that it is a version __less than 3__. From *Terminal.app*
 or *iTerm 2* execute the following:
 ```sh
 > python --version
@@ -39,7 +43,7 @@ If you see output, such as:
 Python 2.7.10
 ```
 
-You are good to go. If you see anything else you may need to install Python. 
+You are good to go. If you see anything else you may need to install Python.
 Use the link above. __You cannot move on in this document until this step is working.__
 
 ### JAVA
@@ -95,9 +99,9 @@ default. It is neccessary to download it using the link above. Using a __binary_
 distribution is fine. There is no need to download the source and compile by hand
 unless this is your preferred method.
 
-After downloading, unzip the __Apache Ant__ archive. You only need to place the 
+After downloading, unzip the __Apache Ant__ archive. You only need to place the
 __Apache Ant__ folder someplace in your __$PATH__ and then set an __$ANT\_ROOT__
-environment variable in your __.bash\_profile__. Exactly the same way __$JAVA\_HOME__ 
+environment variable in your __.bash\_profile__. Exactly the same way __$JAVA\_HOME__
 was added above. Example, if your __Apache ANT__ folder is named __apache-ant-1.10.0__:
 ```sh
 export ANT_ROOT=/Applications/Cocos/tools/ant/bin
@@ -105,19 +109,19 @@ export PATH=$ANT_ROOT:$PATH
 ```
 
 ### Android NDK and SDK
-Obviously, you need the __Android NDK and SDK__ to do Android development. These 
-are not installed on an OSX system by default. It is neccessary to download it 
-using the link above. 
+Obviously, you need the __Android NDK and SDK__ to do Android development. These
+are not installed on an OSX system by default. It is neccessary to download it
+using the link above.
 
 #### Brew
 Using [__brew__](http://brew.sh/) is one option for installing the __Android NDK and SDK__.
-Installing with __brew__ makes the installation simple. A single command, a few 
+Installing with __brew__ makes the installation simple. A single command, a few
 environment variables and you are done. Example:
 ```sh
 brew install android-ndk android-sdk
 ```
 
-This will take a while to complete. Once it is done, you need to set a few 
+This will take a while to complete. Once it is done, you need to set a few
 envorinment variables in your __.bash_profile__.
 ```sh
 export NDK_ROOT=/usr/local/Cellar/android-ndk/r12b
@@ -145,7 +149,7 @@ export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 ```
 
 #### Installing additional Android SDKs
-Depending upon what Android OS versions you wish to target, you may need to 
+Depending upon what Android OS versions you wish to target, you may need to
 install additional __Android SDKs__ to cover those OS versions. As __Android SDKs__
 evolve, sometimes older OS suppot is dropped. This means that your game might
 not be able to target older devices. This is a personal decision on the part of
@@ -166,9 +170,9 @@ when a new version becomes available.
 ![](Android-terminal-img/osx-android-sdk-manager-tools.png "")
 
 ### Cocos2d-x
-Installing __Cocos2d-x__ is probably the easiest part of this process. You can 
-get started with __Cocos2d-x__ by either downloading a self-contained 
-__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our 
+Installing __Cocos2d-x__ is probably the easiest part of this process. You can
+get started with __Cocos2d-x__ by either downloading a self-contained
+__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our
 [GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
 __There is no need to do both.__
 
@@ -179,7 +183,7 @@ Download Cocos2d-x and unzip it. (maybe: __~/__ or __~/Projects__ )
 
 #### Cloning from GitHub
 Use the following commands to clone our GitHub repo and get your environment setup.
-If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download 
+If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download
 using the step above, __By downloading a .zip archive__.
 ```sh
 cd <to where you want to clone this repo>
@@ -194,11 +198,11 @@ git submodule update
 ```
 
 ### Making sure you are ready to create the next hit game!
-Next, you are ready to build __cpp-tests__. It is a good idea to perform this 
-step before starting a new project. It ensures that your environment is setup 
-completely. If anything fails during this step, it is important to read the 
+Next, you are ready to build __cpp-tests__. It is a good idea to perform this
+step before starting a new project. It ensures that your environment is setup
+completely. If anything fails during this step, it is important to read the
 error message carefully and re-visit the step above that is related to the
-error message you see. 
+error message you see.
 
 Change your directory to the where the __android-build.py__ script is located.
 (usually __Cocos2d-x/build__). To see what targets are available. run:
@@ -232,4 +236,3 @@ Use `adb` to install the __.apk__ to your Android phone by executing:
 ```sh
 > adb install MyGame-debug.apk
 ```
-

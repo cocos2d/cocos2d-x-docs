@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Other Node Types
 You are using `Sprite`, `Label` and `Action` objects in your game and it is making
 progress. Besides the basic `Node` types described in previous chapters, Cocos2d-x also

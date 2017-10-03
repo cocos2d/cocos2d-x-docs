@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # UI Components
 Taking a look at the common apps you might use, I bet that you can spot UI
 widgets without necessarily knowing what they are. They aren't specific to games,

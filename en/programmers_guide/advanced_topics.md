@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Advanced Topics
 Wow! You are on the last chapter. Good Job! By now you should feel comfortable
 creating your games with Cocos2d-x. However, please realize there is no limit to

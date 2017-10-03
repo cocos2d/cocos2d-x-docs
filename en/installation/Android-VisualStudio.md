@@ -1,11 +1,11 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Android with Visual Studio
 
 ## Environment Requirements
 * A Supported OS. See **[Installation Prerequisites](A/index.html)**
-
-* Cocos2d-x v3.12 [http://cocos2d-x.org/download](http://cocos2d-x.org/download "Cocos2d-x")
-
-* Python 2.7.5 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
 * Visual Studio 2015 update 2+ (NOT Visual Studio Code!) [https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)
 
@@ -23,7 +23,7 @@
 
 ## Using Visual Studio with Cocos2d-x
 
-Make sure that you are using __Cocos2d-x v3.12__. 
+Make sure that you are using __Cocos2d-x v3.12__.
 
 ### Creating a new project
 * Read our document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**
@@ -31,12 +31,12 @@ Make sure that you are using __Cocos2d-x v3.12__.
 
 * Download [proj.visualstudio](http://aka.ms/vscocosandroidsample)
 
-* copy __proj.visualstudio.zip__ into your project's root directory and unzip it. It should 
+* copy __proj.visualstudio.zip__ into your project's root directory and unzip it. It should
   fall inline with your other project directories. Example:
-  
+
   ![](Android-VisualStudio-img/1.png)
 
-* By default __proj.visualstudio__ contains a project called __Cocos2d.sln__, open this 
+* By default __proj.visualstudio__ contains a project called __Cocos2d.sln__, open this
   __.sln__ file.
 
 * Build and run!
@@ -47,17 +47,17 @@ Make sure that you are using __Cocos2d-x v3.12__.
 
 * Download [proj.visualstudio](https://msdnshared.blob.core.windows.net/media/2016/07/proj.visualstudio.zip)
 
-* copy __proj.visualstudio.zip__ into your project's root directory and unzip it. It should 
+* copy __proj.visualstudio.zip__ into your project's root directory and unzip it. It should
   fall inline with your other project directories. Example:
-  
+
   ![](Android-VisualStudio-img/1.png)
 
-* By default __proj.visualstudio__ contains a project called __Cocos2d.sln__, feel free to 
+* By default __proj.visualstudio__ contains a project called __Cocos2d.sln__, feel free to
   re-name this to your project's name.
-  
+
 * Open the __.sln__ file.
 
-* Add any source files and resources that are required to build your project. Change any 
+* Add any source files and resources that are required to build your project. Change any
   necessary __build settings__ required by your project.
-  
+
 * Build and troubleshoot any integration needs.

@@ -1,11 +1,13 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Android Studio Installation and Setup
 
 ## Prerequisites
 * A supported environment. See **[Installation Prerequisites](A/index.html)**
 
 * Completed the **[Android Command-Line Instructions](Android-terminal/index.html)**
-
-* Cocos2d-x v3.x [http://cocos2d-x.org/download](http://cocos2d-x.org/download)
 
 * Android Studio 2.3 [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
 
@@ -20,7 +22,7 @@ in __Android Studio__. __Android Studio__ will do everything required. You can r
 `cpp-tests` by clicking on the __play__ button.
 
     ![](Android-Studio-img/build_cpp_tests.png "")
-    
+
 ## Debugging `cpp-tests`
 
 Since cocos2d-x __v3.15__, you can use __Android Studio 2.3+__ to debug c++ codes:
@@ -30,7 +32,7 @@ Since cocos2d-x __v3.15__, you can use __Android Studio 2.3+__ to debug c++ code
 * you will see stack trace by __step 3__
 
     ![](Android-Studio-img/debug_cpp_tests.png "")
-    
+
 ## Build for release mode
 
 You have to do a few steps to build release mode:
@@ -40,7 +42,7 @@ You have to do a few steps to build release mode:
 * for __lua projects__, if you want to encrypt lua codes, you should set encrypt information in __gradle.properties__ too
 
     ![](Android-Studio-img/change_release_lua_tests.png "")
-    
+
     ![](Android-Studio-img/sign_and_encrypt.png "")
 
 ## Installing new SDK versions and build tools

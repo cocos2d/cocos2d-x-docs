@@ -1,11 +1,15 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 # Mac OS X Installation and Setup
 
 ## Prerequisites
-* A supported environment. See **[Installation Prerequisites](A/index.html)**
+A supported environment. See **[Installation Prerequisites](A/index.html)**
 
 ## Setting up Cocos2d-x
-You can get started with __Cocos2d-x__ by either downloading a self-contained 
-__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our 
+You can get started with __Cocos2d-x__ by either downloading a self-contained
+__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our
 [GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
 __There is no need to do both.__
 
@@ -18,7 +22,7 @@ __There is no need to do both.__
 
 ### Cloning from GitHub
 Use the following commands to clone our GitHub repo and get your environment setup.
-If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download 
+If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download
 using the step above, __By downloading a .zip archive__.
 
 ```sh
