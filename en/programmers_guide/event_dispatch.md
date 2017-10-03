@@ -9,6 +9,8 @@ The basics:
 * Event dispatcher notifies listeners of user events.
 * Event objects contain information about the event.
 
+<a name="types"></a>
+
 ## 5 types of event listeners.
 
 `EventListenerTouch` - responds to touch events
@@ -20,6 +22,8 @@ The basics:
 `EventListenMouse` - responds to mouse events
 
 `EventListenerCustom` - responds to custom events
+
+<a name="priority"></a>
 
 ## FixedPriority vs SceneGraphPriority
 
@@ -46,6 +50,8 @@ an event is triggered, __H__ would take a look and either __swallow__ it (more
   on this below) or let is pass through to _I__. Same thing, __I__ will either
   __consume__ it or let is pass through to __G__ and so on until the event either
   __swallowed__ it or does not get answered.
+
+<a name="touch"></a>
 
 ## Touch Events
 __Touch events__ are the most important event in mobile gaming. They are easy to
@@ -113,6 +119,8 @@ listener1->onTouchBegan = [](Touch* touch, Event* event){
 };
 {%- endcodetabs %}
 
+<a name="keyboard"></a>
+
 ## Creating a keyboard event
 For desktop games, you might want find using keyboard mechanics useful.
 Cocos2d-x supports keyboard events. Just like with touch events above,
@@ -138,7 +146,9 @@ void KeyboardTest::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
 }
 {%- endcodetabs %}
 
-## Creating an accelerometer event
+<a name="accelerometer"></a>
+
+## Creating an Accelerometer event
 Some mobile devices come equipped with an accelerometer. An accelerometer is a
 sensor that measures g-force as well as changes in direction. A use case would
 be needing to move your phone back and forth, perhaps to simulate a balancing act.
@@ -162,6 +172,8 @@ void AccelerometerTest::onAcceleration(Acceleration* acc, Event* event)
     //  Processing logic here
 }
 {%- endcodetabs %}
+
+<a name="mouse"></a>
 
 ## Creating a mouse event
 As it always has, Cocos2d-x supports mouse events.
@@ -208,6 +220,8 @@ void MouseTest::onMouseScroll(Event *event)
 }
 {%- endcodetabs %}
 
+<a name="custom></a>
+
 ## Creating a Custom Event
 The event types above are defined by the system, and the events (such as touch
 screen, keyboard response etc) are triggered by the system automatically. In
@@ -246,6 +260,8 @@ The above example creates an EventCustom object and sets its UserData. It is the
 dispatched manually with `_eventDispatcher->dispatchEvent(&event)`. This triggers
 the event handler defined previously. The handler is called immediately so a local
 stack variable can be used as the UserData.
+
+<a name="registering"></a>
 
 ## Registering event with the dispatcher
 It is easy to register an event with the __Event Dispatcher__. Taking the sample

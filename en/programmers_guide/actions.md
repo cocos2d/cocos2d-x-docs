@@ -25,6 +25,8 @@ var moveBy = new cc.MoveBy(2, cc._p(20,0));
 mySprite2.runAction(moveBy);
 {%- endcodetabs %}
 
+<a name="actions"></a>
+
 ### By and To, what is the difference?
 You will notice that each `Action` has a __By__ and __To__ version. Why? Because
 they are different in what they accomplish. A __By__ is relative to the current
@@ -72,6 +74,8 @@ mySprite.runAction(seq);
 {%- endcodetabs %}
 
 ![](actions-img/i0.png "")
+
+<a name="basic"></a>
 
 ## Basic Actions and how to run them
 Basic actions are usually a singular action, thus accomplishing a single objective.
@@ -336,6 +340,8 @@ mySprite->runAction(RepeatForever::create(seq1));
 
 Run the example __Programmer Guide Sample__ code to see this in action!
 
+<a name="sequences"></a>
+
 ## Sequences and how to run them
 __Sequences__ are a series of `Action` objects to be executed sequentially. This can
 be any number of `Action` objects, __Functions__ and even another `Sequence`.
@@ -442,6 +448,8 @@ mySprite->runAction(seq);
 {%- endcodetabs %}
 
 Run the example __Programmer Guide Sample__ code to see this in action!
+
+<a href="internals"></a>
 
 ### Clone
 __Clone__ is exactly like it sounds. If you have an `Action`, you can apply it to

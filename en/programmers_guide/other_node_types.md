@@ -6,6 +6,8 @@ you want to make a __tile-based__ game? Or maybe a __2d side scroller__? Or mayb
 want to add particle effects to your game? Cocos2d-x provides `Node` objects to
 help you accomplish these goals!
 
+<a name="tilemap"></a>
+
 ## TileMap
 __TileMaps__ are maps made up of __tiles__. Each _tile_ can have independent behavior.
 __TileMaps__ are stored in an XML-based map format called `TML`. `TMX` was originally
@@ -45,6 +47,8 @@ Example tiled-map layouts:
 How do you make a tiled-map? There are many tools that do this. [Tiled](http://mapeditor.org)
 is a popular tool. It is actively developed and has a great user community. The
 screen-shots above are actual __Tiled__ projects.
+
+<a name="particle"></a>
 
 ## Particle System
 Perhaps your game needs effects like burning fire, spell casting visuals or explosions.
@@ -247,6 +251,9 @@ particleSystem->setRotatePerSecondVar(0);
 
 ** JASON - Replace the above screenshot with example from chapter 7 demo code
 -->
+
+<a name="parallax"></a>
+
 ## Parallax
 A `Parallax` Node is a special `Node` type that simulates a __parallax scroller__.
 What did you say? A *para*.. what? Yes, __parallax__ Simply put you can consider

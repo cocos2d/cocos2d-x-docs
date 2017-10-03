@@ -69,7 +69,7 @@ of the [__Cocos Command-Line Tool__](../editors_and_tools/cocosCLTool/) to add _
 You always need to __import__ the `vrsdkbase`. This step takes care of modifying your projects
 to support __VR__.
 
-{% codetabs name="shell", type="sh -%}
+{% codetabs name="shell", type="sh" -%}
 $ cocos package import -v -b vrsdkbase --anysdk
 {%- endcodetabs %}
 

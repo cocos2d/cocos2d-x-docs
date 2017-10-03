@@ -308,15 +308,15 @@ mySprite->runAction(moveTo);
 var mySprite = new cc.Sprite(res.mySprite_png);
 
 // Move a sprite 50 pixels to the right and 10 pixels to the top over 2 seconds.
-<!--var moveBy = new cc.MoveBy(2, cc._p(50,10));
+var moveBy = new cc.MoveBy(2, cc._p(50,10));
 mySprite.runAction(moveBy);
 
 // Move a sprite to a specific location over 2 seconds.
 var moveTo = new cc.MoveTo(2, cc._p(50,10));
-mySprite.runAction(moveTo);-->
+mySprite.runAction(moveTo);
 {%- endcodetabs %}
 
-<a name="sequences"></a>
+<a name="seqs"></a>
 
 ## Sequences and Spawns
 With moving `Sprite` objects on the screen we have everything we need to create
@@ -503,8 +503,8 @@ cc.log("Position x: " + pos.x + ' y:' + pos.y);
 And, c++ users, if you prefer you can use __std::cout__ in place of __log()__,
 however, __log()__ might offer easier formatting of complex output.
 
-<!--## Conclusion
+<## Conclusion
 We have gone through a lot of Cocos2d-x concepts. Take a deep breath.
 Don't worry. Just dive in with your ideas and take it one step at a time.
 Cocos2d-x and programming in general are not skills that are learned
-overnight. These take practice and understanding. Remember that the [forums](http://discuss.cocos2d-x.org) are also there to help you with questions.-->
+overnight. These take practice and understanding. Remember that the [forums](http://discuss.cocos2d-x.org) are also there to help you with questions.

@@ -4,6 +4,8 @@ creating your games with Cocos2d-x. However, please realize there is no limit to
 what you can create. This chapter covers __advanced__ concepts. Note that this
 chapter gets more technical in its content and format.
 
+<a name="filesystem"></a>
+
 # File System Access
 Even though you can use functions in __stdio.h__ to access files it can be
 inconvenient for a few reasons:
@@ -91,6 +93,8 @@ These functions will manage a file or a directory:
  </tr>
  </table>
 
+<a name="networking"></a>
+
 # Networking with HTTP
 Sometimes it might be helpful to obtain resources or data from another source.
 One common way of doing this is by using an `HTTP` request.
@@ -139,9 +143,11 @@ void HttpClientTest::onHttpRequestCompleted(HttpClient* sender, HttpResponse* re
 }
 {%- endcodetabs %}
 
-#Shaders and Materials
+<a name="shaders"></a>
 
-##What is a Shader
+# Shaders and Materials
+
+## What is a Shader
 
 From wikipedia:
 
@@ -817,6 +823,8 @@ your shaders:
 * `CC_Texture2`: A `sampler2D`
 * `CC_Texture3`: A `sampler2D`
 
+<a name="optimize"></a>
+
 # How to optimize the graphics performance of your Cocos2d-x games
 
 ## Golden rules
@@ -892,6 +900,11 @@ you might need to write a custom shader and provide a separate ETC1 image for th
 8. Bake the lighting rather than using the dynamic light.
 9. Avoid using complex pixel shaders.
 10. Avoid using **discard** and alpha test in your pixel shader, it will break the HSR(Hidden surface removal). Only use it when necessary.
+
+<a name="sqlite"></a>
+
+# SQLite
+
 
 <!--
 ## Best Practice - Optimization, memory, performance, profiling

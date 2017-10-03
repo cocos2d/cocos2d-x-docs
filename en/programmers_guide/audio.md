@@ -11,6 +11,8 @@ and __Core Audio Format__
 ##Getting Started
 The `SimpleAudioEngine` API is very easy to use.
 
+<a name="music"></a>
+
 ###Play background music
 Play an audio file for use as background music. This can be repeated
 continuously.
@@ -25,6 +27,8 @@ audio->playBackgroundMusic("mymusic.mp3", true);
 audio->playBackgroundMusic("mymusic.mp3", false);
 {%- endcodetabs %}
 
+<a name="sounds"></a>
+
 ###Play a sound effect.
 Play a sound effect.
 
@@ -34,6 +38,8 @@ auto audio = SimpleAudioEngine::getInstance();
 // play a sound effect, just once.
 audio->playEffect("myEffect.mp3", false, 1.0f, 1.0f, 1.0f);
 {%- endcodetabs %}
+
+<a name="operations"></a>
 
 ###Pausing, stopping, resuming music and sound effects
 After you start to play music and sound effects you might need to pause,
@@ -147,3 +153,7 @@ auto audio = SimpleAudioEngine::getInstance();
 // setting the volume specifying value as a float
 audio->setEffectsVolume(5.0f);
 {%- endcodetabs %}
+
+<a name="versus"></a>
+
+## SimpleAudio Engine versus Audio Engine
