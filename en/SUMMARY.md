@@ -14,12 +14,11 @@
 - [Scenes and the Scene graph](programmers_guide/basic_concepts.md#scenes)
 - [Sprites](programmers_guide/basic_concepts.md#sprites)
 - [Actions](programmers_guide/basic_concepts.md#actions)
-- [Sequences and Spawns](programmers_guide/basic_concepts.md#sequences)
+- [Sequences and Spawns](programmers_guide/basic_concepts.md#seqs)
 - [Parent Child Relationship](programmers_guide/basic_concepts.md#parent_child)
 - [Logging](programmers_guide/basic_concepts.md#logging)
 
 ### Sprites
-
 - [What are Sprites](programmers_guide/sprites.md)
 - [Creating Sprites]()
 - [Using Spritesheets]()
@@ -29,9 +28,9 @@
 
 ### Actions
 - [What are Actions](programmers_guide/actions.md)
-- [Basic Actions]()
-- [Sequences]()
-- [Sequence Internals, what is really happening]()
+- [Basic Actions](programmers_guide/actions.md#basic)
+- [Sequences](programmers_guide/actions.md#sequences)
+- [Sequence Internals, what is really happening](programmers_guide/actions.md#internals)
 
 ### Building and Transitioning Scenes
 - [What is a Scene](programmers_guide/scenes.md)
@@ -50,31 +49,31 @@
 
 ### Other Node Types
 - [TileMap](programmers_guide/other_node_types.md)
-- [Particle System]()
-- [Parallax]()
+- [Particle System](programmers_guide/other_node_types.md#particle)
+- [Parallax](programmers_guide/other_node_types.md#parallax)
 
 ### Event Dispatcher
 - [What is the EventDispatch mechanism](programmers_guide/event_dispatch.md)
-- [5 types of event listeners]()
-- [FixedPriority vs SceneGraphPriority]()
-- [Touch Events]()
-- [Keyboard Events]()
-- [Accelerometor Events]()
-- [Mouse Events]()
-- [Creating Custom Events]()
-- [Registering Events with the Dispatcher]()
+- [5 types of event listeners](programmers_guide/event_dispatch.md#types)
+- [FixedPriority vs SceneGraphPriority](programmers_guide/event_dispatch.md#priority)
+- [Touch Events](programmers_guide/event_dispatch.md#touch)
+- [Keyboard Events](programmers_guide/event_dispatch.md#keyboard)
+- [Accelerometer Events](programmers_guide/event_dispatch.md#accelerometer)
+- [Mouse Events](programmers_guide/event_dispatch.md#mouse)
+- [Creating Custom Events](programmers_guide/event_dispatch.md#custom)
+- [Registering Events with the Dispatcher](programmers_guide/event_dispatch.md#registering)
 
 ### 3D
 - [Terminology](programmers_guide/3d.md)
-- [Sprite3D]()
-- [Animation]()
-- [Camera]()
-- [Cubemap Texture]()
-- [Skybox]()
-- [Lighting]()
-- [Terrain]()
-- [Tools for creating 3D Sprites]()
-- [Advanced 3D Topics]()
+- [Sprite3D](programmers_guide/3d.md#sprite3d)
+- [Animation](programmers_guide/3d.md#animations)
+- [Camera](programmers_guide/3d.md#camera)
+- [Cubemap Texture](programmers_guide/3d.md#cubemap)
+- [Skybox](programmers_guide/3d.md#skybox)
+- [Lighting](programmers_guide/3d.md#lighting)
+- [Terrain](programmers_guide/3d.md#terrain)
+- [Tools for creating 3D Sprites](programmers_guide/3d.md#tools)
+- [Advanced 3D Topics](programmers_guide/3d.md#advanced)
 
 ### Scripting
 - [Script component](programmers_guide/scripting.md)
@@ -89,17 +88,17 @@
 
 ### Audio
 - [Getting Started](programmers_guide/audio.md)
-- [Play background music]()
-- [Play Sounds]()
-- [Audio operations]()
-- [SimpleAudio Engine vs Audio Engine]()
+- [Play background music](programmers_guide/audio.md#music)
+- [Play Sounds](programmers_guide/audio.md#sounds)
+- [Audio operations](programmers_guide/audio.md#operations)
+- [SimpleAudio Engine vs Audio Engine](programmers_guide/audio.md#versus)
 
 ### Advanced Topics
 - [File System Access](programmers_guide/advanced_topics.md)
-- [Networking with HTTP]()
-- [Shaders and Materials]()
-- [Optimizing Graphics]()
-- SQLite
+- [Networking with HTTP](programmers_guide/advanced_topics.md#networking)
+- [Shaders and Materials](programmers_guide/advanced_topics.md#shaders)
+- [Optimizing Graphics](programmers_guide/advanced_topics.md#optimizing)
+- [SQLite](programmers_guide/advanced_topics.md#sqlite)
 
 ### VR (virtual reality)
 - [Getting Started](programmers_guide/vr.md)
