@@ -1,3 +1,7 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 ## Where to get help
 * [__Forums__](http://discuss.Cocos2d-x.org)
 * [__Bug Tracker__](https://github.com/cocos2d/cocos2d-x/issues)

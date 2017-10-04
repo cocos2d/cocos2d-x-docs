@@ -1,5 +1,9 @@
+<div class="langs">
+  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
+</div>
+
 ## Learning Resources
-* This very guide! 
+* This very guide!
 * [__Sonar Systems Videos__](https://www.youtube.com/user/sonarsystemslimited/search?query=Cocos2d-x)
 * [__Android Fundamentals__](https://developer.android.com/guide/components/fundamentals.html)
 * [__Make School Tutorials__](https://www.makeschool.com/tutorials/)
