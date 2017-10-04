@@ -27,15 +27,15 @@
 - [Polygon Sprite](sprites/polygon.md)
 
 ### Actions
-- [What are Actions](programmers_guide/actions.md)
-- [Basic Actions](programmers_guide/actions.md#basic)
-- [Sequences](programmers_guide/actions.md#sequences)
-- [Sequence Internals, what is really happening](programmers_guide/actions.md#internals)
+- [What are Actions](actions/index.md)
+- [Basic Actions](actions/basic.md)
+- [Sequences](actions/sequences.md)
+- [Sequence Internals, what is really happening](actions/sequence_internals.md)
 
 ### Building and Transitioning Scenes
-- [What is a Scene](programmers_guide/scenes.md)
-- [Creating a Scene]()
-- [Transitioning from Scene to Scene]()
+- [What is a Scene](scenes/index.md)
+- [Creating a Scene](scenes/creating.md)
+- [Transitioning from Scene to Scene](scenes/transitioning.md)
 
 ### UI Components
 - [Widgets, oh, my!](programmers_guide/ui_components.md)
