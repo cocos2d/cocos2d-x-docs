@@ -54,15 +54,15 @@
 - [Parallax](other_node_types/parallax.md)
 
 ### Event Dispatcher
-- [What is the EventDispatch mechanism](programmers_guide/event_dispatch.md)
-- [5 types of event listeners](programmers_guide/event_dispatch.md#types)
-- [FixedPriority vs SceneGraphPriority](programmers_guide/event_dispatch.md#priority)
-- [Touch Events](programmers_guide/event_dispatch.md#touch)
-- [Keyboard Events](programmers_guide/event_dispatch.md#keyboard)
-- [Accelerometer Events](programmers_guide/event_dispatch.md#accelerometer)
-- [Mouse Events](programmers_guide/event_dispatch.md#mouse)
-- [Creating Custom Events](programmers_guide/event_dispatch.md#custom)
-- [Registering Events with the Dispatcher](programmers_guide/event_dispatch.md#registering)
+- [What is the EventDispatch mechanism](event_dispatcher/index.md)
+- [5 types of event listeners](event_dispatcher/types.md)
+- [FixedPriority vs SceneGraphPriority](event_dispatcher/priority.md)
+- [Touch Events](event_dispatcher/touch.md)
+- [Keyboard Events](event_dispatcher/keyboard.md)
+- [Accelerometer Events](event_dispatcher/accelerometer.md)
+- [Mouse Events](event_dispatcher/mouse.md)
+- [Creating Custom Events](event_dispatcher/custom.md)
+- [Registering Events with the Dispatcher](event_dispatcher/registering.md)
 
 ### 3D
 - [Terminology](programmers_guide/3d.md)
@@ -77,8 +77,8 @@
 - [Advanced 3D Topics](programmers_guide/3d.md#advanced)
 
 ### Scripting
-- [Script component](programmers_guide/scripting.md)
-- [Using Scripts]()
+- [Script component](scripting/index.md)
+- [Using Scripts](scripting/)
 
 ### Physics
 - [Physics is scary, do I really need it? Please tell me no!](programmers_guide/physics.md)
