@@ -157,10 +157,14 @@ use a knife to cut food and put it in an appliance. Does the knife cut
 the food? Maybe. Maybe not. Perhaps it isn't the correct type of knife for the
 job.
 
-You can create a `Scene` that contains a `PhysicsWorld` using:
+You can create a `Scene` that contains a `PhysicsWorld` just by calling the function
+`initWithPhysics()` in your `Scene`. Your `init()` function should have:
 
 {% codetabs name="C++", type="cpp" -%}
-auto scene = Scene::createWithPhysics();
+if( !Scene::initWithPhysics() )
+{
+
+}
 {%- endcodetabs %}
 
 Every `PhysicsWorld` has properties associated with it:
