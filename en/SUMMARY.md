@@ -8,23 +8,23 @@
 * [Where to get help](about/help.md)
 * [How to contribute](about/how.md)
 
-### [Basic Cocos2d-x Concepts](programmers_guide/basic_concepts.md)
-- [Main Components](programmers_guide/basic_concepts.md#main_components)
-- [Director](programmers_guide/basic_concepts.md#director)
-- [Scenes and the Scene graph](programmers_guide/basic_concepts.md#scenes)
-- [Sprites](programmers_guide/basic_concepts.md#sprites)
-- [Actions](programmers_guide/basic_concepts.md#actions)
-- [Sequences and Spawns](programmers_guide/basic_concepts.md#seqs)
-- [Parent Child Relationship](programmers_guide/basic_concepts.md#parent_child)
-- [Logging](programmers_guide/basic_concepts.md#logging)
+### Basic Cocos2d-x Concepts
+- [Main Components](basic_concepts/index.md)
+- [Director](basic_concepts/director.md)
+- [Scenes and the Scene graph](basic_concepts/scene.md)
+- [Sprites](basic_concepts/sprites.md)
+- [Actions](basic_concepts/actions.md)
+- [Sequences and Spawns](basic_concepts/sequences.md)
+- [Parent Child Relationship](basic_concepts/parent_child.md)
+- [Logging](basic_concepts/logging.md)
 
 ### Sprites
-- [What are Sprites](programmers_guide/sprites.md)
-- [Creating Sprites]()
-- [Using Spritesheets]()
-- [SpriteFrame Cache]()
-- [Sprite Manipulation]()
-- [Polygon Sprite]()
+- [What are Sprites](sprites/index.md)
+- [Creating Sprites](sprites/creating.md)
+- [Using Spritesheets](sprites/spritesheets.md)
+- [SpriteFrame Cache](sprites/spriteframe_cache.md)
+- [Sprite Manipulation](sprites/manipulation.md)
+- [Polygon Sprite](sprites/polygon.md)
 
 ### Actions
 - [What are Actions](programmers_guide/actions.md)
