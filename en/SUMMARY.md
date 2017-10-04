@@ -3,10 +3,10 @@
 ### Getting Started
 
 * [About Cocos2d-x](index.md)
-* [Why Cocos2d-x](about.md#why)
-* [How to learn](about.md#learning)
-* [Where to get help](about.md#help)
-* [How to contribute](about.md#spreading)
+* [Why Cocos2d-x](about/index.md)
+* [How to learn](about/learn.md)
+* [Where to get help](about/help.md)
+* [How to contribute](about/how.md)
 
 ### [Basic Cocos2d-x Concepts](programmers_guide/basic_concepts.md)
 - [Main Components](programmers_guide/basic_concepts.md#main_components)
@@ -120,3 +120,4 @@
 
 ### Tools
 - [Cocos Command-Line tool]()
+- [Pre-built libraries]()
