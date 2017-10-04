@@ -38,19 +38,20 @@
 - [Transitioning from Scene to Scene](scenes/transitioning.md)
 
 ### UI Components
-- [Widgets, oh, my!](programmers_guide/ui_components.md)
-- [Label]()
-- [Menu]()
-- [Buttons]()
-- [Checkbox]()
-- [Loading Bar]()
-- [Slider]()
-- [TextField]()
+- [Widgets, oh, my!](ui/index.md)
+- [Label](ui/labels.md)
+- [Menu](ui/menus.md)
+- [Buttons](ui/buttons.md)
+- [Checkbox](ui/checkboxes.md)
+- [Loading Bar](ui/loading_bar.md)
+- [Slider](ui/sliders.md)
+- [TextField](ui/textfields.md)
 
 ### Other Node Types
-- [TileMap](programmers_guide/other_node_types.md)
-- [Particle System](programmers_guide/other_node_types.md#particle)
-- [Parallax](programmers_guide/other_node_types.md#parallax)
+- [More than just a Node](other_node_types/index.md)
+- [TileMap](other_node_types/tilemap.md)
+- [Particle System](other_node_types/particles.md)
+- [Parallax](other_node_types/parallax.md)
 
 ### Event Dispatcher
 - [What is the EventDispatch mechanism](programmers_guide/event_dispatch.md)
