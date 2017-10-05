@@ -80,28 +80,28 @@
 - [Script component](scripting/index.md)
 
 ### Physics
-- [Physics is scary, do I really need it? Please tell me no!](programmers_guide/physics.md)
-- [Physics terminology and concepts]()
-- [Collision]()
-- [Queries]()
-- [Debugging/Disabling]()
+- [Physics is scary, do I really need it? Please tell me no!](physics/index.md)
+- [Physics terminology and concepts](physics/concepts.md)
+- [Collision](physics/collisions.md)
+- [Queries](physics/queries.md)
+- [Debugging/Disabling](physics/debugging.md)
 
 ### Audio
-- [Getting Started](programmers_guide/audio.md)
-- [Play background music](programmers_guide/audio.md#music)
-- [Play Sounds](programmers_guide/audio.md#sounds)
-- [Audio operations](programmers_guide/audio.md#operations)
-- [SimpleAudio Engine vs Audio Engine](programmers_guide/audio.md#versus)
+- [Getting Started](audio/index.md)
+- [Play background music and sounds](audio/playing.md)
+- [Audio operations](audio/operations.md)
+- [Advanced Audio](audio/advanced.md)
+- [SimpleAudio Engine vs Audio Engine](audio/engines.md)
 
 ### Advanced Topics
-- [File System Access](programmers_guide/advanced_topics.md)
-- [Networking with HTTP](programmers_guide/advanced_topics.md#networking)
-- [Shaders and Materials](programmers_guide/advanced_topics.md#shaders)
-- [Optimizing Graphics](programmers_guide/advanced_topics.md#optimizing)
-- [SQLite](programmers_guide/advanced_topics.md#sqlite)
+- [File System Access](advanced_topics/index.md)
+- [Networking with HTTP](advanced_topics/networking.md)
+- [Shaders and Materials](advanced_topics/shaders.md)
+- [Optimizing Graphics](advanced_topics/optimizing.md)
+- [SQLite](advanced_topics/sqlite.md)
 
 ### VR (virtual reality)
-- [Getting Started](programmers_guide/vr.md)
+- [Getting Started](vr/index.md)
 
 ### Installations
 * [Prerequisites](installation/A.md)
