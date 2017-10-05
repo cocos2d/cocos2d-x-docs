@@ -65,20 +65,19 @@
 - [Registering Events with the Dispatcher](event_dispatcher/registering.md)
 
 ### 3D
-- [Terminology](programmers_guide/3d.md)
-- [Sprite3D](programmers_guide/3d.md#sprite3d)
-- [Animation](programmers_guide/3d.md#animations)
-- [Camera](programmers_guide/3d.md#camera)
-- [Cubemap Texture](programmers_guide/3d.md#cubemap)
-- [Skybox](programmers_guide/3d.md#skybox)
-- [Lighting](programmers_guide/3d.md#lighting)
-- [Terrain](programmers_guide/3d.md#terrain)
-- [Tools for creating 3D Sprites](programmers_guide/3d.md#tools)
-- [Advanced 3D Topics](programmers_guide/3d.md#advanced)
+- [Terminology](3d/index.md)
+- [Sprite3D](3d/sprite3d.md)
+- [Animation](3d/animation.md)
+- [Camera](3d/camera.md)
+- [Cubemap Texture](3d/cubemap.md)
+- [Skybox](3d/skybox.md)
+- [Lighting](3d/lighting.md)
+- [Terrain](3d/terrain.md)
+- [Tools for creating 3D Sprites](3d/tools.md)
+- [Advanced 3D Topics](3d/advanced.md)
 
 ### Scripting
 - [Script component](scripting/index.md)
-- [Using Scripts](scripting/)
 
 ### Physics
 - [Physics is scary, do I really need it? Please tell me no!](programmers_guide/physics.md)
