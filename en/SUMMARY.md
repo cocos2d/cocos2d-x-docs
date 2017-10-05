@@ -119,5 +119,6 @@
   * [Windows Phone](installation/Windows-Phone.md) __**DEPRECATED**__
 
 ### Tools
-- [Cocos Command-Line tool]()
+- [Cocos Command-Line tool](editors_and_tools/cocosCLTool.md)
+- [Cocos GUI](editors_and_tools/cocos.md)
 - [Pre-built libraries]()
