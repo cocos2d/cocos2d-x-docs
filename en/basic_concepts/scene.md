@@ -20,7 +20,7 @@ by the __renderer__. The __renderer__ is responsible for rendering sprites and
 other objects into the screen. To better understand this we need to talk a bit
 about the __scene graph__.
 
-## Scene Graph
+### Scene Graph
 A __scene graph__ is a data structure that arranges a graphical scene. A
 __scene graph__ contains `Node` objects in a tree (yes, it is called
 __scene graph__, but it is actually represented by a __tree__) structure.

@@ -3,7 +3,6 @@
 </div>
 
 # Basic Cocos2d-x Concepts
-
 This chapter assumes you've just gotten started with Cocos2d-x, and are ready to
 start working on the game of your dreams. Don't worry, it will be fun!
 
