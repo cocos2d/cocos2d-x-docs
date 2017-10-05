@@ -2,95 +2,6 @@
   <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
 </div>
 
-# Audio
-
-Your game will surely need sound! Cocos2d-x provides an audio engine called
-`SimpleAudioEngine`. It can be used to play background
-music as well as sound effects through out your game play. `SimpleAudioEngine`
-is a shared singleton object so you can simple call it from anywhere in your code.
-When creating a sample __HelloWorld__ project we do all the setup required for you,
-out of the box. It also supports a variety of formats, including __mp3__
-and __Core Audio Format__
-
-##Getting Started
-The `SimpleAudioEngine` API is very easy to use.
-
-<a name="music"></a>
-
-###Play background music
-Play an audio file for use as background music. This can be repeated
-continuously.
-
-{% codetabs name="C++", type="cpp" -%}
-auto audio = SimpleAudioEngine::getInstance();
-
-// set the background music and continuously play it.
-audio->playBackgroundMusic("mymusic.mp3", true);
-
-// set the background music and play it just once.
-audio->playBackgroundMusic("mymusic.mp3", false);
-{%- endcodetabs %}
-
-<a name="sounds"></a>
-
-###Play a sound effect.
-Play a sound effect.
-
-{% codetabs name="C++", type="cpp" -%}
-auto audio = SimpleAudioEngine::getInstance();
-
-// play a sound effect, just once.
-audio->playEffect("myEffect.mp3", false, 1.0f, 1.0f, 1.0f);
-{%- endcodetabs %}
-
-<a name="operations"></a>
-
-###Pausing, stopping, resuming music and sound effects
-After you start to play music and sound effects you might need to pause,
-stop or resume after certain operations. This can be done easily.
-
-####Pause
-{% codetabs name="C++", type="cpp" -%}
-auto audio = SimpleAudioEngine::getInstance();
-
-// pause background music.
-audio->pauseBackgroundMusic();
-
-// pause a sound effect.
-audio->pauseEffect();
-
-// pause all sound effects.
-audio->pauseAllEffects();
-{%- endcodetabs %}
-
-####Stop
-{% codetabs name="C++", type="cpp" -%}
-auto audio = SimpleAudioEngine::getInstance();
-
-// stop background music.
-audio->stopBackgroundMusic();
-
-// stop a sound effect.
-audio->stopEffect();
-
-// stops all running sound effects.
-audio->stopAllEffects();
-{%- endcodetabs %}
-
-####Resume
-{% codetabs name="C++", type="cpp" -%}
-auto audio = SimpleAudioEngine::getInstance();
-
-// resume background music.
-audio->resumeBackgroundMusic();
-
-// resume a sound effect.
-audio->resumeEffect();
-
-// resume all sound effects.
-audio->resumeAllEffects();
-{%- endcodetabs %}
-
 ##Advanced audio functionality
 
 ###Setup
@@ -157,7 +68,3 @@ auto audio = SimpleAudioEngine::getInstance();
 // setting the volume specifying value as a float
 audio->setEffectsVolume(5.0f);
 {%- endcodetabs %}
-
-<a name="versus"></a>
-
-## SimpleAudio Engine versus Audio Engine
