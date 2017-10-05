@@ -2,7 +2,7 @@
   <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
 </div>
 
-# Virtual Reality (VR)
+## Virtual Reality (VR)
 You have probably heard the term __Virtual Reality__ or __VR__ used before.
 __VR__ isn't new. Its roots can be traced back to earlier than the 1970's. The
 original goal of __VR__ was to take an environment or situation, both realistic
@@ -16,7 +16,7 @@ gloves or even taking place on a special platform.
 
 Modern __VR__ is focused around *games* and *immersive video*.
 
-## Is VR production ready?
+### Is VR production ready?
 No, __VR__ is still in the early phases of development. Please consider it __experimental__!
 In fact, we are providing a __generic renderer__ implementation to use as a
 proof-of-concept. You can use this in a simulator or with a __Google Cardboard__
@@ -33,7 +33,7 @@ We support the popular __VR SDKs__:
 | DeepoonVR      | Deepoon        | Galaxy Note 5/S6/S6 Edge/S6 Edge+ |
 | OculusVR       | Oculus         | Oculus Rift(Windows 7+) |
 
-## Is your game a good VR candidate?
+### Is your game a good VR candidate?
 If, late on a Friday evening, after a night of dinner, dance and drink, you find
 yourself thinking *__let me take my current game and turn it into a VR game__*.
 Pause... longer... and make sure you are not dreaming! Seriously, you need to stop
@@ -56,7 +56,7 @@ When using __VR__ it is important to note the following items:
 
 With this knowledge and a *can do* attitude, get started...
 
-## How to get started
+### How to get started
 First, it is important to double check your hardware to make sure your device
 supports __VR__. VR needs two things:
 
@@ -66,7 +66,7 @@ supports __VR__. VR needs two things:
 
   * headset input: available only on iOS and Android
 
-### Importing VR
+#### Importing VR
 Second, use the [__Cocos Package Manager__](../editors_and_tools/cocosCLTool/), which is part
 of the [__Cocos Command-Line Tool__](../editors_and_tools/cocosCLTool/) to add __VR__ to your project:
 
@@ -109,13 +109,13 @@ $ cocos package import -v -b gvr --anysdk
 $ cocos package import -v -b oculus --anysdk
 {%- endcodetabs %}
 
-## Compiling and Running with VR
+### Compiling and Running with VR
 
-### IOS
+#### IOS
 If you are running iOS, you are limited to running the __generic renderer__ on
 hardware only, you can use __cocos compile__ __cocos run__ as you typically would.
 
-### Android
+#### Android
 If you are running on __Android__ and planning on targeting a specific __VR SDK__
 you need to perform a few additional steps. Running __switchVRPlatform.py__ from
 your projects root directory will take care of everything. Here is an example for
@@ -156,7 +156,7 @@ $ python frameworks/runtime-src/vrsdks/switchVRPlatform.py -p gearvr-sdk
 For Android there is also a few special steps that must happen. These are dependent
 upon your __Runtime Platform__. Please refer to the table at the start of this document.
 
-### GearVR/Deepoon VR/GVR Compilation and Running.
+#### GearVR/Deepoon VR/GVR Compilation and Running.
 Running __GearVR__, __Deepoon VR__ or __Google VR__ on __Android__ requires a change
 in compile flags. Example:
 
@@ -173,7 +173,7 @@ $ cocos run -p android --android-studio --app-abi armeabi-v7a
 If __GearVR__ or __Deepoon VR__ crashes at runtime, please check to ensure you have an
 [Oculus signature file](https://developer.oculus.com/documentation/mobilesdk/latest/concepts/mobile-submission-sig-file/) in **assets** folder.
 
-### Oculus Compilation
+#### Oculus Compilation
 __OculusVR__ is for the desktop PC platform. This requires __Visual Studio 2015__.
 
 First, import **liboculus.vcxproj** into your project(in `oculus-sdk/oculus/proj.win32/` folder)
