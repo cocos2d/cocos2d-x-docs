@@ -9,10 +9,9 @@ to change __scenes__ or to add `Sprite` objects into your game play.
 A button intercepts a touch event and calls a predefined callback when tapped.
 A `Button` has a __normal__ and __selected__ state. The appearance of the `Button` can
 change based upon it's state. Creating a `Button` and defining its __callback__
-is simple:
+is simple, make sure to `#include "ui/CocosGUI.h"`:
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
 
 auto button = Button::create("normal_image.png", "selected_image.png", "disabled_image.png");
 
