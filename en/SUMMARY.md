@@ -38,14 +38,14 @@
 - [Transitioning from Scene to Scene](scenes/transitioning.md)
 
 ### UI Components
-- [Widgets, oh, my!](ui/index.md)
-- [Label](ui/labels.md)
-- [Menu](ui/menus.md)
-- [Buttons](ui/buttons.md)
-- [Checkbox](ui/checkboxes.md)
-- [Loading Bar](ui/loading_bar.md)
-- [Slider](ui/sliders.md)
-- [TextField](ui/textfields.md)
+- [Widgets, oh, my!](ui_components/index.md)
+- [Label](ui_components/labels.md)
+- [Menu](ui_components/menus.md)
+- [Buttons](ui_components/buttons.md)
+- [Checkbox](ui_components/checkboxes.md)
+- [Loading Bar](ui_components/loading_bar.md)
+- [Slider](ui_components/sliders.md)
+- [TextField](ui_components/textfields.md)
 
 ### Other Node Types
 - [More than just a Node](other_node_types/index.md)
