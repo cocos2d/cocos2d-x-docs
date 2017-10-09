@@ -1,84 +1,128 @@
-# Cocos2d-x v3.15 编程指南
+# Cocos2d-x 文档
 
-## 引擎介绍
+## 新手入门
 
-- [概况](./about/about-us/zh.md)
-- [引擎优势]()
-- [...]()
+- [了解引擎](README.md)
+    - [关于]()
+    - [引擎优势]()
+    - [How to learn](warn内容少,建议融入[获取帮助],去除本节)
+    - [获取帮助]()
+    - [支持]()
 
-## 基本概念
+- [基本概念](README.md)
+    - [Main Components](info建议融到本章介绍,去除本节)
+    - [导演]()
+    - [场景]()
+    - [精灵]()
+    - [动作]()
+    - [序列]()
+    - [Parent Child Relationship](warn和并列的节,不属于一类,建议融到入[节点]和[精灵]的内容中)
+    - [日志]()
 
-- [导演]()
-- [场景]()
-- [精灵]()
-- [...]()
+## 引擎组件
 
-## 精灵
+- [精灵](README.md)
+    - [What are Sprites](info内容少,建议融到本章介绍,去除本节)
+    - [精灵创建]()
+    - [精灵控制](info调整了节的顺序)
+    - [精灵表单](warn翻译是否合适)
+    - [精灵帧缓存]()
+    - [多边形精灵]()
 
-- [创建精灵]()
-- [...]()
+- [动作](README.md)
+    - [简介]()
+    - [基本动作](./action/zh.md)
+    - [动作序列]()
+    - [序列原理](info翻译是否合适)
 
-## 动作
+- [场景](README.md)
+    - [What is a Scene](warn内容少,建议融入到本章介绍,去除本节)
+    - [场景创建]()
+    - [场景转换]()
 
-- [基本动作](./action/zh.md)
-- [序列动作]()
-- [...]()
+- [UI组件](README.md)
+    - [Widget,oh,my!](warn内容少,建议融到本章介绍,去除本节)
+    - [标签]()
+    - [菜单]()
+    - [按钮]()
+    - [选框]()
+    - [载入条](warn翻译是否合适?)
+    - [滑动条](warn翻译是否合适?)
+    - [文本框]()
 
-## 场景
+- [高级节点类型?](README.md)
+    - [本章标题翻译是否合适?]()
+    - [More than just a Node](warn内容少,建议融到本章介绍,去除本节)
+    - [瓦片地图]()
+    - [粒子系统]()
+    - [视差](warn翻译是否合适)
 
-- [创建场景]()
-- [...]()
+## 功能
 
-## UI组件
+- [事件分发](README.md)
+    - [What is the EventDispatch mechanism](warn内容少,建议融到本章介绍,在中文文档中去除本节)
+    - [事件监听器]()
+    - [触发优先级]()
+    - [触碰事件]()
+    - [键盘事件]()
+    - [鼠标事件]()
+    - [加速度传感器事件]()
+    - [自定义事件](info包含[Create-Custom-Events]和[Registering-events-with-the-dispatcher]两节的内容,即自定义事件的创建,注册和分发)
 
-- [标签]()
-- [菜单]()
-- [按钮]()
-- [...]()
+- [3D支持](README.md)
+    - [Terminology](warn术语介绍,内容较少,建议融到本章介绍,去除本节)
+    - [3D精灵]()
+    - [动画]()
+    - [相机]()
+    - [方块纹理](warn翻译是否合适)
+    - [模拟天空](warn翻译是否合适)
+    - [光照]()
+    - [地表](warn翻译是否合适)
+    - [3D工具]()
+    - [高阶话题](warn翻译是否合适)
 
-## 图像渲染
+- [使用脚本](README.md)
+    - [脚本组件]()
 
-- [瓦片地图]()
-- [粒子系统]()
-- [视差]()
+- [物理引擎](README.md)
+    - [Physics is scary, do I really need it? Please tell me no!](warn介绍性质,建议放于本章介绍,在中文文档中去除本节)
+    - [术语与概念]()
+    - [碰撞]()
+    - [Queries](error本节如何翻译?)
+    - [调试]()
 
-## 事件分发
+- [声音](README.md)
+    - [Getting Started](warn内容少,介绍性质,建议放到本章介绍,去除本节)
+    - [背景音乐](./audio-and-effect/zh.md)
+    - [声音控制]()
+    - [高级功能](warn翻译是否合适?)
 
-- [事件监听器]()
-- [触发优先级]()
-- [触碰事件]()
-- [...]()
+- [高级话题](README.md)
+    - [本章标题是否合适?]()
+    - [文件接入]()
+    - [网络操作]()
+    - [材质与纹理]()
+    - [图形性能调优](warn翻译是否合适?)
+    - [SQLite]()
 
-## 3D支持
+- [VR(虚拟现实)](README.md)
+    - [快速上手](翻译是否合适?是否考虑将本章放入[Advanced-Topics])
 
-- [术语介绍]()
-- [3D精灵]()
-- [动画]()
-- [...]()
+- [环境搭建](./installation/index.md)
+    - [系统要求](installation/A.md)
+    - [Android](./installation/android-studio-intallation/installation.md)
+        - [命令行](installation/Android-terminal.md)
+        - [Visual Studio](installation/Android-VisualStudio.md)
+        - [Android Studio](./installation/android-studio-intallation/installation.md)
+        - [Eclipse](installation/Android-Eclipse.md)
+    - [IOS](installation/iOS.md)
+    - [Mac OS X](installation/OSX.md)
+    - [Linux](installation/Linux.md)
+    - [Tizen]()
+    - [Windows](installation/Windows.md)
+        - [Visual Studio](installation/Windows.md)
 
-## 使用脚本
-
-- [脚本组件]()
-
-## 物理引擎
-
-## 声音与音效
-
-- [背景音乐](./audio-and-effect/zh.md)
-
-## 文件接入
-
-- [读文件]()
-
-## 网络操作
-
-## 材质与纹理
-
-- [纹理概念]()
-- [纹理改造]()
-- [...]()
-
-## 性能优化
-
-- [黄金法则]()
-- [提高性能的简单方法]()
+- [工具](README.md)
+    - [Cocos 命令行工具]()
+    - [Cocos 图形界面]()
+    - [构建运行库](warn翻译是否合适)
