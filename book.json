@@ -14,7 +14,7 @@
     },
     "pluginsConfig": {
         "github-issue-feedback-language": {
-            "repo": "user/repo",
+            "repo": "cocos2d/cocos2d-x-docs",
             "branch": "master"
         },
         "sharing": {
