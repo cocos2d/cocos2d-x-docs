@@ -1,0 +1,64 @@
+{
+  "_from": "gitment",
+  "_id": "gitment@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-28y610gLE0W2VpE71w7/eSp7OLg=",
+  "_location": "/gitment",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "gitment",
+    "name": "gitment",
+    "escapedName": "gitment",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/gitment/download/gitment-0.0.3.tgz",
+  "_shasum": "dbccbad7480b1345b656913bd70eff792a7b38b8",
+  "_spec": "gitment",
+  "_where": "/Users/apple/Documents/cocos-docs/programmers-guide",
+  "author": {
+    "name": "Shiquan Sun",
+    "url": "https://github.com/imsun"
+  },
+  "bugs": {
+    "url": "https://github.com/imsun/gitment/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "mobx": "^3.1.7"
+  },
+  "deprecated": false,
+  "description": "A comment system based on GitHub Issues",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "homepage": "https://github.com/imsun/gitment",
+  "keywords": [
+    "comment system",
+    "GitHub Issues"
+  ],
+  "license": "MIT",
+  "main": "./dist/gitment.js",
+  "name": "gitment",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imsun/gitment.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist --ignore test.js --source-maps & NODE_ENV=production webpack --config webpack.config.js --progress --profile --colors",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --host 0.0.0.0 --progress --profile --colors"
+  },
+  "version": "0.0.3"
+}
