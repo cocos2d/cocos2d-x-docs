@@ -7,7 +7,7 @@
     - [Where to get help](about/help.md)
     - [How to contribute](about/how.md)
 
--  Basic Cocos2d-x Concepts
+-  [Basic Cocos2d-x Concepts](basic_concepts/index.md)
     - [Main Components](basic_concepts/index.md)
     - [Director](basic_concepts/director.md)
     - [Scenes and the Scene graph](basic_concepts/scene.md)
@@ -17,7 +17,7 @@
     - [Parent Child Relationship](basic_concepts/parent_child.md)
     - [Logging](basic_concepts/logging.md)
 
--  Sprites
+-  [Sprites](sprites/index.md)
     - [What are Sprites](sprites/index.md)
     - [Creating Sprites](sprites/creating.md)
     - [Using Spritesheets](sprites/spritesheets.md)
@@ -25,34 +25,34 @@
     - [Sprite Manipulation](sprites/manipulation.md)
     - [Polygon Sprite](sprites/polygon.md)
 
--  Actions
+-  [Actions](actions/index.md)
     - [What are Actions](actions/index.md)
     - [Basic Actions](actions/basic.md)
     - [Sequences](actions/sequences.md)
     - [Sequence Internals, what is really happening](actions/sequence_internals.md)
 
--  Building and Transitioning Scenes
+-  [Building and Transitioning Scenes](scenes/index.md)
     - [What is a Scene](scenes/index.md)
     - [Creating a Scene](scenes/creating.md)
     - [Transitioning from Scene to Scene](scenes/transitioning.md)
 
--  UI Components
-    - [Widgets, oh, my!](ui/index.md)
-    - [Label](ui/labels.md)
-    - [Menu](ui/menus.md)
-    - [Buttons](ui/buttons.md)
-    - [Checkbox](ui/checkboxes.md)
-    - [Loading Bar](ui/loading_bar.md)
-    - [Slider](ui/sliders.md)
-    - [TextField](ui/textfields.md)
+-  [UI Components](ui_components/index.md)
+    - [Widgets, oh, my!](ui_components/index.md)
+    - [Label](ui_components/labels.md)
+    - [Menu](ui_components/menus.md)
+    - [Buttons](ui_components/buttons.md)
+    - [Checkbox](ui_components/checkboxes.md)
+    - [Loading Bar](ui_components/loading_bar.md)
+    - [Slider](ui_components/sliders.md)
+    - [TextField](ui_components/textfields.md)
 
--  Other Node Types
+-  [Other Node Types](other_node_types/index.md)
     - [More than just a Node](other_node_types/index.md)
     - [TileMap](other_node_types/tilemap.md)
     - [Particle System](other_node_types/particles.md)
     - [Parallax](other_node_types/parallax.md)
 
--  Event Dispatcher
+-  [Event Dispatcher](event_dispatcher/index.md)
     - [What is the EventDispatch mechanism](event_dispatcher/index.md)
     - [5 types of event listeners](event_dispatcher/types.md)
     - [FixedPriority vs SceneGraphPriority](event_dispatcher/priority.md)
@@ -63,7 +63,7 @@
     - [Creating Custom Events](event_dispatcher/custom.md)
     - [Registering Events with the Dispatcher](event_dispatcher/registering.md)
 
--  3D
+-  [3D](3d/index.md)
     - [Terminology](3d/index.md)
     - [Sprite3D](3d/sprite3d.md)
     - [Animation](3d/animation.md)
@@ -75,31 +75,31 @@
     - [Tools for creating 3D Sprites](3d/tools.md)
     - [Advanced 3D Topics](3d/advanced.md)
 
--  Scripting
+-  [Scripting](scripting/index.md)
     - [Script component](scripting/index.md)
 
--  Physics
+-  [Physics](physics/index.md)
     - [Physics is scary, do I really need it? Please tell me no!](physics/index.md)
     - [Physics terminology and concepts](physics/concepts.md)
     - [Collision](physics/collisions.md)
     - [Queries](physics/queries.md)
     - [Debugging/Disabling](physics/debugging.md)
 
--  Audio
+-  [Audio](audio/index.md)
     - [Getting Started](audio/index.md)
     - [Play background music and sounds](audio/playing.md)
     - [Audio operations](audio/operations.md)
     - [Advanced Audio](audio/advanced.md)
     - [SimpleAudio Engine vs Audio Engine](audio/engines.md)
 
--  Advanced Topics
+-  [Advanced Topics](advanced_topics/index.md)
     - [File System Access](advanced_topics/index.md)
     - [Networking with HTTP](advanced_topics/networking.md)
     - [Shaders and Materials](advanced_topics/shaders.md)
     - [Optimizing Graphics](advanced_topics/optimizing.md)
     - [SQLite](advanced_topics/sqlite.md)
 
--  VR (virtual reality)
+-  [VR (virtual reality)](vr/index.md)
     - [Getting Started](vr/index.md)
 
 -  [Installations](installation/A.md)
@@ -117,7 +117,7 @@
       - [Windows](installation/Windows.md)
       - [Windows Phone](installation/Windows-Phone.md) __**DEPRECATED**__
 
--  Tools
+-  [Tools](editors_and_tools/cocosCLTool.md)
     - [Cocos Command-Line tool](editors_and_tools/cocosCLTool.md)
     - [Cocos GUI](editors_and_tools/cocos.md)
     - [Pre-built libraries]()
