@@ -7,7 +7,6 @@
         "anchorjs",
         "toggle-chapters",
         "sharing",
-        "components",
         "codetabs"
     ],
     "styles": {
@@ -15,7 +14,7 @@
     },
     "pluginsConfig": {
         "github-issue-feedback-language": {
-            "repo": "drelaptop/just4test",
+            "repo": "cocos2d/cocos2d-x-docs",
             "branch": "master"
         },
         "sharing": {
@@ -39,21 +38,6 @@
             "all": [
                 "facebook", "google", "twitter",
                 "weibo"
-            ]
-        },
-        "components": {
-            "templatePath": "docs/components",
-            "templates": [
-              {
-                "name": "header",
-                "target": "body",
-                "prepend": "true"
-              },
-              {
-                "name": "footer",
-                "target": "section",
-                "prepend": "false"
-              }
             ]
         }
     }
