@@ -6,4 +6,4 @@
 
 - 这是本章介绍的位置
 
-- [Android - Android Studio环境搭建](./installation/android-studio-intallation/installation.md)
+- [Android - Android Studio环境搭建](installation/Android-Studio.md)
