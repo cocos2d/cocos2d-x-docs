@@ -37,12 +37,12 @@ auto spritecache = SpriteFrameCache::getInstance();
 
 // the .plist file can be generated with any of the tools mentioned below
 spritecache->addSpriteFramesWithFile("sprites.plist");
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 // load the Sprite Sheet
 var spritecache = cc.SpriteFrameCache;
 
 // the .plist file can be generated with any of the tools mentioned below
-spritecache.addSpriteFramesWithFile(res.sprites_plist);
+spritecache.addSpriteFramesWithFile(res.sprites_plist);-->
 {%- endcodetabs %}
 
 Now that we have a __sprite sheet__ loaded into `SpriteFrameCache` we can create
