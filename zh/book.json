@@ -1,7 +1,6 @@
 {
     "structure": {
-        "summary": "SUMMARY.md",
-        "readme": "index.md"
+        "summary": "SUMMARY.md"
     },
     "variables": {
         "navlinks": [
