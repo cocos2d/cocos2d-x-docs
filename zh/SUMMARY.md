@@ -5,7 +5,7 @@
 - [了解引擎](README.md)
     - [关于](README.md)
     - [引擎优势]()
-    - [如何学习]()
+    - [学习资源]()
     - [获取帮助]()
     - [支持]()
 
@@ -16,7 +16,7 @@
     - [精灵(Sprite)]()
     - [动作(Action)]()
     - [序列(Sequence)]()
-    - [组件关系]()
+    - [组件结构]()
     - [日志输出]()
 
 ## 引擎组件
@@ -74,8 +74,8 @@
     - [3D精灵(Sprite3D)]()
     - [3D动画(Animation3D)]()
     - [相机(Camera)]()
-    - [方块纹理(TextureCube)]()
-    - [模拟天空(Skybox)]()
+    - [立方体纹理(TextureCube)]()
+    - [天空盒(Skybox)]()
     - [光照(Lighting)]()
     - [地表(Terrain)]()
     - [3D软件工具包]()
@@ -96,17 +96,14 @@
     - [背景音乐](./audio-and-effect/zh.md)
     - [声音控制]()
     - [高级功能]()
-    - [SimpleAudioEngine与AudioEngine]()
+    - [SimpleAudioEngine与AudioEngine对比]()
 
 - [高级话题](README.md)
     - [文件接入]()
     - [网络操作]()
     - [材质与纹理]()
-    - [图形性能调优]()
+    - [图形性能优化]()
     - [SQLite集成]()
-
-- [虚拟现实(VR)](README.md)
-    - [快速了解]()
 
 ## 开发环境
 
@@ -117,15 +114,13 @@
         - [Visual Studio](installation/Android-VisualStudio.md)
         - [Android Studio](./installation/android-studio-intallation/installation.md)
         - [Eclipse](installation/Android-Eclipse.md)
-    - [IOS平台](installation/iOS.md)
+    - [IOS](installation/iOS.md)
     - [macOS平台](installation/OSX.md)
     - [Linux平台](installation/Linux.md)
-    - [Tizen平台]() __**DEPRECATED**__
     - [Windows平台](installation/Windows.md)
         - [Visual Studio](installation/Windows.md)
-        - [Windows Phone](installation/Windows-Phone.md) __**DEPRECATED**__
 
 - [工具](README.md)
-    - [Cocos 命令行工具]()
-    - [Cocos 图形界面工具]()
-    - [提前构建运行库]()
+    - [Cocos命令行工具]()
+    - [Cocos图形界面工具]()
+    - [预编译库]()
