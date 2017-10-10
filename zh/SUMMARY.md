@@ -126,4 +126,4 @@
 - [工具](README.md)
     - [Cocos 命令行工具]()
     - [Cocos 图形界面 Cocos GUI]()
-    - [构建运行库 Pre-built libraries](warn翻译是否合适)
+    - [构建运行库 Pre-built libraries]()
