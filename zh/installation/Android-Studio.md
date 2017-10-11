@@ -1,8 +1,8 @@
 # cocos2d-x 在 Android Studio 的环境搭建
 
-## 安装步骤：
+## 配置步骤：
 
-1. 在[cocos官网下载界面](http://www.cocos.com/download),下载 cocos2d-x v3.16 版本, 解压
+1. 在[cocos官网下载页面](http://www.cocos.com/download),下载 cocos2d-x v3.16 版本, 解压
 1. 下载安装 Android Studio v2.3，可以从[Google中国开发者网站](https://developer.android.google.cn/studio/index.html)下载对应版本。
 1. 完成 Android Studio 安装，进入欢迎界面，选择 `Import project(Eclipse ADT, Gradle, etc.)`。选择目录`cocos2d-x root/tests/cpp-tests/proj.android-studio`，点击 `OK` 进入IDE主界面。
 
