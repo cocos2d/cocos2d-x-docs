@@ -76,6 +76,73 @@ modify your tables structure. This is outside the scope of this document, howeve
 Creating a simple table:
 
 ```cpp
+int result = 0;
+std::string sql;
+
+sql = "create table " +
+std::string("Master") +
+std::string(" (id TEXT PRIMARY KEY, value INT);");
+
+result = sqlite3_exec(pdb, sql.c_str(), NULL, NULL, NULL);
+
+if(result == SQLITE_OK)
+{
+  // table created successfully
+}
+else
+{
+  // table was NOT created successfully
+}
+```
+
+#### Querying Data
+When you want information from your database you must execute a *select* query to
+get it. A *select* query is a *read-only* query. You don't have to worry about
+accidentally modifying your game data when running these types of queries. An example
+*select* query;
+
+```cpp
+std::string key = "Brown";
+
+std::string sql = "SELECT NAME " +
+std::string(" FROM ") +
+std::string("Master") +
+std::string(" WHERE id='") +
+std::string(key.c_str()) +
+std::string("' LIMIT 1;");
+
+sqlite3_stmt* statement;
+
+if (sqlite3_prepare_v2(&pdb, sql.c_str(), -1, &statement, 0) == SQLITE_OK)
+{
+  int result = 0;
+
+  while(true)
+  {
+      result = sqlite3_step(statement);
+
+      if(result == SQLITE_ROW)
+      {
+          // do something with the row.
+      }
+      else
+      {
+          break;
+      }
+  }
+}
+```
+
+#### Inserting Data
+You may need to insert data into your database to use again at a later time. Use
+an *insert* query to do this. Example:
+
+```cpp
 
 
 ```
+
+#### Updating Data
+
+
+### Closing The Database
