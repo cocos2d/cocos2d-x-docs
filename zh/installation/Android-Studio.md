@@ -26,7 +26,7 @@
 
     1. 点击代码行左侧的空白，设置断点
     1. 以 debug 模式运行 cpp-tests
-    3. 操作 App 触发断点，IDE 将卡在断点处，在底栏打开`Debug`视图，可以查看运行堆栈和变量的值
+    1. 操作 App 触发断点，IDE 将卡在断点处，在底栏打开`Debug`视图，可以查看运行堆栈和变量的值
 
     ![](../../en/installation/Android-Studio-img/debug_cpp_tests.png "")
 
@@ -48,8 +48,8 @@
 
 ## FAQ
 
-1. 如何使用 x86 ABI 的模拟器运行 cocos2d-x 的 cpp-tests 项目？
-    - 在项目中找到 `gradle.properties` 文件，将 `PROP_APP_ABI=armeabi` 修改为 `PROP_APP_ABI=x86`，点击提示中的 `Sync Now`，完成后重新编译运行。
+### 如何使用 x86 ABI 的模拟器运行 cocos2d-x 的 cpp-tests 项目？
+- 在项目中找到 `gradle.properties` 文件，将 `PROP_APP_ABI=armeabi` 修改为 `PROP_APP_ABI=x86`，点击提示中的 `Sync Now`，完成后重新编译运行。
 
-1. 如何下载ARM的Image进行模拟器的创建？
-    - 依照**模拟器的创建**中的步骤，在`Select a system image` 界面，到 `Other Images` 选项卡， 选中 ABI 为 armeabi 的系统镜像。
+### 如何下载ARM的Image进行模拟器的创建？
+- 依照**模拟器的创建**中的步骤，在`Select a system image` 界面，到 `Other Images` 选项卡， 选中 ABI 为 armeabi 的系统镜像。
