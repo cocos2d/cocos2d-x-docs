@@ -109,10 +109,10 @@
 
 - [环境搭建](README.md)
     - [安装要求](installation/A.md)
-    - [Android平台](./installation/android-studio-intallation/installation.md)
+    - [Android平台](./installation/Android-Studio.md)
         - [命令行](installation/Android-terminal.md)
         - [Visual Studio](installation/Android-VisualStudio.md)
-        - [Android Studio](./installation/android-studio-intallation/installation.md)
+        - [Android Studio](./installation/Android-Studio.md)
         - [Eclipse](installation/Android-Eclipse.md)
     - [IOS](installation/iOS.md)
     - [macOS平台](installation/OSX.md)
