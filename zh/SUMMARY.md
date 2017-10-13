@@ -2,15 +2,15 @@
 
 ## 新手入门
 
-- [了解引擎](index.md)
-    - [关于](index.md)
-    - [引擎优势](about/index.md)
+- [了解引擎](about/index.md)
+    - [关于](about/index.md)
+    - [引擎优势](about/why.md)
     - [学习资源](about/learn.md)
     - [获取帮助](about/help.md)
     - [支持](about/how.md)
 
-- [基本概念](asic_concepts/index.md)
-    - [组件简介](asic_concepts/index.md)
+- [基本概念](basic_concepts/index.md)
+    - [组件简介](basic_concepts/index.md)
     - [导演(Director)](basic_concepts/director.md)
     - [场景(Scene)](basic_concepts/scene.md)
     - [精灵(Sprite)](basic_concepts/sprites.md)
@@ -107,7 +107,7 @@
 
 ## 开发环境
 
-- [环境搭建](index.md)
+- [环境搭建](installation/index.md)
     - [安装要求](installation/A.md)
     - [Android平台](./installation/Android-Studio.md)
         - [命令行](installation/Android-terminal.md)

@@ -1,11 +1,23 @@
-## Cocos2d-x
+## Cocos2d-x v3.16 用户手册
 
-- Cocos2d-x 是MIT许可证下发布的开源游戏引擎，游戏开发快速，简易，功能强大。Cocos2d-x 核心优势在于允许开发人员利用C++、Lua及Javascript来进行跨平台部署，覆盖平台有iOS、Android、Windows、macOS等。
+欢迎使用 Cocos2d-x 用户手册，本手册包含引擎的介绍，功能组件的使用方法以及引擎在多个平台的环境搭建。能够帮助您快速上手 Cocos2d-x ，并开始进行跨平台游戏的开发。
 
-- Cocos2d-x用户不仅包括个人开发者和游戏开发爱好者，还包括许多知名大公司如Zynga、Wooga、Gamevil、Glu、GREE、Konami、TinyCo、HandyGames、IGG及Disney Mobile等。截止2013年9月，全球基于Cocos2d-x引擎的游戏下载量高达逾15亿，其中许多还占据苹果应用商店（AppStore）和谷歌应用商店（Google Play）排行榜。同时许多公司如触控、谷歌、微软、ARM，英特尔及黑莓的工程师在 Cocos2d-x 领域也非常活跃。
+## 导读
 
-## Cocos 产品架构
+- [了解引擎](about/index.md)
+- [基本概念](basic_concepts/index.md)
+- [环境搭建](installation/index.md)
 
-- Cocos Creator，Cocos2d-x，AnySDK 等
+## 致谢
 
-    ![](./about/res/product-contructors.png)
+ __作者:__ SlackMoehrle, Ricardo, Justin, Nite, Kai, Minggo, Wenhai, Tony, Yingtao, Rao, Huabin, Zhe
+
+__CSS 改进:__ Nico
+
+__文档贡献:__ stevetranby, Maxxx, smitpatel88, IQD, Michael, Meir_yanovich, catch_up, kidproquo, EMebane, reyanthonyrenacia, Fradow, pabitrapadhy, Manny_Dev, ZippoLag, kubas121, bjared, grimfate, DarioDP
+
+__特别感谢:__ cocos2d-x的所有用户，是你们让这个文档有了存在的意义
+
+欢迎大家到 [GitHub](https://github.com/cocos2d/cocos2d-x-docs) 对文档进行反馈，在 Gitbook 中可以直接点击右下角 `Have Feedback` 跳转。
+
+文档示例程序请到 [GitHub](https://github.com/chukong/programmers-guide-samples) 下载
