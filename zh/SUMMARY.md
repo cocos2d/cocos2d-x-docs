@@ -2,26 +2,26 @@
 
 ## 新手入门
 
-- [了解引擎](README.md)
-    - [关于](README.md)
-    - [引擎优势]()
-    - [学习资源]()
-    - [获取帮助]()
-    - [支持]()
+- [了解引擎](about/index.md)
+    - [关于](about/index.md)
+    - [引擎优势](about/why.md)
+    - [学习资源](about/learn.md)
+    - [获取帮助](about/help.md)
+    - [支持](about/how.md)
 
-- [基本概念](README.md)
-    - [组件简介]()
-    - [导演(Director)]()
-    - [场景(Scene)]()
-    - [精灵(Sprite)]()
-    - [动作(Action)]()
-    - [序列(Sequence)]()
-    - [组件结构]()
-    - [日志输出]()
+- [基本概念](basic_concepts/index.md)
+    - [组件简介](basic_concepts/index.md)
+    - [导演(Director)](basic_concepts/director.md)
+    - [场景(Scene)](basic_concepts/scene.md)
+    - [精灵(Sprite)](basic_concepts/sprites.md)
+    - [动作(Action)](basic_concepts/actions.md)
+    - [序列(Sequence)](basic_concepts/sequences.md)
+    - [组件结构](basic_concepts/parent_child.md)
+    - [日志输出](basic_concepts/logging.md)
 
 ## 引擎组件
 
-- [精灵](README.md)
+- [精灵](index.md)
     - [精灵简介]()
     - [精灵创建]()
     - [精灵控制]()
@@ -29,18 +29,18 @@
     - [精灵帧缓存(SpriteFrameCache)]()
     - [多边形精灵(PolygonSprite)]()
 
-- [动作](README.md)
+- [动作](index.md)
     - [动作简介]()
     - [基本动作](./action/zh.md)
     - [动作序列]()
     - [序列剖析]()
 
-- [场景](README.md)
+- [场景](index.md)
     - [场景简介]()
     - [场景创建]()
     - [场景转换]()
 
-- [UI组件](README.md)
+- [UI组件](index.md)
     - [组件简介]()
     - [标签(Label)]()
     - [菜单(Menu)]()
@@ -50,7 +50,7 @@
     - [滑动条(Slider)]()
     - [文本框(TextField)]()
 
-- [高级节点类型](README.md)
+- [高级节点类型](index.md)
     - [简介]()
     - [瓦片地图(TileMap)]()
     - [粒子系统(ParticleSystem)]()
@@ -58,7 +58,7 @@
 
 ## 引擎功能
 
-- [事件分发](README.md)
+- [事件分发](index.md)
     - [事件分发简介]()
     - [事件监听器]()
     - [触发优先级]()
@@ -69,7 +69,7 @@
     - [创建自定义事件]()
     - [注册并分发事件]()
 
-- [3D支持](README.md)
+- [3D支持](index.md)
     - [术语]()
     - [3D精灵(Sprite3D)]()
     - [3D动画(Animation3D)]()
@@ -81,24 +81,24 @@
     - [3D软件工具包]()
     - [进一步讨论]()
 
-- [使用脚本](README.md)
+- [使用脚本](index.md)
     - [脚本组件]()
 
-- [物理引擎](README.md)
+- [物理引擎](index.md)
     - [物理引擎简介]()
     - [术语与概念]()
     - [碰撞]()
     - [查询]()
     - [调试]()
 
-- [声音和音效](README.md)
+- [声音和音效](index.md)
     - [简介]()
     - [背景音乐](./audio-and-effect/zh.md)
     - [声音控制]()
     - [高级功能]()
     - [SimpleAudioEngine与AudioEngine对比]()
 
-- [高级话题](README.md)
+- [高级话题](index.md)
     - [文件接入]()
     - [网络操作]()
     - [材质与纹理]()
@@ -107,12 +107,12 @@
 
 ## 开发环境
 
-- [环境搭建](README.md)
+- [环境搭建](installation/index.md)
     - [安装要求](installation/A.md)
     - [Android平台](./installation/Android-Studio.md)
         - [命令行](installation/Android-terminal.md)
         - [Visual Studio](installation/Android-VisualStudio.md)
-        - [Android Studio](./installation/Android-Studio.md)
+        - [Android Studio](installation/Android-Studio.md)
         - [Eclipse](installation/Android-Eclipse.md)
     - [IOS](installation/iOS.md)
     - [macOS平台](installation/OSX.md)
@@ -120,7 +120,7 @@
     - [Windows平台](installation/Windows.md)
         - [Visual Studio](installation/Windows.md)
 
-- [工具](README.md)
+- [工具](index.md)
     - [Cocos命令行工具]()
     - [Cocos图形界面工具]()
     - [预编译库]()

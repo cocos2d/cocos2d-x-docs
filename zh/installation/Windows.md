@@ -11,22 +11,22 @@
 1. 运行 `cocos2d-x-3.16/setup.py`，脚本会自动做一些环境变量的设置，脚本执行过程中遇到的几个需要手动输入的变量，`win32` 的程序不需要，可以选择直接回车跳过。
 1. 双击 `cocos2d-x-3.16\build\cocos2d-win32.sln`， Visual Studio 将打开此解决方案，解决方案打开后，可以看到这样的项目列表：
 
-    ![](Windows-img/cpp-tests-win32-solution.png "")
+    ![](./Windows-img/cpp-tests-win32-solution.png "")
 
 1. 默认情况下项目列表中 `cpp-tests` 加粗显示，表示是启动项目，此时点击菜单栏中`本地 Windows 调试器`进行项目的编译和运行。编译过程视机器性能不同，会花费10-30分钟的时间，编译完成后，将自动运行，运行成功将看到测试程序：
 
-    ![](Windows-img/cpp-tests-win32-run.png "")
+    ![](./Windows-img/cpp-tests-win32-run.png "")
 
 ## 如何调试(Debug)
 
 1. 点击代码行左侧的空白，设置断点
 
-    ![](Windows-img/cpp-tests-win32-debug-breakpoint.png "")
+    ![](./Windows-img/cpp-tests-win32-debug-breakpoint.png "")
 
 1. 以 debug 模式运行 cpp-tests
 3. 操作 App 触发断点，IDE 将卡在断点处，`Debug`视图会自动跳出，可以查看运行堆栈和变量的值
 
-    ![](Windows-img/cpp-tests-win32-debug-trace.png "")
+    ![](./Windows-img/cpp-tests-win32-debug-trace.png "")
 
 ## FAQ
 
