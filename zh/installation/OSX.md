@@ -21,5 +21,3 @@
 
     <a href="IOS-img/macOS-debug.png" target="_blank"><img src="IOS-img/macOS-debug.png" alt="macOS-debug-img"></a>
 
-## FAQ
-
