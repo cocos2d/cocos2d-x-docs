@@ -1,48 +1,24 @@
-# Basic Cocos2d-x Concepts
-This chapter assumes you've just gotten started with Cocos2d-x, and are ready to
-start working on the game of your dreams. Don't worry, it will be fun!
+# 基本概念
 
-Let's get started!
+本章假设您刚刚开始使用 Cocos2d-x，准备开始你的游戏开发之旅。不要因为自己是新手而担心, 整个过程会很有趣.
 
-Cocos2d-x is a cross-platform game engine. A game engine is a piece of software
-that provides common functionality that all games need. You might have heard this
-referred to as an API or framework but in this guide, we'll be calling it a
-'game engine'.
+让我们开始！
 
-Game engines include many components that when used together will help speed up
-development time, and often perform better than homemade engines. A game engine
-is usually comprised of some or all of the following components: a renderer,
-2d/3d graphics, collision detection, a physics engine, sound, controller support,
-animations and more.  Game engines usually support multiple platforms thus making
-it easy to develop your game and then deploy it to multiple platforms without
-much overhead at all.
+游戏引擎是一种特殊的软件, 它提供游戏需要的常见功能; 会包含许多组件，使用组件能缩短开发时间, 让游戏开发变得简单; 一般支持跨平台, 让游戏的平台部署更快捷。游戏引擎通常会包含这些部分：渲染器，2D/3D 图形, 碰撞检测，物理引擎，声音，控制支持，动画等.
 
-Since Cocos2d-x is a game engine, it provides a simplified API for developing
-cross-platform mobile and desktop games. By encapsulating the power inside an
-easy to use API, you can focus on developing your games and worry less about the
-implementation of the technical underpinnings. Cocos2d-x will take care of as
-much or as little of the heavy lifting as you want.
+Cocos2d-x 就是这样的一个游戏引擎，它提供了一个用于开发的简化API, 支持跨平台。通过封装底层图形接口提供易于使用的API, 降低了游戏的开发门槛，让使用者可以专注于开发游戏，而不用关注底层的技术细节。更重要的是 Cocos2d-x 是一个完全开源的游戏引擎, 在您的游戏开发过程中可以根据实际需要, 定制化引擎的功能, 如果您想要一个功能但又不知如何修改, 提出这个需求, 全世界的开发者可以一起为您完成.
 
-Cocos2d-x provides `Scene`, `Transition`, `Sprite`, `Menu`, `Sprite3D`, `Audio`
-objects and much more. Everything you need to create your games are included.
+Cocos2d-x 提供了 场景(Scene)，转换(Transition)，精灵(Sprite)，菜单(Menu)，3D精灵(Sprite3D)，声音和音效(Audio)对象等, 开发游戏所需的一切。
 
-## Main Components
-It might seem overwhelming at first, but getting started with Cocos2d-x is
-simple. Before we dive into depth we must understand some of the concepts
-Cocos2d-x utilizes. At the heart of Cocos2d-x are `Scene`, `Node`, `Sprite`,
-`Menu` and `Action` objects. Look at any of your favorite games, and you will
-see all of these components in one form or another!
+## 组件简介
 
-Let's have a look. This might look a bit similar to a very popular game you might have
-played:
+看起来关于游戏引擎的东西很多, 其实上手 Cocos2d-x 很简单. 在深入讨论之前, 让我们先了解一些 Cocos2d-x 使用的概念. Cocos2d-x 的核心是 Scene(场景), Node(节点), Sprite(精灵), Menu(菜单), Action(动作). 
+下面是一个简单的游戏界面:
 
-![](basic_concepts-img/2n_main.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_main.png "")
 
-Let's take another look, but splitting up the screenshot and identifying the
-components used to build it:
+让我们再来看一下, 分解这个游戏界面的组件构成
 
-![](basic_concepts-img/2n_annotated_scaled.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_annotated_scaled.png "")
 
-You can see a menu, some sprites and labels, which all have an equivalent in
-Cocos2d-x.  Take a look at a few of your own game design documents, and see what
-components you have, you'll probably have a few that match up.
+能看到一个菜单, 几个精灵, 和几个标签, 观察一下喜欢的游戏, 会发现这些组件以某种形式存在其中.
