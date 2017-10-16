@@ -90,7 +90,7 @@
     - [Play background music and sounds](audio/playing.md)
     - [Audio operations](audio/operations.md)
     - [Advanced Audio](audio/advanced.md)
-    - [SimpleAudio Engine vs Audio Engine](audio/engines.md)
+    - [Are your audio needs more advanced?](audio/engines.md)
 
 -  [Advanced Topics](advanced_topics/index.md)
     - [File System Access](advanced_topics/index.md)
@@ -120,4 +120,5 @@
 -  [Tools](editors_and_tools/cocosCLTool.md)
     - [Cocos Command-Line tool](editors_and_tools/cocosCLTool.md)
     - [Cocos GUI](editors_and_tools/cocos.md)
-    - [Pre-built libraries]()
+    - [Creator to Cocos2d-x](editors_and_tools/creator_to_cocos2dx.md)
+    - [Pre-built Libraries](editors_and_tools/prebuilt_libraries.md)
