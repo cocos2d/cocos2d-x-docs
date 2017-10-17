@@ -14,17 +14,11 @@
 
 ![](basic_concepts-img/tree.jpg "Simple Tree")
 
-听起来这好像很复杂, 可能你会问, 我为什么要关注这个技术细节, Cocos2d-x 值得我研究的这么深入吗? 值得! 这个对你真正了解渲染器是如何绘制场景的非常重要. 
+听起来这好像很复杂, 可能你会问, 我为什么要关注这个技术细节, Cocos2d-x 值得我研究的这么深入吗? 值得! 这个对你真正了解渲染器是如何绘制场景的非常重要.
 
 当你开发游戏的时候, 你会添加一些节点, 精灵和动画到一个场景中, 你期望的是每一个添加的对象都能被正确的展示, 可是如果有个对象没有被展示呢? 可能你错误的把这个对象隐藏到背景中了. 怎么办? 别着急, 这是个小问题, 停下来, 拿出一张纸, 把场景图画出来, 你肯定能很容易的发现错误.
 
-Since the _Scene Graph_ is a tree; you can __walk the tree__. Cocos2d-x uses
-the __in-order walk__ algorithm. An __in-order walk__ is the left side of the
-tree being walked, then the root node, then the right side of the tree. Since
-the right side of the tree is rendered last, it is displayed first on the
-__scene graph__. `错误描述 从 A-F 的顺序来看, 是按照左右根的顺序, 不是左根右`
-
-既然场景图是一个树结构, 你就能遍历它, Cocos2d-x 使用 `in-order walk algorithm (翻译? 二叉树的后序遍历)`, 先遍历树的左节点, 然后是根节点, 最后是右节点.
+既然场景图是一个树结构, 你就能遍历它, Cocos2d-x 使用 `中序遍历`, 先遍历左子树, 然后根节点, 最后是右子树.
 
 ![](../../en/basic_concepts/basic_concepts-img/in-order-walk.png "in-order walk")
 
@@ -36,9 +30,9 @@ __scene graph__. `错误描述 从 A-F 的顺序来看, 是按照左右根的顺
 
 ![](../../en/basic_concepts/basic_concepts-img/2n_mainScene-sceneGraph.png "")
 
-另一点要考虑的是, __z-order__ 为负的元素, z-order 为负的节点会被放置在树的左边, 为正的节点会被放在树的右边. 实际开发的过程中, 你可以按照任意顺序添加对象, 他们会按照你指定的 z-order 自动排序.
+另一点要考虑的是, __z-order__ 为负的元素, z-order 为负的节点会被放置在左子树, 非负的节点会被放在右子树. 实际开发的过程中, 你可以按照任意顺序添加对象, 他们会按照你指定的 z-order 自动排序.
 
-![](basic_concepts-img/layers.png "")
+![](../../en/basic_concepts/basic_concepts-img/layers.png "")
 
 如上图, 左侧的场景是由很多节点对象组成的, 他们根据被指定的 z-order 相互叠加. 在 Cocos2d-x 中, 通过 `Scene` 的 `addChild()` 方法构建场景图.
 
