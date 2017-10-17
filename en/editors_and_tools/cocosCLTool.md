@@ -193,54 +193,6 @@ cocos deploy -q -s ~/MyCompany/MyGame -p ios -m release
 You can run __cocos deploy --help__ to see all available options broken down by
 platform.
 
-### Creating pre-built libraries to use instead of source code.
-Cocos2d-x is available to use as both source code and pre-built libraries. Using
-the source allows developers to see __under the hood__ what the engine is doing.
-Using the source increases compilation time. To decrease compilation time, by a
-great deal, you can create __pre-built__  (or __static__) libraries from the source. These are static
-libraries you can add to your project to use Cocos2d-x. This is the same as saying: "I won't touch the
-engine, just build on top if it". Compiling the __pre-built__
-libraries with the __cocos__ tool is easy. Examples:
-```sh
-# remove the 'prebuilt' folder
-# without the -m flag, this builds for release mode
-# generates libraries for every platform
-cocos gen-templates
-cocos gen-libs -c
-
-# remove the 'prebuilt' folder
-# without the -m flag, this builds for release mode
-# generates libraries for just ios
-cocos gen-templates
-cocos gen-libs -c -p ios
-
-# remove the 'prebuilt' folder
-# without the -m flag, this builds for release mode
-# generates libraries for just ios and android
-cocos gen-templates
-cocos gen-libs -c -p ios -p android
-
-# remove the 'prebuilt' folder
-# with the -m flag, this builds for debug
-# generates libraries for just ios and android
-cocos gen-templates
-cocos gen-libs -c -p ios -m debug
-```
-
-You can run __cocos gen-libs --help__ to see all available options broken down by platform.
-
-### Using the pre-built libraries in your projects.
-Once you have built the pre-built libraries, you can tell `cocos` to use them when creating a
-new project. You may have heard developers refer to using __static libraries__. This is exactly
-what you have created by running the __cocos gen-libs__ command above. Doing this you have told the
-compilation process that __these files don't need to be compiled again, just use them__. Using
-__static libraries__ will speed up your compilation time. To create a new project and have it use
-__static libraries__ rather than the __raw engine source__ you specify the `-t binary` flag to your `cocos new ...`
-command. Example:
-```sh
-cocos new ProjectName -p projectname.com.name -l cpp -t binary
-```
-
 ### Installing additional plugins
 Using the __Cocos Package Manager__ you can easily add additional functionality to your games,
 including __VR__ and __SDKBOX__. There are a variety of commands to assist with this. Examples:
@@ -258,7 +210,7 @@ cocos package update
 
 You can run __cocos package --help__ to see all available options broken down by platform.
 
-### #Installing VR
+#### Installing VR
 __VR__ is easily added to your project! Every __VR__ project needs __vrsdkbase__, it takes care
 of setting up your project to use __VR__. It is easy to import:
 
