@@ -38,3 +38,23 @@ The build process can take between several minutes and several hours, depending 
 You can run __cocos gen-libs --help__ to see all available options broken down by platform.
 
 ### Using The Prebuilt Libraries In Your Projects
+Using the prebuilt libraries in your projects is easy. Simply add the libraries you need into your project and set your __header__ and __include__ search paths. Doing this depends upon the enviroment you are using. The paths you need to add are:
+
+__Header Search Paths:__
+```sh
+# Project level
+/path_to_cocos2d-x/cocos2d-x/
+/path_to_cocos2d-x/cocos2d-x/cocos
+/path_to_cocos2d-x/cocos2d-x/cocos/base /path_to_cocos2d-x/cocos2d-x/cocos/physics /path_to_cocos2d-x/cocos2d-x/cocos/math
+/path_to_cocos2d-x/cocos2d-x/cocos/2d
+/path_to_cocos2d-x/cocos2d-x/cocos/ui /path_to_cocos2d-x/cocos2d-x/cocos/network /path_to_cocos2d-x/cocos2d-x/cocos/audio/include /path_to_cocos2d-x/cocos2d-x/cocos/editor-support /path_to_cocos2d-x/cocos2d-x/extensions
+/path_to_cocos2d-x/cocos2d-x/external /path_to_cocos2d-x/cocos2d-x/external/chipmunk/include/chipmunk
+
+# Target level
+/path_to_cocos2d-x/cocos2d-x/cocos/platform/ios /path_to_cocos2d-x/cocos2d-x/cocos/platform/ios/Simulation
+```
+
+__Include Search Paths:__
+```sh
+/path_to_cocos2d-x/cocos2d-x/prebuilt/ios
+```
