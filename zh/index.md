@@ -7,6 +7,10 @@
 - [了解引擎](about/index.md)
 - [基本概念](basic_concepts/index.md)
 - [环境搭建](installation/index.md)
+- [精灵(Sprite)](sprites/index.md)
+- [动作(Action)](actions/index.md)
+- [场景(Scene)](scenes/index.md)
+
 
 ## 致谢
 
