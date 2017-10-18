@@ -1,22 +1,14 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 序列(Sequence)
 
-## Sequences and Spawns
-With moving `Sprite` objects on the screen we have everything we need to create
-our game, right? Not quite. What about running multiple __Actions__? Yes,
-Cocos2d-x handles this too in a few different ways.
+能在屏幕上移动精灵, 是制作一个游戏所需的一切, 是吗? 不是的, 至少要考虑一下如何执行多个 `Action` . Cocos2d-x 通过 __序列(Sequence)__ 来支持这种需求.
 
-Just like it sounds, a `Sequence` is multiple `Action` objects run in a specified
-order. Need to run the `Sequence` in reverse? No problem, Cocos2d-x handles
-this with no additional work.
+顾名思义, 序列就是多个动作按照特定顺序的一个排列, 当然反向执行这个序列也是可以的, Cocos2d-x 能很方便的完成这项工作.
 
-Take a look at the flow of an example `Sequence` for moving a `Sprite`
-gradually:
+让我们来看一个通过序列控制精灵移动的例子:
 
-![](basic_concepts-img/2_sequence_scaled.png "")
+![](../../en/basic_concepts/basic_concepts-img/2_sequence_scaled.png "")
 
-This `Sequence` is easy to make:
+创建 `Sequence` :
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Node::create();
@@ -56,11 +48,7 @@ moveTo2));
 
 {%- endcodetabs %}
 
-This example runs a `Sequence`, in order, but what about running all the
-specified __Actions__ at the same time? Cocos2d-x supports this too and it
-is called `Spawn`. `Spawn` will take all the specified `Action` objects and
-executes them at the same time. Some might be longer than others, so they won't
-all finish at the same time if this is the case.
+这个例子执行了一个动作的 `Sequence` 序列, 那要是想让所有的特定动作同时执行呢? Cocos2d-x 也支持! 通过引擎中的 `Spawn` 对象, 你能让多个动过同时被解析执行. 可能不同动作的执行时间不一致, 在这种情况下, 他们不会同时结束.
 
 {% codetabs name="C++", type="cpp" -%}
 auto myNode = Node::create();
@@ -81,7 +69,4 @@ var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
 myNode.runAction(Spawn.create(moveTo1, moveBy1, moveTo2));
 {%- endcodetabs %}
 
-Why `Spawn` actions? Is there ever a reason? Sure! What if your main
-character has multiple __Actions__ when obtaining a power up? Maybe beating
-the boss at the end of a level has multiple __Actions__ that need to happen
-to end the level.
+为什么要有同时执行多个动作的需求呢? 当然是有原因的啦! 比如你的游戏角色被电了, 或者在关卡结束打 boss 的时候, 想一想类似的场景.

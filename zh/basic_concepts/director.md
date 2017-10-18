@@ -1,20 +1,9 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 导演(Director)
 
-## Director
-Cocos2d-x uses the concept of a `Director`, just like in a movie! The `Director`
-controls the flow of operations and tells the necessary recipient what to do.
-Think of yourself as the _Executive Producer_ and you tell the `Director` what
-to do! One common `Director` task is to control `Scene` replacements and
-transitions. The `Director` is a shared singleton (effectively, there's only one
-instance of the class at a time) object that you can call from anywhere in your
-code.
+Cocos2d-x 使用导演的概念，这个导演和电影制作过程中的导演一样！ 导演控制电影制作流程，指导团队完成各项任务。在使用 Cocos2d-x 开发游戏的过程中, 你可以认为自己是执行制片人，告诉 __导演(Director)__ 该怎么办！ 一个常见的 `Director` 任务是控制场景替换和转换。 `Director`是一个共享的单例对象，可以在代码中的任何地方调用。
 
-Here is an example of a typical game flow. The `Director` takes care of
-transitioning through this as your game criteria decides:
+这是一个典型的游戏流程实例。当您的游戏设计好时，`Director` 就负责场景的转换：
 
-![](basic_concepts-img/scenes.png "")
+![](../../en/basic_concepts/basic_concepts-img/scenes.png "")
 
-You are the director of your game. You decide what happens, when and how.
-Take charge!
+你是你的游戏的导演。你决定着发生什么, 何时发生, 如何发发生。

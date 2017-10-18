@@ -1,27 +1,17 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 动作(Action)
 
-## Actions
-Creating a `Scene` and adding `Sprite` objects on the screen is only part
-of what we need to do. For a game to be a game we need to make things move
-around! `Action` objects are an integral part of every game. __Actions__ allow the
-transformation of `Node` objects in time space. Want to move a `Sprite`
-from one `Point` to another and use a callback when complete? No problem!
-You can even create a `Sequence` of `Action` items to be performed on a
-`Node`. You can change `Node` properties like position, rotation and scale.
-Example Actions: `MoveBy`, `Rotate`, `Scale`. All games use __Actions__.
+创建一个场景, 在场景里面增加精灵只是完成一个游戏的第一步, 接下来我们要解决的问题就是, 怎么让精灵动起来. __动作(Action)__ 就是用来解决这个问题的, 它可以让精灵在场景中移动, 如从一个点移动到另外一个点. 你还可以创建一个动作 __序列(Sequence)__ , 让精灵按照这个序列做连续的动作, 在动作过程中你可以改变精灵的位置, 旋转角度, 缩放比例等等.
 
-Taking a look at the [sample code](https://github.com/chukong/programmers-guide-samples)
-for this chapter, here are __Actions__ in work:
+在 [代码示例](https://github.com/chukong/programmers-guide-samples)
+中, 有对应的章节, 执行效果是这样:
 
-![](basic_concepts-img/2n_level1_action_start.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_level1_action_start.png "")
 
-and after 5 seconds the sprite will move to a new position:
+5s 后, 精灵移动到了一个新的位置.
 
-![](basic_concepts-img/2n_level1_action_end.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_level1_action_end.png "")
 
-`Action` objects are easy to create:
+`Action` 对象的创建:
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("Blue_Front1.png");

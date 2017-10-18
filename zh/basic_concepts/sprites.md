@@ -1,26 +1,12 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 精灵(Sprite)
 
-## Sprites
-All games have `Sprite` objects, and you may or may not realize what they are.
-Sprites are the objects that you move around the screen.
-You can manipulate them. The main character in your game is probably a
-Sprite. I know what you might be thinking -  isn't every graphical object
-a `Sprite`? No! Why? Well a Sprite is only a Sprite if you move it around. If you
-don't move it around it is just a `Node`.
+不知你是否意识到, 所有的游戏都有 __精灵(Sprite)__ 对象, 精灵是您在屏幕上移动的对象, 它能被控制. 你喜欢玩的游戏中主角可能就是一个精灵, 我知道你在想是不是每个图形对象都是一个精灵, 不是的, 为什么? 如果你能控制它, 他才是一个精灵, 如果它不用控制, 那就只是一个节点(Node).
 
-Taking another look at the image from above, let's point out what are
-Sprites and what are Nodes:
+看下面的图片, 我们来指出一下, 哪个是精灵(Sprite), 哪个是节点(Node).
 
-![](basic_concepts-img/2n_main_sprites_nodes.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_main_sprites_nodes.png "")
 
-Sprites are important in all games. Writing a platformer, you probably have
-a main character that is made by using an image of some sort. This is
-a `Sprite`.
-
-`Sprites` are easy to create and they have configurable properties
-like: __position__, __rotation__, __scale__, __opacity__, __color__ and more.
+精灵在所有游戏中都很重要, 每个游戏都有这样的情景: 一个舞台, 上面站着一个某种形式的主角, 那主角就是精灵. `Sprite` 很容易被创建, 它有一些可以被配置的属性, 比如: 位置, 旋转角度, 缩放比例, 透明度, 颜色 等等.
 
 {% codetabs name="C++", type="cpp" -%}
 // This is how to create a sprite
@@ -48,39 +34,31 @@ mySprite.setScale(2.0); // sets both the scale of the X and Y axis uniformly
 mySprite.setAnchorPoint(cc._p(0, 0));
 {%- endcodetabs %}
 
-Let's illustrate each property, consider the following screenshot from
-the example code for this chapter:
+让我们举例说明每个属性的含义, 思考下面不同截图中精灵的区别
 
-![](basic_concepts-img/2n_level1_action_start.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_level1_action_start.png "")
 
-If we set the position using `mySprite->setPosition(Vec2(500, 0));`:
+设置位置 `mySprite->setPosition(Vec2(500, 0));`:
 
-![](basic_concepts-img/2n_level1_action_end.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_level1_action_end.png "")
 
-Note that the `Sprite` position has changed from its original position to the
-new position that we specified.
+现在这个精灵的位置就变成了, 我们设置的新地方.
 
-If we now set a new rotation, using `mySprite->setRotation(40);`:
+设置旋转角度 `mySprite->setRotation(40);`:
 
-![](basic_concepts-img/2n_level1_action_end_rotation.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_level1_action_end_rotation.png "")
 
-... you can see that the `Sprite` has been rotated to the new amount that was
-specified.
+可以发现这个精灵已经被旋转了设置的角度
 
-If we now specify a new scale using `mySprite->setScale(2.0);`:
+设置缩放比例 `mySprite->setScale(2.0);`:
 
-![](basic_concepts-img/2n_level1_action_end_scale.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_level1_action_end_scale.png "")
 
-Again, we can see that the `Sprite` now has changed according to our code
-changes.
+看到了精灵的大小, 由于我们设置缩放而变化了.
 
-Lastly, all `Node` objects (since a `Sprite` is a subclass of `Node`) have a
-value for __anchor point__. We haven't talked about this yet, so now is a good
-time. You can think of __anchor point__ as a way of specifying what part of the
-sprite will be used as a base coordinate when setting the position of it.
+我们再来说一下 __锚点(anchor point)__ , 所有的节点(Node)对象都有锚点值, `Sprite` 是 `Node` 的子类, 自然也具有锚点. 锚点是节点对象在计算坐标位置时的一个基准点.
 
-Using the character from our example game, and setting the anchor point to
-__0, 0__ using:
+以我们刚才的展示的精灵为例, 设置锚点(0,0):
 
 {% codetabs name="C++", type="cpp" -%}
 mySprite->setAnchorPoint(Vec2(0, 0));
@@ -90,18 +68,12 @@ mySprite.setAnchorPoint(cc._p(0, 0));
 
 {%- endcodetabs %}
 
-would result in the lower left corner of our sprite being used as the basis for
-any __setPosition()__ call. Let's see a few of these in action:
+精灵的左下角就变为了 `setPosition()` 调用, 计算坐标的基础. 再看看其它的锚点效果:
 
-![](basic_concepts-img/2n_level1_anchorpoint_0_0.png "") ![](basic_concepts-img/smallSpacer.png "") ![](basic_concepts-img/2n_level1_anchorpoint_05_05.png "") ![](basic_concepts-img/smallSpacer.png "") ![](basic_concepts-img/2n_level1_anchorpoint_1_1.png "")
+![](../../en/basic_concepts/basic_concepts-img/2n_level1_anchorpoint_0_0.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/basic_concepts/basic_concepts-img/2n_level1_anchorpoint_05_05.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/basic_concepts/basic_concepts-img/2n_level1_anchorpoint_1_1.png "")
 
-Take a look at the red dot in each picture. This red dot illustrates where
-the anchor point is!
+注意每张图片中的红点, 红点表示锚点的位置.
 
-As you can see __anchor point__ is very useful when positioning `Nodes`. You
-can even adjust the __anchor point__ dynamically to simulate effects in your
-game.
+正如你所看到的那样, 锚点对于确定节点对象的位置是非常有用的, 你可以在你的游戏中动态的调整锚点值以实现你想要的效果.
 
-We really can tweak just about every aspect of the `Sprite`. But, what if we
-wanted to have these same types of changes occur in an automated, time
-determined manner? Well, keep reading...
+现在我们可以静态调整精灵的各个方面, 但是你要想这些属性按照时间自动变化该如何做呢? 继续阅读, 很快你就会有答案.

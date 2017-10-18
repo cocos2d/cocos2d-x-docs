@@ -10,13 +10,13 @@
     - [支持](about/how.md)
 
 - [基本概念](basic_concepts/index.md)
-    - [组件简介](basic_concepts/index.md)
+    - [简介](basic_concepts/index.md)
     - [导演(Director)](basic_concepts/director.md)
     - [场景(Scene)](basic_concepts/scene.md)
     - [精灵(Sprite)](basic_concepts/sprites.md)
     - [动作(Action)](basic_concepts/actions.md)
     - [序列(Sequence)](basic_concepts/sequences.md)
-    - [组件结构](basic_concepts/parent_child.md)
+    - [节点关系](basic_concepts/parent_child.md)
     - [日志输出](basic_concepts/logging.md)
 
 ## 引擎组件
