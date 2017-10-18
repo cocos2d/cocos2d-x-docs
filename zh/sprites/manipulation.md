@@ -1,12 +1,8 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 精灵控制
 
-## Sprite Manipulation
-After creating a `Sprite` you will have access to a variety of properties it
-has that can be manipulated.
+在创建完精灵后, 现在你能试着修改精灵的属性去控制它了. 
 
-Given:
+创建精灵:
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -16,17 +12,11 @@ var mySprite = new Sprite(res.mysprite_png);
 
 ![](sprites-img/i1.png "")
 
-### Anchor Point and Position
-__Anchor Point__ is a point that you set as a way to specify what part of
-the `Sprite` will be used when setting its position. __Anchor Point__ affects
-only properties that can be transformed. This includes __scale__, __rotation__,
-__skew__. This excludes __color__ and __opacity__. The __anchor point__ uses a
-bottom left coordinate system. This means that when specifying X and Y coordinate
-values you need to make sure to start at the bottom left hand corner to do your
-calculations. By default, all `Node` objects have a default __anchor point__ of
-is __(0.5, 0.5)__.
+## 锚点
 
-Setting the __anchor point__ is easy:
+锚点确定了精灵对象在计算坐标位置的一个基准点, 这个点是精灵内部的点, 锚点影响精灵的缩放, 旋转, 倾斜这种转换, 不影响颜色, 透明度这种属性. 锚点使用的坐标系以左下角为原点 (0, 0), 在你设置锚点的值时, 要注意到这一点. 默认情况下, 所有的节点对象锚点是 (0.5, 0.5).
+
+设置锚点:
 
 {% codetabs name="C++", type="cpp" -%}
 // DEFAULT anchor point for all Sprites
@@ -60,26 +50,17 @@ mySprite.setAnchorPoint(cc._p(1, 0));
 mySprite.setAnchorPoint(cc._p(1, 1));
 {%- endcodetabs %}
 
-To represent this visually:
+观察下面的图, 感受锚点对精灵位置的影响, _红点是旁边精灵的锚点_.
 
 ![](sprites-img/i6.png "")
 
-### Sprite properties effected by anchor point
-Using __anchor point__ effects only properties that can be transformed. This includes
-__scale__, __rotation__, __skew__.
+## 位置
 
-#### Position
-A __sprite's__ position is affected by its __anchor point__ as it is this point
-that is used as a starting point for positioning. Let's visually look at how this
-happens. Notice the colored line and where the _sprite's_ position is in relation
-to it. Notice, as we change the __anchor point__ values, the _sprite's_ position
-changes. It is important to note that all it took was changing the __anchor point__
-value. We did not use a `setPosition()` statement to achieve this:
+精灵的位置受锚点影响, 看一下这个具体是怎样的, 以红线红点为环境参考, 看精灵的不同位置. 注意, 我们设置了锚点值, 精灵的位置变化了, 我们并没有使用 `setPosition()` 方法设置精灵的位置.
 
 ![](sprites-img/i9.png "")
 
-There are more ways to set position than just __anchor point__. `Sprite` objects
-can also be set using the `setPosition()` method.
+当我们想设置一个精灵的位置时, 主要是使用 `setPosition()` 方法, 只有想改变精灵自身与坐标点的相对位置时, 才考虑使用 `setAnchorPoint()` 设置锚点.
 
 {% codetabs name="C++", type="cpp" -%}
 // position a sprite to a specific position of x = 100, y = 200.
@@ -88,10 +69,9 @@ mySprite->setPosition(Vec2(100, 200));
 mySprite.setPosition(cc._p(100, 200));
 {%- endcodetabs %}
 
-#### Rotation
-Changes the __sprite's__ rotation, by a positive or negative number of degrees.
-A positive value rotates the `Sprite` object clockwise, while a negative value
-rotates the `Sprite` object counter-clockwise. The default value is __0__.
+## 旋转
+
+通过 `setRotation()` 方法, 设置一个角度值可以控制精灵的旋转, 正值精灵顺时针旋转, 负值精灵逆时针旋转, 默认位置的角度值是 0.0 .
 
 {% codetabs name="C++", type="cpp" -%}
 // rotate sprite by +20 degrees
@@ -121,9 +101,9 @@ mySprite.setRotation(cc._p(-60.0));
 
 ![](sprites-img/i8.png "")
 
-#### Scale
-Changes the __sprite's__ scale, either by x, y or uniformly for both x and y.
-The default value is 1.0 for both x and y.
+## 缩放
+
+通过 `setScale()` 方法控制精灵的缩放. 可以控制精灵水平缩放, 垂直缩放, 也可以整体缩放. 默认水平和竖直的缩放值都是 1.0 .
 
 {% codetabs name="C++", type="cpp" -%}
 // increases X and Y size by 2.0 uniformly
@@ -147,9 +127,9 @@ mySprite.setScaleY(cc._p(2.0));
 
 ![](sprites-img/i5.png "")
 
-#### Skew
-Changes the __sprite's__ skew, either by x, y or uniformly for both x and y.
-The default value is 0,0 for both x and y.
+## 倾斜
+
+通过 `setSkewX()` 控制精灵的倾斜度, 可以控制精灵水平倾斜, 竖直倾斜, 或者水平竖直同时倾斜, 默认水平和竖直的倾斜值都是 0.0 .
 
 {% codetabs name="C++", type="cpp" -%}
 // adjusts the X skew by 20.0
@@ -167,18 +147,9 @@ mySprite.setSkewY(cc._p(20.0));
 
 ![](sprites-img/i7.png "")
 
-### Sprite properties not affected by anchor point
-There are a few properties of `Sprite` objects that are not affected by
-__anchor point__. Why? Because they only change superficial qualities like __color__
-and __opacity__.
+## 颜色
 
-#### Color
-Changes the _sprite's_ color. This is done by passing in a `Color3B` object.
-`Color3B` objects are __RGB__ values. We haven't encountered `Color3B` yet but
-it is simply an object that defines an __RGB color__. An __RGB color__ is a 3 byte
-value from 0 - 255. Cocos2d-x also provides pre-defined colors that you can pick
-from. Using these will be a bit faster since they are pre-defined. A few examples:
-`Color3B::White` and `Color3B::Red`.
+通过 `setColor()` 控制精灵的颜色. 将一个 _RGB_ 值设置到 `Color3B` 对象, 调用精灵的 `setColor()` , 就能完成精灵颜色的设置. _RGB_ 是三个从 0-255 的值, 三个值分别代表红绿蓝的颜色深度, 数值越大, 颜色越深. 特别的 RGB(255, 255, 255) 是白色. 如果你不想自己指定 _RGB_ 的三个值, 也可以使用 Cocos2d-x 提供的预定义颜色, 比如: `Color3B::White`, `Color3B::Red`.
 
 {% codetabs name="C++", type="cpp" -%}
 // set the color by passing in a pre-defined Color3B object.
@@ -196,11 +167,9 @@ mySprite.setColor(cc.color(255, 255, 255)); // Same as Color3B::WHITE
 
 ![](sprites-img/i10.png "")
 
-#### Opacity
-Changes the _sprite's_ opacity by the specified value. An opaque object is not
-transparent at all. This property expects a value from 0 to 255, where 255 means
-fully opaque and 0 means fully transparent. Think: __zero opacity means invisible__,
-and you'll always understand how this works. The default value is 255 (fully opaque).
+## 透明度
+
+精灵的透明度可以通过 `setOpacity()` 传入一个特定的值来设置, 这个值的范围是 0-255, 数值越大透明度越低, 255 代表完全不透明, 0 代表完全透明.
 
 {% codetabs name="C++", type="cpp" -%}
 // Set the opacity to 30, which makes this sprite 11.7% opaque.
