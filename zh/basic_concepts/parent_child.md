@@ -1,16 +1,10 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 节点关系
 
-## Parent Child Relationship
-Cocos2d-x uses a __parent and child__ relationship. This means that properties
-and changes to the parent node are applied to its children. Consider a single
-`Sprite` and then a `Sprite` that has children:
+Cocos2d-x 的 __节点关系__, 是被附属和附属的关系, 就像数据结构中的父子关系, 如果两个节点被添加到一个父子关系中, 那么父节点的属性变化会被自动应用到子节点中. 想一下处于父子关系中的精灵有什么特性.
 
 ![](basic_concepts-img/2n_parent.png "")
 
-With children, changing the rotation of the parent will also change the
-rotation to all children:
+这三个精灵被添加到了一个父子关系中, 当父精灵(被其它精灵附属的精灵)设置了旋转角度之后, 子精灵也会自动做同样的改变:
 
 ![](basic_concepts-img/2n_parent_rotation.png "")
 
@@ -28,8 +22,7 @@ myNode.setRotation(50);
 
 {%- endcodetabs %}
 
-Just like with rotation, if you change the scale of the parent the children
-will also get scaled:
+和旋转角度一样, 如果你改变了父精灵的缩放比例, 子精灵也会做同样的改变:
 
 ![](basic_concepts-img/2n_parent_scaled.png "")
 
@@ -47,7 +40,4 @@ myNode.setScale(2.0); // scales uniformly by 2.0
 
 {%- endcodetabs %}
 
-Not all changes to the __parent__ are passed down to its __children__. Changing the
-__parent__ __anchor point__ only affects transform operations (*scale*, *position*,
-*rotate*, *skew*, etc...) and does not affect children positioning. In fact, children
-will be always added to the bottom-left (0,0) corner of its parent.
+需要注意的是, 不是所有的父节点属性都会被自动应用到自节点, 如改变父节点的锚点只会影响转换效果(*比例缩放, 位置变化, 角度旋转, 变形等*), 不会影响子节点锚点, 子节点的锚点总会是左下角 (0,0) .
