@@ -29,6 +29,18 @@ __LuaCPP Support__.
 ![](creator_to_cocos2dx-img/project_menu.png "project menu")
 
 ### Plugin Setup
+To run the plugin:
+
+* select __LuaCPP Support__ -> __Setup Target Project__.
+
+  ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
+
+  It is required to tell __Cocos Creator__ where to build all the necessary files.
+
+* select __Build__. 
+
+![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
+
 
 
 ### Exporting A Scene To Source Code
