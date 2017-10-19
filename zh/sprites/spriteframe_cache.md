@@ -1,6 +1,8 @@
-# 通过精灵帧缓存(SpriteFrameCache)
+# 通过精灵缓存
 
-This creates a `Sprite` by pulling it from the `SpriteFrameCache`.
+精灵缓存是 Cocos2d-x 为了提高精灵的访问速度, 提供的一个精灵的缓存机制.
+
+我们可以创建一个精灵并把精灵放到精灵的缓存对象 `SpriteFrameCache` 中:
 
 {% codetabs name="C++", type="cpp" -%}
 // Our .plist file has names for each of the sprites in it.  We'll grab
@@ -12,11 +14,9 @@ auto mysprite = Sprite::createWithSpriteFrameName("mysprite.png");
 var mysprite = cc.Sprite.createWithSpriteFrameName(res.mySprite_png);
 {%- endcodetabs %}
 
-![](sprites-img/i3.png "")
+![](../../en/sprites/sprites-img/i3.png "")
 
-### Creating a Sprite from a SpriteFrame
-Another way to create the same `Sprite` is by fetching the `SpriteFrame` from the
-`SpriteFrameCache`, and then creating the `Sprite` with the `SpriteFrame`. Example:
+相对的, 我们也可以从精灵的缓存对象 `SpriteFrameCache` 访问一个精灵, 访问方法是先从缓存对象中获取对应的 `SpriteFrame`, 然后从 `SpriteFrame`创建精灵, 方法:
 
 {% codetabs name="C++", type="cpp" -%}
 // this is equivalent to the previous example,
@@ -32,4 +32,4 @@ var newSprite = cc.Sprite.createWithSpriteFrame(newspriteFrame);
 
 {%- endcodetabs %}
 
-![](sprites-img/i3.png "")
+![](../../en/sprites/sprites-img/i3.png "")
