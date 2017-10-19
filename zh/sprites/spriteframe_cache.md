@@ -1,8 +1,8 @@
-# 通过精灵缓存
+# 精灵缓存
 
 精灵缓存是 Cocos2d-x 为了提高精灵的访问速度, 提供的一个精灵的缓存机制.
 
-我们可以创建一个精灵并把精灵放到精灵的缓存对象 `SpriteFrameCache` 中:
+我们可以创建一个精灵并把精灵放到精灵的缓存对象 __`SpriteFrameCache`__ 中:
 
 {% codetabs name="C++", type="cpp" -%}
 // Our .plist file has names for each of the sprites in it.  We'll grab

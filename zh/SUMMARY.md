@@ -25,7 +25,7 @@
     - [精灵简介](sprites/index.md)
     - [精灵创建](sprites/creating.md)
         - [使用图集](sprites/spritesheets.md)
-        - [使用精灵缓存](sprites/spriteframe_cache.md)
+        - [精灵缓存](sprites/spriteframe_cache.md)
     - [精灵控制](sprites/manipulation.md)
     - [多边形精灵](sprites/polygon.md)
 

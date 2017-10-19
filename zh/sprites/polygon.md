@@ -1,32 +1,22 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 多边形精灵
 
-## Polygon Sprite
-A __Polygon Sprite__ is also a `Sprite`, that is used to display a 2d image.
-However, unlike a normal `Sprite` object, which is a rectangle made of just 2
-triangles, `PolygonSprite` objects are made of a series of triangles.
+__多边形精灵(Polygon Sprite)__ 也是一个精灵, 同样是为了展示一个可以被控制的图像, 但是和普通精灵的区别是, 普通精灵在绘图处理中被分为了两个三角形, 多边形精灵则是被分为了一系列三角形.
 
-#### Why use a Polygon Sprite?
-Simple, __performance__!
+## 为什么要使用多边形精灵
 
-There is a lot of technical jargon that we can toss around here about __pixel fill rate__
-but the take home lesson is that a `PolygonSprite` draws based upon the shape of
-your `Sprite`, not a simple rectangle around the largest width and height. This
-saves a lot of unnecessary drawing. Consider this example:
+__提高性能__!
+
+要深入分析这个是如何提高性能的, 会需要很多和像素填充率有关的技术术语. 幸好本节是入门性质的文档, 能让大家理解多边形精灵比普通精灵性能好就可以了, 不用讨论特定宽高矩形绘制时的性能问题.
 
 ![](sprites-img/polygonsprite.png "")
 
-Notice the difference between the left and right versions?
+注意左右两种情况的不同.
 
-On the left, a typical `Sprite` drawn in rectangular fashion by the use of 2
-triangles.
+左侧, 是一个典型的精灵绘制时的处理, 精灵被处理成一个有两个三角形组成的矩形.
 
-On the right, a `PolygonSprite` drawn with many smaller triangles.
+右侧, 是一个多边形精灵绘制时的处理, 精灵被处理成一系列小的三角形.
 
-Whether or not this trade-off is worth it for purely performance reasons depends
-on a number of factors (sprite shape/detail, size, quantity drawn on screen, etc.),
-but in general, *vertices are cheaper than pixels* on modern GPUs.
+显然可以看到, 右侧多边形精灵需要绘制的像素数量比左侧精灵需要的像素数量更小, 但是由于划分了多个三角形出现了更多的顶点, 由于在现代的图形处理中, 一般绘制定点比绘制像素消耗的性能少. 所以多边形精灵的性能更好, 实际的测试结果也验证了这一点.
 
 <!--Now more and more GPUs were tailor designed to do 3d graphics, which can handle loads of vertices, but limited in Pixel Fill-Rate. But by representing almost always "None-rectangular" 2d images with a rectangular quad, GPU wastes precious bandwidth drawing totally transparent part of the sprite.
 
@@ -42,13 +32,12 @@ Here is a performance test.The test keep on adding dynamic sprite to the screen 
 | Samsung 9100   | 365     | 526           | 44.1%    |
 | rMBP late 2013 | 471     | 1150          | 144.16%  |
 -->
-#### AutoPolygon
-`AutoPolygon` is a helper class. It's purpose is to process an image into a 2d
-polygon mesh at runtime.
 
-There are functions for each step in the process, from tracing all the points,
-to triangulation. The result, can be then passed to a `Sprite` objects __create__
-function to create a `PolygonSprite`. Example:
+## AutoPolygon
+
+__`AutoPolygon`__ 是一个工具类, 它可以在程序运行时, 通过跟踪关键点和三角测量, 将一个矩形图像划分成一系列小三角形块.
+
+首先将图像资源传入 `AutoPolygon` 进行处理, 然后我们使用它生成的对象进行精灵的创建就能得到多边形精灵.
 
 {% codetabs name="C++", type="cpp" -%}
 // Generate polygon info automatically.
