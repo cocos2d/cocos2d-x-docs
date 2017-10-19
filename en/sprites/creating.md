@@ -13,8 +13,8 @@ A `Sprite` can be created by specifying an image file to use.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
-{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Sprite(res.mySprite_png);
+<!--{%- language name="JavaScript", type="js" -%}
+var mySprite = new cc.Sprite(res.mySprite_png);-->
 {%- endcodetabs %}
 
 ![](sprites-img/i1.png "")
@@ -34,8 +34,8 @@ image file, you can do it by specifying a `Rect`.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));
+<!--{%- language name="JavaScript", type="js" -%}
+var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));-->
 {%- endcodetabs %}
 
 ![](sprites-img/i4.png "")
@@ -54,9 +54,9 @@ the same result.
 auto mySprite = Sprite::create("mysprite.png");
 
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,200,200));
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 
 var mySprite = new cc.Sprite(res.mySprite_png);
 
-var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,200,200));
+var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,200,200));-->
 {%- endcodetabs %}

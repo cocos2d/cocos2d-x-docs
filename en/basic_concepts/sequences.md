@@ -36,7 +36,7 @@ auto delay = DelayTime::create(1);
 mySprite->runAction(Sequence::create(moveTo1, delay, moveBy1, delay.clone(),
 moveTo2, nullptr));
 
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Node();
 
 // move to point 50,10 over 2 seconds
@@ -52,7 +52,7 @@ var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
 var delay = new cc.DelayTime(1);
 
 mySprite.runAction(Sequence.create(moveTo1, delay, moveBy1, delay.clone(),
-moveTo2));
+moveTo2));-->
 
 {%- endcodetabs %}
 

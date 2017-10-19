@@ -20,11 +20,11 @@ auto myNode = Node::create();
 // rotating by setting
 myNode->setRotation(50);
 
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var myNode = new cc.Node();
 
 // rotating by setting
-myNode.setRotation(50);
+myNode.setRotation(50);-->
 
 {%- endcodetabs %}
 
@@ -39,11 +39,11 @@ auto myNode = Node::create();
 // scaling by setting
 myNode->setScale(2.0); // scales uniformly by 2.0
 
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var myNode = new cc.Node();
 
 // scaling by setting
-myNode.setScale(2.0); // scales uniformly by 2.0
+myNode.setScale(2.0); // scales uniformly by 2.0-->
 
 {%- endcodetabs %}
 

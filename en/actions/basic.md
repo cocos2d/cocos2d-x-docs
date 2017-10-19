@@ -21,7 +21,7 @@ mySprite->runAction(moveTo);
 auto moveBy = MoveBy::create(2, Vec2(50, 0));
 
 mySprite->runAction(moveBy);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Sprite(res.mysprite_png);
 
 // Move a sprite to a specific location over 2 seconds.
@@ -32,7 +32,7 @@ mySprite.runAction(moveTo);
 // Move a sprite 50 pixels to the right, and 0 pixels to the top over 2 seconds.
 var moveBy = new cc.MoveBy(2, cc._p(50, 0));
 
-mySprite.runAction(moveBy);
+mySprite.runAction(moveBy);-->
 {%- endcodetabs %}
 
 ![](actions-img/i1.png "")
@@ -50,7 +50,7 @@ mySprite->runAction(rotateTo);
 // Rotates a Node clockwise by 40 degree over 2 seconds
 auto rotateBy = RotateBy::create(2.0f, 40.0f);
 mySprite->runAction(rotateBy);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Sprite(res.mysprite_png);
 
 // Rotates a Node to the specific angle over 2 seconds
@@ -59,7 +59,7 @@ mySprite.runAction(rotateTo);
 
 // Rotates a Node clockwise by 40 degree over 2 seconds
 var rotateBy = new cc.RotateBy(2.0, 40.0);
-mySprite.runAction(rotateBy);
+mySprite.runAction(rotateBy);-->
 {%- endcodetabs %}
 
 ![](actions-img/i3.png "")
@@ -85,7 +85,7 @@ mySprite->runAction(scaleTo);
 // Scale X to 5 and Y to 3x over 2 seconds
 auto scaleTo = ScaleTo::create(2.0f, 3.0f, 3.0f);
 mySprite->runAction(scaleTo);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Sprite(res.mysprite_png);
 
 // Scale uniformly by 3x over 2 seconds
@@ -102,7 +102,7 @@ mySprite.runAction(scaleTo);
 
 // Scale X to 5 and Y to 3x over 2 seconds
 var scaleTo = new cc.ScaleTo(2.0, 3.0, 3.0);
-mySprite.runAction(scaleTo);
+mySprite.runAction(scaleTo);-->
 {%- endcodetabs %}
 
 ![](actions-img/i4.png "")
@@ -122,7 +122,7 @@ mySprite->runAction(fadeIn);
 // fades out the sprite in 2 seconds
 auto fadeOut = FadeOut::create(2.0f);
 mySprite->runAction(fadeOut);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Sprite(res.mysprite_png);
 
 // fades in the sprite in 1 seconds
@@ -131,7 +131,7 @@ mySprite.runAction(fadeIn);
 
 // fades out the sprite in 2 seconds
 var fadeOut = new cc.FadeOut(2.0);
-mySprite.runAction(fadeOut);
+mySprite.runAction(fadeOut);-->
 {%- endcodetabs %}
 
 ![](actions-img/i2.png "")
@@ -150,7 +150,7 @@ mySprite->runAction(tintTo);
 // Tints a node BY the delta of the specified RGB values.
 auto tintBy = TintBy::create(2.0f, 120.0f, 232.0f, 254.0f);
 mySprite->runAction(tintBy);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Sprite(res.mysprite_png);
 
 // Tints a node to the specified RGB values
@@ -159,7 +159,7 @@ mySprite.runAction(tintTo);
 
 // Tints a node BY the delta of the specified RGB values.
 var tintBy = new cc.TintBy(2.0, 120.0, 232.0, 254.0);
-mySprite.runAction(tintBy);
+mySprite.runAction(tintBy);-->
 {%- endcodetabs %}
 
 ![](actions-img/i5.png "")
@@ -194,7 +194,7 @@ Animate* animate = Animate::create(animation);
 
 // run it and repeat it forever
 mySprite->runAction(RepeatForever::create(animate));
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 
 var mySprite = new Sprite(res.mysprite_png);
 
@@ -218,7 +218,7 @@ var animation = cc.Animation.createWithSpriteFrames(animFrames, 0.1);
 var animate = new cc.Animate(animation);
 
 // run it and repeat it forever
-mySprite.runAction(cc.RepeatForever(animate));
+mySprite.runAction(cc.RepeatForever(animate));-->
 {%- endcodetabs %}
 
 It's hard to show an animation in text, so please run the example __Programmer
