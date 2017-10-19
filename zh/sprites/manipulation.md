@@ -1,6 +1,6 @@
-# 精灵控制
+# 精灵的控制
 
-在创建完精灵后, 现在你能试着修改精灵的属性去控制它了. 
+在创建完精灵后, 现在你能试着修改精灵的属性去控制它了.
 
 创建精灵:
 
@@ -10,7 +10,7 @@ auto mySprite = Sprite::create("mysprite.png");
 var mySprite = new Sprite(res.mysprite_png);
 {%- endcodetabs %}
 
-![](sprites-img/i1.png "")
+![](../../en/sprites/sprites-img/i1.png "")
 
 ## 锚点
 
@@ -52,15 +52,15 @@ mySprite.setAnchorPoint(cc._p(1, 1));
 
 观察下面的图, 感受锚点对精灵位置的影响, _红点是旁边精灵的锚点_.
 
-![](sprites-img/i6.png "")
+![](../../en/sprites/sprites-img/i6.png "")
 
 ## 位置
 
 精灵的位置受锚点影响, 看一下这个具体是怎样的, 以红线红点为环境参考, 看精灵的不同位置. 注意, 我们设置了锚点值, 精灵的位置变化了, 我们并没有使用 `setPosition()` 方法设置精灵的位置.
 
-![](sprites-img/i9.png "")
+![](../../en/sprites/sprites-img/i9.png "")
 
-当我们想设置一个精灵的位置时, 主要是使用 `setPosition()` 方法, 只有想改变精灵自身与坐标点的相对位置时, 才考虑使用 `setAnchorPoint()` 设置锚点.
+当我们想设置一个精灵的位置时, 主要是使用 `setPosition()` 方法, 只有想改变精灵与基准坐标点的相对位置时, 才考虑使用 `setAnchorPoint()` 设置锚点.
 
 {% codetabs name="C++", type="cpp" -%}
 // position a sprite to a specific position of x = 100, y = 200.
@@ -99,7 +99,7 @@ mySprite.setRotation(cc._p(60.0));
 mySprite.setRotation(cc._p(-60.0));
 {%- endcodetabs %}
 
-![](sprites-img/i8.png "")
+![](../../en/sprites/sprites-img/i8.png "")
 
 ## 缩放
 
@@ -125,7 +125,7 @@ mySprite.setScaleX(cc._p(2.0));
 mySprite.setScaleY(cc._p(2.0));
 {%- endcodetabs %}
 
-![](sprites-img/i5.png "")
+![](../../en/sprites/sprites-img/i5.png "")
 
 ## 倾斜
 
@@ -145,7 +145,7 @@ mySprite.setSkewX(cc._p(20.0));
 mySprite.setSkewY(cc._p(20.0));
 {%- endcodetabs %}
 
-![](sprites-img/i7.png "")
+![](../../en/sprites/sprites-img/i7.png "")
 
 ## 颜色
 
@@ -165,7 +165,7 @@ mySprite.setColor(cc.color.WHITE);
 mySprite.setColor(cc.color(255, 255, 255)); // Same as Color3B::WHITE
 {%- endcodetabs %}
 
-![](sprites-img/i10.png "")
+![](../../en/sprites/sprites-img/i10.png "")
 
 ## 透明度
 
@@ -181,4 +181,4 @@ mySprite->setOpacity(30);
 mySprite.setOpacity(30);
 {%- endcodetabs %}
 
-![](sprites-img/i11.png "")
+![](../../en/sprites/sprites-img/i11.png "")

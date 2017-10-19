@@ -24,10 +24,10 @@
 - [精灵(Sprite)](sprites/index.md)
     - [精灵简介](sprites/index.md)
     - [精灵创建](sprites/creating.md)
+        - [使用图集](sprites/spritesheets.md)
+        - [使用精灵缓存](sprites/spriteframe_cache.md)
     - [精灵控制](sprites/manipulation.md)
-    - [精灵表单(Spritesheets)](sprites/spritesheets.md)
-    - [精灵帧缓存(SpriteFrameCache)](sprites/spriteframe_cache.md)
-    - [多边形精灵(PolygonSprite)](sprites/polygon.md)
+    - [多边形精灵](sprites/polygon.md)
 
 - [动作(Action)](actions/index.md)
     - [动作简介](actions/index.md)

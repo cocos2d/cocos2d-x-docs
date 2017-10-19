@@ -1,8 +1,5 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 通过精灵帧缓存(SpriteFrameCache)
 
-### Creating a Sprite from SpriteFrameCache
 This creates a `Sprite` by pulling it from the `SpriteFrameCache`.
 
 {% codetabs name="C++", type="cpp" -%}
