@@ -1,8 +1,5 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 基本动作
 
-## Basic Actions and how to run them
 Basic actions are usually a singular action, thus accomplishing a single objective.
 Let's take a look at a few examples:
 
