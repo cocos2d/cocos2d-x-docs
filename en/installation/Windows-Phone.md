@@ -4,6 +4,8 @@
 
 # Windows Phone 8 Installation and Setup
 
+### Deprecated Document. Cocos2d-x V3.15 or less is the last supported version.
+
 ## Prerequisites
 * A supported environment. See **[Installation Prerequisites](A/index.html)**
 
