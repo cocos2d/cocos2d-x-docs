@@ -1,35 +1,24 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 使用图集
 
-## Creating a Sprite from a Sprite Sheet
-A __sprite sheet__ is a way to combine sprites into a single file. Using a
-__sprite sheet__ helps achieve better performance by __batching__ the
-__draw calls__. They can also save disk and video memory in cases where the
-sprites can be packed on a sheet more efficiently (generally requires special tools).
-You will read more about this in the Advanced Chapter, but it is but it is one of many
-standard methods in the industry for increasing game performance.
+__图集(Sprite Sheet)__ 是通过专门的工具将多张图片合并成一张大图，并通过 plist 等格式的文件索引的资源, 使用图集比使用多个独立图像占用的磁盘空间更少, 还会有更好的性能. 这种方式已经是游戏行业中提高游戏性能的标准方法之一.
 
-When using a __sprite sheet__ it is first loaded, in its entirety, into the
-`SpriteFrameCache`. `SpriteFrameCache` is a caching class that retains the `SpriteFrame`
-objects added to it, for future quicker access. The `SpriteFrame` is loaded
-once and retained in the `SpriteFrameCache`
+在使用图集时, 首先将其全部加载到 `SpriteFrameCache` 中, `SpriteFrameCache` 是一个全局的缓存类, 缓存了添加到其中的 `SpriteFrame` 对象, 提高了精灵的访问速度. `SpriteFrame` 只加载一次, 后续一直保存在 `SpriteFrameCache` 中.
 
-Here is an example sprite sheet:
+示例:
 
-![](sprites-img/3_1.png "example SpriteSheet")
+![](../../en/sprites/sprites-img/3_1.png "example SpriteSheet")
 
-It doesn't look like much but let's take a closer look at what is happening:
+单看这个图集, 似乎很难分析出什么, 让我们对比一下:
 
-![](sprites-img/spritesheet.png "example SpriteSheet")
+![](../../en/sprites/sprites-img/spritesheet.png "example SpriteSheet")
 
-As you can see the __sprite sheet__, at a minimum it reduces unneeded space and
-consolidates all sprites into a single file.
+这就很容易看出来, 它至少完成了将多个图像素材合为一个, 同时减少了磁盘空间占用.
 
-Let's tie this all together!
+继续来看如何在代码中使用.
 
-### Loading a Sprite Sheet
-Load your __sprite sheet__ into the `SpriteFrameCache`, probably in __AppDelegate__:
+## 加载图集
+
+获取到 `SpriteFrameCache` 的实例, 把图集添加到实例中.
 
 {% codetabs name="C++", type="cpp" -%}
 // load the Sprite Sheet
@@ -45,18 +34,15 @@ var spritecache = cc.SpriteFrameCache;
 spritecache.addSpriteFramesWithFile(res.sprites_plist);
 {%- endcodetabs %}
 
-Now that we have a __sprite sheet__ loaded into `SpriteFrameCache` we can create
-`Sprite` objects by utilizing it.
+这样我们就完成了, 将一个图集添加到 `SpriteFrameCache` 中, 现在我们就能利用这个对象创建精灵了!
 
-### Tools for creating Sprite Sheets
-Creating a __sprite sheet__ manually is a tedious process. Fortunately there are
-tools that can generate them automatically. These tools can provide even more
-ways to adjust your __sprite sheet__ for maximum optimization!
+## 创建图集
 
-Here are a few tools:
+手动创建图集资源是一个单调乏味的过程, 幸运的是有一些工具能帮助我们自动创建, 下面是推荐的几个工具:
 
-* [Cocos Studio](http://www.Cocos2d-x.org/wiki/CocoStudio)
-* [ShoeBox](http://renderhjs.net/shoebox/)
 * [Texture Packer](https://www.codeandweb.com/texturepacker)
 * [Zwoptex](https://www.zwopple.com/zwoptex/)
+* [ShoeBox](http://renderhjs.net/shoebox/)
 * [Sprite Sheet Packer](http://amakaseev.github.io/sprite-sheet-packer/)
+
+其中 __Texture Packer__ 有一个专门为 Cocos2d-x 写的的图集创建使用指南. [传送门](https://www.codeandweb.com/texturepacker/tutorials/animations-and-spritesheets-in-cocos2d-x)

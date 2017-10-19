@@ -1,9 +1,5 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 精灵(Sprite)
 
-# Sprites
+## 什么是精灵
 
-## What are Sprites
-A Sprite is a 2D image that can be animated or transformed by changing its
-properties, including __rotation__, __position__, __scale__, __color__, etc.
+精灵是一个能通过改变自身的属性: 角度, 位置, 缩放, 颜色等, 变成可控制动画的 2D 图像.

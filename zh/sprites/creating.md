@@ -1,15 +1,10 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 精灵的创建
 
-## Creating Sprites
-There are different ways to create Sprites depending upon what you need to
-accomplish. You can create a `Sprite` from an image with various graphic formats
-including: __PNG__, __JPEG__, __TIFF__, and others. Let's go through some create methods and
-talk about each one.
+可以使用一张图像来创建精灵, *PNG, JPEG, TIFF*, 这几个格式都可以. 当然也有一些其它的方式可以创建精灵, 如使用 __图集__ 创建, 通过 __精灵缓存__ 创建, 我们会一个一个的讨论. 本节介绍通过图像创建精灵.
 
-### Creating a Sprite
-A `Sprite` can be created by specifying an image file to use.
+## 使用图像创建
+
+`Sprite` 能用一个特定的图像去创建:
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -17,20 +12,13 @@ auto mySprite = Sprite::create("mysprite.png");
 var mySprite = new cc.Sprite(res.mySprite_png);
 {%- endcodetabs %}
 
-![](sprites-img/i1.png "")
+![](../../en/sprites/sprites-img/i1.png "")
 
-The statement above creates a `Sprite` using the __mysprite.png__ image. The result
-is that the created `Sprite` uses the whole image. `Sprite` has the same dimensions
-of __mysprite.png__. If the image file is 200 x 200 the resulting `Sprite` is 200 x
-200.
+上面直接使用了 __mysprite.png__ 图像来创建精灵. 精灵会使用整张图像, 图像是多少的分辨率, 创建出来的精灵就是多少的分辨率. 比如图像是 200 x 200, `Sprite` 也是 200 x 200.
 
-### Creating a Sprite with a Rect
+### 使用矩形
 
-In the previous example, the created `Sprite` has the same size as the original
-image file. If you want to create a `Sprite` with only a certain portion of the
-image file, you can do it by specifying a `Rect`.
-
-`Rect` has 4 values: __origin x__, __origin y__, __width__ and __height__.
+上一个例子, 精灵和原始图像的尺寸一致. 但是如果你想创建一个尺寸只有原始图像一部分的精灵, 那你可以在创建的时候指定一个矩形, 指定矩形需要四个值, 初始 x 坐标, 初始 y 坐标, 矩形宽, 矩形高.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
@@ -38,17 +26,11 @@ auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
 var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));
 {%- endcodetabs %}
 
-![](sprites-img/i4.png "")
+![](../../en/sprites/sprites-img/i4.png "")
 
-`Rect` starts at the top left corner. This is the opposite of what you might be
-used to when laying out screen position as it starts from the lower left corner.
-Thus the resulting `Sprite` is only a portion of the image file. In this case the
-`Sprite` dimension is 40 x 40 starting at the top left corner.
+矩形的初始坐标, 从图形的左上角开始算, 即左上角的坐标是 (0, 0), 不是从左下角. 因此结果精灵是图像左上角的一小块, 从左上角开始算起, 40 x 40 的大小.
 
-If you don't specify a `Rect`, Cocos2d-x will automatically use the full width
-and height of the image file you specify. Take a look at the example below. If
-we use an image with dimensions 200 x 200 the following 2 statements would have
-the same result.
+如果你没指定一个矩形, Cocos2d-x 引擎就会自动使用这个图像全部的宽和高, 看下面的例子, 如果你把矩形的宽高指定为图像的宽高, 矩形的初始坐标指定为 (0, 0), 那这就和第一种情况的效果是完全一样的.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
