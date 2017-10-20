@@ -249,4 +249,6 @@ auto seq1 = Sequence::create(move_ease_in, delay, move_ease_in_back,
 mySprite->runAction(RepeatForever::create(seq1));
 {%- endcodetabs %}
 
-复杂的动作很难在这样的文本里显示, 要是看效果的话最好去运行一下本指南的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16), 或者运行引擎代码的测试项目 `cpp-tests`, 在子菜单 `3:Actions - Basic` 中也有基本的动作效果展示. 运行测试项目的方法, 参考本文档的 [环境搭建](../installation/index.md) 章节.
+复杂的动作很难在这样的文本里表示, 要是看效果的话最好去运行一下本指南的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16), 或者运行引擎代码的测试项目 `cpp-tests`, 在子菜单 `3:Actions - Basic` 中有基本的动作效果展示
+
+ _运行测试项目的方法, 参考本文档的 [环境搭建](../installation/index.md) 章节_ .
