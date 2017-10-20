@@ -56,10 +56,10 @@ auto pinfo = AutoPolygon::generatePolygon("filename.png");
 
 // Create a sprite with polygon info.
 auto sprite = Sprite::create(pinfo);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 // Generate polygon info automatically.
 var pinfo = cc.autopolygon.generatePolygon(res.mysprite_png);
 
 // Create a sprite with polygon info.
-var sprite = new cc.Sprite(pinfo);
+var sprite = new cc.Sprite(pinfo);-->
 {%- endcodetabs %}

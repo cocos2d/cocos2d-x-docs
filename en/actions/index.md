@@ -19,14 +19,14 @@ mySprite1->runAction(moveTo);
 // Move sprite 20 points to right in 2 seconds
 auto moveBy = MoveBy::create(2, Vec2(20,0));
 mySprite2->runAction(moveBy);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 // Move sprite to position 50,10 in 2 seconds.
 var moveTo = new cc.MoveTo(2, cc._p(50, 10));
 mySprite1.runAction(moveTo);
 
 // Move sprite 20 points to right in 2 seconds
 var moveBy = new cc.MoveBy(2, cc._p(20,0));
-mySprite2.runAction(moveBy);
+mySprite2.runAction(moveBy);-->
 {%- endcodetabs %}
 
 #### By and To, what is the difference?
@@ -54,7 +54,7 @@ auto delay = DelayTime::create(1);
 auto seq = Sequence::create(moveBy, delay, moveTo, nullptr);
 
 mySprite->runAction(seq);
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Sprite(res.mysprite_png);
 mySprite.setPosition(cc._p(200, 256));
 
@@ -72,7 +72,7 @@ var delay = new cc.DelayTime(1);
 
 var seq = new cc.Sequence(moveBy, delay, moveTo);
 
-mySprite.runAction(seq);
+mySprite.runAction(seq);-->
 {%- endcodetabs %}
 
 ![](actions-img/i0.png "")

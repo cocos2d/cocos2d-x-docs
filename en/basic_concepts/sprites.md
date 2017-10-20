@@ -34,7 +34,7 @@ mySprite->setRotation(40);
 mySprite->setScale(2.0); // sets both the scale of the X and Y axis uniformly
 
 mySprite->setAnchorPoint(Vec2(0, 0));
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 // This is how to create a sprite
 var mySprite = new cc.Sprite(res.mySprite_png);
 
@@ -45,7 +45,7 @@ mySprite.setRotation(40);
 
 mySprite.setScale(2.0); // sets both the scale of the X and Y axis uniformly
 
-mySprite.setAnchorPoint(cc._p(0, 0));
+mySprite.setAnchorPoint(cc._p(0, 0));-->
 {%- endcodetabs %}
 
 Let's illustrate each property, consider the following screenshot from
@@ -85,8 +85,8 @@ __0, 0__ using:
 {% codetabs name="C++", type="cpp" -%}
 mySprite->setAnchorPoint(Vec2(0, 0));
 
-{%- language name="JavaScript", type="js" -%}
-mySprite.setAnchorPoint(cc._p(0, 0));
+<!--{%- language name="JavaScript", type="js" -%}
+mySprite.setAnchorPoint(cc._p(0, 0));-->
 
 {%- endcodetabs %}
 

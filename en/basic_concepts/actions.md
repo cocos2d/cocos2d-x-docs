@@ -34,7 +34,7 @@ mySprite->runAction(moveBy);
 auto moveTo = MoveTo::create(2, Vec2(50,10));
 mySprite->runAction(moveTo);
 
-{%- language name="JavaScript", type="js" -%}
+<!--{%- language name="JavaScript", type="js" -%}
 var mySprite = new cc.Sprite(res.mySprite_png);
 
 // Move a sprite 50 pixels to the right and 10 pixels to the top over 2 seconds.
@@ -43,5 +43,5 @@ mySprite.runAction(moveBy);
 
 // Move a sprite to a specific location over 2 seconds.
 var moveTo = new cc.MoveTo(2, cc._p(50,10));
-mySprite.runAction(moveTo);
+mySprite.runAction(moveTo);-->
 {%- endcodetabs %}
