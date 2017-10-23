@@ -7,14 +7,22 @@
 ## Prerequisites
 * A supported environment. See **[Installation Prerequisites](A/index.html)**
 
-* Completed the **[Android Command-Line Instructions](Android-terminal/index.html)**
-
-* Android Studio 2.3 [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
+* Android Studio 2.3+ [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
 
 ## Setup
 * unzip the __Android Studio Bundle__
 
-* launch __Android Studio__
+* launch __Android Studio__. This may take quite some time as additional downloads and setup steps are completed. These steps are necessary for Studio to run properly.
+
+* After the previous step is complete, it is necessary install the SDK and build tools. __SDK Manager__ is located in the __Tools__ menu, __Android__, then select __SDK Manager__. The Window looks like this:
+
+    ![](Android-Studio-img/sdkmanager.png "")
+
+  Make sure to install the platforms and tools that your project requires.
+
+    ![](Android-Studio-img/sdkmanager_1.png "")
+
+    ![](Android-Studio-img/sdkmanager_2.png "")
 
 ## Compiling `cpp-tests`
 * import the `cpp-tests` project from __cocos2d-x root/tests/cpp-tests/proj.android-studio__
@@ -46,8 +54,7 @@ You have to do a few steps to build release mode:
     ![](Android-Studio-img/sign_and_encrypt.png "")
 
 ## Installing new SDK versions and build tools
-* use the built in __SDK Manager__ to install the __SDK versions__ and __build tools__
-that you are targetting.
+* use the built in __SDK Manager__ to install the __SDK versions__ and __build tools__ that you are targetting.
 
     ![](Android-Studio-img/toolbar_sdkmanager_1.png "")
 
@@ -55,10 +62,7 @@ that you are targetting.
 
     ![](Android-Studio-img/sdkmanager_2.png "")
 
-  Note: It is important to note that __Android Studio__ uses a location to install
-  __SDK versions__ and __build tools__ that is not the same as if you were doing
-	command-line development. Double check that you have everything you need installed
-	from inside __Android Studio__.
+  Note: It is important to note that __Android Studio__ uses a location to install __SDK versions__ and __build tools__ that is not the same as if you were doing command-line development. Double check that you have everything you need installed from inside __Android Studio__.
 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our
