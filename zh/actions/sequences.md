@@ -1,18 +1,10 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 序列
 
-## Sequences and how to run them
-__Sequences__ are a series of `Action` objects to be executed sequentially. This can
-be any number of `Action` objects, __Functions__ and even another `Sequence`.
-Functions? Yes! Cocos2d-x has a `CallFunc` object that allows you to create a
-__function()__ and pass it in to be run in your `Sequence`. This allows you to add
-your own functionality to your `Sequence` objects besides just the stock `Action`
-objects that Cocos2d-x provides. This is what a `Sequence` looks like when executing:
+__动作序列(Sequence)__ 是将一系列要顺序执行的动作封装到一起的对象, 一个 `Sequence` 可以包含任何数量的动作对象, 回调方法和其它序列. 可以包含回调方法? 没错! Cocos2d-x 允许把一个方法添加进去 `CallFunc` 对象, 然后将 `CallFunc` 添加到 `Sequence`, 这样, 在执行序列的时候就能触发方法调用. 因此, 你能在一个序列中添加一些个性化的功能, 而不仅仅是添加 Cocos2d-x 提供的有限动作. 下面是一个序列的动作执行示意图:
 
-![](actions-img/sequence.png "")
+![](../../en/actions/actions-img/sequence.png "")
 
-### An example sequence
+## `Sequence` 示例
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -38,26 +30,19 @@ auto seq = Sequence::create(jump, callbackJump, rotate, callbackRotate, nullptr)
 mySprite->runAction(seq);
 {%- endcodetabs %}
 
-So what does this `Sequence` action do?
-
-It will execute the following actions sequentially:
+上面这个 `Sequence` 做了什么? 按照下面的顺序执行了每一个动作.
 
 __Jump__ -> __callbackJump()__ -> __Rotate__ -> __callbackRotate()__
 
-Run the example __Programmer Guide Sample__ code to see this in action!
+## `Spawn`
 
-### Spawn
-__Spawn__ is very similar to `Sequence`, except that all actions will run at the same
-time. You can have any number of `Action` objects and even other `Spawn` objects!
+`Spawn` 和 `Sequence` 是非常相似的, 区别是 `Spawn` 同时执行所有的动作. `Spawn` 对象可以添加任意数量的动作和其它 `Spawn` 对象.
 
-![](actions-img/spawn.png "")
+![](../../en/actions/actions-img/spawn.png "")
 
-`Spawn` produces the same result as running multiple consecutive __runAction()__
-statements. However, the benefit of spawn is that you can put it in a `Sequence`
-to help achieve specific effects that you cannot otherwise. Combining `Spawn` and
-`Sequence` is a very powerful feature.
+`Spawn` 的效果和同时运行多个动作的 `runAction()` 方法是一致的, 但是它的独特之处是 `Spawn` 能被放到 `Sequence` 中, 结合 `Spawn` 和 `Sequence` 能实现非常强大的动作效果.
 
-Example, given:
+例如, 创建两个动作:
 
 {% codetabs name="C++", type="cpp" -%}
 // create 2 actions and run a Spawn on a Sprite
@@ -67,7 +52,7 @@ auto moveBy = MoveBy::create(10, Vec2(400,100));
 auto fadeTo = FadeTo::create(2.0f, 120.0f);
 {%- endcodetabs %}
 
-Using a `Spawn`:
+使用 `Spawn`:
 
 {% codetabs name="C++", type="cpp" -%}
 // running the above Actions with Spawn.
@@ -75,7 +60,7 @@ auto mySpawn = Spawn::createWithTwoActions(moveBy, fadeTo);
 mySprite->runAction(mySpawn);
 {%- endcodetabs %}
 
-and consecutive __runAction()__ statements:
+同时调用方法 `runAction()`:
 
 {% codetabs name="C++", type="cpp" -%}
 // running the above Actions with consecutive runAction() statements.
@@ -83,10 +68,9 @@ mySprite->runAction(moveBy);
 mySprite->runAction(fadeTo);
 {%- endcodetabs %}
 
-Both would produce the same result. However, one can use `Spawn` in a `Sequence`.
-This flowchart shows how this might look:
+上面两种方式产生的效果是一样的, 现在看把一个 `Spawn` 添加到一个 `Sequence` 中是怎样的一种情景, 动作的执行流程会看起来像这样:
 
-![](actions-img/spawn_in_a_sequence.png "")
+![](../../en/actions/actions-img/spawn_in_a_sequence.png "")
 
 {% codetabs name="C++", type="cpp" -%}
 // create a Sprite
@@ -107,4 +91,4 @@ auto seq = Sequence::create(moveBy, mySpawn, moveBy, nullptr);
 mySprite->runAction(seq);
 {%- endcodetabs %}
 
-Run the example __Programmer Guide Sample__ code to see this in action!
+运行本文档的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16) 去看一下效果吧!

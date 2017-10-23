@@ -1,15 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 动作
 
-## Actions
-`Action` objects are just like they sound. They make a `Node` perform a change
-to its properties. `Action` objects allow the transformation of `Node` properties
-in time. Any object with a base class of `Node` can have `Action` objects performed
-on it. As an example, you can move a `Sprite` from one position to another and
-do it over a span of time.
+__动作 Action__ 的功能就和字面含义一样, 它通过改变一个 `Node` 对象的属性, 让它表现出某种动作. 动作对象能实时的改变 `Node` 的属性, 任何一个对象只要它是 `Node` 的子类都能被改变. 比如, 你能通过动作对象把一个精灵从一个位置移动到另一个位置.
 
-Example of `MoveTo` and `MoveBy` action:
+通过 `MoveTo` 和 `MoveBy` 方法:
 
 {% codetabs name="C++", type="cpp" -%}
 // Move sprite to position 50,10 in 2 seconds.
@@ -29,11 +22,9 @@ var moveBy = new cc.MoveBy(2, cc._p(20,0));
 mySprite2.runAction(moveBy);
 {%- endcodetabs %}
 
-#### By and To, what is the difference?
-You will notice that each `Action` has a __By__ and __To__ version. Why? Because
-they are different in what they accomplish. A __By__ is relative to the current
-state of the `Node`. A __To__ action is absolute, meaning it doesn't take into
-account the current state of the `Node`. Let's take a look at a specific example:
+## By 和 To 的区别
+
+你能注意到, 每一个动作都会有两个方法 __By__ 和 __To__. 两种方法方便你在不同的情况使用, __By__ 算的是相对于节点对象的当前位置, __To__ 算的是绝对位置, 不考虑当前节点对象在哪. 如果你想动作的表现是相对于 `Node` 当前位置的, 就用 __By__, 相对的想让动作的表现是按照坐标的绝对位置就用 __To__. 看一个例子:
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -75,4 +66,4 @@ var seq = new cc.Sequence(moveBy, delay, moveTo);
 mySprite.runAction(seq);
 {%- endcodetabs %}
 
-![](actions-img/i0.png "")
+![](../../en/actions/actions-img/i0.png "")

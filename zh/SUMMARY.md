@@ -33,7 +33,7 @@
     - [动作简介](actions/index.md)
     - [基本动作](actions/basic.md)
     - [动作序列](actions/sequences.md)
-    - [序列剖析](actions/sequence_internals.md)
+    - [克隆与倒转](actions/sequence_internals.md)
 
 - [场景(Scene)](scenes/index.md)
     - [场景简介](scenes/index.md)

@@ -1,13 +1,10 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 基本动作
 
-## Basic Actions and how to run them
-Basic actions are usually a singular action, thus accomplishing a single objective.
-Let's take a look at a few examples:
+基本动作通常都是单一的动作, 用来完成一个简单的目标. 下面通过简单的示例来介绍常见的基本动作.
 
-### Move
-__Move__ a `Node` over a set period of time.
+## 移动
+
+使用 `MoveTo` `MoveBy` 完成节点对象在一个设置的时间后移动.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -35,10 +32,11 @@ var moveBy = new cc.MoveBy(2, cc._p(50, 0));
 mySprite.runAction(moveBy);
 {%- endcodetabs %}
 
-![](actions-img/i1.png "")
+![](../../en/actions/actions-img/i1.png "")
 
-### Rotate
-__Rotate__ a `Node` clockwise over 2 seconds.
+## 旋转
+
+使用 `RotateTo` `RotateBy` 完成节点对象在一个设置的时间后顺时针旋转指定角度
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -62,10 +60,11 @@ var rotateBy = new cc.RotateBy(2.0, 40.0);
 mySprite.runAction(rotateBy);
 {%- endcodetabs %}
 
-![](actions-img/i3.png "")
+![](../../en/actions/actions-img/i3.png "")
 
-### Scale
-__Scale__ a `Node` by 10 over 2 seconds.
+## 缩放
+
+使用 `ScaleBy` `ScaleTo` 完成节点对象的比例缩放
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -105,12 +104,11 @@ var scaleTo = new cc.ScaleTo(2.0, 3.0, 3.0);
 mySprite.runAction(scaleTo);
 {%- endcodetabs %}
 
-![](actions-img/i4.png "")
+![](../../en/actions/actions-img/i4.png "")
 
-### Fade In/Out
-__Fade__ a `Node`.
+### 淡入淡出
 
-It modifies the opacity from 0 to 255. The *reverse* of this action is `FadeOut`
+使用 `FadeIn` `FadeOut` 完成节点对象的淡入, 淡出.  `FadeIn` 修改节点对象的透明度属性, 从完全透明到完全不透明, `FadeOut` 相反.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -134,11 +132,11 @@ var fadeOut = new cc.FadeOut(2.0);
 mySprite.runAction(fadeOut);
 {%- endcodetabs %}
 
-![](actions-img/i2.png "")
+![](../../en/actions/actions-img/i2.png "")
 
-### Tint
-`Tint` a `Node` that implements the `NodeRGB` protocol from current the tint to \
-a custom tine.
+## 色彩
+
+使用 `TintTo` `TintBy`, 将一个实现了 `NodeRGB` 协议的节点对象进行色彩混合.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -162,12 +160,11 @@ var tintBy = new cc.TintBy(2.0, 120.0, 232.0, 254.0);
 mySprite.runAction(tintBy);
 {%- endcodetabs %}
 
-![](actions-img/i5.png "")
+![](../../en/actions/actions-img/i5.png "")
 
-### Animate
-With `Animate` it is possible to do simple __flipbook__ animation with your `Sprite`
-objects. This is simply replacing the __display frame__ at set intervals for the
-duration of the animation. Let's consider this example:
+## 动画
+
+使用 `Animate` 对象可以很容易的通过每隔一个短暂时间进行图像替代的方式, 实现一个翻页效果. 下面是一个例子:
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -221,24 +218,13 @@ var animate = new cc.Animate(animation);
 mySprite.runAction(cc.RepeatForever(animate));
 {%- endcodetabs %}
 
-It's hard to show an animation in text, so please run the example __Programmer
-Guide Sample__ code to see this in action!
+## 缓冲
 
-### Easing
-__Easing__ is animating with a specified acceleration to make the animations smooth.
-A few things to keep in mind is that regardless of speed, ease actions always
-start and finish at the same time. __Ease__ actions are a good way to __fake__ physics
-in your game! Perhaps you want a few simulated physics effects but don't want the
-overhead and complexity of adding it all for a few very basic actions. Another
-good example is to animate menus and buttons.
+缓冲动作可以让节点对象具有加速度, 产生平滑同时相对复杂的动作, 所以可以用缓冲动作来模仿一些物理运动, 这样比实际使用物理引擎的性能消耗低, 使用起来也简单. 当然你也可以将缓冲动作应用到动画菜单和按钮上, 实现你想要的效果。
 
-Here are common easing functions displayed over a graph:
+![](../../en/actions/actions-img/easing-functions.png "")
 
-![](actions-img/easing-functions.png "")
-
-Cocos2d-x supports most of the easing function in the above graph. They are also
-simple to implement. Lets look at a specific use case. Lets drop a `Sprite` object
-from the top of the screen and make it bounce.
+Cocos2d-x 支持上图中的大部分缓冲动作, 实现起来也很简单. 我们来看个例子, 一个精灵从屏幕顶部落下然后不断跳动:
 
 {% codetabs name="C++", type="cpp" -%}
 // create a sprite
@@ -263,4 +249,6 @@ auto seq1 = Sequence::create(move_ease_in, delay, move_ease_in_back,
 mySprite->runAction(RepeatForever::create(seq1));
 {%- endcodetabs %}
 
-Run the example __Programmer Guide Sample__ code to see this in action!
+复杂的动作很难在这样的文本里表示, 要是看效果的话最好去运行一下本指南的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16), 或者运行引擎代码的测试项目 `cpp-tests`, 在子菜单 `3:Actions - Basic` 中有基本的动作效果展示
+
+ _运行测试项目的方法, 参考本文档的 [环境搭建](../installation/index.md) 章节_ .

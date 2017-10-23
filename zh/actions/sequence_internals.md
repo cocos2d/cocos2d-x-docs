@@ -1,40 +1,16 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 克隆(Clone)
 
-## Clone
-__Clone__ is exactly like it sounds. If you have an `Action`, you can apply it to
-multiple `Node` objects by using `clone()`. Why do you have to clone? Good question.
-`Action` objects have an __internal state__. When they run, they are actually
-changing the `Node` objects properties. Without the use of `clone()` you don't
-truly have a unique `Action` being applied to the `Node`. This will produce
-unexpected results, as you can't know for sure what the properties of the `Action`
-are currently set at.
+__克隆(Clone)__ 的功能和字面含义一样, 如果你对一个节点对象使用了 `clone()` 方法, 你就获得了这个节点对象的拷贝. 为什么要使用 `clone()` 方法? 因为当 `Action` 对象运行时会产生一个内部状态, 记录着节点属性的改变. 当你想将一个创建的动作, 重复使用到不同的节点对象时, 如果不用 `clone()` 方法, 就无法确定这个动作的属性到底是怎样的(因为被使用过, 产生了内部状态), 这会造成难以预料的结果.
 
-Let's hash through an example, say you have a __heroSprite__ and it has a position
-of __(0,0)__. If you run an `Action` of:
+我们来看示例, 假如你有一个坐标位置是 `(0,0)` 的 `heroSprite`, 执行这样一个动作:
 
 {% codetabs name="C++", type="cpp" -%}
 MoveBy::create(10, Vec2(400,100));
 {%- endcodetabs %}
 
-This will move __heroSprite__ from *(0,0)* to *(400, 100)* over the course of
-*10 seconds*. __heroSprite__ now has a new position of *(400, 100)* and more
-importantly the `Action` has this position in it's __internal state__. Now, say
-you have an __emenySprite__ with a position of *(200, 200)*. If you were to apply
-this same:
+你的 `heroSprite` 就在 10s 的时间中, 从 `(0,0)` 移动到了 `(400,100)`, `heroSprite` 有了一个新位置 `(400,100)`, 更重要的是动作对象也有了节点位置相关的内部状态了. 现在假如你有一个坐标位置是 `(200,200)`的 `emenySprite`. 你还使用这个相同的动作, `emenySprite` 就会移动到 `(800,200)`的坐标位置, 并不是你期待的结果. 因为第二次将这个动作应用的时候, 它已经有内部状态了. 使用 `clone()` 能避免这种情况, 克隆获得一个新的动作对象, 新的对象没有之前的内部状态.
 
-{% codetabs name="C++", type="cpp" -%}
-MoveBy::create(10, Vec2(400,100));
-{%- endcodetabs %}
-
-to your __enemySprite__, it would end up at a position of *(800, 200)* and not
-where you thought it would. Do you see why? It is because the `Action` already
-had an __internal state__ to start from when performing the `MoveBy`. __Cloning__
-an `Action` prevents this. It ensures you get a unique version `Action` applied
-to your `Node`.
-
-Let's also see this in code, first, incorrect.
+从代码中学习用法吧, 先看看错误的情况:
 
 {% codetabs name="C++", type="cpp" -%}
 // create our Sprites
@@ -52,7 +28,7 @@ enemySprite->runAction(moveBy); // oops, this will not be unique!
 // uses the Actions current internal state as a starting point.
 {%- endcodetabs %}
 
-Correctly, using __clone()__!:
+使用 `clone()` 的正确情况:
 
 {% codetabs name="C++", type="cpp" -%}
 // create our Sprites
@@ -69,23 +45,19 @@ heroSprite->runAction(moveBy);
 enemySprite->runAction(moveBy->clone()); // correct! This will be unique
 {%- endcodetabs %}
 
-## Reverse
-__Reverse__ is also exactly like it sounds. If you run a series of actions, you
-can call `reverse()` to run it, in the opposite order. Otherwise known as, backwards.
-However, it is not just simply running the `Action` in reverse order. Calling
-`reverse()` is actually manipulating the properties of the original `Sequence` or
-`Spawn` in reverse too.
+## 倒转(Reverse)
 
-Using the `Spawn` example above, reversing is simple.
+__倒转(Reverse)__ 的功能也和字面意思一样, 调用 `reverse()` 可以让一系列动作按相反的方向执行. `reverse()` 不是只能简单的让一个 `Action` 对象反向执行, 还能让 `Sequence` 和
+`Spawn` 倒转.
+
+倒转使用起来很简单:
 
 {% codetabs name="C++", type="cpp" -%}
 // reverse a sequence, spawn or action
 mySprite->runAction(mySpawn->reverse());
 {%- endcodetabs %}
 
-Most `Action` and `Sequence` objects are reversible!
-
-It's easy to use, but let's make sure we see what is happening. Given:
+思考下面这段代码在执行的时候, 内部发生了什么?
 
 {% codetabs name="C++", type="cpp" -%}
 // create a Sprite
@@ -104,29 +76,26 @@ delay->clone(), nullptr);
 auto sequence = Sequence::create(moveBy, delay, scaleBy, delaySequence, nullptr);
 
 // run it
-newSprite2->runAction(sequence);
+mySprite->runAction(sequence);
 
 // reverse it
-newSprite2->runAction(sequence->reverse());
+mySprite->runAction(sequence->reverse());
 {%- endcodetabs %}
 
-What is really happening? If we lay out the steps as a list it might be helpful:
+思考起来可能有点困难, 我们将执行的每一步列出来, 或许能帮助你理解:
 
-   * __mySprite__ is created
-   * __mySprite__ position is set to *(50, 56)*
-   *  __sequence__ starts to run
-   *  __sequence__ moves __mySprite__ by *500*, over *2 seconds*, __mySprite__ new position
-      _(550, 56)_
-   *  __sequence__ delays for *2 seconds*
-   *  __sequence__ scales __mySprite__ by *2x* over *2 seconds*
-   *  __sequence__ delays for *6* more seconds (notice we run another sequence to
-   accomplish this)
-   * we run a __reverse()__ on the sequence so we re-run each action backwards
-   * __sequence__ is delayed for *6 seconds*
-   * __sequence__ scales __mySprite__ by *-2x* over *2 seconds*
-   * __sequence__ delays for *2 seconds*
-   * __sequence__ moves __mySprite__ by *-500*, over *2 seconds*, __mySprite__ new position
-    _(50, 56)_
+1. `mySprite` 创建
+1. `mySprite` 的坐标位置设置成(50,56)
+1. `sequence` 开始执行
+1. `sequence` 执行第一个动作 `moveBy`, 2s 中 `mySprite` 移动到了坐标位置(550,56)
+1. `sequence` 执行第二个动作,  暂停 2s
+1. `sequence` 执行第三个动作, `scaleBy`, 2s 中 `mySprite` 放大了2倍
+1. `sequence` 执行第四个动作, `delaySequence`, 暂停 6s
+1. `reverse()` 被调用, 序列倒转, 开始反向执行
+1. `sequence` 执行第四个动作, `delaySequence`, 暂停 6s
+1. `sequence` 执行第三个动作, `scaleBy`, 2s 中 `mySprite` 缩小了2倍 (注意: 序列内的动作被倒转)
+1. `sequence` 执行第二个动作,  暂停 2s
+1. `sequence` 执行第一个动作 `moveBy`, 2s 中 `mySprite` 从坐标位置 (550,56), 移动到了 (50, 56)
+1. `mySprite` 回到了最初的位置
 
-You can see that a `reverse()` is simple for you to use, but not so simple in
-its internal logic. Cocos2d-x does all the heavy lifting!
+我们能发现 `reverse()` 方法使用起来很简单, 内部逻辑却一点都不简单. 因为 Cocos2d-x 封装了复杂的逻辑, 为你留下了简单易用的接口!
