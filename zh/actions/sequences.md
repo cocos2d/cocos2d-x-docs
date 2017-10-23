@@ -2,7 +2,7 @@
 
 __动作序列(Sequence)__ 是将一系列要顺序执行的动作封装到一起的对象, 一个 `Sequence` 可以包含任何数量的动作对象, 回调方法和其它序列. 可以包含回调方法? 没错! Cocos2d-x 允许把一个方法添加进去 `CallFunc` 对象, 然后将 `CallFunc` 添加到 `Sequence`, 这样, 在执行序列的时候就能触发方法调用. 因此, 你能在一个序列中添加一些个性化的功能, 而不仅仅是添加 Cocos2d-x 提供的有限动作. 下面是一个序列的动作执行示意图:
 
-![](actions-img/sequence.png "")
+![](../../en/actions/actions-img/sequence.png "")
 
 ## `Sequence` 示例
 
@@ -38,7 +38,7 @@ __Jump__ -> __callbackJump()__ -> __Rotate__ -> __callbackRotate()__
 
 `Spawn` 和 `Sequence` 是非常相似的, 区别是 `Spawn` 同时执行所有的动作. `Spawn` 对象可以添加任意数量的动作和其它 `Spawn` 对象.
 
-![](actions-img/spawn.png "")
+![](../../en/actions/actions-img/spawn.png "")
 
 `Spawn` 的效果和同时运行多个动作的 `runAction()` 方法是一致的, 但是它的独特之处是 `Spawn` 能被放到 `Sequence` 中, 结合 `Spawn` 和 `Sequence` 能实现非常强大的动作效果.
 
@@ -70,7 +70,7 @@ mySprite->runAction(fadeTo);
 
 上面两种方式产生的效果是一样的, 现在看把一个 `Spawn` 添加到一个 `Sequence` 中是怎样的一种情景, 动作的执行流程会看起来像这样:
 
-![](actions-img/spawn_in_a_sequence.png "")
+![](../../en/actions/actions-img/spawn_in_a_sequence.png "")
 
 {% codetabs name="C++", type="cpp" -%}
 // create a Sprite

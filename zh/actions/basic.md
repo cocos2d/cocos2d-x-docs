@@ -32,7 +32,7 @@ var moveBy = new cc.MoveBy(2, cc._p(50, 0));
 mySprite.runAction(moveBy);
 {%- endcodetabs %}
 
-![](actions-img/i1.png "")
+![](../../en/actions/actions-img/i1.png "")
 
 ## 旋转
 
@@ -60,7 +60,7 @@ var rotateBy = new cc.RotateBy(2.0, 40.0);
 mySprite.runAction(rotateBy);
 {%- endcodetabs %}
 
-![](actions-img/i3.png "")
+![](../../en/actions/actions-img/i3.png "")
 
 ## 缩放
 
@@ -104,7 +104,7 @@ var scaleTo = new cc.ScaleTo(2.0, 3.0, 3.0);
 mySprite.runAction(scaleTo);
 {%- endcodetabs %}
 
-![](actions-img/i4.png "")
+![](../../en/actions/actions-img/i4.png "")
 
 ### 淡入淡出
 
@@ -132,7 +132,7 @@ var fadeOut = new cc.FadeOut(2.0);
 mySprite.runAction(fadeOut);
 {%- endcodetabs %}
 
-![](actions-img/i2.png "")
+![](../../en/actions/actions-img/i2.png "")
 
 ## 色彩
 
@@ -160,7 +160,7 @@ var tintBy = new cc.TintBy(2.0, 120.0, 232.0, 254.0);
 mySprite.runAction(tintBy);
 {%- endcodetabs %}
 
-![](actions-img/i5.png "")
+![](../../en/actions/actions-img/i5.png "")
 
 ## 动画
 
@@ -222,7 +222,7 @@ mySprite.runAction(cc.RepeatForever(animate));
 
 缓冲动作可以让节点对象具有加速度, 产生平滑同时相对复杂的动作, 所以可以用缓冲动作来模仿一些物理运动, 这样比实际使用物理引擎的性能消耗低, 使用起来也简单. 当然你也可以将缓冲动作应用到动画菜单和按钮上, 实现你想要的效果。
 
-![](actions-img/easing-functions.png "")
+![](../../en/actions/actions-img/easing-functions.png "")
 
 Cocos2d-x 支持上图中的大部分缓冲动作, 实现起来也很简单. 我们来看个例子, 一个精灵从屏幕顶部落下然后不断跳动:
 
