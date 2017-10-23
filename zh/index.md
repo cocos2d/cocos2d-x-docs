@@ -10,6 +10,9 @@
 - [精灵(Sprite)](sprites/index.md)
 - [动作(Action)](actions/index.md)
 - [场景(Scene)](scenes/index.md)
+- [UI组件](ui_components/index.md)
+- [高级节点类型](other_node_types/index.md)
+
 
 
 ## 致谢
