@@ -1,60 +1,42 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 标签(Label)
 
-## Label
-Cocos2d-x provides a `Label` object that can create labels using __true type__,
-__bitmap__ or the built-in system font. This single class can handle all your `Label`
-needs.
+Cocos2d-x 提供了一个 `Label` 对象给用户, 可以使用位图字体, TrueType 字体, 系统字体创建标签. 这个单一的类能处理你所有的标签需求. 下面介绍使用各种字体, 创建标签的方法.
 
-#### Label BMFont
-`BMFont` is a label type that uses a bitmap font. The characters in a bitmap font
-are made up of a matrix of __dots__. It is very fast and easy to use, but not
-scalable as it requires a separate font for each size character. Each character
-in a `Label` is a separate `Sprite`. This means that each character can be rotated,
-scaled, tinted, have a different __anchor point__ and/or most any other property changed.
+## BMFont 标签
 
-Creating a `BMFont` label requires two files: a __.fnt__ file and an image
-representation of each character in __.png__ format. If you are using a tool like
-__Glyph Designer__ these files are created automatically for you. Creating a
-`Label` object from a __bitmap font__:
+`BMFont` 是一个使用位图字体创建的标签类型, 位图字体中的字符由点阵组成. 使用这种字体标签性能非常好, 但是不适合缩放. 由于点阵的原因, 缩放会导致失真. 标签中的每一个字符都是一个单独的 `Sprite`, 也就是说精灵的属性(旋转, 缩放, 着色等)控制都适用于这里的每个字符.
+
+创建 `BMFont` 标签需要两个文件: `.fnt` 文件和 `.png` 文件. 使用像 Glyph Designer 这样的工具来创建位图字体，这些文件将会自动生成。
+
+使用位图字体创建标签：
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithBMFont("bitmapRed.fnt", "Your Text");
 {%- endcodetabs %}
 
-![](ui_components-img/LabelBMFont.png "")
+![](../../en/ui_components/ui_components-img/LabelBMFont.png "")
 
-All of the characters in the string parameter should be found in the provided
-__.fnt__ file, otherwise they won't be rendered. If you render a `Label` object and
-it is missing characters, make sure they exist in your __.fnt__ file.
+所有在标签中出现的字符都应该能在提供的 `.fnt` 文件找到, 如果找不到字符就不会被渲染. 如果你渲染了一个 `Label`, 同时它有丢失字符, 记得去查看一下 `.fnt` 文件是否完备.
 
-#### Label TTF
-__True Type Fonts__ are different from the __bitmap fonts__ we learned about above.
-With __true type fonts__ the outline of the font is rendered. This is convenient
-as you do not need to have a separate font file for each size and color you might
-wish to use. Creating a `Label` object that uses a __true type font__ is easy. To
-create one you need to specify a __.ttf__ font file name, text string and a size.
-Unlike `BMFont`, `TTF` can render size changes without the need for a separate
-font files. Example, using a __true type font__:
+## TTF 标签
+
+__TrueType 字体__ 和我们上面了解的位图字体不同, 使用这种字体很方便, 你不需要为每种尺寸和颜色单独使用字体文件. 不像 BMFont, 如果想不失真的缩放, 就要提供多种字体文件
+
+要创建这种标签, 需要指定 `.ttf` 字体文件名, 文本字符串和字体大小
+
+使用 TrueType 字体创建标签:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithTTF("Your Text", "Marker Felt.ttf", 24);
 {%- endcodetabs %}
 
-![](ui_components-img/LabelTTF.png "")
+![](../../en/ui_components/ui_components-img/LabelTTF.png "")
 
-Although it is more flexible than a __bitmap font__, a _true type font_ is slower
-to render and changing properties like the __font face__ and __size__ is an expensive
-operation.
+虽然使用 TrueType 字体比使用位图字体更灵活, 但是它渲染速度较慢, 并且更改标签的属性(字体, 大小)是一项非常消耗性能的操作.
 
-If you need several `Label` objects from a __true type font__ that all have the
-same properties you can create a `TTFConfig` object to manage them. A `TTFConfig`
-object allows you to set the properties that all of your labels would have in
-common. You can think of this like a *recipe* where all your `Label` objects
-will use the same ingredients.
+如果您需要具有相同属性的 TrueType 字体的多个 Label 对象, 那可以创建一个 `TTFConfig` 对象来统一配置, `TTFConfig` 对象允许你设置所有标签的共同属性.
 
-You can create a `TTFConfig` object for your `Labels` in this way:
+通过以下方式创建一个 `TTFConfig` 对象：
 
 {% codetabs name="C++", type="cpp" -%}
 // create a TTFConfig files for labels to share
@@ -70,30 +52,27 @@ labelConfig.distanceFieldEnabled = false;
 auto myLabel = Label::createWithTTF(labelConfig, "My Label Text");
 {%- endcodetabs %}
 
-![](ui_components-img/LabelTTFWithConfig.png "")
+![](../../en/ui_components/ui_components-img/LabelTTFWithConfig.png "")
 
-A `TTFConfig` can also be used for displaying Chinese, Japanese and Korean
-characters.
+`TTFConfig` 也能用于展示中文, 日文, 韩文的字符
 
-#### Label SystemFont
-`SystemFont` is a label type that uses the default system font and font size.
-This is a font that is meant not to have its properties changed. You should think
-of it as __system font, system rules__. Creating a `SystemFont` label:
+## 系统字体标签
+
+`SystemFont` 是一个使用系统默认字体, 默认字体大小的标签类型, 这样的标签不要改变他的属性, 它会使用系统的规则
+
+使用系统字体创建标签 :
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithSystemFont("My Label Text", "Arial", 16);
 {%- endcodetabs %}
 
-![](ui_components-img/LabelWithSystemFont.png "")
+![](../../en/ui_components/ui_components-img/LabelWithSystemFont.png "")
 
-## Label Effects
-After you have your `Label` objects on screen you might want to make them a bit
-prettier. Perhaps they look flat or plain. Thankfully you don't have to create
-your own custom fonts! `Label` objects can have effects applied to them. Not all
-`Label` objects support all effects. Some effects include __shadow__, __outline__
-and __glow__. You can apply one or more effects to a `Label` object easily:
+## 标签效果
 
-Label with a __shadow__ effect:
+在屏幕上有标签后, 它们可能看起来很普通, 这时你希望让他们变漂亮. 你不用创建自定义字体! Label 对象就可以对标签应用效果, 包括阴影, 轮廓, 发光.
+
+标签阴影效果:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
@@ -102,9 +81,9 @@ auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
 myLabel->enableShadow();
 {%- endcodetabs %}
 
-![](ui_components-img/LabelWithShadow.png "")
+![](../../en/ui_components/ui_components-img/LabelWithShadow.png "")
 
-Label with a __outline__ effect:
+标签轮廓效果:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
@@ -113,9 +92,9 @@ auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
 myLabel->enableOutline(Color4B::WHITE, 1));
 {%- endcodetabs %}
 
-![](ui_components-img/LabelWithOutline.png "")
+![](../../en/ui_components/ui_components-img/LabelWithOutline.png "")
 
-Label with a __glow__ effect:
+标签发光效果:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
@@ -124,4 +103,4 @@ auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
 myLabel->enableGlow(Color4B::YELLOW);
 {%- endcodetabs %}
 
-![](ui_components-img/LabelWithGlow.png "")
+![](../../en/ui_components/ui_components-img/LabelWithGlow.png "")
