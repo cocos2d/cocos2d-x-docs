@@ -38,7 +38,7 @@
 - [场景(Scene)](scenes/index.md)
     - [场景简介](scenes/index.md)
     - [场景创建](scenes/creating.md)
-    - [场景转换](scenes/transitioning.md)
+    - [场景切换](scenes/transitioning.md)
 
 - [UI组件](index.md)
     - [组件简介]()

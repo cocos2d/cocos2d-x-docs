@@ -59,3 +59,5 @@ scene.addChild(label_node);
 // it goes to the "right" side of the tree (because it is positive)
 scene.addChild(sprite_node, 1);
 {%- endcodetabs %}
+
+渲染时 `z-order` 值大的节点对象会后绘制, 值小的节点对象先绘制. 如果两个节点对象的绘制范围有重叠, `z-order` 值大的可能会覆盖 `z-order` 值小的.
