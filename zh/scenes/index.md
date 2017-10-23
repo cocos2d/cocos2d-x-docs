@@ -1,17 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 场景简介
 
-## Building and Transitioning Scenes
+__场景(Scene)__ 是一个容器, 容纳游戏中的各个元素, 如精灵, 标签, 节点对象. 它负责着游戏的运行逻辑, 以帧为单位渲染内容. 可以想象游戏就像一个电影, 场景是观看者能看到的正在发生的情景. 一个电影至少需要一个场景, 一个游戏也至少需要一个 `Scene`.
 
-### What is a Scene?
-A `Scene` is a container that holds `Sprites`, `Labels`, `Nodes` and other
-objects that your game needs. A `Scene` is responsible for running game logic and
-rendering the content on a per-frame basis. You need at least one `Scene` to start
-your game. You can think of this like a movie. The `Scene` is what is running and
-users see what is happening in real-time. You can have any number of `Scene` objects
-in your game and transition through them easily. Cocos2d-x provides __scene transitions__
-and you can even have __scene transitions__ with cool effects.
+在使用 Cocos2d-x 进行游戏的开发中, 你可以制作任意数量的场景, 并在不同场景间轻松转换.
 
 <!---### Converting between coordinate systems
 
