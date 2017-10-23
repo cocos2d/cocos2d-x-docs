@@ -1,21 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 组件简介
 
-## UI Components
-Taking a look at the common apps you might use, I bet that you can spot UI
-widgets without necessarily knowing what they are. They aren't specific to games,
-every application probably uses a few widgets. What does __UI__ stand for? What do
-__UI__ widgets do? Oh so many questions!
+ __UI 组件__ 不是游戏专有的, 每个应用程序都可能会使用几个. 看一看你常使用的应用程序, 肯定能发现它有使用UI 组件. UI 代表什么? UI 组件是做什么的? 本章会告诉你答案
 
-### Widgets, oh, my!
-__UI__ is an abbreviation that stands for _user interface_. You know, things that
-are on the screen. This include items like: __labels__, __buttons__, __menus__,
-__sliders__ and __views__. Cocos2d-x provides a set of __UI__ widgets to make it
-simple to add these controls to your projects. It may sound trivial, but a lot
-goes in to creating a core class like a `Label`. There are so many aspects of
-just this one. Could you imagine having to write your own custom widget set? Don't
-worry, your needs are covered!
+UI 代表用户界面, 是 __User Interface__ 的缩写, 你看到的屏幕上的东西就是用户界面. 界面组件有标签, 按钮, 菜单, 滑动条等. Cocos2d-x 提供了一套易用的 UI 组件, 游戏开发过程中, 你能很容易的把他们添加到游戏中. 听起来这可能很普通, 但创建像 `Label(标签)` 这样的核心类实际要考虑很多问题, 可以想象创建一套自定义的组件是多么的困难! 当然你根本没必要这样做, 因为你需要的我们都考虑到了.
 
 <!-- topics to cover later -->
 <!--
