@@ -1,46 +1,42 @@
-# 场景转换
+# 场景切换
 
-You might need to move between `Scene` objects in your game. Perhaps starting a
-new game, changing levels or even ending your game. Cocos2d-x provides a number
-of ways to do __scene transitions__.
+开始一个新游戏, 改变关卡, 或结束游戏时, 为了给用户不同的效果呈现, 大多需要切换不同的场景. Cocos2d-x 提供了一系列方式去做这件事情 __场景切换__ .
 
-#### Ways to transition between Scenes
-There are many ways to transition through your __scenes__. Each has specific
-functionality. Let's go through them. Given:
+## 场景切换的方式
+
+有很多场景切换的方式, 每种都有特定的方法, 让我们来看看:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myScene = Scene::create();
 {%- endcodetabs %}
 
-__runWithScene()__ - use this for the first scene only. This is the way to start
-your games first `Scene`.
+__`runWithScene()`__ 用于开始游戏, 加载第一个场景. 只用于第一个场景!
 
 {% codetabs name="C++", type="cpp" -%}
 Director::getInstance()->runWithScene(myScene);
 {%- endcodetabs %}
 
-__replaceScene()__ - replace a scene outright.
+__`replaceScene()`__ 使用传入的场景替换当前场景来切换画面, 当前场景被释放. 这是切换场景时最常用的方法
 
 {% codetabs name="C++", type="cpp" -%}
 Director::getInstance()->replaceScene(myScene);
 {%- endcodetabs %}
 
-__pushScene()__ - suspends the execution of the running scene, pushing it on the
-stack of suspended scenes. Only call this if there is a running scene.
+__`pushScene()`__ 将当前运行中的场景暂停并压入到场景栈中，再将传入的场景设置为当前运行场景. 只有存在正在运行的场景时才能调用该方法
 
 {% codetabs name="C++", type="cpp" -%}
 Director::getInstance()->pushScene(myScene);
 {%- endcodetabs %}
 
-__popScene()__ - This scene will replace the running one. The running scene will
-be deleted. Only call this if there is a running scene.
+__`popScene()`__ 释放当前场景, 再从场景栈中弹出栈顶的场景, 并将其设置为当前运行场景。如果栈为空，直接结束应用
 
 {% codetabs name="C++", type="cpp" -%}
 Director::getInstance()->popScene(myScene);
 {%- endcodetabs %}
 
-#### Transition Scenes with effects
-You can add visual effects to your `Scene` transitions
+## 场景切换的效果设置
+
+在场景切换的过程中, 你可以添加一些效果:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myScene = Scene::create();
