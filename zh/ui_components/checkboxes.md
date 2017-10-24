@@ -1,15 +1,8 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 选框(CheckBox)
 
-## CheckBox
-We are all used to filling out __checkboxes__ on paper forms like job applications
-and rental agreements. You can also have __checkboxes__ in your games. Perhaps, you
-want to have the ability for your player to make a simple __yes__ or __no__ choice.
-You might also hear this referred to as a __binary__ choice (0 and 1). A `CheckBox`
-permits the user to make this type of choice. There are 5 different __states__ a
-`Checkbox` can have: __normal__, __selected__ and __disabled__. It is simple to create
-a `CheckBox`:
+日常生活中选框很常见, 比如填写问卷时, 让我们选一些喜欢的项目, 手机设置中, 某一设置是打开还是关闭. 只有两种状态的条目经常被设计为选框. Cocos2d-x 使用 `Checkbox` 对象完成这一功能.
+
+创建一个复选框:
 
 {% codetabs name="C++", type="cpp" -%}
 #include "ui/CocosGUI.h"
@@ -21,31 +14,28 @@ auto checkbox = CheckBox::create("check_box_normal.png",
                                  "check_box_active_disable.png");
 
 checkbox->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
-		switch (type)
-		{
-				case ui::Widget::TouchEventType::BEGAN:
-						break;
-				case ui::Widget::TouchEventType::ENDED:
-						std::cout << "checkbox 1 clicked" << std::endl;
-						break;
-				default:
-						break;
-		}
+        switch (type)
+        {
+                case ui::Widget::TouchEventType::BEGAN:
+                        break;
+                case ui::Widget::TouchEventType::ENDED:
+                        std::cout << "checkbox 1 clicked" << std::endl;
+                        break;
+                default:
+                        break;
+        }
 });
 
 this->addChild(checkbox);
 {%- endcodetabs %}
 
-As you can see in the above example we specify a _.png_ image for each of the
-possible states the `Checkbox` can be in. Since there are 5 possible states that
-a `CheckBox` can be in, it is up 5 graphics, one for each of its states. Example
-graphics:
+在上面的例子中, 我们能看到为一个选框指定了五张图像, 因为选框有五种状态: 未被选中, 被点击, 未被选中时不可用, 被选中, 选中时不可用. 这样五种状态的图像依次如下:
 
-![](ui_components-img/CheckBox_Normal.png "") ![](basic_concepts-img/smallSpacer.png "") ![](ui_components-img/CheckBox_Press.png "") ![](basic_concepts-img/smallSpacer.png "")
-![](ui_components-img/CheckBox_Disable.png "") ![](basic_concepts-img/smallSpacer.png "")
-![](ui_components-img/CheckBoxNode_Normal.png "") ![](basic_concepts-img/smallSpacer.png "")
-![](ui_components-img/CheckBoxNode_Disable.png "")
+![](../../en/ui_components/ui_components-img/CheckBox_Normal.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/ui_components/ui_components-img/CheckBox_Press.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "")
+![](../../en/ui_components/ui_components-img/CheckBox_Disable.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "")
+![](../../en/ui_components/ui_components-img/CheckBoxNode_Normal.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "")
+![](../../en/ui_components/ui_components-img/CheckBoxNode_Disable.png "")
 
-On screen a `Checkbox` might look like this:
+在屏幕显示的时候, 同一个时刻只能看到一个状态, 被选中时状态像这样:
 
 ![](ui_components-img/Checkbox_example.png "")
