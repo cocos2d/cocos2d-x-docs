@@ -46,7 +46,7 @@
     - [菜单(Menu)](ui_components/menus.md)
     - [按钮(Button)](ui_components/buttons.md)
     - [选框(CheckBox)](ui_components/checkboxes.md)
-    - [载入条(LoadingBar)](ui_components/loading_bar.md)
+    - [进度条(LoadingBar)](ui_components/loading_bar.md)
     - [滑动条(Slider)](ui_components/sliders.md)
     - [文本框(TextField)](ui_components/textfields.md)
 

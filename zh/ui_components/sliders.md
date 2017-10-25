@@ -1,11 +1,8 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 滑动条(Slider)
 
-## Slider
-Sometimes it is necessary to change a value slightly. Perhaps you have a character
-and you want to allow the player to adjust the strength of attacking an enemy.
-A `Slider` allows users to set a value by moving an indicator. To create a `Slider`:
+有时候你想平滑的改变一个值, 比如游戏设置中, 调整背景音乐的音量, 或着你有一个角色, 允许用户设置攻击敌人的力量. 这种场景最适合使用滑动条, Cocos2d-x 提供 __`Slider`__ 对象支持滑动条.
+
+创建滑动条:
 
 {% codetabs name="C++", type="cpp" -%}
 #include "ui/CocosGUI.h"
@@ -16,29 +13,27 @@ slider->loadSlidBallTextures("SliderNode_Normal.png", "SliderNode_Press.png", "S
 slider->loadProgressBarTexture("Slider_PressBar.png");
 
 slider->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
-		switch (type)
-		{
-				case ui::Widget::TouchEventType::BEGAN:
-						break;
-				case ui::Widget::TouchEventType::ENDED:
-						std::cout << "slider moved" << std::endl;
-						break;
-				default:
-						break;
-		}
+        switch (type)
+        {
+                case ui::Widget::TouchEventType::BEGAN:
+                        break;
+                case ui::Widget::TouchEventType::ENDED:
+                        std::cout << "slider moved" << std::endl;
+                        break;
+                default:
+                        break;
+        }
 });
 
 this->addChild(slider);
 {%- endcodetabs %}
 
-As you can see in the above example we specify a _.png_ image for each of the
-possible states the slider can be in. A `Slider` is made up of 5 graphics that
-might look like this:
+从上面的例子, 可以看出, 实现一个滑动条需要提供五张图像, 对应滑动条的不同部分不同状态, 分别为: 滑动条背景, 上层进度条, 正常显示时的滑动端点, 滑动时的滑动端点, 不可用时的滑动端点. 本次示例的五张图像如下:
 
-![](ui_components-img/Slider_Back.png "") ![](basic_concepts-img/smallSpacer.png "") ![](ui_components-img/Slider_PressBar.png "") ![](basic_concepts-img/smallSpacer.png "")
-![](ui_components-img/SliderNode_Normal.png "") ![](basic_concepts-img/smallSpacer.png "") ![](ui_components-img/SliderNode_Press.png "") ![](basic_concepts-img/smallSpacer.png "")
-![](ui_components-img/SliderNode_Disable.png "")
+![](../../en/ui_components/ui_components-img/Slider_Back.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/ui_components/ui_components-img/Slider_PressBar.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "")
+![](../../en/ui_components/ui_components-img/SliderNode_Normal.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/ui_components/ui_components-img/SliderNode_Press.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "")
+![](../../en/ui_components/ui_components-img/SliderNode_Disable.png "")
 
-On screen a `Slider` might look like this:
+在屏幕上一个滑动条看起来是这样的:
 
-![](ui_components-img/Slider_example.png "")
+![](../../en/ui_components/ui_components-img/Slider_example.png "")
