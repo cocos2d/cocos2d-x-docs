@@ -4,7 +4,7 @@
 
 下面是使用粒子系统完成的两个粒子特效:
 
-![](other_node_types-img/particle1.png "snow") ![](basic_concepts-img/smallSpacer.png "") ![](other_node_types-img/particle3.png "sun") 
+![](../../en/other_node_types/other_node_types-img/particle1.png "snow") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/other_node_types/other_node_types-img/particle3.png "sun")
 
 ## 创建粒子特效的工具
 
@@ -59,7 +59,7 @@ addChild(emitter, 10);
 
 是这样的效果:
 
-![](other_node_types-img/particle2.png "particle fireworks")
+![](../../en/other_node_types/other_node_types-img/particle2.png "particle fireworks")
 
 要是内置的粒子特效不是你想要的那样, 也没关系, 你可以直接手动设置参数! 让我们拿上面的烟火特效示例, 并通过手动改变属性进一步控制.
 
