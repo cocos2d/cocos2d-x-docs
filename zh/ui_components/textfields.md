@@ -1,12 +1,8 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 文本框
 
-## TextField
-What if you wanted the player of your game to type in a special name to call the
-main character? Where would they type it into? Yes, a __text field__, of course.
-A `TextField` widget is used for inputting text. It supports touch event, focus,
-percent positioning and percent content size. To create a `TextField` widget:
+如果你想让参与游戏的玩家可以自定义一个昵称怎么办, 在哪里输入文本? Cocos2d-x 提供 __`TextField`__ 满足这种需求. 它支持触摸事件, 焦点, 定位内容百分比等.
+
+创建一个文本框:
 
 {% codetabs name="C++", type="cpp" -%}
 #include "ui/CocosGUI.h"
@@ -14,18 +10,17 @@ percent positioning and percent content size. To create a `TextField` widget:
 auto textField = TextField::create("","Arial",30);
 
 textField->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
-				std::cout << "editing a TextField" << std::endl;
+                std::cout << "editing a TextField" << std::endl;
 });
 
 this->addChild(textField);
 {%- endcodetabs %}
 
-In this example a `TextField` is created and a __callback__ specified.
+这个例子中, 创建了一个 `TextField`, 指定了回调函数.
 
-`TextField` objects are versatile and can meet all of your input needs. Would you
-like the user to enter a secret password? Do you need to limit the number of
-characters a user can input? `TextField` objects have this all built-it and much
-more! Let's take a look at an example:
+提供的文本框对象, 是多功能的, 能满足所有的输入需求, 比如用户密码的输入, 限制用户可以输入的字符数等等! 
+
+看一个例子:
 
 {% codetabs name="C++", type="cpp" -%}
 #include "ui/CocosGUI.h"
@@ -39,16 +34,16 @@ textField->setPasswordEnabled(true);
 textField->setMaxLength(10);
 
 textField->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
-				std::cout << "editing a TextField" << std::endl;
+                std::cout << "editing a TextField" << std::endl;
 });
 
 this->addChild(textField);
 {%- endcodetabs %}
 
-On screen a `TextField` might look like this:
+屏幕上一个文本框是这样的:
 
 ![](../../en/ui_components/ui_components-img/TextField_example.png "")
 
-When you are editing a `TextField`, the onscreen keyboard comes up:
+当点击文本框, 键盘就会自动调出来, 此时可以输入文本
 
 ![](../../en/ui_components/ui_components-img/TextField_example_keyboard.png "")
