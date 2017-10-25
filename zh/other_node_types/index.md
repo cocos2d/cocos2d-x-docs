@@ -1,11 +1,5 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 高级节点对象
 
-## Other Node Types
-You are using `Sprite`, `Label` and `Action` objects in your game and it is making
-progress. Besides the basic `Node` types described in previous chapters, Cocos2d-x also
-provides more advanced `Node` types to help build special functionality. Perhaps
-you want to make a __tile-based__ game? Or maybe a __2d side scroller__? Or maybe you
-want to add particle effects to your game? Cocos2d-x provides `Node` objects to
-help you accomplish these goals!
+通过前面一些章节的学习, 你已经可以创建一个简单的游戏了: 一个场景, 在场景里面加标签, 精灵, 动作.
+
+`Label`, `Sprite` 等这些是基本的节点对象. 此外, Cocos2d-x 提供了一些高级节点对象, 来帮助构建一些特殊的功能. 也许你想制作一个基于瓦片地图的游戏, 也许你想添加粒子效果, 也许你需要在游戏中添加一个 2D 滚动的边栏, 别担心, Cocos2d-x 提供了一些高级节点对象帮助你实现这些目标.
