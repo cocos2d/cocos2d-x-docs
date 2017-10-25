@@ -26,14 +26,12 @@
 
 ## Compiling `cpp-tests`
 * import the `cpp-tests` project from __cocos2d-x root/tests/cpp-tests/proj.android-studio__
-in __Android Studio__. __Android Studio__ will do everything required. You can run
-`cpp-tests` by clicking on the __play__ button.
+in __Android Studio__. __Android Studio__ will do everything required. You can run `cpp-tests` by clicking on the __play__ button.
 
     ![](Android-Studio-img/build_cpp_tests.png "")
 
 ## Debugging `cpp-tests`
-
-Since cocos2d-x __v3.15__, you can use __Android Studio 2.3+__ to debug c++ codes:
+Since cocos2d-x __v3.15__, you can use __Android Studio 2.3+__ to debug c++ code:
 
 * set breakpoint by __step 1__
 * run in debug mode by __step 2__
@@ -42,8 +40,7 @@ Since cocos2d-x __v3.15__, you can use __Android Studio 2.3+__ to debug c++ code
     ![](Android-Studio-img/debug_cpp_tests.png "")
 
 ## Build for release mode
-
-You have to do a few steps to build release mode:
+There are a few required steps to build in release mode:
 
 * change __Build Variant__ to __release__
 * set sign information in __gradle.properties__
@@ -65,5 +62,6 @@ You have to do a few steps to build release mode:
   Note: It is important to note that __Android Studio__ uses a location to install __SDK versions__ and __build tools__ that is not the same as if you were doing command-line development. Double check that you have everything you need installed from inside __Android Studio__.
 
 ## Starting a new project
-Once everything above works, you can start a new project! To do this, read our
-document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**.
+Starting a new project requires a few steps:
+* First, use `cocos new ...` to create your project. See the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)** for additional help.
+* Next, launch __Android Studio__.
