@@ -4,7 +4,7 @@
 
 ## TileMap
 __TileMaps__ are maps made up of __tiles__. Each _tile_ can have independent behavior.
-__TileMaps__ are stored in an XML-based map format called `TML`. `TMX` was originally
+__TileMaps__ are stored in an XML-based map format called `TMX`. `TMX` was originally
 designed for tile-based maps but is also suitable for more generic game levels
 due to its support for various object types. `TMX` objects are easy to create:
 
