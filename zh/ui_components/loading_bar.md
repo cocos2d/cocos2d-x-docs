@@ -1,6 +1,6 @@
 # 进度条(LoadingBar)
 
-如果你经常玩游戏, 那肯定见过一个情景: 屏幕上显示了一个进度条, 提示资源正在加载中, 这个条表示资源加载的进度. Cocos2d-x 提供了 `LoadingBar` 对象实现进度条.
+如果你经常玩游戏, 那肯定见过一个情景: 屏幕上显示了一个进度条, 提示资源正在加载中, 这个条表示资源加载的进度. Cocos2d-x 提供了 `LoadingBar` 对象支持进度条.
 
 创建一个进度条:
 
@@ -36,8 +36,8 @@ this->addChild(loadingBar);
 
 上面例子, 使用的进度条图像是:
 
-![](ui_components-img/LoadingBarFile.png "")
+![](../../en/ui_components/ui_components-img/LoadingBarFile.png "")
 
 在屏幕上一个满进度的进度条是这样的:
 
-![](ui_components-img/LoadingBar_example.png "")
+![](../../en/ui_components/ui_components-img/LoadingBar_example.png "")

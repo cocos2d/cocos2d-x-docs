@@ -47,8 +47,8 @@ this->addChild(textField);
 
 On screen a `TextField` might look like this:
 
-![](ui_components-img/TextField_example.png "")
+![](../../en/ui_components/ui_components-img/TextField_example.png "")
 
 When you are editing a `TextField`, the onscreen keyboard comes up:
 
-![](ui_components-img/TextField_example_keyboard.png "")
+![](../../en/ui_components/ui_components-img/TextField_example_keyboard.png "")
