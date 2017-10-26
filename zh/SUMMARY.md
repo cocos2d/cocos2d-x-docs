@@ -64,8 +64,8 @@
     - [优先级](event_dispatcher/priority.md)
     - [触摸事件](event_dispatcher/touch.md)
     - [键盘事件](event_dispatcher/keyboard.md)
-    - [鼠标事件](event_dispatcher/mouse.md)
     - [加速度传感器事件](event_dispatcher/accelerometer.md)
+    - [鼠标事件](event_dispatcher/mouse.md)
     - [创建自定义事件](event_dispatcher/custom.md)
     - [注册并分发事件](event_dispatcher/registering.md)
 
