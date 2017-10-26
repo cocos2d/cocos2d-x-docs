@@ -1,28 +1,13 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 视差滚动
 
-## Parallax
-A `Parallax` Node is a special `Node` type that simulates a __parallax scroller__.
-What did you say? A *para*.. what? Yes, __parallax__ Simply put you can consider
-a `ParallaxNode` to be a __special effect__ that makes it appear that the position
-or direction of an object appears to differ when viewed from different positions.
-Simple every day examples include looking through the viewfinder and the lens of
-a camera. You can think of many games that function this way, Super Mario Bros
-being a classic example. `ParallaxNode` objects can be moved around by a `Sequence`
-and  also manually by mouse, touch, accelerometer or keyboard events.
-
-Parallax nodes are a bit more complex than regular nodes. Why? Because they
-require the use of multiple nodes to function. A `ParallaxNode` cannot function
-by itself. You need at least 2 other `Node` objects to complete a `ParallaxNode`.
-As usual, in true Cocos2d-x fashion, a `ParallaxNode` is easy to create:
+视差滚动是指让多层背景以不同的速度移动，从而形成的立体运动效果. 比如超级马里奥游戏中, 角色所在地面的移动与背景天空的移动, 就是一个视差滚动. Cocos2d-x 通过 __`ParallaxNode`__ 对象模拟视差滚动. 可以通过序列控制移动, 也可以通过监听鼠标, 触摸, 加速度计, 键盘等事件控制移动. `ParallaxNode` 对象比常规节点对象复杂一些, 因为为了呈现不同的移动速度, 需要多个子节点. 它类似 `Menu` 像一个容器, 本身不移动, 移动的是被添加进入其中的不同子节点. `ParallaxNode` 的创建:
 
 {% codetabs name="C++", type="cpp" -%}
 // create ParallaxNode
 auto paraNode = ParallaxNode::create();
 {%- endcodetabs %}
 
-Since you need multiple `Node` objects, they too are easily added:
+添加多个节点对象:
 
 {% codetabs name="C++", type="cpp" -%}
 // create ParallaxNode
@@ -38,10 +23,6 @@ paraNode->addChild(middle_layer, 1, Vec2(2.2f,1.0f), Vec2(0,-200) );
 paraNode->addChild(top layer, 2, Vec2(3.0f,2.5f), Vec2(200,800) );
 {%- endcodetabs %}
 
-OK, looks and feels familiar, right? Notice a few items! Each `Node` object that
-was added is given a unique __z-order__ so that they stack on top of each other.
-Also notice the additional 2 `Vec2` type parameters in the __addChild()__ call. These
-are the __ratio__ and __offset__. These parameters can be thought of as the __ratio__
-of speed to the parent `Node`.
+需要注意的是, 被添加的每个 Node 对象被赋予了一个唯一的 `z-order` 顺序, 以便他们堆叠在彼此之上. 另外要注意 `addChild()` 调用中两个 `Vec2` 参数, 第一个决定这个子节点的移动速度与父节点移动速度的比率, 第二个是相对父节点 `ParallaxNode` 的偏移量.
 
-It's hard to show a `ParallaxNode` in text, so please run the example __Programmer Guide Sample__ code to see this in action!
+在文本中很难展示视差滚动, 请运行本文档的代码示例吧!

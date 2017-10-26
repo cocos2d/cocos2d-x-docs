@@ -1,42 +1,31 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 粒子系统
 
-## Particle System
-Perhaps your game needs effects like burning fire, spell casting visuals or explosions.
-How would you make such complex effects? Is it even possible? Yes, it is. Using
-a __particle system__. The term _particle system_ refers to a computer graphics
-technique that uses a large number of very small sprites or other graphic objects
-to simulate certain kinds of __fuzzy__ phenomena, which are otherwise very hard
-to reproduce with conventional rendering techniques. Some realistic examples
-might include highly chaotic systems, natural phenomena, or processes caused by
-chemical reactions. Here are a few examples of __particle effects__:
+粒子系统是指计算机图形学中模拟特定现象的技术，它在模仿自然现象、物理现象及空间扭曲上具备得天独厚的优势，能为我们实现一些真实自然而又带有随机性的效果（如爆炸、烟花、水流）提供了方便。Cocos2d-x引擎中就为我们提供了强大的粒子系统
 
-![](other_node_types-img/particle1.png "snow") ![](basic_concepts-img/smallSpacer.png "") ![](other_node_types-img/particle3.png "sun")
+下面是使用粒子系统完成的两个粒子特效:
 
-### Tools for creating Particle Effects
-Even though you can always create _particle effects_ by hand, massaging each
-property to your liking. There are several third party tools for creating
-_particle effects_. A few of these tools are:
+![](../../en/other_node_types/other_node_types-img/particle1.png "snow") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/other_node_types/other_node_types-img/particle3.png "sun")
 
-1. [Particle Designer](https://71squared.com/particledesigner): A very powerful particle effects editor on Mac
-2. [V-play particle editor](http://v-play.net/2014/02/v-play-particle-editor-for-cocos2d-and-v-play/): A cross-platform particle editor for Cocos2d-x
-3. [Particle2dx](http://www.effecthub.com/particle2dx): An online web particle designer
+## 创建粒子特效的工具
 
-These tools usually export a `.plist` file that you can read in with Cocos2d-x to
-use your creation inside your game. Just like with all of the other classes we
-have worked with so far we use the `create()` method:
+尽管你能手动创建粒子特效, 按照喜好确定每个属性, 但是使用工具往往更方便高效. 下面介绍几个第三方工具:
+
+1. [Particle Designer](https://71squared.com/particledesigner):  Mac 上一款非常强大的粒子特效编辑器
+2. [V-play particle editor](http://v-play.net/2014/02/v-play-particle-editor-for-cocos2d-and-v-play/): 一款跨平台的粒子特效编辑器
+3. [Particle2dx](http://www.effecthub.com/particle2dx): 一款 Web 粒子特效编辑器, 打开网页即可进行设计
+
+使用这些工具完成粒子特效的设计, 最终会导出一个 _.plist_ 文件,  Cocos2d-x 通过使用这种文件, 就能把粒子特效添加到场景中, 添加方法和操作一个普通的节点类型一样
+
+创建方法:
 
 {% codetabs name="C++", type="cpp" -%}
 // create by plist file
 auto particleSystem = ParticleSystem::create("SpinningPeas.plist");
 {%- endcodetabs %}
 
-### Built-In Particle Effects
-Are you ready to add _particle effects_ to your game? We hope so! Are you not yet
-comfortable with creating custom _particle effects_? For ease of convenience there
-are a number of built-in _particle effects_ that you can choose from. Take a look
-at this list:
+## 内置粒子特效
+
+准备好添加粒子特效到你的游戏中了吗? 是否习惯创建自定义粒子特效? 不习惯也没关系, 我们内置了一些粒子特效, 你可以直接使用. 这个列表都是:
 
   >-ParticleFire: Point particle system. Uses Gravity mode.
 
@@ -60,7 +49,7 @@ at this list:
 
   >-ParticleRain: Point particle system. Uses Gravity mode.
 
-Using `ParticleFireworks` as an example, you can use the built-in effects easily:
+比如使用内置的烟火特效 `ParticleFireworks`:
 
 {% codetabs name="C++", type="cpp" -%}
 auto emitter = ParticleFireworks::create();
@@ -68,13 +57,11 @@ auto emitter = ParticleFireworks::create();
 addChild(emitter, 10);
 {%- endcodetabs %}
 
-The result is a _particle effect_ that looks something like:
+是这样的效果:
 
-![](other_node_types-img/particle2.png "particle fireworks")
+![](../../en/other_node_types/other_node_types-img/particle2.png "particle fireworks")
 
-But what do you do if your __particle effect__ isn't quite the way you want?
-That's right, you can manually manipulate it! Let's take the same fireworks example
-above and manipulate it even further by manually changing its properties:
+要是内置的粒子特效不是你想要的那样, 也没关系, 你可以直接手动设置参数! 让我们拿上面的烟火特效示例, 并通过手动改变属性进一步控制.
 
 {% codetabs name="C++", type="cpp" -%}
 auto emitter = ParticleFireworks::create();
