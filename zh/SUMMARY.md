@@ -58,7 +58,7 @@
 
 ## 引擎功能
 
-- [事件分发](event_dispatcher/index.md)
+- [事件响应](event_dispatcher/index.md)
     - [简介](event_dispatcher/index.md)
     - [监听器](event_dispatcher/types.md)
     - [优先级](event_dispatcher/priority.md)
@@ -66,8 +66,8 @@
     - [键盘事件](event_dispatcher/keyboard.md)
     - [加速度传感器事件](event_dispatcher/accelerometer.md)
     - [鼠标事件](event_dispatcher/mouse.md)
-    - [创建自定义事件](event_dispatcher/custom.md)
-    - [注册并分发事件](event_dispatcher/registering.md)
+    - [自定义事件](event_dispatcher/custom.md)
+    - [使用分发器注册事件](event_dispatcher/registering.md)
 
 - [3D支持](index.md)
     - [术语]()

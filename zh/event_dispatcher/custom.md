@@ -1,12 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 自定义事件
 
-## Custom Events
-The event types above are defined by the system, and the events (such as touch
-screen, keyboard response etc) are triggered by the system automatically. In
-addition, you can make your own custom events which are not triggered by the system,
-but by your code, as follows:
+上述提到的事件都是系统内置的, 如触摸事件, 键盘事件等. 此外, 你可以制作自定义事件, 这些事件不是由系统控制触发的, 而是通过代码手动触发.
+
+创建自定义事件监听器:
 
 {% codetabs name="C++", type="cpp" -%}
 _listener = EventListenerCustom::create("game_custom_event1", [=](EventCustom* event){
@@ -20,8 +16,7 @@ _listener = EventListenerCustom::create("game_custom_event1", [=](EventCustom* e
 _eventDispatcher->addEventListenerWithFixedPriority(_listener, 1);
 {%- endcodetabs %}
 
-A custom event listener has been defined above, with a response method, and added
-to the event dispatcher. So how is the event handler triggered? Check it out:
+上面制作了一个自定义事件监听器, 并预设了响应方法. 下面创建自定义事件, 并手动分发:
 
 {% codetabs name="C++", type="cpp" -%}
 static int count = 0;
@@ -36,7 +31,6 @@ event.setUserData(buf);
 _eventDispatcher->dispatchEvent(&event);
 {%- endcodetabs %}
 
-The above example creates an EventCustom object and sets its UserData. It is then
-dispatched manually with `_eventDispatcher->dispatchEvent(&event)`. This triggers
-the event handler defined previously. The handler is called immediately so a local
-stack variable can be used as the UserData.
+示例创建了一个自定义事件( _EventCustom_ )对象, 并设置了 `UserData`, 然后调用 `_eventDispatcher->dispatchEvent(&event)` 进行手动事件分发. 当预先定义的事件监听器, 收到此事件, 将会触发对应的响应函数. 响应函数中可以获取到事件分发时设置的 `UserData` 完成自定义的逻辑处理.
+
+_注意: `EventCustom` 与 `EventListenerCustom` 的第一个参数事件名都是字符串 `game_custom_event1`_
