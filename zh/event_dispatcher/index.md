@@ -1,14 +1,9 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 事件分发简介
 
-## Event Dispatcher
+事件分发是一种响应用户事件的机制
 
-### What is the EventDispatch mechanism?
-__EventDispatch__ is a mechanism for responding to user events.
+## 基本元素
 
-The basics:
-
-* Event listeners encapsulate your event processing code.
-* Event dispatcher notifies listeners of user events.
-* Event objects contain information about the event.
+* 事件监听器, 负责接收事件, 并执行已定义的事件处理函数
+* 事件分发器, 负责发起通知
+* 事件对象, 记录事件的相关信息
