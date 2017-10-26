@@ -62,7 +62,7 @@
     - [事件简介](event_dispatcher/index.md)
     - [监听器](event_dispatcher/types.md)
     - [优先级](event_dispatcher/priority.md)
-    - [触碰事件](event_dispatcher/touch.md)
+    - [触摸事件](event_dispatcher/touch.md)
     - [键盘事件](event_dispatcher/keyboard.md)
     - [鼠标事件](event_dispatcher/mouse.md)
     - [加速度传感器事件](event_dispatcher/accelerometer.md)
