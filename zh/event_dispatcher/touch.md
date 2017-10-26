@@ -35,6 +35,6 @@ _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, this);
 
 三种事件及其触发时机:
 
-* __`onTouchBegan`__  开始触摸屏幕时
-* __`onTouchMoved`__  触摸屏幕, 同时在屏幕上移动时
-* __`onTouchEnded`__  结束触摸屏幕时
+* __`onTouchBegan`__    开始触摸屏幕时
+* __`onTouchMoved`__    触摸屏幕, 同时在屏幕上移动时
+* __`onTouchEnded`__    结束触摸屏幕时

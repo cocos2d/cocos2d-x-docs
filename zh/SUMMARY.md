@@ -59,7 +59,7 @@
 ## 引擎功能
 
 - [事件分发](event_dispatcher/index.md)
-    - [事件简介](event_dispatcher/index.md)
+    - [简介](event_dispatcher/index.md)
     - [监听器](event_dispatcher/types.md)
     - [优先级](event_dispatcher/priority.md)
     - [触摸事件](event_dispatcher/touch.md)
