@@ -1,16 +1,10 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 触摸事件
 
-## Touch Events
-__Touch events__ are the most important event in mobile gaming. They are easy to
-create and provide versatile functionality. Let's make sure we know what a touch
-event is. When you touch the screen of your mobile device, it accepts the touch,
-looks at where you touched and decides what you touched. Your touch is then answered.
-It is possible that what you touched might not be the responding object but perhaps
-something underneath it. Touch events are usually assigned a priority and the
-event with the highest priority is the one that answers. Here is how you create
-a basic touch event listener:
+触摸事件是手机游戏中最重要的事件, 它易于创建, 还能提供多种多样的功能. 让我们先了解一下什么是触摸事件, 当你触摸移动设备的屏幕时, 设备感受到被触摸, 了解到被触摸的位置, 同时决定触及的内容, 然后你的触摸被回答. 这就是触摸事件.
+
+如果你希望触摸屏幕下层的对象, 那可以通过 [优先级](priority.md), 达成这种需求, 优先级高的对象能先处理事件.
+
+创建触摸事件监听器:
 
 {% codetabs name="C++", type="cpp" -%}
 //  Create a "one by one" touch event listener
@@ -37,12 +31,10 @@ listener1->onTouchEnded = [=](Touch* touch, Event* event){
 _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, this);
 {%- endcodetabs %}
 
-As you can see there are 3 distinct events that you can act upon when using a
-touch event listener. They each have a distinct time in which they are called.
+可以看到, 在使用触摸事件监听器时, 可以监听三种不同的事件, 每一个事件都有自己触发的时机.
 
-__onTouchBegan__ is triggered when you press down.
+三种事件及其触发时机:
 
-__onTouchMoved__ is triggered if you move the object around while still pressing
-down.
-
-__onTouchEnded__ is triggered when you let up on the touch.
+* __`onTouchBegan`__  开始触摸屏幕时
+* __`onTouchMoved`__  触摸屏幕, 同时在屏幕上移动时
+* __`onTouchEnded`__  结束触摸屏幕时
