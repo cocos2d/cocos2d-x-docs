@@ -7,14 +7,14 @@
 ## Prerequisites
 * A supported environment. See **[Installation Prerequisites](A/index.html)**
 
-* Android Studio 2.3+ [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
+* Android Studio 2.3.3 or Studio 3.0 [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
 
 ## Setup
 * unzip the __Android Studio Bundle__
 
 * launch __Android Studio__. This may take quite some time as additional downloads and setup steps are completed. These steps are necessary for Studio to run properly.
 
-* After the previous step is complete, it is necessary install the SDK and build tools. __SDK Manager__ is located in the __Tools__ menu, __Android__, then select __SDK Manager__. The Window looks like this:
+* after the previous step is complete, it is necessary install the SDK and build tools. __SDK Manager__ is located in the __Tools__ menu, __Android__, then select __SDK Manager__. The Window looks like this:
 
     ![](Android-Studio-img/sdkmanager.png "")
 
@@ -63,5 +63,5 @@ There are a few required steps to build in release mode:
 
 ## Starting a new project
 Starting a new project requires a few steps:
-* First, use `cocos new ...` to create your project. See the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)** for additional help.
-* Next, launch __Android Studio__.
+* first, use `cocos new ...` to create your project. See the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)** for additional help.
+* next, launch __Android Studio__.
