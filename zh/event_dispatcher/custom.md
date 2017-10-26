@@ -31,6 +31,6 @@ event.setUserData(buf);
 _eventDispatcher->dispatchEvent(&event);
 {%- endcodetabs %}
 
-示例创建了一个自定义事件( _EventCustom_ )对象, 并设置了 `UserData`, 然后调用 `_eventDispatcher->dispatchEvent(&event)` 进行手动事件分发. 当预先定义的事件监听器, 收到此事件, 将会触发对应的响应函数. 响应函数中可以获取到事件分发时设置的 `UserData` 完成自定义的逻辑处理.
+示例创建了一个自定义事件( _EventCustom_ )对象, 并设置了 `UserData`, 然后调用 `_eventDispatcher->dispatchEvent(&event)` 进行手动事件分发. 当预先定义的事件监听器, 收到此事件, 将会触发对应的响应函数. 响应函数中可以获取到事件分发时设置的 `UserData` 完成数据处理.
 
 _注意: `EventCustom` 与 `EventListenerCustom` 的第一个参数事件名都是字符串 `game_custom_event1`_
