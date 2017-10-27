@@ -1,28 +1,13 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 优先级
 
-## FixedPriority vs SceneGraphPriority
-The __EventDispatcher__ uses priorities to decide which listeners get delivered an
-event first.
+事件的吞没中, 我们提到了事件的传递. 事件如何传递, 先到哪个监听器? 这是由优先级决定的
 
-__Fixed Priority__ is an integer value. Event listeners with lower Priority values
-get to process events before event listeners with higher Priority values.
+__固定值优先级__ 使用一个整形的数值, 数值较低的监听器比数值较高的监听器, 先接收到事件.
 
-__Scene Graph Priority__ is a pointer to a `Node`. Event listeners whose _Nodes_ have
-higher __z-order__ values (that is, are drawn on top) receive events before event
-listeners whose _Nodes_ have lower __z-order__ values (that is, are drawn below).
-This ensures that touch events, for example, get delivered front-to-back, as you
-would expect.
+__场景图优先级__ 是指向节点对象的指针, `z-order` 较高的节点中的监听器比 `z-order` 较低的节点中的, 先接收到事件. _由于 `z-order` 较高的节点在顶部绘制, 所以使用这种优先级可以确保触摸事件被正确响应_
 
-Remember the __Basic COncepts__ chapter? Where we talked about the __scene graph__
-and we talked about this diagram?
+还记得这个场景图吗? 图像绘制时, 是按照 `A, B, C, D, E, F, G, H, I` 的顺序
 
-![](basic_concepts-img/in-order-walk.png "in-order walk")
+![](../../en/basic_concepts/basic_concepts-img/in-order-walk.png "in-order walk")
 
-Well, when use __Scene Graph Priority__ you are actually walking this above tree
-backwards... __I__, __H__, __G__, __F__, __E__, __D__, __C__, __B__, __A__. If
-an event is triggered, __H__ would take a look and either __swallow__ it (more
-  on this below) or let is pass through to _I__. Same thing, __I__ will either
-  __consume__ it or let is pass through to __G__ and so on until the event either
-  __swallowed__ it or does not get answered.
+当使用 _场景图优先级_ 时, 事件是按照绘制的反方向, 即 `I, H, G, F, E, D, C, B, A` 传递. 如果一个事件被触发, `I` 节点先接收到, 如果在 `I` 节点中事件被吞没, 则不会继续传递, 未被吞没, 事件将传递到 `H` 节点, 每个节点都重复同样的逻辑, 直到事件被吞没, 或者传递结束, 本次事件触发才完成.

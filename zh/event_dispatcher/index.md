@@ -1,14 +1,11 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 事件分发机制
 
-## Event Dispatcher
+Cocos2d-x 通过事件分发机制响应用户事件, 已内置支持常见的事件如触摸事件, 键盘事件等.
 
-### What is the EventDispatch mechanism?
-__EventDispatch__ is a mechanism for responding to user events.
+同时提供了自定义事件构建的方法, 满足我们在游戏的开发过程中, 特殊的事件响应需求.
 
-The basics:
+## 基本元素
 
-* Event listeners encapsulate your event processing code.
-* Event dispatcher notifies listeners of user events.
-* Event objects contain information about the event.
+* 事件监听器, 负责接收事件, 并执行预定义的事件处理函数
+* 事件分发器, 负责发起通知
+* 事件对象, 记录事件的相关信息

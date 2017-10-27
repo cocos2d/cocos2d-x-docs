@@ -1,9 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 鼠标事件
 
-## Mouse events
-As it always has, Cocos2d-x supports mouse events.
+就像前几节介绍的那样, Cocos2d-x 支持响应鼠标事件
+
+创建鼠标事件监听器:
 
 {% codetabs name="C++", type="cpp" -%}
 _mouseListener = EventListenerMouse::create();

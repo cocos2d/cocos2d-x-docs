@@ -1,17 +1,16 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 加速度传感器事件 events
 
-## Accelerometer events
-Some mobile devices come equipped with an accelerometer. An accelerometer is a
-sensor that measures g-force as well as changes in direction. A use case would
-be needing to move your phone back and forth, perhaps to simulate a balancing act.
-Cocos2d-x also supports these events and creating them is simple.
-Before using accelerometer events, you need to enable them on the device:
+现在一些移动设备配备有加速度传感器, 我们可以通过监听它的事件获取各方向的加速度.
+
+可以设想要完成一个游戏情景: 通过来回移动手机, 平衡小球在手机中的位置. 这种场景的完成, 就需要监听加速度传感器事件.
+
+使用加速度传感器, 需要先启用
 
 {% codetabs name="C++", type="cpp" -%}
 Device::setAccelerometerEnabled(true);
 {%- endcodetabs %}
+
+创建加速度传感器监听器:
 
 {% codetabs name="C++", type="cpp" -%}
 // creating an accelerometer event

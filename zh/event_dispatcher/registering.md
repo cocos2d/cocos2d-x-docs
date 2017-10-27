@@ -1,10 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+## 注册事件监听
 
-## Registering events with the dispatcher
-It is easy to register an event with the __Event Dispatcher__. Taking the sample
-touch event listener from above:
+当我们需求多个节点对象有相同的事件响应时, 可以创建一个事件监听器, 然后通过 __`_eventDispatcher`__, 将其注册到多个对象.
+
+以我们之前提到的触摸事件监听器为例
 
 {% codetabs name="C++", type="cpp" -%}
 // Add listener
@@ -12,9 +10,7 @@ _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1,
 sprite1);
 {%- endcodetabs %}
 
-It is important to note that a touch event can only be registered once per object.
-If you need to use the same listener for multiple objects you should
-use __clone()__.
+需要注意的是, 在添加到多个对象时, 需要使用 __`clone()`__ 方法.
 
 {% codetabs name="C++", type="cpp" -%}
 // Add listener
@@ -29,14 +25,12 @@ _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1->clone(),
  sprite3);
 {%- endcodetabs %}
 
-## Removing events from the dispatcher
-An added listener can be removed with following method:
+## 移除事件监听
+
+按照下面的方法, 可以将已经添加的事件监听器移除
 
 {% codetabs name="C++", type="cpp" -%}
 _eventDispatcher->removeEventListener(listener);
 {%- endcodetabs %}
 
-Although they may seem special, built-in `Node` objects use the __event dispatcher__
-in the same way we have talked out. Makes sense, right? Take `Menu` for an example.
-When you have a `Menu` with `MenuItems` when you click them you are dispatching a
-event. You can also __removeEventListener()__ on built-in `Node` objects.
+_内置节点对象的事件分发机制, 和我们上面讨论的一致, 比如, 当你点击带有菜单项的菜单时, 也会分发一个事件. 同样的你也可以在内置节点对象上使用 `removeEventListener()` 移除事件监听._
