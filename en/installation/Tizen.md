@@ -4,6 +4,8 @@
 
 # Tizen Installation and Setup
 
+### Deprecated Document. Cocos2d-x V3.15 or less is the last supported version.
+
 ## Environment Requirements
 * Windows, OS X or Ubuntu (a relatively recent version should suffice)
 * Cocos2d-x v3.11 [http://cocos2d-x.org/download](http://cocos2d-x.org/download)

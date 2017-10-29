@@ -4,6 +4,8 @@
 
 # Android with Command-line Installation and Setup
 
+### Deprecated Document. Cocos2d-x V3.15 or less is the last supported version.
+
 ## Environment Requirements
 A supported environment. See **[Installation Prerequisites](A/index.html)**
 
