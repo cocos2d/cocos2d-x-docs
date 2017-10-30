@@ -77,7 +77,7 @@
     - [立方体纹理(TextureCube)](3d/cubemap.md)
     - [天空盒(Skybox)](3d/skybox.md)
     - [光照(Lighting)](3d/lighting.md)
-    - [地表(Terrain)](3d/terrain.md)
+    - [地形(Terrain)](3d/terrain.md)
     - [3D软件工具包](3d/tools.md)
     - [进一步讨论](3d/advanced.md)
 
