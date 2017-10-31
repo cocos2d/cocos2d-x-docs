@@ -48,7 +48,7 @@ moveTo2));
 
 {%- endcodetabs %}
 
-这个例子执行了一个动作的 `Sequence` 序列, 那要是想让所有的特定动作同时执行呢? Cocos2d-x 也支持! 通过引擎中的 `Spawn` 对象, 你能让多个动过同时被解析执行. 可能不同动作的执行时间不一致, 在这种情况下, 他们不会同时结束.
+这个例子执行了一个动作的 `Sequence` 序列, 那要是想让所有的特定动作同时执行呢? Cocos2d-x 也支持! 通过引擎中的 `Spawn` 对象, 你能让多个动过同时被解析执行. 可能不同动作的执行时间不一致, 在这种情况下, 他们不会同时结束.
 
 {% codetabs name="C++", type="cpp" -%}
 auto myNode = Node::create();
@@ -69,4 +69,4 @@ var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
 myNode.runAction(Spawn.create(moveTo1, moveBy1, moveTo2));
 {%- endcodetabs %}
 
-为什么要有同时执行多个动作的需求呢? 当然是有原因的啦! 比如你的游戏角色被电了, 或者在关卡结束打 boss 的时候, 想一想类似的场景.
+为什么要有同时执行多个动作的需求呢? 当然是有原因的啦! 比如你的游戏角色被电了, 或者在关卡结束打 boss 的时候, 想一想类似的场景.
