@@ -32,11 +32,11 @@ sprite->runAction(RepeatForever::create(rotation));
 sprite->setAnchorPoint(Point(0.0f,0.0f));
 {%- endcodetabs %}
 
-## 模型附加
+## 模型附加
 
 回想一下, 3D 模型是网格的集合, 网格可以再组合, 所以为了创建丰富的效果, 你可以将 3D 模型附加到其它 3D 模型.
 
-一个例子是向一个角色添加一把武器. 首先使用 `getAttachNode(attachment_point_name)` 获取到附加点, 然后使用 `addChild()` 方法把武器模型添加上去.
+一个例子是向一个角色添加一把武器. 首先使用 `getAttachNode(attachment_point_name)` 获取到附加点, 然后使用 `addChild()` 方法把武器模型添加上去.
 
 效果如下:
 
@@ -47,7 +47,7 @@ sprite->getAttachNode("Bip001 R Hand")->addChild(sp);
 
 ![](../../en/3d/3d-img/9_3.png)
 
-以此为例, 结合多个简单的模型, 你就能创建复杂的模型.
+以此为例, 结合多个简单的模型, 你就能创建复杂的模型.
 
 ## 网格替换
 
