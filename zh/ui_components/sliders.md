@@ -1,6 +1,6 @@
 # 滑动条(Slider)
 
-有时候你想平滑的改变一个值, 比如游戏设置中, 调整背景音乐的音量, 或着你有一个角色, 允许用户设置攻击敌人的力量. 这种场景最适合使用滑动条, Cocos2d-x 提供 __`Slider`__ 对象支持滑动条.
+有时候你想平滑的改变一个值, 比如游戏设置中, 调整背景音乐的音量, 或着你有一个角色, 允许用户设置攻击敌人的力量. 这种场景最适合使用滑动条, Cocos2d-x 提供 __`Slider`__ 对象支持滑动条.
 
 创建滑动条:
 
@@ -34,6 +34,6 @@ this->addChild(slider);
 ![](../../en/ui_components/ui_components-img/SliderNode_Normal.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "") ![](../../en/ui_components/ui_components-img/SliderNode_Press.png "") ![](../../en/basic_concepts/basic_concepts-img/smallSpacer.png "")
 ![](../../en/ui_components/ui_components-img/SliderNode_Disable.png "")
 
-在屏幕上一个滑动条看起来是这样的:
+在屏幕上一个滑动条看起来是这样的:
 
 ![](../../en/ui_components/ui_components-img/Slider_example.png "")
