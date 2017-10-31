@@ -40,7 +40,7 @@ auto menu = Menu::createWithArray(MenuItems);
 this->addChild(menu, 1);
 {%- endcodetabs %}
 
-运行本文档的代码示例, 你就能看到在 _Chapter 6_ 有一个 __Label__ 菜单项组成的菜单.
+运行本文档的代码示例, 你就能看到在 _Chapter 6_ 有一个 __Label__ 菜单项组成的菜单.
 
 ![](../../en/ui_components/ui_components-img/menu.png "")
 
