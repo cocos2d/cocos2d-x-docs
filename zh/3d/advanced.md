@@ -2,25 +2,25 @@
 
 ## 广告牌(BillBoard)
 
-广告牌(BillBoard)是一种特殊的精灵对象, 它总是面对摄像机, 摄像机旋转, 广告牌对象也会跟着旋转. 广告牌在 3D 游戏中是非常常见的, 比如 3D 角色头顶的文字, 血条, 比如滑雪比赛场景里的树木, 岩石.
+广告牌(BillBoard)是一种特殊的精灵对象, 它总是面对摄像机, 摄像机旋转, 广告牌对象也会跟着旋转. 广告牌在 3D 游戏中是非常常见的, 比如 3D 角色头顶的文字, 血条, 比如滑雪比赛场景里的树木, 岩石.
 
 这就是摄像机(Camera)与广告牌(BillBoard)关联的方式:
 
 ![](../../en/3d/3d-img/BillBoard.png)
 
-`Sprite` 是 `Billboard` 的父类, 因此广告牌的大部分功能都与精灵一样. 使用下面的方式可以创建一个广告牌:
+`Sprite` 是 `Billboard` 的父类, 因此广告牌的大部分功能都与精灵一样. 使用下面的方式可以创建一个广告牌:
 
 {% codetabs name="C++", type="cpp" -%}
 auto billboard = BillBoard::create("Blue_Front1.png", BillBoard::Mode::VIEW_POINT_ORIENTED);
 {%- endcodetabs %}
 
-你可以更改广告牌的模式为, 广告牌面向摄像机 XOY 平面, 这样创建
+你可以更改广告牌的模式为, 广告牌面向摄像机 XOY 平面, 这样创建
 
 {% codetabs name="C++", type="cpp" -%}
 auto billboard = BillBoard::create("Blue_Front1.png", BillBoard::Mode::VIEW_PLANE_ORIENTED);
 {%- endcodetabs %}
 
-这两个创建方法看起来有点不一样, 因为传入的第二个参数不同, 第二个参数确定了广告牌的模式, 有两种选择:
+这两个创建方法看起来有点不一样, 因为传入的第二个参数不同, 第二个参数确定了广告牌的模式, 有两种选择:
 
 __VIEW_POINT_ORIENTED__ 广告牌面向摄像机所在的点, 示例:
 
@@ -44,7 +44,7 @@ addChild(billboard);
 
 在 [第七章](../other_node_types/index.md) 中, 我们已经学习了如何使用 2D 粒子, 当你进行 3D 游戏制作的时候, 为了丰富游戏的效果, 你可能还需要 3D 粒子. 3D 粒子系统与 2D 粒子系统的许多概念是一样的.
 
-Cocos2d-x 目前支持制作工具 __[Particle Universe](http://www.fxpression.com)__ 构建的粒子, Particle Universe 是一个特殊的粒子编辑器, 可以让你快速, 轻松的构建出各种粒子效果, 如爆炸, 火焰, 血液. Particle Universe 粒子编辑器生成的粒子文件格式是 _.pu_, Cocos2d-x 直接支持这种格式. 由 `PUParticleSystem3D` 类负责处理. `PUParticleSystem3D` 提供了两种创建粒子的方法.
+Cocos2d-x 目前支持制作工具 __[Particle Universe](http://www.fxpression.com)__ 构建的粒子, Particle Universe 是一个特殊的粒子编辑器, 可以让你快速, 轻松的构建出各种粒子效果, 如爆炸, 火焰, 血液. Particle Universe 粒子编辑器生成的粒子文件格式是 _.pu_, Cocos2d-x 直接支持这种格式. 由 `PUParticleSystem3D` 类负责处理. `PUParticleSystem3D` 提供了两种创建粒子的方法.
 
 第一种方式传入两个参数: Particle Universe 粒子文件和相应的材质文件. 材质文件描述的是粒子的内容, 对于一个粒子特效是必须的 示例:
 
@@ -54,7 +54,7 @@ ps->startParticleSystem();
 this->addChild(ps);
 {%- endcodetabs %}
 
-第二个方法传入一个参数, Particle Universe 粒子文件. 使用这种方法创建粒子, 与粒子文件相同的文件夹中所有的材质文件都将被自动加载. 示例:
+第二个方法传入一个参数, Particle Universe 粒子文件. 使用这种方法创建粒子, 与粒子文件相同的文件夹中所有的材质文件都将被自动加载. 示例:
 
 {% codetabs name="C++", type="cpp" -%}
 auto ps = PUParticleSystem3D::create("electricBeamSystem.pu");
@@ -63,13 +63,13 @@ ps->startParticleSystem();
 this->addChild(ps);
 {%- endcodetabs %}
 
-注意: 使用第二种方法, 可能会导致加载时间增加, 消耗内存增加. 如果你知道需要使用的材质, 请选第一种方法.
+注意: 使用第二种方法, 可能会导致加载时间增加, 消耗内存增加. 如果你知道需要使用的材质, 请选第一种方法.
 
 下图左边是 Particle Universe 中的粒子, 右边是该粒子使用 Cocos2d-x 运行的效果
 
 ![](../../en/3d/3d-img/particle1.png) ![](../../en/3d/3d-img/particle2.png)
 
-在游戏中加载好了粒子效果, 接下来就可以尝试进行一些控制操作, 如开始, 停止, 暂停, 恢复和获取粒子总数. 
+在游戏中加载好了粒子效果, 接下来就可以尝试进行一些控制操作, 如开始, 停止, 暂停, 恢复和获取粒子总数.
 
 代码:
 
