@@ -16,9 +16,9 @@ textField->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 this->addChild(textField);
 {%- endcodetabs %}
 
-这个例子中, 创建了一个 `TextField`, 指定了回调函数.
+这个例子中, 创建了一个 `TextField`, 指定了回调函数.
 
-提供的文本框对象, 是多功能的, 能满足所有的输入需求, 比如用户密码的输入, 限制用户可以输入的字符数等等! 
+提供的文本框对象, 是多功能的, 能满足所有的输入需求, 比如用户密码的输入, 限制用户可以输入的字符数等等! 
 
 看一个例子:
 
