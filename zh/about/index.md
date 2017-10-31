@@ -6,7 +6,7 @@
 
 ## 下载 Cocos2d-x
 
-- 您可以从[官网页面](http://www.cocos.com/download)下载一个正式发布版本，也可以直接 clone 这个[GitHub 仓库](https://github.com/cocos2d/cocos2d-x)。无论您用 C++、JavaScript 还是 Lua 哪种语言进行游戏开发，只需要下载这一个。
+- 您可以从[官网页面](http://www.cocos.com/download)下载一个正式发布版本，也可以直接 clone 这个[GitHub 仓库](https://github.com/cocos2d/cocos2d-x)。无论您用 C++、JavaScript 还是 Lua 哪种语言进行游戏开发，只需要下载这一个。
 
 ## Cocos 相关产品
 
