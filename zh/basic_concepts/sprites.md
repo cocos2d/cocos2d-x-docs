@@ -34,7 +34,7 @@ mySprite.setScale(2.0); // sets both the scale of the X and Y axis uniformly
 mySprite.setAnchorPoint(cc._p(0, 0));
 {%- endcodetabs %}
 
-让我们举例说明每个属性的含义, 思考下面不同截图中精灵的区别
+让我们举例说明每个属性的含义, 思考下面不同截图中精灵的区别
 
 ![](../../en/basic_concepts/basic_concepts-img/2n_level1_action_start.png "")
 
