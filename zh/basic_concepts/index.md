@@ -13,11 +13,11 @@ Cocos2d-x 提供了 场景(Scene)，转换(Transition)，精灵(Sprite)，菜单
 ## 组件简介
 
 看起来关于游戏引擎的东西很多, 其实上手 Cocos2d-x 很简单. 在深入讨论之前, 让我们先了解一些 Cocos2d-x 使用的概念. Cocos2d-x 的核心是 Scene(场景), Node(节点), Sprite(精灵), Menu(菜单), Action(动作).
-下面是一个简单的游戏界面:
+下面是一个简单的游戏界面:
 
 ![](../../en/basic_concepts/basic_concepts-img/2n_main.png "")
 
-让我们再来看一下, 分解这个游戏界面的组件构成
+让我们再来看一下, 分解这个游戏界面的组件构成
 
 ![](../../en/basic_concepts/basic_concepts-img/2n_annotated_scaled.png "")
 
