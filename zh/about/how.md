@@ -2,7 +2,7 @@
 
 ## 上报 BUG
 
-在 Cocos2d-x 的使用过程中, 遇到 BUG 可以通过下面的方式在 GitHub 上向我们报告.
+在 Cocos2d-x 的使用过程中, 遇到 BUG 可以通过下面的方式在 GitHub 上向我们报告.
 
 1. 新建 Cocos2d-x 的 Issues, [传送门](https://github.com/cocos2d/cocos2d-x/issues/new)
 
@@ -16,7 +16,7 @@
 
 ## 贡献代码
 
-Cocos2d-x 在 GitHub 开源, 你可以通过下面的方式贡献自己的代码, 成为 Cocos2d-x 的贡献者.
+Cocos2d-x 在 GitHub 开源, 你可以通过下面的方式贡献自己的代码, 成为 Cocos2d-x 的贡献者.
 
 - 学会使用 Git 和 GitHub
 - 从 GitHub 下载最新的开发分支到本地
