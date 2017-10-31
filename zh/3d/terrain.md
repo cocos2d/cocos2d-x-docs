@@ -16,9 +16,9 @@ Alpha贴图用于控制细节图是在地形上何处以及如何绘制的。Alp
 
 ## 细节级别策略
 
-`Terrain` 使用细节级别(Level Of Detail)策略, 它根据摄像机离对象的远近, 切换不同细节级别, 达到一种近处的对象细节丰富, 远处的对象细节简单, 这样减少了整体需要渲染的三角形数量, 提高了性能.
+`Terrain` 使用细节级别(Level Of Detail)策略, 它根据摄像机离对象的远近, 切换不同细节级别, 达到一种近处的对象细节丰富, 远处的对象细节简单, 这样减少了整体需要渲染的三角形数量, 提高了性能.
 
-可以使用 `Terrain::setLODDistance(float lod1, float lod2, float lod3` 方法设置摄像机的距离. 具有不同细节级别的地形相邻块可能存在裂缝, `Terrain` 提供了两种方式(裙边法, 补边法)避免这种情况的出现:
+可以使用 `Terrain::setLODDistance(float lod1, float lod2, float lod3` 方法设置摄像机的距离. 具有不同细节级别的地形相邻块可能存在裂缝, `Terrain` 提供了两种方式(裙边法, 补边法)避免这种情况的出现:
 
 {% codetabs name="C++", type="cpp" -%}
 Terrain::CrackFixedType::SKIRT
@@ -42,7 +42,7 @@ player->setPositionY(terrain->getHeight(player->getPositionX(),player->getPositi
 
 ![](../../en/3d/3d-img/9_10.png)
 
-* 通过 `Terrain::DetailMap` 对象创建细节图:
+* 通过 `Terrain::DetailMap` 对象创建细节图:
 
 {% codetabs name="C++", type="cpp" -%}
 Terrain::DetailMap r("dirt.dds");
@@ -57,17 +57,17 @@ Terrain::DetailMap a("greenSkin.jpg");
 Terrain::TerrainData data("chapter9/heightmap16.jpg","TerrainTest/alphamap.png", r, g, b, a);
 {%- endcodetabs %}
 
-* 调用 `Terrain::create` 创建出地形, 第一个参数是之前构造好的 `TerrainData` 对象, 第二个参数是细节级别策略
+* 调用 `Terrain::create` 创建出地形, 第一个参数是之前构造好的 `TerrainData` 对象, 第二个参数是细节级别策略
 
 {% codetabs name="C++", type="cpp" -%}
 _terrain = Terrain::create(data, Terrain::CrackFixedType::SKIRT);
 {%- endcodetabs %}
 
-* 请注意, 在地形对象被添加到节点或场景中(进行了 `addChild()` 操作)后, 就不能再对地形对象使用转换, 比如缩放大小. 否则, `Terrain` 的方法可能会造成难以预料的结果.
+* 请注意, 在地形对象被添加到节点或场景中(进行了 `addChild()` 操作)后, 就不能再对地形对象使用转换, 比如缩放大小. 否则, `Terrain` 的方法可能会造成难以预料的结果.
 
 ### 获取地形高度
 
-使用方法 `Terrain::getHeight(float x, float z, Vec3 * normal= nullptr)` 可以获取到地形的高度, 当你想把一个节点对象放到地形表面的时候, 这个方法会非常有用.
+使用方法 `Terrain::getHeight(float x, float z, Vec3 * normal= nullptr)` 可以获取到地形的高度, 当你想把一个节点对象放到地形表面的时候, 这个方法会非常有用.
 
 ### Ray-Terrain intersection test
 
