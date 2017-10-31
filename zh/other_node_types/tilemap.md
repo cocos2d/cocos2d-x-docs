@@ -38,4 +38,4 @@ unsigned int gid = layer->getTileGIDAt(Vec2(0, 63));
 
 ![](../../en/other_node_types/other_node_types-img/tilemap2.png "timemap2")
 
-有很多工具可以用来制作瓦片地图, [Tiled](http://mapeditor.org) 就是其中一款流行的制作工具, 它有一个很好的用户社区. 推荐你去使用, 上面的屏幕截图就来自 [Tiled](http://mapeditor.org) 的项目.
+有很多工具可以用来制作瓦片地图, [Tiled](http://mapeditor.org) 就是其中一款流行的制作工具, 它有一个很好的用户社区. 推荐你去使用, 上面的屏幕截图就来自 [Tiled](http://mapeditor.org) 的项目.
