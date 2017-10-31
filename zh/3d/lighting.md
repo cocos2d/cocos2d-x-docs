@@ -15,7 +15,7 @@ addChild(light);
 
 效果:
 
-![](3d-img/9_9_1.png)
+![](../../en/3d/3d-img/9_9_1.png)
 
 ## 定向光
 
@@ -30,7 +30,7 @@ addChild(light);
 
 效果:
 
-![](3d-img/9_9_2.png)
+![](../../en/3d/3d-img/9_9_2.png)
 
 ## 点光源
 
@@ -45,7 +45,7 @@ addChild(light);
 
 效果:
 
-![](3d-img/9_9_3.png)
+![](../../en/3d/3d-img/9_9_3.png)
 
 ## 聚光
 
@@ -61,7 +61,7 @@ addChild(spotLight);
 
 效果:
 
-![](3d-img/9_9_4.png)
+![](../../en/3d/3d-img/9_9_4.png)
 
 ## 光照屏蔽
 

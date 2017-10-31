@@ -40,7 +40,7 @@ player->setScale(0.08);
 player->setPositionY(terrain->getHeight(player->getPositionX(),player->getPositionZ()));
 {%- endcodetabs %}
 
-![](3d-img/9_10.png)
+![](../../en/3d/3d-img/9_10.png)
 
 * 通过 `Terrain::DetailMap` 对象创建细节图:
 

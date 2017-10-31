@@ -68,7 +68,7 @@ an object in 3D or detect collision in 3D.
 
 Illustration:
 
-![](3d-img/Ray.png)
+![](../../en/3d/3d-img/Ray.png)
 
 ### Creating a Ray
 
@@ -99,7 +99,7 @@ else
 `AABB` mean axis aligned bounding box, a 3D AABB is a simple six-sided, each side
 is parallel to a coordinate plane. It would look like this:
 
-![](3d-img/AABB.png)
+![](../../en/3d/3d-img/AABB.png)
 
 AABB properties:
 
@@ -144,7 +144,7 @@ object, but the object of the box can be rotated. OBB than AABB bounding sphere
 and is closer to the object, can significantly reduce the number of the surrounded
 body. It would look like this:
 
-![](3d-img/OBB.png)
+![](../../en/3d/3d-img/OBB.png)
 
 ### OBB nature
 
@@ -243,5 +243,5 @@ renderer->addCommand(&meshCommand);
 ```
 The results:
 
-![](3d-img/quad.png)
+![](../../en/3d/3d-img/quad.png)
 --->

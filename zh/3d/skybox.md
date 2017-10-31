@@ -2,7 +2,7 @@
 
 __`天空盒(Skybox)`__ 是整个场景的一个包裹, 显示了几何之外的世界. 你可以使用 `Skybox` 来模拟无限的天空, 山脉等现象.
 
-![](3d-img/Skybox.png)
+![](../../en/3d/3d-img/Skybox.png)
 
 `Skybox` 的创建:
 

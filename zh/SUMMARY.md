@@ -79,7 +79,7 @@
     - [光照(Lighting)](3d/lighting.md)
     - [地形(Terrain)](3d/terrain.md)
     - [常用工具](3d/tools.md)
-    - [进一步讨论](3d/advanced.md)
+    - [进阶话题](3d/advanced.md)
 
 - [使用脚本](index.md)
     - [脚本组件]()

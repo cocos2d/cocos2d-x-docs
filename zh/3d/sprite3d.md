@@ -15,7 +15,7 @@ scene->addChild(sprite,1); //adds sprite to scene, z-index: 1
 
 这个对象是通过 _.c3b_ 文件创建的, 效果是这样:
 
-![](3d-img/9_1.png)
+![](../../en/3d/3d-img/9_1.png)
 
 创建一个动作使这个模型不断旋转:
 
@@ -45,7 +45,7 @@ auto sp = Sprite3D::create("axe.c3b");
 sprite->getAttachNode("Bip001 R Hand")->addChild(sp);
 {%- endcodetabs %}
 
-![](3d-img/9_3.png)
+![](../../en/3d/3d-img/9_3.png)
 
 以此为例, 结合多个简单的模型, 你就能创建复杂的模型.
 
@@ -53,7 +53,7 @@ sprite->getAttachNode("Bip001 R Hand")->addChild(sp);
 
 进行 3D 游戏开发时, 你可能需要对模型进行动态更改. 如果创建的模型是由网格组成, 那你就能通过 `getMeshByIndex()` `getMeshByName()` 访问到网格数据, 然后进行一些控制. 比如使用这个功能替换一个角色的武器或者衣服. 以一个穿着外套的女孩角色为例:
 
-![](3d-img/9_4.png)
+![](../../en/3d/3d-img/9_4.png)
 
 我们通过使用网格对象, 替换掉女孩所穿的外套, 下面是演示代码:
 
@@ -74,4 +74,4 @@ girlTop1->setVisible(true);
 
 效果:
 
-![](3d-img/9_4_0.png)
+![](../../en/3d/3d-img/9_4_0.png)
