@@ -1,35 +1,22 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 3D支持
 
-# 3D
-You probably started with Cocos2d-x and know it as a 2D game engine. Starting
-with version 3, 3D features are being added and refined. 3D gaming is a huge
-market and Cocos2d-x is adding all the features you need for 3D development. 3D
-development might be new to you and use some terminology that you are unfamiliar
-with. There are also additional software tools that you need to become familiar
-with. Let's jump right in and get our feet wet.
+你很可能认为 Cocos2d-x 是一个纯 2D 游戏引擎, 事实上, 从 3.0 版本 3D 功能就开始了添加和完善, 目前 Cocos2d-x 已经到了 3.16 版本, 3D 功能基本完成, 相信最终 Cocos2d-x 会拥有进行 3D 游戏开发的所有功能.
 
-## Terminology
-When using 3D, there are some commonly used terms that you should be familiar with:
+3D 游戏开发可能对你来说很新奇, 相关的术语也还不熟悉, 有什么工具也还不知道, 但是别担心, 让我们从术语开始一一了解.
 
-* __Mesh__ - vertices that construct a shape and texture with which you are
-rendering.
+## 术语
 
-* __Model__ - an object that can be rendered. It is a collection of meshes. In our
-engine `Sprite3D`.
+进行 3D 游戏开发前，先熟悉一些常用术语:
 
-* __Texture__ - All surfaces and vertices of a 3D model can be mapped to a texture.
-In most cases you will have multiple textures per model, unwrapped in a texture
-atlas.
+* __Model(模型)__  - 可以呈现的对象. 由一个一个的多边形组成, Cocos2d-x 中对应 `Sprite3D`
 
-* __Camera__ - Since a 3D world is not flat, you need to set a camera to look at
-it. You get different scenes with different camera parameters.
+* __Mesh(网格)__  - 指模型的网格, 由 3D 模型被划分的多边形构成.
 
-* __Light__ - Lightening is applied to make scenes look realistic. To make an object
-look real, the color should change according to the light. When you face the light
-it is bright and the opposite is dark. _Lightening_ an object means computing the
-object's color according to the light.
+* __Texture(纹理)__  - 纹理使 3D 模型有了表现真实物体复杂表面的能力, 模型的所有表面和顶点都可以被映射纹理.
+
+* __Camera(摄像机)__ - 3D 世界中的眼睛 , 通过它能获得一个角度的世界场景. 同一个世界, 通过设置不同的摄像机参数, 可以获得不同的场景.
+
+* __Light(光照)__ - 3D 世界中的光照, 通过设置光照让游戏场景看起来更真实. 光照效果, 会影响 3D 模型表面的明暗效果, 色彩效果.
 
 <!-- content to be added later -->
 
@@ -81,7 +68,7 @@ an object in 3D or detect collision in 3D.
 
 Illustration:
 
-![](3d-img/Ray.png)
+![](../../en/3d/3d-img/Ray.png)
 
 ### Creating a Ray
 
@@ -112,7 +99,7 @@ else
 `AABB` mean axis aligned bounding box, a 3D AABB is a simple six-sided, each side
 is parallel to a coordinate plane. It would look like this:
 
-![](3d-img/AABB.png)
+![](../../en/3d/3d-img/AABB.png)
 
 AABB properties:
 
@@ -157,7 +144,7 @@ object, but the object of the box can be rotated. OBB than AABB bounding sphere
 and is closer to the object, can significantly reduce the number of the surrounded
 body. It would look like this:
 
-![](3d-img/OBB.png)
+![](../../en/3d/3d-img/OBB.png)
 
 ### OBB nature
 
@@ -256,5 +243,5 @@ renderer->addCommand(&meshCommand);
 ```
 The results:
 
-![](3d-img/quad.png)
+![](../../en/3d/3d-img/quad.png)
 --->

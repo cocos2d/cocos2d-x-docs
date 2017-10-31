@@ -1,53 +1,37 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 进阶话题
 
-##Advanced Topics
+## 广告牌(BillBoard)
 
-###BillBoard
-You may not have heard of a `BillBoard` before. No, I'm not talking about an
-advertisement on the side of a highway. Rather, `Billboard` is a special `Sprite`
-that always faces the `Camera`. As you rotate the `Camera`, `Billboard` objects
-also rotate. Using a`BillBoard` is a very common rendering technique. Take for
-example a downhill skiing game. Any trees, rocks or other objects that are in
-the way of the skier are `Billboard` objects.
+广告牌(BillBoard)是一种特殊的精灵对象, 它总是面对摄像机, 摄像机旋转, 广告牌对象也会跟着旋转. 广告牌在 3D 游戏中是非常常见的, 比如 3D 角色头顶的文字, 血条, 比如滑雪比赛场景里的树木, 岩石.
 
-This is how `Camera` and `Billboard` objects relate to each other.
+这就是摄像机(Camera)与广告牌(BillBoard)关联的方式:
 
-![](3d-img/BillBoard.png)
+![](../../en/3d/3d-img/BillBoard.png)
 
-`Billboard` objects are easy to create. `BillBoard` is derived from `Sprite`, so
-it supports most of the features as a `Sprite` object. We can create one using the
-following create method:
+`Sprite` 是 `Billboard` 的父类, 因此广告牌的大部分功能都与精灵一样. 使用下面的方式可以创建一个广告牌:
 
 {% codetabs name="C++", type="cpp" -%}
 auto billboard = BillBoard::create("Blue_Front1.png", BillBoard::Mode::VIEW_POINT_ORIENTED);
 {%- endcodetabs %}
 
-You can also create a `Billboard` object for the camera XOY plane (like the plane
-  of a floor) by changing the `BillBoard` objects mode:
+你可以更改广告牌的模式为, 广告牌面向摄像机 XOY 平面, 这样创建
 
 {% codetabs name="C++", type="cpp" -%}
 auto billboard = BillBoard::create("Blue_Front1.png", BillBoard::Mode::VIEW_PLANE_ORIENTED);
 {%- endcodetabs %}
 
-These _create_ methods look a little different since an additional parameter of
-__BillBoard::Mode__ is passed in. There are two __BillBoard::Mode__ types,
-__VIEW_POINT_ORIENTED__ and __VIEW_PLANE_ORIENTED__.
+这两个创建方法看起来有点不一样, 因为传入的第二个参数不同, 第二个参数确定了广告牌的模式, 有两种选择:
 
-__VIEW_POINT_ORIENTED__ is where the `BillBoard` object is oriented to the
-`Camera`. Example:
+__VIEW_POINT_ORIENTED__ 广告牌面向摄像机所在的点, 示例:
 
-![](3d-img/9_8_1.png)
+![](../../en/3d/3d-img/9_8_1.png)
 
- __VIEW_PLANE_ORIENTED__ is where the `BillBoard` is oriented towards the XOY plane
+ __VIEW_PLANE_ORIENTED__ 广告牌面向摄像机所在的平面, 示例:
  of the `Camera`. Example:
 
-![](3d-img/9_8_2.png)
+![](../../en/3d/3d-img/9_8_2.png)
 
-You can also set properties for a `BillBoard` just like with any other `Node`.
-These include, but are not limited to: __scale__, __position__, __rotation__.
-Examples:
+你可以像普通节点对象一样控制广告牌, 比如控制缩放, 位置, 旋转等等
 
 {% codetabs name="C++", type="cpp" -%}
 billboard->setScale(0.5f);
@@ -56,26 +40,13 @@ billboard->setBlendFunc(BlendFunc::ALPHA_NON_PREMULTIPLIED);
 addChild(billboard);
 {%- endcodetabs %}
 
-###ParticleSystem3D
-In Chapter 7, you learned about 2D particles and how to use them. When you use 3D
-you might also want to use a 3D particle system for rich, advanced effects. Many
-of the same concepts apply for a 3D particle system as they did with a 2D particle
-system. Cocos2d-x currently supports __Particle Universe__ (http://www.fxpression.com/)
-for particle system construction. __Particle Universe__ provides a special particle
-editor that allows you to quickly and easily set up a variety of effects, such as
-explosions, fire, blood and other special effects. This editor uses a __pu__ file
-extension when saving or exporting.
+## 3D 粒子系统
 
-When you are happy with your particle and ready to use it in code, exporting to
-its built-in format of __pu__ is enough! Cocos2d-x supports this format directly.
-Also, as `ParticleSystem3D` is derived from `Node`, it supports most of the
-features that `Node` supports. `PUParticleSystem3D` is an object type specifically
-for dealing with __Particle Universe__ particles. `PUParticleSystem3D` offers two
-ways for creating particles.
+在 [第七章](../other_node_types/index.md) 中, 我们已经学习了如何使用 2D 粒子, 当你进行 3D 游戏制作的时候, 为了丰富游戏的效果, 你可能还需要 3D 粒子. 3D 粒子系统与 2D 粒子系统的许多概念是一样的.
 
-The first way is to build a particle by passing in a __Particle Universe__ file
-and its corresponding __material file__. Remember from Chapter 7 that a
-__material file__ is what describes the particle. This is required. Example:
+Cocos2d-x 目前支持制作工具 __[Particle Universe](http://www.fxpression.com)__ 构建的粒子, Particle Universe 是一个特殊的粒子编辑器, 可以让你快速, 轻松的构建出各种粒子效果, 如爆炸, 火焰, 血液. Particle Universe 粒子编辑器生成的粒子文件格式是 _.pu_, Cocos2d-x 直接支持这种格式. 由 `PUParticleSystem3D` 类负责处理. `PUParticleSystem3D` 提供了两种创建粒子的方法.
+
+第一种方式传入两个参数: Particle Universe 粒子文件和相应的材质文件. 材质文件描述的是粒子的内容, 对于一个粒子特效是必须的 示例:
 
 {% codetabs name="C++", type="cpp" -%}
 auto ps = PUParticleSystem3D::create("lineStreak.pu", "pu_mediapack_01.material");
@@ -83,10 +54,7 @@ ps->startParticleSystem();
 this->addChild(ps);
 {%- endcodetabs %}
 
-The second way is to build the particle system only by passing a __particle universe__
-file. When you create a particle this way, besides loading the particle, all
-__material files__ in the same folder as the particle file will automatically be
-loaded. Here is an example:
+第二个方法传入一个参数, Particle Universe 粒子文件. 使用这种方法创建粒子, 与粒子文件相同的文件夹中所有的材质文件都将被自动加载. 示例:
 
 {% codetabs name="C++", type="cpp" -%}
 auto ps = PUParticleSystem3D::create("electricBeamSystem.pu");
@@ -95,19 +63,15 @@ ps->startParticleSystem();
 this->addChild(ps);
 {%- endcodetabs %}
 
-  __Note:__ using this method will result in an increase in loading times and
-consumes more memory since everything will be loaded. If you know what __material__
-you want to use and don't need to load everything, using the first method would
-be preferred.
+注意: 使用第二种方法, 可能会导致加载时间增加, 消耗内存增加. 如果你知道需要使用的材质, 请选第一种方法.
 
-In these images below, on the left is the particle in __particle universe__, while
-on the right is the effect running in Cocos2d-x:
+下图左边是 Particle Universe 中的粒子, 右边是该粒子使用 Cocos2d-x 运行的效果
 
-![](3d-img/particle1.png) ![](3d-img/particle2.png)
+![](../../en/3d/3d-img/particle1.png) ![](../../en/3d/3d-img/particle2.png)
 
-Once you have your particle, you can interact with it it fairly obvious ways. You
-can interact with with the __particle system__ as a whole, starting, stopping,
-pausing, resuming and obtaining the total number of particles:
+在游戏中加载好了粒子效果, 接下来就可以尝试进行一些控制操作, 如开始, 停止, 暂停, 恢复和获取粒子总数. 
+
+代码:
 
 {% codetabs name="C++", type="cpp" -%}
 virtual void startParticleSystem() override;
@@ -117,8 +81,9 @@ virtual void resumeParticleSystem() override;
 virtual int getAliveParticleCount() const override;
 {%- endcodetabs %}
 
-As `PUParticleSystem3D` is derived from `Node` you can run `Action` and `Sequence`
-objects on your particles! Example:
+`PUParticleSystem3D` 派生自 `Node` 对象, 所以你可以为刚刚创建的粒子, 增加动作和序列!
+
+示例:
 
 {% codetabs name="C++", type="cpp" -%}
 auto ps = PUParticleSystem3D::create("blackHole.pu", "pu_mediapack_01.material");
@@ -131,13 +96,11 @@ ps->runAction(RepeatForever::create(Sequence::create(moveby, moveby1, nullptr)))
 ps->startParticleSystem();
 {%- endcodetabs %}
 
-Combining `Action` and `Sequence` objects could produce an interesting black hole
-effect:
+组合动作和序列可能会产生有趣的黑洞效果
 
-![](3d-img/particle3.png)
+![](../../en/3d/3d-img/particle3.png)
 
-Just like with other 3D objects you can also combine 3D objects using `AttachNode`.
-This allows for creating rich models. Example:
+可以使用 `AttachNode` 将粒子绑定到其它 3D 模型上, 示例:
 
 {% codetabs name="C++", type="cpp" -%}
 auto sprite3d = Sprite3D::create("orc.c3b");
@@ -158,4 +121,4 @@ sprite3d->getAttachNode("Bip001 L Hand")->addChild(handler);
 this->addChild(sprite3d);
 {%- endcodetabs %}
 
-![](3d-img/particle4.png)
+![](../../en/3d/3d-img/particle4.png)
