@@ -76,7 +76,7 @@
     - [相机(Camera)](3d/camera.md)
     - [立方体纹理(TextureCube)](3d/cubemap.md)
     - [天空盒(Skybox)](3d/skybox.md)
-    - [光照(Lighting)](3d/lighting.md)
+    - [光照(Light)](3d/lighting.md)
     - [地形(Terrain)](3d/terrain.md)
     - [常用工具](3d/tools.md)
     - [进阶话题](3d/advanced.md)

@@ -51,11 +51,13 @@ sprite->getAttachNode("Bip001 R Hand")->addChild(sp);
 
 ## 网格替换
 
-进行 3D 游戏开发时, 你可能需要对模型进行动态更改. 如果创建的模型是由网格组成, 那你就能通过 `getMeshByIndex()` `getMeshByName()` 访问到网格数据, 然后进行一些控制. 比如使用这个功能替换一个角色的武器或者衣服. 以一个穿着外套的女孩角色为例:
+进行 3D 游戏开发时, 你可能需要对模型进行动态更改. 如果创建的模型是由网格组成, 那你就能通过 `getMeshByIndex()` `getMeshByName()` 访问到网格数据, 然后进行一些控制. 比如使用这个功能替换一个角色的武器或者衣服.
+
+以一个穿着外套的角色为例:
 
 ![](../../en/3d/3d-img/9_4.png)
 
-我们通过使用网格对象, 替换掉女孩所穿的外套, 下面是演示代码:
+我们通过使用网格对象, 替换掉外套, 下面是演示代码:
 
 {% codetabs name="C++", type="cpp" -%}
 auto sprite = Sprite3D::create("ReskinGirl.c3b");
