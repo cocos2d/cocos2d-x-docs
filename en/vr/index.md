@@ -111,7 +111,7 @@ $ cocos package import -v -b oculus --anysdk
 
 ### Compiling and Running with VR
 
-#### IOS
+#### iOS
 If you are running iOS, you are limited to running the __generic renderer__ on
 hardware only, you can use __cocos compile__ __cocos run__ as you typically would.
 
