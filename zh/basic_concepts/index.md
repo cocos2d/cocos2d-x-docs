@@ -12,9 +12,9 @@ Cocos2d-x 就是这样的一个游戏引擎，它提供了许多易于使用的�
 
 ## 组件简介
 
-精通 Cocos2d-x 很难， 但是上手 Cocos2d-x 很容易，让我们从一些常用概念开始。
+精通 Cocos2d-x 很难，但是上手 Cocos2d-x 很容易，让我们从一些基本概念开始。
 
-Cocos2d-x 的核心是 Scene(场景)，Node(节点)，Sprite(精灵)，Menu(菜单)，Action(动作)。下面是一个简单的游戏界面:
+下面是一个简单的游戏界面:
 
 ![](../../en/basic_concepts/basic_concepts-img/2n_main.png "")
 
@@ -23,3 +23,15 @@ Cocos2d-x 的核心是 Scene(场景)，Node(节点)，Sprite(精灵)，Menu(菜�
 ![](../../en/basic_concepts/basic_concepts-img/2n_annotated_scaled.png "")
 
 能看到一个菜单(Menu)，几个精灵(Sprite)，和几个标签(Label)，观察一下喜欢的游戏，会发现这些组件以某种形式存在其中。
+
+## 本章导读
+
+阅读本章，您将对 Cocos2d-x 引擎的核心概念有大概的了解：
+
+- [导演(Director)](director.md)
+- [场景(Scene)](scene.md)
+- [精灵(Sprite)](sprites.md)
+- [动作(Action)](actions.md)
+- [序列(Sequence)](sequences.md)
+- [节点关系](parent_child.md)
+- [日志输出](logging.md)

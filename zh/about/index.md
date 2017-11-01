@@ -1,4 +1,4 @@
-# 关于 Cocos2d-x
+# 了解引擎
 
 - Cocos2d-x 是 MIT 许可证下发布的一款功能强大的开源游戏引擎，它可以让游戏开发更快，更简单。它允许开发人员使用 C++、Javascript 及 Lua 三种语言来进行游戏开发，并且支持跨平台部署。已覆盖所有常见平台，包括 iOS、Android、Windows、macOS、Linux。
 
@@ -15,3 +15,12 @@
 - AnySDK，是为CP商提供一套第三方SDK接入解决方案，整个接入过程，不改变任何SDK的功能、特性、参数等，让CP商有更多时间更专注于游戏本身的品质。
 
 - 详细内容，见中文官网 [http://www.cocos.com/](http://www.cocos.com/)
+
+## 本章导读
+
+阅读本章，您能对 Cocos2d-x 有一个整体的了解
+
+- [引擎优势](why.md)
+- [学习资源](learn.md)
+- [获取帮助](help.md)
+- [支持](how.md)
