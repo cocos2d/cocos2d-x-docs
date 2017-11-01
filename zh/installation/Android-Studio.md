@@ -11,7 +11,7 @@
 
     <a href="Android-Studio-img/Import-project.png" target="_blank"><img src="Android-Studio-img/Import-project.png" alt="Import"></a>
 
-1. 第一次导入 cocos2d-x 工程，控制台会提示缺少组件，点击提示下方的链接，下载安装即可。提示类似： 
+1. 第一次导入 cocos2d-x 工程，控制台会提示缺少组件，点击提示下方的链接，下载安装即可。提示类似：
     ```
     Gradle sync failed: Failed to find target with hash string 'android-14' in ...
     Gradle sync failed: Failed to find Build Tools revision 25.0.0
@@ -52,7 +52,9 @@
 ## FAQ
 
 ### 如何使用 x86 ABI 的模拟器运行 cocos2d-x 的 cpp-tests 项目？
-- 在项目中找到 `gradle.properties` 文件，将 `PROP_APP_ABI=armeabi` 修改为 `PROP_APP_ABI=x86`，点击提示中的 `Sync Now`，完成后重新编译运行。
+
+在项目中找到 `gradle.properties` 文件，将 `PROP_APP_ABI=armeabi` 修改为 `PROP_APP_ABI=x86`，点击提示中的 `Sync Now`，完成后重新编译运行。
 
 ### 如何下载ARM的Image进行模拟器的创建？
-- 依照**模拟器的创建**中的步骤，在`Select a system image` 界面，到 `Other Images` 选项卡， 选中 ABI 为 armeabi 的系统镜像。
+
+依照**模拟器的创建**中的步骤，在`Select a system image` 界面，到 `Other Images` 选项卡， 选中 ABI 为 armeabi 的系统镜像。
