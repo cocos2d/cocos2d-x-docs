@@ -1,10 +1,10 @@
 # 基本动作
 
-基本动作通常都是单一的动作, 用来完成一个简单的目标. 下面通过简单的示例来介绍常见的基本动作.
+基本动作通常都是单一的动作，用来完成一个简单的目标。下面通过简单的示例来介绍常见的基本动作。
 
 ## 移动
 
-使用 `MoveTo` `MoveBy` 完成节点对象在一个设置的时间后移动.
+使用 `MoveTo` `MoveBy` 完成节点对象在一个设置的时间后移动。
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -36,7 +36,7 @@ mySprite.runAction(moveBy);
 
 ## 旋转
 
-使用 `RotateTo` `RotateBy` 完成节点对象在一个设置的时间后顺时针旋转指定角度
+使用 `RotateTo` `RotateBy` 完成节点对象在一个设置的时间后顺时针旋转指定角度。
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -64,7 +64,7 @@ mySprite.runAction(rotateBy);
 
 ## 缩放
 
-使用 `ScaleBy` `ScaleTo` 完成节点对象的比例缩放
+使用 `ScaleBy` `ScaleTo` 完成节点对象的比例缩放。
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -108,7 +108,7 @@ mySprite.runAction(scaleTo);
 
 ### 淡入淡出
 
-使用 `FadeIn` `FadeOut` 完成节点对象的淡入, 淡出.  `FadeIn` 修改节点对象的透明度属性, 从完全透明到完全不透明, `FadeOut` 相反.
+使用 `FadeIn` `FadeOut` 完成节点对象的淡入，淡出。 `FadeIn` 修改节点对象的透明度属性，从完全透明到完全不透明，`FadeOut` 相反。
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -136,7 +136,7 @@ mySprite.runAction(fadeOut);
 
 ## 色彩
 
-使用 `TintTo` `TintBy`, 将一个实现了 `NodeRGB` 协议的节点对象进行色彩混合.
+使用 `TintTo` `TintBy`，将一个实现了 `NodeRGB` 协议的节点对象进行色彩混合。
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -164,7 +164,7 @@ mySprite.runAction(tintBy);
 
 ## 动画
 
-使用 `Animate` 对象可以很容易的通过每隔一个短暂时间进行图像替代的方式, 实现一个翻页效果. 下面是一个例子:
+使用 `Animate` 对象可以很容易的通过每隔一个短暂时间进行图像替代的方式，实现一个翻页效果。下面是一个例子：
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -220,11 +220,11 @@ mySprite.runAction(cc.RepeatForever(animate));
 
 ## 缓冲
 
-缓冲动作可以让节点对象具有加速度, 产生平滑同时相对复杂的动作, 所以可以用缓冲动作来模仿一些物理运动, 这样比实际使用物理引擎的性能消耗低, 使用起来也简单. 当然你也可以将缓冲动作应用到动画菜单和按钮上, 实现你想要的效果。
+缓冲动作可以让节点对象具有加速度，产生平滑同时相对复杂的动作，所以可以用缓冲动作来模仿一些物理运动，这样比实际使用物理引擎的性能消耗低，使用起来也简单。当然你也可以将缓冲动作应用到动画菜单和按钮上，实现你想要的效果。
 
 ![](../../en/actions/actions-img/easing-functions.png "")
 
-Cocos2d-x 支持上图中的大部分缓冲动作, 实现起来也很简单. 我们来看个例子, 一个精灵从屏幕顶部落下然后不断跳动:
+Cocos2d-x 支持上图中的大部分缓冲动作，实现起来也很简单。我们来看个例子，一个精灵从屏幕顶部落下然后不断跳动：
 
 {% codetabs name="C++", type="cpp" -%}
 // create a sprite
@@ -249,6 +249,6 @@ auto seq1 = Sequence::create(move_ease_in, delay, move_ease_in_back,
 mySprite->runAction(RepeatForever::create(seq1));
 {%- endcodetabs %}
 
-复杂的动作很难在这样的文本里表示, 要是看效果的话最好去运行一下本指南的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16), 或者运行引擎代码的测试项目 `cpp-tests`, 在子菜单 `3:Actions - Basic` 中有基本的动作效果展示
+复杂的动作很难在这样的文本里表示，要是看效果的话最好去运行一下本指南的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16)，或者运行引擎代码的测试项目 `cpp-tests`，在子菜单 `3:Actions - Basic` 中有基本的动作效果展示。
 
- _运行测试项目的方法, 参考本文档的 [环境搭建](../installation/index.md) 章节_ .
+ _运行测试项目的方法，参考本文档的 [环境搭建](../installation/index.md) 章节_ .
