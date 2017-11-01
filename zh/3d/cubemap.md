@@ -4,7 +4,7 @@
 
 ![](../../en/3d/3d-img/Cubemap.jpg)
 
-在 Cocos2d-x 中, 这样创建立方体纹理:
+在 Cocos2d-x 中，这样创建立方体纹理：
 
 {% codetabs name="C++", type="cpp" -%}
 // create a textureCube object with six texture assets

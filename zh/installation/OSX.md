@@ -5,7 +5,7 @@
 1. cocos2d-x v3.16，下载后解压，下载参见：[cocos官网页面](http://www.cocos.com/download)
 1. Xcode 8.3.3 下载后安装，下载参见：[Apple官网页面](https://developer.apple.com/download/more/)
 
-## 配置步骤：
+## 配置步骤
 
 1. 打开 `cocos2d-x-3.16/build/cocos2d_tests.xcodeproj` 
 1. 在 Xcode 顶部工具栏选择 `cpp-tests Mac`，`My Mac`，点击运行，项目将自动编译运行，效果如图：

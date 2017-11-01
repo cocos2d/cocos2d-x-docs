@@ -2,21 +2,21 @@
 
 ## 上报 BUG
 
-在 Cocos2d-x 的使用过程中, 遇到 BUG 可以通过下面的方式在 GitHub 上向我们报告.
+在 Cocos2d-x 的使用过程中，遇到 BUG 可以通过下面的方式在 GitHub 上向我们报告。
 
-1. 新建 Cocos2d-x 的 Issues, [传送门](https://github.com/cocos2d/cocos2d-x/issues/new)
+1. 新建 Cocos2d-x 的 Issues，[传送门](https://github.com/cocos2d/cocos2d-x/issues/new)
 
-1. 增加一些必要的信息, 帮助开发者定位修复 BUG
+1. 增加一些必要的信息，帮助开发者定位修复 BUG
     - BUG 出现的环境,
-        - Cocos2d-x 的版本, 如 3.16
-        - 使用的 IDE , 如 XCode 8.3.3
-        - 测试设备, 如 iPhone 8
+        - Cocos2d-x 的版本，如 3.16
+        - 使用的 IDE，如 XCode 8.3.3
+        - 测试设备，如 iPhone 8
     - BUG 的重现步骤
-    - 如果有和 BUG 相关的其它信息, 也可以一并提交, 如 资源链接
+    - 如果有和 BUG 相关的其它信息，也可以一并提交，如 资源链接
 
 ## 贡献代码
 
-Cocos2d-x 在 GitHub 开源, 你可以通过下面的方式贡献自己的代码, 成为 Cocos2d-x 的贡献者.
+Cocos2d-x 在 GitHub 开源，你可以通过下面的方式贡献自己的代码，成为 Cocos2d-x 的贡献者。
 
 - 学会使用 Git 和 GitHub
 - 从 GitHub 下载最新的开发分支到本地
@@ -31,10 +31,10 @@ git submodule update --init
 
 - 把代码改动添加到最新的开发分支
 - 将改动提交到自己的代码仓库中
-- 为本次代码提交创建一个新分支 如:`$ git checkout -b my_fix_branch`
+- 为本次代码提交创建一个新分支 如：`$ git checkout -b my_fix_branch`
 - `push` 新分支到自己的 GitHub 公共仓库
 - 创建一个 `Pull request` 给 `cocos2d/cocos2d-x`
-- 改动一定要是很完善的, 并且符合发布规则, 参考下面:
+- 改动一定要是很完善的，并且符合发布规则，参考下面：
 
 ## 补丁要求
 
@@ -61,6 +61,6 @@ git submodule update --init
 
 ### 宣传 Cocos2d-x
 
-当您使用 Cocos2d-x 开发了游戏, 希望您能将 Cocos2d-x 的 Logo 放到游戏中, 或者把 Cocos2d-x 加到致谢中. 让我们一起提高 Cocos2d-x 的知名度, 让更多的人参与到 Cocos 开源社区的建设中.
+当您使用 Cocos2d-x 开发了游戏，希望您能将 Cocos2d-x 的 Logo 放到游戏中，或者把 Cocos2d-x 加到致谢中。让我们一起提高 Cocos2d-x 的知名度，让更多的人参与到 Cocos 开源社区的建设中。
 
 [Cocos2d-x Logo 资源](http://www.cocos2d-x.org/wiki/Logo_Resources_of_Cocos2d-x)
