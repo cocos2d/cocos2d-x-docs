@@ -26,9 +26,9 @@ Terrain::CrackFixedType::SKIRT
 Terrain::CrackFixedType::INCREASE_LOWER
 {%- endcodetabs %}
 
-__Terrain::CrackFixedType::SKIRT__ 裙边法，在块的每个边缘生成四个裙状网格
+__Terrain::CrackFixedType::SKIRT__ 裙边法：在块的每个边缘生成四个裙状网格
 
-__Terrain::CrackFixedType::INCREASE_LOWER__ 补边法，动态调整每个快的索引，使其无缝连接
+__Terrain::CrackFixedType::INCREASE_LOWER__ 补边法：动态调整每个快的索引，使其无缝连接
 
 ## 创建地形
 

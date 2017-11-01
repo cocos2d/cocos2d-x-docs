@@ -64,7 +64,7 @@ this->addChild(ps);
 
 注意：使用第二种方法，可能会导致加载时间增加，消耗内存增加。 如果你知道需要使用的材质，请选第一种方法。
 
-下图左边是 Particle Universe 中的粒子，右边是该粒子使用 Cocos2d-x 运行的效果
+下图左边是 Particle Universe 中的粒子，右边是该粒子使用 Cocos2d-x 运行的效果。
 
 ![](../../en/3d/3d-img/particle1.png) ![](../../en/3d/3d-img/particle2.png)
 

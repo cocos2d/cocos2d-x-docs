@@ -40,7 +40,7 @@ __Jump__ -> __callbackJump()__ -> __Rotate__ -> __callbackRotate()__
 
 ![](../../en/actions/actions-img/spawn.png "")
 
-`Spawn` 的效果和同时运行多个动作的 `runAction()` 方法是一致的，但是它的独特之处是 `Spawn` 能被放到 `Sequence` 中，结合 `Spawn` 和 `Sequence` 能实现非常强大的动作效果.
+`Spawn` 的效果和同时运行多个动作的 `runAction()` 方法是一致的，但是它的独特之处是 `Spawn` 能被放到 `Sequence` 中，结合 `Spawn` 和 `Sequence` 能实现非常强大的动作效果。
 
 例如，创建两个动作：
 

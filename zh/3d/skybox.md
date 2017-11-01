@@ -4,7 +4,7 @@ __`天空盒(Skybox)`__ 是整个场景的一个包裹，显示了几何之外�
 
 ![](../../en/3d/3d-img/Skybox.png)
 
-`Skybox` 的创建:
+`Skybox` 的创建：
 
 {% codetabs name="C++", type="cpp" -%}
 // create a Skybox object
