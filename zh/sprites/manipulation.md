@@ -50,7 +50,7 @@ mySprite.setAnchorPoint(cc._p(1, 0));
 mySprite.setAnchorPoint(cc._p(1, 1));
 {%- endcodetabs %}
 
-观察下面的图，感受锚点对精灵位置的影响，_红点是旁边精灵的锚点_.
+观察下面的图，感受锚点对精灵位置的影响，_红点是旁边精灵的锚点_。
 
 ![](../../en/sprites/sprites-img/i6.png "")
 
