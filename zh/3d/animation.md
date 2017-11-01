@@ -23,7 +23,7 @@ sprite->runAction(RepeatForever::create(animate));
 
 ## 多动画
 
-当想同时运行多个动画时，该怎么办？你可以创建多个动画，并指定开始时间和动画长度参数，两个参数的单位都是秒。例如:
+当想同时运行多个动画时，该怎么办？你可以创建多个动画，并指定开始时间和动画长度参数，两个参数的单位都是秒。例如：
 
 {% codetabs name="C++", type="cpp" -%}
 auto animation = Animation3D::create(fileName);
