@@ -4,7 +4,7 @@
 
 1. 操作系统: macOS 10.13/Windows 7/Ubuntu 16.04
 1. 引擎: cocos2d-x v3.16
-1. IDE: Android Studio 2.3.3/Visual Studio 2015/XCode 8.3
+1. IDE: Android Studio 2.3.3/Visual Studio 2015/Xcode 8.3.3
 
 ## 本章目录
 

@@ -8,7 +8,7 @@
 ## 配置步骤：
 
 1. 打开 `cocos2d-x-3.16/build/cocos2d_tests.xcodeproj`
-1. 在 Xcode 顶部工具栏选择 `cpp-tests IOS`，`iPhone 7 Plus`，点击运行，项目将自动编译运行，效果如图：
+1. 在 Xcode 顶部工具栏选择 `cpp-tests iOS`，`iPhone 7 Plus`，点击运行，项目将自动编译运行，效果如图：
 
     <a href="IOS-img/ios-install-run.png" target="_blank"><img src="IOS-img/ios-install-run.png" alt="macOS-setup-img"></a>
 

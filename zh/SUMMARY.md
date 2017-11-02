@@ -114,7 +114,7 @@
         - [Visual Studio](installation/Android-VisualStudio.md)
         - [Android Studio](installation/Android-Studio.md)
         - [Eclipse](installation/Android-Eclipse.md)
-    - [IOS](installation/iOS.md)
+    - [iOS](installation/iOS.md)
     - [macOS平台](installation/OSX.md)
     - [Linux平台](installation/Linux.md)
     - [Windows平台](installation/Windows.md)
