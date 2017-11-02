@@ -3,16 +3,17 @@
 ## 工具准备
 
 1. Android Studio v2.3， 下载参见：[Google中国开发者网站](https://developer.android.google.cn/studio/index.html)
-1. cocos2d-x v3.16，下载后解压，下载参见：[cocos官网页面](http://www.cocos.com/download)
+1. cocos2d-x v3.16，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
 
 ## 配置步骤：
 
 1. 完成 Android Studio 安装，进入欢迎界面，选择 `Import project(Eclipse ADT, Gradle, etc.)`。选择目录`cocos2d-x root/tests/cpp-tests/proj.android-studio`，点击 `OK` 进入IDE主界面。
 
-    <a href="Android-Studio-img/Import-project.png" target="_blank"><img src="Android-Studio-img/Import-project.png" alt="Import"></a>
+    ![](Android-Studio-img/Import-project.png)
 
 1. 第一次导入 cocos2d-x 工程，控制台会提示缺少组件，点击提示下方的链接，下载安装即可。提示类似：
-    ```
+
+    ```console
     Gradle sync failed: Failed to find target with hash string 'android-14' in ...
     Gradle sync failed: Failed to find Build Tools revision 25.0.0
     ```
@@ -21,7 +22,7 @@
     ![Run](Android-Studio-img/bar-Run.png)
 1. 选择运行应用的设备，IDE将自动安装应用，并控制应用展示主界面。建议直接使用Android手机接入电脑作为设备，进行测试。这样应用会有较快的运行速度。如果使用模拟器请下载ARM的Image进行模拟器的创建。运行成功界面：
 
-    <a href="Android-Studio-img/cpp-tests-success.png" target="_blank"><img src="Android-Studio-img/cpp-tests-success.png" alt="Run Success"></a>
+    ![](Android-Studio-img/cpp-tests-success.png)
 
 ## 如何调试(Debug)
 
@@ -52,12 +53,13 @@
     ![AVD Manager](Android-Studio-img/bar-AVD-Manager.png)
 1. 在 `Android Virtual Device Manager` 界面左下角，可以看到按钮 `Create Virtual Device...`，点击进入 `Choose a device definition`页面，选择设备，此处选择只决定了尺寸和分辨率，与设备中运行的系统无关。此处选择 `Nexus 5X`，选择后点击 `Next`，进入选择系统镜像页面。
 
-    <a href="Android-Studio-img/choose-device-definition.png" target="_blank"><img src="Android-Studio-img/choose-device-definition.png" alt="Choose Device"></a>
+    ![](Android-Studio-img/choose-device-definition.png "")
+    
 
 
 1. 在 `Select a system image` 界面，选择系统镜像，此处选择决定了设备的`API Level` 和 `ABI`。`API Level`代表了 Android 系统版本，如 API Level 24，代表 Android 7.0 系统。`ABI` 是与CPU相关的一个参数，Intel 处理器多为x86，高通处理器 多为ARM。更多关于 ABI 的了解,参见官方文档 [ABI 管理](https://developer.android.google.cn/ndk/guides/abis.html?hl=zh-cn)。
 
-    <a href="Android-Studio-img/select-image.png" target="_blank"><img src="Android-Studio-img/select-image.png" alt="Select Image"></a>
+    ![](Android-Studio-img/select-image.png "")
 
 1. 选择完成，点击 Next，进入`Verify Configuration`，点击 Finish 结束。
 
