@@ -67,3 +67,9 @@ mySprite.runAction(seq);
 {%- endcodetabs %}
 
 ![](../../en/actions/actions-img/i0.png "")
+
+本章导读
+
+* [基本动作](basic.md)
+* [动作序列](sequences.md)
+* [克隆与倒转](sequence_internals.md)
