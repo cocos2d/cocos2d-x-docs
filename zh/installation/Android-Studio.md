@@ -33,6 +33,18 @@
 
     ![](../../en/installation/Android-Studio-img/debug_cpp_tests.png "")
 
+## 如何打包
+
+按照下面的步骤，构建 App 的发布(Release)版本
+
+1. 将 __Build Variant__ 设置为 __release__ 模式
+1. 在 __gradle.properties__ 文件中，添加签名信息
+1. 对于 Lua 项目，如果想加密 Lua 代码，也需要在 __gradle.properties__ 文件中添加签名信息
+
+    ![](../../en/installation/Android-Studio-img/change_release_lua_tests.png "")
+
+    ![](../../en/installation/Android-Studio-img/sign_and_encrypt.png "")
+
 ## 模拟器的创建
 
 1. 点击工具栏 `AVD Manager` 进入模拟器的管理界面。

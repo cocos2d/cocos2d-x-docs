@@ -26,7 +26,7 @@ Cocos2d-x 就是这样的一个游戏引擎，它提供了许多易于使用的�
 
 ## 本章导读
 
-阅读本章，您将对 Cocos2d-x 引擎的核心概念有大概的了解：
+通过阅读本章，您能对 Cocos2d-x 引擎的基本概念有初步的理解：
 
 - [导演(Director)](director.md)
 - [场景(Scene)](scene.md)
