@@ -70,7 +70,7 @@ auto myLabel = Label::createWithSystemFont("My Label Text", "Arial", 16);
 
 ## 标签效果
 
-在屏幕上有标签后，它们可能看起来很普通，这时你希望让他们变漂亮。你不用创建自定义字体! Label 对象就可以对标签应用效果，包括阴影，轮廓，发光。
+在屏幕上有标签后，它们可能看起来很普通，这时你希望让他们变漂亮。你不用创建自定义字体! Label 对象就可以对标签应用效果，包括阴影，描边，发光。
 
 阴影效果：
 
@@ -83,7 +83,7 @@ myLabel->enableShadow();
 
 ![](../../en/ui_components/ui_components-img/LabelWithShadow.png "")
 
-轮廓效果:
+描边效果:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
