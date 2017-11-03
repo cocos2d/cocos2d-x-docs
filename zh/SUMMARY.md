@@ -109,13 +109,11 @@
 
 - [环境搭建](installation/index.md)
     - [安装要求](installation/A.md)
-    - [Android平台](./installation/Android-Studio.md)
-        - [Android Studio](installation/Android-Studio.md)
+    - [Android 平台](./installation/Android-Studio.md)
     - [iOS](installation/iOS.md)
     - [macOS](installation/OSX.md)
-    - [Linux平台](installation/Linux.md)
-    - [Windows平台](installation/Windows.md)
-        - [Visual Studio](installation/Windows.md)
+    - [Linux 平台](installation/Linux.md)
+    - [Windows 平台](installation/Windows.md)
 
 - [工具](index.md)
     - [Cocos命令行工具]()

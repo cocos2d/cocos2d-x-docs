@@ -1,8 +1,8 @@
-# cocos2d-x macOS平台的环境搭建
+# 搭建开发环境 - macOS 平台
 
 ## 工具准备
 
-1. cocos2d-x v3.16，下载后解压，下载参见：[cocos官网页面](http://www.cocos.com/download)
+1. cocos2d-x v3.16，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
 1. Xcode 8.3.3 下载后安装，下载参见：[Apple官网页面](https://developer.apple.com/download/more/)
 
 ## 配置步骤

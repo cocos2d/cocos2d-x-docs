@@ -1,9 +1,9 @@
-# cocos2d-x 在 Visual Studio 的环境搭建
+# 搭建开发环境 - Windows 平台
 
 ## 工具准备
 
-1. Visual Studio 2015，我们已在 `Visual Studio 2015` 上做了版本功能的完整验证，建议用户使用此IDE，以防止由于版本不同引发编译或运行错误。下载参见：[官网页面](https://www.visualstudio.com/zh-hans/downloads/)，[Visual Studio 2015 发布页面](https://www.visualstudio.com/zh-cn/news/releasenotes/vs2015-update3-vs)。本教程使用的是 **Visual Studio 2015**。
-1. cocos2d-x v3.16，下载后解压，下载参见：[cocos官网页面](http://www.cocos.com/download)
+1. **Visual Studio 2015**，我们已在 `Visual Studio 2015` 上做了版本功能的完整验证，建议用户使用此IDE，以防止由于版本不同引发编译或运行错误。下载参见：[官网页面](https://www.visualstudio.com/zh-hans/downloads/)，[Visual Studio 2015 发布页面](https://www.visualstudio.com/zh-cn/news/releasenotes/vs2015-update3-vs)。
+1. cocos2d-x v3.16，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
 
 ## 配置步骤
 

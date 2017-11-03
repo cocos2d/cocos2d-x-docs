@@ -6,14 +6,14 @@
 1. 引擎: cocos2d-x v3.16
 1. IDE: Android Studio 2.3.3/Visual Studio 2015/Xcode 8.3.3
 
-## 本章目录
+## 本章导读
 
-阅读本章，你能学习到 Cocos2d-x 在各个平台的环境搭建方法，环境搭建以成功编译运行官方测试项目 `cpp-tests` 为目标。
+阅读本章，你能学习到 Cocos2d-x 在各个平台的环境搭建方法，_环境搭建以成功编译运行官方测试项目 `cpp-tests` 为目标_。
 
-- [Android - Android Studio](./Android-Studio.md)
-- [iOS平台 - Xcode](./IOS.md)
-- [macOS平台 - Xcode](./OSX.md)
-- [Linux平台 待补充]()
-- [Windows平台 - Visual Studio](./Windows.md)
+- [Android 平台](Android-Studio.md)
+- [iOS](IOS.md)
+- [macOS](OSX.md)
+- [Linux 平台](Linux.md)
+- [Windows 平台](Windows.md)
 
-_注意：测试项目包含了引擎所有功能的代码示例，这是学习引擎功能非常好的一个参考_
+_注意：测试项目包含了引擎所有功能的代码示例，这是学习引擎功能的一个好参考_

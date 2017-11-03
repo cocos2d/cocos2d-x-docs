@@ -1,8 +1,8 @@
-# cocos2d-x 在 Android Studio 的环境搭建
+# 搭建开发环境 - Android 平台
 
 ## 工具准备
 
-1. Android Studio v2.3， 下载参见：[Google中国开发者网站](https://developer.android.google.cn/studio/index.html)
+1. Android Studio v2.3.3， 下载参见：[Google中国开发者网站](https://developer.android.google.cn/studio/index.html)
 1. cocos2d-x v3.16，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
 
 ## 配置步骤：
