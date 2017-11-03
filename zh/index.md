@@ -6,14 +6,15 @@
 
 - [了解引擎](about/index.md)
 - [基本概念](basic_concepts/index.md)
-- [环境搭建](installation/index.md)
 - [精灵(Sprite)](sprites/index.md)
 - [动作(Action)](actions/index.md)
 - [场景(Scene)](scenes/index.md)
 - [UI组件](ui_components/index.md)
 - [高级节点类型](other_node_types/index.md)
+- [事件分发机制](event_dispatcher/index.md)
+- [3D支持](3d/index.md)
 
-
+- [环境搭建](installation/index.md)
 
 ## 致谢
 

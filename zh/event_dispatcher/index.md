@@ -9,3 +9,14 @@ Cocos2d-x 通过事件分发机制响应用户事件，已内置支持常见的�
 * 事件监听器：负责接收事件，并执行预定义的事件处理函数
 * 事件分发器：负责发起通知
 * 事件对象：记录事件的相关信息
+
+## 本章导读
+
+* [监听器](types.md)
+* [优先级](priority.md)
+* [触摸事件](touch.md)
+* [键盘事件](keyboard.md)
+* [加速度传感器事件](accelerometer.md)
+* [鼠标事件](mouse.md)
+* [自定义事件](custom.md)
+* [注册与移除](registering.md)
