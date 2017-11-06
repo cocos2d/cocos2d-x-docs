@@ -22,7 +22,7 @@
 ## 引擎组件
 
 - [精灵(Sprite)](sprites/index.md)
-    - [精灵简介](sprites/index.md)
+    - [简介](sprites/index.md)
     - [精灵创建](sprites/creating.md)
         - [使用图集](sprites/spritesheets.md)
         - [精灵缓存](sprites/spriteframe_cache.md)
@@ -30,18 +30,18 @@
     - [多边形精灵](sprites/polygon.md)
 
 - [动作(Action)](actions/index.md)
-    - [动作简介](actions/index.md)
+    - [简介](actions/index.md)
     - [基本动作](actions/basic.md)
     - [动作序列](actions/sequences.md)
     - [克隆与倒转](actions/sequence_internals.md)
 
 - [场景(Scene)](scenes/index.md)
-    - [场景简介](scenes/index.md)
+    - [简介](scenes/index.md)
     - [场景创建](scenes/creating.md)
     - [场景切换](scenes/transitioning.md)
 
 - [UI组件](ui_components/index.md)
-    - [组件简介](ui_components/index.md)
+    - [简介](ui_components/index.md)
     - [标签(Label)](ui_components/labels.md)
     - [菜单(Menu)](ui_components/menus.md)
     - [按钮(Button)](ui_components/buttons.md)
@@ -85,7 +85,7 @@
     - [脚本组件](scripting/index.md)
 
 - [物理引擎 TODO](physics/index.md)
-    - [物理引擎简介](physics/index.md)
+    - [简介](physics/index.md)
     - [术语与概念](physics/concepts.md)
     - [碰撞](physics/collisions.md)
     - [查询](physics/queries.md)
@@ -96,14 +96,14 @@
     - [背景音乐](audio/playing.md)
     - [声音控制](audio/operations.md)
     - [高级功能](audio/advanced.md)
-    - [提升](audio/engines.md)
+    - [功能提升](audio/engines.md)
 
 - [高级话题 TODO](advanced_topics/index.md)
     - [文件接入](advanced_topics/index.md)
     - [网络操作](advanced_topics/networking.md)
     - [材质与纹理](advanced_topics/shaders.md)
     - [图形性能优化](advanced_topics/optimizing.md)
-    - [SQLite集成](advanced_topics/sqlite.md)
+    - [SQLite 集成](advanced_topics/sqlite.md)
 
 ## 开发环境
 

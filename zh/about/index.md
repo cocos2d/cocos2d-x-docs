@@ -15,12 +15,3 @@
 - AnySDK，是为CP商提供一套第三方SDK接入解决方案，整个接入过程，不改变任何SDK的功能、特性、参数等，让CP商有更多时间更专注于游戏本身的品质。
 
 - 详细内容，见中文官网 [http://www.cocos.com/](http://www.cocos.com/)
-
-## 本章导读
-
-通过阅读本章，您能对 Cocos2d-x 有一个整体的了解
-
-- [引擎优势](why.md)
-- [学习资源](learn.md)
-- [获取帮助](help.md)
-- [支持](how.md)
