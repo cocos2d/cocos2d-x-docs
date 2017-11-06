@@ -20,7 +20,7 @@ gitbook install
 
 ## Preview and Build
 
-To preview the doc, run the following command:
+To preview the doc, run the following command in cocos2d-x-docs dictionary:
 
 ```bash
 gitbook serve

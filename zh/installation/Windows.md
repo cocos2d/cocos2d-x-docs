@@ -1,14 +1,12 @@
-# cocos2d-x 在 Visual Studio 的环境搭建
+# 搭建开发环境 - Windows 平台
 
 ## 工具准备
 
-1. Visual Studio 2015，我们已在 `Visual Studio 2015` 上做了版本功能的完整验证，建议用户使用此IDE，以防止由于版本不同引发编译或运行错误。下载参见：[官网页面](https://www.visualstudio.com/zh-hans/downloads/)，[Visual Studio 2015 发布页面](https://www.visualstudio.com/zh-cn/news/releasenotes/vs2015-update3-vs)。本教程使用的是 **Visual Studio 2015**。
-1. python2.7，安装并配置环境变量，在cmd打开命令行界面，使用 `python --version` 可以获取到python的版本号，表示python安装成功。下载参见：[python官网页面](https://www.python.org/downloads/release/python-2714/)
-1. cocos2d-x v3.16，下载后解压，下载参见：[cocos官网页面](http://www.cocos.com/download)
+1. **Visual Studio 2015**，我们已在 `Visual Studio 2015` 上做了版本功能的完整验证，建议用户使用此IDE，以防止由于版本不同引发编译或运行错误。下载参见：[官网页面](https://www.visualstudio.com/zh-hans/downloads/)，[Visual Studio 2015 发布页面](https://www.visualstudio.com/zh-cn/news/releasenotes/vs2015-update3-vs)。
+1. cocos2d-x v3.16，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
 
 ## 配置步骤
 
-1. 运行 `cocos2d-x-3.16/setup.py`，脚本会自动做一些环境变量的设置，脚本执行过程中遇到的几个需要手动输入的变量，`win32` 的程序不需要，可以选择直接回车跳过。
 1. 双击 `cocos2d-x-3.16\build\cocos2d-win32.sln`， Visual Studio 将打开此解决方案，解决方案打开后，可以看到这样的项目列表：
 
     ![](./Windows-img/cpp-tests-win32-solution.png "")
@@ -24,13 +22,13 @@
     ![](./Windows-img/cpp-tests-win32-debug-breakpoint.png "")
 
 1. 以 debug 模式运行 cpp-tests
-3. 操作 App 触发断点，IDE 将卡在断点处，`Debug`视图会自动跳出，可以查看运行堆栈和变量的值
+1. 操作 App 触发断点，IDE 将卡在断点处，`Debug`视图会自动跳出，可以查看运行堆栈和变量的值
 
     ![](./Windows-img/cpp-tests-win32-debug-trace.png "")
 
 ## FAQ
 
-### 使用 `Visual Studio 2017` 运行 `cpp-tests` 注意事项 
+### 使用 `Visual Studio 2017` 运行 `cpp-tests` 注意事项
 
 1. 由于 `Visual Studio 2017` 默认下载的组件可能与 `cocos2d-x-3.16.zip` 发布包中项目的配置不同，造成打开 `cocos2d-x-3.16\build\cocos2d-win32.sln` 会缺少组件，按照提示安装。
 1. 可能 `Visual Studio 2017` 与 `Visual Studio 2015` 读取配置文件逻辑有差异，`cpp-tests` 未自动设置为启动项目，在项目列表中右键单击此项目，选择 `设为启动项目`。

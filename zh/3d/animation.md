@@ -1,12 +1,12 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 3D 动画
 
-##Animation
-`Sprite3D` objects are essential to our game! We have learned how to manipulate them.
-However, we might want a more rich experience. Enter animation! To run a 3d
-animation, you can use the `Animation3D` and `Animate3D` objects. You then create
-an `Animate3D` action using the `Animation3D` object. Example:
+我们知道 3D 精灵对游戏很重要，也学会了如何操纵，但是可能还希望能有一些更丰富的效果。
+
+那就添加动画吧！
+
+要运行 3D 动画，你需要使用 `Animation3D` 和 `Animate3D` 对象，首先用 `Animation3D` 加载一个动画文件，然后使用 `Animate3D` 完成添加。
+
+示例：
 
 {% codetabs name="C++", type="cpp" -%}
 // the animation is contained in the .c3b file
@@ -19,14 +19,11 @@ auto animate = Animate3D::create(animation);
 sprite->runAction(RepeatForever::create(animate));
 {%- endcodetabs %}
 
-Run the example __Programmer Guide Sample__ code to see this in action! Please
-keep in mind that 3D animations are exactly the same concepts as 2D. Please refer
-to Chapter 4 in this guide.
+去运行本文档的代码示例看看效果，_记住，3D 动画与 2D 动画基本相同。2D 动画可参考本文档的 [第四章](../actions/index.md)_
 
-###Multiple animations
-What do you do when you want to run multiple __animations__ at the same time?
-Using both the __animation start time__ and __animation length__ parameters you
-can create multiple animations. The unit for both parameters is seconds. Example:
+## 多动画
+
+当想同时运行多个动画时，该怎么办？你可以创建多个动画，并指定开始时间和动画长度参数，两个参数的单位都是秒。例如：
 
 {% codetabs name="C++", type="cpp" -%}
 auto animation = Animation3D::create(fileName);
@@ -38,28 +35,15 @@ auto attackAnimate = Animate3D::create(animation, 3, 5);
 sprite->runAction(attackAnimate);
 {%- endcodetabs %}
 
-In the above example there are two animations that get run. The first starts
-immediately and lasts for *2 seconds*. The second starts after *3 seconds* and lasts
-for *5 seconds*.
+在上面的例子中，有两个动画可以运行，第一个从动画启动时开始然后持续 2 秒，第二个在 3 秒时开始然后持续 5 秒。
 
-###Animation speed
-The __speed__ of the animation is a positive integer for forward while
-a negative speed would be reverse. In this case the speed is set to *10*.
-This means that this animation can be considered to be *10* seconds in length.
+## 动画速度
 
-###Animation blending
-When using multiple animations, __blending__ is automatically applied between each
-animation. The purpose of __blending__ is to create a smooth transition between
-effects. Given two animations, A and B, the last few frames of animation A and
-the first few frames of animation B overlap to make the change in animation look
-natural.
+动画速度由一个整数控制，整数的绝对值代表动画的持续时间，整数大于零动画正序播放，整数小于零倒序播放。速度设置为 10 意味着动画在 10 秒内正序播放完。
 
-The default transition time is 0.1 seconds. You can set the transition time by
-using __Animate3D::setTransitionTime__.
+## 动画混合
 
-Cocos2d-x only supports __linear interpolation__ between keyframes. This fills in
-__gaps__ in the curve to ensure a smooth path. If you use other interpolation
-methods in the model production, our built-in tool, __fbx-conv__ will
-generate additional keyframes to compensate. This compensation is completed in
-accordance with the target frame. For more information on __fbx-conv__ please refer
-to the section discussing it at the end of this chapter.
+使用多个动画时，会在每个动画之间自动应用混合，混合的目的是为了创造平滑的过渡。给定两个动画 A 和 B， 动画 A 最后一小段时间的几帧会和动画 B 前一小段时间的几帧重叠，这使得动画的变化看起来很自然。默认的混合的时间是 0.1 秒，你可以使用 `Animate3D::setTransitionTime` 更改默认的混合时间。
+
+Cocos2d-x 支持关键帧之间的线性插值，这能填补曲线上的空白，确保光滑的路径。如果在模型构建时指定了其它插值方法，我们内置的工具 _fbx-conv_ 将生成额外的关键帧，这种补偿通常根据目标框架完成。
+ _有关 fbx-conv 的更多信息，请参考本章末尾的讨论_

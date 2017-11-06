@@ -1,12 +1,23 @@
-{% extends template.self %}
+{% extends template.self %}      
 {% block book_sidebar %}
     <nav role="navigation" class="autoshow">
         <ul class="summary">
         <li><a href="http://cocos.com" class="btn" target="_blank"><img src="http://forum.cocos.com/images/logo.png" height="30" /></a></li>
-        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
-        {% for item in book.navlinks %}
-            <li><a href="{{item.link}}" class="btn"><i class="fa fa-book"></i>{{item.name}}</a></li>
-        {% endfor %}
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>        
+        {% for item in book.products %}
+        {% if item.links %}
+        <li>
+            <a href="#" class="btn"><i class="fa fa-book"></i>{{item.name}}</a>
+            <ul>
+                {% for entry in item.links %}
+                <li><a href="{{entry.link}}" class="btn">{{entry.name}}</a></li>
+                {% endfor %}
+            </ul>
+        </li>                
+        {% else %}
+        <li><a href="{{item.link}}" class="btn"><i class="fa fa-book"></i>{{item.name}}</a></li>
+        {% endif %}
+    {% endfor %}      
         </ul>
     </nav>
     {{ super() }}
@@ -22,27 +33,8 @@
         } else if (path.indexOf('/en') !== -1) {
             path = path.replace(/\/en[\/$\s]/i, '/zh/');
         }
-        // console.log('after: ' + path);
+        // console.log('after: ' + path);    
         location.assign(path);
     }
-    </script>
-
-    <!-- PG languages -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script>
-    $(function() {
-      var key = "Cocos2d-x_pg_lang";
-      var switch_lang = function(l) {
-          $('.langs li a').removeClass('selected');
-          $('#'+l).addClass('selected');
-          $('.tab_content').hide();
-          $('.'+l).show();
-          $.cookie(key, l);
-      }
-      $('.langs li a').click(function() {switch_lang(this.id);return false;});
-      var c = $.cookie(key);
-      if (typeof c == 'undefined') c='tab-cpp';
-      switch_lang(c);
-    });
     </script>
 {% endblock %}

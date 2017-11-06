@@ -3,21 +3,38 @@
         "summary": "SUMMARY.md",
         "readme": "index.md"
     },
-      "root": ".",
     "variables": {
-        "navlinks": [
+        "products": [
             {
-                "name": "Creator Manual",
-                "link": "http://docs.cocos.com/creator/api/en"
+                "name": "Cocos Creator",
+                "links": [
+                    {
+                        "name": "Manual",
+                        "link": "http://docs.cocos.com/creator/manual/en"
+                    },
+                    {
+                        "name": "API",
+                        "link": "http://docs.cocos.com/creator/api/en"
+                    }  
+                ]
             },
             {
-                "name": "Creator Engine API",
-                "link": "http://docs.cocos.com/creator/api/en"
+                "name": "Cocos2d-x",
+                "links": [
+                    {
+                        "name": "Manual",
+                        "link": "http://www.cocos.com/cocos2d-x/manual/en"
+                    },
+                    {
+                        "name": "API",
+                        "link": "http://www.cocos2d-x.org/docs/api-ref/index.html"
+                    }
+                ]
             },
             {
-                "name": "Cocos2d-x Docs",
-                "link": "http://cocos2d-x.org/docs/index.html"
-            }
+                "name": "AnySDK",
+                "link": "http://docs.anysdk.com/"
+            }  
         ]
-    }
+    }   
 }

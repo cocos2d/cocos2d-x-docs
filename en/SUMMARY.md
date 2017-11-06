@@ -102,8 +102,8 @@
 -  [VR (virtual reality)](vr/index.md)
     - [Getting Started](vr/index.md)
 
--  [Installations](installation/A.md)
-    - [Prerequisites](installation/A.md)
+-  [Installations](installation/index.md)
+    - [Prerequisites](installation/index.md)
     - [Android](installation/Android-terminal.md)
       - [Android - command-line](installation/Android-terminal.md)
       - [Android - Visual Studio](installation/Android-VisualStudio.md)
