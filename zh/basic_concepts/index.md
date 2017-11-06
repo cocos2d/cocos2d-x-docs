@@ -24,14 +24,3 @@ Cocos2d-x 就是这样的一个游戏引擎，它提供了许多易于使用的�
 
 能看到一个菜单(Menu)，几个精灵(Sprite)，和几个标签(Label)，观察一下喜欢的游戏，会发现这些组件以某种形式存在其中。
 
-## 本章导读
-
-通过阅读本章，您能对 Cocos2d-x 引擎的基本概念有初步的理解：
-
-- [导演(Director)](director.md)
-- [场景(Scene)](scene.md)
-- [精灵(Sprite)](sprites.md)
-- [动作(Action)](actions.md)
-- [序列(Sequence)](sequences.md)
-- [节点关系](parent_child.md)
-- [日志输出](logging.md)

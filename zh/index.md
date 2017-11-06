@@ -2,20 +2,6 @@
 
 欢迎使用 Cocos2d-x 用户手册，本手册包含引擎的介绍，功能组件的使用方法以及引擎在多个平台的环境搭建。能够帮助您快速上手 Cocos2d-x ，并开始进行跨平台游戏的开发。
 
-## 导读
-
-- [了解引擎](about/index.md)
-- [基本概念](basic_concepts/index.md)
-- [精灵(Sprite)](sprites/index.md)
-- [动作(Action)](actions/index.md)
-- [场景(Scene)](scenes/index.md)
-- [UI组件](ui_components/index.md)
-- [高级节点类型](other_node_types/index.md)
-- [事件分发机制](event_dispatcher/index.md)
-- [3D支持](3d/index.md)
-
-- [环境搭建](installation/index.md)
-
 ## 致谢
 
  __作者:__ SlackMoehrle, Ricardo, Justin, Nite, Kai, Minggo, Wenhai, Tony, Yingtao, Rao, Huabin, Zhe
