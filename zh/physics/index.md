@@ -1,22 +1,10 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 简介
 
-## Physics
-Your game is coming along nicely. You have `Sprite` objects, gameplay mechanics
-and your coding efforts are paying off. You are starting to feel like your game
-is playable. What do you do when you realize your game needs to simulate real
-world situations? You know, __collision detection__, __gravity__, __elasticity__ and
-__friction__. Yes, you guessed it! This chapter is on __physics__ and the use of a
-__physics engine__. Let's explore the *when*, *wheres* and *whys* of using a
-__physics engine__.
+学过之前的那些章节，你就能做出来一款好玩的小游戏了，可是当你试图做一款复杂的游戏，那游戏需要模拟现实世界的情境，比如模拟两个物体碰撞，模拟物体受到重力，你就不知道该怎么办了。别担心，本章就介绍物理引擎，让我们来探索一下如何合理的使用物理引擎！
 
-### Physics is scary, do I really need it? Please tell me no!
-Please don't run away there are no physics monsters under your bed! Your needs
-might be simple enough to not need to use a __physics engine__. Perhaps a combination
-of using a `Node` objects __update()__ function, `Rect` objects and a combination
-of the __containsPoint()__ or __intersectsRect()__ functions might be enough for
-you? Example:
+## 是否需要使用物理引擎
+
+当你的需求很简单时，就不要使用物理引擎。比如只需要确定两个对象是否有碰撞，结合使用节点对象的 `update` 函数和 Rect 对象的 `containsPoint()`，`intersectsRect()` 方法可能就足够了。例如：
 
 {% codetabs name="C++", type="cpp" -%}
 void update(float dt)
@@ -31,13 +19,9 @@ void update(float dt)
 }
 {%- endcodetabs %}
 
-This mechanism works for __very simple__ needs, but doesn't scale. What if you had
-100 `Sprite` objects all continuously updating to check for intersections with
-other objects? It could be done but the the CPU usage and __framerate__ would suffer
-severely. Your game would be unplayable. A __physics engine__ solves these concerns
-for us in a scalable and CPU friendly way. Even though this might look foreign,
-let's take a look at a simple example and then nut and bolt the example,
-terminology and best practice together.
+这种检查交集以确定两个对象是否有碰撞的方法，只能解决非常简单的需求，无法扩展。比如你要开发一个游戏，一个场景有 100 个精灵对象，需要判断它们互相是否有碰撞，如果使用这种方式那将非常复杂，同时性能消耗还会严重影响 CPU 的使用率和游戏运行的帧率，这游戏根本没法玩。
+
+这个时候就需要物理引擎了，在模拟物理情景上，物理引擎的扩展性好，性能的消耗也低。像刚才提到的那个情景，使用物理引擎就能很好的解决。第一次了解物理引擎的话，肯定会觉得这些很陌生，我们来看一个简单的例子，通过例子来介绍术语，或许会容易接受一些。
 
 {% codetabs name="C++", type="cpp" -%}
 // create a static PhysicsBody
@@ -57,12 +41,11 @@ contactListener->onContactBegin = CC_CALLBACK_1(onContactBegin, this);
 _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 {%- endcodetabs %}
 
-Even though this example is simple, it looks complicated and scary. It really
-isn't if we look closely. Here are the steps that are happening:
+尽管例子很简单，代码只有几行，但实际上内部做了相当复杂的工作。仔细观察，发生的步骤：
 
-  * A `PhysicsBody` object is created.
-  * A `Sprite` object is created.
-  * The `Sprite` object applies the properties of the `PhysicsBody` object.
-  * A listener is created to respond to an __onContactBegin()__ event.
+  1. `PhysicsBody` 对象创建
+  1. `Sprite` 对象创建
+  1. The `Sprite` object applies the properties of the `PhysicsBody` object.
+  1. A listener is created to respond to an __onContactBegin()__ event.
 
 Once we look step by step the concept starts to make sense.
