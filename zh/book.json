@@ -9,11 +9,11 @@
                 "name": "Cocos Creator",
                 "links": [
                     {
-                        "name": "Manual",
+                        "name": "手册文档",
                         "link": "http://docs.cocos.com/creator/manual/zh"
                     },
                     {
-                        "name": "API",
+                        "name": "API 参考",
                         "link": "http://docs.cocos.com/creator/api/zh"
                     }  
                 ]
@@ -22,12 +22,12 @@
                 "name": "Cocos2d-x",
                 "links": [
                     {
-                        "name": "Manual",
+                        "name": "手册文档",
                         "link": "http://www.cocos.com/cocos2d-x/manual/zh"
                     },
                     {
-                        "name": "API",
-                        "link": "http://www.cocos.com/cocos2d-x/api/zh"
+                        "name": "API 参考",
+                        "link": "http://api.cocos.org/"
                     }
                 ]
             },
