@@ -25,7 +25,7 @@
     - [简介](sprites/index.md)
     - [精灵创建](sprites/creating.md)
         - [使用图集](sprites/spritesheets.md)
-        - [精灵缓存](sprites/spriteframe_cache.md)
+        - [使用精灵缓存](sprites/spriteframe_cache.md)
     - [精灵控制](sprites/manipulation.md)
     - [多边形精灵](sprites/polygon.md)
 
@@ -67,7 +67,7 @@
     - [加速度传感器事件](event_dispatcher/accelerometer.md)
     - [鼠标事件](event_dispatcher/mouse.md)
     - [自定义事件](event_dispatcher/custom.md)
-    - [注册与移除](event_dispatcher/registering.md)
+    - [进阶话题](event_dispatcher/registering.md)
 
 - [3D支持](3d/index.md)
     - [术语](3d/index.md)
