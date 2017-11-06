@@ -109,7 +109,7 @@
       - [Android - Visual Studio](installation/Android-VisualStudio.md)
       - [Android - Studio](installation/Android-Studio.md)
       - [Android - Eclipse](installation/Android-Eclipse.md)
-    - [IOS](installation/iOS.md)
+    - [iOS](installation/iOS.md)
     - [Mac OS X](installation/OSX.md)
     - [Linux](installation/Linux.md)
     - [Tizen](installation/Tizen.md) __**DEPRECATED**__

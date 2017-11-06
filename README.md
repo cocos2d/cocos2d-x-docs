@@ -1,10 +1,30 @@
 # Cocos Documentation User Manual
 
+### Contributing to these docs
+We always welcome contributions to our documentation.
+
+  - Fork our [docs repo](https://github.com/cocos2d/cocos2d-x-docs)
+  - __en/__ is for English contributions, __zh/__ is for 中文 contributions.
+  - code blocks must be wrapped in special code to work correctly:
+    - C++ only code block:
+      ```html
+      {% codetabs name="C++", type="cpp" -%}
+      auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
+      {%- endcodetabs %}
+      ```
+    - C++ and JavaScript code block:
+      ```html
+      {% codetabs name="C++", type="cpp" -%}
+      auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
+      {%- language name="JavaScript", type="js" -%}
+      var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));
+      {%- endcodetabs %}
+      ```
+  - Test your changes using `gitbook build` and `gitbook serve`. Please test in a few web browsers. See [Requirements](#Requirements).
+  - Submit a *pull request* with your changes and we will review and merge it.
+
 ## Requirements
-
-This documentation site is powered by [GitBook](https://www.gitbook.com/). You can check out the online version [here](zzz).
-
-You need [Node.js](https://nodejs.org/en/) and npm to be able to build the site.
+This documentation site is powered by [GitBook](https://www.gitbook.com/). You need [Node.js](https://nodejs.org/en/) and npm to be able to build the site.
 
 To install gitbook:
 
@@ -19,7 +39,6 @@ gitbook install
 ```
 
 ## Preview and Build
-
 To preview the doc, run the following command in cocos2d-x-docs dictionary:
 
 ```bash
@@ -33,38 +52,3 @@ If you just want to build the markdown to html, use this command:
 ```bash
 gitbook build
 ```
-
-You can also build the doc for ebook formats (PDF, ePub, mobi), please following this guide:
-
-https://toolchain.gitbook.com/ebook.html
-
-## Content Editing
-
-The markdown source of this book is in language specific folders [/en](en) and [/zh](zh). Language options are registered in [LANGS.md](LANGS.md) file.
-
-### Index
-
-In each language folder there is an [SUMMARY.md](en/SUMMARY.md) file, which contains all the pages to build and also this file serves as a sidebar navigation list. Any markdown source file that are not listed in this index will not be build.
-
-In this index file, just write links to each markdown file in a list. Indented list is for chapters that contains expandable subs. For example:
-
-```md
-- [Using Editor](getting-started/basics/editor-overview.md)
-	- [Assets](getting-started/basics/editor-panels/assets.md)
-	- [Scene](getting-started/basics/editor-panels/scene.md)
-	- [Node Tree](getting-started/basics/editor-panels/node-tree.md)
-```
-
-Will create a toggleable chapter title `Using Editor`. Once clicked all its subs will show up.
-
-### Front page
-
-[index.md](en/index.md) at each language folder is the front page of the doc.
-
-### Page content
-
-To change the content of each page, just edit the markdown source files. There's no specific front matter format, just make sure each page has a `h1` as the title.
-
-## Contribution
-
-If you encounters any typo or content problem please report issue in this repo. Pull requests are welcome!

@@ -15,7 +15,6 @@ help you here.
 In `AppDelegate.cpp`, notice the following methods:
 
 {% codetabs name="C++", type="cpp" -%}
-```cpp
 // This function will be called when the app is inactive. When comes a phone call,
 // it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
@@ -34,14 +33,16 @@ void AppDelegate::applicationWillEnterForeground() {
 }
 {%- endcodetabs %}
 
-Notice the commented out lines for `SimpleAudioEngine`? Make sure to uncomment these
-lines out if you are using audio for background sounds and sound effects.
+Notice the commented out lines for `SimpleAudioEngine`? Make sure to uncomment these lines out if you are using audio for background sounds and sound effects.
 
 ###Pre-loading sound
 When your game starts you might want to pre-load the music and effects so they
 are ready when you need them.
 
 {% codetabs name="C++", type="cpp" -%}
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
+
 auto audio = SimpleAudioEngine::getInstance();
 
 // pre-loading background music and effects. You could pre-load
@@ -63,6 +64,9 @@ audio->unloadEffect("myEffect1.mp3");
 You can increase and decrease the volume of your sounds and music programmatically.
 
 {% codetabs name="C++", type="cpp" -%}
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
+
 auto audio = SimpleAudioEngine::getInstance();
 
 // setting the volume specifying value as a float

@@ -10,7 +10,7 @@ When doing optimization, we should always stick to this rule. Only 20% code in y
 
 #### Always use tools to profile the bottleneck, don't guess randomly.
 There are many tools available now for profiling the graphics performance.
-Though we are optimize the performance of Android games, but XCode could also be helpful to debugging.
+Though we are optimize the performance of Android games, but Xcode could also be helpful to debugging.
 
 - Xcode: https://github.com/rstrahl/rudistrahl.me/blob/master/entries/Debugging-OpenGL-ES-With-Xcode-Profile-Tools.md
 and the official document: https://developer.apple.com/library/ios/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/ToolsOverview/ToolsOverview.html
