@@ -23,11 +23,11 @@
                 "links": [
                     {
                         "name": "Manual",
-                        "link": "http://www.cocos.com/docs/native/"
+                        "link": "http://www.cocos.com/cocos2d-x/manual/zh"
                     },
                     {
                         "name": "API",
-                        "link": "http://www.cocos.com/docs/native/"
+                        "link": "http://www.cocos.com/cocos2d-x/api/zh"
                     }
                 ]
             },
