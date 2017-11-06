@@ -1,22 +1,12 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 使用脚本
 
-## Scripting
+## 脚本组件
 
-### Script component
-__Script component__ is used to extend c++ `Node` objects. You can add a
-__script component__ to a `Node`, then the __script component__ will receive
-__onEnter__, __onExit__ and __update__ events.
+脚本组件是用来扩展 C++ 节点对象的一种方式，你可以将脚本组件绑定到节点对象上，然后脚本组件就能收到 `onEnter`，`onExit` 和 `update` 事件。
 
-__Script component__ supports both JavaScript and LUA. You should use the proper
-__script component__ type for the language you are developing with. If you are
-developing with JavaScript, you would use `ComponentJS`, if you are developing
-with Lua, you would use `ComponentLUA`. But, you cannot mix them or use them in
-a c++ project! This is because the proper bindings for that language are required
-and these bindings are only available in their respective project types.
+脚本组件支持两种脚本语言 JavaScript 和 Lua，使用的脚本组件应该和绑定脚本的语言类型对应，比如 `ComponentJS` 用来绑定 JavaScript 脚本，`ComponentLua` 用来绑定 Lua 脚本。有了脚本组件，你就可以在 Cocos2d-x 的项目中，很方便的使用脚本进行一些控制。需要注意的是，在一个项目中不能混用脚本组件，也就是说一个项目要么只使用 JavaScript 脚本，要么只使用 Lua 脚本。
 
-Example with Lua:
+使用 Lua 脚本：
 
 {% codetabs name="C++", type="cpp" -%}
 // create a Sprite and add a LUA component
@@ -47,8 +37,7 @@ local player = {
 return player
 {%- endcodetabs %}
 
-
-Example with JavaScript:
+使用 JavaScript 脚本:
 
 {% codetabs name="C++", type="cpp" -%}
 // create a Sprite and add a LUA component
@@ -57,7 +46,6 @@ auto player = Sprite::create("player.png");
 auto jsComponent = ComponentJS::create("player.js");
 player->addComponent(jsComponent);
 {%- endcodetabs %}
-
 
 {% codetabs name="JavaScript", type="js" -%}
 // player.js
@@ -116,14 +104,9 @@ Player = cc.ComponentJS.extend({
 });
 {%- endcodetabs %}
 
-One difference to keep in mind, between JavaScript and LUA components, is you
-should return the __object__ in LUA component, in JavaScript, you only have to
-extend `cc.ComponentJS`
+注意，两种组件的使用上，有一个重要的区别。使用 Lua 组件，Lua 脚本最后需要返回 Lua 对象，使用 JavaScript 组件，JavaScript 脚本需要扩展 `cc.ComponentJS`。
 
-For more detailed usage, please refer to tests projects: `tests/lua-tests/src/ComponentTest` and
-`tests/js-tests/src/ComponentTest`.
-
-
+更详细用法，请参考 Cocos2d-x 引擎的测试项目：`tests/lua-tests/src/ComponentTest` and `tests/js-tests/src/ComponentTest`。
 
 
 <!--# Chapter 10: Lua
