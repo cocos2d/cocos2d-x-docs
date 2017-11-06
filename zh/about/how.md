@@ -1,4 +1,4 @@
-# 支持 Cocos2d-x
+# 参与 Cocos2d-x 的开发
 
 ## 上报 BUG
 

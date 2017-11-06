@@ -7,7 +7,7 @@
     - [引擎优势](about/why.md)
     - [学习资源](about/learn.md)
     - [获取帮助](about/help.md)
-    - [支持](about/how.md)
+    - [参与开发](about/how.md)
 
 - [基本概念](basic_concepts/index.md)
     - [简介](basic_concepts/index.md)
@@ -81,15 +81,15 @@
     - [常用工具](3d/tools.md)
     - [进阶话题](3d/advanced.md)
 
-- [使用脚本](index.md)
-    - [脚本组件]()
+- [使用脚本](scripting/index.md)
+    - [脚本组件](scripting/index.md)
 
-- [物理引擎](index.md)
-    - [物理引擎简介]()
-    - [术语与概念]()
-    - [碰撞]()
-    - [查询]()
-    - [调试]()
+- [物理引擎](physics/index.md)
+    - [物理引擎简介](physics/index.md)
+    - [术语与概念](physics/concepts.md)
+    - [碰撞](physics/collisions.md)
+    - [查询](physics/queries.md)
+    - [调试](physics/debugging.md)
 
 - [声音和音效](index.md)
     - [简介]()
