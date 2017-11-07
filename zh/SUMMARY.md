@@ -40,7 +40,7 @@
     - [场景创建](scenes/creating.md)
     - [场景切换](scenes/transitioning.md)
 
-- [UI组件](ui_components/index.md)
+- [UI 组件](ui_components/index.md)
     - [简介](ui_components/index.md)
     - [标签(Label)](ui_components/labels.md)
     - [菜单(Menu)](ui_components/menus.md)
@@ -69,10 +69,10 @@
     - [自定义事件](event_dispatcher/custom.md)
     - [进阶话题](event_dispatcher/registering.md)
 
-- [3D支持](3d/index.md)
+- [3D 支持](3d/index.md)
     - [术语](3d/index.md)
-    - [3D精灵(Sprite3D)](3d/sprite3d.md)
-    - [3D动画(Animation3D)](3d/animation.md)
+    - [3D 精灵](3d/sprite3d.md)
+    - [3D 动画](3d/animation.md)
     - [相机(Camera)](3d/camera.md)
     - [立方体纹理(TextureCube)](3d/cubemap.md)
     - [天空盒(Skybox)](3d/skybox.md)
