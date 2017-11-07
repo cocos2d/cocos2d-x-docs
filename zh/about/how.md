@@ -34,12 +34,12 @@ git submodule update --init
 - 为本次代码提交创建一个新分支 如：`$ git checkout -b my_fix_branch`
 - `push` 新分支到自己的 GitHub 公共仓库
 - 创建一个 `Pull request` 给 `cocos2d/cocos2d-x`
-- 改动一定要是很完善的，并且符合发布规则，参考下面：
+- 改动一定要完善，并且符合发布规则，参考下面：
 
 ## 补丁要求
 
-- C++ 代码遵循[代码风格](https://github.com/cocos2d/cocos2d-x/blob/v3/docs/CODING_STYLE.md)
-- Python 代码遵循[代码风格](https://www.python.org/dev/peps/pep-0008/)
+- C++ 代码遵循 [代码风格](https://github.com/cocos2d/cocos2d-x/blob/v3/docs/CODING_STYLE.md)
+- Python 代码遵循 [代码风格](https://www.python.org/dev/peps/pep-0008/)
 - 描述补丁的功能
 - 包括测试用例（如果适用）
 - 包括单元测试（如果适用）
