@@ -1,20 +1,12 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 碰撞
 
-##Collision
-Have you ever been in a car accident? What did you collide with? Just like with
-cars, `PhysicBody` objects can come in contact. __Collisions__ are what happens when
-`PhysicBody` objects come in contact with each other. When a __collision__ takes
-place it can be ignored or it can trigger events to be fired.
+你是否看到过车祸？是否跟什么物体相撞过？就像车的相撞一样，物理刚体对象也可以互相碰撞，当它们互相接触的时候，就认为发生了碰撞。当碰撞发生时，它可以被完全忽略，也可以触发一系列事件。
 
-###Filtering Collisions
-Collision filtering allows you to enable or prevent collisions between shapes.
-This __physics engine__ supports collision filtering using __category and group bitmasks__.
+## 碰撞筛选
 
-There are 32 supported collision categories. For each shape you can specify which
-category it belongs to. You can also specify what other categories this shape can
-collide with. This is done with masking bits. For example:
+碰撞筛选允许你启用或者阻止形状之间碰撞的发生，引擎支持使用类型，组位掩码来筛选碰撞。
+
+Cocos2d-x 有 32 个支持的碰撞类型，对于每个形状都可以指定其所属的类型。还可以指定有哪些类型可以与这个形状进行碰撞，这些事通过掩码来完成的。例如：
 
 {% codetabs name="C++", type="cpp" -%}
 auto sprite1 = addSpriteAtPosition(Vec2(s_centre.x - 150,s_centre.y));
@@ -32,10 +24,13 @@ sprite2->getPhysicsBody()->setCollisionBitmask(0x02);   // 0010
 auto sprite3 = addSpriteAtPosition(Vec2(s_centre.x + 150,s_centre.y + 100),2);
 sprite3->getPhysicsBody()->setCategoryBitmask(0x03);    // 0011
 sprite3->getPhysicsBody()->setCollisionBitmask(0x03);   // 0011
-```
-You can check for collisions by checking and comparing _category_ and _collision_
-bitmasks like:
-```cpp
+
+}
+{%- endcodetabs %}
+
+你可以通过检查比较，类型和掩码来确定碰撞的发生：
+
+{% codetabs name="C++", type="cpp" -%}
 if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
    || (shapeB->getCategoryBitmask() & shapeA->getCollisionBitmask()) == 0)
 {
@@ -46,13 +41,10 @@ if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
 
 ![](physics-img/CollisionFiltering.gif )
 
-Collision groups let you specify an integral group index. You can have all shapes
-with the same group index always collide (positive index) or never collide (negative
-index and zero index). Collisions between shapes of different group indices are
-filtered according the category and mask bits. In other words, group filtering has
-higher precedence than category filtering.
+碰撞组允许你指定一个完整的组索引，你可以让具有相同组索引的形状总是一直碰撞（正索引）或者永不碰撞（负索引和零索引）。对于组索引不同的形状。可以根据类型和掩码进行筛选。换句话说，组筛选比类型筛选具有更高的优先级。
 
-###Contacts/Joints
+## 连接/关节
+
 Recall from the terminology above that __joints__ are how contact points are connected
 to each other. Yes, you can think of it just like __joints__ on your own body.
 Each joint type has a definition that derives from `PhysicsJoint`. All joints are
@@ -91,7 +83,8 @@ on the joint type.
 
 ![](physics-img/joints.PNG )
 
-###Collision detection
+## 碰撞检测
+
 Contacts are objects created by the __physics engine__ to manage the collision
 between two shapes. __Contact__ objects are not created by the user, they are
 created automatically. There are a few terms associated with contacts.
