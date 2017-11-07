@@ -45,8 +45,7 @@ _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 
   1. `PhysicsBody` 对象创建
   1. `Sprite` 对象创建
-  1. The `Sprite` object applies the properties of the `PhysicsBody` object.
   1. `PhysicsBody` 对象以组件的形式被添加到 `Sprite` 对象
-  1. 创建监听器以响应 `onContactBegin()` 事件.
+  1. 创建监听器以响应 `onContactBegin()` 事件
 
 保持耐心，一步一步的去分析，慢慢的就能理解整个过程
