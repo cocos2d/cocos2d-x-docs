@@ -1,12 +1,12 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 术语和概念
 
-## Physics terminology and concepts
 To better understand all the details of a __physics engine__ you should understand
 the following terms and concepts:
 
+为了更好的理解物理引擎，需要先了解下面的一些术语，概念。
+
 ### Bodies
+
 A `PhysicsBody` holds the physical properties of an object. These include __mass__,
 __position__, __rotation__, __velocity__ and __damping__. `PhysicsBody` objects
 are the backbone for shapes. A `PhysicsBody` does not have a shape until you attach

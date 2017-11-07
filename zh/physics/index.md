@@ -41,11 +41,13 @@ contactListener->onContactBegin = CC_CALLBACK_1(onContactBegin, this);
 _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 {%- endcodetabs %}
 
-尽管例子很简单，代码只有几行，但实际上内部做了相当复杂的工作。仔细观察，发生的步骤：
+虽然上面这个例子已经很简单了，但你可能还是觉得它复杂得有点吓人？别害怕，仔细的分析一下，就会发现也没那么复杂。
+
+代码流程：
 
   1. `PhysicsBody` 对象创建
   1. `Sprite` 对象创建
   1. `PhysicsBody` 对象以组件的形式被添加到 `Sprite` 对象
   1. 创建监听器以响应 `onContactBegin()` 事件
 
-保持耐心，一步一步的去分析，慢慢的就能理解整个过程
+保持耐心，一旦我们一步一步的去分析，慢慢的就能理解这个过程。
