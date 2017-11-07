@@ -1,76 +1,47 @@
 # 术语和概念
 
-To better understand all the details of a __physics engine__ you should understand
-the following terms and concepts:
-
 为了更好的理解物理引擎，需要先了解下面的一些术语，概念。
 
-### Bodies
+## 刚体(Bodies)
 
-A `PhysicsBody` holds the physical properties of an object. These include __mass__,
-__position__, __rotation__, __velocity__ and __damping__. `PhysicsBody` objects
-are the backbone for shapes. A `PhysicsBody` does not have a shape until you attach
-a shape to it.
+刚体描述了抽象物体的物理属性，包括：质量、位置、旋转角度、速度和阻尼。Cocos2d-x 中用 `PhysicsBody` 对象表示刚体。当 _Shape_ 和 `PhysicsBody` 关联后，`PhysicsBody` 对象才具有几何形状，未关联 _Shape_， `PhysicsBody` 只是一个抽象物体的属性集。
 
-###Material
-Materials describe material attributes：
+## 材质(Material)
 
-  >-density：It is used to compute the mass properties of the parent body.
+材质描述了抽象物体的材料属性：
 
-  >-friction：It is used to make objects slide along each other realistically.
+  >- 密度：用于计算物体的质量
+  >- 摩擦：用于模拟物体间的接触滑动
+  >- 恢复系数：模拟物体的反弹的系数，系数一般设为 0 到 1 之间。0 代表不反弹，1 代表完全反弹。
 
-  >-restitution：It is used to make objects bounce. The restitution value is
- usually set to be between 0 and 1. 0 means no bouncing while 1 means perfect
- bouncing.
+## 形状(Shape)
 
-###Shapes
-Shapes describe collision geometry. By attaching shapes to bodies, you define a
-body’s shape. You can attach as many shapes to a single body as you need in order
-to define a complex shape. Each shape relates to a `PhysicsMaterial` object and
-contains the following attributes: __type__, __area__, __mass__, __moment__, __offset__ and
-__tag__. Some of these you might not be familiar with:
+形状(Shape) 描述了抽象物体的几何属性，将 _Shape_ 关联到刚体，刚体就具有了形状。如果需要刚体具有复杂的形状，可以为它关联多个 _Shape_，每个 _Shape_ 都与一个 `PhysicsMaterial` 相关，并且拥有以下属性：type（种类）, area（面积）, mass（质量）, moment（扭矩）, offset（重心偏移量）和 tag（标签）。其中有一些你可能还不熟悉，我们来逐一介绍：
 
-  >-_type_：describes the categories of shapes, such as circle, box, polygon, etc.
+  >- type（种类）：描述了形状的类别，如圆形，矩形，多边形等
+  >- area（面积）：用于计算刚体的质量，密度和体积决定了刚体的质量
+  >- mass（质量）：刚体的质量，影响：物体在给定的力下获得的加速度大小，物体在一个引力场中物体受到力的大小
+  >- moment（扭矩）：决定了获得特定角加速度所需要的扭矩
+  >- offset（重心偏移量）：在刚体的当前坐标中，相对于刚体重心的偏移量
+  >- tag（标签）：_Shape_ 对象的一个标识，你可能还记得，所有的 Node 对象都可以被分配一个 tag，以进行辨识，实现更容易的访问。_Shape_ 对象的 tag 作用也一样。
 
-  >-_area_: used to compute the mass properties of the body. The density and area
-gives the mass.
+Cocos2d-x 中预定义了这些形状：
 
-  >-_mass_: the quantity of matter that a body contains, as measured by its
-acceleration under a given force or by the force exerted on it by a gravitational
-field.
+  >- `PhysicsShape`：实现了 `PhysicsShape` 的基类
+  >- `PhysicsShapeCircle`：实心的圆形，无法用 `PhysicsShapeCircle` 实现一个空心圆
+  >- `PhysicsShapePolygon`：实心且外凸的多边形
+  >- `PhysicsShapeBox`：矩形，它是一种特殊的外凸多边形
+  >- `PhysicsShapeEdgeSegment`：表示一种线段.
+  >- `PhysicsShapeEdgePolygon`：空心多边形，由多个线段构成的多边形边缘。
+  >- `PhysicsShapeEdgeBox`：空心矩形，由四个线段组成的矩形边缘
+  >- `PhysicsShapeEdgeChain`: 链形形状，它可以有效的把许多边缘连接起来
 
-  >-_moment_: determines the torque needed for a desired angular acceleration.
+## 连接/关节
 
-  >-_offset_: offset from the body’s center of gravity in body local coordinates.
+_连接(Contacts)_ 和 _关节(joint)_ 对象描述了刚体相互关联的方式。
 
-  >-_tag_: used to identify the shape easily for developers.​ You probably remember
-that you can assign all `Node` objects a tag for identification and easy access.
+## 世界(World)
 
-We describe the various __shapes__ as:
-  >-`PhysicsShape`: Shapes implement the `PhysicsShape` base class.
-
-  >-`PhysicsShapeCircle`: Circles are solid. You cannot make a hollow circle
- using the circle shape.
-
-  >-`PhysicsShapePolygon`: Polygon shapes are solid convex polygons.
-
-  >-`PhysicsShapeBox`: Box shape is one kind of convex polygon.
-
-  >-`PhysicsShapeEdgeSegment`: A segment shape.
-
-  >-`PhysicsShapeEdgePolygon`: Hollow polygon shapes. A edge-polygon shape consists
- of multiple segment shapes.
-
-  >-`PhysicsShapeEdgeBox`：Hollow box shapes. A edge-box shape consists of four
- segment shapes.
-
-  >-`PhysicsShapeEdgeChain`: The chain shape provides an efficient way to connect
- many edges together.
-
-###Contacts/Joints
-__Contacts__ and __joint__ objects describe how bodies are attached to each other.
-
-###World
 A __world__ container is what your physics bodies are added to and where they are
 simulated. You add __bodies__, __shapes__ and __constraints__ to a world and then
 update the world as a whole. The __world__ controls how all of these items interact
