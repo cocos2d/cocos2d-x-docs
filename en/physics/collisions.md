@@ -30,7 +30,8 @@ sprite2->getPhysicsBody()->setCollisionBitmask(0x02);   // 0010
 auto sprite3 = addSpriteAtPosition(Vec2(s_centre.x + 150,s_centre.y + 100),2);
 sprite3->getPhysicsBody()->setCategoryBitmask(0x03);    // 0011
 sprite3->getPhysicsBody()->setCollisionBitmask(0x03);   // 0011
-```
+{%- endcodetabs %}
+
 You can check for collisions by checking and comparing _category_ and _collision_ bitmasks like:
 
 {% codetabs name="C++", type="cpp" -%}
