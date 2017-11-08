@@ -4,7 +4,7 @@
 
 ## 碰撞筛选
 
-碰撞筛选允许你启用或者阻止形状之间碰撞的发生，引擎支持使用类型，组位掩码来筛选碰撞。
+碰撞筛选允许你启用或者阻止形状之间碰撞的发生，引擎支持使用类型，组位掩码来进行碰撞筛选。
 
 Cocos2d-x 有 32 个支持的碰撞类型，对于每个形状都可以指定其所属的类型。还可以指定有哪些类型可以与这个形状进行碰撞，这些是通过掩码来完成的。例如：
 
@@ -39,9 +39,9 @@ if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
 }
 {%- endcodetabs %}
 
-![](physics-img/CollisionFiltering.gif )
+![](../../en/physics/physics-img/CollisionFiltering.gif )
 
-碰撞组允许你指定一个完整的组索引，你可以让具有相同组索引的形状总是一直碰撞（正索引）或者永不碰撞（负索引和零索引）。对于组索引不同的形状。可以根据类型和掩码进行筛选，也就是说，组筛选比类型筛选具有更高的优先级。
+碰撞组允许你指定一个完整的组索引，你可以让具有相同组索引的形状总是一直碰撞（正索引）或者一直不碰撞（负索引和零索引）。对于组索引不同的形状。可以根据类型和掩码进行筛选，也就是说，组筛选比类型筛选具有更高的优先级。
 
 ## 连接/关节
 
@@ -58,11 +58,11 @@ if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
 >- `PhysicsJointGear`：传动关节，使一对刚体的角速度比值保持不变。
 >- `PhysicsJointMotor`：马达关节，使一对刚体的相对角速度保持不变。
 
-![](physics-img/joints.PNG )
+![](../../en/physics/physics-img/joints.PNG )
 
 ## 碰撞检测
 
-__碰撞(Contact)__ 是一种由物理引擎创建的用于管理两个形状碰撞的对象。`Contact` 对象不是由用户手动创建的，而是自动创建的。这里有两个相关的术语。
+__碰撞(Contact)__ 是一种由物理引擎创建的用于管理两个形状碰撞的对象。`Contact` 对象不是由用户手动创建的，而是自动创建的。这里有两个相关的术语：
 
 >- contact point：碰撞点指两个形状相接触的那个点
 >- contact normal：碰撞法线指从一个形状指向另一个形状的单位矢量
@@ -85,8 +85,8 @@ bool onContactBegin(PhysicsContact& contact)
 >- __post-solve__：收到这个事件时两个形状已经接触，并且它们的碰撞已被处理。
 >- __separate__：收到这个事件时两个形状刚刚停止了接触。
 
-你还可以使用 `EventListenerPhysicsContactWithBodies`，
-`EventListenerPhysicsContactWithShapes`，`EventListenerPhysicsContactWithGroup` 来监听你感兴趣的刚体，形状，组的一些事件。额外的，还需要设置与物理碰撞相关的掩码。_因为默认情况下单单创建事件监听器，是收不到碰撞事件的。_
+你还可以使用 `EventListenerPhysicsContactWithBodies`, 
+`EventListenerPhysicsContactWithShapes`, `EventListenerPhysicsContactWithGroup` 来监听你感兴趣的刚体，形状，组的一些事件。额外的，还需要设置与物理碰撞相关的掩码。_注意：默认情况下单单创建事件监听器，是收不到碰撞事件的。_
 
 示例：
 
@@ -141,4 +141,4 @@ bool onContactBegin(PhysicsContact& contact)
 }
 {%- endcodetabs %}
 
-![](physics-img/CollisionProcessing.gif)
+![](../../en/physics/physics-img/CollisionProcessing.gif)

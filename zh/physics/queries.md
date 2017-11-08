@@ -1,6 +1,6 @@
 # 查询
 
-你肯定有站着一个地方往四周看的经历？你能看到离你近的地方，也能看到离你远的东西，你能判断出它们离你有多远。物理引擎提供了类似的空间查询功能。
+你肯定有站着一个地方往四周看的经历？你能看到离你近的地方，也能看到离你远的东西，你能判断出它们离你有多远。物理引擎也提供了类似的空间查询功能。
 
 Cocos2d-x 提供的 `PhysicsWorld` 对象支持点查询，射线查询和矩形查询。
 
@@ -50,7 +50,7 @@ void tick(float dt)
 }
 {%- endcodetabs %}
 
-![](physics-img/RayTest.gif)
+![](../../en/physics/physics-img/RayTest.gif)
 
 ## 矩形查询
 
@@ -68,6 +68,6 @@ scene->getPhysicsWorld()->queryRect(func, Rect(0,0,200,200), nullptr);
 
 这是在制作 Logo 击碎时使用矩形查询的例子：
 
-![](physics-img/rectQuery1.gif)
+![](../../en/physics/physics-img/rectQuery1.gif)
 
-![](physics-img/rectQuery2.gif)
+![](../../en/physics/physics-img/rectQuery2.gif)
