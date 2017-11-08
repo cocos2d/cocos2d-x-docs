@@ -86,7 +86,7 @@
 
 - [物理引擎 TODO](physics/index.md)
     - [简介](physics/index.md)
-    - [术语和概念](physics/concepts.md)
+    - [概念](physics/concepts.md)
     - [碰撞](physics/collisions.md)
     - [查询](physics/queries.md)
     - [调试](physics/debugging.md)

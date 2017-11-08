@@ -111,7 +111,7 @@ for (int i = 0; i < 5; ++i)
 
     addChild(sprite);
 }
-{%>- endcodetabs %}
+{%- endcodetabs %}
 
 结果是，五个动态的物理刚体对象和一个静态的物理刚体对象不断的发生碰撞。如图：
 
