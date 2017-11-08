@@ -45,41 +45,18 @@ if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
 
 ## 连接/关节
 
-Recall from the terminology above that __joints__ are how contact points are connected
-to each other. Yes, you can think of it just like __joints__ on your own body.
-Each joint type has a definition that derives from `PhysicsJoint`. All joints are
-connected between two different bodies. One body may be static. You can prevent the
-attached bodies from colliding with each other by __joint->setCollisionEnable(false)__.
-Many joint definitions require that you provide some geometric data. Often a joint
-will be defined by anchor points. The rest of the joint definition data depends
-on the joint type.
+回想一下之前提到的术语，关节是把接触点连接在一起的一种方式，就好像人体的关节是把人体的不同部位连接在一起。关节连接了不同的刚体，刚体可以是静态的，每一个关节类都是 `PhysicsJoint` 的子类，你可以通过设置 `joint->setCollisionEnable(false)` 来避免相互关联的刚体互相碰撞。很多关节的定义需要你提供一些几何数据。大多关节都是通过锚点来定义的，其余少数关节有各自的定义方式。
 
-  >-PhysicsJointFixed: A fixed joint fuses the two bodies together at a reference
- point. Fixed joints are useful for creating complex shapes that can be broken
- apart later.
-
- >-PhysicsJointLimit: A limit joint imposes a maximum distance between the two
- bodies, as if they were connected by a rope.
-
- >-PhysicsJointPin: A pin joint allows the two bodies to independently rotate
- around the anchor point as if pinned together.
-
- >-PhysicsJointDistance: Set the fixed distance with two bodies
-
- >-PhysicsJointSpring: Connecting two physics bodies together with a spring
-
- >-PhysicsJointGroove: Attach body a to a line, and attach body b to a dot
-
- >-PhysicsJointRotarySpring: Likes a spring joint, but works with rotary
-
- >-PhysicsJointRotaryLimit: Likes a limit joint, but works with rotary
-
- >-PhysicsJointRatchet: Works like a socket wrench
-
- >-PhysicsJointGear: Keeps the angular velocity ratio of a pair of bodies constant
-
- >-PhysicsJointMotor: Keeps the relative angular velocity of a pair of bodies
- constant
+- PhysicsJointFixed：固定点关节，将两个刚体固定在一个特定的点上。如果要创建一些后续会断裂的复合刚体，使用固定关节是非常合适的。
+- PhysicsJointLimit：限制关节，限制了两个刚体的最大距离，就好像它们被绳子连接了一样
+- PhysicsJointPin：钉式关节，可以让两个刚体独立的围绕一个锚点进行旋转，就好像被钉在一起了一样
+- PhysicsJointDistance：固定距离关节，设定了两个刚体间的固定距离
+- PhysicsJointSpring：弹簧关节，就好像将一个弹簧连接了两个刚体，刚体会互相牵引和弹开
+- PhysicsJointRotarySpring：弹簧旋转关节，类似弹簧关节，只是两个刚体位置的互相影响变成了旋转的互相影响
+- PhysicsJointRotaryLimit：限制旋转关节，类似限制关节，只是两个刚体位置的互相影响变成了旋转的互相影响
+- PhysicsJointRatchet：与套筒扳手的工作类似
+- PhysicsJointGear：传动关节，使一对刚体的角速度比值保持不变
+- PhysicsJointMotor：马达关节，使一对刚体的相对角速度保持不变
 
 ![](physics-img/joints.PNG )
 
