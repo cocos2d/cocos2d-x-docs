@@ -141,4 +141,4 @@ bool onContactBegin(PhysicsContact& contact)
 }
 {%- endcodetabs %}
 
-![](../../en/physics/physics-img/CollisionProcessing.gif)
+![](../../en/physics/physics-img/CorrelationSprite.gif)
