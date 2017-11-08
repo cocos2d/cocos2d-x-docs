@@ -10,31 +10,31 @@
 
 材质描述了抽象物体的材料属性：
 
-- density：密度，用于计算物体的质量
-- friction：摩擦，用于模拟物体间的接触滑动
-- restitution：恢复系数，模拟物体反弹的一个系数，系数一般设为 0 到 1 之间。0 代表不反弹，1 代表完全反弹。
+>- density：密度，用于计算物体的质量
+>- friction：摩擦，用于模拟物体间的接触滑动
+>- restitution：恢复系数，模拟物体反弹的一个系数，系数一般设为 0 到 1 之间。0 代表不反弹，1 代表完全反弹。
 
 ## 形状(Shape)
 
 形状(Shape) 描述了抽象物体的几何属性，将形状关联到刚体，刚体才具有几何形状。如果需要刚体具有复杂的形状，可以为它关联多个形状，每个形状对象都与一个 `PhysicsMaterial` 相关，并且拥有以下属性：type, area, mass, moment, offset 和 tag。其中有一些你可能还不熟悉，我们来逐一介绍：
 
-- type：种类，描述了形状的类别，如圆形，矩形，多边形等
-- area：面积，用于计算刚体的质量，密度和面积决定了刚体的质量
-- mass：质量，刚体的质量，影响物体在给定的力下获得的加速度大小，物体在一个引力场中物体受到力的大小
-- moment：扭矩，决定了获得特定角加速度所需要的扭矩
-- offset：重心偏移量，在刚体的当前坐标中，相对于刚体重心的偏移量
-- tag：标签，形状对象的一个标识，你可能还记得，所有的 Node 对象都可以被分配一个 tag，以进行辨识，实现更容易的访问。形状对象的 tag 作用也一样。
+>- type：种类，描述了形状的类别，如圆形，矩形，多边形等
+>- area：面积，用于计算刚体的质量，密度和面积决定了刚体的质量
+>- mass：质量，刚体的质量，影响物体在给定的力下获得的加速度大小，物体在一个引力场中物体受到力的大小
+>- moment：扭矩，决定了获得特定角加速度所需要的扭矩
+>- offset：重心偏移量，在刚体的当前坐标中，相对于刚体重心的偏移量
+>- tag：标签，形状对象的一个标识，你可能还记得，所有的 Node 对象都可以被分配一个 tag，以进行辨识，实现更容易的访问。形状对象的 tag 作用也一样。
 
 Cocos2d-x 中预定义了这些形状对象：
 
-- `PhysicsShape`：物理形状的基类
-- `PhysicsShapeCircle`：实心的圆形，无法用它实现一个空心圆
-- `PhysicsShapePolygon`：实心且外凸的多边形
-- `PhysicsShapeBox`：矩形，它是一种特殊的外凸多边形
-- `PhysicsShapeEdgeSegment`：表示一种线段.
-- `PhysicsShapeEdgePolygon`：空心多边形，由多个线段构成的多边形边缘。
-- `PhysicsShapeEdgeBox`：空心矩形，由四个线段组成的矩形边缘
-- `PhysicsShapeEdgeChain`: 链形，它可以有效的把许多边缘连接起来
+>- `PhysicsShape`：物理形状的基类
+>- `PhysicsShapeCircle`：实心的圆形，无法用它实现一个空心圆
+>- `PhysicsShapePolygon`：实心且外凸的多边形
+>- `PhysicsShapeBox`：矩形，它是一种特殊的外凸多边形
+>- `PhysicsShapeEdgeSegment`：表示一种线段.
+>- `PhysicsShapeEdgePolygon`：空心多边形，由多个线段构成的多边形边缘。
+>- `PhysicsShapeEdgeBox`：空心矩形，由四个线段组成的矩形边缘
+>- `PhysicsShapeEdgeChain`: 链形，它可以有效的把许多边缘连接起来
 
 ## 连接/关节
 
@@ -61,13 +61,13 @@ if( !Scene::initWithPhysics() )
 
 每一个 _物理世界(PhysicsWorld)_ 都有与之相关的属性：
 
-- gravity：全局重力，应用于整个物理世界，默认值为 Vec2(0.0f, -98.0f)
+>- gravity：全局重力，应用于整个物理世界，默认值为 Vec2(0.0f, -98.0f)
 
-- speed：速度，设定了物理世界的速度，这里的速度指的是这个模拟世界运行的一种比率，默认值是 1.0
+>- speed：速度，设定了物理世界的速度，这里的速度指的是这个模拟世界运行的一种比率，默认值是 1.0
 
-- updateRate：刷新率，设定了物理世界的刷新率，这里的刷新率指的是 游戏引擎刷新时间与物理世界刷新时间的比值
+>- updateRate：刷新率，设定了物理世界的刷新率，这里的刷新率指的是 游戏引擎刷新时间与物理世界刷新时间的比值
 
-- substeps：子步，设定了物理世界中每次刷新的子步数量
+>- substeps：子步，设定了物理世界中每次刷新的子步数量
 
 刷新物理世界的过程被称为步进，按照默认设置，物理世界会不停地进行自动刷新，这被称为自动步进。每一帧，都会不停地刷新，你可以通过 `setAutoStep(false)` 禁用一个物理世界的自动步进，然后通过 `PhysicsWorld::step(time)` 设定步进时间来手动刷新物理世界。游戏世界是按帧刷新的，物理世界可以通过子步(substeps)的设置，获得更加频繁的刷新，从而进行更精细的步进控制。
 
@@ -79,7 +79,7 @@ __物理刚体(PhysicsBody)__ 对象具有位置和速度，你可以在物理�
 
 {% codetabs name="C++", type="cpp" -%}
 auto physicsBody = PhysicsBody::createBox(Size(65.0f, 81.0f),
-						PhysicsMaterial(0.1f, 1.0f, 0.0f));
+                        PhysicsMaterial(0.1f, 1.0f, 0.0f));
 physicsBody->setDynamic(false);
 
 //create a sprite
@@ -94,24 +94,24 @@ sprite->addComponent(physicsBody);
 for (int i = 0; i < 5; ++i)
 {
     physicsBody = PhysicsBody::createBox(Size(65.0f, 81.0f),
-    				PhysicsMaterial(0.1f, 1.0f, 0.0f));
+                    PhysicsMaterial(0.1f, 1.0f, 0.0f));
 
     //set the body isn't affected by the physics world's gravitational force
     physicsBody->setGravityEnable(false);
 
     //set initial velocity of physicsBody
     physicsBody->setVelocity(Vec2(cocos2d::random(-500,500),
-    			cocos2d::random(-500,500)));
+                cocos2d::random(-500,500)));
     physicsBody->setTag(DRAG_BODYS_TAG);
 
     sprite = Sprite::create("blueSprite.png");
     sprite->setPosition(Vec2(s_centre.x + cocos2d::random(-300,300),
-    			s_centre.y + cocos2d::random(-300,300)));
+                s_centre.y + cocos2d::random(-300,300)));
     sprite->addComponent(physicsBody);
 
     addChild(sprite);
 }
-{%- endcodetabs %}
+{%>- endcodetabs %}
 
 结果是，五个动态的物理刚体对象和一个静态的物理刚体对象不断的发生碰撞。如图：
 
