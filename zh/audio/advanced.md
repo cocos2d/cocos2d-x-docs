@@ -2,7 +2,9 @@
 
 ## 配置
 
-移动设备上的游戏会遇到一些特殊的情景，比如游戏应用被切换至后台又切换回前台，正在玩游戏的时候电话来了，电话打完继续玩游戏，这些你在进行声音控制的时候都得考虑。幸运的是，游戏引擎在设计的时候已经考虑到这些情景了，注意在 _AppDelegate.cpp_ 中，有这样几个方法：
+移动设备上的游戏会遇到一些特殊的情景，比如游戏应用被切换至后台又切换回前台，正在玩游戏的时候电话来了，电话打完继续玩游戏，这些你在进行声音控制的时候都得考虑。
+
+幸运的是，游戏引擎在设计的时候已经考虑到这些情景了，注意在 _AppDelegate.cpp_ 中，有这样几个方法：
 
 {% codetabs name="C++", type="cpp" -%}
 // This function will be called when the app is inactive. When comes a phone call,
@@ -27,8 +29,7 @@ void AppDelegate::applicationWillEnterForeground() {
 
 ## 预加载
 
-When your game starts you might want to pre-load the music and effects so they
-are ready when you need them.
+加载音乐和音效通常是个耗时间的过程，为了防止由加载产生的延时导致实际播放与游戏播放不协调的现象，在播放音乐和音效前，可以预加载音乐文件。
 
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
