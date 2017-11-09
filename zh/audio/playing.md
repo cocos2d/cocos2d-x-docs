@@ -1,10 +1,6 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+## 播放背景音乐
 
-## Play background music
-Play an audio file for use as background music. This can be repeated
-continuously.
+通过下面的方式，播放一个音频文件作为背景音乐，可以控制背景音乐是否循环播放。
 
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
@@ -19,8 +15,9 @@ audio->playBackgroundMusic("mymusic.mp3", true);
 audio->playBackgroundMusic("mymusic.mp3", false);
 {%- endcodetabs %}
 
-## Play a sound effect.
-Play a sound effect.
+## 播放音效
+
+通过下面的方式，将一个音频文件作为音效。
 
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
