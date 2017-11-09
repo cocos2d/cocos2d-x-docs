@@ -7,6 +7,9 @@ Play an audio file for use as background music. This can be repeated
 continuously.
 
 {% codetabs name="C++", type="cpp" -%}
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
+
 auto audio = SimpleAudioEngine::getInstance();
 
 // set the background music and continuously play it.
@@ -20,6 +23,9 @@ audio->playBackgroundMusic("mymusic.mp3", false);
 Play a sound effect.
 
 {% codetabs name="C++", type="cpp" -%}
+#include "SimpleAudioEngine.h"
+using namespace CocosDenshion;
+
 auto audio = SimpleAudioEngine::getInstance();
 
 // play a sound effect, just once.
