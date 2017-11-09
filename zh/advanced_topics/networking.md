@@ -1,21 +1,18 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 网络访问
 
-## Networking with HTTP
-Sometimes it might be helpful to obtain resources or data from another source.
-One common way of doing this is by using an `HTTP` request.
+## 使用 HTTP 进行网络访问
 
-HTTP networking has three steps:
-   1. Create an `HttpRequest`
-   2. Create a __setResponseCallback()__ callback function for replying to requests.
-   3. Send `HttpRequest` by `HttpClient`
+有时候我们需要从网络上获取资源数据，一种常见的解决方法就是使用 HTTP 进行网络访问。
 
-`HttpRequest` can have four types:  __POST__, __PUT__, __DELETE__, __UNKNOWN__. Unless
-specified the default type is __UNKNOWN__. The `HTTPClient` object controls sending the
-__request__ and receiving the data on a __callback__.
+使用 HTTP 进行网络访问有三个步骤：
 
-Working with an `HTTPRequest` is quite simple:
+  1. 创建一个 HTTP 请求 `HttpRequest`
+  1. 通过 `setResponseCallback()` 设置一个请求完成时的回调函数
+  1. 使用 `HttpClient` 发送 `HttpRequest`
+
+`HttpRequest` 有四种类型：__POST__, __PUT__, __DELETE__, __UNKNOWN__。除非指定请求的类型，否则就默认 __UNKNOWN__。`HttpClient` 对象负责请求的发送，也负责数据的接收。
+
+示例：
 
 {% codetabs name="C++", type="cpp" -%}
 HttpRequest* request = new (std :: nothrow) HttpRequest();
@@ -28,9 +25,9 @@ HttpClient::getInstance()->sendImmediate(request);
 request->release();
 {%- endcodetabs %}
 
-Notice that we specified a __setResponseCallback()__ method for when a response is
-received. By doing this we can look at the data returned and use it how we might
-need to. Again, this process is simple and we can do it with ease:
+注意，我们通过 `setResponseCallback()` 方法将函数 `onHttpRequestCompleted` 设置为请求完成时的回调函数。这样做，在请求完成时，我们就能查看返回的数据，并提取出我们需要的数据。
+
+这个过程很简单，可以像这样做：
 
 {% codetabs name="C++", type="cpp" -%}
 void HttpClientTest::onHttpRequestCompleted(HttpClient* sender, HttpResponse* response)
