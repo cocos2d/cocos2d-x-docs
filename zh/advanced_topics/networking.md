@@ -10,7 +10,7 @@
   1. 通过 `setResponseCallback()` 设置一个请求完成时的回调函数
   1. 使用 `HttpClient` 发送 `HttpRequest`
 
-`HttpRequest` 有四种类型：__POST__, __PUT__, __DELETE__, __UNKNOWN__。除非指定请求的类型，否则就默认 __UNKNOWN__。`HttpClient` 对象负责请求的发送，也负责数据的接收。
+`HttpRequest` 有四种类型：_POST_ _PUT_ _DELETE_ _UNKNOWN_。除非指定请求的类型，否则就默认 UNKNOWN。`HttpClient` 对象负责请求的发送，也负责数据的接收。
 
 示例：
 
@@ -25,9 +25,9 @@ HttpClient::getInstance()->sendImmediate(request);
 request->release();
 {%- endcodetabs %}
 
-注意，我们通过 `setResponseCallback()` 方法将函数 `onHttpRequestCompleted` 设置为请求完成时的回调函数。这样做，在请求完成时，我们就能查看返回的数据，并提取出我们需要的数据。
+注意，我们通过 `setResponseCallback()` 设置请求完成时的回调函数了。这样做，在请求完成时，我们就能查看返回的数据，并提取出我们需要的。
 
-这个过程很简单，可以像这样做：
+回调函数的写法很简单，可以像这样做：
 
 {% codetabs name="C++", type="cpp" -%}
 void HttpClientTest::onHttpRequestCompleted(HttpClient* sender, HttpResponse* response)
