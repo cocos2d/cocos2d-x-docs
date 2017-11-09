@@ -1,10 +1,6 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 着色器和材质
 
-## Shaders and Materials
-
-### What is a Shader
+## What is a Shader
 
 From wikipedia:
 
