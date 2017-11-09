@@ -52,7 +52,7 @@ audio->preloadEffect("myEffect2.mp3");
 audio->unloadEffect("myEffect1.mp3");
 {%- endcodetabs %}
 
-## 音量
+## 音量控制
 
 可以像下面这样，通过代码控制音乐和音效的音量：
 
