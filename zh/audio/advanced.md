@@ -1,18 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 高级声音功能
 
-##Advanced audio functionality
+## 配置
 
-###Setup
-It is easy to get started using the `SimpleAudioEngine` API. There are
-considerations to keep in mind when using audio in your game. Mostly
-when operating on mobile devices such as phones and tablets. What happens when
-you multi-task on your phone and are switching between apps? Or when a phone
-call comes in? You need to handle these exceptions in your game. Fortunately, we
-help you here.
-
-In `AppDelegate.cpp`, notice the following methods:
+移动设备上的游戏会遇到一些特殊的情景，比如游戏应用被切换至后台又切换回前台，正在玩游戏的时候电话来了，电话打完继续玩游戏，这些你在进行声音控制的时候都得考虑。幸运的是，游戏引擎在设计的时候已经考虑到这些情景了，注意在 _AppDelegate.cpp_ 中，有这样几个方法：
 
 {% codetabs name="C++", type="cpp" -%}
 // This function will be called when the app is inactive. When comes a phone call,
@@ -33,9 +23,10 @@ void AppDelegate::applicationWillEnterForeground() {
 }
 {%- endcodetabs %}
 
-Notice the commented out lines for `SimpleAudioEngine`? Make sure to uncomment these lines out if you are using audio for background sounds and sound effects.
+看到了那些被注释的行吗？如果你有使用 `SimpleAudioEngine` 在游戏中播放声音，记得取消这些注释。当这些被注释的代码生效，你的游戏就能应对刚才提到的场景。
 
-###Pre-loading sound
+## 预加载
+
 When your game starts you might want to pre-load the music and effects so they
 are ready when you need them.
 
@@ -60,8 +51,9 @@ audio->preloadEffect("myEffect2.mp3");
 audio->unloadEffect("myEffect1.mp3");
 {%- endcodetabs %}
 
-###Volume
-You can increase and decrease the volume of your sounds and music programmatically.
+## 音量
+
+可以像下面这样，通过代码控制音乐和音效的音量：
 
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
