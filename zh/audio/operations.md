@@ -1,12 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 声音控制
 
-##Pausing, stopping, resuming music and sound effects
-After you start to play music and sound effects you might need to pause,
-stop or resume after certain operations. This can be done easily.
+开始播放音乐和音效后，你可能需要对它们进行一些控制，比如暂停、停止、恢复。这很容易完成，下面介绍：
+## 暂停
 
-###Pause
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
@@ -23,7 +19,8 @@ audio->pauseEffect();
 audio->pauseAllEffects();
 {%- endcodetabs %}
 
-###Stop
+## 停止
+
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
@@ -40,7 +37,8 @@ audio->stopEffect();
 audio->stopAllEffects();
 {%- endcodetabs %}
 
-###Resume
+## 恢复
+
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
