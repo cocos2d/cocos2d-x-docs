@@ -4,11 +4,11 @@
 
 从维基百科：
 
-在计算机图形学领域，着色器是一种特殊类型的计算机程序，最初用于做阴影，在图像中产生适当的光照、明暗，但现在主要用于产生特殊效果，也用于视频后期处理。非专业人士的定义可能是：告诉计算机如何以一种特定的方式绘制东西的程序。
+在计算机图形学领域，__着色器(Shader)__ 是一种特殊类型的计算机程序，最初用于做阴影，在图像中产生适当的光照、明暗，但现在主要用于产生特殊效果，也用于视频后期处理。非专业人士的定义可能是：告诉计算机如何以一种特定的方式绘制东西的程序。
 
 着色器是运行在 GPU 上用于图像渲染的一段代码，用于绘制不同的 Cocos2d-x 节点。
 
-Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)，描述 GLSL 语言不在本文的范围之内。想了解更多，请参考规范文档 [OpenGL ES Shading Language](https://www.khronos.org/files/opengles_shading_language.pdf)。
+Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)，描述 GLSL 语言不在本文的范围之内。想了解更多，请参考 [规范文档](https://www.khronos.org/files/opengles_shading_language.pdf)。
 
 在 Cocos2d-x 中，所有的可渲染的 Node 对象都使用着色器。比如，`Sprite` 对象使用为 2D 精灵优化的着色器，`Sprite3D` 使用为 3D 对象优化的着色器。
 
@@ -49,103 +49,103 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 
 虽然可以手动设置 `GLProgramState` 对象，但更简单的方法是使用材质对象。
 
-## 什么是材质(Material)
+## 什么是材质
 
-Assume that you want to draw a sphere like this one:
+设想你想在游戏中画一个这样的球体：
 
 ![](advanced_topics-img/model.jpg)
 
-The first thing that you have to do is to define its geometry, something like this:
+你要做的第一件事就是定义它的几何形状，像这样：
 
 ![](advanced_topics-img/geometry.jpg)
 
-...and then define the brick texture, like:
+然后定义砖块纹理，像这样：
 
 ![](advanced_topics-img/brick.jpg)
 
+这样做也能达成目标的效果，但是如果进一步的考虑：
 
-- But what if you want to use a lower quality texture when the sphere is far away
-from the camera?
-- or what if you want to apply a blur effect to the bricks?
-- or what if you want to enable or disable lighting in the sphere ?
+- 如果当球体离摄像机很远的时候，想使用质量较低的纹理呢？
+- 如果想对砖块应用模糊效果呢？
+- 如果想启用或者禁用球体中的照明呢？
 
-The answer is to use a `Material` instead of just a plain and simple texture. In fact,
-with `Material` you can have more than one texture, and much more features like multi-pass rendering.
+答案是使用 __材质(Material)__，而不是使用一个简单的纹理。对于材质，你可以拥有多个纹理，还可以拥有其它的一些特性，比如多道渲染。
 
-`Material` objects are created from `.material` files, which contain the following information:
+`Material` 对象通过 _.material_ 文件创建，其中包含以下信息：
 
-- `Material` can have one or more `Technique` objects
-- each `Technique` can have one more `Pass` objects
-- each `Pass` object has:
-  - a `RenderState` object,
-  - a `Shader` object including the uniforms
+- `Material` 有一个或多个 `Technique` 对象
+- 每个 `Technique` 有一个或多个 `Pass` 对象
+- 每个 `Pass` 对象有：
+  - 一个 `RenderState` 对象,
+  - 一个包含了 uniform 变量的 `Shader` 对象
 
-As an example, this is how a material file looks like:
+例如，这是一个材质文件：
 
 {% codetabs name="JavaScript", type="js" -%}
 // A "Material" file can contain one or more materials
 material spaceship
 {
-	// A Material contains one or more Techniques.
-	// In case more than one Technique is present, the first one will be the default one
-	// A "Technique" describes how the material is going to be renderer
-	// Techniques could:
-	//  - define the render quality of the model: high quality, low quality, etc.
-	//  - lit or unlit an object
-	// etc...
-	technique normal
-	{
-		// A technique can contain one or more passes
-		// A "Pass" describes the "draws" that will be needed
-		//   in order to achieve the desired technique
-		// The 3 properties of the Passes are shader, renderState and sampler
-		pass 0
-		{
-			// shader: responsible for the vertex and frag shaders, and its uniforms
-			shader
-			{
-				vertexShader = Shaders3D/3d_position_tex.vert
-				fragmentShader = Shaders3D/3d_color_tex.frag
+    // A Material contains one or more Techniques.
+    // In case more than one Technique is present, the first one will be the default one
+    // A "Technique" describes how the material is going to be renderer
+    // Techniques could:
+    //  - define the render quality of the model: high quality, low quality, etc.
+    //  - lit or unlit an object
+    // etc...
+    technique normal
+    {
+        // A technique can contain one or more passes
+        // A "Pass" describes the "draws" that will be needed
+        //   in order to achieve the desired technique
+        // The 3 properties of the Passes are shader, renderState and sampler
+        pass 0
+        {
+            // shader: responsible for the vertex and frag shaders, and its uniforms
+            shader
+            {
+                vertexShader = Shaders3D/3d_position_tex.vert
+                fragmentShader = Shaders3D/3d_color_tex.frag
 
-				// uniforms, including samplers go here
-				u_color = 0.9,0.8,0.7
-				// sampler: the id is the uniform name
-				sampler u_sampler0
-				{
-					path = Sprite3DTest/boss.png
-					mipmap = true
-					wrapS = CLAMP
-					wrapT = CLAMP
-					minFilter = NEAREST_MIPMAP_LINEAR
-					magFilter = LINEAR
-				}
-			}
-			// renderState: responsible for depth buffer, cullface, stencil, blending, etc.
-			renderState
-			{
-				cullFace = true
-				cullFaceSide = FRONT
-				depthTest = true
-			}
-		}
-	}
+                // uniforms, including samplers go here
+                u_color = 0.9,0.8,0.7
+                // sampler: the id is the uniform name
+                sampler u_sampler0
+                {
+                    path = Sprite3DTest/boss.png
+                    mipmap = true
+                    wrapS = CLAMP
+                    wrapT = CLAMP
+                    minFilter = NEAREST_MIPMAP_LINEAR
+                    magFilter = LINEAR
+                }
+            }
+            // renderState: responsible for depth buffer, cullface, stencil, blending, etc.
+            renderState
+            {
+                cullFace = true
+                cullFaceSide = FRONT
+                depthTest = true
+            }
+        }
+    }
 }
 {%- endcodetabs %}
 
-And this is how to set a `Material` to a `Sprite3D`:
+将一个材质设置到 `Sprite3D` 的方法：
 
 {% codetabs name="C++", type="cpp" -%}
 Material* material = Material::createWithFilename("Materials/3d_effects.material");
 sprite3d->setMaterial(material);
 {%- endcodetabs %}
 
-And if you want to change between different `Technique`s, you have to do:
+如果你想改变不同的 `Technique`，你可以这样做：
 
 {% codetabs name="C++", type="cpp" -%}
 material->setTechnique("normal");
 {%- endcodetabs %}
 
-###Techniques
+### Techniques
+
 Since you can bind only one `Material` per `Sprite3D`, an additional feature
 is supported that's designed to make it quick and easy to change the way you
 render the parts at runtime. You can define multiple techniques by giving them
@@ -157,7 +157,8 @@ different light combinations or having lower-quality rendering techniques, such
 as disabling bump mapping, when the object being rendered is far away from the
 camera.
 
-###Passes
+### Passes
+
 A `Technique` can have one or more __passes__ That is, multi-pass rendering.
 And each `Pass` has two main objects:
 
@@ -166,7 +167,8 @@ And each `Pass` has two main objects:
 - `GLProgramState`: contains the shader (`GLProgram`) that is going to be used, including
     its uniforms.
 
-###Material file format in detail
+### Material file format in detail
+
 Material uses a file format  optimized to create Material files.
 This file format is very similar to other existing Material file formats, like
 GamePlay3D's and OGRE3D's.
