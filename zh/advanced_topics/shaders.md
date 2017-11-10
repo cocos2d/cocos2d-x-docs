@@ -1,45 +1,34 @@
 # 着色器和材质
 
-## What is a Shader
+## 什么是着色器
 
-From wikipedia:
+从维基百科：
 
-__In the field of computer graphics, a shader is a computer program that is used
-to do shading: the production of appropriate levels of color within an image,
-or, in the modern era, also to produce special effects or do video post-processing.
-A definition in layman's terms might be given as "a program that tells a computer
-how to draw something in a specific and unique way".__
+在计算机图形学领域，着色器是一种特殊类型的计算机程序，最初用于做阴影，在图像中产生适当的光照、明暗，但现在主要用于产生特殊效果，也用于视频后期处理。非专业人士的定义可能是：告诉计算机如何以一种特定的方式绘制东西的程序。
 
-In other words, it is a piece of code that runs on the GPU (not CPU) to draw the
-different Cocos2d-x Nodes.
+着色器是运行在 GPU 上用于图像渲染的一段代码，用于绘制不同的 Cocos2d-x 节点。
 
-Cocos2d-x uses the [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)
-for the shaders. But describing the GLSL language is outside the scope of this
-document. In order to learn more about the language, please refer to:
-[OpenGL ES Shading Language v1.0 Spec](https://www.khronos.org/files/opengles_shading_language.pdf).
+Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)，描述 GLSL 语言不在本文的范围之内。想了解更多，请参考规范文档 [OpenGL ES Shading Language](https://www.khronos.org/files/opengles_shading_language.pdf)。
 
-In Cocos2d-x, all `Node` objects that are __renderable__ use shaders. As an example
-`Sprite` uses optimized shaders for 2d sprites, `Sprite3D` uses optimized shaders
-for 3d objects, and so on.
+在 Cocos2d-x 中，所有的可渲染的 Node 对象都使用着色器。比如，`Sprite` 对象使用为 2D 精灵优化的着色器，`Sprite3D` 使用为 3D 对象优化的着色器。
 
-###Customizing Shaders
+## 定制着色器
 
-Users can change the predefined shaders from any Cocos2d-x `Node` by calling:
+用户能为任一 Cocos2d-x 的节点对象设置预定义的着色器，通过下面这种方法：
 
 {% codetabs name="C++", type="cpp" -%}
 sprite->setGLProgramState(programState);
 sprite3d->setGLProgramState(programState);
 {%- endcodetabs %}
 
-The `GLProgramState` object contains two important things:
+`GLProgramState` 对象包含两个重要的东西
 
-- A `GLProgram`: Basically this is _the_ shader. It contains a vertex and fragment shader.
-- And the __state__, which basically are the uniforms of the shader.
+- `GLProgram`：从根本上来说就是着色器。包含一个顶点着色器和一个像素着色器。
+- 状态属性：根本上来说就是着色器的 uniform 变量
 
-In case you are not familiar with the term _uniform_ and why it is needed, please
-refer to the [OpenGL Shading Language Specification](https://www.khronos.org/files/opengles_shading_language.pdf)
+如果你不熟悉 uniform 变量，也不知道为什么需要它，请参考刚才提到的 [语言规范](https://www.khronos.org/files/opengles_shading_language.pdf)
 
-Setting uniforms to a `GLProgramState` is as easy as this:
+将 uniform 变量设置到  `GLProgramState` 是很容易的：
 
 {% codetabs name="C++", type="cpp" -%}
 glProgramState->setUniformFloat("u_progress", 0.9);
@@ -47,7 +36,7 @@ glProgramState->setUniformVec2("u_position", Vec2(x,y));
 glProgramState->setUniformMat4("u_transform", matrix);
 {%- endcodetabs %}
 
-You can even set callbacks as a uniform value:
+你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式最为回调函数的例子：
 
 {% codetabs name="C++", type="cpp" -%}
 glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
@@ -58,10 +47,9 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 );
 {%- endcodetabs %}
 
-And although it is possible to set `GLProgramState` objects manually, an easier
-way to do it is by using `Material` objects.
+虽然可以手动设置 `GLProgramState` 对象，但更简单的方法是使用材质对象。
 
-###What is a Material
+## 什么是材质(Material)
 
 Assume that you want to draw a sphere like this one:
 
