@@ -4,17 +4,15 @@
 
 从维基百科：
 
-在计算机图形学领域，__着色器(Shader)__ 是一种特殊类型的计算机程序，最初用于做阴影，在图像中产生适当的光照、明暗，但现在主要用于产生特殊效果，也用于视频后期处理。非专业人士的定义可能是：告诉计算机如何以一种特定的方式绘制东西的程序。
+在计算机图形学领域，__着色器(Shader)__ 是一种特殊类型的计算机程序，最初用于做阴影，在图像中产生适当的光照、明暗，现在主要用于产生特殊效果，也用于视频后期处理。
 
-着色器是运行在 GPU 上用于图像渲染的一段代码，用于绘制不同的 Cocos2d-x 节点。
+非专业人士的定义可能是：告诉计算机如何以一种特定的方式绘制东西的程序。简单地说，着色器就是运行在 GPU 上用于图像渲染的一段程序，Cocos2d-x 用它绘制节点。
 
-Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)，描述 GLSL 语言不在本文的范围之内。想了解更多，请参考 [规范文档](https://www.khronos.org/files/opengles_shading_language.pdf)。
+Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)，描述 GLSL 语言不在本文的范围之内。想了解更多，请参考 [规范文档](https://www.khronos.org/files/opengles_shading_language.pdf)。在 Cocos2d-x 中，所有的可渲染的 Node 对象都使用着色器。比如，`Sprite` 对象使用为 2D 精灵优化过的着色器，`Sprite3D` 使用为 3D 对象优化过的着色器。
 
-在 Cocos2d-x 中，所有的可渲染的 Node 对象都使用着色器。比如，`Sprite` 对象使用为 2D 精灵优化的着色器，`Sprite3D` 使用为 3D 对象优化的着色器。
+## 自定义着色器
 
-## 定制着色器
-
-用户能为任一 Cocos2d-x 的节点对象设置预定义的着色器，通过下面这种方法：
+开发者能为任一 Cocos2d-x 的节点对象设置自定义的着色器，添加着色器示例：
 
 {% codetabs name="C++", type="cpp" -%}
 sprite->setGLProgramState(programState);
@@ -26,9 +24,9 @@ sprite3d->setGLProgramState(programState);
 - `GLProgram`：从根本上来说就是着色器。包含一个顶点着色器和一个像素着色器。
 - 状态属性：根本上来说就是着色器的 uniform 变量
 
-如果你不熟悉 uniform 变量，也不知道为什么需要它，请参考刚才提到的 [语言规范](https://www.khronos.org/files/opengles_shading_language.pdf)
+如果你不熟悉 uniform 变量也不知道为什么需要它，请参考刚才提到的 [语言规范](https://www.khronos.org/files/opengles_shading_language.pdf)
 
-将 uniform 变量设置到  `GLProgramState` 是很容易的：
+可以很容易的将 uniform 变量设置到  `GLProgramState`：
 
 {% codetabs name="C++", type="cpp" -%}
 glProgramState->setUniformFloat("u_progress", 0.9);
@@ -36,7 +34,7 @@ glProgramState->setUniformVec2("u_position", Vec2(x,y));
 glProgramState->setUniformMat4("u_transform", matrix);
 {%- endcodetabs %}
 
-你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式最为回调函数的例子：
+你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式作为回调函数的例子：
 
 {% codetabs name="C++", type="cpp" -%}
 glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
@@ -65,19 +63,19 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 
 这样做也能达成目标的效果，但是如果进一步的考虑：
 
-- 如果当球体离摄像机很远的时候，想使用质量较低的纹理呢？
+- 如果当球体离相机很远时，想使用质量较低的纹理呢？
 - 如果想对砖块应用模糊效果呢？
 - 如果想启用或者禁用球体中的照明呢？
 
-答案是使用 __材质(Material)__，而不是使用一个简单的纹理。对于材质，你可以拥有多个纹理，还可以拥有其它的一些特性，比如多道渲染。
+答案是使用 __材质(Material)__，而不是使用一个简单的纹理。对于材质，你可以拥有多个纹理，还可以拥有其它的一些特性，比如多重渲染。
 
-`Material` 对象通过 _.material_ 文件创建，其中包含以下信息：
+材质对象通过 _.material_ 文件创建，其中包含以下信息：
 
-- `Material` 有一个或多个 `Technique` 对象
-- 每个 `Technique` 有一个或多个 `Pass` 对象
-- 每个 `Pass` 对象有：
-  - 一个 `RenderState` 对象,
-  - 一个包含了 uniform 变量的 `Shader` 对象
+- 材质有一个或多个渲染方法(technique)
+- 每个渲染方法有一个或多个通道(pass)
+- 每个通道有：
+  - 一个渲染状态(RenderState)
+  - 一个包含了 uniform 变量的着色器
 
 例如，这是一个材质文件：
 
@@ -138,50 +136,36 @@ Material* material = Material::createWithFilename("Materials/3d_effects.material
 sprite3d->setMaterial(material);
 {%- endcodetabs %}
 
-如果你想改变不同的 `Technique`，你可以这样做：
+如果你想改变不同的渲染方法，你可以这样做：
 
 {% codetabs name="C++", type="cpp" -%}
 material->setTechnique("normal");
 {%- endcodetabs %}
 
-### Techniques
+### 渲染方法(Technique)
 
-Since you can bind only one `Material` per `Sprite3D`, an additional feature
-is supported that's designed to make it quick and easy to change the way you
-render the parts at runtime. You can define multiple techniques by giving them
-different names. Each one can have a completely different rendering technique,
-and you can even change the technique being applied at runtime by using
-__Material::setTechnique(const std::string& name)__. When a material is loaded,
-all the techniques are loaded ahead too. This is a practical way of handling
-different light combinations or having lower-quality rendering techniques, such
-as disabling bump mapping, when the object being rendered is far away from the
-camera.
+你只能为一个 `Sprite3D` 绑定一个材质，但这并不意味着固定了一种渲染方式。材质(Material)有一个特性：允许包含多个 __渲染方法(Technique)__，当一个材质被加载时，所有的渲染方法也都被提前加载。有了这个特性，你就可以在运行时方便快速的改变一个对象的渲染效果。
 
-### Passes
+通过使用 `Material::setTechnique(const std::string& name)` 函数，就可以完成渲染方法的切换。这种特性可以用来处理不同灯光的变换，也可以用来处理，在渲染的对象离相机很远时采用质量较低的纹理这种情景。
 
-A `Technique` can have one or more __passes__ That is, multi-pass rendering.
-And each `Pass` has two main objects:
+### 通道(Pass)
 
-- `RenderState`: contains the GPU state information, like __depthTest__, __cullFace__,
-    __stencilTest__, etc.
-- `GLProgramState`: contains the shader (`GLProgram`) that is going to be used, including
-    its uniforms.
+一个渲染方法可以有多个渲染 __通道(Pass)__，其中一个通道对应一次渲染，多通道意味着对一个对象渲染多次，这被称为多通道渲染，也叫多重渲染。每个通道有两个主要的对象：
 
-### Material file format in detail
+- `RenderState`：包含 GPU 状态信息，如 _depthTest_, _cullFace_,
+    _stencilTest_，等
+- `GLProgramState`：包含要使用的着色器，和一些 uniform 变量
 
-Material uses a file format  optimized to create Material files.
-This file format is very similar to other existing Material file formats, like
-GamePlay3D's and OGRE3D's.
+### 材质文件格式
 
-__Notes__:
+Cocos2d-x 的材质文件使用一种优化过的文件格式，同时与其它一些开源引擎的材质文件格式类似，如 _GamePlay3D_，_OGRE3D_。
 
-- Material file extensions do not matter. Although it is recommended to use
-__.material__ as extension
-- __id__ is optional for material, technique and pass
-- Materials can inherit values from another material by optionally setting a
-__parent_material_id__
-- Vertex and fragment shader file extensions do not matter. The convention in
-Cocos2d-x is to use __.vert__ and __frag__
+注意点：
+
+- 材质文件的扩展名无关紧要，建议使用 _.material_ 作为扩展名
+- 顶点着色器和像素着色器的文件扩展名也无关紧要，建议使用 _.vert_ 和 _.frag_
+- _id_ 是材质(Meterial)，渲染方法(technique)，通道(pass)的可选属性
+- 材质可以通过设置 _parent_material_id_ 继承其它材质的值
 
 {% codetabs name="C++", type="cpp" -%}
 // When the .material file contains one material
@@ -189,6 +173,8 @@ sprite3D->setMaterial("Materials/box.material");
 // When the .material file contains multiple materials
 sprite3D->setMaterial("Materials/circle.material#wood");
 {%- endcodetabs %}
+
+#### 字段定义
 
 <table>
  <tr>
@@ -487,7 +473,7 @@ sprite3D->setMaterial("Materials/circle.material#wood");
  </tr>
 </table>
 
-__Enums__:
+#### 枚举类型定义
 
 <table>
  <tr>
@@ -627,19 +613,15 @@ __Enums__:
  </tr>
 </table>
 
-__Types__:
+__数据类型__:
 
-<ul>
- <li class=MsoNormal><a name=scalar><span class=Non-literalCode>scalar</span> </a>is
-     float, int or bool.</li>
- <li class=MsoNormal><a name=vector><span class=Non-literalCode>vector</span></a><span
-     class=Non-literalCode> </span>is a comma separated list of floats.</li>
-</ul>
+- scalar 代表标量，可以用浮点型(float)，整形(int)，布尔型(bool)
+- vector 代表矢量，用逗号分隔的一系列浮点数表示
 
-### Predefined uniforms
 
-The following are predefined uniforms used by Cocos2d-x that can be used in
-your shaders:
+### 预定义的 uniform 变量
+
+下面是 Cocos2d-x 预定义的一些 uniform 变量，你可以在自定义的着色器中使用它们。
 
 * `CC_PMatrix`: A `mat4` with the projection matrix
 * `CC_MVMatrix`: A `mat4` with the Model View matrix
