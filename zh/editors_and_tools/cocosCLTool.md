@@ -1,11 +1,11 @@
-# Cocos 命令行工具
+# 命令行工具
 
-Cocos2d-x comes with a command-line tool called __cocos__. It is a cross-platform tool that allows you to create new Cocos2d-x applications as well as __run__ them and __deploy__ them. __cocos__ works for all cocos2d-x supported platforms, which include: __ios__, __android__, __mac__, __linux__, __win32__, __wp8_1__, __wp10__ and __web__. You don't need to use an IDE unless you want to. It has many options, so let's go through them grouped by function.
+Cocos2d-x 带有一个命令行工具：__`cocos`__ 这是一个跨平台的工具，你可以用它创建项目、运行项目、发布项目。命令行工具适用于所有 Cocos2d-x 支持的平台，包括：iOS、Android、Mac、Linux、Windows、Web。不用 IDE，只用命令行，你就能完成所有的工作！
 
-## `cocos` 命令配置
+## 工具配置
 
-it is a good idea to run __<cocos2d-x root>/setup.py__ to properly setup your
-__PATH__. Doing so ensures that you can run Cocos2d-x and its related tools. Example:
+运行引擎源码根目录的 _setup.py_，这个脚本会配置一些环境变量，并将 cocos 命令添加到系统路径中。注意运行本脚本需要系统安装 2.x（不是 3.x）版本的 Python。
+
 ```sh
 # Option 1
 > ./setup.py
@@ -14,35 +14,40 @@ __PATH__. Doing so ensures that you can run Cocos2d-x and its related tools. Exa
 > python setup.py
 ```
 
-On OS X, it is also a good idea to add a few lines to your __~/.bash_profile__ to ensure your character encoding is set to __UTF-8__. Example:
+在 macOS 系统为了确保字符编码格式的正确，最好在 _~/.bash_profile_ 文件中增加下面两行：
+
 ```sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
-After adding these lines, it is necessary to run __source ~/.bash_profile__ or
-restart your shell.
 
-## `cocos` 命令测试
+修改之后，记得执行 _source ~/.bash_profile_ 或着重启终端，这样新增的环境变量才会生效。
 
-It is necessary for __cocos__ to be in your path or to specify the complete path
-to it when using it. An easy test:
+### 测试
+
+为了确保 cocos 命令行工具已经添加到环境变量，可以正常使用。请先运行 `cocos -v`：
+
 ```sh
 > cocos -v
+Python 2.7.10
+cocos2d-x-3.16
+Cocos Console 2.3
 ```
 
-If you see output like __1.2__ you are all set. If you see anything else you need to either add the location to your __PATH__.
+如果有类似上面的输出，就证明了已经配置好，如果提示找不到命令，就需要检查一下环境变量是否设置正确。如果有配置，试着运行一下 _source ~/.bash_profile_ 使配置文件生效。
 
-On __OS X__ run __source ~/.bash_profile__ after updating your __PATH__ or
-specify the full path to __<cocos2d-x root>\tools\cocos2d-console\bin__.
+_命令行工具在这个目录 _cocos2d-x-3.16/tools/cocos2d-console/bin_
 
 ### 项目创建
 
-To create a new project you use the __cocos new__ command. The command is formatted as:
+使用 __`cocos new`__ 命令创建新项目，命令格式如下：
+
 ```sh
 cocos new <game name> -p <package identifier> -l <language> -d <location>
 ```
 
-Examples:
+示例：
+
 ```sh
 cocos new MyGame -p com.MyCompany.MyGame -l cpp -d ~/MyCompany
 
@@ -51,26 +56,26 @@ cocos new MyGame -p com.MyCompany.MyGame -l lua -d ~/MyCompany
 cocos new MyGame -p com.MyCompany.MyGame -l js -d ~/MyCompany
 ```
 
-In the above examples, a new project is created using the Cocos2d-x source code.
-If you want to create a new project using the pre-built libraries you need to pass an additional flag of __-t binary__. Example:
+上面的几个例子，项目都是使用的 Cocos2d-x 的源码，编译的时候会将源码也编译，可能花费较长时间。为获得更快的编译速度，可以使用预编译库。使用时需要在创建项目的时候增加参数 _-t binary_。示例：
+
 ```sh
 cocos new MyGame -p com.MyCompany.MyGame -l cpp -d ~/MyCompany -t binary
 ```
 
-If you haven't generated the pre-built libraries, please see the section below on doing so.
+生成预编译库的方法，在 [预编译库](./prebuilt_libraries.md) 章节。
 
-You can run __cocos new --help__ to see even more options as well as platform
-specific options.
+使用命令 `cocos new --help` 可以查看到更多关于项目创建的帮助信息。
 
 ## 项目编译
 
-As you make changes to your code it is necessary to compile it. We all know this
-has to happen, let's go through it. The command is formatted as:
+我们都知道，程序从源码到二进制程序，有一个编译环节。我们来看下 Cocos2d-x 是如何编译项目的，命令格式如下：
+
 ```sh
 cocos compile -s <path to your project> -p <platform> -m <mode> -o <output directory>
 ```
 
-Examples:
+示例：
+
 ```sh
 cocos compile -s ~/MyCompany/MyGame -p ios -m release -o ~/MyCompany/MyGame/bin
 
@@ -79,36 +84,42 @@ cocos compile -s ~/MyCompany/MyGame -p android -m release -o ~/MyCompany/MyGame/
 cocos compile -s c:\MyCompany\MyGame -p win32 -m release -o c:\MyCompany\MyGame\bin
 ```
 
-There is a lot going on here so let's go over the finer points. __-p__ is the __platform__ you are compiling for. __-m__ is mode, __debug__ or __release__ with the default being __debug__ if this parameter is not specified.
+这里的参数有点多，让我们来一个一个说，_-p_ 是编译的平台，_-m_ 是模式：debug 或者 release。如果没指定模式，默认 debug。此外 -s 和 -o 参数是可选的，如果操作命令的当前路径就是工程的路径，那这两个参数都可以省掉。比如已经在 _~/MyCompany/MyGame_ 目录，那编译命令可以简化为：
 
-Also, it is important to know that the __-s__ and __-o__ parameters are optional as well as long as you are already in your project's working directory. Taking the example above if you are already in __~/MyCompany/MyGame__ then the __cocos compile__ command can be shortened:
 ```sh
 cocos compile . -p ios -m release
 ```
 
-You can also specify an optional parameter __-q__ for __quiet__. This lessens the output that is outputted to the console. Taking an example from above:
+你也可以增加一个可选的参数 _-q_，这样执行静默操作，控制台的输出信息会比较少。示例：
+
 ```sh
 cocos compile -q -s ~/MyCompany/MyGame -p ios -m release -o ~/MyCompany/MyGame/bin
 ```
 
-As __cocos__ supports a lot of platforms there are also platform specific options which allow you to fine tune targeting specific SDK versions, signing code, lua options as well as web specific options. You can run __cocos compile --help__ to see all available options broken down by platform.
+由于命令行工具支持很多平台，因此还有一些特定平台的参数，使用它们可以进行更多的控制，比如指定 SDK 版本，确定签名信息，添加一些 Lua 相关或专用于 Web 的选项。
+
+使用命令 `cocos compile --help` 可以查看更多关于项目编译的帮助信息。
 
 ### Android 项目编译注意事项
 
-If you are compiling for Android, the __cocos__ command is flexible and allows developers to compile using specific Android API versions. You may have __Android-22__ installed on your system (or any other version). You will want to add __--ap android-api-version__ to the end of the __cocos__ command to specify. Example:
+命令行工具是很灵活的，对于编译 Android 项目允许开发者使用特定版本的 API。比如你的系统上安装了 Android-22，你想使用它来编译，就在命令行的最后增加参数 _--ap android-api-version_。示例：
+
 ```sh
 cocos compile -p android --ap android-22
 ```
-You can always check `project.properties` to see what api-version is being targetted. For more info, please read out [Release Notes](https://github.com/cocos2d/cocos2d-x/blob/v3/docs/RELEASE_NOTES.md#cocos-command-modification).
+
+你可以在项目的配置中，查看到目标 API 是什么版本。
 
 ## 项目运行
 
-Once you have created a project you can run it right from the command-line. __cocos__ takes care of launching the environment you specify. The command is formatted as:
+创建完项目后，你可以直接从命令行执行运行命令。cocos 会启动你指定平台的程序。命令行格式如下：
+
 ```sh
 cocos run -s <path to your project> -p <platform>
 ```
 
-Examples:
+示例:
+
 ```sh
 cocos run -s ~/MyCompany/MyGame -p ios
 
@@ -117,42 +128,40 @@ cocos run -s ~/MyCompany/MyGame -p android
 cocos run -s c:\MyCompany\MyGame -p win32
 ```
 
-You can also specify to run in __debug__ or __release__ mode using the optional
-__-m__ parameter. Excluding this parameter defaults to __debug__.
+当然，你也可以指定程序以 debug 还是 release 方式运行，默认的方式是 debug。示例：
+
 ```sh
 cocos run -s ~/MyCompany/MyGame -p ios -m release
 ```
 
-As with the __cocos compile__ command above, it is important to know that the
-__-s__ and __-o__ parameters are optional as well as long as you are already in your project's working directory. Taking the example above if you are already in
-__~/MyCompany/MyGame__ then the __cocos run__ command can be shortened:
+就好像 `cocos compile` 命令那样，如果你已经在项目目录了，_-s_ 和 _-o_ 参数就不是必须的，这对 `cocos run` 命令也一样。就以上面的为例，如果已经在工程目录，命令可以简化成：
+
 ```sh
 cocos run . -p ios -m release
 ```
 
-When running for the __web__ there are additional parameters that allow you to
-specify what web browser you want to run in. You can also specify ip address and
-port. This, again is done via command-line parameters. Examples, specifying
-Google Chrome:
-```
+在运行 _Web_ 程序时，还有可选的参数，允许你指定浏览器，例如指定 Google Chrome：
+
+```sh
 cocos run -s ~/MyCompany/MyGame -p web -b /Applications/Google\ Chrome.app
 
 cocos run -s ~/MyCompany/MyGame -p web -b C:\Program Files\Google\Chrome\Application\chrome.exe
 
 cocos run -s ~/MyCompany/MyGame -p web -b /usr/local/bin/chrome
 ```
-You can run __cocos run --help__ to see all available options broken down by platform.
+
+你还可以指定 IP 地址和端口，更多关于项目运行的使用帮助，请运行 `cocos run --help` 命令。
 
 ## 项目发布
 
-Once you are ready to ship your game __cocos__ provides an easy mechanism for
-deploying it. Just like with the commands above you specify what want to do. The
-command is formatted as:
+cocos 通过提供一系列项目发布的命令实现了简单的发布机制。这些命令，就像上面介绍的命令一样，通过一些参数指定需要的操作。命令格式如下：
+
 ```sh
 cocos deploy -s <path to your project> -p <platform> -m <mode>
 ```
 
-Examples:
+示例：
+
 ```sh
 cocos deploy -s ~/MyCompany/MyGame -p ios -m release
 
@@ -161,74 +170,10 @@ cocos deploy -s ~/MyCompany/MyGame -p android -m release
 cocos deploy -s c:\MyCompany\MyGame -p win32 -m release
 ```
 
-You can also specify an optional parameter __-q__ for __quiet__. This reduces the output that is logged to the console. Taking an example from above:
+你可以增加参数 _-q_，执行静默操作，这样控制台的输出信息会比较少。示例：
+
 ```sh
 cocos deploy -q -s ~/MyCompany/MyGame -p ios -m release
 ```
 
-You can run __cocos deploy --help__ to see all available options broken down by
-platform.
-
-## 附加插件安装
-
-Using the __Cocos Package Manager__ you can easily add additional functionality to your games, including __VR__ and __SDKBOX__. There are a variety of commands to assist with this. Examples:
-
-```sh
-# list available packages
-cocos package list
-
-# show all packages imported into your project
-cocos package info
-
-# update installed packages to the latest versions
-cocos package update
-```
-
-You can run __cocos package --help__ to see all available options broken down by platform.
-
-### VR 插件安装
-
-__VR__ is easily added to your project! Every __VR__ project needs __vrsdkbase__, it takes care of setting up your project to use __VR__. It is easy to import:
-
-```sh
-$ cocos package import -v -b vrsdkbase --anysdk
-```
-
-If you are using a supported __VR SDK__ make sure to import it. Examples:
-
-```sh
-# add the GearVR package
-$ cocos package import -v -b gearvr --anysdk
-
-# add the Deepoon VR package
-$ cocos package import -v -b deepoon --anysdk
-
-# add the Google VR package
-$ cocos package import -v -b gvr --anysdk
-
-# add the Oculus VR package
-$ cocos package import -v -b oculus --anysdk
-```
-
-For more information, please see our chapter on [__VR__](../programmers-guide/vr/index.html).
-
-### SDKBOX 插件安装
-
-__SDKBOX__ plugins can be installed using the __Cocos Package Manager__. Example:
-
-```sh
-# install a package, in this example, Facebook
-cocos package import facebook
-```
-
-## 命令行选项介绍
-
-__cocos__ has a number of unique options you can use to help build your games. To see all of these options, please run __cocos --help__. Let's us talk about these optios.
-
-| Command| Description|
-| ----|----|
-|__no-apk__| compile without building an apk. |
-|__luacompile__| Encrypt the lua scripts in your game. This is invoked once `cocos compile` is invoked with the `-m release` argument. Developers can invoke this manually for encrypting their scripts.|
-|__jscompile__| Encrypt the JavaScript scripts in your game. This is invoked once `cocos compile` is invoked with the `-m release` argument. Developers can invoke this manually for encrypting their scripts.|
-|__gen-simulator__| The simulator powers the  __preview__ function in Cocos Creator. |
-|__gen-templates__| is used for generating the binary templates you can use to get started on a project that uses the __pre-built libraries__. Binary templates are required by Cocos Bundle package and also Cocos Creator.
+运行 `cocos deploy --help`，可以查看更多关于项目发布的帮助信息。
