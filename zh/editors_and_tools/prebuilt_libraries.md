@@ -1,8 +1,4 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
-## Creating And Using Prebuilt Libraries
+# Creating And Using Prebuilt Libraries
 Cocos2d-x, like any large scale project, is made up of many hundreds of source files. You can examine the inner-workings or __peer under the hood__ of Cocos2d-x through these source files. You can modify these files as you wish. This freedom comes at a cost, however. No, not as in money, but something much more valuable! __Compiling time!!__. Every time a source file is changed, the __compiler__ must recompile all files that are part of the projects. __Compiling__ a project costs developers time. Compiling many, many times a day adds up even more time. Fortunately, there is an easily solution. Use __prebuilt__, also called __static__ libraries. This process wraps up all the source files in a project into a single __library__ that you can use to compile and link againt in your projects. Since the compiler knows that this library has not changed between compilers, there is no need to re-compile it. This is the same as saying: "I won't touch the engine, just build on top if it". Your compile times will go down from several minutes to perhaps less than one minute.
 
 ### Generating The Prebuilt Libraries For Use

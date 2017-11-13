@@ -1,13 +1,9 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# Cocos 命令行工具
 
-## Cocos command-line tool
-
-### What is the `cocos` command-line tool?
 Cocos2d-x comes with a command-line tool called __cocos__. It is a cross-platform tool that allows you to create new Cocos2d-x applications as well as __run__ them and __deploy__ them. __cocos__ works for all cocos2d-x supported platforms, which include: __ios__, __android__, __mac__, __linux__, __win32__, __wp8_1__, __wp10__ and __web__. You don't need to use an IDE unless you want to. It has many options, so let's go through them grouped by function.
 
-### Setting up `cocos`
+## `cocos` 命令配置
+
 it is a good idea to run __<cocos2d-x root>/setup.py__ to properly setup your
 __PATH__. Doing so ensures that you can run Cocos2d-x and its related tools. Example:
 ```sh
@@ -26,7 +22,8 @@ export LANG=en_US.UTF-8
 After adding these lines, it is necessary to run __source ~/.bash_profile__ or
 restart your shell.
 
-### Testing your path for `cocos`
+## `cocos` 命令测试
+
 It is necessary for __cocos__ to be in your path or to specify the complete path
 to it when using it. An easy test:
 ```sh
@@ -38,7 +35,8 @@ If you see output like __1.2__ you are all set. If you see anything else you nee
 On __OS X__ run __source ~/.bash_profile__ after updating your __PATH__ or
 specify the full path to __<cocos2d-x root>\tools\cocos2d-console\bin__.
 
-### Creating a new project
+### 项目创建
+
 To create a new project you use the __cocos new__ command. The command is formatted as:
 ```sh
 cocos new <game name> -p <package identifier> -l <language> -d <location>
@@ -64,7 +62,8 @@ If you haven't generated the pre-built libraries, please see the section below o
 You can run __cocos new --help__ to see even more options as well as platform
 specific options.
 
-### Compiling a project
+## 项目编译
+
 As you make changes to your code it is necessary to compile it. We all know this
 has to happen, let's go through it. The command is formatted as:
 ```sh
@@ -94,14 +93,16 @@ cocos compile -q -s ~/MyCompany/MyGame -p ios -m release -o ~/MyCompany/MyGame/b
 
 As __cocos__ supports a lot of platforms there are also platform specific options which allow you to fine tune targeting specific SDK versions, signing code, lua options as well as web specific options. You can run __cocos compile --help__ to see all available options broken down by platform.
 
-#### Android compiling could require specifying an API level.
+### Android 项目编译注意事项
+
 If you are compiling for Android, the __cocos__ command is flexible and allows developers to compile using specific Android API versions. You may have __Android-22__ installed on your system (or any other version). You will want to add __--ap android-api-version__ to the end of the __cocos__ command to specify. Example:
 ```sh
 cocos compile -p android --ap android-22
 ```
 You can always check `project.properties` to see what api-version is being targetted. For more info, please read out [Release Notes](https://github.com/cocos2d/cocos2d-x/blob/v3/docs/RELEASE_NOTES.md#cocos-command-modification).
 
-### Running a project
+## 项目运行
+
 Once you have created a project you can run it right from the command-line. __cocos__ takes care of launching the environment you specify. The command is formatted as:
 ```sh
 cocos run -s <path to your project> -p <platform>
@@ -142,7 +143,8 @@ cocos run -s ~/MyCompany/MyGame -p web -b /usr/local/bin/chrome
 ```
 You can run __cocos run --help__ to see all available options broken down by platform.
 
-### Deploy a project
+## 项目发布
+
 Once you are ready to ship your game __cocos__ provides an easy mechanism for
 deploying it. Just like with the commands above you specify what want to do. The
 command is formatted as:
@@ -167,7 +169,8 @@ cocos deploy -q -s ~/MyCompany/MyGame -p ios -m release
 You can run __cocos deploy --help__ to see all available options broken down by
 platform.
 
-### Installing additional plugins
+## 附加插件安装
+
 Using the __Cocos Package Manager__ you can easily add additional functionality to your games, including __VR__ and __SDKBOX__. There are a variety of commands to assist with this. Examples:
 
 ```sh
@@ -183,7 +186,8 @@ cocos package update
 
 You can run __cocos package --help__ to see all available options broken down by platform.
 
-#### Installing VR
+### VR 插件安装
+
 __VR__ is easily added to your project! Every __VR__ project needs __vrsdkbase__, it takes care of setting up your project to use __VR__. It is easy to import:
 
 ```sh
@@ -208,7 +212,8 @@ $ cocos package import -v -b oculus --anysdk
 
 For more information, please see our chapter on [__VR__](../programmers-guide/vr/index.html).
 
-#### Installing SDKBOX plugins
+### SDKBOX 插件安装
+
 __SDKBOX__ plugins can be installed using the __Cocos Package Manager__. Example:
 
 ```sh
@@ -216,7 +221,8 @@ __SDKBOX__ plugins can be installed using the __Cocos Package Manager__. Example
 cocos package import facebook
 ```
 
-### Unique command-line options
+## 命令行选项介绍
+
 __cocos__ has a number of unique options you can use to help build your games. To see all of these options, please run __cocos --help__. Let's us talk about these optios.
 
 | Command| Description|

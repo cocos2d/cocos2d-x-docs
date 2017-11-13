@@ -1,8 +1,4 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
-##Cocos
+# Cocos
 
 ###What is Cocos?
 Cocos is a platform to create games: it includes an editor, a game engine, it also
