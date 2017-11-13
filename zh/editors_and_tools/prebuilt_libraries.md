@@ -1,7 +1,13 @@
-# Creating And Using Prebuilt Libraries
+# 预编译库
+
 Cocos2d-x, like any large scale project, is made up of many hundreds of source files. You can examine the inner-workings or __peer under the hood__ of Cocos2d-x through these source files. You can modify these files as you wish. This freedom comes at a cost, however. No, not as in money, but something much more valuable! __Compiling time!!__. Every time a source file is changed, the __compiler__ must recompile all files that are part of the projects. __Compiling__ a project costs developers time. Compiling many, many times a day adds up even more time. Fortunately, there is an easily solution. Use __prebuilt__, also called __static__ libraries. This process wraps up all the source files in a project into a single __library__ that you can use to compile and link againt in your projects. Since the compiler knows that this library has not changed between compilers, there is no need to re-compile it. This is the same as saying: "I won't touch the engine, just build on top if it". Your compile times will go down from several minutes to perhaps less than one minute.
 
-### Generating The Prebuilt Libraries For Use
+和任何大型项目一样，Cocos2d-x 引擎是由数千个源文件组成。通过这些源文件，你可以了解到引擎内部工作的原理，你可以根据需要修改这些文件。但是这种自由是有代价的！不是金钱，而是更有价值的东西，时间！编译时间！
+
+每当项目的源文件发生更改时，编译器都会重新编译所有文件，包含引擎的源码，这样编译一个项目，都将花费相当长的时间，每天都可能会编译多次，加起来总编译时间非常可怕！
+
+## 创建预编译库
+
 Prebuilt libraries are available on *iOS*, *OS X*, *Android* and *Win32*
 
 In-order to use the prebuilt libraries in your projects you need to compile them. This assumes that you already haave a working Cocos2d-x installation. If you do not, please refer to [../installation/]().
@@ -33,7 +39,8 @@ The build process can take between several minutes and several hours, depending 
 
 You can run __cocos gen-libs --help__ to see all available options broken down by platform.
 
-### Using The Prebuilt Libraries In Your Projects
+## 使用预编译库
+
 Using the prebuilt libraries in your projects is easy. Simply add the libraries you need into your project and set your __header__ and __include__ search paths. Doing this depends upon the enviroment you are using. The paths you need to add are:
 
 __Header Search Paths:__
