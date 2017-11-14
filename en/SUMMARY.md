@@ -99,9 +99,6 @@
     - [Optimizing Graphics](advanced_topics/optimizing.md)
     - [SQLite](advanced_topics/sqlite.md)
 
--  [VR (virtual reality)](vr/index.md)
-    - [Getting Started](vr/index.md)
-
 -  [Installations](installation/index.md)
     - [Prerequisites](installation/index.md)
     - [Android](installation/Android-terminal.md)
