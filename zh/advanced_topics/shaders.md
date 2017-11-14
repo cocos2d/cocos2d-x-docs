@@ -1,49 +1,32 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 着色器和材质
 
-## Shaders and Materials
+## 什么是着色器
 
-### What is a Shader
+从维基百科：
 
-From wikipedia:
+在计算机图形学领域，__着色器(Shader)__ 是一种特殊类型的计算机程序，最初用于做阴影，在图像中产生适当的光照、明暗，现在主要用于产生特殊效果，也用于视频后期处理。
 
-__In the field of computer graphics, a shader is a computer program that is used
-to do shading: the production of appropriate levels of color within an image,
-or, in the modern era, also to produce special effects or do video post-processing.
-A definition in layman's terms might be given as "a program that tells a computer
-how to draw something in a specific and unique way".__
+非专业人士的定义可能是：告诉计算机如何以一种特定的方式绘制东西的程序。简单地说，着色器就是运行在 GPU 上用于图像渲染的一段程序，Cocos2d-x 用它绘制节点。
 
-In other words, it is a piece of code that runs on the GPU (not CPU) to draw the
-different Cocos2d-x Nodes.
+Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)，描述 GLSL 语言不在本文的范围之内。想了解更多，请参考 [规范文档](https://www.khronos.org/files/opengles_shading_language.pdf)。在 Cocos2d-x 中，所有的可渲染的 Node 对象都使用着色器。比如，`Sprite` 对象使用为 2D 精灵优化过的着色器，`Sprite3D` 使用为 3D 对象优化过的着色器。
 
-Cocos2d-x uses the [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/)
-for the shaders. But describing the GLSL language is outside the scope of this
-document. In order to learn more about the language, please refer to:
-[OpenGL ES Shading Language v1.0 Spec](https://www.khronos.org/files/opengles_shading_language.pdf).
+## 自定义着色器
 
-In Cocos2d-x, all `Node` objects that are __renderable__ use shaders. As an example
-`Sprite` uses optimized shaders for 2d sprites, `Sprite3D` uses optimized shaders
-for 3d objects, and so on.
-
-### Customizing Shaders
-
-Users can change the predefined shaders from any Cocos2d-x `Node` by calling:
+开发者能为任一 Cocos2d-x 的节点对象设置自定义的着色器，添加着色器示例：
 
 {% codetabs name="C++", type="cpp" -%}
 sprite->setGLProgramState(programState);
 sprite3d->setGLProgramState(programState);
 {%- endcodetabs %}
 
-The `GLProgramState` object contains two important things:
+`GLProgramState` 对象包含两个重要的东西
 
-- A `GLProgram`: Basically this is _the_ shader. It contains a vertex and fragment shader.
-- And the __state__, which basically are the uniforms of the shader.
+- `GLProgram`：从根本上来说就是着色器。包含一个顶点着色器和一个像素着色器。
+- 状态属性：根本上来说就是着色器的 uniform 变量
 
-In case you are not familiar with the term _uniform_ and why it is needed, please
-refer to the [OpenGL Shading Language Specification](https://www.khronos.org/files/opengles_shading_language.pdf)
+如果你不熟悉 uniform 变量也不知道为什么需要它，请参考刚才提到的 [语言规范](https://www.khronos.org/files/opengles_shading_language.pdf)
 
-Setting uniforms to a `GLProgramState` is as easy as this:
+可以很容易的将 uniform 变量设置到  `GLProgramState`：
 
 {% codetabs name="C++", type="cpp" -%}
 glProgramState->setUniformFloat("u_progress", 0.9);
@@ -51,7 +34,7 @@ glProgramState->setUniformVec2("u_position", Vec2(x,y));
 glProgramState->setUniformMat4("u_transform", matrix);
 {%- endcodetabs %}
 
-You can even set callbacks as a uniform value:
+你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式作为回调函数的例子：
 
 {% codetabs name="C++", type="cpp" -%}
 glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
@@ -62,140 +45,127 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 );
 {%- endcodetabs %}
 
-And although it is possible to set `GLProgramState` objects manually, an easier
-way to do it is by using `Material` objects.
+虽然可以手动设置 `GLProgramState` 对象，但更简单的方法是使用材质对象。
 
-### What is a Material
+## 什么是材质
 
-Assume that you want to draw a sphere like this one:
+设想你想在游戏中画一个这样的球体：
 
 ![](advanced_topics-img/model.jpg)
 
-The first thing that you have to do is to define its geometry, something like this:
+你要做的第一件事就是定义它的几何形状，像这样：
 
 ![](advanced_topics-img/geometry.jpg)
 
-...and then define the brick texture, like:
+然后定义砖块纹理，像这样：
 
 ![](advanced_topics-img/brick.jpg)
 
+这样做也能达成目标的效果，但是如果进一步的考虑：
 
-- But what if you want to use a lower quality texture when the sphere is far away
-from the camera?
-- or what if you want to apply a blur effect to the bricks?
-- or what if you want to enable or disable lighting in the sphere ?
+- 如果当球体离相机很远时，想使用质量较低的纹理呢？
+- 如果想对砖块应用模糊效果呢？
+- 如果想启用或者禁用球体中的照明呢？
 
-The answer is to use a `Material` instead of just a plain and simple texture. In fact,
-with `Material` you can have more than one texture, and much more features like multi-pass rendering.
+答案是使用 __材质(Material)__，而不是使用一个简单的纹理。对于材质，你可以拥有多个纹理，还可以拥有其它的一些特性，比如多重渲染。
 
-`Material` objects are created from `.material` files, which contain the following information:
+材质对象通过 _.material_ 文件创建，其中包含以下信息：
 
-- `Material` can have one or more `Technique` objects
-- each `Technique` can have one more `Pass` objects
-- each `Pass` object has:
-  - a `RenderState` object,
-  - a `Shader` object including the uniforms
+- 材质有一个或多个渲染方法(technique)
+- 每个渲染方法有一个或多个通道(pass)
+- 每个通道有：
+  - 一个渲染状态(RenderState)
+  - 一个包含了 uniform 变量的着色器
 
-As an example, this is how a material file looks like:
+例如，这是一个材质文件：
 
 {% codetabs name="JavaScript", type="js" -%}
 // A "Material" file can contain one or more materials
 material spaceship
 {
-	// A Material contains one or more Techniques.
-	// In case more than one Technique is present, the first one will be the default one
-	// A "Technique" describes how the material is going to be renderer
-	// Techniques could:
-	//  - define the render quality of the model: high quality, low quality, etc.
-	//  - lit or unlit an object
-	// etc...
-	technique normal
-	{
-		// A technique can contain one or more passes
-		// A "Pass" describes the "draws" that will be needed
-		//   in order to achieve the desired technique
-		// The 3 properties of the Passes are shader, renderState and sampler
-		pass 0
-		{
-			// shader: responsible for the vertex and frag shaders, and its uniforms
-			shader
-			{
-				vertexShader = Shaders3D/3d_position_tex.vert
-				fragmentShader = Shaders3D/3d_color_tex.frag
+    // A Material contains one or more Techniques.
+    // In case more than one Technique is present, the first one will be the default one
+    // A "Technique" describes how the material is going to be renderer
+    // Techniques could:
+    //  - define the render quality of the model: high quality, low quality, etc.
+    //  - lit or unlit an object
+    // etc...
+    technique normal
+    {
+        // A technique can contain one or more passes
+        // A "Pass" describes the "draws" that will be needed
+        //   in order to achieve the desired technique
+        // The 3 properties of the Passes are shader, renderState and sampler
+        pass 0
+        {
+            // shader: responsible for the vertex and frag shaders, and its uniforms
+            shader
+            {
+                vertexShader = Shaders3D/3d_position_tex.vert
+                fragmentShader = Shaders3D/3d_color_tex.frag
 
-				// uniforms, including samplers go here
-				u_color = 0.9,0.8,0.7
-				// sampler: the id is the uniform name
-				sampler u_sampler0
-				{
-					path = Sprite3DTest/boss.png
-					mipmap = true
-					wrapS = CLAMP
-					wrapT = CLAMP
-					minFilter = NEAREST_MIPMAP_LINEAR
-					magFilter = LINEAR
-				}
-			}
-			// renderState: responsible for depth buffer, cullface, stencil, blending, etc.
-			renderState
-			{
-				cullFace = true
-				cullFaceSide = FRONT
-				depthTest = true
-			}
-		}
-	}
+                // uniforms, including samplers go here
+                u_color = 0.9,0.8,0.7
+                // sampler: the id is the uniform name
+                sampler u_sampler0
+                {
+                    path = Sprite3DTest/boss.png
+                    mipmap = true
+                    wrapS = CLAMP
+                    wrapT = CLAMP
+                    minFilter = NEAREST_MIPMAP_LINEAR
+                    magFilter = LINEAR
+                }
+            }
+            // renderState: responsible for depth buffer, cullface, stencil, blending, etc.
+            renderState
+            {
+                cullFace = true
+                cullFaceSide = FRONT
+                depthTest = true
+            }
+        }
+    }
 }
 {%- endcodetabs %}
 
-And this is how to set a `Material` to a `Sprite3D`:
+将一个材质设置到 `Sprite3D` 的方法：
 
 {% codetabs name="C++", type="cpp" -%}
 Material* material = Material::createWithFilename("Materials/3d_effects.material");
 sprite3d->setMaterial(material);
 {%- endcodetabs %}
 
-And if you want to change between different `Technique`s, you have to do:
+如果你想改变不同的渲染方法，你可以这样做：
 
 {% codetabs name="C++", type="cpp" -%}
 material->setTechnique("normal");
 {%- endcodetabs %}
 
-### Techniques
-Since you can bind only one `Material` per `Sprite3D`, an additional feature
-is supported that's designed to make it quick and easy to change the way you
-render the parts at runtime. You can define multiple techniques by giving them
-different names. Each one can have a completely different rendering technique,
-and you can even change the technique being applied at runtime by using
-__Material::setTechnique(const std::string& name)__. When a material is loaded,
-all the techniques are loaded ahead too. This is a practical way of handling
-different light combinations or having lower-quality rendering techniques, such
-as disabling bump mapping, when the object being rendered is far away from the
-camera.
+### 渲染方法(Technique)
 
-### Passes
-A `Technique` can have one or more __passes__ That is, multi-pass rendering.
-And each `Pass` has two main objects:
+你只能为一个 `Sprite3D` 绑定一个材质，但这并不意味着固定了一种渲染方式。材质(Material)有一个特性：允许包含多个 __渲染方法(Technique)__，当一个材质被加载时，所有的渲染方法也都被提前加载。有了这个特性，你就可以在运行时方便快速的改变一个对象的渲染效果。
 
-- `RenderState`: contains the GPU state information, like __depthTest__, __cullFace__,
-    __stencilTest__, etc.
-- `GLProgramState`: contains the shader (`GLProgram`) that is going to be used, including
-    its uniforms.
+通过使用 `Material::setTechnique(const std::string& name)` 函数，就可以完成渲染方法的切换。这种特性可以用来处理不同灯光的变换，也可以用来处理，在渲染的对象离相机很远时采用质量较低的纹理这种情景。
 
-### Material file format in detail
-Material uses a file format  optimized to create Material files.
-This file format is very similar to other existing Material file formats, like
-GamePlay3D's and OGRE3D's.
+### 通道(Pass)
 
-__Notes__:
+一个渲染方法可以有多个渲染 __通道(Pass)__，其中一个通道对应一次渲染，多通道意味着对一个对象渲染多次，这被称为多通道渲染，也叫多重渲染。每个通道有两个主要的对象：
 
-- Material file extensions do not matter. Although it is recommended to use
-__.material__ as extension
-- __id__ is optional for material, technique and pass
-- Materials can inherit values from another material by optionally setting a
-__parent_material_id__
-- Vertex and fragment shader file extensions do not matter. The convention in
-Cocos2d-x is to use __.vert__ and __frag__
+- `RenderState`：包含 GPU 状态信息，如 _depthTest_, _cullFace_,
+    _stencilTest_，等
+- `GLProgramState`：包含要使用的着色器，和一些 uniform 变量
+
+### 材质文件格式
+
+Cocos2d-x 的材质文件使用一种优化过的文件格式，同时与其它一些开源引擎的材质文件格式类似，如 _GamePlay3D_，_OGRE3D_。
+
+注意点：
+
+- 材质文件的扩展名无关紧要，建议使用 _.material_ 作为扩展名
+- 顶点着色器和像素着色器的文件扩展名也无关紧要，建议使用 _.vert_ 和 _.frag_
+- _id_ 是材质(Meterial)，渲染方法(technique)，通道(pass)的可选属性
+- 材质可以通过设置 _parent_material_id_ 继承其它材质的值
 
 {% codetabs name="C++", type="cpp" -%}
 // When the .material file contains one material
@@ -203,6 +173,8 @@ sprite3D->setMaterial("Materials/box.material");
 // When the .material file contains multiple materials
 sprite3D->setMaterial("Materials/circle.material#wood");
 {%- endcodetabs %}
+
+#### 字段定义
 
 <table>
  <tr>
@@ -501,7 +473,7 @@ sprite3D->setMaterial("Materials/circle.material#wood");
  </tr>
 </table>
 
-__Enums__:
+#### 枚举类型定义
 
 <table>
  <tr>
@@ -641,19 +613,15 @@ __Enums__:
  </tr>
 </table>
 
-__Types__:
+__数据类型__:
 
-<ul>
- <li class=MsoNormal><a name=scalar><span class=Non-literalCode>scalar</span> </a>is
-     float, int or bool.</li>
- <li class=MsoNormal><a name=vector><span class=Non-literalCode>vector</span></a><span
-     class=Non-literalCode> </span>is a comma separated list of floats.</li>
-</ul>
+- scalar 代表标量，可以用浮点型(float)，整形(int)，布尔型(bool)
+- vector 代表矢量，用逗号分隔的一系列浮点数表示
 
-### Predefined uniforms
 
-The following are predefined uniforms used by Cocos2d-x that can be used in
-your shaders:
+### 预定义的 uniform 变量
+
+下面是 Cocos2d-x 预定义的一些 uniform 变量，你可以在自定义的着色器中使用它们。
 
 * `CC_PMatrix`: A `mat4` with the projection matrix
 * `CC_MVMatrix`: A `mat4` with the Model View matrix

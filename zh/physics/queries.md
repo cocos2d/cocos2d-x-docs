@@ -1,25 +1,18 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 查询
 
-## Queries
-Have you ever stood in one position and looked around? You see things __near__ to
-you and __far__ from you. You can gauge how close things are to you. __Physics engines__
-provide this same type of __spatial query__. `PhysicsWorld` objects currently support
-__point queryies__, __ray casts__ and __rect queries__.
+你肯定有站着一个地方往四周看的经历？你能看到离你近的地方，也能看到离你远的东西，你能判断出它们离你有多远。物理引擎也提供了类似的空间查询功能。
 
-### Point Queries
-When you touch something, say your desk, you can think of this as a __point query__.
-They allow you to check if there are shapes within a certain distance of a point.
-__Point queries__ are useful for things like __mouse picking__ and __simple sensors__.
-You can also find the closest point on a shape to a given point or find the closest
-shape to a point.
+Cocos2d-x 提供的 `PhysicsWorld` 对象支持点查询，射线查询和矩形查询。
 
-### Ray Cast
-If you are looking around, some object within your sight is bound to catch your
-attention. You have essentially performed a __ray cast__ here. You scanned until
-you found something interesting to make you stop scanning. You can __ray cast__ at
-a shape to get the point of first intersection. For example:
+## 点查询
+
+当你碰到什么东西，比如说你的桌子的时候，你可以将这种情景作为一个点查询的例子。点查询是检查一个点周围的一定距离内是否有物体。通过点查询你可以找到一个物体中距离某定点最近的点，或者找到距离一个定点最近的物体，这非常适合于判断鼠标点击拾取的对象，也可以利用它进行一些其它的简单感知。
+
+## 射线查询
+
+当你四处看的适合，在你视线内的某些物体肯定会引起你的注意，你可以将这种情景作为一个射线查询的例子。射线查询是检查从一个定点发出的射线是否相交于一个物体，如果相交可以获取到一个交叉点，这非常适合于判断子弹（忽略子弹的飞行时间）是否命中。
+
+示例：
 
 {% codetabs name="C++", type="cpp" -%}
 void tick(float dt)
@@ -57,11 +50,11 @@ void tick(float dt)
 }
 {%- endcodetabs %}
 
-![](physics-img/RayTest.gif)
+![](../../en/physics/physics-img/RayTest.gif)
 
-### Rect Queries
-__Rect queries__ provide a fast way to check roughly which shapes are in an area.
-It is pretty easy to implement:
+## 矩形查询
+
+矩形查询提供了一种快速检查区域中有哪些物体的方法，实现起来非常容易：
 
 {% codetabs name="C++", type="cpp" -%}
 auto func = [](PhysicsWorld& world, PhysicsShape& shape, void* userData)->bool
@@ -73,8 +66,8 @@ auto func = [](PhysicsWorld& world, PhysicsShape& shape, void* userData)->bool
 scene->getPhysicsWorld()->queryRect(func, Rect(0,0,200,200), nullptr);
 {%- endcodetabs %}
 
-A few examples of using a __rect query__ while doing a *logo smash*:
+这是在制作 Logo 击碎时使用矩形查询的例子：
 
-![](physics-img/rectQuery1.gif)
+![](../../en/physics/physics-img/rectQuery1.gif)
 
-![](physics-img/rectQuery2.gif)
+![](../../en/physics/physics-img/rectQuery2.gif)

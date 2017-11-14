@@ -1,12 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 高级话题
 
-## Advanced Topics
-Wow! You are on the last chapter. Good Job! By now you should feel comfortable
-creating your games with Cocos2d-x. However, please realize there is no limit to
-what you can create. This chapter covers __advanced__ concepts. Note that this
-chapter gets more technical in its content and format.
+哇！你已经读到最后一章了，干得不错！
+
+现在对于使用 Cocos2d-x 开发游戏，你应该各方面都很清楚了。但是，务必要意识到学无止境！本章就介绍一些高级的、技术性强的东西。
 
 <!-- to write later -->
 

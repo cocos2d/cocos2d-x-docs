@@ -1,21 +1,16 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 文件系统接入
 
-## File System Access
-Even though you can use functions in __stdio.h__ to access files it can be
-inconvenient for a few reasons:
-* You need to invoke system specific API to get full path of a file.
-* Resources are packed into .apk file on Android after installing.
-* You want to load a resource (such as a picture) based on resolution automatically.
+尽管你可以使用 _stdio.h_ 中的函数来访问文件，但是由于以下原因可能会很不方便：
 
-The `FileUtils` class has been created to resolve these issues. `FileUtils` is a
-helper class to access files under the location of your `Resources` directory.
-This includes reading data from a file and checking file existence.
+* 获取文件的绝对路径时，需要调用系统的特定 API
+* 安装后，资源文件将打包到 .apk 文件中，绝对路径并不适用
+* 想根据屏幕分辨率不同，自动加载不同的分辨率资源，如图片
 
-### Functions to read file content
-These functions will read different type of files and will return different data
-types:
+Cocos2d-x 已经提供了 `FileUtils` 类来解决这些问题。`FileUtils` 是一个用于访问 _Resources_ 目录下文件的帮助类。它也能做一些辅助性的事情，比如检查一个文件是否存在。
+
+## 读文件
+
+这是一些读文件的函数，不同的函数读不同类型的文件，返回不同的数据类型
 
 <table>
  <tr>
@@ -51,8 +46,9 @@ types:
 
  </table>
 
-### Functions to manage files or directories
-These functions will manage a file or a directory:
+## 管理文件
+
+这些函数是用来管理文件，目录的：
 
 <table>
  <tr>

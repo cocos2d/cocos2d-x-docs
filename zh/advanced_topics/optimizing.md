@@ -1,79 +1,67 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+# 图形性能优化
 
-## How to optimize the graphics performance of your Cocos2d-x games
+## 黄金法则
 
-### Golden rules
-#### Know the bottlenecks and optimize the bottlenecks.
-When doing optimization, we should always stick to this rule. Only 20% code in your system contribute to the 80% performance issue.
+### 二八原则
 
-#### Always use tools to profile the bottleneck, don't guess randomly.
-There are many tools available now for profiling the graphics performance.
-Though we are optimize the performance of Android games, but XCode could also be helpful to debugging.
+系统中 20% 的代码会消耗 80% 的性能！在进行性能优化时，我们应该始终坚持这个原则。
 
-- Xcode: https://github.com/rstrahl/rudistrahl.me/blob/master/entries/Debugging-OpenGL-ES-With-Xcode-Profile-Tools.md
-and the official document: https://developer.apple.com/library/ios/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/ToolsOverview/ToolsOverview.html
+### 够用原则
 
-There are three major mobile GPU vendors nowadays and they provide decent graphics profiling tools:
+如果有两种方式渲染图像，无法观察出哪个渲染的效果更好，那就选用性能消耗更低的方式。我们知道，RGBA4444 像素格式的 _PNG_ 图像质量比 RGBA8888 像素格式的要低，但是如果在游戏效果上，无法观察出哪个效果好，我们应该坚持使用 RGBA4444 的像素格式，因为它占用更少的内存，出现内存问题和带宽问题的可能性更小。
 
-- For ARM Mali GPU: http://malideveloper.arm.com/resources/tools/mali-graphics-debugger/
-- For Imagination PowerVR GPU: https://community.imgtec.com/developers/powervr/tools/pvrtune/
-- For Qualcomm Adreno GPU: https://developer.qualcomm.com/software/adreno-gpu-profiler
+音频采样率也是一样的。
 
-Use these tools when you suffer from graphics issues. **But not at the first beginning, usually the bottleneck resides on CPU.**
+### 了解目标设备和游戏引擎
 
-#### Know your target device and your game engine
-Know the CPU/GPU family of your target device  which is important when sometimes the performance issues
-only occurs on certain kind of devices. And you will find they share the same kind of GPU(ARM or PowerVR or Mali).
+了解目标设备的 CPU/GPU 系列，当性能问题仅在某些设备上出现时，这个信息就非常重要。或许你会发现他们共用一种 GPU：ARM、PowerVR 或 Mali。然后就可以进行有针对性的分析。
 
-Know the limitations of your currently used game engine is also important. If you know how your engine organize the graphics command,
-how your engine do batch drawing. You could avoid many common pitfalls during coding.
+了解目前使用的游戏引擎也很重要，如果你知道引擎是如何组织图形命令，如何处理绘制过程。那在编码的过程中就能避免许多常见的陷阱。
 
-#### The principle of "Good enough".
-(“If the viewer cannot tell the difference between differently rendered images always use the cheaper implementation".)
-As we know a PNG with RGBA444 pixel format has lower graphics quality than the one with RGBA888 pixel format.
-But if we can't tell the difference between the two, we should stick to RGBA4444 pixel format.
-The RGBA444 format use less memory and it will less likely to cause the memory issue and bandwidth issue.
+### 使用工具分析
 
-It is the same goes for the audio sample rate.
+有许多工具可用于分析图形性能，即使我们需要优化 Android 游戏的性能，也可以使用 Xcode 帮助调试。
 
-### Common Bottlenecks
-As a rules of thumb, your game will suffer CPU bottlenecks easily than graphics bottlenecks.
+- Xcode: [Debugging-OpenGL-ES-With-Xcode-Profile-Tools](https://github.com/rstrahl/rudistrahl.me/blob/master/entries/Debugging-OpenGL-ES-With-Xcode-Profile-Tools.md)
+- 官方文档: [OpenGLES_ProgrammingGuide](https://developer.apple.com/library/ios/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/ToolsOverview/ToolsOverview.html)
 
-#### The CPU is often limited by the number of draw calls and the heavy compute operations in your game loop
-Try to minimize the total draw calls of your game. We should use batch draw as much as possible.
-Cocos2d-x 3.x has auto batch support, but it needs some effort to make it work.
+三大移动 GPU 供应商，也提供了图形分析工具
 
-Also try avoid IO operations when players are playing your game. Try to preload your spritesheets, audios, TTF fonts etc.
+- ARM Mali GPU: [mali-graphics-debugge](http://malideveloper.arm.com/resources/tools/mali-graphics-debugger/)
+- Imagination PowerVR GPU: [pvrtune](https://community.imgtec.com/developers/powervr/tools/pvrtune/)
+- Qualcomm Adreno GPU: [adreno-gpu-profiler](https://developer.qualcomm.com/software/adreno-gpu-profiler)
 
-Also don't do heavy compute operations in your game loop which means don't let the heavy operations called 60 times per frame.
+当你遇到图形性能问题时可以使用这些工具，__但在这之前，请先确认是不是 CPU 导致的性能问题__，注意不要随意猜测，而是要通过分析得出结果。
 
-Never!
+## 常见瓶颈
 
-#### The GPU is often limited by the overdraw(fillrate) and bandwidth.
-If you are creating a 2D game and you don't write complex shaders, you might won't suffer GPU issues.
-But the overdraw problem still has trouble and it will slow your graphics performance with too much bandwidth consumption.
+作为一个经验法则，游戏性能问题更容易出现在 CPU ，而不是 GPU
 
-Though modern mobile GPU have TBDR(Tiled-based Defered Rendering) architecture, but only PowerVR's HSR(Hidden Surface Removal)
-could reduce the overdraw problem significantly. Other GPU vendors only implement a TBDR + early-z testing, it only reduce the overdraw
-problem when you submit your opaque geometry with the order(font to back). And Cocos2d-x always submit rendering commands ordered from back to front.
-Because in 2D, we might have many transparency images and only in this order the blending effect is correct.
+### CPU 性能优化
 
-Note: By using poly triangles, we could improve the fillrate.  Please refer to this article for more information:
-https://www.codeandweb.com/texturepacker/tutorials/cocos2d-x-performance-optimization
+__绘制调用(draw call)__ 次数过多，游戏循环中计算量过大，都会造成 CPU 性能下降，尽量减少游戏中的总绘制调用次数，我们应该尽可能的使用批量绘制。 Cocos2d-x 有自动批量处理绘制的支持，但仍需要一些努力才能使其工作。
 
-But don't worry too much of this issue, it doesn't perform too bad in practice.
+当玩家玩游戏时，要尽量避免 IO 操作，尽可能预加载图集、音频、TTF字体等
 
-### Simple checklist to make your Cocos2d-x game faster
-1.  Always use batch drawing. Package sprite images in the same layer into a large atlas(Texture packer could help).
-2.  As rule of thumb, try to keep your draw call below 50. In other words, try to minimize your draw call number.
-3.  Prefer 16bit(RGBA4444+dithering) over raw 32bit(RGBA8888) textures.
-4.  Use compressed textures: In iOS use PVRTC texture. In Android platform, use ETC1. but ETC1 doesn't has alpha,
-you might need to write a custom shader and provide a separate ETC1 image for the alpha channel.
-5.  Don't use system font as your game score counter. It's slow. Try to use TTF or BMFont, BMfont is better.
-6.  Try to preload audio and other game objects before usage.
-7. Use armeabi-v7a to build Android native code and it will enable neon instructors which is very fast.
-8. Bake the lighting rather than using the dynamic light.
-9. Avoid using complex pixel shaders.
-10. Avoid using **discard** and alpha test in your pixel shader, it will break the HSR(Hidden surface removal). Only use it when necessary.
+更不要在游戏循环中进行繁重的计算操作，因为这可能造成每帧 60 次的大量计算，性能消耗非常恐怖！
+
+### GPU 性能优化
+
+如果只是在开发一个 2D 游戏，也没有写复杂的着色器，那基本不会遇到 GPU 性能问题。但是过度绘制的问题仍然存在，如果过度绘制较多，将会消耗大量带宽，进而降低 GPU 性能。
+
+尽管现在移动 GPU 具有 _TBDR(基于平铺的渲染)_ 架构，但是只有 PowerVR 的 _HSR(隐藏曲面去除)_ 可以显著减少过度绘制问题，其它 GPU 仅执行 TBDR 和早期的 z 测试，只有在提交不透明的几何图形时才能减少过渡绘制问题。
+
+Cocos2d-x 总是按照从后向前的规则提交绘制命令，这样在 2D 中即使有许多透明图像，也能保证正确的混合效果。
+
+## Cocos2d-x 性能优化建议
+
+1. 始终使用批量绘图，将同一图层中的精灵图像打包成一个大的图集
+1. 根据经验，尽量保持 _绘制调用(draw call)_ 次数低于 50，总之尽量减少就对了！
+1. 在 原始 32 位（RGBA8888）纹理上，优先使用 16 位（RGBA4444 + 抖动）的处理方式
+1. 使用压缩纹理，在 iOS 中使用 PVRTC 纹理，在 Android 平台上，使用 ETC1，但是 ETC1 没有 alpha 通道，你可能需要编写自定义着色器并为 alpha 通道提供单独的 ETC1 图像
+1. 不要使用系统字体作为您的游戏得分计数器，它很慢的，尝试使用 TTF 或 BMFont，BMFont 更快
+1. 尝试在使用音频和其它游戏对象前，进行预加载
+1. 使用 armabi-v7a 构建 Android 工程，这会有更好的性能表现
+1. 使用烘焙光照，而不是动态光照
+1. 避免使用复杂的像素着色器
+1. 避免在像素着色器中使用丢弃和 alpha 测试，它会影响 HSR 优化
