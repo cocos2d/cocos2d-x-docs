@@ -6,8 +6,6 @@ Given:
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
-<!--{%- language name="JavaScript", type="js" -%}
-var mySprite = new Sprite(res.mysprite_png);-->
 {%- endcodetabs %}
 
 ![](sprites-img/i1.png "")
@@ -39,21 +37,6 @@ mySprite->setAnchorPoint(1, 0);
 
 // top right
 mySprite->setAnchorPoint(1, 1);
-<!--{%- language name="JavaScript", type="js" -%}
-// DEFAULT anchor point for all Sprites
-mySprite.setAnchorPoint(cc._p(0.5, 0.5));
-
-// bottom left
-mySprite.setAnchorPoint(cc._p(0, 0));
-
-// top left
-mySprite.setAnchorPoint(cc._p(0, 1));
-
-// bottom right
-mySprite.setAnchorPoint(cc._p(1, 0));
-
-// top right
-mySprite.setAnchorPoint(cc._p(1, 1));-->
 {%- endcodetabs %}
 
 To represent this visually:
@@ -80,8 +63,6 @@ can also be set using the `setPosition()` method.
 {% codetabs name="C++", type="cpp" -%}
 // position a sprite to a specific position of x = 100, y = 200.
 mySprite->setPosition(Vec2(100, 200));
-<!--{%- language name="JavaScript", type="js" -%}
-mySprite.setPosition(cc._p(100, 200));-->
 {%- endcodetabs %}
 
 #### Rotation
@@ -101,18 +82,6 @@ mySprite->setRotation(60.0f);
 
 // rotate sprite by -60 degrees
 mySprite->setRotation(-60.0f);
-<!--{%- language name="JavaScript", type="js" -%}
-// rotate sprite by +20 degrees
-mySprite.setRotation(cc._p(20.0));
-
-// rotate sprite by -20 degrees
-mySprite.setRotation(cc._p(-20.0));
-
-// rotate sprite by +60 degrees
-mySprite.setRotation(cc._p(60.0));
-
-// rotate sprite by -60 degrees
-mySprite.setRotation(cc._p(-60.0));-->
 {%- endcodetabs %}
 
 ![](sprites-img/i8.png "")
@@ -130,15 +99,6 @@ mySprite->setScaleX(2.0);
 
 // increases just Y scale by 2.0
 mySprite->setScaleY(2.0);
-<!--{%- language name="JavaScript", type="js" -%}
-// increases X and Y size by 2.0 uniformly
-mySprite.setScale(cc._p(2.0));
-
-// increases just X scale by 2.0
-mySprite.setScaleX(cc._p(2.0));
-
-// increases just Y scale by 2.0
-mySprite.setScaleY(cc._p(2.0));-->
 {%- endcodetabs %}
 
 ![](sprites-img/i5.png "")
@@ -153,20 +113,13 @@ mySprite->setSkewX(20.0f);
 
 // adjusts the Y skew by 20.0
 mySprite->setSkewY(20.0f);
-<!--{%- language name="JavaScript", type="js" -%}
-// adjusts the X skew by 20.0
-mySprite.setSkewX(cc._p(20.0));
-
-// adjusts the Y skew by 20.0
-mySprite.setSkewY(cc._p(20.0));-->
 {%- endcodetabs %}
 
 ![](sprites-img/i7.png "")
 
 ### Sprite properties not affected by anchor point
 There are a few properties of `Sprite` objects that are not affected by
-__anchor point__. Why? Because they only change superficial qualities like __color__
-and __opacity__.
+__anchor point__. Why? Because they only change superficial qualities like __color__ and __opacity__.
 
 #### Color
 Changes the _sprite's_ color. This is done by passing in a `Color3B` object.
@@ -182,12 +135,6 @@ mySprite->setColor(Color3B::WHITE);
 
 // Set the color by passing in a Color3B object.
 mySprite->setColor(Color3B(255, 255, 255)); // Same as Color3B::WHITE
-<!--{%- language name="JavaScript", type="js" -%}
-// set the color by passing in a pre-defined Color3B object.
-mySprite.setColor(cc.color.WHITE);
-
-// Set the color by passing in a Color3B object.
-mySprite.setColor(cc.color(255, 255, 255)); // Same as Color3B::WHITE-->
 {%- endcodetabs %}
 
 ![](sprites-img/i10.png "")
@@ -202,10 +149,6 @@ and you'll always understand how this works. The default value is 255 (fully opa
 // Set the opacity to 30, which makes this sprite 11.7% opaque.
 // (30 divided by 256 equals 0.1171875...)
 mySprite->setOpacity(30);
-<!--{%- language name="JavaScript", type="js" -%}
-// Set the opacity to 30, which makes this sprite 11.7% opaque.
-// (30 divided by 256 equals 0.1171875...)
-mySprite.setOpacity(30);-->
 {%- endcodetabs %}
 
 ![](sprites-img/i11.png "")

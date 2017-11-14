@@ -6,7 +6,7 @@ We always welcome contributions to our documentation.
   - Fork our [docs repo](https://github.com/cocos2d/cocos2d-x-docs)
   - __en/__ is for English contributions, __zh/__ is for 中文 contributions.
   - code blocks must be wrapped in special code to work correctly:
-    - C++ only code block:
+    - C++ code block:
       ```html
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
@@ -60,12 +60,12 @@ If you want to contribute code, please follow these steps:
 #### Only _complete_ patches will be merged
 The patch must be _complete_. By that, we mean:
 
-  -   For C++ code follow the [Cocos2d C++ Coding Style][1]
-  -   For Python code follow the [PEP8 guidelines][2]
+  -   For C++ code follow the [Cocos2d C++ Coding Style](https://github.com/cocos2d/cocos2d-x/blob/v3/docs/CODING_STYLE.md)
+  -   For Python code follow the [PEP8 guidelines](https://www.python.org/dev/peps/pep-0008)
   -   Describe what the patch does
   -   Include test cases if applicable
   -   Include unit tests if applicable
-  -   Must be tested in all supported platforms __*__
+  -   Must be tested in all supported platforms. If you don't have access to test your code in all the supported platforms, let us know.
   -   Must NOT degrade the performance
   -   Must NOT break existing tests cases
   -   Must NOT break the Continuous Integration build
@@ -78,14 +78,8 @@ The patch must be _complete_. By that, we mean:
   -   It must not duplicate existing code, unless the new code deprecates the old one
   -   Patches that refactor key components will only be merged in the next major versions.
 
-__*__: If you don't have access to test your code in all the supported platforms, let us know.
-
 #### Promoting cocos2d-x
-
 Help us promote cocos2d-x by using the cocos2d-x logo in your game, or by mentioning cocos2d-x in the credits.
-
-[1]: https://github.com/cocos2d/cocos2d-x/blob/v3/docs/CODING_STYLE.md
-[2]: https://www.python.org/dev/peps/pep-0008
 
 #### Spreading the word!
 You can help us spread the word about Cocos2d-x! We would surely appreciate it!

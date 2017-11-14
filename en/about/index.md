@@ -12,7 +12,6 @@ Please provide feedback for this guide on [GitHub](https://github.com/cocos2d/co
 You can download the samples for this guide on [GitHub](https://github.com/chukong/programmers-guide-samples)
 
 ## Why choose Cocos2d-x
-
 Why would you want to choose Cocos2d-x over other available game engines?
 
   * Modern C++ API (please refer to the modernizing done in [__version 3.0__](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md#c11-features))
@@ -34,8 +33,7 @@ You can clone the [__GitHub Repo__](https://github.com/cocos2d/cocos2d-x) and fo
   release or stay bleeding edge by cloning our [__GitHub Repo__](https://github.com/cocos2d/cocos2d-x).
 
   * __Cocos Creator__ - is a unified game development tool. You can create your
-  entire game, from start to finish, using this tool. It uses JavaScript. Lua and
-  C++ support are being added. Read more about [__Cocos Creator__](http://cocos2d-x.org/docs/editors_and_tools/creator/index.html).
+  entire game, from start to finish, using this tool. It uses JavaScript natively and can export to C++. Read more about [__Cocos Creator__](http://cocos2d-x.org/docs/editors_and_tools/creator/index.html).
 
   * __Cocos Launcher__ - is EOL'd. No replacement.
 

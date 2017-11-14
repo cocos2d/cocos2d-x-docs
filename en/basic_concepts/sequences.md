@@ -47,15 +47,6 @@ auto moveBy1 = MoveBy::create(2, Vec2(100,10));
 auto moveTo2 = MoveTo::create(2, Vec2(150,10));
 
 myNode->runAction(Spawn::create(moveTo1, moveBy1, moveTo2, nullptr));
-
-{%- language name="JavaScript", type="js" -%}
-var myNode = new cc.Node();
-
-var moveTo1 = new cc.MoveTo(2, cc._p(50,10));
-var moveBy1 = new cc.MoveBy(2, cc._p(100,10));
-var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
-
-myNode.runAction(Spawn.create(moveTo1, moveBy1, moveTo2));
 {%- endcodetabs %}
 
 Why `Spawn` actions? Is there ever a reason? Sure! What if your main
