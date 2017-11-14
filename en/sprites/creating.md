@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Creating Sprites
 There are different ways to create Sprites depending upon what you need to
 accomplish. You can create a `Sprite` from an image with various graphic formats

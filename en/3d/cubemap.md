@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Cubemap Texture
 A __cube map texture__ is a collection of six separate square textures that are
 put onto the faces of an imaginary cube. Most often they are used to display

@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Sprite Manipulation
 After creating a `Sprite` you will have access to a variety of properties it
 has that can be manipulated.

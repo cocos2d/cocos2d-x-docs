@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Polygon Sprite
 A __Polygon Sprite__ is also a `Sprite`, that is used to display a 2d image.
 However, unlike a normal `Sprite` object, which is a rectangle made of just 2

@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Keyboard events
 For desktop games, you might want find using keyboard mechanics useful.
 Cocos2d-x supports keyboard events. Just like with touch events above,

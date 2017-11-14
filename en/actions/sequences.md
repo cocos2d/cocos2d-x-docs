@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Sequences and how to run them
 __Sequences__ are a series of `Action` objects to be executed sequentially. This can
 be any number of `Action` objects, __Functions__ and even another `Sequence`.

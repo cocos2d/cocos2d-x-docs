@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Label
 Cocos2d-x provides a `Label` object that can create labels using __true type__,
 __bitmap__ or the built-in system font. This single class can handle all your `Label`

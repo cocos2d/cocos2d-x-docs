@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Cocos2d-x Programmers Guide v3.16
 v2017.10.03
 

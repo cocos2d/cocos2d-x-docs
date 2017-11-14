@@ -1,8 +1,4 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
-## Logging as a way to output messages
+ Logging as a way to output messages
 Sometimes, when your app is running, you might wish to see messages being written
 to the console for informational or debug purposes. This is built into the
 engine, using __log()__. Example:

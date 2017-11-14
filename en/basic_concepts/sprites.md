@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Sprites
 All games have `Sprite` objects, and you may or may not realize what they are.
 Sprites are the objects that you move around the screen.

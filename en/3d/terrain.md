@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Terrain
 `Terrain` is an important component in 3D game. A texture is used to stand for the
 height map. And up to 4 textures can be used to blend the details of the terrain,

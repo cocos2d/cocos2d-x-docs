@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ### Creating a Sprite from SpriteFrameCache
 This creates a `Sprite` by pulling it from the `SpriteFrameCache`.
 

@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Director
 Cocos2d-x uses the concept of a `Director`, just like in a movie! The `Director`
 controls the flow of operations and tells the necessary recipient what to do.

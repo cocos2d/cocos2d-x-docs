@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Scene
 In your game you probably want a main menu, a few levels and an ending scene.
 How do you organize all of these into the separate pieces they are? You guessed

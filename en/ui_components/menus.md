@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Menu and Menu Items
 We are all probably familiar with what a menu is. We see these in every application
 we use. In your game you would probably use a `Menu` object to navigate through

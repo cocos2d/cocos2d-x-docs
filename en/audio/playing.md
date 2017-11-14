@@ -1,13 +1,9 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Play background music
 Play an audio file for use as background music. This can be repeated
 continuously.
 
 {% codetabs name="C++", type="cpp" -%}
-#include "SimpleAudioEngine.h"
+# include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
 auto audio = SimpleAudioEngine::getInstance();
@@ -23,7 +19,7 @@ audio->playBackgroundMusic("mymusic.mp3", false);
 Play a sound effect.
 
 {% codetabs name="C++", type="cpp" -%}
-#include "SimpleAudioEngine.h"
+# include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
 auto audio = SimpleAudioEngine::getInstance();

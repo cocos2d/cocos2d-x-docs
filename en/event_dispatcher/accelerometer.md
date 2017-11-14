@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Accelerometer events
 Some mobile devices come equipped with an accelerometer. An accelerometer is a
 sensor that measures g-force as well as changes in direction. A use case would

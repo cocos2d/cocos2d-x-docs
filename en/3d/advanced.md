@@ -1,10 +1,6 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
+## Advanced Topics
 
-##Advanced Topics
-
-###BillBoard
+### BillBoard
 You may not have heard of a `BillBoard` before. No, I'm not talking about an
 advertisement on the side of a highway. Rather, `Billboard` is a special `Sprite`
 that always faces the `Camera`. As you rotate the `Camera`, `Billboard` objects
@@ -56,7 +52,7 @@ billboard->setBlendFunc(BlendFunc::ALPHA_NON_PREMULTIPLIED);
 addChild(billboard);
 {%- endcodetabs %}
 
-###ParticleSystem3D
+### ParticleSystem3D
 In Chapter 7, you learned about 2D particles and how to use them. When you use 3D
 you might also want to use a 3D particle system for rich, advanced effects. Many
 of the same concepts apply for a 3D particle system as they did with a 2D particle

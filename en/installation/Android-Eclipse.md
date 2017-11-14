@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 # Android with Eclipse Installation and Setup
 
 ### Deprecated Document. Cocos2d-x V3.15 or less is the last supported version.

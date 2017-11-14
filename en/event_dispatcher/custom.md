@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Custom Events
 The event types above are defined by the system, and the events (such as touch
 screen, keyboard response etc) are triggered by the system automatically. In

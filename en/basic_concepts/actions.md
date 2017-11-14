@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Actions
 Creating a `Scene` and adding `Sprite` objects on the screen is only part
 of what we need to do. For a game to be a game we need to make things move

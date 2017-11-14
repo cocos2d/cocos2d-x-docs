@@ -1,14 +1,10 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Light
 Light is really important for building mood and ambiance for a game. There are
 currently 4 lighting techniques supported. You would use different lighting
 techniques depending upon your needs. Each lighting effect achieves a different
 result.
 
-###Ambient Light
+### Ambient Light
 An `AmbientLight` object will apply light evenly for everything in the scene.
 Think of lighting in an office environment. The lights are overhead and when you
 look at objects around the office you see them in the same light. Example:
@@ -22,7 +18,7 @@ This produces:
 
 ![](3d-img/9_9_1.png)
 
-###Directional Light
+### Directional Light
 `DirectionalLight` is often used to simulate a light source such as
 sunlight. When using `DirectionalLight` keep in mind that is has the same density
 no matter where you are in relationship to it. Also think about being outside on
@@ -38,7 +34,7 @@ This produces:
 
 ![](3d-img/9_9_2.png)
 
-###Point Light
+### Point Light
 `PointLight` is often used to simulate the effect of light bulbs, lamps
 or torches. The direction of a `PointLight` is from the lighted position to the
 `PointLight`. Keep in mind that the density is different depending upon the
@@ -56,7 +52,7 @@ This produces:
 
 ![](3d-img/9_9_3.png)
 
-###Spot Light
+### Spot Light
 A `SpotLight` object is often used to simulate a flashlight. This means that it
 is emitted in just one direction in the shape of a cone. Think about the power
 going out in your house. You may need to take a flashlight down into your basement
@@ -75,7 +71,7 @@ This produces:
 
 ![](3d-img/9_9_4.png)
 
-###Light Masking
+### Light Masking
 What do you use for lights in your kitchen or living room? Probably a few lamps?
 Do you ever notice that perhaps you only use a lamp to light up a certain portion
 of the room? You are essentially applying a __lighting mask__!

@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Sequences and Spawns
 With moving `Sprite` objects on the screen we have everything we need to create
 our game, right? Not quite. What about running multiple __Actions__? Yes,

@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## There are 5 types of event listeners.
 
 `EventListenerTouch` - responds to touch events

@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Parent Child Relationship
 Cocos2d-x uses a __parent and child__ relationship. This means that properties
 and changes to the parent node are applied to its children. Consider a single

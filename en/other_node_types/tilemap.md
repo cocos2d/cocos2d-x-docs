@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## TileMap
 __TileMaps__ are maps made up of __tiles__. Each _tile_ can have independent behavior.
 __TileMaps__ are stored in an XML-based map format called `TMX`. `TMX` was originally

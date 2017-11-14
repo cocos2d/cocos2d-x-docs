@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Buttons
 I doubt that we need to explain buttons much. We all know them as those things
 we click on to make something happen in our games. Perhaps you might use a button

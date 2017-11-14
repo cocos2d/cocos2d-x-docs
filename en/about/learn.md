@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Learning Resources
 * This very guide!
 * [__Sonar Systems Videos__](https://www.youtube.com/user/sonarsystemslimited/search?query=Cocos2d-x)

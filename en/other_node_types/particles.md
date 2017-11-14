@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Particle System
 Perhaps your game needs effects like burning fire, spell casting visuals or explosions.
 How would you make such complex effects? Is it even possible? Yes, it is. Using

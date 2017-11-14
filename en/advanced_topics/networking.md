@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Networking with HTTP
 Sometimes it might be helpful to obtain resources or data from another source.
 One common way of doing this is by using an `HTTP` request.

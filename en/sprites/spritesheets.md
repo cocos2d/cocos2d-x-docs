@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Creating a Sprite from a Sprite Sheet
 A __sprite sheet__ is a way to combine sprites into a single file. Using a
 __sprite sheet__ helps achieve better performance by __batching__ the

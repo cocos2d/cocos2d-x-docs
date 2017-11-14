@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## SQLite
 __SQLite__ is a self-contained SQL database engine. This means there is no server
 involved. __SQLite__ runs while your game is running and you write code to connect

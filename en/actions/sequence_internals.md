@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Clone
 __Clone__ is exactly like it sounds. If you have an `Action`, you can apply it to
 multiple `Node` objects by using `clone()`. Why do you have to clone? Good question.
