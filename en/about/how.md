@@ -6,12 +6,13 @@ We always welcome contributions to our documentation.
   - Fork our [docs repo](https://github.com/cocos2d/cocos2d-x-docs)
   - __en/__ is for English contributions, __zh/__ is for 中文 contributions.
   - code blocks must be wrapped in special code to work correctly:
-    - C++ code block:
-      ```html
+    - C++ only code block:
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
       {%- endcodetabs %}
-      ```
+
+      ![](about-img/codeblock.png "")
+
   - Test your changes using `gitbook build` and `gitbook serve`. Please test in a few web browsers.
   - Submit a *pull request* with your changes and we will review and merge it.
 
@@ -29,7 +30,7 @@ To report bugs, please use the [Issue Tracker](https://github.com/cocos2d/cocos2
 
 Steps to report a bug:
 
-  - Open the [url](https://github.com/cocos2d/cocos2d-x/issues/new)
+  - Create a new GitHub issue  [here](https://github.com/cocos2d/cocos2d-x/issues/new)
   - Add all the needed information to reproduce the bug, the information include
     - engine version
     - steps to reproduce the bug

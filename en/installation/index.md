@@ -4,6 +4,13 @@
 ------------------
 #### v3.16
 ---
+* Mac OS X 10.7+, Xcode 7+
+* Ubuntu 12.10+, CMake 2.6+
+* Windows 7+, VS 2013+
+* Python 2.7.5
+* NDK r11+ is required to build Android games (tested with r14)
+* Android Studio 2.3.3+ to build Android games (tested with 2.3.3 and 3.0)
+* JRE or JDK 1.6+ is required for web publishing
 
 #### v3.15
 ---
