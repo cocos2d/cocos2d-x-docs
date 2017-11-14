@@ -2,9 +2,9 @@
   <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
 </div>
 
-##Advanced audio functionality
+## Advanced audio functionality
 
-###Setup
+### Setup
 It is easy to get started using the `SimpleAudioEngine` API. There are
 considerations to keep in mind when using audio in your game. Mostly
 when operating on mobile devices such as phones and tablets. What happens when
@@ -37,7 +37,7 @@ void AppDelegate::applicationWillEnterForeground() {
 Notice the commented out lines for `SimpleAudioEngine`? Make sure to uncomment these
 lines out if you are using audio for background sounds and sound effects.
 
-###Pre-loading sound
+### Pre-loading sound
 When your game starts you might want to pre-load the music and effects so they
 are ready when you need them.
 
@@ -59,7 +59,7 @@ audio->preloadEffect("myEffect2.mp3");
 audio->unloadEffect("myEffect1.mp3");
 {%- endcodetabs %}
 
-###Volume
+### Volume
 You can increase and decrease the volume of your sounds and music programmatically.
 
 {% codetabs name="C++", type="cpp" -%}

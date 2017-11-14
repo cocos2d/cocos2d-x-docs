@@ -2,11 +2,11 @@
   <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
 </div>
 
-##Pausing, stopping, resuming music and sound effects
+## Pausing, stopping, resuming music and sound effects
 After you start to play music and sound effects you might need to pause,
 stop or resume after certain operations. This can be done easily.
 
-###Pause
+### Pause
 {% codetabs name="C++", type="cpp" -%}
 auto audio = SimpleAudioEngine::getInstance();
 
@@ -20,7 +20,7 @@ audio->pauseEffect();
 audio->pauseAllEffects();
 {%- endcodetabs %}
 
-###Stop
+### Stop
 {% codetabs name="C++", type="cpp" -%}
 auto audio = SimpleAudioEngine::getInstance();
 
@@ -34,7 +34,7 @@ audio->stopEffect();
 audio->stopAllEffects();
 {%- endcodetabs %}
 
-###Resume
+### Resume
 {% codetabs name="C++", type="cpp" -%}
 auto audio = SimpleAudioEngine::getInstance();
 

@@ -5,7 +5,7 @@
 创建一个文本框：
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
 
@@ -23,7 +23,7 @@ this->addChild(textField);
 看一个例子：
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
 

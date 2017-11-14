@@ -2,13 +2,13 @@
   <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
 </div>
 
-##Collision
+## Collision
 Have you ever been in a car accident? What did you collide with? Just like with
 cars, `PhysicBody` objects can come in contact. __Collisions__ are what happens when
 `PhysicBody` objects come in contact with each other. When a __collision__ takes
 place it can be ignored or it can trigger events to be fired.
 
-###Filtering Collisions
+### Filtering Collisions
 Collision filtering allows you to enable or prevent collisions between shapes.
 This __physics engine__ supports collision filtering using __category and group bitmasks__.
 
@@ -52,7 +52,7 @@ index and zero index). Collisions between shapes of different group indices are
 filtered according the category and mask bits. In other words, group filtering has
 higher precedence than category filtering.
 
-###Contacts/Joints
+### Contacts/Joints
 Recall from the terminology above that __joints__ are how contact points are connected
 to each other. Yes, you can think of it just like __joints__ on your own body.
 Each joint type has a definition that derives from `PhysicsJoint`. All joints are
@@ -91,7 +91,7 @@ on the joint type.
 
 ![](physics-img/joints.PNG )
 
-###Collision detection
+### Collision detection
 Contacts are objects created by the __physics engine__ to manage the collision
 between two shapes. __Contact__ objects are not created by the user, they are
 created automatically. There are a few terms associated with contacts.

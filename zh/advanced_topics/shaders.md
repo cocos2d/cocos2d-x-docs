@@ -26,7 +26,7 @@ In Cocos2d-x, all `Node` objects that are __renderable__ use shaders. As an exam
 `Sprite` uses optimized shaders for 2d sprites, `Sprite3D` uses optimized shaders
 for 3d objects, and so on.
 
-###Customizing Shaders
+### Customizing Shaders
 
 Users can change the predefined shaders from any Cocos2d-x `Node` by calling:
 
@@ -65,7 +65,7 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 And although it is possible to set `GLProgramState` objects manually, an easier
 way to do it is by using `Material` objects.
 
-###What is a Material
+### What is a Material
 
 Assume that you want to draw a sphere like this one:
 
@@ -161,7 +161,7 @@ And if you want to change between different `Technique`s, you have to do:
 material->setTechnique("normal");
 {%- endcodetabs %}
 
-###Techniques
+### Techniques
 Since you can bind only one `Material` per `Sprite3D`, an additional feature
 is supported that's designed to make it quick and easy to change the way you
 render the parts at runtime. You can define multiple techniques by giving them
@@ -173,7 +173,7 @@ different light combinations or having lower-quality rendering techniques, such
 as disabling bump mapping, when the object being rendered is far away from the
 camera.
 
-###Passes
+### Passes
 A `Technique` can have one or more __passes__ That is, multi-pass rendering.
 And each `Pass` has two main objects:
 
@@ -182,7 +182,7 @@ And each `Pass` has two main objects:
 - `GLProgramState`: contains the shader (`GLProgram`) that is going to be used, including
     its uniforms.
 
-###Material file format in detail
+### Material file format in detail
 Material uses a file format  optimized to create Material files.
 This file format is very similar to other existing Material file formats, like
 GamePlay3D's and OGRE3D's.

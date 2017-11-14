@@ -5,7 +5,7 @@
 创建滑动条：
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto slider = Slider::create();
 slider->loadBarTexture("Slider_Back.png"); // what the slider looks like

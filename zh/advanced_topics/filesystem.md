@@ -51,7 +51,7 @@ types:
 
  </table>
 
-###Functions to manage files or directories
+### Functions to manage files or directories
 These functions will manage a file or a directory:
 
 <table>

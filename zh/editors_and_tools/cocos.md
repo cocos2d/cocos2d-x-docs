@@ -2,9 +2,9 @@
   <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
 </div>
 
-##Cocos
+## Cocos
 
-###What is Cocos?
+### What is Cocos?
 Cocos is a platform to create games: it includes an editor, a game engine, it also
 includes integration with the popular services every developer expects... everything
 is packaged in a convenient installer. It is a complete *ecosystem*.
@@ -30,7 +30,7 @@ your entire project base. __Cocos__ provides:
 * Developers a channel to provide feedback and get support, directly within __Cocos__,
   making it simple to contact the engine team for help.　
 
-###What is the workflow?
+### What is the workflow?
 Historically, you probably downloaded a __.zip__ from the website or if you stayed
 a hipster and pulled from the [GitHub](https://github.com/cocos2d/cocos2d-x) repo.
 Downloading the __.zip__ will no longer be available. [Github](https://github.com/cocos2d/cocos2d-x), however, will always remain available.
@@ -55,7 +55,7 @@ Now all of your projects in a single place:
 
 ![](cocos-img/all_projects.png "All Projects")
 
-###Precompiled libraries versus source code
+### Precompiled libraries versus source code
 __Cocos__ now makes it easy for developers to use precompiled libraries instead
 of the source code. Why might you want to do this? Speed for one! Using precompiled
 libraries eliminates the need to compile the __Cocos2d-x__ source each time. This
@@ -63,7 +63,7 @@ eliminates the long thumb twiddling between compile sessions. Second, updating t
 the latest version is simple. You download directly from within __Cocos__ and __modify__
 your projects settings to switch to the latest version.
 
-###SDK Integration
+### SDK Integration
 __Cocos__ provides many services that you can integrate into your apps for *FREE*
 and you can add services to your apps quickly and stay on top of services updates.
 As new versions of __SDKs__ become available you can download directly from within
@@ -72,7 +72,7 @@ __Cocos__ and __modify__ your projects settings to update to the latest version.
 Currently, __SDKBOX__ is integrated into __Cocos__. You can read more about
 __SDKBOX__ and the services it offers in the [Services Docs](../services/sdkbox/index.html).
 
-##Using Cocos
+## Using Cocos
 
 ### Creating a new project
 Creating a new project with __Cocos__ is easy, just follow a few simple steps.
@@ -157,7 +157,7 @@ If you see output like __1.2__ you are all set. If you see anything else you nee
 to either add the location to your __PATH__ or run __source ~/.bash_profile__ or
 specify the full path to __<cocos root>\tools\cocos2d-console\bin__.
 
-###Creating a new project
+### Creating a new project
 To create a new project you use the __cocos new__ command. The command is formatted
 as:
 ```

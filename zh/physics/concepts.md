@@ -12,7 +12,7 @@ __position__, __rotation__, __velocity__ and __damping__. `PhysicsBody` objects
 are the backbone for shapes. A `PhysicsBody` does not have a shape until you attach
 a shape to it.
 
-###Material
+### Material
 Materials describe material attributes：
 
   >-density：It is used to compute the mass properties of the parent body.
@@ -23,7 +23,7 @@ Materials describe material attributes：
  usually set to be between 0 and 1. 0 means no bouncing while 1 means perfect
  bouncing.
 
-###Shapes
+### Shapes
 Shapes describe collision geometry. By attaching shapes to bodies, you define a
 body’s shape. You can attach as many shapes to a single body as you need in order
 to define a complex shape. Each shape relates to a `PhysicsMaterial` object and
@@ -67,10 +67,10 @@ We describe the various __shapes__ as:
   >-`PhysicsShapeEdgeChain`: The chain shape provides an efficient way to connect
  many edges together.
 
-###Contacts/Joints
+### Contacts/Joints
 __Contacts__ and __joint__ objects describe how bodies are attached to each other.
 
-###World
+### World
 A __world__ container is what your physics bodies are added to and where they are
 simulated. You add __bodies__, __shapes__ and __constraints__ to a world and then
 update the world as a whole. The __world__ controls how all of these items interact
@@ -80,9 +80,9 @@ object.
 There is a lot to remember here, keep these terms handy to refer back to them as
 needed.
 
-##Physics World and Physics Body
+## Physics World and Physics Body
 
-###PhysicsWorld
+### PhysicsWorld
 A `PhysicsWorld` object is the core item used when simulating physics. Just like
 the world we live in, a `PhysicsWorld` has a lot of things happening at once.
 `PhysicsWorld` integrates deeply at the `Scene` level because of it's many facets.
@@ -124,7 +124,7 @@ to step the `PhysicsWorld` forward multiple times using a more precise time
 increment than a single frame. This allows for finer grained control of the
 __stepping__ process including more fluid movements.
 
-###PhysicsBody
+### PhysicsBody
 `PhysicsBody` objects have __position__ and __velocity__. You can apply __forces__,
 __movement__, __damping__ and __impulses__ (as well as more) to `PhysicsBody` objects.
 `PhysicsBody` can be __static__ or __dynamic__. A __static__ body does not move under
