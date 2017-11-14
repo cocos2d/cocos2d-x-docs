@@ -1,4 +1,4 @@
-#Cocos2d-x 3.0 Json用法
+# Cocos2d-x 3.0 Json用法
 
 Cocos2d-x 3.0 加入了rapidjson库用于json解析。位于external/json下。
 

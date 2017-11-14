@@ -1,4 +1,4 @@
-#Cocos2d-x 3.0坐标系详解
+# Cocos2d-x 3.0坐标系详解
 
 Cocos2d-x坐标系和OpenGL坐标系相同，都是起源于笛卡尔坐标系。
 
@@ -91,7 +91,7 @@ this->addChild(red, 0);
 
 ![ignore](res/ignore.png)
 
-##VertexZ，PositionZ和zOrder
+## VertexZ，PositionZ和zOrder
 
 - VerextZ是OpenGL坐标系中的Z值
 - PositionZ是Cocos2d-x坐标系中Z值

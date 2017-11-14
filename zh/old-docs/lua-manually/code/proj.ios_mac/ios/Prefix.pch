@@ -2,7 +2,7 @@
 // Prefix header for all source files of the 'LuaBinding' target in the 'LuaBinding' project
 //
 
-#ifdef __OBJC__
+# ifdef __OBJC__
 	#import <Foundation/Foundation.h>
 	#import <UIKit/UIKit.h>
-#endif
+# endif

@@ -18,7 +18,7 @@ You can refer to the detailed code in engine directory:
 Firstly, you need to include the header file of WebSocket.
 
 ```
-#include "network/WebSocket.h"
+# include "network/WebSocket.h"
 ```
 
 Secondly, you class need public inherit from cocos2d::network::WebSocket::Delegate, which defines four message callback functions.

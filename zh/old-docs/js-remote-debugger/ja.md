@@ -50,9 +50,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     sc->start();
     
     // これらのソースコードを追加する必要があります。
-#if defined( COCOS2D_DEBUG ) && ( COCOS2D_DEBUG > 0 )
+# if defined( COCOS2D_DEBUG ) && ( COCOS2D_DEBUG > 0 )
     sc->enableDebugger();   // デバッガを有効にします
-#endif
+# endif
 
    ...
 }

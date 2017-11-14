@@ -20,7 +20,7 @@ HttpClient的使用一般包含下面6个步骤：
 ### 引入头文件和命名空间
 
 ```
-#include "network/HttpClient.h"
+# include "network/HttpClient.h"
 using namespace cocos2d::network;
 ```
 

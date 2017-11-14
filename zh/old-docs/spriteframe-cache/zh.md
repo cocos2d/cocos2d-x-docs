@@ -1,10 +1,10 @@
-#SpriteFrameCache
+# SpriteFrameCache
 
 ##简介
 
 SpriteFrameCache 主要服务于多张碎图合并出来的纹理图片。这种纹理在一张大图中包含了多张小图，直接通过TextureCache引用会有诸多不便，因而衍生出来精灵框帧的处理方式，即把截取好的纹理信息保存在一个精灵框帧内，精灵通过切换不同的框帧来显示出不同的图案。
 
-##SpriteFrameCache
+## SpriteFrameCache
 
 SpriteFrameCache的内部封装了一个Map<std::string, SpriteFrame*> _spriteFrames对象。key为帧的名称。SpriteFrameCache一般用来处理plist文件(这个文件指定了每个独立的精灵在这张“大图”里面的位置和大小)，该文件对应一张包含多个精灵的大图，plist文件可以使用TexturePacker制作。
 
@@ -29,7 +29,7 @@ frameCache->addSpriteFramesWithFile("boy.plist","boy.png");//boy.png里集合了
 auto frame_sp = Sprite::createWithSpriteFrameName("boy1.png");//从SpriteFrameCache缓存中找到boy1.png这张图片.
 this->addChild(frame_sp,2);
 ```
-##SpriteFrameCache vs. TextureCache 
+## SpriteFrameCache vs. TextureCache 
 
 SpriteFrameCache精灵框帧缓存。顾名思义，这里缓存的是精灵帧SpriteFrame，它主要服务于多张碎图合并出来的纹理图片。这种纹理在一张大图中包含了多张小图，直接通过TextureCache引用会有诸多不便，因而衍生出来精灵框帧的处理方式，即把截取好的纹理信息保存在一个精灵框帧内，精灵通过切换不同的框帧来显示出不同的图案。
 跟TextureCache功能一样，将SpriteFrame缓存起来，在下次使用的时候直接去取。不过跟TextureCache不同的是，如果内存池中不存在要查找的图片，它会提示找不到，而不会去本地加载图片。

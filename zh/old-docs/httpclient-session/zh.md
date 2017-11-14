@@ -1,8 +1,8 @@
-#HttpClient session#
+# HttpClient session#
 
 ## session概述
 
-###session机制
+### session机制
 
 session机制是一种服务器端的机制，服务器使用一种类似于散列表的结构（也可能就是使用散列表）来保存信息。
 
@@ -15,7 +15,7 @@ session，简而言之就是在服务器上保存用户操作的历史信息。�
 	![](res/session.png)
 
 
-##HttpClient session的使用
+## HttpClient session的使用
 
 下面我们结合实例来学习session的一个简单使用场景。玩家登陆游戏，登陆成功，服务器返回sessionID标识此次会话。后面的领取每日登陆奖励请求中都加入此sessionID，服务器上保存用户操作的历史信息实现服务端管理客户端的功能。根据sessionID管理登陆的玩家的会话，并更新玩家领取奖励信息。
 
@@ -98,11 +98,11 @@ cocos new HelloWorld -p com.your_company.HelloWorld -l cpp
 引入头文件和命名空间
 
 ```
-#include "network/HttpClient.h"
+# include "network/HttpClient.h"
 using namespace cocos2d::network;
 ```
 
-###login
+### login
 ####登陆请求实现
 
 根据服务器接口，新建http请求，添加请求参数。实现代码如下：
@@ -194,7 +194,7 @@ Http Test, dump data: {"IsLottery":false,"NoLootCount":0}
 
 通过打印信息，我们可以看到登陆请求，服务器返回的信息中，通过Set-Cookie返回了SessionID。
 
-###lotteryed
+### lotteryed
 ####每日登陆奖励
 
 将登陆成功返回的SessionID，加入到http请求的header中进行每日登陆奖励请求。
@@ -268,7 +268,7 @@ cocos2d: response code: 200
 
 `response code: 200` 表明使用sessionID进行的每日登陆奖励领取的网络请求成功了。
 
-###sessionID的其他实现方式：
+### sessionID的其他实现方式：
 
 在3.x的版本中，`HttpClient::enableCookies`方法支持http会话使用cookie。 由于sessionID的保存和传递是通过cookie实现的，所以我们可以很方便的使用`HttpClient::enableCookies`方法来实现http client session。
 

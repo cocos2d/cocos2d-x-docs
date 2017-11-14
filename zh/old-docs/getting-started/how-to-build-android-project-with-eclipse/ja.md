@@ -102,16 +102,16 @@ libcocos2dx プロジェクトのパスは `[your Cocos2d-x root]cocos/2d/platfo
 ここでの処理は,作成された空のプロジェクトを [cocos](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/getting-started/v3.0/how-to-start-a-new-game/en.md)コマンドでビルドします。Cpp-Testsプロジェクトをビルドするときもほぼ同じです。
 それでは,やっていきましょう。
 
-###cocosコマンドでビルドする。
+### cocosコマンドでビルドする。
 (注 これは前のセクションと同じでないかもしれませんが,しかしあなたはproj.androidディレクトリを操作することで,build_native.pyスクリプトを実行することができます。)
 
 私たちはpythonスクリプトの`cocos run -s ~/MyCompany/MyGame -p android`を使用することができます。詳細については[このドキュメント](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/getting-started/v3.0/how-to-start-a-new-game/en.md)を参照してください。
 
-###Eclipceでproj.androidプロジェクトを開く。
+### Eclipceでproj.androidプロジェクトを開く。
 私たちが前のセクションで行ってきた処理のまさにそのままです。
-###Libcocos2dxプロジェクトをインポートする。
+### Libcocos2dxプロジェクトをインポートする。
 同じことですが,MyGameフォルダの下でⅡlibcocos2dxプロジェクトをインポートするのを忘れないでください。
-###Androidプロジェクトをビルドし,実行する。
+### Androidプロジェクトをビルドし,実行する。
 面倒に感じるかもしれませんが,この作業も同じことです。
 
 ## トラブルシューティング

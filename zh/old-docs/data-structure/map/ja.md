@@ -1,4 +1,4 @@
-#cocos2d::Map< K,V >
+# cocos2d::Map< K,V >
 
 - バージョン: v3.0 beta
 - 言語: C++

@@ -47,9 +47,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     sc->start();
     
     // These codes should be added in here
-#if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
+# if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
     sc->enableDebugger();   // Enable debugger here
-#endif
+# endif
 
    ...
 }

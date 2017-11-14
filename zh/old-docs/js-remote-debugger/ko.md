@@ -47,9 +47,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     sc->start();
     
     // 이 코드를 여기에 추가해주세요.
-#if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
+# if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
     sc->enableDebugger();   // Enable debugger here
-#endif
+# endif
 
    ...
 }

@@ -1,7 +1,7 @@
 #内存管理
 
 
-##Cocos2d-x的内存管理机制概述
+## Cocos2d-x的内存管理机制概述
 
 在3.0版本，Cocos2d-x采用全新的根类Ref，实现Cocos2d-x 类对象的引用计数记录。引擎中的所有类都派生自Ref。 基本类图：
 
@@ -15,7 +15,7 @@ Cocos2d-x 提供引用计数管理内存。调用retain()方法，令其引用�
 
 Cocos2d-x 提供AutoreleasePool，管理自动释放对象。当释放池自身被释放的时候，它就会对池中的所有对象执行一次release()方法。
 
-##retain 和 release 使用
+## retain 和 release 使用
 
 下面一段简单的例子来学习 retain 和 release的使用
 

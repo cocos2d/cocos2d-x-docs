@@ -7,7 +7,7 @@ Cocos2d-x提供了对声音和音效的支持，能够十分方便地实现音�
 我们可以使用Cocos2d-x自带的CocosDension库来使用声音引擎。CocosDesion实现了简单易用的SimpleAudioEngine类，为了使用它，我们只需引入他的头文件即可：
 
 ```
-#include "SimpleAudioEngine.h"
+# include "SimpleAudioEngine.h"
 ```
 
 ##支持平台与格式

@@ -40,8 +40,8 @@ Spine是一款针对游戏的2D骨骼动画编辑工具,它具有良好的UI设�
 Cocos2d-x程序中，使用Spine动画首先需要包含spine的相关头文件。
 
 ```
-#include <spine/spine-cocos2dx.h>
-#include "spine/spine.h"
+# include <spine/spine-cocos2dx.h>
+# include "spine/spine.h"
 using namespace spine;
 ```
 

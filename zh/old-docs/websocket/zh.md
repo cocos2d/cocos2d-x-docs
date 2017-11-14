@@ -18,7 +18,7 @@ Cocos2d-x引擎集成libwebsockets，并在libwebsockets的客户端API基础上
 首先需要include WebSocket的头文件。
 
 ```
-#include "network/WebSocket.h"
+# include "network/WebSocket.h"
 ```
   
 cocos2d::network::WebSocket::Delegate定义了使用WebScocket需要监听的回调通知接口。使用WebSocket的类，需要public继承这个Delegate。

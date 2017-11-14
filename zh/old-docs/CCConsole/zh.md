@@ -1,4 +1,4 @@
-#Cocos2d-x Console模块
+# Cocos2d-x Console模块
 
 ##简介
 
@@ -48,7 +48,7 @@ IvenYangtekiMacBook-Pro-2:Documents zeroyang$
 我们创建了一个基于Cocos2d-x 3.0版本的ConsoleTest空工程。
 
 
-##Console类
+## Console类
 
 
 - 类简介

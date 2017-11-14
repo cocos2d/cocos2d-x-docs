@@ -1,17 +1,17 @@
-#include "AppDelegate.h"
+# include "AppDelegate.h"
 
-#include "cocos2d.h"
-#include "SimpleAudioEngine.h"
-#include "ScriptingCore.h"
-#include "jsb_cocos2dx_auto.hpp"
-#include "jsb_cocos2dx_extension_auto.hpp"
-#include "cocos2d_specifics.hpp"
-#include "extension/jsb_cocos2dx_extension_manual.h"
-#include "chipmunk/js_bindings_chipmunk_registration.h"
-#include "jsb_opengl_registration.h"
-#include "localstorage/js_bindings_system_registration.h"
+# include "cocos2d.h"
+# include "SimpleAudioEngine.h"
+# include "ScriptingCore.h"
+# include "jsb_cocos2dx_auto.hpp"
+# include "jsb_cocos2dx_extension_auto.hpp"
+# include "cocos2d_specifics.hpp"
+# include "extension/jsb_cocos2dx_extension_manual.h"
+# include "chipmunk/js_bindings_chipmunk_registration.h"
+# include "jsb_opengl_registration.h"
+# include "localstorage/js_bindings_system_registration.h"
 
-#include "JSB_Manual_XObject.h"
+# include "JSB_Manual_XObject.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;

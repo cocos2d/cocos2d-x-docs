@@ -22,8 +22,8 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#include "AppDelegate.h"
-#include "CCEGLView.h"
+# include "AppDelegate.h"
+# include "CCEGLView.h"
 
 USING_NS_CC;
 

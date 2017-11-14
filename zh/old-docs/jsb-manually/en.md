@@ -20,8 +20,8 @@ Now create C++ class **XObject**, which will be bound to JS, and put them in **C
 ```
 XObject.h
 
-#ifndef __JSBManualBinding__XObject__
-#define __JSBManualBinding__XObject__
+# ifndef __JSBManualBinding__XObject__
+# define __JSBManualBinding__XObject__
 
 // A function pointer, which points to callback function
 typedef void (*XObjectCallFunc)(void *selector, int value);
@@ -36,7 +36,7 @@ private:
     XObjectCallFunc m_callback;
 };
 
-#endif /* defined(__JSBManualBinding__XObject__) */
+# endif /* defined(__JSBManualBinding__XObject__) */
 ```
 
 The class defines a constructor and a callback function. The second parameter of constructor is a function pointer, which point to callback function.
@@ -44,8 +44,8 @@ The class defines a constructor and a callback function. The second parameter of
 ```
 XObject.cpp
 
-#include "XObject.h"
-#include "ScriptingCore.h"
+# include "XObject.h"
+# include "ScriptingCore.h"
 
 XObject::XObject(void *selector, XObjectCallFunc func)
 {
@@ -73,25 +73,25 @@ Time to bind your class. Create a class **JSB_Manual_XObject** to bind class **X
 Add following codes to **JSB_Manual_XObject.h**
 
 ```
-#ifndef __JSB_MANUAL_XOBJECT__
-#define __JSB_MANUAL_XOBJECT__
+# ifndef __JSB_MANUAL_XOBJECT__
+# define __JSB_MANUAL_XOBJECT__
 
-#include "jsapi.h"
+# include "jsapi.h"
 
 // This function is used to register the bound C++ class
 void JSB_register_XObject(JSContext* cx, JSObject* obj);
 
-#endif /* defined(__JSB_MANUAL_XOBJECT__) */
+# endif /* defined(__JSB_MANUAL_XOBJECT__) */
 ```
 
 Then check out **JSB_Manual_XObject.cpp**
 
 ```
-#include <stdio.h>
+# include <stdio.h>
 
 // Two head files have to reference
-#include "XObject.h"
-#include "ScriptingCore.h"
+# include "XObject.h"
+# include "ScriptingCore.h"
 
 static JSClass* JSB_XObject_class = NULL;
 static JSObject* JSB_XObject_object = NULL;

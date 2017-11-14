@@ -1,4 +1,4 @@
-#cocos2d::Value
+# cocos2d::Value
 
 - Since: v3.0 beta
 - Language: C++
@@ -124,6 +124,6 @@ cocos2d: operator-> The description of val4:
 4
 ```
 
-##Best Practice
+## Best Practice
 - `cocos2d::Value` 와 새로운 템플릿 컨테이너들(`cocos2d::Vector<T>` and `cocos2d::Map<K,V>`)을 사용하는것이 `cocos2d::CCBool`, `cocos2d::CCFloat`,`cocos2d::CCDouble`,`cocos2d::CCString`,`cocos2d::CCInteger` 와 옛 Objective-c 스타일의 컨테이너(`cocos2d::CCArray` 와 `cocos2d::CCDictionary`)를 사용하는것보다 좋습니다.
 - 여러분이 프리미티브 타입 변수의 집합을 다루실 때에는, 프리미티브 타입 변수를 `cocos2d::Value` 로 래핑하세요. 그리고 새로운 템플릿 컨테이너인 `cocos2d::Vector<T>` 와 `cocos2d::Map<K,V>` 를 사용하세요.

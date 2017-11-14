@@ -8,14 +8,14 @@
 
 extern "C"
 {
-#include <lua.h>
-#include <lauxlib.h>
-#include <lualib.h>
+# include <lua.h>
+# include <lauxlib.h>
+# include <lualib.h>
 }
 
-#include <iostream>
-#include <sstream>
-#include "fun.h"
+# include <iostream>
+# include <sstream>
+# include "fun.h"
 
 // The general pattern to binding C++ class to Lua is to write a Lua
 // thunk for every method for the class, so here we go:

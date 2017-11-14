@@ -1,5 +1,5 @@
-#include "XObject.h"
-#include "ScriptingCore.h"
+# include "XObject.h"
+# include "ScriptingCore.h"
 
 XObject::XObject(void *selector, XObjectCallFunc func)
 {

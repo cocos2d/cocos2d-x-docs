@@ -1,4 +1,4 @@
-#cocos2d::Vector< T >
+# cocos2d::Vector< T >
 
 - Since: v3.0 beta
 - Language: C++
@@ -30,13 +30,13 @@ The complexity (efficiency) of common operations on `cocos2d::Vector<T>` is as f
 - Insertion or removal of elements - linear in distance to the end of the `cocos2d::Vector<T>` O(n)
 
 
-##Template parameters
+## Template parameters
 
 **T** - The type of the elements.
 
 - T must be the a pointer to a [cocos2d::Object](https://github.com/cocos2d/cocos2d-x/blob/develop/cocos/base/CCObject.h) descendant object type. No other data type or primitives are allowed, because we have integrated the memory management model of Cocos2d-x into `cocos2d::Vector<T>`. （since v3.0 beta）
 
-##Memory Management
+## Memory Management
 The `cocos2d::Vector<T>` class contains only one data member:
 
 ```cpp
@@ -54,7 +54,7 @@ If you do want to dynamic allocate `cocos2d::Vector<T>` on the heap due to some 
 **WARNING**: `cocos2d::Vector<T>` is not *itself* a descendant of `cocos2d::Object`, and thus doesn't use retain/release and refcount memory management, like other Cocos2d-x classes! In other words, you cannot call retain, release, etc on the `cocos2d::Vector<T>` itself.
 
 
-##Basic Usage
+## Basic Usage
 We wrapped almost all common operations of `std::vector<T>` with a unified interface plus the memory management rules of Cocos2d-x.
 
 So the `pushBack()` method now will retain the ownership of the function argument and the `popBack()` method will release the ownership of the last element of container.
@@ -135,7 +135,7 @@ Cocos2d: The index of sp0 in pVec2 is 0
 Cocos2d: The size of pVec1 is 0
 ```
 
-##Best practice
+## Best practice
 
 - Prefer stack-based scope `cocos2d::Vector<T>` over heap-based scope `cocos2d::Vector<T>`
 - When passing `cocos2d::Vector<T>` as an argument, declare it as a const reference, like `const cocos2d::Vector<T>&`

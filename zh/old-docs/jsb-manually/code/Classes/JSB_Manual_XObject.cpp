@@ -1,7 +1,7 @@
-#include <stdio.h>
+# include <stdio.h>
 
-#include "XObject.h"
-#include "ScriptingCore.h"
+# include "XObject.h"
+# include "ScriptingCore.h"
 
 static JSClass* JSB_XObject_class = NULL;
 static JSObject* JSB_XObject_object = NULL;

@@ -11,8 +11,8 @@ Cocos2d-x 3.0开始, Lua Binding使用tolua++方式自动绑定底层C++类到Lu
 在`fun.h`头文件中添加如下代码：
 
 ```cpp
-#include <iostream>
-#include <sstream>
+# include <iostream>
+# include <sstream>
 class Foo
 {
 public:
@@ -46,7 +46,7 @@ private:
 
 首先创建一个userdata来存放C++类对象指针，然后给userdata添加元表，用index元方法映射C++类中的对象方法。
 
-####userdata
+#### userdata
 
 Lua中userdata为自定义类型，即用户自定义C++类类型，非Lua基本类型。绑定过程中用来存放C++类对象指针，从而将C++类映射到Lua中。
 
@@ -61,13 +61,13 @@ Lua中userdata为自定义类型，即用户自定义C++类类型，非Lua基本
 接下来完成实现部分，在`fun.cpp`中添加如下代码：
 
 ```cpp
-#include "fun.h"
+# include "fun.h"
 
 extern "C"
 {
-#include <lua.h>
-#include <lauxlib.h>
-#include <lualib.h>
+# include <lua.h>
+# include <lauxlib.h>
+# include <lualib.h>
 }
 
 // 1.

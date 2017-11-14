@@ -1,5 +1,5 @@
-#ifndef __JSBManualBinding__XObject__
-#define __JSBManualBinding__XObject__
+# ifndef __JSBManualBinding__XObject__
+# define __JSBManualBinding__XObject__
 
 typedef void (*XObjectCallFunc)(void *selector, int value);
 
@@ -13,4 +13,4 @@ private:
     XObjectCallFunc m_callback;
 };
 
-#endif /* defined(__JSBManualBinding__XObject__) */
+# endif /* defined(__JSBManualBinding__XObject__) */

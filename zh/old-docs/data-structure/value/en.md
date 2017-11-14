@@ -1,4 +1,4 @@
-#cocos2d::Value
+# cocos2d::Value
 
 - Since: v3.0 beta
 - Language: C++
@@ -24,7 +24,7 @@ Before Cocos2d-x v3.0 beta, there are `CCBool`, `CCFloat`, `CCDouble`, `CCintege
 *Note*:When you deal with primitives and container, please use `cocos2d::Vector<T>`,`cocos2d::Map<K,V>` and `cocos2d::Value`.
 
 
-##Memory Management
+## Memory Management
 The memory of `cocos2d::Value` is handled automatically by it's own destructor. So please stick to the best practice of c++ memory management rules when handling the memory of `cocos2d::Value`.
 
 The `cocos2d::Value` class contains the following data members:
@@ -51,7 +51,7 @@ From the code snippets, `_baseData`, `_strData` and `_type` data members' memory
 
 WARNING: `cocos2d::Value` doesn't use retain/release and refcount memory management like other Cocos2d-x classes!
 
-##Basic Usage
+## Basic Usage
 The usage of `cocos2d::Value` is very straightforward.
 
 Here is a simple usage example:
@@ -124,6 +124,6 @@ cocos2d: operator-> The description of val4:
 4
 ```
 
-##Best Practice
+## Best Practice
 - Prefer `cocos2d::Value` and new template container(`cocos2d::Vector<T>` and `cocos2d::Map<K,V>`) over `cocos2d::CCBool`, `cocos2d::CCFloat`,`cocos2d::CCDouble`,`cocos2d::CCString`,`cocos2d::CCInteger` and old Objective-c style container(`cocos2d::CCArray` and `cocos2d::CCDictionary`).
 - When you want to deal with primitives aggregate, wrap the primitives with `cocos2d::Value` and combine them with the new template container `cocos2d::Vector<T>` and `cocos2d::Map<K,V>`.

@@ -1,4 +1,4 @@
-#cocos2d::Vector< T >
+# cocos2d::Vector< T >
 
 - バージョン: v3.0 beta
 - 言語: C++

@@ -1,4 +1,4 @@
-#cocos2d::Value
+# cocos2d::Value
 
 - 于v3.0beta加入
 

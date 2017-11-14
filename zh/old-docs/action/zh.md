@@ -15,7 +15,7 @@
 
 下面介绍一些常用即时动作
 
-###Place
+### Place
 
 该动作用于将节点放置到某个指定位置，其作用与修改节点的position属性相同。例如，将节点放到屏幕坐标(10, 10)处的代码如下:
 
@@ -23,7 +23,7 @@
 	auto placeAction = Place::create(Point(10, 10));
 ```
 
-###FlipX和FlipY
+### FlipX和FlipY
 
 这两个动作分别用于将精灵沿X轴和Y轴反向显示，其作用与设置精灵的FlipX和FlipY属性相同，将其包装成动作是为了便于与其他动作进行组合。
 
@@ -38,7 +38,7 @@
 
 其中Sequence是动作序列，后面将详细介绍，reverse的作用是获得原动作的逆动作。
 
-###Show和Hide
+### Show和Hide
 
 这两个动作分别用于显示和隐藏节点，其作用与设置节点的visible属性作用一样。例如，为了使精灵完成移动后隐藏起来，可以用如下代码：
 
@@ -48,7 +48,7 @@
     auto action = Sequence::create(moveTo, hideAction, NULL);
 ```
 
-###CallFunc
+### CallFunc
 
 CallFunc系列动作包括CallFunc,CallFuncN两个动作，用来在动作中进行方法调用。在游戏中为了节约内存资源，我们可以在动作完成后调用相应函数清理内存，如下代码：
 

@@ -1,4 +1,4 @@
-#Cocos2d-x 多分辨率适配完全解析
+# Cocos2d-x 多分辨率适配完全解析
 ---
 
 ## Overview

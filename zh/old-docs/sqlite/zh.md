@@ -1,4 +1,4 @@
-#SQLite集成与用法#
+# SQLite集成与用法#
 
 ##概述
 
@@ -20,13 +20,13 @@ cocos new HelloWorld -p com.your_company.HelloWorld -l cpp
 按照上面的操作，我们新建了一个Cocos2d-x v3.x的HelloWorld工程。
 
 
-###iOS/Mac
+### iOS/Mac
 
 iOS/Mac的系统库自带sqlite库,我们只需添加libsqlite3.0.dylib库即可。
 
 ![](res/ios-sqllib.png)
 
-###Android
+### Android
 
 Android系统没有自带sqlite库，我们需要手动添加。
 
@@ -51,7 +51,7 @@ Android系统没有自带sqlite库，我们需要手动添加。
 引入头文件
 
 ```
-#include "sqlite3.h"
+# include "sqlite3.h"
 ```
 
 ###创建SQLite 数据库
@@ -73,7 +73,7 @@ Android系统没有自带sqlite库，我们需要手动添加。
 2. 指定数据库的路径
 3. 打开一个数据库，如果该数据库不存在，则创建一个数据库文件 
 
-###SQL语句
+### SQL语句
 
 ```
 	sql="create table student(ID integer primary key autoincrement,name text,sex text)";//1

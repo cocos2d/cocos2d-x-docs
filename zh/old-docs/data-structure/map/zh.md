@@ -1,4 +1,4 @@
-#cocos2d::Map<K,V>
+# cocos2d::Map<K,V>
 
 - v3.0 beta加入
 

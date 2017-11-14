@@ -6,10 +6,10 @@
 //  Copyright __MyCompanyName__ 2012. All rights reserved.
 //
 
-#ifndef  _APP_DELEGATE_H_
-#define  _APP_DELEGATE_H_
+# ifndef  _APP_DELEGATE_H_
+# define  _APP_DELEGATE_H_
 
-#include "CCApplication.h"
+# include "CCApplication.h"
 /**
  @brief    The cocos2d Application.
  
@@ -41,5 +41,5 @@ public:
     virtual void applicationWillEnterForeground();
 };
 
-#endif // _APP_DELEGATE_H_
+# endif // _APP_DELEGATE_H_
 

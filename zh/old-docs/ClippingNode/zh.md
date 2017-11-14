@@ -1,4 +1,4 @@
-#ClippingNode的使用#
+# ClippingNode的使用#
 
 ##概述
 
@@ -14,7 +14,7 @@ ClippingNode是Node的子类，可以像普通节点一样放入Layer，Scene，
 
 	所谓模板，就是一个形状，透过该形状可看到底板上的图层，如果底板上没有任何内容，则直接看到Layer上的内容，而底板上的东西又不会妨碍Layer上的东西，即模板在底板之外的空间对于Layer来说是透明的。
 
-##ClippingNode 常用方法
+## ClippingNode 常用方法
 
 
 1. create
@@ -55,7 +55,7 @@ ClippingNode是Node的子类，可以像普通节点一样放入Layer，Scene，
 	```
 
 
-##ClippingNode示例
+## ClippingNode示例
 
 ```
     auto bg = LayerColor::create(Color4B(255, 255, 255,255));

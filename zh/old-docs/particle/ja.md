@@ -1,6 +1,6 @@
-##Cocos2d-x ParticleSystem v2.xとv3.xの違いについて
+## Cocos2d-x ParticleSystem v2.xとv3.xの違いについて
 ---
-###CCParticleBatchNodeとParticleBatchNode
+### CCParticleBatchNodeとParticleBatchNode
 ###*類似性について*
 ####継承グラフ
 
@@ -31,7 +31,7 @@ ParticleBatchNodeに追加されている全てのParticleSystemは,1度のOpenG
 -  v3.xで使用する```BlendFunc::ALPHA_NON_PREMULTIPLIED```は以下のように定義されています : ```const BlendFunc BlendFunc::ALPHA_NON_PREMULTIPLIED = { GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA };``` これは,v2.xでマクロとして定義されていた```GL_SRC_ALPHAと GL_ONE_MINUS_SRC_ALPHA```の代わりになります。また,```CC_BLEND_SRC```と```CC_BLEND_DST ```の代わりに```BlendFunc::ALPHA_PREMULTIPLIED```を使用することができます。
 
 ---
-###CCParticleSystemとParticleSystem
+### CCParticleSystemとParticleSystem
 ###*類似性について*
 ####継承グラフ
 
@@ -132,7 +132,7 @@ Cocos2d-xではParticle Designerで使用された全ての変数とその他の
 - Cocos2d-x v3.xでは```std::string _configName;```と```int _yCoordFlipped;```という新しい属性が使用されています。
 
 ---
-###CCParticleSystemQuadとParticleSystemQuad
+### CCParticleSystemQuadとParticleSystemQuad
 ###*類似性について*
 ####継承グラフ
 

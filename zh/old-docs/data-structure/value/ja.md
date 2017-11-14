@@ -1,4 +1,4 @@
-#cocos2d::Value について
+# cocos2d::Value について
 
 - 対象: v3.0 beta以降
 - 言語: C++

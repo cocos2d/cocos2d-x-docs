@@ -1,9 +1,9 @@
-#include "cocos2d.h"
-#include "CCEGLView.h"
-#include "AppDelegate.h"
-#include "CCLuaEngine.h"
-#include "SimpleAudioEngine.h"
-#include "fun.h"
+# include "cocos2d.h"
+# include "CCEGLView.h"
+# include "AppDelegate.h"
+# include "CCLuaEngine.h"
+# include "SimpleAudioEngine.h"
+# include "fun.h"
 
 using namespace CocosDenshion;
 

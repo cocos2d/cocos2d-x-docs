@@ -1,16 +1,16 @@
 
-#import <UIKit/UIKit.h>
-#import "AppController.h"
-#import "cocos2d.h"
-#import "EAGLView.h"
-#import "AppDelegate.h"
+# import <UIKit/UIKit.h>
+# import "AppController.h"
+# import "cocos2d.h"
+# import "EAGLView.h"
+# import "AppDelegate.h"
 
-#import "RootViewController.h"
+# import "RootViewController.h"
 
 @implementation AppController
 
-#pragma mark -
-#pragma mark Application lifecycle
+# pragma mark -
+# pragma mark Application lifecycle
 
 // cocos2d application instance
 static AppDelegate s_sharedApplication;
@@ -95,8 +95,8 @@ static AppDelegate s_sharedApplication;
 }
 
 
-#pragma mark -
-#pragma mark Memory management
+# pragma mark -
+# pragma mark Memory management
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     /*

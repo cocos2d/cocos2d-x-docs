@@ -1,6 +1,6 @@
-##Cocos2d-x v2.x 와 v3.x 의 파티클 시스템 비교
+## Cocos2d-x v2.x 와 v3.x 의 파티클 시스템 비교
 ---
-###CCParticleBatchNode & ParticleBatchNode
+### CCParticleBatchNode & ParticleBatchNode
 ###*공통점:*
 ####상속 다이어그램
 
@@ -33,7 +33,7 @@ ParticleBatchNode 는 배치노드와 비슷합니다: 한 번의 OpenGL 호출�
 
 
 ---
-###CCParticleSystem & ParticleSystem
+### CCParticleSystem & ParticleSystem
 ###*공통점:*
 ####상속 다이어그램
 
@@ -132,7 +132,7 @@ Cocos2d-x 는 Particle Designer 에서 사용된 모든 변수들에 더불어 �
 
 
 ---
-###CCParticleSystemQuad & ParticleSystemQuad
+### CCParticleSystemQuad & ParticleSystemQuad
 ###*공통점:*
 ####상속 다이어그램
 

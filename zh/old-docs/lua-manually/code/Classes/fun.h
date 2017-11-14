@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef Language_Lua_fun_h
-#define Language_Lua_fun_h
+# ifndef Language_Lua_fun_h
+# define Language_Lua_fun_h
 
 class Foo
 {
@@ -45,4 +45,4 @@ void RegisterFoo(lua_State * l);
 
 
 
-#endif
+# endif

@@ -1,10 +1,10 @@
-#How to use CCache to speed up cocos2d-x android compilation
+# How to use CCache to speed up cocos2d-x android compilation
 CCache is a compiler cache for C/C++. It speeds up recompilation by caching the result of previous compilations and detecting when the same compilation is being done again. We can use this tool to speed up cocos2d-x android compilation. My cocos2d-x on android compilation is reduced from 10 minutes to 0.5 minutes by CCache on Macbook Pro Retina with i7 CPU.
 
 The following instructions applied on Mac only.
 
 
-##Installation
+## Installation
 You can use homebrew:
 
 brew install --HEAD ccache
@@ -31,7 +31,7 @@ make sure ccache can be found in your $PATH, run command:
 If you can not see the help message, check your installation.
 
 
-##Configuration for Compilation on Android
+## Configuration for Compilation on Android
 To use CCache, you need setup some environment variables:
 
 	vim ~/.bash_profile  
@@ -72,7 +72,7 @@ TARGET_CXX      = ccache $(TOOLCHAIN_PREFIX)g++ #Add ccache support
 endif
 TARGET_CXXFLAGS = $(TARGET_CFLAGS) -fno-exceptions -fno-rtti
 ```
-##Build Cocos2d-x Games
+## Build Cocos2d-x Games
 Switch to cocos2d-x root path, run:
 
 	python build/android-build.py -p 10 cpp-tests 
@@ -97,7 +97,7 @@ this command will print the ccache statistics,
     max cache size                      30.0 GB
 If both cache hit & cache size are 0, that means ccache doesn't work, you need check your configuration.
 
-##Applying on Xcode
+## Applying on Xcode
 Setting up Xcode(5.1) to use CCache is a bit trickier. I almost figured it out but failed to have any compilation speed up. If someone can have a more step on this, please let me know.
 
 Firstly, you need add two user-defined macros to cocos2d_libs build settings

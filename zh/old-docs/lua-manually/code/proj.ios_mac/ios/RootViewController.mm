@@ -23,9 +23,9 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#import "RootViewController.h"
-#import "cocos2d.h"
-#import "EAGLView.h"
+# import "RootViewController.h"
+# import "cocos2d.h"
+# import "EAGLView.h"
 
 @implementation RootViewController
 
@@ -60,9 +60,9 @@
 
 // For ios6, use supportedInterfaceOrientations & shouldAutorotate instead
 - (NSUInteger) supportedInterfaceOrientations{
-#ifdef __IPHONE_6_0
+# ifdef __IPHONE_6_0
     return UIInterfaceOrientationMaskAllButUpsideDown;
-#endif
+# endif
 }
 
 - (BOOL) shouldAutorotate {

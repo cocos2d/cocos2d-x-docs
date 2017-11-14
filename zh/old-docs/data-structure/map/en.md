@@ -1,4 +1,4 @@
-#cocos2d::Map< K,V >
+# cocos2d::Map< K,V >
 
 - Since: v3.0 beta
 - Language: C++
@@ -25,7 +25,7 @@ Internally, the elements in the unordered_map are not sorted in any particular o
 Before Cocos2d-x v3.0 beta, there is another sequence container named [cocos2d::CCDictionary](https://github.com/cocos2d/cocos2d-x/blob/develop/cocos/base/CCDictionary.h) which will be deprecated in the future.
 
 Because we carefully design the `cocos2d::Map<K,V>` container as a replacement for `cocos2d::CCDictionary`, please use cocos2d::Map<T> instead of `cocos2d::CCDictionary`.
-##Template parameters
+## Template parameters
 
 **K** - The type of the key values.
 
@@ -35,7 +35,7 @@ Because we carefully design the `cocos2d::Map<K,V>` container as a replacement f
 
 - T must be the a pointer to [cocos2d::Object](https://github.com/cocos2d/cocos2d-x/blob/develop/cocos/base/CCObject.h) descendant object type. No other data type or primitives are allowed. Because we integrate the memory management model of Cocos2d-x into `cocos2d::Map<K,V>`. （since v3.0 beta）
 
-##Memory Management
+## Memory Management
 The `cocos2d::Map<K,V>` class contains only one data member:
 
 ```cpp
@@ -54,7 +54,7 @@ If you do want to dynamic allocate `cocos2d::Map<K,V>` on the heap due to some o
 **WARNING**: `cocos2d::Map<K,V>` doesn't use retain/release and refcount memory management like other Cocos2d-x classes!
 
 
-##Basic Usage
+## Basic Usage
 
 **WARNING** The `cocos2d::Map<K,V>` doesn't overload `operator[]`, so you can't get an element from `cocos2d::Map<K,V>` using subscript operator like `map[i]`.
 
@@ -120,7 +120,7 @@ cocos2d: After remove sp0, size of map is 1.
 ```
 
 
-##Best practice
+## Best practice
 
 - When pass `cocos2d::Map<K, V>()` as an argument, declare it as a const reference like `const cocos2d::Map<K, V>()&`
 - T must be the a pointer to `cocos2d::Object` descendant object type. No other data type or primitives are allowed.

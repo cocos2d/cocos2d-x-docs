@@ -1,4 +1,4 @@
-#Improved Label in Cocos2d-x-3.0
+# Improved Label in Cocos2d-x-3.0
 
 Before Cocos2d-x 3.0 released, there are three classes that can create text labels, which are CCLabelTTF, CCLabelBMFont and CCLabelAtlas.
 

@@ -1,8 +1,8 @@
-##The Comparison of ParticleSystem between Cocos2d-x-2.x and Cocos2d-x-3.x
+## The Comparison of ParticleSystem between Cocos2d-x-2.x and Cocos2d-x-3.x
 ---
-###CCParticleBatchNode & ParticleBatchNode
+### CCParticleBatchNode & ParticleBatchNode
 ###*The Similarity:*
-####Inheritance diagram
+#### Inheritance diagram
 
 ![](res/./ParticleBatchNode@2.x.png)   ![](res/./ParticleBatchNode@3.0.png)
 
@@ -33,9 +33,9 @@ All ParticleSystems added to a ParticleBatchNode are drawn in one OpenGL ES draw
 
 
 ---
-###CCParticleSystem & ParticleSystem
+### CCParticleSystem & ParticleSystem
 ###*The Similarity:*
-####Inheritance diagram
+#### Inheritance diagram
 
 ![](res/./ParticleSystem@2x.png)	![](res/./ParticleSystem@3.0.png)
 
@@ -81,7 +81,7 @@ It is possible to customize any of the above mentioned properties in runtime. Ex
 ``` emitter.radialAccel = 15; ```
 ``` emitter.startSpin = 0; ```
 
-###The Differences:
+### The Differences:
 |*Cocos2d-x-2.x*|*Cocos2d-x-3.x*|
 |---------------|---------------|
 |` kCCParticleDefaultCapacity `|` kParticleDefaultCapacity `|
@@ -132,9 +132,9 @@ It is possible to customize any of the above mentioned properties in runtime. Ex
 
 
 ---
-###CCParticleSystemQuad & ParticleSystemQuad
+### CCParticleSystemQuad & ParticleSystemQuad
 ###*The Similarity:*
-####Inheritance diagram
+#### Inheritance diagram
 
 ![](res/./ParticleSystem@2x.png)	![](res/./ParticleSystem@3.0.png)
 
@@ -148,7 +148,7 @@ Special features and Limitations:
 - It supports subrects
 - It supports batched rendering since 1.1
 
-###The Differences:
+### The Differences:
 
 There aren't much more changes in 3.x, you can just use it in 3.x as you do it in 2.x. You can get more details in the 
 [Reference](http://cocos2d-x.org/wiki/Reference) .

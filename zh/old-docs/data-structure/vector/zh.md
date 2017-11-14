@@ -1,4 +1,4 @@
-#cocos2d::Vector<T>
+# cocos2d::Vector<T>
 
 - v3.0 beta加入
 

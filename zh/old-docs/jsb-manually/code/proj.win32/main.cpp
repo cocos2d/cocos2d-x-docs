@@ -1,6 +1,6 @@
-#include "main.h"
-#include "AppDelegate.h"
-#include "CCEGLView.h"
+# include "main.h"
+# include "AppDelegate.h"
+# include "CCEGLView.h"
 
 USING_NS_CC;
 
@@ -15,12 +15,12 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
-#ifdef USE_WIN32_CONSOLE
+# ifdef USE_WIN32_CONSOLE
     AllocConsole();
     freopen("CONIN$", "r", stdin);
     freopen("CONOUT$", "w", stdout);
     freopen("CONOUT$", "w", stderr);
-#endif
+# endif
 
     // create the application instance
     AppDelegate app;
@@ -29,9 +29,9 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
     int ret = Application::getInstance()->run();
 
-#ifdef USE_WIN32_CONSOLE
+# ifdef USE_WIN32_CONSOLE
     FreeConsole();
-#endif
+# endif
 
     return ret;
 }

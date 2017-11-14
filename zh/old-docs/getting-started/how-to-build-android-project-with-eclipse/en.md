@@ -104,16 +104,16 @@ The process to build an empty project created with the [cocos](https://github.co
 
 So let's do it quickly.
 
-###Build it with the cocos command 
+### Build it with the cocos command 
 (Note this might not be the same as the previous section, but you can do it by navigating to the proj.android directory and run the build_native.py scripts.)
 
 We could use `cocos run -s ~/MyCompany/MyGame -p android` command instead of the python scripts.  You could refer to [this document](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/getting-started/v3.0/how-to-start-a-new-game/en.md) for more information.
 
-###Open the proj.android project with Eclipse
+### Open the proj.android project with Eclipse
 It's exactly as the process we do in the previous section.
-###Import the Libcocos2dx Project
+### Import the Libcocos2dx Project
 The same.. Again, to be verbose, don't forget to import the libcocos2dx project under `MyGame` folder, not the engine root.)
-###Build and Run the Android Project
+### Build and Run the Android Project
 Tedious, it's still the same. 
 
 ## TroubleShootings

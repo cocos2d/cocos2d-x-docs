@@ -1,4 +1,4 @@
-#Cocos2d-x-3.0で改善されたラベル
+# Cocos2d-x-3.0で改善されたラベル
 
 Cocos2d-xの3.0がリリースされる前は,CCLabelTTF, CCLabelBMFont, CCLabelAtlasの三つのクラスでテキストラベルを作成することができました。
 

@@ -57,7 +57,7 @@ Win版Cocos Studio的动画编辑器支持关键帧动画，序列帧动画，�
 同样地，在Cocos2d-x程序中使用Cocos Studio动画首先需要包含相关头文件，如下：
 
 ```
-#include "cocostudio/CocoStudio.h"
+# include "cocostudio/CocoStudio.h"
 using namespace cocostudio;
 ```
 
