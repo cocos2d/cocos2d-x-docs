@@ -14,7 +14,7 @@ __PATH__. Doing so ensures that you can run Cocos2d-x and its related tools. Exa
 > python setup.py
 ```
 
-On OS X, it is also a good idea to add a few lines to your __~/.bash_profile__ to ensure your character encoding is set to __UTF-8__. Example:
+On macOS, it is also a good idea to add a few lines to your __~/.bash_profile__ to ensure your character encoding is set to __UTF-8__. Example:
 ```sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -31,7 +31,7 @@ to it when using it. An easy test:
 
 If you see output like __1.2__ you are all set. If you see anything else you need to either add the location to your __PATH__.
 
-On __OS X__ run __source ~/.bash_profile__ after updating your __PATH__ or
+On __macOS__ run __source ~/.bash_profile__ after updating your __PATH__ or
 specify the full path to __<cocos2d-x root>\tools\cocos2d-console\bin__.
 
 ### Creating a new project

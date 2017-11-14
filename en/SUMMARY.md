@@ -107,7 +107,7 @@
       - [Android - Studio](installation/Android-Studio.md)
       - [Android - Eclipse](installation/Android-Eclipse.md)
     - [iOS](installation/iOS.md)
-    - [Mac OS X](installation/OSX.md)
+    - [macOS](installation/OSX.md)
     - [Linux](installation/Linux.md)
     - [Tizen](installation/Tizen.md) __**DEPRECATED**__
     - [Windows](installation/Windows.md)

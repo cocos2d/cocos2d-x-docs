@@ -26,10 +26,10 @@ environment. This includes:
 Your system may already have some of these items. Download the items that you need
 to inorder to have a complete environment. Nothing on this list can be missing.
 
-## OS X Instructions
+## macOS Instructions
 
 ### Python
-OS X systems come with __Python__ installed by default. Verify that your system
+macOS systems come with __Python__ installed by default. Verify that your system
 has __Python__ and ensusre that it is a version __less than 3__. From *Terminal.app*
 or *iTerm 2* execute the following:
 ```sh
@@ -45,7 +45,7 @@ You are good to go. If you see anything else you may need to install Python.
 Use the link above. __You cannot move on in this document until this step is working.__
 
 ### JAVA
-OS X systems usually *do not* come with JAVA installed. It is necessary to download and
+macOS systems usually *do not* come with JAVA installed. It is necessary to download and
 install it using the link above. Make sure that you install the __JDK__. It is not enough
 to just install the __JRE__.
 
