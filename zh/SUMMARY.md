@@ -115,8 +115,7 @@
     - [Linux 平台](installation/Linux.md)
     - [Windows 平台](installation/Windows.md)
 
-- [工具 TODO](editors_and_tools/cocosCLTool.md)
-    - [Cocos命令行工具](editors_and_tools/cocosCLTool.md)
-    - [Cocos图形界面工具](editors_and_tools/cocos.md)
-    - [插件 Creator to Cocos2d-x](editors_and_tools/creator_to_cocos2dx.md)
-    - [预编译库](editors_and_tools/prebuilt_libraries.md)
+- [工具](editors_and_tools/cocosCLTool.md)
+    - [命令行工具](editors_and_tools/cocosCLTool.md)
+    - [Creator to Cocos2d-x TODO](editors_and_tools/creator_to_cocos2dx.md)
+    - [静态库](editors_and_tools/prebuilt_libraries.md)
