@@ -1,9 +1,7 @@
-## Cocos2d-x Programmers Guide v3.16
-v2017.10.03
+## Cocos2d-x Docs v3.16
+v2017.11.17
 
- __Authors:__ SlackMoehrle, Ricardo, Justin, Nite, Kai, Minggo, Wenhai, Tony, Yingtao, Rao, Huabin, Zhe
-
-__CSS enhancements:__ Nico
+ __Authors:__ SlackMoehrle, Ricardo, Minggo, Walzer, Jare, James, Chengzhe
 
 __Contributors/Editors:__ stevetranby, Maxxx, smitpatel88, IQD, Michael, Meir_yanovich, catch_up, kidproquo, EMebane, reyanthonyrenacia, Fradow, pabitrapadhy, Manny_Dev, ZippoLag, kubas121, bjared, grimfate, DarioDP
 
@@ -39,12 +37,9 @@ You can clone the [__GitHub Repo__](https://github.com/cocos2d/cocos2d-x) and fo
   entire game, from start to finish, using this tool. It uses JavaScript. Lua and
   C++ support are being added. Read more about [__Cocos Creator__](http://cocos2d-x.org/docs/editors_and_tools/creator/index.html).
 
-  * __Cocos Launcher__ - is a graphical tool to create and manage your projects.
-  This is also an easy way to add SDKBOX plugins to your project. [__Documentaion__](http://cocos2d-x.org/docs/cocos/cocos/index.html)
-  is available.
+  * __Cocos Launcher__ - is EOL'd. No replacement.
 
-  * __Coco Studio__ - is EOL'd and has been replaced by __Cocos Creator__. [__Documentation__](http://cocos2d-x.org/docs/deprecated/studio/index.html)
-  is still available.
+  * __Coco Studio__ - is EOL'd and has been replaced by __Cocos Creator__.
 
   * __Code IDE__ -  is EOL'd. Common text editors and IDE's can be used instead.
 
