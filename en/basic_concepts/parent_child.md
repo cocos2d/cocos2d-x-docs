@@ -15,13 +15,6 @@ auto myNode = Node::create();
 
 // rotating by setting
 myNode->setRotation(50);
-
-<!--{%- language name="JavaScript", type="js" -%}
-var myNode = new cc.Node();
-
-// rotating by setting
-myNode.setRotation(50);-->
-
 {%- endcodetabs %}
 
 Just like with rotation, if you change the scale of the parent the children
@@ -34,13 +27,6 @@ auto myNode = Node::create();
 
 // scaling by setting
 myNode->setScale(2.0); // scales uniformly by 2.0
-
-<!--{%- language name="JavaScript", type="js" -%}
-var myNode = new cc.Node();
-
-// scaling by setting
-myNode.setScale(2.0); // scales uniformly by 2.0-->
-
 {%- endcodetabs %}
 
 Not all changes to the __parent__ are passed down to its __children__. Changing the

@@ -9,16 +9,13 @@ A `Sprite` can be created by specifying an image file to use.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
-<!--{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Sprite(res.mySprite_png);-->
 {%- endcodetabs %}
 
 ![](sprites-img/i1.png "")
 
 The statement above creates a `Sprite` using the __mysprite.png__ image. The result
 is that the created `Sprite` uses the whole image. `Sprite` has the same dimensions
-of __mysprite.png__. If the image file is 200 x 200 the resulting `Sprite` is 200 x
-200.
+of __mysprite.png__. If the image file is 200 x 200 the resulting `Sprite` is 200 x 200.
 
 ### Creating a Sprite with a Rect
 
@@ -30,8 +27,6 @@ image file, you can do it by specifying a `Rect`.
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-<!--{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));-->
 {%- endcodetabs %}
 
 ![](sprites-img/i4.png "")
@@ -50,9 +45,4 @@ the same result.
 auto mySprite = Sprite::create("mysprite.png");
 
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,200,200));
-<!--{%- language name="JavaScript", type="js" -%}
-
-var mySprite = new cc.Sprite(res.mySprite_png);
-
-var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,200,200));-->
 {%- endcodetabs %}

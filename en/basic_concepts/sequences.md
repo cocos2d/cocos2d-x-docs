@@ -31,25 +31,6 @@ auto delay = DelayTime::create(1);
 
 mySprite->runAction(Sequence::create(moveTo1, delay, moveBy1, delay.clone(),
 moveTo2, nullptr));
-
-<!--{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Node();
-
-// move to point 50,10 over 2 seconds
-var moveTo1 = new cc.MoveTo(2, cc._p(50,10));
-
-// move from current position by 100,10 over 2 seconds
-var moveBy1 = new cc.MoveBy(2, cc._p(100,10));
-
-// move to point 150,10 over 2 seconds
-var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
-
-// create a delay
-var delay = new cc.DelayTime(1);
-
-mySprite.runAction(Sequence.create(moveTo1, delay, moveBy1, delay.clone(),
-moveTo2));-->
-
 {%- endcodetabs %}
 
 This example runs a `Sequence`, in order, but what about running all the
