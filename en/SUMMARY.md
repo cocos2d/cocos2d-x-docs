@@ -116,6 +116,5 @@
 
 -  [Tools](editors_and_tools/cocosCLTool.md)
     - [Cocos Command-Line tool](editors_and_tools/cocosCLTool.md)
-    - [Cocos GUI](editors_and_tools/cocos.md)
     - [Creator to Cocos2d-x](editors_and_tools/creator_to_cocos2dx.md)
     - [Pre-built Libraries](editors_and_tools/prebuilt_libraries.md)
