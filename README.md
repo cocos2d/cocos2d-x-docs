@@ -11,15 +11,6 @@ We always welcome contributions to our documentation.
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
       {%- endcodetabs %}
-      ```
-    - C++ and JavaScript code block:
-      ```html
-      {% codetabs name="C++", type="cpp" -%}
-      auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-      {%- language name="JavaScript", type="js" -%}
-      var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));
-      {%- endcodetabs %}
-      ```
   - Test your changes using `gitbook build` and `gitbook serve`. Please test in a few web browsers. See [Requirements](#Requirements).
   - Submit a *pull request* with your changes and we will review and merge it.
 
