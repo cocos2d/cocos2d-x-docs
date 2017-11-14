@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Parallax
 A `Parallax` Node is a special `Node` type that simulates a __parallax scroller__.
 What did you say? A *para*.. what? Yes, __parallax__ Simply put you can consider

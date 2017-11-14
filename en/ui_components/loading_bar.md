@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## LoadingBar
 Have you ever played a game where you had to wait while it loaded up all the
 content it needed? It probably showed you a bar, filling in as it made progress
@@ -9,7 +5,7 @@ accomplishing its task. This is often referred to as a __progress bar__, __statu
 or a __loading bar__. Creating a `LoadingBar`:
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto loadingBar = LoadingBar::create("LoadingBarFile.png");
 
@@ -25,7 +21,7 @@ However, you probably need to change the percentage of the `LoadingBar`. This is
 easily done:
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto loadingBar = LoadingBar::create("LoadingBarFile.png");
 loadingBar->setDirection(LoadingBar::Direction::RIGHT);

@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Creating a Sprite from a Sprite Sheet
 A __sprite sheet__ is a way to combine sprites into a single file. Using a
 __sprite sheet__ helps achieve better performance by __batching__ the
@@ -37,12 +33,6 @@ auto spritecache = SpriteFrameCache::getInstance();
 
 // the .plist file can be generated with any of the tools mentioned below
 spritecache->addSpriteFramesWithFile("sprites.plist");
-<!--{%- language name="JavaScript", type="js" -%}
-// load the Sprite Sheet
-var spritecache = cc.SpriteFrameCache;
-
-// the .plist file can be generated with any of the tools mentioned below
-spritecache.addSpriteFramesWithFile(res.sprites_plist);-->
 {%- endcodetabs %}
 
 Now that we have a __sprite sheet__ loaded into `SpriteFrameCache` we can create
@@ -55,7 +45,6 @@ ways to adjust your __sprite sheet__ for maximum optimization!
 
 Here are a few tools:
 
-* [Cocos Studio](http://www.Cocos2d-x.org/wiki/CocoStudio)
 * [ShoeBox](http://renderhjs.net/shoebox/)
 * [Texture Packer](https://www.codeandweb.com/texturepacker)
 * [Zwoptex](https://www.zwopple.com/zwoptex/)

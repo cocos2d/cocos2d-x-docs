@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Sprite3D
 Just like 2D games, 3D games also have `Sprite` objects. `Sprite` objects are a
 core foundation of any game. One of the main differences between `Sprite` and

@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Cocos command-line tool
 
 ### What is the `cocos` command-line tool?
@@ -18,7 +14,7 @@ __PATH__. Doing so ensures that you can run Cocos2d-x and its related tools. Exa
 > python setup.py
 ```
 
-On OS X, it is also a good idea to add a few lines to your __~/.bash_profile__ to ensure your character encoding is set to __UTF-8__. Example:
+On macOS, it is also a good idea to add a few lines to your __~/.bash_profile__ to ensure your character encoding is set to __UTF-8__. Example:
 ```sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -35,7 +31,7 @@ to it when using it. An easy test:
 
 If you see output like __1.2__ you are all set. If you see anything else you need to either add the location to your __PATH__.
 
-On __OS X__ run __source ~/.bash_profile__ after updating your __PATH__ or
+On __macOS__ run __source ~/.bash_profile__ after updating your __PATH__ or
 specify the full path to __<cocos2d-x root>\tools\cocos2d-console\bin__.
 
 ### Creating a new project
@@ -168,7 +164,7 @@ You can run __cocos deploy --help__ to see all available options broken down by
 platform.
 
 ### Installing additional plugins
-Using the __Cocos Package Manager__ you can easily add additional functionality to your games, including __VR__ and __SDKBOX__. There are a variety of commands to assist with this. Examples:
+Using the __Cocos Package Manager__ you can easily add additional functionality to your games, __SDKBOX__. There are a variety of commands to assist with this. Examples:
 
 ```sh
 # list available packages
@@ -182,31 +178,6 @@ cocos package update
 ```
 
 You can run __cocos package --help__ to see all available options broken down by platform.
-
-#### Installing VR
-__VR__ is easily added to your project! Every __VR__ project needs __vrsdkbase__, it takes care of setting up your project to use __VR__. It is easy to import:
-
-```sh
-$ cocos package import -v -b vrsdkbase --anysdk
-```
-
-If you are using a supported __VR SDK__ make sure to import it. Examples:
-
-```sh
-# add the GearVR package
-$ cocos package import -v -b gearvr --anysdk
-
-# add the Deepoon VR package
-$ cocos package import -v -b deepoon --anysdk
-
-# add the Google VR package
-$ cocos package import -v -b gvr --anysdk
-
-# add the Oculus VR package
-$ cocos package import -v -b oculus --anysdk
-```
-
-For more information, please see our chapter on [__VR__](../programmers-guide/vr/index.html).
 
 #### Installing SDKBOX plugins
 __SDKBOX__ plugins can be installed using the __Cocos Package Manager__. Example:

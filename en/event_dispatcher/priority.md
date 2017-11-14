@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## FixedPriority vs SceneGraphPriority
 The __EventDispatcher__ uses priorities to decide which listeners get delivered an event first.
 

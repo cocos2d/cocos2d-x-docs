@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## 3D Software Packages
 
 ### 3D Editors
@@ -17,11 +13,11 @@ Most 3D editors usually save files in a common collection of formats for easy
 use within other editors as well as a standard way for game engines to import
 your files for use.
 
-###Cocos2d-x Provided Tools
+### Cocos2d-x Provided Tools
 Cocos2d-x provides tools to help with converting your 3D models to formats that
 Cocos2d-x uses to provide access to all aspects of your 3D files.
 
-####fbx-conv command-line tool
+#### fbx-conv command-line tool
 __fbx-conv__ allows the conversion of an FBX file into the Cocos2d-x proprietary
 formats. FBX is the most popular 3D file format and is being supported by all
 the major editors. __fbx-conv__ exports to __.c3b__ by default. It is simple to use

@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Parent Child Relationship
 Cocos2d-x uses a __parent and child__ relationship. This means that properties
 and changes to the parent node are applied to its children. Consider a single
@@ -19,13 +15,6 @@ auto myNode = Node::create();
 
 // rotating by setting
 myNode->setRotation(50);
-
-<!--{%- language name="JavaScript", type="js" -%}
-var myNode = new cc.Node();
-
-// rotating by setting
-myNode.setRotation(50);-->
-
 {%- endcodetabs %}
 
 Just like with rotation, if you change the scale of the parent the children
@@ -38,13 +27,6 @@ auto myNode = Node::create();
 
 // scaling by setting
 myNode->setScale(2.0); // scales uniformly by 2.0
-
-<!--{%- language name="JavaScript", type="js" -%}
-var myNode = new cc.Node();
-
-// scaling by setting
-myNode.setScale(2.0); // scales uniformly by 2.0-->
-
 {%- endcodetabs %}
 
 Not all changes to the __parent__ are passed down to its __children__. Changing the

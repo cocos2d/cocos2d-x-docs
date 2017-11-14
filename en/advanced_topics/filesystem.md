@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## File System Access
 Even though you can use functions in __stdio.h__ to access files it can be
 inconvenient for a few reasons:
@@ -51,7 +47,7 @@ types:
 
  </table>
 
-###Functions to manage files or directories
+### Functions to manage files or directories
 These functions will manage a file or a directory:
 
 <table>

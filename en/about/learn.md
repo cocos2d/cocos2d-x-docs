@@ -1,10 +1,8 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Learning Resources
 * This very guide!
-* [__Sonar Systems Videos__](https://www.youtube.com/user/sonarsystemslimited/search?query=Cocos2d-x)
 * [__Android Fundamentals__](https://developer.android.com/guide/components/fundamentals.html)
-* [__Make School Tutorials__](https://www.makeschool.com/tutorials/)
+* __Make School Tutorials__
+  * [__Timberman Clone__](https://www.makeschool.com/online-courses/tutorials/build-a-clone-of-timberman-in-c-with-cocos2d-x-and-cocos-studio/getting-started)
+  * [__Game of Life__](https://www.makeschool.com/online-courses/tutorials/learn-cocos-studio-and-c-by-building-the-game-of-life/what-game-of-life)
+
 * [__Game From Scratch__](http://www.gamefromscratch.com/page/cocos2d-x-CPP-Game-Programming-Tutorial-Series.aspx)

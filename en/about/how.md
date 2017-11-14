@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## How to contribute to our projects
 
 ### Contributing to these docs
@@ -10,18 +6,10 @@ We always welcome contributions to our documentation.
   - Fork our [docs repo](https://github.com/cocos2d/cocos2d-x-docs)
   - __en/__ is for English contributions, __zh/__ is for 中文 contributions.
   - code blocks must be wrapped in special code to work correctly:
-    - C++ only code block:
+    - C++ code block:
       ```html
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-      {%- endcodetabs %}
-      ```
-    - C++ and JavaScript code block:
-      ```html
-      {% codetabs name="C++", type="cpp" -%}
-      auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-      {%- language name="JavaScript", type="js" -%}
-      var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));
       {%- endcodetabs %}
       ```
   - Test your changes using `gitbook build` and `gitbook serve`. Please test in a few web browsers.
@@ -33,7 +21,6 @@ We always welcome contributions to our documentation.
 You can ask general questions by using:
 
   -   Forum (preferred way): http://discuss.cocos2d-x.org/
-  -   IRC: https://webchat.freenode.net/ (Use the *cocos2d* or *cocos2d-x* channels)
   -   Weibo: http://t.sina.com.cn/cocos2dx
   -   Twitter: http://www.twitter.com/cocos2dx
 
@@ -73,12 +60,12 @@ If you want to contribute code, please follow these steps:
 #### Only _complete_ patches will be merged
 The patch must be _complete_. By that, we mean:
 
-  -   For C++ code follow the [Cocos2d C++ Coding Style][1]
-  -   For Python code follow the [PEP8 guidelines][3]
+  -   For C++ code follow the [Cocos2d C++ Coding Style](https://github.com/cocos2d/cocos2d-x/blob/v3/docs/CODING_STYLE.md)
+  -   For Python code follow the [PEP8 guidelines](https://www.python.org/dev/peps/pep-0008)
   -   Describe what the patch does
   -   Include test cases if applicable
   -   Include unit tests if applicable
-  -   Must be tested in all supported platforms __*__
+  -   Must be tested in all supported platforms. If you don't have access to test your code in all the supported platforms, let us know.
   -   Must NOT degrade the performance
   -   Must NOT break existing tests cases
   -   Must NOT break the Continuous Integration build
@@ -91,20 +78,8 @@ The patch must be _complete_. By that, we mean:
   -   It must not duplicate existing code, unless the new code deprecates the old one
   -   Patches that refactor key components will only be merged in the next major versions.
 
-__*__: If you don't have access to test your code in all the supported platforms, let us know.
-
-__TBD__: Is this applicable for big features ? What is the best way to merge big features ?
-
 #### Promoting cocos2d-x
-
 Help us promote cocos2d-x by using the cocos2d-x logo in your game, or by mentioning cocos2d-x in the credits.
-
-[Logo Resources of Cocos2d-x][2]
-
-[1]: https://github.com/cocos2d/cocos2d-x/blob/v3/docs/CODING_STYLE.md
-[2]: http://www.cocos2d-x.org/wiki/Logo_Resources_of_Cocos2d-x
-[3]: https://www.python.org/dev/peps/pep-0008
-
 
 #### Spreading the word!
 You can help us spread the word about Cocos2d-x! We would surely appreciate it!

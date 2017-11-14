@@ -1,8 +1,4 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
-# iOS and OS X Installation and Setup
+# iOS and macOS Installation and Setup
 
 ## Prerequisites
 A supported environment. See **[Installation Prerequisites](A/index.html)**
@@ -47,7 +43,7 @@ updated your __$PATH__ and run __source ~/.bash_profile__.
 * Choose __cpp-tests iOS__ from targets drop-down box
 * Click __run__ to compile and run __cpp-tests__
 
-### OS X
+### macOS
 * In __<cocos2d-x root>/build__, open __cocos2d_tests.xcodeproj__
 * Choose __cpp-tests Mac__ from targets drop-down box
 * Click __run__ to compile and run __cpp-tests__

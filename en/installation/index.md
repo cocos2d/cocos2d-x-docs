@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 # Prerequisites
 
 **Build Requirements**
@@ -111,7 +107,7 @@
 * Android 2.3+ for Android games
 * Windows 8.1 or Windows 10.0 for Windows Phone/Store 8.1 games
 * Windows 10.0 for Windows Phone/Store 10.0  games
-* OS X v10.6+ for Mac games
+* Mac OS X v10.6+ for Mac games
 * Windows 7+ for Win games
 * Modern browsers and IE 9+ for web games
 

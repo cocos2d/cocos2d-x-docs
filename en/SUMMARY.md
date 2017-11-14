@@ -99,9 +99,6 @@
     - [Optimizing Graphics](advanced_topics/optimizing.md)
     - [SQLite](advanced_topics/sqlite.md)
 
--  [VR (virtual reality)](vr/index.md)
-    - [Getting Started](vr/index.md)
-
 -  [Installations](installation/index.md)
     - [Prerequisites](installation/index.md)
     - [Android](installation/Android-terminal.md)
@@ -110,7 +107,7 @@
       - [Android - Studio](installation/Android-Studio.md)
       - [Android - Eclipse](installation/Android-Eclipse.md)
     - [iOS](installation/iOS.md)
-    - [Mac OS X](installation/OSX.md)
+    - [macOS](installation/OSX.md)
     - [Linux](installation/Linux.md)
     - [Tizen](installation/Tizen.md) __**DEPRECATED**__
     - [Windows](installation/Windows.md)

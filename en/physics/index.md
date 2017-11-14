@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Physics
 Your game is coming along nicely. You have `Sprite` objects, gameplay mechanics
 and your coding efforts are paying off. You are starting to feel like your game

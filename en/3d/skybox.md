@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Skybox
 `Skybox` is a wrapper around your entire scene that shows what the world looks
 like beyond your geometry. You might use a `Skybox` to simulate infinite sky,

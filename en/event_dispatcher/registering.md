@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Registering events with the dispatcher
 It is easy to register an event with the __Event Dispatcher__. Taking the sample
 touch event listener from above:

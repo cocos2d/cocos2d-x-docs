@@ -1,14 +1,5 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
-##Camera
-__Camera__ objects are an important aspect of 3D development. Since a 3D world is
-not flat you need to use a `Camera` to look at it and navigate around it. Just
-like when you are watching a movie and the scene pans to the left or right. This
-same concept is applied when using a `Camera` object. The `Camera` object inherits
-from `Node` and therefore supports most of the same `Action` objects. There are two types
-of `Camera` objects: __perspective camera__ and __orthographic camera__.
+## Camera
+__Camera__ objects are an important aspect of 3D development. Since a 3D world is not flat you need to use a `Camera` to look at it and navigate around it. Just like when you are watching a movie and the scene pans to the left or right. This same concept is applied when using a `Camera` object. The `Camera` object inherits from `Node` and therefore supports most of the same `Action` objects. There are two types of `Camera` objects: __perspective camera__ and __orthographic camera__.
 
 The __perspective camera__ is used to see objects having a near to far effect. A
 __perspective camera__ view might look like this:

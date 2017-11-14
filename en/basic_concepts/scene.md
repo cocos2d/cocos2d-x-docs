@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Scene
 In your game you probably want a main menu, a few levels and an ending scene.
 How do you organize all of these into the separate pieces they are? You guessed
@@ -82,15 +78,4 @@ scene->addChild(label_node);
 // Adds a child with the z-order of 1, that means
 // it goes to the "right" side of the tree (because it is positive)
 scene->addChild(sprite_node, 1);
-<!--{%- language name="JavaScript", type="js" -%}
-// Adds a child with the z-order of -2, that means
-// it goes to the "left" side of the tree (because it is negative)
-scene.addChild(title_node, -2);
-
-// When you don't specify the z-order, it will use 0
-scene.addChild(label_node);
-
-// Adds a child with the z-order of 1, that means
-// it goes to the "right" side of the tree (because it is positive)
-scene.addChild(sprite_node, 1);-->
 {%- endcodetabs %}

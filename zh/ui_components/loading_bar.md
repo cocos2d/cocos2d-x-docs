@@ -5,7 +5,7 @@
 创建一个进度条：
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto loadingBar = LoadingBar::create("LoadingBarFile.png");
 
@@ -20,7 +20,7 @@ this->addChild(loadingBar);
 在进度的控制中，你肯定需要改变进度条的进度. 示例：
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto loadingBar = LoadingBar::create("LoadingBarFile.png");
 loadingBar->setDirection(LoadingBar::Direction::RIGHT);

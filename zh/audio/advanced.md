@@ -56,6 +56,7 @@ audio->unloadEffect("myEffect1.mp3");
 
 可以像下面这样，通过代码控制音乐和音效的音量：
 
+
 {% codetabs name="C++", type="cpp" -%}
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;

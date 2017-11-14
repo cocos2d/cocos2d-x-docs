@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Debugging Physics Body and Shapes
 If you ever wish to have red boxes drawn around your __physics bodies__ to aid
 in debugging, simple add these 2 lines to your core, where it makes sense to you.

@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## CheckBox
 We are all used to filling out __checkboxes__ on paper forms like job applications
 and rental agreements. You can also have __checkboxes__ in your games. Perhaps, you
@@ -12,7 +8,7 @@ permits the user to make this type of choice. There are 5 different __states__ a
 a `CheckBox`:
 
 {% codetabs name="C++", type="cpp" -%}
-#include "ui/CocosGUI.h"
+# include "ui/CocosGUI.h"
 
 auto checkbox = CheckBox::create("check_box_normal.png",
                                  "check_box_normal_press.png",

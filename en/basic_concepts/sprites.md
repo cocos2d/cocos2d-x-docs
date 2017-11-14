@@ -1,14 +1,9 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Sprites
 All games have `Sprite` objects, and you may or may not realize what they are.
 Sprites are the objects that you move around the screen.
 You can manipulate them. The main character in your game is probably a
 Sprite. I know what you might be thinking -  isn't every graphical object
-a `Sprite`? No! Why? Well a Sprite is only a Sprite if you move it around. If you
-don't move it around it is just a `Node`.
+a `Sprite`? No! Why? Well a Sprite is only a Sprite if you move it around. If you don't move it around it is just a `Node`.
 
 Taking another look at the image from above, let's point out what are
 Sprites and what are Nodes:
@@ -34,18 +29,6 @@ mySprite->setRotation(40);
 mySprite->setScale(2.0); // sets both the scale of the X and Y axis uniformly
 
 mySprite->setAnchorPoint(Vec2(0, 0));
-<!--{%- language name="JavaScript", type="js" -%}
-// This is how to create a sprite
-var mySprite = new cc.Sprite(res.mySprite_png);
-
-// this is how to change the properties of the sprite
-mySprite.setPosition(cc._p(500, 0));
-
-mySprite.setRotation(40);
-
-mySprite.setScale(2.0); // sets both the scale of the X and Y axis uniformly
-
-mySprite.setAnchorPoint(cc._p(0, 0));-->
 {%- endcodetabs %}
 
 Let's illustrate each property, consider the following screenshot from
@@ -84,10 +67,6 @@ __0, 0__ using:
 
 {% codetabs name="C++", type="cpp" -%}
 mySprite->setAnchorPoint(Vec2(0, 0));
-
-<!--{%- language name="JavaScript", type="js" -%}
-mySprite.setAnchorPoint(cc._p(0, 0));-->
-
 {%- endcodetabs %}
 
 would result in the lower left corner of our sprite being used as the basis for

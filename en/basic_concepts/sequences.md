@@ -1,7 +1,3 @@
-div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Sequences and Spawns
 With moving `Sprite` objects on the screen we have everything we need to create
 our game, right? Not quite. What about running multiple __Actions__? Yes,
@@ -35,25 +31,6 @@ auto delay = DelayTime::create(1);
 
 mySprite->runAction(Sequence::create(moveTo1, delay, moveBy1, delay.clone(),
 moveTo2, nullptr));
-
-<!--{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Node();
-
-// move to point 50,10 over 2 seconds
-var moveTo1 = new cc.MoveTo(2, cc._p(50,10));
-
-// move from current position by 100,10 over 2 seconds
-var moveBy1 = new cc.MoveBy(2, cc._p(100,10));
-
-// move to point 150,10 over 2 seconds
-var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
-
-// create a delay
-var delay = new cc.DelayTime(1);
-
-mySprite.runAction(Sequence.create(moveTo1, delay, moveBy1, delay.clone(),
-moveTo2));-->
-
 {%- endcodetabs %}
 
 This example runs a `Sequence`, in order, but what about running all the
@@ -70,15 +47,6 @@ auto moveBy1 = MoveBy::create(2, Vec2(100,10));
 auto moveTo2 = MoveTo::create(2, Vec2(150,10));
 
 myNode->runAction(Spawn::create(moveTo1, moveBy1, moveTo2, nullptr));
-
-{%- language name="JavaScript", type="js" -%}
-var myNode = new cc.Node();
-
-var moveTo1 = new cc.MoveTo(2, cc._p(50,10));
-var moveBy1 = new cc.MoveBy(2, cc._p(100,10));
-var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
-
-myNode.runAction(Spawn.create(moveTo1, moveBy1, moveTo2));
 {%- endcodetabs %}
 
 Why `Spawn` actions? Is there ever a reason? Sure! What if your main

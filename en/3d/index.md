@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 # 3D
 You probably started with Cocos2d-x and know it as a 2D game engine. Starting
 with version 3, 3D features are being added and refined. 3D gaming is a huge

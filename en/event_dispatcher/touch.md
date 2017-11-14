@@ -1,7 +1,3 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
 ## Touch Events
 __Touch events__ are the most important event in mobile gaming. They are easy to
 create and provide versatile functionality. Let's make sure we know what a touch

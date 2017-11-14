@@ -1,8 +1,4 @@
-<div class="langs">
-  <a href="#" class="btn" onclick="toggleLanguage()">中文</a>
-</div>
-
-##Animation
+## Animation
 `Sprite3D` objects are essential to our game! We have learned how to manipulate them.
 However, we might want a more rich experience. Enter animation! To run a 3d
 animation, you can use the `Animation3D` and `Animate3D` objects. You then create
@@ -23,7 +19,7 @@ Run the example __Programmer Guide Sample__ code to see this in action! Please
 keep in mind that 3D animations are exactly the same concepts as 2D. Please refer
 to Chapter 4 in this guide.
 
-###Multiple animations
+### Multiple animations
 What do you do when you want to run multiple __animations__ at the same time?
 Using both the __animation start time__ and __animation length__ parameters you
 can create multiple animations. The unit for both parameters is seconds. Example:
@@ -39,15 +35,14 @@ sprite->runAction(attackAnimate);
 {%- endcodetabs %}
 
 In the above example there are two animations that get run. The first starts
-immediately and lasts for *2 seconds*. The second starts after *3 seconds* and lasts
-for *5 seconds*.
+immediately and lasts for *2 seconds*. The second starts after *3 seconds* and lasts for *5 seconds*.
 
-###Animation speed
+### Animation speed
 The __speed__ of the animation is a positive integer for forward while
 a negative speed would be reverse. In this case the speed is set to *10*.
 This means that this animation can be considered to be *10* seconds in length.
 
-###Animation blending
+### Animation blending
 When using multiple animations, __blending__ is automatically applied between each
 animation. The purpose of __blending__ is to create a smooth transition between
 effects. Given two animations, A and B, the last few frames of animation A and
