@@ -1,14 +1,14 @@
 # Eclipse ADT （已弃用）
 
-## 背景
+## 背景
 
-由于 Google 自 2015 年底已中止了对 ADT 的支持，希望开发者转向 Android Studio。同时 Android Studio 的功能也已日趋完善，足够我们使用它完成 Cocos2d-x 项目的全部开发流程：编码、编译、调试、发布。因此在 3.16 版本我们不再支持 ADT。
+由于 Google 自 2015 年底已中止了对 ADT 的支持，希望开发者转向 Android Studio。同时 Android Studio 的功能也已日趋完善，足够我们使用它完成 Cocos2d-x 项目的全部开发流程：编码、编译、调试、发布。因此在 3.16 版本我们不再支持 ADT。
 
 如果你是一个新手，请转向 [Android Studio](Android-Studio.md) 进行 Cocos2d-x 的环境搭建学习。如果明确有对老版本引擎的 Android 环境搭建需求，请继续阅读。
 
 ## 工具准备
 
-* 完成上一节的 **[Android 命令行](Android-terminal/index.html)**，上一节是本节的基础。
+* 完成上一节的 **[Android 命令行](Android-terminal/index.html)**，上一节是本节的基础
 
 * 下载 Eclipse ADT [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/)
 
@@ -22,7 +22,7 @@
 
     ![](../../en/installation/Android-Eclipse-img/image2.png)
 
-1. 点击 _Browse_ 按钮，进入上一节操作的 __cpp-tests__ 项目目录，进入 _proj.androi_ 子目录，点击确定。
+1. 点击 _Browse_ 按钮，进入上一节操作的 __cpp-tests__ 项目目录，进入 _proj.androi_ 子目录，点击确定
 
     ![](../../en/installation/Android-Eclipse-img/image3.png)
 
@@ -40,10 +40,10 @@
 
 * 将开启 USB 调试的手机，连接到电脑上。
 
-* 确保你的电脑能识别手机 _对于某些机型可能需要安装驱动_
+* 确保你的电脑能识别手机 _对于某些机型可能需要安装驱动_。
 
 * 右键游戏项目，选择 _Run as_，在子菜单中选择 _Android Application_。
 
     ![](../../en/installation/Android-Eclipse-img/image6.png)
 
-_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
+_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
