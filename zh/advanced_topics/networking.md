@@ -25,7 +25,7 @@ HttpClient::getInstance()->sendImmediate(request);
 request->release();
 {%- endcodetabs %}
 
-注意，我们通过 `setResponseCallback()` 设置请求完成时的回调函数了。这样做，在请求完成时，我们就能查看返回的数据，并提取出我们需要的。
+注意，我们通过 `setResponseCallback()` 设置请求完成时的回调函数了。这样做，在请求完成时，我们就能查看返回的数据，并提取出我们需要的。
 
 回调函数的写法很简单，可以像这样做：
 
