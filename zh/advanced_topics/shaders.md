@@ -24,7 +24,7 @@ sprite3d->setGLProgramState(programState);
 - `GLProgram`：从根本上来说就是着色器。包含一个顶点着色器和一个像素着色器。
 - 状态属性：根本上来说就是着色器的 uniform 变量
 
-如果你不熟悉 uniform 变量也不知道为什么需要它，请参考刚才提到的 [语言规范](https://www.khronos.org/files/opengles_shading_language.pdf)
+如果你不熟悉 uniform 变量也不知道为什么需要它，请参考刚才提到的 [语言规范](https://www.khronos.org/files/opengles_shading_language.pdf)
 
 可以很容易的将 uniform 变量设置到  `GLProgramState`：
 
@@ -34,7 +34,7 @@ glProgramState->setUniformVec2("u_position", Vec2(x,y));
 glProgramState->setUniformMat4("u_transform", matrix);
 {%- endcodetabs %}
 
-你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式作为回调函数的例子：
+你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式作为回调函数的例子：
 
 {% codetabs name="C++", type="cpp" -%}
 glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
@@ -57,11 +57,11 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 
 ![](advanced_topics-img/geometry.jpg)
 
-然后定义砖块纹理，像这样：
+然后定义砖块纹理，像这样：
 
 ![](advanced_topics-img/brick.jpg)
 
-这样做也能达成目标的效果，但是如果进一步的考虑：
+这样做也能达成目标的效果，但是如果进一步的考虑：
 
 - 如果当球体离相机很远时，想使用质量较低的纹理呢？
 - 如果想对砖块应用模糊效果呢？
@@ -71,7 +71,7 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 
 材质对象通过 _.material_ 文件创建，其中包含以下信息：
 
-- 材质有一个或多个渲染方法(technique)
+- 材质有一个或多个渲染方法(technique)
 - 每个渲染方法有一个或多个通道(pass)
 - 每个通道有：
   - 一个渲染状态(RenderState)
@@ -152,7 +152,7 @@ material->setTechnique("normal");
 
 一个渲染方法可以有多个渲染 __通道(Pass)__，其中一个通道对应一次渲染，多通道意味着对一个对象渲染多次，这被称为多通道渲染，也叫多重渲染。每个通道有两个主要的对象：
 
-- `RenderState`：包含 GPU 状态信息，如 _depthTest_, _cullFace_,
+- `RenderState`：包含 GPU 状态信息，如 _depthTest_, _cullFace_,
     _stencilTest_，等
 - `GLProgramState`：包含要使用的着色器，和一些 uniform 变量
 
@@ -164,7 +164,7 @@ Cocos2d-x 的材质文件使用一种优化过的文件格式，同时与其它�
 
 - 材质文件的扩展名无关紧要，建议使用 _.material_ 作为扩展名
 - 顶点着色器和像素着色器的文件扩展名也无关紧要，建议使用 _.vert_ 和 _.frag_
-- _id_ 是材质(Meterial)，渲染方法(technique)，通道(pass)的可选属性
+- _id_ 是材质(Meterial)，渲染方法(technique)，通道(pass)的可选属性
 - 材质可以通过设置 _parent_material_id_ 继承其它材质的值
 
 {% codetabs name="C++", type="cpp" -%}
