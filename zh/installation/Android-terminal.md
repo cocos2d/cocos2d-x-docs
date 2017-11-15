@@ -1,12 +1,10 @@
-# 搭建开发环境 - Android 命令行
+# Android 命令行（已弃用）
 
 ## 背景
 
 由于 Google 自 2015 年底已中止了对 ADT 的支持，希望开发者转向 Android Studio。同时 Android Studio 的功能也已日趋完善，足够我们使用它完成 Cocos2d-x 项目的全部开发流程：编码、编译、调试、发布。因此在 3.16 版本我们不再支持 ADT。
 
-如果你是一个新手，请使用 [Android Studio](Android-Studio.md) 进行 Cocos2d-x 的环境搭建。如果明确有对老版本引擎的 Android 环境搭建需求，并且老版本不支持 [Android Studio](Android-Studio.md) 那请继续阅读。
-
-_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
+如果你是一个新手，请转向 [Android Studio](Android-Studio.md) 进行 Cocos2d-x 的环境搭建学习。如果明确有对老版本引擎的 Android 环境搭建需求，那请继续阅读。
 
 ## 工具准备
 
@@ -190,3 +188,5 @@ git submodule update
 ```sh
 > adb install MyGame-debug.apk
 ```
+
+_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
