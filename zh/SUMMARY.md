@@ -109,13 +109,16 @@
 
 - [环境搭建](installation/index.md)
     - [安装要求](installation/index.md)
-    - [Android 平台](./installation/Android-Studio.md)
+    - [Android 平台](installation/Android-Studio.md)
+      - [Android Studio](installation/Android-Studio.md)
+      - [命令行 (已弃用)](installation/Android-terminal.md)
+      - [Eclipse (已弃用)](installation/Android-Eclipse.md)
     - [iOS](installation/iOS.md)
     - [macOS](installation/OSX.md)
     - [Linux 平台](installation/Linux.md)
     - [Windows 平台](installation/Windows.md)
 
 - [工具](editors_and_tools/cocosCLTool.md)
-    - [命令行工具](editors_and_tools/cocosCLTool.md)
+    - [cocos 命令行工具](editors_and_tools/cocosCLTool.md)
     - [Creator to Cocos2d-x TODO](editors_and_tools/creator_to_cocos2dx.md)
     - [静态库](editors_and_tools/prebuilt_libraries.md)
