@@ -109,7 +109,10 @@
 
 - [环境搭建](installation/index.md)
     - [安装要求](installation/index.md)
-    - [Android 平台](./installation/Android-Studio.md)
+    - [Android 平台](installation/Android-Studio.md)
+      - [Android Studio](installation/Android-Studio.md)
+      - [命令行 (已弃用)](installation/Android-terminal.md)
+      - [Eclipse (已弃用)](installation/Android-Eclipse.md)
     - [iOS](installation/iOS.md)
     - [macOS](installation/OSX.md)
     - [Linux 平台](installation/Linux.md)
