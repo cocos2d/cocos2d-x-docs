@@ -1,8 +1,8 @@
 # Android 命令行（已弃用）
 
-## 背景
+## 背景
 
-由于 Google 自 2015 年底已中止了对 ADT 的支持，希望开发者转向 Android Studio。同时 Android Studio 的功能也已日趋完善，足够我们使用它完成 Cocos2d-x 项目的全部开发流程：编码、编译、调试、发布。因此在 3.16 版本我们不再支持 ADT。
+由于 Google 自 2015 年底已中止了对 ADT 的支持，希望开发者转向 Android Studio。同时 Android Studio 的功能也已日趋完善，足够我们使用它完成 Cocos2d-x 项目的全部开发流程：编码、编译、调试、发布。因此在 3.16 版本我们不再支持 ADT。
 
 如果你是一个新手，请转向 [Android Studio](Android-Studio.md) 进行 Cocos2d-x 的环境搭建学习。如果明确有对老版本引擎的 Android 环境搭建需求，那请继续阅读。
 
@@ -113,7 +113,7 @@ _如果在 Windows 系统上配置，基本流程一致，只是环境变量的�
 
 #### 安装额外的 SDK
 
-不同的 SDK 对应不同的 Android 操作系统，如果你需要测试应用在不同版本上的适用性，就需要下载不同的 SDK。随着 Android 的发展，一些旧有的系统版本已经被弃用，这意味着你无须下载特别旧的 SDK。支持哪些版本，不支持哪些版本，由你来决定。
+不同的 SDK 对应不同的 Android 操作系统，如果你需要测试应用在不同版本上的适用性，就需要下载不同的 SDK。随着 Android 的发展，一些旧有的系统版本已经被弃用，这意味着你无须下载特别旧的 SDK。支持哪些版本，不支持哪些版本，由你来决定。
 
 如果你希望安装额外的 SDK，可以使用内置的 Android 界面工具，使用下面的命令打开工具。
 
@@ -123,13 +123,13 @@ _如果在 Windows 系统上配置，基本流程一致，只是环境变量的�
 
 ![](../../en/installation/Android-terminal-img/osx-android-sdk-manager.png "")
 
-只需要为你已经安装在系统上的 SDK 版本，安装 _Android SDK Tools_，对于 _Android SDK Platform-Tools_ 推荐更新至最新版本。
+只需要为你已经安装在系统上的 SDK 版本，安装 _Android SDK Tools_，对于 _Android SDK Platform-Tools_ 推荐更新至最新版本。
 
 ![](../../en/installation/Android-terminal-img/osx-android-sdk-manager-tools.png "")
 
 ## 安装 Cocos2d-x
 
-安装 Cocos2d-x 可能是这个过程中最简单的部分，你可以从 [Cocos2d-x 官网](http://www.cocos.com/download) 下载独立的压缩包，也可以克隆 [GitHub 仓库](https://github.com/cocos2d/cocos2d-x)。不用安装这两个，选择你喜欢的一个。
+安装 Cocos2d-x 可能是这个过程中最简单的部分，你可以从 [Cocos2d-x 官网](http://www.cocos.com/download) 下载独立的压缩包，也可以克隆 [GitHub 仓库](https://github.com/cocos2d/cocos2d-x)。不用安装这两个，选择你喜欢的一个。
 
 ### 下载压缩包
 
@@ -139,7 +139,7 @@ _如果在 Windows 系统上配置，基本流程一致，只是环境变量的�
 
 ### 克隆 GitHub 仓库
 
-使用下面的命令克隆 GitHub 仓库，并进行一些初始化设置。如果你不熟悉 GitHub 的工作流程，建议采取从官网下载压缩包的方式。
+使用下面的命令克隆 GitHub 仓库，并进行一些初始化设置。如果你不熟悉 GitHub 的工作流程，建议采取从官网下载压缩包的方式。
 
 ```sh
 cd <to where you want to clone this repo>
@@ -159,7 +159,7 @@ git submodule update
 
 在开始一个新项目之前，推荐先构建 cpp-tests 测试项目，他能确保你的开发环境已经完全配置好。如果在这个步骤中发生任何错误，请先仔细阅读错误信息，思考一下是否是上述步骤的环境配置存在问题。
 
-查看有哪些 SDK 版本可用，运行：
+查看有哪些 SDK 版本可用，运行：
 
 ```sh
 > android list targets
@@ -177,7 +177,7 @@ git submodule update
 
 ![](../../en/installation/Android-terminal-img/buildsuccess.png "")
 
-## 开始新项目
+## 开始新项目
 
 上面的工作都完成后，就可以开始创建新项目了。创建方法，在：[cocos 命令行工具](../editors_and_tools/cocosCLTool.md)。
 
@@ -189,4 +189,4 @@ git submodule update
 > adb install MyGame-debug.apk
 ```
 
-_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
+_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
