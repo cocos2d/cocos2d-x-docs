@@ -119,6 +119,6 @@
     - [Windows 平台](installation/Windows.md)
 
 - [工具](editors_and_tools/cocosCLTool.md)
-    - [命令行工具](editors_and_tools/cocosCLTool.md)
+    - [cocos 命令行工具](editors_and_tools/cocosCLTool.md)
     - [Creator to Cocos2d-x TODO](editors_and_tools/creator_to_cocos2dx.md)
     - [静态库](editors_and_tools/prebuilt_libraries.md)

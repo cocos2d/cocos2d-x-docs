@@ -1,22 +1,16 @@
 # 搭建开发环境 - Android 命令行
 
-## 已弃用的文档
+## 背景
 
-由于 Google 自 2015 年底已中止了对 ADT 的支持，推荐开发者使用 Android Studio，同时 Android Studio 的功能也已日趋完善，足够我们使用它完成 Cocos2d-x 项目的全部开发流程：编码、编译、调试、发布。因此在 3.16 版本我们不再支持使用 ADT 进行 Cocos2d-x 项目开发。
+由于 Google 自 2015 年底已中止了对 ADT 的支持，希望开发者转向 Android Studio。同时 Android Studio 的功能也已日趋完善，足够我们使用它完成 Cocos2d-x 项目的全部开发流程：编码、编译、调试、发布。因此在 3.16 版本我们不再支持 ADT。
 
-如果你是一个新手，请使用 [Android Studio](Android-Studio.md) 进行 Cocos2d-x 的环境搭建。如果明确有对老版本引擎的 Android 环境搭建需求，请继续。
+如果你是一个新手，请使用 [Android Studio](Android-Studio.md) 进行 Cocos2d-x 的环境搭建。如果明确有对老版本引擎的 Android 环境搭建需求，并且老版本不支持 [Android Studio](Android-Studio.md) 那请继续阅读。
 
-_本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
+_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
 
-## Starting decisions
-Android development is a complicated beast. Not only are there several development
-environment options, each also requires several dependencies. These all need to be
-working before you can attempt to build a Cocos2d-x project. Read these steps __a few__
-times and take a few minutes to think about what workflow best suites you.
+## 工具准备
 
-## Prerequisites
-Before we even talk about Cocos2d-x specific tasks, you need a working Android
-environment. This includes:
+在正式开始搭建 Cocos2d-x 开发环境之前，你需要一个可用的 Android 开发环境。这包括
 
 * JDK/SDK 1.6+ [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
@@ -24,106 +18,75 @@ environment. This includes:
 
 * Apache Ant [http://ant.apache.org/bindownload.cgi](http://ant.apache.org/bindownload.cgi)
 
-* Python 2.7.5 [https://www.python.org/downloads/](https://www.python.org/downloads/) __NOT PYTHON 3__
+* Python 2.7.X [https://www.python.org/downloads/](https://www.python.org/downloads/) _不是 PYTHON 3_
 
-Your system may already have some of these items. Download the items that you need
-to inorder to have a complete environment. Nothing on this list can be missing.
+你的操作系统可能已经包含其中一些了，请下载缺失的组件。
 
-## macOS Instructions
+## macOS 配置
 
 ### Python
-macOS systems come with __Python__ installed by default. Verify that your system
-has __Python__ and ensusre that it is a version __less than 3__. From *Terminal.app*
-or *iTerm 2* execute the following:
+
+macOS 系统默认安装了 Python，请在终端中输入以下命令，验证 Python 是否工作。
+
 ```sh
 > python --version
 ```
 
-If you see output, such as:
+如果有类似下面的输出，版本号是 2.7.X，证明 Python 环境是好的。
+
 ```sh
 Python 2.7.10
 ```
 
-You are good to go. If you see anything else you may need to install Python.
-Use the link above. __You cannot move on in this document until this step is working.__
+如果是找不到命令，请使用工具准备中提到的链接，安装一个 2.7.X 新版本的 Python，注意不要安装 Python 3.X 的版本。
 
 ### JAVA
-macOS systems usually *do not* come with JAVA installed. It is necessary to download and
-install it using the link above. Make sure that you install the __JDK__. It is not enough
-to just install the __JRE__.
 
-![](Android-terminal-img/osx-java.png "")
+macOS 系统默认是不安装 Java 的，所以你需要手动下载 Java，注意要下载 JDK，而不是 JRE。
 
-Once installed, it is necessary to set __JAVA\_HOME__ in your __.bash\_profile__. Example:
+![](../../en/installation/Android-terminal-img/osx-java.png "")
+
+下载安装完成后，在终端中输入以下命令验证 Java 环境是否自动配置好。
+
 ```sh
-export JAVA_HOME=$"(/usr/libexec/java_home -v 1.8)"
+> java -version
 ```
 
-Once you are done with this step, __re-source__ your __.bash\_profile__: `source ~/.bash_profile`.
-Now you can test that __JAVA__ is available on your system:
-```sh
-> java -v
-```
+如果可以看到类似下面的输出，则证明环境是好的，
 
-You should see some version info as output. Example:
 ```sh
 java version "1.8.0_111"
 Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
 Java HotSpot(TM) 64-Bit Server VM (build 25.111-b14, mixed mode)
 ```
 
-If you see any of the following types of errors, the __JDK__ is either not installed
-or is not accessible. Verify you have set __JAVA\_HOME__. Example errors:
-```sh
-Unable to find any JVMs matching version "(null)".
-Matching Java Virtual Machines (0):
-
-No Java runtime present, requesting install.
-
-Unable to find any JVMs matching version "(null)".
-No Java runtime present, try --request to install.
-```
-
-If you are unsure, you can always execute `/usr/libexec/java_home -V` for a listing
-of __JAVA JDKs__ on your system. Example:
-```sh
-> usr/libexec/java_home -V
-Matching Java Virtual Machines (1):
-    1.8.0_111, x86_64:	"Java SE 8"	/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
-
-/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
-```
+如果命令不可用，请自行配置环境变量，配置完后通过 `java -version` 验证环境是否配置成功。
 
 ### Apache Ant
-__Apache Ant__ is another required tool. It is not installed on an OSX system by
-default. It is neccessary to download it using the link above. Using a __binary__
-distribution is fine. There is no need to download the source and compile by hand
-unless this is your preferred method.
 
-After downloading, unzip the __Apache Ant__ archive. You only need to place the
-__Apache Ant__ folder someplace in your __$PATH__ and then set an __$ANT\_ROOT__
-environment variable in your __.bash\_profile__. Exactly the same way __$JAVA\_HOME__
-was added above. Example, if your __Apache ANT__ folder is named __apache-ant-1.10.0__:
+__Apache Ant__ 是另一个需要的工具，默认没有安装在 OS X 系统上。请使用工具准备中提到的链接下载，建议直接下载二进制版本。
+
+下载后解压缩，在 _.bash\_profile_ 中添加一个 _ANT\_ROOT_ 的环境变量，变量值是 _Apache Ant_ 目录下 bin 子目录的路径，然后将该变量添加到 PATH 中。像这样：
+
 ```sh
 export ANT_ROOT=/Applications/Cocos/tools/ant/bin
 export PATH=$ANT_ROOT:$PATH
 ```
 
-### Android NDK and SDK
-Obviously, you need the __Android NDK and SDK__ to do Android development. These
-are not installed on an OSX system by default. It is neccessary to download it
-using the link above.
+### Android NDK 和 SDK
 
-#### Brew
-Using [__brew__](http://brew.sh/) is one option for installing the __Android NDK and SDK__.
-Installing with __brew__ makes the installation simple. A single command, a few
-environment variables and you are done. Example:
+显然，进行 Android 开发需要 Android SDK 和 NDK，这两个默认都未安装在 OS X 系统上，你可以使用工具准备中提到的链接进行下载。也有另外一种方式使用 _brew_ 包管理器。
+
+#### 通过 Brew 安装
+
+使用 [__brew__](http://brew.sh/) 安装 NDK 和 SDK 是一种更简单的方式，一个命令，几个环境变量就 OK。这样操作：
+
 ```sh
 brew install android-ndk android-sdk
 ```
 
-This will take a while to complete. Once it is done, you need to set a few
-envorinment variables in your __.bash_profile__.
+下载和安装过程会需要一点时间，完成后，你需要在 _.bash_profile_ 设置一些环境变量：
+
 ```sh
 export NDK_ROOT=/usr/local/Cellar/android-ndk/r12b
 export PATH=$NDK_ROOT:$PATH
@@ -133,13 +96,12 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 ```
 
-Make sure to re-source your __.bash_profile__!
+设置完成后，记得执行 `source ~/.bash_profile` 使环境变量生效。
 
-#### Installing manually.
-If you choose not to use __brew__ you can still download and install the
-__Android NDK and SDK__ by hand. After downloading, set the same environment
-variables as above, but using your custom paths. For example, if you downloaded
-the __Android NDK and SDK__ to __~/Projects/__:
+#### 手动安装
+
+如果你选择不使用 _brew_，那就手动下载安装。环境变量的设置与上面的基本相同，假设你将 SDK 和 NDK 下载到了 _~/Projects/_ 目录，设置的环境变量就类似这样：
+
 ```sh
 export NDK_ROOT=/Users/username/Projects/android-ndk/r12b
 export PATH=$NDK_ROOT:$PATH
@@ -149,43 +111,38 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 ```
 
-#### Installing additional Android SDKs
-Depending upon what Android OS versions you wish to target, you may need to
-install additional __Android SDKs__ to cover those OS versions. As __Android SDKs__
-evolve, sometimes older OS suppot is dropped. This means that your game might
-not be able to target older devices. This is a personal decision on the part of
-the game developer.
+_如果在 Windows 系统上配置，基本流程一致，只是环境变量的配置方式略有区别。_
 
-If you wish to install additional __Android SDKs__, use the built in __android__
-GUI tool to install whatever you need. Example:
+#### 安装额外的 SDK
+
+不同的 SDK 对应不同的 Android 操作系统，如果你需要测试应用在不同版本上的适用性，就需要下载不同的 SDK。随着 Android 的发展，一些旧有的系统版本已经被弃用，这意味着你无须下载特别旧的 SDK。支持哪些版本，不支持哪些版本，由你来决定。
+
+如果你希望安装额外的 SDK，可以使用内置的 Android 界面工具，使用下面的命令打开工具。
+
 ```sh
 > android
 ```
 
-![](Android-terminal-img/osx-android-sdk-manager.png "")
+![](../../en/installation/Android-terminal-img/osx-android-sdk-manager.png "")
 
-It is only necessary to install the __Android SDK Tools__ for each release you
-want installed on your system. It is always a good idea to update the __Android SDK Platform-Tools__
-when a new version becomes available.
+只需要为你已经安装在系统上的 SDK 版本，安装 _Android SDK Tools_，对于 _Android SDK Platform-Tools_ 推荐更新至最新版本。
 
-![](Android-terminal-img/osx-android-sdk-manager-tools.png "")
+![](../../en/installation/Android-terminal-img/osx-android-sdk-manager-tools.png "")
 
-### Cocos2d-x
-Installing __Cocos2d-x__ is probably the easiest part of this process. You can
-get started with __Cocos2d-x__ by either downloading a self-contained
-__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our
-[GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
-__There is no need to do both.__
+## 安装 Cocos2d-x
 
-#### By downloading a .zip archive
-Download Cocos2d-x and unzip it. (maybe: __~/__ or __~/Projects__ )
+安装 Cocos2d-x 可能是这个过程中最简单的部分，你可以从 [Cocos2d-x 官网](http://www.cocos.com/download) 下载独立的压缩包，也可以克隆 [GitHub 仓库](https://github.com/cocos2d/cocos2d-x)。不用安装这两个，选择你喜欢的一个。
 
-![](Android-terminal-img/unzip.png "")
+### 下载压缩包
 
-#### Cloning from GitHub
-Use the following commands to clone our GitHub repo and get your environment setup.
-If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download
-using the step above, __By downloading a .zip archive__.
+从官网下载压缩包，然后解压。
+
+![](../../en/installation/Android-terminal-img/unzip.png "")
+
+### 克隆 GitHub 仓库
+
+使用下面的命令克隆 GitHub 仓库，并进行一些初始化设置。如果你不熟悉 GitHub 的工作流程，建议采取从官网下载压缩包的方式。
+
 ```sh
 cd <to where you want to clone this repo>
 
@@ -198,42 +155,38 @@ git submodule update
 ./download-deps.py
 ```
 
-### Making sure you are ready to create the next hit game!
-Next, you are ready to build __cpp-tests__. It is a good idea to perform this
-step before starting a new project. It ensures that your environment is setup
-completely. If anything fails during this step, it is important to read the
-error message carefully and re-visit the step above that is related to the
-error message you see.
+之前不熟悉 GitHub，可以从 [这个地方](https://guides.github.com/activities/hello-world/) 学习后，再从 GitHub 克隆。
 
-Change your directory to the where the __android-build.py__ script is located.
-(usually __Cocos2d-x/build__). To see what targets are available. run:
+## 开发环境验证
+
+在开始一个新项目之前，推荐先构建 cpp-tests 测试项目，他能确保你的开发环境已经完全配置好。如果在这个步骤中发生任何错误，请先仔细阅读错误信息，思考一下是否是上述步骤的环境配置存在问题。
+
+查看有哪些 SDK 版本可用，运行：
+
 ```sh
 > android list targets
 ```
 
-![](Android-terminal-img/osx-android-list-targets.png "")
+![](../../en/installation/Android-terminal-img/osx-android-list-targets.png "")
 
-Now you can execute the command to build:
+在终端中，将目录调整为 _android-build.py_ 脚本的位置，这个脚本通常在引擎根目录 _build_ 子目录下。运行：
+
 ```sh
-> python android-build.py -p <target # from above> cpp-tests
+> python android-build.py -p <target from above> cpp-tests
 ```
 
-Everything should build successfully!
+`<target from above>` 使用一个版本号代替，如：22。构建成功，证明环境配置没问题。
 
-![](Android-terminal-img/buildsuccess.png "")
+![](../../en/installation/Android-terminal-img/buildsuccess.png "")
 
-## Starting a new project
-Once everything above works, you can start a new project! To do this, read our
-document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**.
+## 开始新项目
 
-## How to deploy it on your Android phone via command line
+上面的工作都完成后，就可以开始创建新项目了。创建方法，在：[cocos 命令行工具](../editors_and_tools/cocosCLTool.md)。
 
-Enable **[USB Debugging](http://stackoverflow.com/questions/16707137/how-to-find-and-turn-on-usb-debugging-mode-on-nexus-4)**
-on your phone and then connect your phone via USB.
+## 安装应用到手机
 
-Change your directory to the the **bin** directory of your android project
+在手机上开启 [USB 调试](http://stackoverflow.com/questions/16707137/how-to-find-and-turn-on-usb-debugging-mode-on-nexus-4)，然后通过 USB 连接手机，在终端中调整目录到 Android 项目的 bin 目录，运行下面的命令，即可将 _apk_ 安装到你的 Android 手机：
 
-Use `adb` to install the __.apk__ to your Android phone by executing:
 ```sh
 > adb install MyGame-debug.apk
 ```
