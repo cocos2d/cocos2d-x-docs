@@ -163,7 +163,7 @@ Cocos2d-x 的材质文件使用一种优化过的文件格式，同时与其它�
 注意点：
 
 - 材质文件的扩展名无关紧要，建议使用 _.material_ 作为扩展名
-- 顶点着色器和像素着色器的文件扩展名也无关紧要，建议使用 _.vert_ 和 _.frag_
+- 顶点着色器和像素着色器的文件扩展名也无关紧要，建议使用 _.vert_ 和 _.frag_
 - _id_ 是材质(Meterial)，渲染方法(technique)，通道(pass)的可选属性
 - 材质可以通过设置 _parent_material_id_ 继承其它材质的值
 
@@ -621,7 +621,7 @@ __数据类型__:
 
 ### 预定义的 uniform 变量
 
-下面是 Cocos2d-x 预定义的一些 uniform 变量，你可以在自定义的着色器中使用它们。
+下面是 Cocos2d-x 预定义的一些 uniform 变量，你可以在自定义的着色器中使用它们。
 
 * `CC_PMatrix`: A `mat4` with the projection matrix
 * `CC_MVMatrix`: A `mat4` with the Model View matrix
