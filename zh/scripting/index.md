@@ -265,11 +265,11 @@ Consider this code:
 ```cpp
 // CustomClass.h
 
-# ifndef __CUSTOM__CLASS
+#ifndef __CUSTOM__CLASS
 
-# define __CUSTOM__CLASS
+#define __CUSTOM__CLASS
 
-# include "cocos2d.h"
+#include "cocos2d.h"
 
 namespace cocos2d {
 class CustomClass : public cocos2d::Ref
@@ -288,7 +288,7 @@ public:
 };
 } //namespace cocos2d
 
-# endif // __CUSTOM__CLASS
+#endif // __CUSTOM__CLASS
 ```
 
 Note:
@@ -591,7 +591,7 @@ of the frame.
 
 In `CCRef.h` we see the usage of `CC_ENABLE_SCRIPT_BINDING`:
 ```cpp
-# if CC_ENABLE_SCRIPT_BINDING
+#if CC_ENABLE_SCRIPT_BINDING
 public:
     /// object id, ScriptSupport need public _ID
     unsigned int        _ID;
@@ -599,7 +599,7 @@ public:
     int                 _luaID;
     /// scriptObject, support for swift
     void* _scriptObject;
-# endif
+#endif
 ```
 Notice `_ID` and `_luaID`, are very important when you push a `Ref` object to lua
 by calling `toluafix_pushusertype_ccobject` to store a key-value table named
@@ -723,7 +723,7 @@ void tolua_pushusertype_internal (lua_State* L, void* value, const char* type,
 # ifdef LUA_VERSION_NUM
             lua_pushvalue(L, TOLUA_NOPEER); /* stack: mt newud peer */
             lua_setfenv(L, -2); /* stack: mt newud */
-# endif
+#endif
         }
         else
         {
@@ -795,14 +795,14 @@ When calling the desturctor of `Ref`, it will trigger the release of the userdat
 
 In the destructor of Ref, we can see:
 ```cpp
-# if CC_ENABLE_SCRIPT_BINDING
+#if CC_ENABLE_SCRIPT_BINDING
     // if the object is referenced by Lua engine, remove it
     if (_luaID)
     {
         ScriptEngineManager::getInstance()->getScriptEngine()->removeScriptObjectByObject(this);
     }
     ...
-# endif
+#endif
 ```
 After we push a c++ object to lua, the related _luaID would be not 0. We now can
 call `removeScriptObjectByObject`

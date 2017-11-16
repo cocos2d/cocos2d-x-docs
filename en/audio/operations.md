@@ -4,7 +4,7 @@ stop or resume after certain operations. This can be done easily.
 
 ### Pause
 {% codetabs name="C++", type="cpp" -%}
-# include "SimpleAudioEngine.h"
+#include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
 auto audio = SimpleAudioEngine::getInstance();
@@ -21,7 +21,7 @@ audio->pauseAllEffects();
 
 ### Stop
 {% codetabs name="C++", type="cpp" -%}
-# include "SimpleAudioEngine.h"
+#include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
 auto audio = SimpleAudioEngine::getInstance();
@@ -38,7 +38,7 @@ audio->stopAllEffects();
 
 ### Resume
 {% codetabs name="C++", type="cpp" -%}
-# include "SimpleAudioEngine.h"
+#include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
 auto audio = SimpleAudioEngine::getInstance();

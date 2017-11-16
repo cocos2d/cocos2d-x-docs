@@ -5,7 +5,7 @@ A `TextField` widget is used for inputting text. It supports touch event, focus,
 percent positioning and percent content size. To create a `TextField` widget:
 
 {% codetabs name="C++", type="cpp" -%}
-# include "ui/CocosGUI.h"
+#include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
 
@@ -24,7 +24,7 @@ characters a user can input? `TextField` objects have this all built-it and much
 more! Let's take a look at an example:
 
 {% codetabs name="C++", type="cpp" -%}
-# include "ui/CocosGUI.h"
+#include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
 

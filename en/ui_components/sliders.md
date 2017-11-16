@@ -4,7 +4,7 @@ and you want to allow the player to adjust the strength of attacking an enemy.
 A `Slider` allows users to set a value by moving an indicator. To create a `Slider`:
 
 {% codetabs name="C++", type="cpp" -%}
-# include "ui/CocosGUI.h"
+#include "ui/CocosGUI.h"
 
 auto slider = Slider::create();
 slider->loadBarTexture("Slider_Back.png"); // what the slider looks like

@@ -1,70 +1,34 @@
-# Cocos Documentation User Manual
+# Cocos2d-x 中文文档
 
-## Requirements
+## 环境准备
 
-This documentation site is powered by [GitBook](https://www.gitbook.com/). You can check out the online version [here](zzz).
+进行文档开发，需要先准备 GitBook 环境：
 
-You need [Node.js](https://nodejs.org/en/) and npm to be able to build the site.
+1. [Node.js](https://nodejs.org/en/)
+1. [npm](https://www.npmjs.com/) 一般会和 Node.js 一起安装
+1. 安装 gitbook 命令行工具，运行命令 `npm install gitbook-cli -g`
+1. 安装 gitbook，运行命令 `gitbook install`
 
-To install gitbook:
+## 工作流程
 
-```bash
-npm install gitbook-cli -g
-```
+进行正式开发前最好能先熟悉一下 GitBook，流程如下：
 
-Install gitbook plugins:
+- Fork 文档仓库 [cocos2d-x-docs](https://github.com/cocos2d/cocos2d-x-docs)
+- clone 仓库到本地，进行改动
+- 使用 `gitbook serve` 命令测试改动在 GitBook 中的效果
+- 提交 pull request 到 cocos2d/cocos2d-x-docs 仓库
+- 我们会 review 这个 PR，并将内容合并到主仓库
 
-```bash
-gitbook install
-```
+## 注意事项
 
-## Preview and Build
+- 改动中文文档，请将改动限制在 __zh/__ 目录
+- 避免使用过大的图片，过大的图片会造成加载缓慢，甚至加载失败
+- 文档书写规范请参考：[中文文档格式规范](https://github.com/anjuke/coding-style/blob/master/text/chinese.md)
+- 代码块要以一种特殊的方式包裹，可以模仿已有代码块的包裹方式.
+  - 例如 C++ 代码块:
+      ```html
+      {% codetabs name="C++", type="cpp" -%}
+      auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
+      {%- endcodetabs %}
 
-To preview the doc, run the following command in cocos2d-x-docs dictionary:
-
-```bash
-gitbook serve
-```
-
-This will build and launch web server to host the site. It will also enable livereload plugin so your changes to the markdown source file will automatically triggers rebuild of the docs.
-
-If you just want to build the markdown to html, use this command:
-
-```bash
-gitbook build
-```
-
-You can also build the doc for ebook formats (PDF, ePub, mobi), please following this guide:
-
-https://toolchain.gitbook.com/ebook.html
-
-## Content Editing
-
-The markdown source of this book is in language specific folders [/en](en) and [/zh](zh). Language options are registered in [LANGS.md](LANGS.md) file.
-
-### Index
-
-In each language folder there is an [SUMMARY.md](en/SUMMARY.md) file, which contains all the pages to build and also this file serves as a sidebar navigation list. Any markdown source file that are not listed in this index will not be build.
-
-In this index file, just write links to each markdown file in a list. Indented list is for chapters that contains expandable subs. For example:
-
-```md
-- [Using Editor](getting-started/basics/editor-overview.md)
-	- [Assets](getting-started/basics/editor-panels/assets.md)
-	- [Scene](getting-started/basics/editor-panels/scene.md)
-	- [Node Tree](getting-started/basics/editor-panels/node-tree.md)
-```
-
-Will create a toggleable chapter title `Using Editor`. Once clicked all its subs will show up.
-
-### Front page
-
-[index.md](en/index.md) at each language folder is the front page of the doc.
-
-### Page content
-
-To change the content of each page, just edit the markdown source files. There's no specific front matter format, just make sure each page has a `h1` as the title.
-
-## Contribution
-
-If you encounters any typo or content problem please report issue in this repo. Pull requests are welcome!
+文档的开发，Cocos2d-x 开源社区的建设，期待你的加入！
