@@ -153,4 +153,27 @@ For Lua projects there is 2 steps:
     cc.Director:getInstance():replaceScene(scene)
     ```
 
-    
+### How to use ColliderManager
+`ColliderManager` is used to manage collisions. Every `Scene` has an instance of `ColliderManager`. You can use it to listen for collision events:
+
+```c++
+creator::CreatorReader* reader = creator::CreatorReader::createWithFilename("creator/CreatorSprites.ccreator");
+
+// will create the needed spritesheets + design resolution
+reader->setup();
+
+// get the scene graph
+Scene* scene = reader->getSceneGraph();
+
+auto colliderManager = scene->getColliderManager();
+
+colliderManager->registerCollitionCallback([=](creator::Contract::CollisionType type, creator::Collider* collider1, creator::Collider* collider2) {
+        if (type == creator::Contract::CollisionType::ENTER)
+            colliderManager->enableDebugDraw(true);
+
+        if (type == creator::Contract::CollisionType::EXIT)
+            colliderManager->enableDebugDraw(false);
+
+}, "");
+```
+To read about additional features of `ColliderManager`, refer to [the header file](https://github.com/cocos2d/creator_to_cocos2dx/tree/master/creator_project/packages/creator-luacpp-support/reader/collider/ColliderManager.h).
