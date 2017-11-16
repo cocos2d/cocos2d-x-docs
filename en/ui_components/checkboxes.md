@@ -8,7 +8,7 @@ permits the user to make this type of choice. There are 5 different __states__ a
 a `CheckBox`:
 
 {% codetabs name="C++", type="cpp" -%}
-# include "ui/CocosGUI.h"
+#include "ui/CocosGUI.h"
 
 auto checkbox = CheckBox::create("check_box_normal.png",
                                  "check_box_normal_press.png",
