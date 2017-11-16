@@ -36,7 +36,7 @@ When your game starts you might want to pre-load the music and effects so they
 are ready when you need them.
 
 {% codetabs name="C++", type="cpp" -%}
-# include "SimpleAudioEngine.h"
+#include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
 auto audio = SimpleAudioEngine::getInstance();
@@ -60,7 +60,7 @@ audio->unloadEffect("myEffect1.mp3");
 You can increase and decrease the volume of your sounds and music programmatically.
 
 {% codetabs name="C++", type="cpp" -%}
-# include "SimpleAudioEngine.h"
+#include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
 auto audio = SimpleAudioEngine::getInstance();
