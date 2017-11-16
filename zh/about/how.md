@@ -18,7 +18,7 @@
 
 ## 参与引擎开发
 
-使用 Cocos2d-x 的过程中，对于一般的问题，欢迎通过 [论坛](http://forum.cocos.com/c/cocos2d-x) 向我们反馈。对于明确是 BUG 的，请参照下述方法反馈。
+使用 Cocos2d-x 的过程中，对于一般的问题，欢迎通过 [论坛](http://forum.cocos.com/c/cocos2d-x) 向我们反馈。对于明确是 BUG 的，请参照下述方法反馈。
 
 ### 反馈 BUG
 
