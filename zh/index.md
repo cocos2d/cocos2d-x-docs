@@ -4,7 +4,7 @@
 
 ## 致谢
 
- __作者:__ SlackMoehrle, Ricardo, Justin, Nite, Kai, Minggo, Wenhai, Tony, Yingtao, Rao, Huabin, Zhe
+ __作者:__ SlackMoehrle, Ricardo, Justin, Nite, Kai, Minggo, Wenhai, Tony, Yingtao, Rao, Huabin, Zhe, Chengzhe
 
 __CSS 改进:__ Nico
 
@@ -12,6 +12,8 @@ __文档贡献:__ stevetranby, Maxxx, smitpatel88, IQD, Michael, Meir_yanovich, 
 
 __特别感谢:__ cocos2d-x的所有用户，是你们让这个文档有了存在的意义
 
-欢迎大家到 [GitHub](https://github.com/cocos2d/cocos2d-x-docs) 对文档进行反馈，在 Gitbook 中可以直接点击右下角 `Have Feedback` 跳转。
+### 注：
+
+本文档主要翻译自英文文档，同时参考了旧有的 cocos2d-x 中文文档。由于引擎内容较多，逻辑较复杂，文档可能的会存在一些不完善之处。在您阅读的过程中，如果发现了疑似错误的地方，欢迎通过 [论坛](http://forum.cocos.com/c/cocos2d-x)，或直接点击右下角 __Have Feedback__ 向我们反馈。
 
 文档示例程序请到 [GitHub](https://github.com/chukong/programmers-guide-samples) 下载
