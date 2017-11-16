@@ -53,8 +53,104 @@ To run the plugin:
     source code: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader__
     resources: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator__
 
-### Exporting A Scene To Source Code
+### Moving from Creator to an external build system
+After using the __Build__ function the source code and resources are exported to the filesystem. From here, you can use these items in an external build system.
 
+#### Header and Include search paths
+It is still necessary to set some __header__ and __include__ __search paths__.
 
+  For C++:
+    ```sh
+    reader
+    ```
+  For Lua:
+    ```sh
+    reader
+    reader/collider
+    reader/animation
+    reader/dragonbones/cocos2dx
+    reader/dragonbones/armature
+    reader/dragonbones/animation
+    reader/dragonbones/events
+    reader/dragonbones/factories
+    reader/dragonbones/core
+    reader/dragonbones/geom
+    ```
 
-###
+#### Android
+When developing for Android the __Android.mk__ needs to be modified. There are a few simple lines to add,
+
+  For C++:
+    ```sh
+    LOCAL_STATIC_LIBRARIES += creator_reader
+
+    # _COCOS_LIB_ANDROID_BEGIN
+    # _COCOS_LIB_ANDROID_END
+
+    $(call import-module, ./../../Classes/reader)  # import module path
+    ```
+
+  For Lua:
+    ```sh
+    # for lua
+    include $(CLEAR_VARS)
+    LOCAL_MODULE := creator_reader_lua
+    LOCAL_MODULE_FILENAME := libcreatorreaderlua
+    LOCAL_ARM_MODE := arm
+    LOCAL_SRC_FILES := $(cpp_src) \
+    lua-bindings/creator_reader_bindings.cpp \
+    lua-bindings/reader/lua_creator_reader_auto.cpp \
+    lua-bindings/reader/lua_creator_reader_manual.cpp \
+    lua-bindings/dragonbones/lua_dragonbones_manual.cpp \
+    lua-bindings/dragonbones/lua_dragonbones_auto.cpp
+
+    LOCAL_STATIC_LIBRARIES += creator_reader_lua
+
+    # _COCOS_LIB_ANDROID_BEGIN
+    # _COCOS_LIB_ANDROID_END
+
+    $(call import-module, ./../../Classes/reader)
+    ```
+
+### Example Usage
+Once everything is done, you can add code to tie everything together. It's elegant and simple:
+
+For C++ projects:
+```cpp
+// mygame.cpp
+#include "reader/CreatorReader.h"
+
+void some_function()
+{
+    creator::CreatorReader* reader = creator::CreatorReader::createWithFilename("creator/CreatorSprites.ccreator");
+
+    // will create the needed spritesheets + design resolution
+    reader->setup();
+
+    // get the scene graph
+    Scene* scene = reader->getSceneGraph();
+
+    // ...and use it
+    Director::getInstance()->replaceScene(scene);
+}
+```
+
+For Lua projects there is 2 steps:
+  * register the creator reader bindings
+    ```cpp
+    #include "reader/lua-bindings/creator_reader_bindings.hpp"
+
+    ...
+
+    register_creator_reader_manual(L);
+    ```
+
+  * add code to access the exported files.
+    ```lua
+    local creatorReader = cc.CreatorReader:createWithFilename('creator/CreatorSprites.ccreator')
+    creatorReader:setup()
+    local scene = creatorReader:getSceneGraph()
+    cc.Director:getInstance():replaceScene(scene)
+    ```
+
+    
