@@ -134,7 +134,7 @@ mySprite.runAction(fadeOut);
 
 ![](../../en/actions/actions-img/i2.png "")
 
-## 色彩
+## 色彩混合
 
 使用 `TintTo` `TintBy`，将一个实现了 `NodeRGB` 协议的节点对象进行色彩混合。
 
@@ -162,7 +162,7 @@ mySprite.runAction(tintBy);
 
 ![](../../en/actions/actions-img/i5.png "")
 
-## 动画
+## 帧动画
 
 使用 `Animate` 对象可以很容易的通过每隔一个短暂时间进行图像替代的方式，实现一个翻页效果。下面是一个例子：
 
