@@ -22,27 +22,22 @@ Adding C++ and Lua language support to __Cocos Creator__ is easy:
 
     ![](creator_to_cocos2dx-img/folder_structure.png "directory structure")
 
-  In the __Project__ menu inside __Creator__ a new menu option will appear
-  __LuaCPP Support__.
+    In the __Project__ menu inside __Creator__ a new menu option will appear __LuaCPP Support__.
 
     ![](creator_to_cocos2dx-img/project_menu.png "project menu")
 
 ### Plugin Setup
 To run the plugin:
 
-* select __Project__ -> __LuaCPP Support__ -> __Setup Target Project__.
+* select __Project__ -> __LuaCPP Support__ -> __Setup Target Project__. It is required to tell __Cocos Creator__ where to build all the necessary files.
 
-  ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
-
-  It is required to tell __Cocos Creator__ where to build all the necessary files.
+    ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
 
 * select __Build__.
 
-  ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
-
 * use the resulting dialog box to set the build options that you need.
 
-  ![](creator_to_cocos2dx-img/build_dialog.png "build options")
+    ![](creator_to_cocos2dx-img/build_dialog.png "build options")
 
 * always use the __Build__ button to build your project before running it. The result is all the needed code and resources to drop into your external build system.
 
@@ -116,7 +111,7 @@ When developing for Android the __Android.mk__ needs to be modified. There are a
 ### Example Usage
 Once everything is done, you can add code to tie everything together. It's elegant and simple:
 
-For C++ projects:
+For C++ projects, just 1 step:
 ```cpp
 // mygame.cpp
 #include "reader/CreatorReader.h"
@@ -136,7 +131,7 @@ void some_function()
 }
 ```
 
-For Lua projects there is 2 steps:
+For Lua projects, require 2 steps:
 
   * register the creator reader bindings
     ```cpp
