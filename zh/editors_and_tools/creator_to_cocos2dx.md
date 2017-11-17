@@ -1,10 +1,17 @@
-## Using Cocos Creator With C++ and Lua Projects
-__Cocos Creator__ supports JavaScript, built in. Edit your `Scenes` and source code all from within. However, If you are a C++ or Lua developer, __Creator__ allows exporting of `Scenes` to sour code for further development. Why isn't C++ built in, you ask? There is no need to re-invent the wheel. There are many really good development environments out there. Writing a text editor is no trivial task. For this reason, it is best to allow developers to edit source code in the editor of their choice.
+# creator_to_cocos2dx 插件
 
-### What Is Supported?
+__Cocos Creator__ supports JavaScript, built in. Edit your `Scenes` and source code all from within. However, If you are a C++ or Lua developer, __Cocos Creator__ allows exporting of `Scenes` to sour code for further development. Why isn't C++ built in, you ask? There is no need to re-invent the wheel. There are many really good development environments out there. Writing a text editor is no trivial task. For this reason, it is best to allow developers to edit source code in the editor of their choice.
+
+__Cocos Creator__ 可以很高效的编辑场景和 UI，同时内置支持 JavaScript，这对 JavaScript 开发者十分友好。
+
+可是对于 C++ 和 Lua 开发者，无法直接利用 Creator 高效的界面编辑功能，的确是有一些遗憾。为了去除这种遗憾，我们提供了 __creator_to_cocos2dx__ 插件，它允许开发者导出 Creator 编辑的场景到 Cocos2d-x 的 C++/Lua 工程中。
+
+## 特性
+
 __Cocos2d-x v3.14__ and __Cocos Creator v1.4__ and above are required. If you find some `Nodes` are not supported, upgrading __Cocos2d-x__ and __Cocos Creator__ may add support for them.
 
 The following `Nodes` are supported.
+
 Node | Node | Node | Node | Node
 --- | --- | --- | --- | ---
 Scene | Sprite | Canvas | ScrollView | Label
@@ -13,7 +20,8 @@ RichText | SpineSkeleton | Widget | Animations | VideoPlayer
 WebView | Slider | Toggle | ToggleGroup | PageView
 Mask | Collider | Prefab | DragonBones
 
-### Installing The Plugin
+## 安装配置
+
 Adding C++ and Lua language support to __Cocos Creator__ is easy:
 
 * clone the [Creator To Cocos2d-x repo](https://github.com/cocos2d/creator_to_cocos2dx).
@@ -21,27 +29,23 @@ Adding C++ and Lua language support to __Cocos Creator__ is easy:
 
     ![](creator_to_cocos2dx-img/folder_structure.png "directory structure")
 
-  In the __Project__ menu inside __Creator__ a new menu option will appear
-  __LuaCPP Support__.
+    In the __Project__ menu inside __Creator__ a new menu option will appear __LuaCPP Support__.
 
     ![](creator_to_cocos2dx-img/project_menu.png "project menu")
 
-### Plugin Setup
+## Creator 场景导出
+
 To run the plugin:
 
-* select __Project__ -> __LuaCPP Support__ -> __Setup Target Project__.
+* select __Project__ -> __LuaCPP Support__ -> __Setup Target Project__. It is required to tell __Cocos Creator__ where to build all the necessary files.
 
-  ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
-
-  It is required to tell __Cocos Creator__ where to build all the necessary files.
+    ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
 
 * select __Build__.
 
-  ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
-
 * use the resulting dialog box to set the build options that you need.
 
-  ![](creator_to_cocos2dx-img/build_dialog.png "build options")
+    ![](creator_to_cocos2dx-img/build_dialog.png "build options")
 
 * always use the __Build__ button to build your project before running it. The result is all the needed code and resources to drop into your external build system.
 
@@ -53,10 +57,12 @@ To run the plugin:
     source code: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader__
     resources: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator__
 
-### Moving from Creator to an external build system
+## 场景导入 Cocos2d-x 项目
+
 After using the __Build__ function the source code and resources are exported to the filesystem. From here, you can use these items in an external build system.
 
-#### Header and Include search paths
+### 增加头文件搜索路径
+
 It is still necessary to set some __header__ and __include__ __search paths__.
 
   For C++:
@@ -77,7 +83,8 @@ It is still necessary to set some __header__ and __include__ __search paths__.
     reader/dragonbones/geom
     ```
 
-#### Android
+#### Android 项目的特殊处理
+
 When developing for Android the __Android.mk__ needs to be modified. There are a few simple lines to add,
 
   For C++:
@@ -112,10 +119,11 @@ When developing for Android the __Android.mk__ needs to be modified. There are a
     $(call import-module, ./../../Classes/reader)
     ```
 
-### Example Usage
+## 导入场景的使用
+
 Once everything is done, you can add code to tie everything together. It's elegant and simple:
 
-For C++ projects:
+For C++ projects, just 1 step:
 ```cpp
 // mygame.cpp
 #include "reader/CreatorReader.h"
@@ -135,7 +143,8 @@ void some_function()
 }
 ```
 
-For Lua projects there is 2 steps:
+For Lua projects, require 2 steps:
+
   * register the creator reader bindings
     ```cpp
     #include "reader/lua-bindings/creator_reader_bindings.hpp"
@@ -153,7 +162,8 @@ For Lua projects there is 2 steps:
     cc.Director:getInstance():replaceScene(scene)
     ```
 
-### How to use ColliderManager
+### 监控碰撞
+
 `ColliderManager` is used to manage collisions. Every `Scene` has an instance of `ColliderManager`. You can use it to listen for collision events:
 
 ```c++
