@@ -6,13 +6,12 @@
 
 - Fork 文档仓库 [cocos2d-x-docs](https://github.com/cocos2d/cocos2d-x-docs)
 - __en/__ 目录对应英文文档, __zh/__ 目录对应中文文档。
-- 代码块要以一种特殊的方式包裹:
-  - 例如 C++ 代码块:
-    - 包裹方法：
+- 代码块要以一种特殊的方式包裹，例如 C++ 代码块:
+  - 包裹方法：
 
       ![](res/codeblock.png "")
 
-    - 发布效果：
+  - 发布效果：
 
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
