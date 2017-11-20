@@ -11,7 +11,7 @@
 
       ![](res/codeblock.png "")
 
-  - 发布效果：
+  - 最终效果：
 
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
