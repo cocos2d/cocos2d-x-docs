@@ -16,8 +16,8 @@
       ![](res/codeblock.png "")
 
 - 使用 `gitbook serve` 命令测试改动在 GitBook 中的效果
-- 提交 *pull request* 到 cocos2d/cocos2d-x-docs 仓库
-- 我们会 _review_ 这个 *pull request* 并 *merge*
+- 提交 pull request 到 cocos2d/cocos2d-x-docs 仓库
+- 我们会 review 这个 pull request 并 merge
 
 ## 参与引擎开发
 
@@ -41,8 +41,7 @@
 
 Cocos2d-x 在 GitHub 开源，你可以通过下面的方式贡献自己的代码，成为 Cocos2d-x 的贡献者。
 
-- 学会使用 Git 和 GitHub
-- 从 GitHub 下载最新的开发分支到本地
+- 从 GitHub 克隆最新的开发分支到本地
 
 ```bash
 git clone git://github.com/cocos2d/cocos2d-x.git
