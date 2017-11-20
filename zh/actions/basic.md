@@ -218,7 +218,7 @@ var animate = new cc.Animate(animation);
 mySprite.runAction(cc.RepeatForever(animate));
 {%- endcodetabs %}
 
-## 变速
+## 变速运动
 
 变速动作可以让节点对象具有加速度，产生平滑同时相对复杂的动作，所以可以用变速动作来模仿一些物理运动，这样比实际使用物理引擎的性能消耗低，使用起来也简单。当然你也可以将变速动作应用到动画菜单和按钮上，实现你想要的效果。
 
@@ -251,4 +251,4 @@ mySprite->runAction(RepeatForever::create(seq1));
 
 复杂的动作很难在这样的文本里表示，要是看效果的话最好去运行一下本指南的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16)，或者运行引擎代码的测试项目 `cpp-tests`，在子菜单 `3:Actions - Basic` 中有基本的动作效果展示。
 
- _运行测试项目的方法，参考本文档的 [环境搭建](../installation/index.md) 章节_ .
+ > _运行测试项目的方法，参考本文档的 [环境搭建](../installation/index.md) 章节_ .
