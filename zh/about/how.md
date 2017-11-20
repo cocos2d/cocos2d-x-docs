@@ -8,12 +8,15 @@
 - __en/__ 目录对应英文文档, __zh/__ 目录对应中文文档。
 - 代码块要以一种特殊的方式包裹:
   - 例如 C++ 代码块:
+    - 包裹方法：
+
+      ![](res/codeblock.png "")
+
+    - 发布效果：
 
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
       {%- endcodetabs %}
-
-      ![](res/codeblock.png "")
 
 - 使用 `gitbook serve` 命令测试改动在 GitBook 中的效果
 - 提交 pull request 到 cocos2d/cocos2d-x-docs 仓库
