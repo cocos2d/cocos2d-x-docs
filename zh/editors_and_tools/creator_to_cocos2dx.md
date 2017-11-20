@@ -52,7 +52,7 @@ Mask | Collider | Prefab | DragonBones
     资源： _NATIVE_PROJECT_ROOT/Resources/creator_
 
   * LUA 项目：
-  
+
     源码：_NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader_
     
     资源：_NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator_
@@ -170,7 +170,7 @@ void some_function()
     cc.Director:getInstance():replaceScene(scene)
     ```
 
-### 监控碰撞
+### 如何使用 ColliderManager
 
 我们提供了 `ColliderManager` 对象用于管理碰撞，每个场景都有一个 `ColliderManager` 的实例，你可以使用使用这个实例，监听碰撞事件：
 
