@@ -38,4 +38,4 @@ this->addChild(checkbox);
 
 在屏幕显示的时候，同一个时刻只能看到一个状态，被选中时状态像这样：
 
-![](ui_components-img/Checkbox_example.png "")
+![](../../en/ui_components/ui_components-img/Checkbox_example.png "")

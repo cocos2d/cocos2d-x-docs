@@ -68,14 +68,3 @@ _terrain = Terrain::create(data, Terrain::CrackFixedType::SKIRT);
 ### 获取地形高度
 
 使用方法 `Terrain::getHeight(float x, float z, Vec3 * normal= nullptr)` 可以获取到地形的高度，当你想把一个节点对象放到地形表面的时候，这个方法会非常有用。
-
-### Ray-Terrain intersection test
-
-A __Ray-Terrain__ intersection test will calculate the intersection point by giving
-a specified position.
-
-__Terrain::CrackFixedType::SKIRT__ will generate four skirt-like meshes at each
-chunks edge.
-
-__Terrain::CrackFixedType::INCREASE_LOWER__ will dynamically adjust each chunks
-index to seamlessly connect them.

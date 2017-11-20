@@ -85,7 +85,7 @@ bool onContactBegin(PhysicsContact& contact)
 >- __post-solve__：收到这个事件时两个形状已经接触，并且它们的碰撞已被处理。
 >- __separate__：收到这个事件时两个形状刚刚停止了接触。
 
-你还可以使用 `EventListenerPhysicsContactWithBodies`, 
+你还可以使用 `EventListenerPhysicsContactWithBodies`,
 `EventListenerPhysicsContactWithShapes`, `EventListenerPhysicsContactWithGroup` 来监听你感兴趣的刚体，形状，组的一些事件。额外的，还需要设置与物理碰撞相关的掩码。_注意：默认情况下单单创建事件监听器，是收不到碰撞事件的。_
 
 示例：

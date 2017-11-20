@@ -19,7 +19,7 @@
     - [节点关系](basic_concepts/parent_child.md)
     - [日志输出](basic_concepts/logging.md)
 
-## 基本组件
+## 基本功能
 
 - [精灵(Sprite)](sprites/index.md)
     - [简介](sprites/index.md)
@@ -33,7 +33,7 @@
     - [简介](actions/index.md)
     - [基本动作](actions/basic.md)
     - [动作序列](actions/sequences.md)
-    - [克隆与倒转](actions/sequence_internals.md)
+    - [动作的克隆和倒转](actions/sequence_internals.md)
 
 - [场景(Scene)](scenes/index.md)
     - [简介](scenes/index.md)
@@ -50,13 +50,13 @@
     - [滑动条(Slider)](ui_components/sliders.md)
     - [文本框(TextField)](ui_components/textfields.md)
 
-- [高级节点对象](other_node_types/index.md)
+## 进阶内容
+
+- [特殊节点对象](other_node_types/index.md)
     - [简介](other_node_types/index.md)
     - [瓦片地图](other_node_types/tilemap.md)
     - [粒子系统](other_node_types/particles.md)
     - [视差滚动](other_node_types/parallax.md)
-
-## 高级功能
 
 - [事件分发机制](event_dispatcher/index.md)
     - [简介](event_dispatcher/index.md)
@@ -96,7 +96,7 @@
     - [背景音乐](audio/playing.md)
     - [声音控制](audio/operations.md)
     - [高级功能](audio/advanced.md)
-    - [功能提升 TODO](audio/engines.md)
+    - [Audio Engine TODO](audio/engines.md)
 
 - [高级话题](advanced_topics/index.md)
     - [文件接入](advanced_topics/filesystem.md)
@@ -118,7 +118,7 @@
     - [Linux 平台](installation/Linux.md)
     - [Windows 平台](installation/Windows.md)
 
-- [工具](editors_and_tools/cocosCLTool.md)
+- [引擎工具](editors_and_tools/cocosCLTool.md)
     - [cocos 命令](editors_and_tools/cocosCLTool.md)
-    - [静态库](editors_and_tools/prebuilt_libraries.md)
+    - [静态库的使用](editors_and_tools/prebuilt_libraries.md)
     - [Creator to Cocos2d-x 插件](editors_and_tools/creator_to_cocos2dx.md)

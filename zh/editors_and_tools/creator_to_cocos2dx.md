@@ -48,13 +48,13 @@ Mask | Collider | Prefab | DragonBones
   * C++ 项目：
 
     源码： _NATIVE_PROJECT_ROOT/Classes/reader_
-    
+
     资源： _NATIVE_PROJECT_ROOT/Resources/creator_
 
   * LUA 项目：
 
     源码：_NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader_
-    
+
     资源：_NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator_
 
   > _NATIVE_PROJECT_ROOT 是 Build 时，选择的 Project Path 路径_
@@ -151,7 +151,7 @@ void some_function()
 
 对于 Lua 项目，需要两步：
 
-  * 注册 reader 绑定：
+* 注册 reader 绑定：
 
     ```cpp
     #include "reader/lua-bindings/creator_reader_bindings.hpp"
@@ -161,7 +161,7 @@ void some_function()
     register_creator_reader_manual(L);
     ```
 
-  * 添加代码使用导出的场景：
+* 添加代码使用导出的场景：
 
     ```lua
     local creatorReader = cc.CreatorReader:createWithFilename('creator/CreatorSprites.ccreator')
