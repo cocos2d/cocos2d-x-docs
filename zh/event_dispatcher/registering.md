@@ -34,4 +34,4 @@ _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1->clone(),
 _eventDispatcher->removeEventListener(listener);
 {%- endcodetabs %}
 
-_内置节点对象的事件分发机制，和我们上面讨论的一致，比如，当你点击带有菜单项的菜单时，也会分发一个事件。 同样的你也可以在内置节点对象上使用 `removeEventListener()` 移除事件监听。_
+> _内置节点对象的事件分发机制，和我们上面讨论的一致，比如，当你点击带有菜单项的菜单时，也会分发一个事件。 同样的你也可以在内置节点对象上使用 `removeEventListener()` 移除事件监听。_
