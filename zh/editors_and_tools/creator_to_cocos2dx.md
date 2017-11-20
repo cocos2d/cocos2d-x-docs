@@ -1,16 +1,14 @@
 # creator_to_cocos2dx 插件
 
-__Cocos Creator__ supports JavaScript, built in. Edit your `Scenes` and source code all from within. However, If you are a C++ or Lua developer, __Cocos Creator__ allows exporting of `Scenes` to sour code for further development. Why isn't C++ built in, you ask? There is no need to re-invent the wheel. There are many really good development environments out there. Writing a text editor is no trivial task. For this reason, it is best to allow developers to edit source code in the editor of their choice.
+Cocos Creator 可以很高效的编辑场景和 UI，同时内置支持 JavaScript，这对 JavaScript 开发者十分友好。可是对于 C++/Lua 开发者，无法直接利用 Creator 高效的界面编辑功能，可能是有一些遗憾。
 
-__Cocos Creator__ 可以很高效的编辑场景和 UI，同时内置支持 JavaScript，这对 JavaScript 开发者十分友好。
-
-可是对于 C++ 和 Lua 开发者，无法直接利用 Creator 高效的界面编辑功能，的确是有一些遗憾。为了去除这种遗憾，我们提供了 __creator_to_cocos2dx__ 插件，它允许开发者导出 Creator 编辑的场景到 Cocos2d-x 的 C++/Lua 工程中。
+为了去除这种遗憾，我们提供了 __creator_to_cocos2dx__ 插件，它允许开发者导出 Creator 编辑的场景到 Cocos2d-x 的 C++/Lua 工程中。插件逻辑上分为两部分，第一部分是 Creator 的插件，负责把 Creator 制作的场景导出为 _.ccreator_ 文件；第二部分是负责解析 _.ccreator_ 文件的 reader，负责在 C++/Lua 工程中解析导出的场景文件。
 
 ## 特性
 
-__Cocos2d-x v3.14__ and __Cocos Creator v1.4__ and above are required. If you find some `Nodes` are not supported, upgrading __Cocos2d-x__ and __Cocos Creator__ may add support for them.
+使用插件要求 Cocos2d-x 版本 v3.14+，Creator 版本 v1.4+。
 
-The following `Nodes` are supported.
+Creator 使用基于组件的模型创建对象，而 Cocos2d-x 对每个对象有自己的结构，因此插件只能支持部分 Creator 特性。下面是目前支持的一些 `Node` 类型：
 
 Node | Node | Node | Node | Node
 --- | --- | --- | --- | ---
@@ -20,42 +18,42 @@ RichText | SpineSkeleton | Widget | Animations | VideoPlayer
 WebView | Slider | Toggle | ToggleGroup | PageView
 Mask | Collider | Prefab | DragonBones
 
+如果在使用过程中，发现某些 `Node` 不支持，升级 Cocos2d-x 和 Creator 可能是一个解决办法。
+
 ## 安装配置
 
-Adding C++ and Lua language support to __Cocos Creator__ is easy:
+在 Cocos Creator 中添加 creator_to_cocos2dx 插件：
 
-* clone the [Creator To Cocos2d-x repo](https://github.com/cocos2d/creator_to_cocos2dx).
-* from this repo, copy the __creator_project/packages/creator_luacpp_support__ folder into your __Creator project__ in __packages__. directory
+* 克隆 GitHub 仓库 [Creator To Cocos2d-x](https://github.com/cocos2d/creator_to_cocos2dx).
+* 将插件仓库目录 _creator_project/packages/creator_luacpp_support_ 拷贝到 Creator 项目的 _packages_ 目录
 
-    ![](creator_to_cocos2dx-img/folder_structure.png "directory structure")
+    ![](../../en/editors_and_tools/creator_to_cocos2dx-img/folder_structure.png "directory structure")
 
-    In the __Project__ menu inside __Creator__ a new menu option will appear __LuaCPP Support__.
+* 使用 Creator 打开刚才添加插件的项目，在菜单栏的项目(Project)下，即可看到 `LuaCpp Support` 菜单项。
 
-    ![](creator_to_cocos2dx-img/project_menu.png "project menu")
+    ![](../../en/editors_and_tools/creator_to_cocos2dx-img/project_menu.png "project menu")
 
 ## Creator 场景导出
 
-To run the plugin:
+使用插件进行场景导出：
 
-* select __Project__ -> __LuaCPP Support__ -> __Setup Target Project__. It is required to tell __Cocos Creator__ where to build all the necessary files.
+* 在菜单栏中点击 __项目(Project)__ -> __LuaCPP Support__ -> __Setup Target Project__，出现的对话框中 __Project Path__ 选择目标 Cocos2d-x 工程的路径。
 
-    ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
+    ![](../../en/editors_and_tools/creator_to_cocos2dx-img/dialog_options.png "dialog options")
 
-* select __Build__.
+* 点击 __Build__，构建过程将很快完成
 
-* use the resulting dialog box to set the build options that you need.
+* 在你编译运行 Cocos2d-x 项目前，记得重新 Build。完成 Build 后，导出的 reader 源码和 Creator 资源将位于如下位置：
 
-    ![](creator_to_cocos2dx-img/build_dialog.png "build options")
+  * C++ 项目：
+    源码： __NATIVE_PROJECT_ROOT/Classes/reader__
+    资源： __NATIVE_PROJECT_ROOT/Resources/creator__
 
-* always use the __Build__ button to build your project before running it. The result is all the needed code and resources to drop into your external build system.
+  * LUA 项目：
+    源码：__NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader__
+    资源：__NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator__
 
-  * C++ projects use these paths:
-    source code: __NATIVE_PROJECT_ROOT/Classes/reader__
-    resources: __NATIVE_PROJECT_ROOT/Resources/creator__
-
-  * LUA proojects use these paths:
-    source code: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader__
-    resources: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator__
+  _NATIVE_PROJECT_ROOT 是 Build 时，选择的 Project Path_
 
 ## 场景导入 Cocos2d-x 项目
 
