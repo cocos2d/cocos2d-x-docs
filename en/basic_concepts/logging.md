@@ -29,15 +29,6 @@ if (b == true)
     log("bool is true");
 else
     log("bool is false");
-
-<!--{%- language name="JavaScript", type="js" -%}
-// a simple string
-cc.log("This would be outputted to the console");
-
-// outputting more than a simple string
-var pos = cc._p(sender.x, sender.y);
-cc.log("Position x: " + pos.x + ' y:' + pos.y);-->
-
 {%- endcodetabs %}
 
 And, c++ users, if you prefer you can use __std::cout__ in place of __log()__,

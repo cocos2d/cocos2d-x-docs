@@ -1,10 +1,11 @@
 ## Using Cocos Creator With C++ and Lua Projects
-__Cocos Creator__ supports JavaScript, built in. Edit your `Scenes` and source code all from within. However, If you are a C++ or Lua developer, __Creator__ allows exporting of `Scenes` to sour code for further development. Why isn't C++ built in, you ask? There is no need to re-invent the wheel. There are many really good development environments out there. Writing a text editor is no trivial task. For this reason, it is best to allow developers to edit source code in the editor of their choice.
+__Cocos Creator__ supports JavaScript, built in. Edit your `Scenes` and source code all from within. However, If you are a C++ or Lua developer, __Cocos Creator__ allows exporting of `Scenes` to sour code for further development. Why isn't C++ built in, you ask? There is no need to re-invent the wheel. There are many really good development environments out there. Writing a text editor is no trivial task. For this reason, it is best to allow developers to edit source code in the editor of their choice.
 
 ### What Is Supported?
 __Cocos2d-x v3.14__ and __Cocos Creator v1.4__ and above are required. If you find some `Nodes` are not supported, upgrading __Cocos2d-x__ and __Cocos Creator__ may add support for them.
 
 The following `Nodes` are supported.
+
 Node | Node | Node | Node | Node
 --- | --- | --- | --- | ---
 Scene | Sprite | Canvas | ScrollView | Label
@@ -21,35 +22,24 @@ Adding C++ and Lua language support to __Cocos Creator__ is easy:
 
     ![](creator_to_cocos2dx-img/folder_structure.png "directory structure")
 
-  In the __Project__ menu inside __Creator__ a new menu option will appear
-  __LuaCPP Support__.
+    In the __Project__ menu inside __Creator__ a new menu option will appear __LuaCPP Support__.
 
     ![](creator_to_cocos2dx-img/project_menu.png "project menu")
 
 ### Plugin Setup
 To run the plugin:
 
-* select __Project__ -> __LuaCPP Support__ -> __Setup Target Project__.
+* select __Project__ -> __LuaCPP Support__ -> __Setup Target Project__. It is required to tell __Cocos Creator__ where to build all the necessary files.
 
-  ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
+    ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
 
-  It is required to tell __Cocos Creator__ where to build all the necessary files.
-
-* select __Build__.
-
-  ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
-
-* use the resulting dialog box to set the build options that you need.
-
-  ![](creator_to_cocos2dx-img/build_dialog.png "build options")
-
-* always use the __Build__ button to build your project before running it. The result is all the needed code and resources to drop into your external build system.
+* select __Build__. Always use the __Build__ button to build your project before running it. The result is all the needed code and resources to drop into your external build system.
 
   * C++ projects use these paths:
     source code: __NATIVE_PROJECT_ROOT/Classes/reader__
     resources: __NATIVE_PROJECT_ROOT/Resources/creator__
 
-  * LUA proojects use these paths:
+  * LUA projects use these paths:
     source code: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader__
     resources: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator__
 
@@ -115,7 +105,7 @@ When developing for Android the __Android.mk__ needs to be modified. There are a
 ### Example Usage
 Once everything is done, you can add code to tie everything together. It's elegant and simple:
 
-For C++ projects:
+For C++ projects, just 1 step:
 ```cpp
 // mygame.cpp
 #include "reader/CreatorReader.h"
@@ -135,7 +125,8 @@ void some_function()
 }
 ```
 
-For Lua projects there is 2 steps:
+For Lua projects, require 2 steps:
+
   * register the creator reader bindings
     ```cpp
     #include "reader/lua-bindings/creator_reader_bindings.hpp"
