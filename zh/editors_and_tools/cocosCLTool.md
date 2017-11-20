@@ -1,4 +1,4 @@
-# 命令行工具
+# cocos 命令
 
 Cocos2d-x 带有一个命令行工具：__`cocos`__ 这是一个跨平台的工具，你可以用它创建项目、运行项目、发布项目。命令行工具适用于所有 Cocos2d-x 支持的平台，包括：iOS、Android、Mac、Linux、Windows、Web。不用 IDE，只用命令行，你就能完成所有的工作！
 
