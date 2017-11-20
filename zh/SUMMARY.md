@@ -50,13 +50,13 @@
     - [滑动条(Slider)](ui_components/sliders.md)
     - [文本框(TextField)](ui_components/textfields.md)
 
-- [高级节点对象](other_node_types/index.md)
+## 高级功能
+
+- [特殊节点对象](other_node_types/index.md)
     - [简介](other_node_types/index.md)
     - [瓦片地图](other_node_types/tilemap.md)
     - [粒子系统](other_node_types/particles.md)
     - [视差滚动](other_node_types/parallax.md)
-
-## 高级功能
 
 - [事件分发机制](event_dispatcher/index.md)
     - [简介](event_dispatcher/index.md)
