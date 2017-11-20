@@ -19,7 +19,7 @@
     - [节点关系](basic_concepts/parent_child.md)
     - [日志输出](basic_concepts/logging.md)
 
-## 引擎组件
+## 基本组件
 
 - [精灵(Sprite)](sprites/index.md)
     - [简介](sprites/index.md)
@@ -56,7 +56,7 @@
     - [粒子系统](other_node_types/particles.md)
     - [视差滚动](other_node_types/parallax.md)
 
-## 引擎功能
+## 高级功能
 
 - [事件分发机制](event_dispatcher/index.md)
     - [简介](event_dispatcher/index.md)
@@ -105,7 +105,7 @@
     - [图形性能优化](advanced_topics/optimizing.md)
     - [SQLite 集成 TODO](advanced_topics/sqlite.md)
 
-## 开发环境
+## 环境与工具
 
 - [环境搭建](installation/index.md)
     - [安装要求](installation/index.md)
@@ -119,6 +119,6 @@
     - [Windows 平台](installation/Windows.md)
 
 - [工具](editors_and_tools/cocosCLTool.md)
-    - [cocos 命令行工具](editors_and_tools/cocosCLTool.md)
-    - [Creator to Cocos2d-x TODO](editors_and_tools/creator_to_cocos2dx.md)
+    - [cocos 命令](editors_and_tools/cocosCLTool.md)
     - [静态库](editors_and_tools/prebuilt_libraries.md)
+    - [Creator to Cocos2d-x 插件](editors_and_tools/creator_to_cocos2dx.md)
