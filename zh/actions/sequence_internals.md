@@ -1,4 +1,4 @@
-# 克隆(Clone)
+# 动作的克隆
 
 __克隆(Clone)__ 的功能和字面含义一样，如果你对一个节点对象使用了 `clone()` 方法，你就获得了这个节点对象的拷贝。
 
@@ -47,7 +47,7 @@ heroSprite->runAction(moveBy);
 enemySprite->runAction(moveBy->clone()); // correct! This will be unique
 {%- endcodetabs %}
 
-## 倒转(Reverse)
+## 动作的倒转
 
 __倒转(Reverse)__ 的功能也和字面意思一样，调用 `reverse()` 可以让一系列动作按相反的方向执行。`reverse()` 不是只能简单的让一个 `Action` 对象反向执行，还能让 `Sequence` 和
 `Spawn` 倒转。
