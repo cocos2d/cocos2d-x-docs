@@ -33,13 +33,7 @@ To run the plugin:
 
     ![](creator_to_cocos2dx-img/dialog_options.png "dialog options")
 
-* select __Build__.
-
-* use the resulting dialog box to set the build options that you need.
-
-    ![](creator_to_cocos2dx-img/build_dialog.png "build options")
-
-* always use the __Build__ button to build your project before running it. The result is all the needed code and resources to drop into your external build system.
+* select __Build__. Always use the __Build__ button to build your project before running it. The result is all the needed code and resources to drop into your external build system.
 
   * C++ projects use these paths:
     source code: __NATIVE_PROJECT_ROOT/Classes/reader__
