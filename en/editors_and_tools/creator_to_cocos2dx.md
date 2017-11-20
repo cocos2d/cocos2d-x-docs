@@ -45,7 +45,7 @@ To run the plugin:
     source code: __NATIVE_PROJECT_ROOT/Classes/reader__
     resources: __NATIVE_PROJECT_ROOT/Resources/creator__
 
-  * LUA proojects use these paths:
+  * LUA projects use these paths:
     source code: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Classes/reader__
     resources: __NATIVE_PROJECT_ROOT/frameworks/runtime-src/Resources/Creator__
 
