@@ -1,5 +1,7 @@
 # Cocos2d-x 文档
 
+## 新手入门
+
 - [了解引擎](about/index.md)
     - [关于](about/index.md)
     - [引擎优势](about/why.md)
@@ -16,6 +18,8 @@
     - [序列(Sequence)](basic_concepts/sequences.md)
     - [节点关系](basic_concepts/parent_child.md)
     - [日志输出](basic_concepts/logging.md)
+
+## 基本功能
 
 - [精灵(Sprite)](sprites/index.md)
     - [简介](sprites/index.md)
@@ -45,6 +49,8 @@
     - [进度条(LoadingBar)](ui_components/loading_bar.md)
     - [滑动条(Slider)](ui_components/sliders.md)
     - [文本框(TextField)](ui_components/textfields.md)
+
+## 进阶内容
 
 - [特殊节点对象](other_node_types/index.md)
     - [简介](other_node_types/index.md)
@@ -90,7 +96,7 @@
     - [背景音乐](audio/playing.md)
     - [声音控制](audio/operations.md)
     - [高级功能](audio/advanced.md)
-    - [功能提升 TODO](audio/engines.md)
+    - [Audio Engine TODO](audio/engines.md)
 
 - [高级话题](advanced_topics/index.md)
     - [文件接入](advanced_topics/filesystem.md)
@@ -98,6 +104,8 @@
     - [着色器和材质](advanced_topics/shaders.md)
     - [图形性能优化](advanced_topics/optimizing.md)
     - [SQLite 集成 TODO](advanced_topics/sqlite.md)
+
+## 环境与工具
 
 - [环境搭建](installation/index.md)
     - [安装要求](installation/index.md)

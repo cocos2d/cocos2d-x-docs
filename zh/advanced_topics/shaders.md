@@ -51,15 +51,15 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 
 设想你想在游戏中画一个这样的球体：
 
-![](advanced_topics-img/model.jpg)
+![](../../en/advanced_topics/advanced_topics-img/model.jpg)
 
 你要做的第一件事就是定义它的几何形状，像这样：
 
-![](advanced_topics-img/geometry.jpg)
+![](../../en/advanced_topics/advanced_topics-img/geometry.jpg)
 
 然后定义砖块纹理，像这样：
 
-![](advanced_topics-img/brick.jpg)
+![](../../en/advanced_topics/advanced_topics-img/brick.jpg)
 
 这样做也能达成目标的效果，但是如果进一步的考虑：
 
