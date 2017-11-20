@@ -8,7 +8,7 @@
 - __en/__ 目录对应英文文档, __zh/__ 目录对应中文文档。
 - 代码块要以一种特殊的方式包裹:
   - 例如 C++ 代码块:
-  
+
       {% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
       {%- endcodetabs %}

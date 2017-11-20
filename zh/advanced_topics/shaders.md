@@ -204,7 +204,6 @@ sprite3D->setMaterial("Materials/circle.material#wood");
  </tr>
 </table>
 
-
 <table>
  <tr>
   <td><a name=technique>technique</a> <span class=Non-literal><span style='font-family:"Courier New"'>technique_id</span></span></td>
@@ -233,7 +232,6 @@ sprite3D->setMaterial("Materials/circle.material#wood");
  </tr>
 </table>
 
-
 <table>
  <tr>
   <td><a name=pass>pass </a><span class=Non-literal><span style='font-family:"Courier New"'>pass_id</span></span></td>
@@ -261,7 +259,6 @@ sprite3D->setMaterial("Materials/circle.material#wood");
   <td>&nbsp;</td>
  </tr>
 </table>
-
 
 <table>
  <tr>
@@ -370,7 +367,6 @@ sprite3D->setMaterial("Materials/circle.material#wood");
 <td>enum</td>
 </tr>
 </table>
-
 
 <table>
  <tr>
@@ -548,7 +544,6 @@ sprite3D->setMaterial("Materials/circle.material#wood");
  </tr>
 </table>
 
-
 <table>
  <tr>
   <th align="left"><a name="wiki-CULL_FACE_SIDE_ENUM"></a><b>CULL_FACE_SIDE_ENUM</b></th><th></th>
@@ -617,7 +612,6 @@ __数据类型__:
 
 - scalar 代表标量，可以用浮点型(float)，整形(int)，布尔型(bool)
 - vector 代表矢量，用逗号分隔的一系列浮点数表示
-
 
 ### 预定义的 uniform 变量
 

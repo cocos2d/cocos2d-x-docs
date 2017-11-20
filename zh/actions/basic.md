@@ -243,7 +243,7 @@ auto delay = DelayTime::create(0.25f);
 
 // create the sequence of actions, in the order we want to run them
 auto seq1 = Sequence::create(move_ease_in, delay, move_ease_in_back,
-	delay->clone(), nullptr);
+    delay->clone(), nullptr);
 
 // run the sequence and repeat forever.
 mySprite->runAction(RepeatForever::create(seq1));

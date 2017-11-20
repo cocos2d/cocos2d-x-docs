@@ -109,7 +109,7 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 ```
 
-_如果在 Windows 系统上配置，基本流程一致，只是环境变量的配置方式略有区别。_
+> _如果在 Windows 系统上配置，基本流程一致，只是环境变量的配置方式略有区别。_
 
 #### 安装额外的 SDK
 

@@ -61,4 +61,4 @@ __包含文件搜索路径:__
 /path_to_cocos2d-x/cocos2d-x/prebuilt/ios
 ```
 
-_/path_to_cocos2d-x 指引擎根目录的路径_
+> _/path_to_cocos2d-x 指引擎根目录的路径_

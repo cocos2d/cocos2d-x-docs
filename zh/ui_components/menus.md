@@ -63,6 +63,6 @@ func();
 {% codetabs name="C++", type="cpp" -%}
 auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png",
 [&](Ref* sender){
-	// your code here
+    // your code here
 });
 {%- endcodetabs %}
