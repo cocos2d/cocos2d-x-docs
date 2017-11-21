@@ -14,12 +14,6 @@ auto myNode = Node::create();
 // rotating by setting
 myNode->setRotation(50);
 
-{%- language name="JavaScript",type="js" -%}
-var myNode = new cc.Node();
-
-// rotating by setting
-myNode.setRotation(50);
-
 {%- endcodetabs %}
 
 和旋转角度一样，如果你改变了父精灵的缩放比例，子精灵也会做同样的改变：
@@ -31,12 +25,6 @@ auto myNode = Node::create();
 
 // scaling by setting
 myNode->setScale(2.0); // scales uniformly by 2.0
-
-{%- language name="JavaScript",type="js" -%}
-var myNode = new cc.Node();
-
-// scaling by setting
-myNode.setScale(2.0); // scales uniformly by 2.0
 
 {%- endcodetabs %}
 

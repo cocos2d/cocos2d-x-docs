@@ -20,18 +20,7 @@ mySprite->setRotation(40);
 mySprite->setScale(2.0); // sets both the scale of the X and Y axis uniformly
 
 mySprite->setAnchorPoint(Vec2(0, 0));
-{%- language name="JavaScript", type="js" -%}
-// This is how to create a sprite
-var mySprite = new cc.Sprite(res.mySprite_png);
 
-// this is how to change the properties of the sprite
-mySprite.setPosition(cc._p(500, 0));
-
-mySprite.setRotation(40);
-
-mySprite.setScale(2.0); // sets both the scale of the X and Y axis uniformly
-
-mySprite.setAnchorPoint(cc._p(0, 0));
 {%- endcodetabs %}
 
 让我们举例说明每个属性的含义，思考下面不同截图中精灵的区别：
@@ -62,9 +51,6 @@ mySprite.setAnchorPoint(cc._p(0, 0));
 
 {% codetabs name="C++", type="cpp" -%}
 mySprite->setAnchorPoint(Vec2(0, 0));
-
-{%- language name="JavaScript", type="js" -%}
-mySprite.setAnchorPoint(cc._p(0, 0));
 
 {%- endcodetabs %}
 
