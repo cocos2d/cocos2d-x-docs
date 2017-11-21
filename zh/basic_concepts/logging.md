@@ -29,14 +29,6 @@ if (b == true)
 else
     log("bool is false");
 
-{%- language name="JavaScript", type="js" -%}
-// a simple string
-cc.log("This would be outputted to the console");
-
-// outputting more than a simple string
-var pos = cc._p(sender.x, sender.y);
-cc.log("Position x: " + pos.x + ' y:' + pos.y);
-
 {%- endcodetabs %}
 
 对于使用 C++ 进行游戏开发的用户来说，可能想使用 `std::cout` 而不用 `log()`，实际上 `log()` 更易于使用，它格式化复杂的输出信息更简单。

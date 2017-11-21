@@ -28,24 +28,6 @@ auto delay = DelayTime::create(1);
 mySprite->runAction(Sequence::create(moveTo1, delay, moveBy1, delay.clone(),
 moveTo2, nullptr));
 
-{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Node();
-
-// move to point 50,10 over 2 seconds
-var moveTo1 = new cc.MoveTo(2, cc._p(50,10));
-
-// move from current position by 100,10 over 2 seconds
-var moveBy1 = new cc.MoveBy(2, cc._p(100,10));
-
-// move to point 150,10 over 2 seconds
-var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
-
-// create a delay
-var delay = new cc.DelayTime(1);
-
-mySprite.runAction(Sequence.create(moveTo1, delay, moveBy1, delay.clone(),
-moveTo2));
-
 {%- endcodetabs %}
 
 这个例子执行了一个动作的 `Sequence` 序列，那要是想让所有的特定动作同时执行呢？Cocos2d-x 也支持！通过引擎中的 `Spawn` 对象，你能让多个动作同时被解析执行。可能不同动作的执行时间不一致，在这种情况下，他们不会同时结束。
@@ -59,14 +41,6 @@ auto moveTo2 = MoveTo::create(2, Vec2(150,10));
 
 myNode->runAction(Spawn::create(moveTo1, moveBy1, moveTo2, nullptr));
 
-{%- language name="JavaScript", type="js" -%}
-var myNode = new cc.Node();
-
-var moveTo1 = new cc.MoveTo(2, cc._p(50,10));
-var moveBy1 = new cc.MoveBy(2, cc._p(100,10));
-var moveTo2 = new cc.MoveTo(2, cc._p(150,10));
-
-myNode.runAction(Spawn.create(moveTo1, moveBy1, moveTo2));
 {%- endcodetabs %}
 
 为什么要有同时执行多个动作的需求呢？当然是有原因的啦！比如你的游戏角色被电了，或者在关卡结束打 boss 的时候，想一想类似的场景.
