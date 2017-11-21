@@ -8,8 +8,8 @@ gitbook build
 
 # copy everything to deployment directory
 cd _build
-cp en/ gitbook/ gitment/ package.json search_plus_index.json sh/ ../../documentation
-
+cp en/ gitbook/ package.json search_plus_index.json zh/ ../../documentation
+cd ..
 
 # Api-ref
 
