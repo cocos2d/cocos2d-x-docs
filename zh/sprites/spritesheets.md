@@ -26,12 +26,7 @@ auto spritecache = SpriteFrameCache::getInstance();
 
 // the .plist file can be generated with any of the tools mentioned below
 spritecache->addSpriteFramesWithFile("sprites.plist");
-{%- language name="JavaScript", type="js" -%}
-// load the Sprite Sheet
-var spritecache = cc.SpriteFrameCache;
 
-// the .plist file can be generated with any of the tools mentioned below
-spritecache.addSpriteFramesWithFile(res.sprites_plist);
 {%- endcodetabs %}
 
 这样我们就完成了，将一个图集添加到 `SpriteFrameCache` 中，现在我们就能利用这个对象创建精灵了！

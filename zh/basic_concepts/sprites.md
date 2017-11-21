@@ -1,6 +1,6 @@
 # 精灵(Sprite)
 
-不知你是否意识到，所有的游戏都有 __精灵(Sprite)__ 对象，精灵是您在屏幕上移动的对象，它能被控制。你喜欢玩的游戏中主角可能就是一个精灵，我知道你在想是不是每个图形对象都是一个精灵，不是的，为什么? 如果你能控制它，他才是一个精灵，如果它不用控制，那就只是一个节点(Node)。
+不知你是否意识到，所有的游戏都有 __精灵(Sprite)__ 对象，精灵是您在屏幕上移动的对象，它能被控制。你喜欢玩的游戏中主角可能就是一个精灵，我知道你在想是不是每个图形对象都是一个精灵，不是的，为什么? 如果你能控制它，它才是一个精灵，如果无法控制，那就只是一个节点(Node)。
 
 看下面的图片，我们来指出一下，哪个是精灵(Sprite)，哪个是节点(Node)。
 
@@ -20,18 +20,7 @@ mySprite->setRotation(40);
 mySprite->setScale(2.0); // sets both the scale of the X and Y axis uniformly
 
 mySprite->setAnchorPoint(Vec2(0, 0));
-{%- language name="JavaScript", type="js" -%}
-// This is how to create a sprite
-var mySprite = new cc.Sprite(res.mySprite_png);
 
-// this is how to change the properties of the sprite
-mySprite.setPosition(cc._p(500, 0));
-
-mySprite.setRotation(40);
-
-mySprite.setScale(2.0); // sets both the scale of the X and Y axis uniformly
-
-mySprite.setAnchorPoint(cc._p(0, 0));
 {%- endcodetabs %}
 
 让我们举例说明每个属性的含义，思考下面不同截图中精灵的区别：
@@ -62,9 +51,6 @@ mySprite.setAnchorPoint(cc._p(0, 0));
 
 {% codetabs name="C++", type="cpp" -%}
 mySprite->setAnchorPoint(Vec2(0, 0));
-
-{%- language name="JavaScript", type="js" -%}
-mySprite.setAnchorPoint(cc._p(0, 0));
 
 {%- endcodetabs %}
 

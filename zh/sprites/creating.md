@@ -8,8 +8,6 @@
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
-{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Sprite(res.mySprite_png);
 {%- endcodetabs %}
 
 ![](../../en/sprites/sprites-img/i1.png "")
@@ -22,8 +20,6 @@ var mySprite = new cc.Sprite(res.mySprite_png);
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-{%- language name="JavaScript", type="js" -%}
-var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));
 {%- endcodetabs %}
 
 ![](../../en/sprites/sprites-img/i4.png "")
@@ -36,9 +32,5 @@ var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,40,40));
 auto mySprite = Sprite::create("mysprite.png");
 
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,200,200));
-{%- language name="JavaScript", type="js" -%}
 
-var mySprite = new cc.Sprite(res.mySprite_png);
-
-var mySprite = new cc.Sprite(res.mySprite_png, cc.rect(0,0,200,200));
 {%- endcodetabs %}

@@ -46,4 +46,4 @@
 
     ![](../../en/installation/Android-Eclipse-img/image6.png)
 
-_注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本_
+> 注意：本文档教程只适用于 Cocos2d-x V3.15 或更低的版本

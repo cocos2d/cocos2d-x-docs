@@ -23,4 +23,3 @@ Cocos2d-x 就是这样的一个游戏引擎，它提供了许多易于使用的�
 ![](../../en/basic_concepts/basic_concepts-img/2n_annotated_scaled.png "")
 
 能看到一个菜单(Menu)，几个精灵(Sprite)，和几个标签(Label)，观察一下喜欢的游戏，会发现这些组件以某种形式存在其中。
-

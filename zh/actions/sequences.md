@@ -1,10 +1,12 @@
 # 序列
 
-__动作序列(Sequence)__ 是将一系列要顺序执行的动作封装到一起的对象，一个 `Sequence` 可以包含任何数量的动作对象，回调方法和其它序列。可以包含回调方法? 没错! Cocos2d-x 允许把一个方法添加进去 `CallFunc` 对象，然后将 `CallFunc` 添加到 `Sequence`，这样，在执行序列的时候就能触发方法调用。因此，你能在一个序列中添加一些个性化的功能，而不仅仅是添加 Cocos2d-x 提供的有限动作。下面是一个序列的动作执行示意图：
+__动作序列(Sequence)__ 是一种封装多个动作的对象，当这个对象执行时被封装的动作会顺序执行。
+
+一个 `Sequence` 可以包含任何数量的动作对象，回调方法和其它序列。可以包含回调方法? 没错! Cocos2d-x 允许把一个方法添加进去 `CallFunc` 对象，然后将 `CallFunc` 添加到 `Sequence`，这样，在执行序列的时候就能触发方法调用。因此，你能在一个序列中添加一些个性化的功能，而不仅仅是添加 Cocos2d-x 提供的有限动作。下面是一个序列的动作执行示意图：
 
 ![](../../en/actions/actions-img/sequence.png "")
 
-## `Sequence` 示例
+## Sequence 示例
 
 {% codetabs name="C++", type="cpp" -%}
 auto mySprite = Sprite::create("mysprite.png");
@@ -34,7 +36,7 @@ mySprite->runAction(seq);
 
 __Jump__ -> __callbackJump()__ -> __Rotate__ -> __callbackRotate()__
 
-## `Spawn`
+## Spawn
 
 `Spawn` 和 `Sequence` 是非常相似的，区别是 `Spawn` 同时执行所有的动作。`Spawn` 对象可以添加任意数量的动作和其它 `Spawn` 对象。
 

@@ -7,7 +7,7 @@
 
 ## 配置步骤
 
-1. 打开 `cocos2d-x-3.16/build/cocos2d_tests.xcodeproj` 
+1. 打开 `cocos2d-x-3.16/build/cocos2d_tests.xcodeproj`
 1. 在 Xcode 顶部工具栏选择 `cpp-tests Mac`，`My Mac`，点击运行，项目将自动编译运行，效果如图：
 
     ![](iOS-img/macOS-install-run.png)

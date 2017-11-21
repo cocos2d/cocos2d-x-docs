@@ -11,8 +11,8 @@
 尽管你能手动创建粒子特效，按照喜好确定每个属性，但是使用工具往往更方便高效。下面介绍几个第三方工具：
 
 1. [Particle Designer](https://71squared.com/particledesigner)：Mac 上一款非常强大的粒子特效编辑器
-2. [V-play particle editor](http://v-play.net/2014/02/v-play-particle-editor-for-cocos2d-and-v-play/)：一款跨平台的粒子特效编辑器
-3. [Particle2dx](http://www.effecthub.com/particle2dx)：一款 Web 粒子特效编辑器，打开网页即可进行设计
+1. [V-play particle editor](http://v-play.net/2014/02/v-play-particle-editor-for-cocos2d-and-v-play/)：一款跨平台的粒子特效编辑器
+1. [Particle2dx](http://www.effecthub.com/particle2dx)：一款 Web 粒子特效编辑器，打开网页即可进行设计
 
 使用这些工具完成粒子特效的设计，最终会导出一个 _.plist_ 文件，Cocos2d-x 通过使用这种文件，就能把粒子特效添加到场景中，添加方法和操作一个普通的节点类型一样。
 
@@ -27,27 +27,17 @@ auto particleSystem = ParticleSystem::create("SpinningPeas.plist");
 
 准备好添加粒子特效到你的游戏中了吗？是否习惯创建自定义粒子特效？不习惯也没关系，我们内置了一些粒子特效，你可以直接使用。这个列表都是：
 
-  >-ParticleFire: Point particle system. Uses Gravity mode.
-
-  >-ParticleFireworks: Point particle system. Uses Gravity mode.
-
-  >-ParticleSun: Point particle system. Uses Gravity mode.
-
-  >-ParticleGalaxy: Point particle system. Uses Gravity mode.
-
-  >-ParticleFlower: Point particle system. Uses Gravity mode.
-
-  >-ParticleMeteor: Point particle system. Uses Gravity mode.
-
-  >-ParticleSpiral: Point particle system. Uses Gravity mode.
-
-  >-ParticleExplosion: Point particle system. Uses Gravity mode.
-
-  >-ParticleSmoke: Point particle system. Uses Gravity mode.
-
-  >-ParticleSnow: Point particle system. Uses Gravity mode.
-
-  >-ParticleRain: Point particle system. Uses Gravity mode.
+>- ParticleFire: Point particle system. Uses Gravity mode.
+>- ParticleFireworks: Point particle system. Uses Gravity mode.
+>- ParticleSun: Point particle system. Uses Gravity mode.
+>- ParticleGalaxy: Point particle system. Uses Gravity mode.
+>- ParticleFlower: Point particle system. Uses Gravity mode.
+>- ParticleMeteor: Point particle system. Uses Gravity mode.
+>- ParticleSpiral: Point particle system. Uses Gravity mode.
+>- ParticleExplosion: Point particle system. Uses Gravity mode.
+>- ParticleSmoke: Point particle system. Uses Gravity mode.
+>- ParticleSnow: Point particle system. Uses Gravity mode.
+>- ParticleRain: Point particle system. Uses Gravity mode.
 
 比如使用内置的烟火特效 `ParticleFireworks`：
 
