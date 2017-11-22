@@ -26,13 +26,7 @@ __.fnt__ file, otherwise they won't be rendered. If you render a `Label` object 
 it is missing characters, make sure they exist in your __.fnt__ file.
 
 #### Label TTF
-__True Type Fonts__ are different from the __bitmap fonts__ we learned about above.
-With __true type fonts__ the outline of the font is rendered. This is convenient
-as you do not need to have a separate font file for each size and color you might
-wish to use. Creating a `Label` object that uses a __true type font__ is easy. To
-create one you need to specify a __.ttf__ font file name, text string and a size.
-Unlike `BMFont`, `TTF` can render size changes without the need for a separate
-font files. Example, using a __true type font__:
+__True Type Fonts__ are different from the __bitmap fonts__ we learned about above. With __true type fonts__ the outline of the font is rendered. This is convenient as you do not need to have a separate font file for each size and color you might wish to use. Creating a `Label` object that uses a __true type font__ is easy. To create one you need to specify a __.ttf__ font file name, text string and a size. Unlike `BMFont`, `TTF` can render size changes without the need for a separate font files. Example, using a __true type font__:
 
 {% codetabs name="C++", type="cpp" -%}
 auto myLabel = Label::createWithTTF("Your Text", "Marker Felt.ttf", 24);
@@ -40,15 +34,10 @@ auto myLabel = Label::createWithTTF("Your Text", "Marker Felt.ttf", 24);
 
 ![](ui_components-img/LabelTTF.png "")
 
-Although it is more flexible than a __bitmap font__, a _true type font_ is slower
-to render and changing properties like the __font face__ and __size__ is an expensive
-operation.
+Although it is more flexible than a __bitmap font__, a _true type font_ is slower to render and changing properties like the __font face__ and __size__ is an expensive operation.
 
 If you need several `Label` objects from a __true type font__ that all have the
-same properties you can create a `TTFConfig` object to manage them. A `TTFConfig`
-object allows you to set the properties that all of your labels would have in
-common. You can think of this like a *recipe* where all your `Label` objects
-will use the same ingredients.
+same properties you can create a `TTFConfig` object to manage them. A `TTFConfig` object allows you to set the properties that all of your labels would have in common. You can think of this like a *recipe* where all your `Label` objects will use the same ingredients.
 
 You can create a `TTFConfig` object for your `Labels` in this way:
 
@@ -92,7 +81,7 @@ and __glow__. You can apply one or more effects to a `Label` object easily:
 Label with a __shadow__ effect:
 
 {% codetabs name="C++", type="cpp" -%}
-auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
+auto myLabel = Label::createWithTTF("My Label Text", "myFont.ttf", 16);
 
 // shadow effect is supported by all Label types
 myLabel->enableShadow();
@@ -103,7 +92,7 @@ myLabel->enableShadow();
 Label with a __outline__ effect:
 
 {% codetabs name="C++", type="cpp" -%}
-auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
+auto myLabel = Label::createWithTTF("My Label Text","myFont.ttf", 16);
 
 // outline effect is TTF only, specify the outline color desired
 myLabel->enableOutline(Color4B::WHITE, 1));
@@ -114,7 +103,7 @@ myLabel->enableOutline(Color4B::WHITE, 1));
 Label with a __glow__ effect:
 
 {% codetabs name="C++", type="cpp" -%}
-auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
+auto myLabel = Label::createWithTTF("My Label Text", "myFont.ttf", 16);
 
 // glow effect is TTF only, specify the glow color desired.
 myLabel->enableGlow(Color4B::YELLOW);

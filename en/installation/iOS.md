@@ -12,9 +12,9 @@ __There is no need to do both.__
 ### By downloading a .zip archive
 Download Cocos2d-x and unzip it. (maybe: __~/__ or __~/Projects__ )
 
-    ![](iOS-img/unzip.png "")
+  ![](iOS-img/unzip.png "")
 
-    ![](iOS-img/unzipping.png "")
+  ![](iOS-img/unzipping.png "")
 
 ### Cloning from GitHub
 Use the following commands to clone our GitHub repo and get your environment setup.
