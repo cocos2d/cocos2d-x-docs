@@ -114,7 +114,7 @@
       - [Windows](installation/Windows.md)
       - [Windows Phone (**Deprecated**)](installation/Windows-Phone.md)
 
--  [Tools](editors_and_tools/cocosCLTool.md)
+-  [Tools](editors_and_tools/index.md)
     - [Command-Line tool](editors_and_tools/cocosCLTool.md)
     - [Creator to Cocos2d-x](editors_and_tools/creator_to_cocos2dx.md)
     - [Pre-built Libraries](editors_and_tools/prebuilt_libraries.md)
