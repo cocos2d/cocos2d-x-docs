@@ -43,7 +43,7 @@ Mask | Collider | Prefab | DragonBones
 
 * 点击 __Build__，构建过程将很快完成
 
-* 在你编译运行 Cocos2d-x 项目前，记得重新 Build。完成 Build 后，导出的 reader 源码和 Creator 资源将位于如下位置：
+* 在你编译运行 Cocos2d-x 项目前，记得重新 Build。完成 Build 后，导出的 reader 源码和 Creator 资源将位于如下位置：
 
   * C++ 项目：
 
