@@ -56,13 +56,13 @@ cocos new MyGame -p com.MyCompany.MyGame -l lua -d ~/MyCompany
 cocos new MyGame -p com.MyCompany.MyGame -l js -d ~/MyCompany
 ```
 
-上面的几个例子，项目都是使用的 Cocos2d-x 的源码，编译的时候会将源码也编译，可能花费较长时间。为获得更快的编译速度，可以使用预编译库。使用时需要在创建项目的时候增加参数 _-t binary_。示例：
+上面的几个例子，项目都是使用的 Cocos2d-x 的源码，编译的时候会将源码也编译，可能花费较长时间。为获得更快的编译速度，可以使用预编译库。使用时需要在创建项目的时候增加参数 _-t binary_。示例：
 
 ```sh
 cocos new MyGame -p com.MyCompany.MyGame -l cpp -d ~/MyCompany -t binary
 ```
 
-生成预编译库的方法，在 [预编译库](./prebuilt_libraries.md) 章节。
+生成预编译库的方法，在 [预编译库](./prebuilt_libraries.md) 章节。
 
 使用命令 `cocos new --help` 可以查看到更多关于项目创建的帮助信息。
 
