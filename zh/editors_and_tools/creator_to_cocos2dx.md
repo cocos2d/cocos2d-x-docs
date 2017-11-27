@@ -2,13 +2,13 @@
 
 Cocos Creator 可以很高效的编辑场景和 UI，同时内置支持 JavaScript，这对 JavaScript 开发者十分友好。可是对于 C++/Lua 开发者，无法直接利用 Creator 高效的界面编辑功能，可能有一些遗憾。
 
-为了去除这种遗憾，我们提供了 __creator_to_cocos2dx__ 插件，它允许开发者导出 Creator 编辑的场景到 Cocos2d-x 的 C++/Lua 工程中。插件逻辑上分为两部分，第一部分是 Creator 的插件，负责把 Creator 制作的场景导出为 _.ccreator_ 文件；第二部分是 reader，负责在 C++/Lua 工程中解析导出的 _.ccreator_ 文件。
+为了去除这种遗憾，我们提供了 __creator_to_cocos2dx__ 插件，它允许开发者导出 Creator 编辑的场景到 Cocos2d-x 的 C++/Lua 工程中。插件逻辑上分为两部分，第一部分是 Creator 的插件，负责把 Creator 制作的场景导出为 _.ccreator_ 文件；第二部分是 reader，负责在 C++/Lua 工程中解析导出的 _.ccreator_ 文件。
 
 ## 特性
 
 使用插件要求 Cocos2d-x 版本 v3.14+，Creator 版本 v1.4+。
 
-Creator 使用基于组件的模型创建对象，而 Cocos2d-x 每个对象有自己的结构，因此插件很难支持全部的 Creator 特性。下面是目前支持的一些特性：
+Creator 使用基于组件的模型创建对象，而 Cocos2d-x 每个对象有自己的结构，因此插件很难支持全部的 Creator 特性。下面是目前支持的一些特性：
 
 Node | Node | Node | Node | Node
 --- | --- | --- | --- | ---
@@ -29,21 +29,21 @@ Mask | Collider | Prefab | DragonBones
 
     ![](../../en/editors_and_tools/creator_to_cocos2dx-img/folder_structure.png "directory structure")
 
-* 使用 Creator 打开刚才添加插件的项目，在菜单栏的项目(Project)下，即可看到 `LuaCpp Support` 菜单项。
+* 使用 Creator 打开刚才添加插件的项目，在菜单栏的项目(Project)下，即可看到 `LuaCpp Support` 菜单项。
 
     ![](../../en/editors_and_tools/creator_to_cocos2dx-img/project_menu.png "project menu")
 
 ## Creator 场景导出
 
-使用插件进行场景导出：
+使用插件进行场景导出：
 
-* 在菜单栏中点击 __项目(Project)__ -> __LuaCPP Support__ -> __Setup Target Project__，出现的对话框中 __Project Path__ 选择目标 Cocos2d-x 工程的路径。
+* 在菜单栏中点击 __项目(Project)__ -> __LuaCPP Support__ -> __Setup Target Project__，出现的对话框中 __Project Path__ 选择目标 Cocos2d-x 工程的路径。
 
     ![](../../en/editors_and_tools/creator_to_cocos2dx-img/dialog_options.png "dialog options")
 
 * 点击 __Build__，构建过程将很快完成
 
-* 在你编译运行 Cocos2d-x 项目前，记得重新 Build。完成 Build 后，导出的 reader 源码和 Creator 资源将位于如下位置：
+* 在你编译运行 Cocos2d-x 项目前，记得重新 Build。完成 Build 后，导出的 reader 源码和 Creator 资源将位于如下位置：
 
   * C++ 项目：
 
@@ -126,7 +126,7 @@ Android 平台的头文件搜索路径添加方式有一些特殊，需要修改
 
 ## 导入场景的使用
 
-上面的工作完成了，你就可以添加代码开始使用 Creator 中的场景了，使用方式非常的简单：
+上面的工作完成了，你就可以添加代码开始使用 Creator 中的场景了，使用方式非常的简单：
 
 对于 C++ 项目，只需要一步：
 
