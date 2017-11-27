@@ -5,4 +5,6 @@
   * [__Timberman Clone__](https://www.makeschool.com/online-courses/tutorials/build-a-clone-of-timberman-in-c-with-cocos2d-x-and-cocos-studio/getting-started)
   * [__Game of Life__](https://www.makeschool.com/online-courses/tutorials/learn-cocos-studio-and-c-by-building-the-game-of-life/what-game-of-life)
 
-* [__Game From Scratch__](http://www.gamefromscratch.com/page/cocos2d-x-CPP-Game-Programming-Tutorial-Series.aspx)
+* __Games From Scratch__
+  * [__Cocos2d-x tutorial series__](http://www.gamefromscratch.com/page/cocos2d-x-CPP-Game-Programming-Tutorial-Series.aspx)
+  <!--* [__Cocos Ceator tutorial series__](http://www.gamefromscratch.com/page/)-->
