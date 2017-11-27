@@ -37,7 +37,7 @@ Starting a new project requires a few steps:
 ## Debugging c++
 Starting with __cocos2d-x v3.15__, you can use __Android Studio 2.3+__ to debug c++ code by setting breakpoints where you wish.
 
-    ![](Android-Studio-img/debug_cpp_tests.png "")
+  ![](Android-Studio-img/debug_cpp_tests.png "")
 
 ## Build for release mode
 There are a few required steps to build in release mode:
