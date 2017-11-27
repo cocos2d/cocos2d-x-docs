@@ -8,3 +8,5 @@ _book/
 *.mobi
 
 package-lock.json
+
+.log
