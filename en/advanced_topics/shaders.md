@@ -7,8 +7,7 @@ From wikipedia:
 __In the field of computer graphics, a shader is a computer program that is used
 to do shading: the production of appropriate levels of color within an image,
 or, in the modern era, also to produce special effects or do video post-processing.
-A definition in layman's terms might be given as "a program that tells a computer
-how to draw something in a specific and unique way".__
+A definition in layman's terms might be given as "a program that tells a computer how to draw something in a specific and unique way".__
 
 In other words, it is a piece of code that runs on the GPU (not CPU) to draw the
 different Cocos2d-x Nodes.
@@ -94,7 +93,7 @@ with `Material` you can have more than one texture, and much more features like 
 
 As an example, this is how a material file looks like:
 
-{% codetabs name="JavaScript", type="js" -%}
+{% codetabs name="C++", type="cpp" -%}
 // A "Material" file can contain one or more materials
 material spaceship
 {
