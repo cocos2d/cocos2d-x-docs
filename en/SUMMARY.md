@@ -99,8 +99,8 @@
     - [Optimizing Graphics](advanced_topics/optimizing.md)
     - [SQLite](advanced_topics/sqlite.md)
 
--  [Installations](installation/index.md)
-    - [Prerequisites](installation/index.md)
+-  [Software Installations](installation/index.md)
+    - [Prerequisites](installation/prerequisites.md)
     - [Android](installation/Android-Studio.md)
       - [Studio](installation/Android-Studio.md)
       - [Command-line (**Deprecated**)](installation/Android-terminal.md)
