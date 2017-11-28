@@ -101,7 +101,7 @@
 
 -  [Installations](installation/index.md)
     - [Prerequisites](installation/index.md)
-    - [Android](installation/Android-terminal.md)
+    - [Android](installation/Android-Studio.md)
       - [Studio](installation/Android-Studio.md)
       - [Command-line (**Deprecated**)](installation/Android-terminal.md)
       - [Visual Studio (**Deprecated**)](installation/Android-VisualStudio.md)
