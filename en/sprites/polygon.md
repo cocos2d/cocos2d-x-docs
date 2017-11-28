@@ -3,7 +3,7 @@ A __Polygon Sprite__ is also a `Sprite`, that is used to display a 2d image.
 However, unlike a normal `Sprite` object, which is a rectangle made of just 2
 triangles, `PolygonSprite` objects are made of a series of triangles.
 
-#### Why use a Polygon Sprite?
+### Why use a Polygon Sprite?
 Simple, __performance__!
 
 There is a lot of technical jargon that we can toss around here about __pixel fill rate__
@@ -38,7 +38,7 @@ Here is a performance test.The test keep on adding dynamic sprite to the screen 
 | Samsung 9100   | 365     | 526           | 44.1%    |
 | rMBP late 2013 | 471     | 1150          | 144.16%  |
 -->
-#### AutoPolygon
+### AutoPolygon
 `AutoPolygon` is a helper class. It's purpose is to process an image into a 2d
 polygon mesh at runtime.
 

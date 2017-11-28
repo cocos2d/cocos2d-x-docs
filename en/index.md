@@ -1,6 +1,12 @@
-# What is Cocos2d-x?
+## Cocos2d-x Docs v3.16
+v2017.11.28
 
-## About Cocos2d-x
-Started in 2010, Cocos2d-x is an open source, cross-platform game engine. It is
-loaded with powerful features that allows developers to create spectacular games
-with ease.
+ __Authors:__ SlackMoehrle, Ricardo, Minggo, Walzer, Jare, James, Chengzhe
+
+__Contributors/Editors:__ stevetranby, Maxxx, smitpatel88, IQD, Michael, Meir_yanovich, catch_up, kidproquo, EMebane, reyanthonyrenacia, Fradow, pabitrapadhy, Manny_Dev, ZippoLag, kubas121, bjared, grimfate, DarioDP
+
+__Special Thanks:__ To our users! Without you there is no reason to even write this guide.
+
+Please provide feedback for this guide on [GitHub](https://github.com/cocos2d/cocos2d-x-docs)
+
+You can download the samples for this guide on [GitHub](https://github.com/chukong/programmers-guide-samples)

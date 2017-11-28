@@ -1,14 +1,14 @@
 # Cocos2d-x Documentation
 
 -  [Getting Started](index.md)
-    - [About Cocos2d-x](index.md)
-    - [Why Cocos2d-x](about/index.md)
+    - [About Cocos2d-x](about/getting_started.md)
+    - [Why Cocos2d-x](about/why.md)
     - [How to learn](about/learn.md)
     - [Where to get help](about/help.md)
     - [How to contribute](about/how.md)
 
 -  [Basic Cocos2d-x Concepts](basic_concepts/index.md)
-    - [Main Components](basic_concepts/index.md)
+    - [Main Components](basic_concepts/getting_started.md)
     - [Director](basic_concepts/director.md)
     - [Scenes and the Scene graph](basic_concepts/scene.md)
     - [Sprites](basic_concepts/sprites.md)
@@ -18,7 +18,7 @@
     - [Logging](basic_concepts/logging.md)
 
 -  [Sprites](sprites/index.md)
-    - [What are Sprites](sprites/index.md)
+    - [What are Sprites](sprites/getting_started.md)
     - [Creating Sprites](sprites/creating.md)
     - [Spritesheets](sprites/spritesheets.md)
     - [SpriteFrame Cache](sprites/spriteframe_cache.md)
@@ -26,18 +26,18 @@
     - [Polygon Sprite](sprites/polygon.md)
 
 -  [Actions](actions/index.md)
-    - [What are Actions](actions/index.md)
+    - [What are Actions](actions/getting_started.md)
     - [Basic Actions](actions/basic.md)
     - [Sequences](actions/sequences.md)
     - [Sequence Internals](actions/sequence_internals.md)
 
 -  [Building and Transitioning Scenes](scenes/index.md)
-    - [What are Scenes?](scenes/index.md)
+    - [What are Scenes?](scenes/getting_started.md)
     - [Creating Scenes](scenes/creating.md)
     - [Transitioning Scenes](scenes/transitioning.md)
 
 -  [UI Components](ui_components/index.md)
-    - [Widgets](ui_components/index.md)
+    - [Widgets](ui_components/getting_started.md)
     - [Label](ui_components/labels.md)
     - [Menu](ui_components/menus.md)
     - [Buttons](ui_components/buttons.md)
@@ -47,13 +47,13 @@
     - [TextField](ui_components/textfields.md)
 
 -  [Other Node Types](other_node_types/index.md)
-    - [More than just a Node](other_node_types/index.md)
+    - [More than just a Node](other_node_types/getting_started.md)
     - [TileMap](other_node_types/tilemap.md)
     - [Particle System](other_node_types/particles.md)
     - [Parallax](other_node_types/parallax.md)
 
 -  [Event Dispatcher](event_dispatcher/index.md)
-    - [What is the EventDispatch mechanism](event_dispatcher/index.md)
+    - [What is the EventDispatch mechanism](event_dispatcher/getting_started.md)
     - [Types of event listeners](event_dispatcher/types.md)
     - [Events Priority](event_dispatcher/priority.md)
     - [Touch Events](event_dispatcher/touch.md)
@@ -64,7 +64,7 @@
     - [Registering Events](event_dispatcher/registering.md)
 
 -  [3D](3d/index.md)
-    - [Terminology](3d/index.md)
+    - [Terminology](3d/terminology.md)
     - [Sprite3D](3d/sprite3d.md)
     - [Animation](3d/animation.md)
     - [Camera](3d/camera.md)
@@ -76,17 +76,17 @@
     - [Advanced 3D Topics](3d/advanced.md)
 
 -  [Scripting](scripting/index.md)
-    - [Script component](scripting/index.md)
+    - [Script component](scripting/script_component.md)
 
 -  [Physics](physics/index.md)
-    - [Physics is scary!](physics/index.md)
+    - [Physics is scary!](physics/getting_started.md)
     - [Terminology and concepts](physics/concepts.md)
     - [Collision](physics/collisions.md)
     - [Queries](physics/queries.md)
     - [Debugging/Disabling](physics/debugging.md)
 
 -  [Audio](audio/index.md)
-    - [Getting Started](audio/index.md)
+    - [Getting Started](audio/getting_started.md)
     - [Playing Sound](audio/playing.md)
     - [Manipulating Sound](audio/operations.md)
     - [Advanced Topics](audio/advanced.md)
@@ -99,9 +99,9 @@
     - [Optimizing Graphics](advanced_topics/optimizing.md)
     - [SQLite](advanced_topics/sqlite.md)
 
--  [Installations](installation/index.md)
-    - [Prerequisites](installation/index.md)
-    - [Android](installation/Android-terminal.md)
+-  [Software Installations](installation/index.md)
+    - [Prerequisites](installation/prerequisites.md)
+    - [Android](installation/Android-Studio.md)
       - [Studio](installation/Android-Studio.md)
       - [Command-line (**Deprecated**)](installation/Android-terminal.md)
       - [Visual Studio (**Deprecated**)](installation/Android-VisualStudio.md)

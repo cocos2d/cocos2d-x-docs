@@ -1,4 +1,4 @@
-### What is Cocos?
+## What is Cocos?
 Cocos is a platform to create games: it includes an editor, a game engine, it also
 includes integration with the popular services every developer expects... everything
 is packaged in a convenient installer. It is a complete *ecosystem*.

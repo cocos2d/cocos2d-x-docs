@@ -1,4 +1,4 @@
-### Editors and Tools
+## Editors and Tools
 
 The Cocos platform provides the following __editors and tools__ to aid in development.
 

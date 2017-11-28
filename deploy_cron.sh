@@ -17,19 +17,19 @@ gitbook build
 ## copy some needed files
 echo "Cocos2d-x-docs -- copying needed files..."
 cp index.html.en _book/index.html
-cp ../api-refs-static-pages.tar.gz _book/.
-cp ../editors_and_tools.tar.gz _book/.
+#cp ../api-refs-static-pages.tar.gz _book/.
+#cp ../editors_and_tools.tar.gz _book/.
 
 ## copy everything to deployment directory
 cd _book/
 
 echo "Cocos2d-x-docs -- extracting everything..."
-tar xvf api-refs-static-pages.tar.gz
-tar xvf editors_and_tools.tar.gz
+#tar xvf api-refs-static-pages.tar.gz
+#tar xvf editors_and_tools.tar.gz
 
 echo "Cocos2d-x-docs -- removing unneeded files..."
-rm -rf api-refs-static-pages.tar.gz
-rm -rf editors_and_tools.tar.gz
+#rm -rf api-refs-static-pages.tar.gz
+#rm -rf editors_and_tools.tar.gz
 
 echo "Cocos2d-x-docs -- copy everything to deployment directory..."
 cp -R api-ref editors_and_tools en gitbook index.html package.json search_plus_index.json zh ../../documentation/

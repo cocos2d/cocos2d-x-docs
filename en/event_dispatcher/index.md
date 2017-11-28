@@ -1,10 +1,2 @@
 ## Event Dispatcher
-
-### What is the EventDispatch mechanism?
-__EventDispatch__ is a mechanism for responding to user events.
-
-The basics:
-
-* Event listeners encapsulate your event processing code.
-* Event dispatcher notifies listeners of user events.
-* Event objects contain information about the event.
+Cocos2d-x provides a mecanism for handling __touch__, __keyboard__, __mouse__ and __custom__ events for user input and game play mechanics.
