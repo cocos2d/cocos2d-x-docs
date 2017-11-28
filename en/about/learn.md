@@ -7,4 +7,4 @@
 
 * __Games From Scratch__
   * [__Cocos2d-x tutorial series__](http://www.gamefromscratch.com/page/cocos2d-x-CPP-Game-Programming-Tutorial-Series.aspx)
-  <!--* [__Cocos Ceator tutorial series__](http://www.gamefromscratch.com/page/)-->
+  * [__Cocos Ceator tutorial__](https://www.youtube.com/watch?v=49AC6HD1Bi0)
