@@ -1,4 +1,4 @@
-### Creating a Sprite from SpriteFrameCache
+## Creating a Sprite from SpriteFrameCache
 This creates a `Sprite` by pulling it from the `SpriteFrameCache`.
 
 {% codetabs name="C++", type="cpp" -%}

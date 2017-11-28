@@ -3,7 +3,7 @@ Cocos2d-x provides a `Label` object that can create labels using __true type__,
 __bitmap__ or the built-in system font. This single class can handle all your `Label`
 needs.
 
-#### Label BMFont
+### Label BMFont
 `BMFont` is a label type that uses a bitmap font. The characters in a bitmap font
 are made up of a matrix of __dots__. It is very fast and easy to use, but not
 scalable as it requires a separate font for each size character. Each character
@@ -25,7 +25,7 @@ All of the characters in the string parameter should be found in the provided
 __.fnt__ file, otherwise they won't be rendered. If you render a `Label` object and
 it is missing characters, make sure they exist in your __.fnt__ file.
 
-#### Label TTF
+### Label TTF
 __True Type Fonts__ are different from the __bitmap fonts__ we learned about above. With __true type fonts__ the outline of the font is rendered. This is convenient as you do not need to have a separate font file for each size and color you might wish to use. Creating a `Label` object that uses a __true type font__ is easy. To create one you need to specify a __.ttf__ font file name, text string and a size. Unlike `BMFont`, `TTF` can render size changes without the need for a separate font files. Example, using a __true type font__:
 
 {% codetabs name="C++", type="cpp" -%}
@@ -60,7 +60,7 @@ auto myLabel = Label::createWithTTF(labelConfig, "My Label Text");
 A `TTFConfig` can also be used for displaying Chinese, Japanese and Korean
 characters.
 
-#### Label SystemFont
+### Label SystemFont
 `SystemFont` is a label type that uses the default system font and font size.
 This is a font that is meant not to have its properties changed. You should think
 of it as __system font, system rules__. Creating a `SystemFont` label:

@@ -1,9 +1,9 @@
-### Transitioning between Scenes
+## Transitioning between Scenes
 You might need to move between `Scene` objects in your game. Perhaps starting a
 new game, changing levels or even ending your game. Cocos2d-x provides a number
 of ways to do __scene transitions__.
 
-#### Ways to transition between Scenes
+### Ways to transition between Scenes
 There are many ways to transition through your __scenes__. Each has specific
 functionality. Let's go through them. Given:
 
@@ -38,7 +38,7 @@ be deleted. Only call this if there is a running scene.
 Director::getInstance()->popScene(myScene);
 {%- endcodetabs %}
 
-#### Transition Scenes with effects
+### Transition Scenes with effects
 You can add visual effects to your `Scene` transitions
 
 {% codetabs name="C++", type="cpp" -%}
