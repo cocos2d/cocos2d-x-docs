@@ -7,7 +7,7 @@
         "products": [
             {
                 "name": "API Reference",
-                "link": "http://www.cocos2d-x.org/docs/api-ref/index.html"
+                "link": "http://www.cocos2d-x.org/docs/api-ref/cplusplus/v3x/"
             },
             {
                 "name": "Cocos Creator",
