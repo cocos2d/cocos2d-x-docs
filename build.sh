@@ -31,11 +31,15 @@ echo "Cocos2d-x-docs -- removing unneeded files..."
 rm -rf api-refs-static-pages.tar.gz
 rm -rf editors_and_tools.tar.gz
 
-echo "Cocos2d-x-docs -- copy everything to deployment directory..."
-cp -R api-ref editors_and_tools en gitbook index.html package.json search_plus_index.json zh ../../documentation/
-
 cd ..
-rm -rf _book/
+
+mv _book/ cocos2d-x/
+mv crocos2d-x ../documentation/
+
+#echo "Cocos2d-x-docs -- copy everything to deployment directory..."
+#cp -R api-ref editors_and_tools en gitbook index.html package.json #search_plus_index.json zh ../../documentation/
+
+rm -rf cocos2d-x/
 
 echo "-----------------------"
 echo "Cocos Creator Manual..."
@@ -43,7 +47,7 @@ echo "-----------------------"
 ## pull latest from github
 echo "Cocos Creator -- pulling latest from GitHub..."
 cd ../creator-docs
-git pull origin master
+git pull origin cocos2d-x.org
 
 ## build it
 echo "Cocos Creator -- building GitBook docs...."
@@ -63,7 +67,7 @@ echo "------------------------"
 ## pull latest from github
 echo "Cocos Creator API -- pulling latest from GitHub..."
 cd ../creator-api-docs
-git pull origin master
+git pull origin cocos2d-x.org
 
 ## build it
 echo "Cocos Creator API -- building GitBook docs...."

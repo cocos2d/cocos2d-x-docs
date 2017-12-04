@@ -4,7 +4,7 @@ Cocos2d-x, like any large scale project, is made up of many hundreds of source f
 ### Generating The Prebuilt Libraries For Use
 Prebuilt libraries are available on *iOS*, *macOS*, *Android* and *Win32*
 
-In-order to use the prebuilt libraries in your projects you need to compile them. This assumes that you already haave a working Cocos2d-x installation. If you do not, please refer to [../installation/]().
+In-order to use the prebuilt libraries in your projects you need to compile them. This assumes that you already haave a working Cocos2d-x installation. If you do not, please refer to our [installation guides](../installation/).
 
 Some examples:
 ```cpp

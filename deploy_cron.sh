@@ -8,7 +8,7 @@ echo "-----------------"
 # First Cocos2d-x docs, we are aready in this repo when executing this script
 ## pull latest from github
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
-git pull origin master
+git pull origin
 
 ## build it
 echo "Cocos2d-x-docs -- building GitBook docs...."
@@ -19,13 +19,18 @@ echo "Cocos2d-x-docs -- copying needed files..."
 cp index.html.en _book/index.html
 
 ## copy everything to deployment directory
-cd _book/
+#cd _book/
 
-echo "Cocos2d-x-docs -- copy everything to deployment directory..."
-cp -R en gitbook index.html package.json search_plus_index.json zh ../../documentation/
+#echo "Cocos2d-x-docs -- copy everything to deployment directory..."
+#cp -R en gitbook index.html package.json search_plus_index.json zh #../../documentation/
 
-cd ..
-rm -rf _book/
+#cd ..
+#rm -rf _book/
+
+mv _book/ cocos2d-x/
+mv crocos2d-x ../documentation/
+
+rm -rf cocos2d-x/
 
 echo "-----------------------"
 echo "Cocos Creator Manual..."
@@ -33,7 +38,7 @@ echo "-----------------------"
 ## pull latest from github
 echo "Cocos Creator -- pulling latest from GitHub..."
 cd ../creator-docs
-git pull origin master
+git pull origin cocos2d-x.org
 
 ## build it
 echo "Cocos Creator -- building GitBook docs...."
@@ -53,7 +58,7 @@ echo "------------------------"
 ## pull latest from github
 echo "Cocos Creator API -- pulling latest from GitHub..."
 cd ../creator-api-docs
-git pull origin master
+git pull origin cocos2d-x.org
 
 ## build it
 echo "Cocos Creator API -- building GitBook docs...."
