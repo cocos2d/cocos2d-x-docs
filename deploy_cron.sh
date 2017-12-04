@@ -8,7 +8,7 @@ echo "-----------------"
 # First Cocos2d-x docs, we are aready in this repo when executing this script
 ## pull latest from github
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
-git pull origin
+git pull origin master
 
 ## build it
 echo "Cocos2d-x-docs -- building GitBook docs...."
@@ -16,7 +16,8 @@ gitbook build
 
 ## copy some needed files
 echo "Cocos2d-x-docs -- copying needed files..."
-cp index.html.en _book/index.html
+cp redirect.html.en _book/index.html
+cp index.html.en ../documentation/index.html
 
 ## copy everything to deployment directory
 #cd _book/
@@ -28,7 +29,7 @@ cp index.html.en _book/index.html
 #rm -rf _book/
 
 mv _book/ cocos2d-x/
-mv crocos2d-x ../documentation/
+mv cocos2d-x ../documentation/
 
 rm -rf cocos2d-x/
 
