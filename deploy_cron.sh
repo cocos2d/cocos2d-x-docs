@@ -16,7 +16,8 @@ gitbook build
 
 ## copy some needed files
 echo "Cocos2d-x-docs -- copying needed files..."
-cp index.html.en _book/index.html
+cp redirect.html.en _book/index.html
+cp index.html.en ../documentation/index.html
 
 ## copy everything to deployment directory
 #cd _book/
