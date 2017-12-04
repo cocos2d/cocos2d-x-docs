@@ -28,7 +28,7 @@ cp index.html.en _book/index.html
 #rm -rf _book/
 
 mv _book/ cocos2d-x/
-mv crocos2d-x ../documentation/
+mv cocos2d-x ../documentation/
 
 rm -rf cocos2d-x/
 
