@@ -34,7 +34,7 @@ rm -rf editors_and_tools.tar.gz
 cd ..
 
 mv _book/ cocos2d-x/
-mv crocos2d-x ../documentation/
+mv cocos2d-x ../documentation/
 
 #echo "Cocos2d-x-docs -- copy everything to deployment directory..."
 #cp -R api-ref editors_and_tools en gitbook index.html package.json #search_plus_index.json zh ../../documentation/
