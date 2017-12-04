@@ -8,7 +8,7 @@ echo "-----------------"
 # First Cocos2d-x docs, we are aready in this repo when executing this script
 ## pull latest from github
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
-git pull origin
+git pull origin master
 
 ## build it
 echo "Cocos2d-x-docs -- building GitBook docs...."
