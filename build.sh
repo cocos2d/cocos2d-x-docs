@@ -43,7 +43,7 @@ echo "-----------------------"
 ## pull latest from github
 echo "Cocos Creator -- pulling latest from GitHub..."
 cd ../creator-docs
-git pull origin master
+git pull origin cocos2d-x.org
 
 ## build it
 echo "Cocos Creator -- building GitBook docs...."
@@ -63,7 +63,7 @@ echo "------------------------"
 ## pull latest from github
 echo "Cocos Creator API -- pulling latest from GitHub..."
 cd ../creator-api-docs
-git pull origin master
+git pull origin cocos2d-x.org
 
 ## build it
 echo "Cocos Creator API -- building GitBook docs...."
