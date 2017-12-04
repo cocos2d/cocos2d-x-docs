@@ -17,22 +17,12 @@ gitbook build
 ## copy some needed files
 echo "Cocos2d-x-docs -- copying needed files..."
 cp index.html.en _book/index.html
-cp ../api-refs-static-pages.tar.gz _book/.
-cp ../editors_and_tools.tar.gz _book/.
 
 ## copy everything to deployment directory
 cd _book/
 
-echo "Cocos2d-x-docs -- extracting everything..."
-tar xvf api-refs-static-pages.tar.gz
-tar xvf editors_and_tools.tar.gz
-
-echo "Cocos2d-x-docs -- removing unneeded files..."
-rm -rf api-refs-static-pages.tar.gz
-rm -rf editors_and_tools.tar.gz
-
 echo "Cocos2d-x-docs -- copy everything to deployment directory..."
-cp -R api-ref editors_and_tools en gitbook index.html package.json search_plus_index.json zh ../../documentation/
+cp -R en gitbook index.html package.json search_plus_index.json zh ../../documentation/
 
 cd ..
 rm -rf _book/
@@ -53,7 +43,7 @@ gitbook build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/index.html.en _book/index.html
 mv _book/ creator/
-mv creator ../documentation/
+cp -R creator ../documentation/
 
 rm -rf creator/
 
@@ -73,6 +63,6 @@ gitbook build
 echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/index.html.en _book/index.html
 mv _book/ creator-api/
-mv creator-api ../documentation/
+cp -R creator-api ../documentation/
 
 rm -rf creator-api/

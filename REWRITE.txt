@@ -107,6 +107,6 @@
   rewrite ^/docs/editors_and_tools/cocos /docs/en/editors_and_tools/cocosCLTool.html permanent;
   rewrite ^/docs/services/sdkbox http://sdkbox.com permanent;
   rewrite ^/docs/static-pages/programmers-guide.html /docs/en/index.html permanent;
-
+  rewrite ^/docs/static-pages/installation.html /docs/en/installation permanent;
   rewrite ^/docs/editors_and_tools /docs/en/editors_and_tools permanent;
   rewrite ^/docs/editors_and_tools/creator /docs/en/editors_and_tools/creator permanent;
