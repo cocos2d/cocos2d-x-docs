@@ -47,7 +47,7 @@ gitbook build
 
 ## copy everything to deployment directory
 echo "Cocos Creator -- copy everything to deployment directory..."
-cp ../cocos2d-x-docs/index.html.en _book/index.html
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ creator/
 cp -R creator ../documentation/
 
@@ -67,7 +67,7 @@ gitbook build
 
 ## copy everything to deployment directory
 echo "Cocos Creator API -- copy everything to deployment directory..."
-cp ../cocos2d-x-docs/index.html.en _book/index.html
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ creator-api/
 cp -R creator-api ../documentation/
 
