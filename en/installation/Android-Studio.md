@@ -1,7 +1,7 @@
 # Android Studio Installation and Setup
 
 ## Prerequisites
-* A supported environment. See **[Installation Prerequisites](A/index.html)**
+* A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
 * Android Studio 2.3.3 or Studio 3.0 [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
 
@@ -28,7 +28,7 @@
 
 ## Starting a new project
 Starting a new project requires a few steps:
-* first, use `cocos new ...` to create your project. See the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)** for additional help.
+* first, use `cocos new ...` to create your project. See the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)** for additional help.
 * next, launch __Android Studio__.
 * next, you must specify what version of the Android SDK you are using. You can do this by modifying __gradle.properties__
 
