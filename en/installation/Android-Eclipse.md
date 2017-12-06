@@ -3,7 +3,7 @@
 ### Deprecated Document. Cocos2d-x V3.15 or less is the last supported version.
 
 ## Prerequisites
-* Completed the **[Android Command-Line Instructions](Android-terminal/index.html)**
+* Completed the **[Android Command-Line Instructions](Android-terminal.md)**
 
 * Eclipse ADT Bundle [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/)
 

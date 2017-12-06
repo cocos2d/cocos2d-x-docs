@@ -1,7 +1,7 @@
 # macOS Installation and Setup
 
 ## Prerequisites
-A supported environment. See **[Installation Prerequisites](A/index.html)**
+A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
 ## Setting up Cocos2d-x
 You can get started with __Cocos2d-x__ by either downloading a self-contained
@@ -45,4 +45,4 @@ select you device from the device list.
 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our
-document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**.
+document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.

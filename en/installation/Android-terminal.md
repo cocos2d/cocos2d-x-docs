@@ -3,7 +3,7 @@
 ### Deprecated Document. Cocos2d-x V3.15 or less is the last supported version.
 
 ## Environment Requirements
-A supported environment. See **[Installation Prerequisites](A/index.html)**
+A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
 ## Starting decisions
 Android development is a complicated beast. Not only are there several development
@@ -221,7 +221,7 @@ Everything should build successfully!
 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our
-document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**.
+document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.
 
 ## How to deploy it on your Android phone via command line
 
