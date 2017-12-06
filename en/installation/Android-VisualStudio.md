@@ -24,7 +24,7 @@
 Make sure that you are using __Cocos2d-x v3.12__.
 
 ### Creating a new project
-* Read our document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**
+* Read our document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**
   and create a new project.
 
 * Download [proj.visualstudio](http://aka.ms/vscocosandroidsample)

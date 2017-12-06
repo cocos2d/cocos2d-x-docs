@@ -3,7 +3,7 @@
 ### Deprecated Document. Cocos2d-x V3.15 or less is the last supported version.
 
 ## Prerequisites
-* A supported environment. See **[Installation Prerequisites](A/index.html)**
+* A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
 * Register to be a Windows Phone Developer [http://msdn.microsoft.com/en-us/library/windowsphone/help/jj206719(v=vs.105](http://msdn.microsoft.com/en-us/library/windowsphone/help/jj206719(v=vs.105)
 
@@ -46,4 +46,4 @@ __cpp-testsComponent__ and define __COCOS2D_DEBUG=1__ in __Preprocessor Definiti
 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our
-document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**.
+document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.
