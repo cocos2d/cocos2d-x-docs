@@ -110,3 +110,31 @@
   rewrite ^/docs/static-pages/installation.html /docs/en/installation permanent;
   rewrite ^/docs/editors_and_tools /docs/en/editors_and_tools permanent;
   rewrite ^/docs/editors_and_tools/creator /docs/en/editors_and_tools/creator permanent;
+
+# slackmoehrle - 2017/12/05 - re-org docs/en/ -> docs/cocos2d-x/en/
+  rewrite ^/docs/en/index.html /docs/cocos2d-x/en/index.html permanent;
+  rewrite ^/docs/en/basic_concepts/ /docs/cocos2d-x/en/basic_concepts/ permanent;
+  rewrite ^/docs/en/sprites/ /docs/cocos2d-x/en/sprites/ permanent;
+  rewrite ^/docs/en/actions/ /docs/cocos2d-x/en/actions/ permanent;
+  rewrite ^/docs/en/scenes/ /docs/cocos2d-x/en/scenes/ permanent;
+  rewrite ^/docs/en/ui_components/ /docs/cocos2d-x/en/ui_components/ permanent;
+  rewrite ^/docs/en/other_node_types/ /docs/cocos2d-x/en/other_node_types/ permanent;
+  rewrite ^/docs/en/event_dispatcher/ /docs/cocos2d-x/en/event_dispatcher/ permanent;
+  rewrite ^/docs/en/3d/ /docs/cocos2d-x/en/3d/ permanent;
+  rewrite ^/docs/en/scripting/ /docs/cocos2d-x/en/scripting/ permanent;
+  rewrite ^/docs/en/physics/ /docs/cocos2d-x/en/physics/ permanent;
+  rewrite ^/docs/en/audio/ /docs/cocos2d-x/en/audio/ permanent;
+  rewrite ^/docs/en/advanced_topics/ /docs/cocos2d-x/en/advanced_topics/ permanent;
+  rewrite ^/docs/en/installation/ /docs/cocos2d-x/en/installation/ permanent;
+  rewrite ^/docs/en/installation/Android-terminal.html /docs/cocos2d-x/en/installation/Android-terminal.html permanent;
+  rewrite ^/docs/en/installation/Android-Eclipse.html /docs/cocos2d-x/en/installation/Android-Eclipse.html permanent;
+  rewrite ^/docs/en/installation/Android-VisualStudio.html /docs/cocos2d-x/en/installation/Android-VisualStudio.html permanent;
+  rewrite ^/docs/en/installation/Android-Studio.html /docs/cocos2d-x/en/installation/Android-Studio.html permanent;
+  rewrite ^/docs/en/installation/iOS.html /docs/cocos2d-x/en/installation/iOS.html permanent;
+  rewrite ^/docs/en/installation/OSX.html /docs/cocos2d-x/en/installation/OSX.html permanent;
+  rewrite ^/docs/en/installation/Linux.html /docs/cocos2d-x/en/installation/Linux.html permanent;
+  rewrite ^/docs/en/installation/Tizen.html /docs/cocos2d-x/en/installation/Tizen.html permanent;
+  rewrite ^/docs/en/installation/Windows.html /docs/cocos2d-x/en/installation/Windows.html permanent;
+  rewrite ^/docs/en/installation/Windows-Phone.html /docs/cocos2d-x/en/installation/Windows-Phone.html permanent;
+  rewrite ^/docs/en/editors_and_tools/cocosCLTool.html /docs/cocos2d-x/en/editors_and_tools/cocosCLTool.html permanent;
+  rewrite ^/docs/en/editors_and_tools/ /docs/cocos2d-x/en/editors_and_tools/ permanent;

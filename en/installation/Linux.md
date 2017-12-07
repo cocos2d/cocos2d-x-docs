@@ -1,7 +1,7 @@
 # Linux Installation and Setup
 
 ## Prerequisites
-A supported environment. See **[Installation Prerequisites](A/index.html)**
+A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
 ## Setting up Cocos2d-x
 * Download Cocos2d-x and unzip it. (maybe: ~/)
@@ -65,4 +65,4 @@ __coocs2dx_root/build/linux-build__
 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our
-document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool/)**.
+document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.

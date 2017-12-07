@@ -1,14 +1,14 @@
 <html>
    <head>
-   
+
       <script type="text/javascript">
          <!--
-               window.location="en/";
+               window.location="cocos2d-x/en/";
          //-->
       </script>
-      
+
    </head>
-   
+
    <body>
    </body>
 </html>
