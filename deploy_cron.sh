@@ -29,6 +29,7 @@ cp index.html.en ../documentation/index.html
 #rm -rf _book/
 
 mv _book/ cocos2d-x/
+rm -rf ../documentation/cocos2d-x/
 mv cocos2d-x ../documentation/
 
 rm -rf cocos2d-x/
@@ -49,6 +50,7 @@ gitbook build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ creator/
+rm -rf ../documentation/creator/
 cp -R creator ../documentation/
 
 rm -rf creator/
@@ -69,6 +71,9 @@ gitbook build
 echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ creator-api/
+rm -rf ../documentation/creator-api/
 cp -R creator-api ../documentation/
 
 rm -rf creator-api/
+
+cd ..
