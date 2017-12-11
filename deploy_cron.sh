@@ -20,17 +20,11 @@ cp redirect.html.en _book/index.html
 cp index.html.en ../documentation/index.html
 
 ## copy everything to deployment directory
-#cd _book/
-
-#echo "Cocos2d-x-docs -- copy everything to deployment directory..."
-#cp -R en gitbook index.html package.json search_plus_index.json zh #../../documentation/
-
-#cd ..
-#rm -rf _book/
+echo "Cocos2d-x-docs -- copy everything to deployment directory..."
 
 mv _book/ cocos2d-x/
-rm -rf ../documentation/cocos2d-x/
-mv cocos2d-x ../documentation/
+
+rsync --recursive cocos2d-x ../documentation
 
 rm -rf cocos2d-x/
 
@@ -50,8 +44,8 @@ gitbook build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ creator/
-rm -rf ../documentation/creator/
-cp -R creator ../documentation/
+
+rsync --recursive creator ../documentation
 
 rm -rf creator/
 
@@ -71,8 +65,8 @@ gitbook build
 echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ creator-api/
-rm -rf ../documentation/creator-api/
-cp -R creator-api ../documentation/
+
+rsync --recursive creator-api ../documentation
 
 rm -rf creator-api/
 
