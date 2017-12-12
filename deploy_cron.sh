@@ -2,7 +2,8 @@
 
 # This script builds: Cocos2d-x-docs, Cocos Creator Manual, Cocos Creator API-Ref.
 
-cd /data/home/docops/cocos2d-x-docs/
+# on production this script should be run as:
+# (cd /data/home/docops/cocos2d-x-docs && exec /data/home/docops/cocos2d-x-docs/deploy_cron.sh)
 
 echo "-----------------"
 echo "Cocos2d-x-docs..."
