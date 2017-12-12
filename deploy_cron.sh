@@ -2,6 +2,8 @@
 
 # This script builds: Cocos2d-x-docs, Cocos Creator Manual, Cocos Creator API-Ref.
 
+cd /home/data/docops/cocos2d-x-docs/
+
 echo "-----------------"
 echo "Cocos2d-x-docs..."
 echo "-----------------"
