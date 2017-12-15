@@ -116,7 +116,8 @@ Using [__brew__](http://brew.sh/) is one option for installing the __Android NDK
 Installing with __brew__ makes the installation simple. A single command, a few
 environment variables and you are done. Example:
 ```sh
-brew install android-ndk android-sdk
+$ brew tap caskroom/cask
+$ brew cask install android-sdk android-ndk
 ```
 
 This will take a while to complete. Once it is done, you need to set a few
