@@ -1,0 +1,27 @@
+{
+    "structure": {
+        "summary": "SUMMARY.md",
+        "readme": "index.md"
+    },
+    "variables": {
+        "products": [
+            {
+                "name": "API Reference",
+                "link": "http://www.cocos2d-x.org/docs/api-ref/index.html"
+            },
+            {
+                "name": "Cocos Creator",
+                "links": [
+                    {
+                        "name": "Manual",
+                        "link": "http://www.cocos2d-x.org/docs/creator/"
+                    },
+                    {
+                        "name": "API",
+                        "link": "http://www.cocos2d-x.org/docs/creator-api/"
+                    }
+                ]
+            }
+        ]
+    }
+}
