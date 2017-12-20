@@ -34,10 +34,8 @@ rm -rf editors_and_tools.tar.gz
 cd ..
 
 mv _book/ cocos2d-x/
-mv cocos2d-x ../documentation/
 
-#echo "Cocos2d-x-docs -- copy everything to deployment directory..."
-#cp -R api-ref editors_and_tools en gitbook index.html package.json #search_plus_index.json zh ../../documentation/
+rsync --recursive cocos2d-x ../documentation
 
 rm -rf cocos2d-x/
 
@@ -49,15 +47,20 @@ echo "Cocos Creator -- pulling latest from GitHub..."
 cd ../creator-docs
 git pull origin cocos2d-x.org
 
-## build it
+## build it, this repo uses npm to build
 echo "Cocos Creator -- building GitBook docs...."
-gitbook build
+echo "If this is your first time build this repo, please stop this process and run:"
+echo "npm install gulp -g"
+echo "npm install"
+echo "DO NOT COMMIT: package-lock.json"
+npm run build
 
 ## copy everything to deployment directory
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/index.html.en _book/index.html
 mv _book/ creator/
-mv creator ../documentation/
+
+rsync --recursive creator ../documentation
 
 rm -rf creator/
 
@@ -77,6 +80,7 @@ gitbook build
 echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/index.html.en _book/index.html
 mv _book/ creator-api/
-mv creator-api ../documentation/
+
+rsync --recursive creator-api ../documentation
 
 rm -rf creator-api/

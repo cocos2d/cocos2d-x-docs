@@ -49,14 +49,6 @@ cocos new MyGame -p com.MyCompany.MyGame -l lua -d ~/MyCompany
 cocos new MyGame -p com.MyCompany.MyGame -l js -d ~/MyCompany
 ```
 
-In the above examples, a new project is created using the Cocos2d-x source code.
-If you want to create a new project using the pre-built libraries you need to pass an additional flag of __-t binary__. Example:
-```sh
-cocos new MyGame -p com.MyCompany.MyGame -l cpp -d ~/MyCompany -t binary
-```
-
-If you haven't generated the pre-built libraries, please see the section below on doing so.
-
 You can run __cocos new --help__ to see even more options as well as platform
 specific options.
 

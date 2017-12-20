@@ -80,7 +80,8 @@ export PATH=$ANT_ROOT:$PATH
 使用 [__brew__](http://brew.sh/) 安装 NDK 和 SDK 是一种更简单的方式，一个命令，几个环境变量就 OK。这样操作：
 
 ```sh
-brew install android-ndk android-sdk
+brew tap caskroom/cask
+brew cask install android-sdk android-ndk
 ```
 
 下载和安装过程会需要一点时间，完成后，你需要在 _.bash_profile_ 设置一些环境变量：
