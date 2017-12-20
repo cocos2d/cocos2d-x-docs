@@ -2,7 +2,7 @@
     "plugins": [
         "-lunr",
         "-search",
-        "github-issue-feedback-language",
+        "github-issue-feedback-language-custom",
         "search-title",
         "anchorjs",
         "toggle-chapters",
@@ -13,7 +13,7 @@
         "website": "./styles/website.css"
     },
     "pluginsConfig": {
-        "github-issue-feedback-language": {
+        "github-issue-feedback-language-custom": {
             "repo": "cocos2d/cocos2d-x-docs",
             "branch": "master"
         },
