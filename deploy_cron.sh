@@ -15,6 +15,10 @@ git pull origin master
 
 cp -rf config/cocos2d-x.org/ ./
 
+## make sure gitbook is up to date
+echo "Cocos2d-x-docs -- ensuring GitBook is up to date..."
+gitbook install
+
 ## build it
 echo "Cocos2d-x-docs -- building GitBook docs...."
 gitbook build
@@ -41,6 +45,10 @@ echo "Cocos Creator -- pulling latest from GitHub..."
 cd ../creator-docs
 git pull origin cocos2d-x.org
 
+## make sure gitbook is up to date
+echo "Cocos Creator -- ensuring GitBook is up to date..."
+gitbook install
+
 ## build it
 echo "Cocos Creator -- building GitBook docs...."
 echo "If this is your first time build this repo, please stop this process and run:"
@@ -65,6 +73,10 @@ echo "------------------------"
 echo "Cocos Creator API -- pulling latest from GitHub..."
 cd ../creator-api-docs
 git pull origin cocos2d-x.org
+
+## make sure gitbook is up to date
+echo "Cocos Creator API -- ensuring GitBook is up to date..."
+gitbook install
 
 ## build it
 echo "Cocos Creator API -- building GitBook docs...."
