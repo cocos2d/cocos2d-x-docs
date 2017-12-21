@@ -10,7 +10,7 @@ echo "-----------------"
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
 git pull origin master
 
-cp -rf config/cocos2d-x.org/ ./
+cp -rf config/cocos2d-x.org/. ./
 
 ## make sure gitbook is up to date
 echo "Cocos2d-x-docs -- ensuring GitBook is up to date..."
