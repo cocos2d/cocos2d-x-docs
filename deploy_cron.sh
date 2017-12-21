@@ -13,6 +13,8 @@ echo "-----------------"
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
 git pull origin master
 
+cp -rf config/cocos2d-x.org/ ./
+
 ## build it
 echo "Cocos2d-x-docs -- building GitBook docs...."
 gitbook build
