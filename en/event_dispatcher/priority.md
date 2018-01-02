@@ -5,7 +5,7 @@ __Fixed Priority__ is an integer value. Event listeners with lower Priority valu
 
 __Scene Graph Priority__ is a pointer to a `Node`. Event listeners whose _Nodes_ have higher __z-order__ values (that is, are drawn on top) receive events before event listeners whose _Nodes_ have lower __z-order__ values (that is, are drawn below). This ensures that touch events, for example, get delivered front-to-back, as you would expect.
 
-Remember the __Basic COncepts__ chapter? Where we talked about the __scene graph__ and we talked about this diagram?
+Remember the __Basic Concepts__ chapter? Where we talked about the __scene graph__ and we talked about this diagram?
 
 ![](../basic_concepts/basic_concepts-img/in-order-walk.png "in-order walk")
 

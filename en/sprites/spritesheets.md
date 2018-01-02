@@ -3,7 +3,7 @@ A __sprite sheet__ is a way to combine sprites into a single file. Using a
 __sprite sheet__ helps achieve better performance by __batching__ the
 __draw calls__. They can also save disk and video memory in cases where the
 sprites can be packed on a sheet more efficiently (generally requires special tools).
-You will read more about this in the Advanced Chapter, but it is but it is one of many
+You will read more about this in the Advanced Chapter, but it is one of many
 standard methods in the industry for increasing game performance.
 
 When using a __sprite sheet__ it is first loaded, in its entirety, into the

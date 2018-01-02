@@ -17,7 +17,7 @@ MoveBy::create(10, Vec2(400,100));
 This will move __heroSprite__ from *(0,0)* to *(400, 100)* over the course of
 *10 seconds*. __heroSprite__ now has a new position of *(400, 100)* and more
 importantly the `Action` has this position in it's __internal state__. Now, say
-you have an __emenySprite__ with a position of *(200, 200)*. If you were to apply
+you have an __enemySprite__ with a position of *(200, 200)*. If you were to apply
 this same:
 
 {% codetabs name="C++", type="cpp" -%}
