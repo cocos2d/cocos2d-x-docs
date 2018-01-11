@@ -94,6 +94,9 @@ mv _book/ creator-api/
 rsync --recursive creator-api ../documentation
 
 rsync --recursive creator-api ../documentation/api-ref/creator
+
+rm -rf ../documentation/api-ref/creator/v1.7/
+
 mv ../documentation/api-ref/creator/creator-api/ ../documentation/api-ref/creator/v1.7/
 
 rm -rf creator-api/
