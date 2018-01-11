@@ -43,7 +43,9 @@ echo "-----------------------"
 ## pull latest from github
 echo "Cocos Creator -- pulling latest from GitHub..."
 cd ../creator-docs
-git pull origin cocos2d-x.org
+git pull origin master
+
+cp -rf config/cocos2d-x.org/. ./
 
 ## make sure gitbook is up to date
 echo "Cocos Creator -- ensuring GitBook is up to date..."
@@ -72,7 +74,9 @@ echo "------------------------"
 ## pull latest from github
 echo "Cocos Creator API -- pulling latest from GitHub..."
 cd ../creator-api-docs
-git pull origin cocos2d-x.org
+git pull origin master
+
+cp -rf config/cocos2d-x.org/. ./
 
 ## make sure gitbook is up to date
 echo "Cocos Creator API -- ensuring GitBook is up to date..."
