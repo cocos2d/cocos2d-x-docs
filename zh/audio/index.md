@@ -8,7 +8,7 @@
 
 | 平台  |支持的常见文件格式| 备注  |
 |-------|-------------------|------|
-|Android|mp3, mid, oggg, wav|可以播放android.media.MediaPlayer所支持的所有格式|
+|Android|mp3, mid, ogg, wav|可以播放android.media.MediaPlayer所支持的所有格式|
 |iOS    |aac, caf, mp3, m4a, wav|可以播放AVAudioPlayer所支持的所有格式|
 |Windows|mid, mp3, wav| 无|
 
@@ -16,6 +16,6 @@
 
 | 平台  |支持的常见文件格式| 备注  |
 |-------|-------------------|------|
-|Android| oggg, wav|对wav的支持不完美|
+|Android| ogg, wav|对wav的支持不完美|
 |iOS    | caf, m4a|可以播放Cocos2d-iPhone CocosDesion所支持的所有格式|
 |Windows| mid, wav| 无|
