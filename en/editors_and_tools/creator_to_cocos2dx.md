@@ -138,7 +138,7 @@ For Lua projects, require 2 steps:
 
   * add code to access the exported files.
     ```lua
-    local creatorReader = cc.CreatorReader:createWithFilename('creator/CreatorSprites.ccreator')
+    local creatorReader = creator.CreatorReader:createWithFilename('creator/CreatorSprites.ccreator')
     creatorReader:setup()
     local scene = creatorReader:getSceneGraph()
     cc.Director:getInstance():replaceScene(scene)
