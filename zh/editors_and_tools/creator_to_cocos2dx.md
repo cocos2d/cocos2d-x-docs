@@ -164,7 +164,7 @@ void some_function()
 * 添加代码使用导出的场景：
 
     ```lua
-    local creatorReader = cc.CreatorReader:createWithFilename('creator/CreatorSprites.ccreator')
+    local creatorReader = creator.CreatorReader:createWithFilename('creator/CreatorSprites.ccreator')
     creatorReader:setup()
     local scene = creatorReader:getSceneGraph()
     cc.Director:getInstance():replaceScene(scene)
