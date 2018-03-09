@@ -62,11 +62,11 @@ npm run build
 ## copy everything to deployment directory
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
-mv _book/ creator/
+mv _book/ manual/
 
-rsync --recursive creator ../documentation
+rsync --recursive manual ../documentation/creator
 
-rm -rf creator/
+rm -rf manual/
 
 echo "------------------------"
 echo "Cocos Creator API-Ref..."
@@ -89,16 +89,16 @@ gitbook build
 ## copy everything to deployment directory
 echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
-mv _book/ creator-api/
+mv _book/ api/
 
-rsync --recursive creator-api ../documentation
+rsync --recursive api ../documentation/creator
 
-rsync --recursive creator-api ../documentation/api-ref/creator
+rsync --recursive api ../documentation/api-ref/creator
 
-rm -rf ../documentation/api-ref/creator/v1.7/
+rm -rf ../documentation/api-ref/creator/v1.8/
 
-mv ../documentation/api-ref/creator/creator-api/ ../documentation/api-ref/creator/v1.7/
+mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.8/
 
-rm -rf creator-api/
+rm -rf api/
 
 cd ..
