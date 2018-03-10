@@ -65,16 +65,18 @@ echo "If this is your first time build this repo, please stop this process and r
 echo "npm install gulp -g"
 echo "npm install"
 echo "DO NOT COMMIT: package-lock.json"
+npm install gulp -g
+npm install
 npm run build
 
 ## copy everything to deployment directory
 echo "Cocos Creator -- copy everything to deployment directory..."
-cp ../cocos2d-x-docs/index.html.en _book/index.html
-mv _book/ creator/
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
+mv _book/ manual/
 
-rsync --recursive creator ../documentation
+rsync --recursive manual ../documentation/creator
 
-rm -rf creator/
+rm -rf manual/
 
 echo "------------------------"
 echo "Cocos Creator API-Ref..."
