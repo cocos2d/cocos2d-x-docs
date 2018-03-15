@@ -97,9 +97,9 @@ rsync --recursive api ../documentation/creator
 
 rsync --recursive api ../documentation/api-ref/creator
 
-rm -rf ../documentation/api-ref/creator/v1.8/
+rm -rf ../documentation/api-ref/creator/v1.9/
 
-mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.8/
+mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
 
 rm -rf api/
 
