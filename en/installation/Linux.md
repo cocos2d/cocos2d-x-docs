@@ -7,20 +7,50 @@ A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 We support Ubuntu 12.10+, however, newer versions of Ubuntu have changed and the steps to install Cocos2d-x and required dependencies are a bit different. This requires some manual effort and this doc will outline what is required.
 
 ## Setting up Cocos2d-x
-* Download Cocos2d-x and unzip it. (maybe: ~/)
+You can get started with __Cocos2d-x__ by either downloading a self-contained
+__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our
+[GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
+__There is no need to do both.__
 
-* Install dependencies. If you are using Ubuntu/Debian, there is a shell script
-__build/install-deps-linux.sh__ for you to install the dependences easily. Run
-the commands below, in a terminal:
+### By downloading a .zip archive
+Download Cocos2d-x and unzip it. (maybe: __~/__ or __~/Projects__ )
+
+  ![](iOS-img/unzip.png "")
+
+  ![](iOS-img/unzipping.png "")
+
+### Cloning from GitHub
+Use the following commands to clone our GitHub repo and get your environment setup. If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download
+using the step above, __By downloading a .zip archive__.
 
     ```sh
-    > cd $cocos2dx_root/build
-    > ./install-deps-linux.sh
+    cd <to where you want to clone this repo>
+
+    git clone git@github.com:cocos2d/cocos2d-x.git
+
+    git submodule update --init
+
+    git submodule update
+
+    ./download-deps.py
     ```
 
-    Otherwise, you should install the dependencies manually. The dependencies are:
+## Make sure you have a working environment!
+See __Prerequisites__ above. This means a working __Python__, having run __<cocos2d-x root>/setup.py>__, updated your __$PATH__ and run __source ~/.bash_profile__.
+
+## Dependencies that you need
+Cocos2d-x requires a number of dependencies be installed on your system. Please perform the following steps:
+
+* Add a repo to `/etc/`
 
     ```sh
+
+    ```
+
+* Install dependencies.
+
+    ```sh
+    sudo apt-get install git cmake
     libx11-dev
     libxmu-dev
     libglu1-mesa-dev
@@ -34,6 +64,9 @@ the commands below, in a terminal:
     libsqlite3-dev
     libglew*-dev
     libssl-dev
+
+
+
     ```
 
 ## Building Cocos2d-x
