@@ -3,6 +3,9 @@
 ## Prerequisites
 A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
+## Ubuntu versions
+We support Ubuntu 12.10+, however, newer versions of Ubuntu have changed and the steps to install Cocos2d-x and required dependencies are a bit different. This requires some manual effort and this doc will outline what is required.
+
 ## Setting up Cocos2d-x
 * Download Cocos2d-x and unzip it. (maybe: ~/)
 
