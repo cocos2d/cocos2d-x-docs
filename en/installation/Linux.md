@@ -41,41 +41,30 @@ See __Prerequisites__ above. This means a working __Python__, having run __<coco
 ## Dependencies that you need
 Cocos2d-x requires a number of dependencies be installed on your system. Please perform the following steps:
 
-* Add a repo to `/etc/`
+* Add a repo to `/etc/apt/sources.list`
 
     ```sh
+    deb http://cz.archive.ubuntu.com/ubuntu xenial main
+    ```
+* Execute:
 
+    ```sh
+    sudo apt-get update
     ```
 
 * Install dependencies.
 
     ```sh
-    sudo apt-get install git cmake
-    libx11-dev
-    libxmu-dev
-    libglu1-mesa-dev
-    libgl2ps-dev
-    libxi-dev
-    g++
-    libzip-dev
-    libpng12-dev
-    libcurl4-gnutls-dev
-    libfontconfig1-dev
-    libsqlite3-dev
-    libglew*-dev
-    libssl-dev
-
-
-
+    sudo apt-get install g++ python2.7 python-pip git cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng12-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libpng12-0 libglfw3 libglfw3-dev xorg-dev
     ```
 
 ## Building Cocos2d-x
 * Run __cmake__ to generate __makefile__:
 
     ```sh
-    > mkdir linux-build
-    > cd linux-build
-    > cmake ../..
+    mkdir linux-build
+    cd linux-build
+    cmake ../..
     ```
 
 * When __cmake__ finishes, many files & folders will be generated in
@@ -86,7 +75,7 @@ __coocs2dx_root/build/linux-build__
 * Run __make__ to compile:
 
     ```sh
-    > make
+    make
     ```
 
     Everything will be generated in __cocos2dx_root/build/linux-build/bin/cpp-tests/__
@@ -95,8 +84,8 @@ __coocs2dx_root/build/linux-build__
 * Run `cpp-tests`
 
     ```sh
-    > cd bin/cpp-tests/
-    > ./cpp-tests
+    cd bin/cpp-tests/
+    ./cpp-tests
     ```
 
 ## Starting a new project
