@@ -57,13 +57,14 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 * Install dependencies.
 
     ```sh
-    sudo apt-get install g++ python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng12-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libpng12-0 libglfw3 libglfw3-dev xorg-dev
+    sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
     ```
 
 ## Building Cocos2d-x
 * Run __cmake__ to generate __makefile__:
 
     ```sh
+    cd build
     mkdir linux-build
     cd linux-build
     cmake ../..
