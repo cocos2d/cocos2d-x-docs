@@ -40,6 +40,7 @@ using the step above, __By downloading a .zip archive__.
 ## Make sure you have a working environment!
 See __Prerequisites__ above. This means a working __Python__, having run __<cocos2d-x root>/setup.py>__, updated your __$PATH__ and run __source ~/.bash_profile__.
 
+{% codetabs name="17.x", type="shell" -%}
 ## Dependencies that you need
 Cocos2d-x requires a number of dependencies be installed on your system. Please perform the following steps:
 
@@ -59,6 +60,7 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
     ```sh
     sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
     ```
+{%- endcodetabs %}
 
 ## Building Cocos2d-x
 * Run __cmake__ to generate __makefile__:
