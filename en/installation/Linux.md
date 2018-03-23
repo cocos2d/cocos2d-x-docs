@@ -24,8 +24,8 @@ Use the following commands to clone our GitHub repo and get your environment set
 using the step above, __By downloading a .zip archive__.
 
     ```sh
-    sudo apt-get install git
-    
+    sudo apt-get install git python2.7
+
     cd <to where you want to clone this repo>
 
     git clone git@github.com:cocos2d/cocos2d-x.git
@@ -57,7 +57,7 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 * Install dependencies.
 
     ```sh
-    sudo apt-get install g++ python2.7 python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng12-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libpng12-0 libglfw3 libglfw3-dev xorg-dev
+    sudo apt-get install g++ python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng12-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libpng12-0 libglfw3 libglfw3-dev xorg-dev
     ```
 
 ## Building Cocos2d-x
