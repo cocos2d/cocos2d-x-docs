@@ -3,43 +3,86 @@
 ## Prerequisites
 A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
+## Ubuntu versions
+We support Ubuntu 12.10+, however, newer versions of Ubuntu have changed and the steps to install Cocos2d-x and required dependencies are a bit different. This requires some manual effort and this doc will outline what is required.
+
 ## Setting up Cocos2d-x
-* Download Cocos2d-x and unzip it. (maybe: ~/)
+You can get started with __Cocos2d-x__ by either downloading a self-contained
+__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our
+[GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
+__There is no need to do both.__
 
-* Install dependencies. If you are using Ubuntu/Debian, there is a shell script
-__build/install-deps-linux.sh__ for you to install the dependences easily. Run
-the commands below, in a terminal:
+### By downloading a .zip archive
+Download Cocos2d-x and unzip it. (maybe: __~/__ or __~/Projects__ )
+
+  ![](iOS-img/unzip.png "")
+
+  ![](iOS-img/unzipping.png "")
+
+### Cloning from GitHub
+Use the following commands to clone our GitHub repo and get your environment setup. If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download
+using the step above, __By downloading a .zip archive__.
 
     ```sh
-    > cd $cocos2dx_root/build
-    > ./install-deps-linux.sh
+    sudo apt-get install git python2.7
+
+    cd <to where you want to clone this repo>
+
+    git clone git@github.com:cocos2d/cocos2d-x.git
+
+    git submodule update --init
+
+    git submodule update
+
+    ./download-deps.py
     ```
 
-    Otherwise, you should install the dependencies manually. The dependencies are:
+## Make sure you have a working environment!
+See __Prerequisites__ above. This means a working __Python__, having run __<cocos2d-x root>/setup.py>__, updated your __$PATH__ and run __source ~/.bash_profile__.
+
+## Dependencies that you need
+Cocos2d-x requires a number of dependencies be installed on your system. Please perform the following steps:
+
+{% codetabs name="16.x", type="shell" -%}
+* Execute:
 
     ```sh
-    libx11-dev
-    libxmu-dev
-    libglu1-mesa-dev
-    libgl2ps-dev
-    libxi-dev
-    g++
-    libzip-dev
-    libpng12-dev
-    libcurl4-gnutls-dev
-    libfontconfig1-dev
-    libsqlite3-dev
-    libglew*-dev
-    libssl-dev
+    sudo apt-get update
     ```
+
+* Install dependencies.
+
+    ```sh
+    sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
+    ```
+{%- language name="17.x", type="shell" -%}
+
+* Add a repo to `/etc/apt/sources.list`
+
+    ```sh
+    deb http://cz.archive.ubuntu.com/ubuntu xenial main
+    ```
+* Execute:
+
+    ```sh
+    sudo apt-get update
+    ```
+
+* Install dependencies.
+
+    ```sh
+    sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
+    ```
+{%- endcodetabs %}
 
 ## Building Cocos2d-x
 * Run __cmake__ to generate __makefile__:
 
     ```sh
-    > mkdir linux-build
-    > cd linux-build
-    > cmake ../..
+    cd build
+    mkdir linux-build
+    cd linux-build
+    cmake ../..
     ```
 
 * When __cmake__ finishes, many files & folders will be generated in
@@ -50,7 +93,7 @@ __coocs2dx_root/build/linux-build__
 * Run __make__ to compile:
 
     ```sh
-    > make
+    make
     ```
 
     Everything will be generated in __cocos2dx_root/build/linux-build/bin/cpp-tests/__
@@ -59,8 +102,8 @@ __coocs2dx_root/build/linux-build__
 * Run `cpp-tests`
 
     ```sh
-    > cd bin/cpp-tests/
-    > ./cpp-tests
+    cd bin/cpp-tests/
+    ./cpp-tests
     ```
 
 ## Starting a new project
