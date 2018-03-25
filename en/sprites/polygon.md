@@ -6,10 +6,9 @@ triangles, `PolygonSprite` objects are made of a series of triangles.
 ### Why use a Polygon Sprite?
 Simple, __performance__!
 
-There is a lot of technical jargon that we can toss around here about __pixel fill rate__
-but the take home lesson is that a `PolygonSprite` draws based upon the shape of
-your `Sprite`, not a simple rectangle around the largest width and height. This
-saves a lot of unnecessary drawing. Consider this example:
+There is a lot of technical jargon that we can toss around here about __pixel fill rate__ but the take home lesson is that a `PolygonSprite` draws based upon the shape of your `Sprite`, not a simple rectangle around the largest width and height. This saves a lot of unnecessary drawing. Just like `Sprite` objects, `PolygonSprite` objects can be used in __spritesheets__. [Texture Packer](https://www.codeandweb.com/texturepacker) is one tool that can handle creating __spritesheets__ with out of `PolygonSprite` objects.
+
+Consider this example:
 
 ![](sprites-img/polygonsprite.png "")
 
@@ -21,8 +20,7 @@ triangles.
 On the right, a `PolygonSprite` drawn with many smaller triangles.
 
 Whether or not this trade-off is worth it for purely performance reasons depends
-on a number of factors (sprite shape/detail, size, quantity drawn on screen, etc.),
-but in general, *vertices are cheaper than pixels* on modern GPUs.
+on a number of factors (sprite shape/detail, size, quantity drawn on screen, etc.), but in general, *vertices are cheaper than pixels* on modern GPUs.
 
 <!--Now more and more GPUs were tailor designed to do 3d graphics, which can handle loads of vertices, but limited in Pixel Fill-Rate. But by representing almost always "None-rectangular" 2d images with a rectangular quad, GPU wastes precious bandwidth drawing totally transparent part of the sprite.
 
