@@ -44,8 +44,7 @@ tools that can generate them automatically. These tools can provide even more
 ways to adjust your __sprite sheet__ for maximum optimization!
 
 Here are a few tools:
-
+* [Texture Packer](https://www.codeandweb.com/texturepacker) **Recommended**
 * [ShoeBox](http://renderhjs.net/shoebox/)
-* [Texture Packer](https://www.codeandweb.com/texturepacker)
 * [Zwoptex](https://www.zwopple.com/zwoptex/)
 * [Sprite Sheet Packer](http://amakaseev.github.io/sprite-sheet-packer/)
