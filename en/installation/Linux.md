@@ -90,17 +90,11 @@ Install dependencies.
 
 {%- language name="18.x", type="shell" -%}
 
-  Add a repo to `/etc/apt/sources.list`
+Install dependencies.
 
-    ```sh
-    deb http://cz.archive.ubuntu.com/ubuntu xenial main
-    ```
-
-  Install dependencies.
-
-    ```sh
-    sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
-    ```
+  ```sh
+  sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
+  ```
 
 {%- endcodetabs %}
 
