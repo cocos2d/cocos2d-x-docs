@@ -24,7 +24,7 @@ using the step above, __By downloading a .zip archive__.
 
   cd <to where you want to clone this repo>
 
-  git clone git@github.com:cocos2d/cocos2d-x.git
+  git clone https://github.com/cocos2d/cocos2d-x.git
 
   git submodule update --init
 
