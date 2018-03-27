@@ -125,7 +125,7 @@ __coocs2dx_root/build/linux-build__
 * Run `cpp-tests`
 
     ```sh
-    cd bin/cpp-tests/
+    cd cocos2d-x_root/build/linux-build/engine/tests/cpp-tests
     ./cpp-tests
     ```
 
