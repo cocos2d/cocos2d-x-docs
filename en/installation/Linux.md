@@ -44,6 +44,8 @@ Install Python.
 
   cd <to where you want to clone this repo>
 
+  cd cocos2d-x-root #where your cocos2d-x directory is located.
+
   git clone https://github.com/cocos2d/cocos2d-x.git
 
   git submodule update --init
