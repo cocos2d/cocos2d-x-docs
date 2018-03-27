@@ -102,6 +102,7 @@ Install dependencies.
 * Run __cmake__ to generate __makefile__:
 
     ```sh
+    cd cocos2d-x-root #where your cocos2d-x directory is located.
     cd build
     mkdir linux-build
     cd linux-build
