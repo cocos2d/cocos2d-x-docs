@@ -44,6 +44,8 @@ Install Python.
 
   cd <to where you want to clone this repo>
 
+  cd cocos2d-x-root #where your cocos2d-x directory is located.
+
   git clone https://github.com/cocos2d/cocos2d-x.git
 
   git submodule update --init
@@ -102,6 +104,7 @@ Install dependencies.
 * Run __cmake__ to generate __makefile__:
 
     ```sh
+    cd cocos2d-x-root #where your cocos2d-x directory is located.
     cd build
     mkdir linux-build
     cd linux-build
@@ -125,7 +128,7 @@ __coocs2dx_root/build/linux-build__
 * Run `cpp-tests`
 
     ```sh
-    cd bin/cpp-tests/
+    cd cocos2d-x_root/build/linux-build/engine/tests/cpp-tests
     ./cpp-tests
     ```
 
