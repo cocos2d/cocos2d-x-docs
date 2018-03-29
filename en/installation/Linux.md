@@ -119,7 +119,7 @@ __coocs2dx_root/build/linux-build__
 * Run __make__ to compile:
 
     ```sh
-    make
+    make -j 4
     ```
 
     Everything will be generated in __cocos2dx_root/build/linux-build/bin/cpp-tests/__
@@ -128,7 +128,7 @@ __coocs2dx_root/build/linux-build__
 * Run `cpp-tests`
 
     ```sh
-    cd cocos2d-x_root/build/linux-build/engine/tests/cpp-tests
+    cd cocos2dx_root/build/linux-build/bin/cpp-tests/
     ./cpp-tests
     ```
 
