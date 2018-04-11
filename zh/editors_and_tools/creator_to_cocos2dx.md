@@ -65,7 +65,7 @@ Mask | Collider | Prefab | DragonBones
 
 * __Export Resource Dynamically Loaded__, 导出可能被动态加载的资源，根据 Creator 的资源使用规范，动态加载的资源需要放置到 resources 目录下。默认的导出选项，只导出在 Creator 场景中被静态引用的资源文件。
 
-* __Auto Build After Scene Saved__,在 Creator 场景保存后，后台运行插件，按照面板的配置进行导出，这简化了开发者使用插件进行导出的流程。
+* __Auto Build After Scene Saved__,在 Creator 场景保存后，后台运行插件，按照面板的配置进行导出。通过这种方式简化开发者使用插件进行导出的流程。
 
 ## 场景导入 Cocos2d-x 项目
 
