@@ -59,6 +59,14 @@ Mask | Collider | Prefab | DragonBones
 
   > _NATIVE_PROJECT_ROOT 是 Build 时，选择的 Project Path 路径_
 
+#### 导出选项
+
+* __Export Resource Only__, 不导出插件包含的 reader 源码，只导出 Creator 的场景和相关的资源，通过这种方式，可以避免二次导出的时候插件附带的原始 reader 覆盖掉已经导出到项目中的 reader。 
+
+* __Export Resource Dynamically Loaded__, 导出可能被动态加载的资源，根据 Creator 的资源使用规范，动态加载的资源需要放置到 resources 目录下。默认的导出选项，只导出在 Creator 场景中被静态引用的资源文件。
+
+* __Auto Build After Scene Saved__,在 Creator 场景保存后，后台运行插件，按照面板的配置进行导出，这简化了开发者使用插件进行导出的流程。
+
 ## 场景导入 Cocos2d-x 项目
 
 完成上一步的场景导出后，reader 源码和 Creator 资源都被放到文件系统中了。此时你需要将这些东西，添加到工程中。
