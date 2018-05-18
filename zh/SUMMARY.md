@@ -105,6 +105,7 @@
   - [macOS](installation/OSX.md)
   - [Linux 平台](installation/Linux.md)
   - [Windows 平台](installation/Windows.md)
+  - [CMake 构建](installation/CMake-Guide.md)
 
 - [引擎工具](editors_and_tools/cocosCLTool.md)
   - [cocos 命令](editors_and_tools/cocosCLTool.md)
