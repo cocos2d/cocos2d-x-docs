@@ -3,11 +3,11 @@
 ## 工具准备
 
 1. **Visual Studio 2015**，我们已在 `Visual Studio 2015` 上做了版本功能的完整验证，建议用户使用此IDE，以防止由于版本不同引发编译或运行错误。下载参见：[官网页面](https://www.visualstudio.com/zh-hans/downloads/)，[Visual Studio 2015 发布页面](https://www.visualstudio.com/zh-cn/news/releasenotes/vs2015-update3-vs)。
-1. cocos2d-x v3.16，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
+1. cocos2d-x v3.17，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
 
 ## 配置步骤
 
-1. 双击 `cocos2d-x-3.16\build\cocos2d-win32.sln`， Visual Studio 将打开此解决方案，解决方案打开后，可以看到这样的项目列表：
+1. 双击 `cocos2d-x-3.17\build\cocos2d-win32.sln`， Visual Studio 将打开此解决方案，解决方案打开后，可以看到这样的项目列表：
 
     ![](./Windows-img/cpp-tests-win32-solution.png "")
 
@@ -30,7 +30,7 @@
 
 ### 使用 `Visual Studio 2017` 运行 `cpp-tests` 注意事项
 
-1. 由于 `Visual Studio 2017` 默认下载的组件可能与 `cocos2d-x-3.16.zip` 发布包中项目的配置不同，造成打开 `cocos2d-x-3.16\build\cocos2d-win32.sln` 会缺少组件，按照提示安装。
+1. 由于 `Visual Studio 2017` 默认下载的组件可能与 `cocos2d-x-3.17.zip` 发布包中项目的配置不同，造成打开 `cocos2d-x-3.17\build\cocos2d-win32.sln` 会缺少组件，按照提示安装。
 1. 可能 `Visual Studio 2017` 与 `Visual Studio 2015` 读取配置文件逻辑有差异，`cpp-tests` 未自动设置为启动项目，在项目列表中右键单击此项目，选择 `设为启动项目`。
 1. 编译时有工具集报错, 按照报错提示 `右键单击该解决方案，然后选择“重定解决方案目标”` 操作，完成后右键单击项目重新生成。报错信息如下：
 
