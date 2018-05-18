@@ -23,7 +23,7 @@ CMake 是一个开源的跨平台构建工具，Cocos2d-x 是一个开源的跨�
 
     * `-DCMAKE_BUILD_TYPE=Release` 指定以 Release 模式生成工程。
 
-1. `-H -B`，`-H` 用来指定一个源码目录，指定的目录必须含有一个 CMakeLists.txt 文件，`-B` 用来指定 CMake 生成的中间文件的存放目录。
+1. `-H -B`，`-H` 用来指定一个源码目录，指定的目录必须含有一个 CMakeLists.txt 文件，`-B` 用来指定 CMake 生成的中间文件的存放目录。
 
     * `-H..\cocos2d-x  -Bmsvc_build` 指定要构建工程的工程路径是上一级目录的 cocos2d-x 子目录，指定 CMake 生成的文件存放在 msvc_build 目录。
 
@@ -37,15 +37,15 @@ CMake 是一个开源的跨平台构建工具，Cocos2d-x 是一个开源的跨�
 
 1. `GEN_COCOS_PREBUILT` 控制构建过程是否生成预编译库，默认行为是不生成，开启选项将会增加一个构建目标：prebuilt，执行这个构建目标时，将会编译引擎部分的代码，并将生成的库文件，拷贝至存放预编译库的目录，默认将库拷贝至引擎目录的 prebuilt 子目录。
 
-    * `-DGEN_COCOS_PREBUILT=ON` 将会增加一个构建目录：prebuilt，用于执行库的生成，拷贝。
+    * `-DGEN_COCOS_PREBUILT=ON` 将会增加一个构建目录：prebuilt，用于执行库的生成，拷贝。
 
-1. `USE_COCOS_PREBUILT` 控制生成的构建工程是否使用预编译库，默认行为是不使用，开启选项将会自动查找使用预编译库，关闭库相关的构建目标，默认在引擎目录的 prebuilt 子目录查找预编译库。
+1. `USE_COCOS_PREBUILT` 控制生成的构建工程是否使用预编译库，默认行为是不使用，开启选项将会自动查找使用预编译库，关闭库相关的构建目标，默认在引擎目录的 prebuilt 子目录查找预编译库。
 
     * `-DUSE_COCOS_PREBUILT=ON` 将会自动使用预编译库，关于库相关的 target。
 
-1. `COCOS_PREBUILT_ROOT` 指定预编译库存放的目录，是一个可选选项，对于在 Android 平台中使用预编译库是一个必选选项，因为正常情况下，Android Studio 在进行 CMake 构建过程时，无法获取到环境变量，导致找不到引擎根目录。
+1. `COCOS_PREBUILT_ROOT` 指定预编译库存放的目录，是一个可选选项，对于在 Android 平台中使用预编译库是一个必选选项，因为正常情况下，Android Studio 在进行 CMake 构建过程时，无法获取到环境变量，导致找不到引擎根目录。
 
-    * `-DCOCOS_PREBUILT_ROOT=/Users/laptop/cocos-prebuilt` 设置存放/查找预编译库的目录
+    * `-DCOCOS_PREBUILT_ROOT=/Users/laptop/cocos-prebuilt` 设置存放预编译库的目录
 
 
 ## 各平台构建示例
@@ -79,9 +79,7 @@ mkdir mac-build && cd mac-build
 cmake .. -GXcode
 open Cocos2d-x.xcodeproj
 ```
-在 macOS 上使用 `cmake .. -GXcode` 将会默认生成 macOS 的工程。
-
-> iOS 工程和 macOS 工程并不能同时生成到一个 XCode 工程中
+在 macOS 上使用 `cmake .. -GXcode` 将会默认生成 macOS 的工程。iOS 工程和 macOS 工程并不能同时生成到一个 XCode 工程中。
 
 ### iOS
 
