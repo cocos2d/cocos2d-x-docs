@@ -4,7 +4,7 @@ CMake 是一个开源的跨平台构建工具，Cocos2d-x 是一个开源的跨�
 
 支持的平台包括 Android (NDK)、iOS、macOS、Linux、Windows（VC++ compiler），同时支持通过 CMake 将引擎部分进行预编译，并在新的构建过程中重用预编译的引擎库。通过这种方式，可以极大的缩短工程构建时间。
 
-## 前提
+## 基本概念
 
 在使用 CMake 构建工程之前，最好能对软件构建中一些基本的概念有初步的了解，比如什么是编译，链接，打包。了解这些对后续使用 CMake 有很大的帮助。此处只解释一个 CMake 特有的概念：外部构建（Out-of-source Build），在从源码生成最终的二进制可执行文件的过程中，会生成大量的中间文件，中间文件和源码在同一个目录内称为内部构建（In-source Build）,当内部构建时中间文件会使源码目录脏乱不堪，为了解决这个问题，CMake 提供了外部构建，即将所有生成的中间文件都放在一个非源码目录中，这样无论构建多少次，源码目录始终干净如新。
 
@@ -46,6 +46,67 @@ CMake 是一个开源的跨平台构建工具，Cocos2d-x 是一个开源的跨�
     * `-DCOCOS_PREBUILT_ROOT=/Users/laptop/cocos-prebuilt` 设置存放/查找预编译库的目录
 
 
-## 构建示例
+## 各平台构建示例
+
+### Linux
+
+```sh
+cd cocos2d-x
+mkdir linux-build && cd linux-build
+cmake ..
+make -j 4
+``` 
+在执行 `make -j 4` 命令之前，可以执行 `make help` 查看所有的构建目标，使用 `make <target>` 构建一个特定的目标。
+
+### Windows
+
+```sh
+cd cocos2d-x
+mkdir win32-build && cd win32-build
+cmake .. -G"Visual Studio 15 2017"
+```
+以上命令使用 CMake 生成 Cocos2d-x 测试项目的 Visual Studio 2017 工程。生成后，在文件浏览器中找到 `cocos2d-x/win32-build` 目录，双击打开 __Cocos2d-x.sln__。设置 cpp-tests 为启动项目，即可正常编译运行。
+
+另一种方式，由于 Visual Studio 2017 已经直接支持 CMake 工程，可以直接使用。详细请参考 [Visual Studio 2017 文档 CMake 支持](https://docs.microsoft.com/zh-cn/cpp/ide/cmake-tools-for-visual-cpp)。
+
+### macOS
+
+```sh
+cd cocos2d-x
+mkdir mac-build && cd mac-build
+cmake .. -GXcode
+open Cocos2d-x.xcodeproj
+```
+
+### iOS
+
+```sh
+cd cocos2d-x
+mkdir ios-build && cd ios-build
+cmake .. -GXcode -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake
+open Cocos2d-x.xcodeproj
+```
+
+默认构建的是为运行在 iOS 设备的工程，如果想构建运行在模拟器的工程，请加参数 `-DIOS_PLATFORM=SIMULATOR` 或 `-DIOS_PLATFORM=SIMULATOR64`。
+
+### Android
+
+默认工程配置在 Android 上使用旧有的 ndk-build 构建 C++ 部分，开启 CMake 构建，请先更改 Gradle 配置中的 `PROP_NDK_MODE` 属性为 cmake，再同步 Gradle 配置，同步完成后，可以看到外部构建脚本从 `Android.mk` 变为了 `CMakeLists.txt`。
+
+```sh
+# android native code build type
+# none, native code will never be compiled.
+# cmake, native code will be compiled by CMakeLists.txt
+# ndk-build, native code will be compiled by Android.mk
+PROP_BUILD_TYPE=ndk-build
+```
+
+如果需要在 Android Studio 中使用预编译库，需特别设置预编译库存放的目录，请参考关于预编译库的介绍，以及 `build.gradle` 中的注释。
 
 ## CMake 帮助
+
+* CMake 官网: [cmake.org](https://cmake.org/)
+
+* CMake 文档: [cmake.org/documentation](https://cmake.org/documentation/)
+
+* CMake FAQ: [Wiki/CMake_FAQ](https://cmake.org/Wiki/CMake_FAQ)
