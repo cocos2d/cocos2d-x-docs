@@ -103,6 +103,37 @@ PROP_BUILD_TYPE=ndk-build
 
 如果需要在 Android Studio 中使用预编译库，需特别设置预编译库存放的目录，请参考关于预编译库的介绍，以及 `build.gradle` 中的注释。
 
+## 预编译库示例
+
+使用引擎的预编译库，可以避免再次编译引擎代码，将引擎部分的代码编译时间缩减为零！从而有效的降低项目的构建时间。以下示例为使用一个 C++ 工程生成预编译库，并在其它 C++ 工程中使用。
+
+1. 开启 `GEN_COCOS_PREBUILT` 选项，生成预编译库
+
+```sh
+cocos new -l cpp -p my.pack.app1 test_app1
+mkdir app1_build && cd app1_build
+cmake ../test_app1 -DGEN_COCOS_PREBUILT=ON
+make prebuilt
+```
+
+1. 关闭 `GEN_COCOS_PREBUILT` 选项，开启 `USE_COCOS_PREBUILT` 选项，在本项目中使用预编译库
+
+```sh
+cmake ../test_app1 -DGEN_COCOS_PREBUILT=OFF -DUSE_COCOS_PREBUILT=ON
+make TemplateCpp
+open bin/TemplateCpp.app
+```
+
+1. 直接开启 `USE_COCOS_PREBUILT` 选项，在一个新的项目中使用生成的预编译库
+
+```sh
+cocos new -l cpp -p my.pack.app2 test_app2
+mkdir app2_build && cd app2_build
+cmake ../test_app2 -DUSE_COCOS_PREBUILT=ON
+make TemplateCpp
+open bin/TemplateCpp.app
+```
+
 ## CMake 帮助
 
 * CMake 官网: [cmake.org](https://cmake.org/)
