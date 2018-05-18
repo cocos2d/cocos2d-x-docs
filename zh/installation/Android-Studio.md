@@ -2,12 +2,12 @@
 
 ## 工具准备
 
-1. Android Studio v3.0+， 下载参见：[Google中国开发者网站](https://developer.android.google.cn/studio/index.html)
-1. cocos2d-x v3.17，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
+1. Android Studio v3.0+， 下载参见：[Google 中国开发者网站](https://developer.android.google.cn/studio/index.html)
+1. cocos2d-x v3.17，下载后解压，下载参见：[Cocos 官网页面](http://www.cocos.com/download)
 
 ## 配置步骤：
 
-1. 完成 Android Studio 安装，进入欢迎界面，选择 `Import project(Gradle, Eclipse ADT, etc.)`。选择目录`cocos2d-x root/tests/cpp-tests/proj.android-studio`，点击 `OK` 进入 IDE 主界面。
+1. 完成 Android Studio 安装，进入欢迎界面，选择 `Import project(Gradle, Eclipse ADT, etc.)`。选择目录 `cocos2d-x root/tests/cpp-tests/proj.android-studio`，点击 `OK` 进入 IDE 主界面。
 
     ![](Android-Studio-img/Import-project.png)
 

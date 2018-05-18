@@ -8,10 +8,10 @@
 
 ## 环境要求
 
-* Mac OS X 10.7+, Xcode 7+
-* Ubuntu 12.10+, CMake 2.6+
-* Windows 7+, VS 2013+
+* Mac OS X 10.7+, Xcode 8+
+* Ubuntu 14.04+, CMake 3.1+
+* Windows 7+, VS 2015+
 * Python 2.7.5+, NOT Python 3
-* NDK r11+ is required to build Android games (tested with r14)
-* Android Studio 2.3.3+ to build Android games (tested with 2.3.3 and 3.0)
+* NDK r16+ is required to build Android games (tested with r16)
+* Android Studio 3.0+ to build Android games (tested with 3.0)
 * JRE or JDK 1.6+ is required for web publishing
