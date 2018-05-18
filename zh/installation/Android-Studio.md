@@ -61,8 +61,12 @@
 
 ## FAQ
 
-### 如何使用 x86 ABI 的模拟器运行 cocos2d-x 的 cpp-tests 项目？
+### 如何使用 x86 架构的模拟器运行 cpp-tests 项目？
 
 在项目中找到 `gradle.properties` 文件，将 `PROP_APP_ABI=armeabi-v7a` 修改为 `PROP_APP_ABI=x86`，点击提示中的 `Sync Now`，完成后重新编译运行。
 
 更多关于 ABI 的信息请参考 Google 文档 [ABI 管理](https://developer.android.com/ndk/guides/abis)
+
+### Cocos2d-x 的 Android 工程配置好复杂，怎样怎能弄清楚？
+
+Cocos2d-x 使用的工程配置是标准的 Gradle 配置，请先阅读 [Gradle 文档](https://docs.gradle.org/current/userguide/userguide.html) 中的 Android 部分，从理解简单工程的 Gradle 配置开始。
