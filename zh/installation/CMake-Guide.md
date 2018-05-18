@@ -6,7 +6,9 @@ CMake 是一个开源的跨平台构建工具，Cocos2d-x 是一个开源的跨�
 
 ## 基本概念
 
-在使用 CMake 构建工程之前，最好能对软件构建中一些基本的概念有初步的了解，比如什么是编译，链接，打包。了解这些对后续使用 CMake 有很大的帮助。此处只解释一个 CMake 特有的概念：外部构建（Out-of-source Build），在从源码生成最终的二进制可执行文件的过程中，会生成大量的中间文件，中间文件和源码在同一个目录内称为内部构建（In-source Build）,当内部构建时中间文件会使源码目录脏乱不堪，为了解决这个问题，CMake 提供了外部构建，即将所有生成的中间文件都放在一个非源码目录中，这样无论构建多少次，源码目录始终干净如新。
+在使用 CMake 构建工程之前，最好能对软件构建中一些基本的概念有初步的了解，比如什么是编译，链接，打包。了解这些对后续使用 CMake 有很大的帮助。
+
+此处只解释一下：外部构建（Out-of-source Build），在从源码生成最终的二进制可执行文件的过程中，会生成大量的中间文件，中间文件和源码在同一个目录内时会使源码目录脏乱不堪，为了解决这个问题，CMake 提供了外部构建，即将所有生成的中间文件都放在一个非源码目录中，这样无论构建多少次，源码目录始终干净如新。当不在源码目录执行 `cmake` 命令，即默认执行外部构建。
 
 ## 常用构建选项
 
@@ -31,7 +33,7 @@ CMake 是一个开源的跨平台构建工具，Cocos2d-x 是一个开源的跨�
 
 ### Cocos2d-x 特有
 
-以下 Cocos2d-x 特有的选项和通过 CMake 使用预编译库有关。
+以下 Cocos2d-x 特有的选项和使用预编译库有关。
 
 1. `GEN_COCOS_PREBUILT` 控制构建过程是否生成预编译库，默认行为是不生成，开启选项将会增加一个构建目标：prebuilt，执行这个构建目标时，将会编译引擎部分的代码，并将生成的库文件，拷贝至存放预编译库的目录，默认将库拷贝至引擎目录的 prebuilt 子目录。
 
@@ -67,7 +69,7 @@ cmake .. -G"Visual Studio 15 2017"
 ```
 以上命令使用 CMake 生成 Cocos2d-x 测试项目的 Visual Studio 2017 工程。生成后，在文件浏览器中找到 `cocos2d-x/win32-build` 目录，双击打开 __Cocos2d-x.sln__。设置 cpp-tests 为启动项目，即可正常编译运行。
 
-另一种方式，由于 Visual Studio 2017 已经直接支持 CMake 工程，可以直接使用。详细请参考 [Visual Studio 2017 文档 CMake 支持](https://docs.microsoft.com/zh-cn/cpp/ide/cmake-tools-for-visual-cpp)。
+另一种方式，由于 Visual Studio 2017 已经直接支持 CMake 工程，可以直接使用。详细请参考 [CMake 支持](https://docs.microsoft.com/zh-cn/cpp/ide/cmake-tools-for-visual-cpp)。
 
 ### macOS
 
@@ -77,6 +79,9 @@ mkdir mac-build && cd mac-build
 cmake .. -GXcode
 open Cocos2d-x.xcodeproj
 ```
+在 macOS 上使用 `cmake .. -GXcode` 将会默认生成 macOS 的工程。
+
+> iOS 工程和 macOS 工程并不能同时生成到一个 XCode 工程中
 
 ### iOS
 
