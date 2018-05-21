@@ -67,9 +67,9 @@
 
 更多关于 ABI 的信息请参考 Google 文档 [ABI 管理](https://developer.android.com/ndk/guides/abis)
 
-### Cocos2d-x 的 Android 工程配置好复杂，怎样怎能弄清楚？
+### Cocos2d-x 的 Android 工程配置好复杂，怎样怎能弄清楚？
 
-Cocos2d-x 使用的工程配置是标准的 Gradle 配置，请先阅读 [Gradle 文档](https://docs.gradle.org/current/userguide/userguide.html) 中的 Android 部分，从理解简单工程的 Gradle 配置开始。
+Cocos2d-x 使用的工程配置是标准的 Gradle 配置，请先阅读 [Gradle 文档](https://docs.gradle.org/current/userguide/userguide.html) 中的 Android 部分，从理解简单工程的 Gradle 配置开始。
 
 ### 在 Windows 系统上通过 Android Studio 编译项目有路径错误？
 
