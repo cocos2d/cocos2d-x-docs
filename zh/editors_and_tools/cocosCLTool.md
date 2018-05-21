@@ -36,7 +36,7 @@ Cocos Console 2.3
 
 如果有类似上面的输出，就证明了已经配置好，如果提示找不到命令，就需要检查一下环境变量是否设置正确。如果有配置，试着运行一下 _source ~/.bash_profile_ 使配置文件生效。
 
-_命令行工具在这个目录 _cocos2d-x-3.16/tools/cocos2d-console/bin_
+_命令行工具在这个目录 _cocos2d-x/tools/cocos2d-console/bin_
 
 ### 项目创建
 
