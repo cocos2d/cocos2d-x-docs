@@ -80,3 +80,18 @@
     可以看到这样的效果
 
     ![](Linux-img/ubuntu-cpp-tests.png)
+
+## FAQ
+
+### Linux 系统上 cpp-tests 项目编译成功，但是运行失败，有 libfmod 报错，如何解决？报错类似：
+
+```sh
+error while loading shared libraries: libfmod.so.6: cannot open shared object file: No such file or directory
+```
+
+请检查引擎目录下，子目录 `external/linux-specific/fmod/prebuilt/64-bit` 内 libfmod 软链接是否正常，不正常请手动修复。
+
+```sh
+ln -sf libfmod.so libfmod.so.6
+ln -sf libfmodL.so libfmodL.so.6
+```

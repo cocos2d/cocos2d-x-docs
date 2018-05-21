@@ -70,3 +70,7 @@
 ### Cocos2d-x 的 Android 工程配置好复杂，怎样怎能弄清楚？
 
 Cocos2d-x 使用的工程配置是标准的 Gradle 配置，请先阅读 [Gradle 文档](https://docs.gradle.org/current/userguide/userguide.html) 中的 Android 部分，从理解简单工程的 Gradle 配置开始。
+
+### 在 Windows 系统上，通过 Android Studio 编译项目，有奇怪的路径错误，甚至每次报错的路径都不一样，什么原因？
+
+Windows 系统对于文件的路径有最大长度限制，如果将引擎根目录放的比较深，可能会引起这种问题。建议将引擎根目录 cocos2d-x 放置到磁盘根目录。
