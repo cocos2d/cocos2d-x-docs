@@ -83,7 +83,7 @@
 
 ## FAQ
 
-### cpp-tests 运行时有 libfmod 报错，如何解决？
+### cpp-tests 运行时有 libfmod 报错，如何解决？
 
 报错类似：
 
