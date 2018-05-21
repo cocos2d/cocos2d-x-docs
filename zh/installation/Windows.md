@@ -38,6 +38,8 @@
 
 1. 解决出现的问题后，`Visual Studio 2017` 可以正常运行 `cpp-tests` ，但也不能保证引擎所有功能都可以在本 IDE 正常运行。**建议使用** `Visual Studio 2015` 与官方测试团队保持一致。
 
-### 通过 `cocos new` 新建 cpp，js，lua 三个工程，使用 CMake 生成 Visual Studio 的工程，cpp 和 js 的工程可以正常编译运行，但是 lua 的工程，编译成功却运行失败？
+### 通过 CMake 使用模板工程需要了解的一点
+
+通过 `cocos new` 新建 cpp，js，lua 三个工程，使用 CMake 生成 Visual Studio 的工程，cpp 和 js 的工程可以正常编译运行，但是 lua 的工程，编译成功却运行失败？
 
 lua 工程使用了 simulator 的库，导致在 Visual Studio 内运行时，不能正确找到工作目录。需要手动修改工程配置，将项目属性中调试内的工作目录改为 CMake 生成目录下的 `bin\TemplateLua\Debug`。
