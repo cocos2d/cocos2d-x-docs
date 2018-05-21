@@ -13,7 +13,7 @@ _listener = EventListenerCustom::create("game_custom_event1", [=](EventCustom* e
     statusLabel->setString(str.c_str());
 });
 
-_eventDispatcher->addEventListenerWithFixedPriority(_listener, 1);
+_eventDispatcher->addEventListenerWithSceneGraphPriority(_listener, this);
 {%- endcodetabs %}
 
 A custom event listener has been defined above, with a response method, and added

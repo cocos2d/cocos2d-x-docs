@@ -1,5 +1,6 @@
-## Cocos2d-x Docs v3.16
-v2017.11.28
+## Cocos2d-x Docs
+
+v2018.05.21
 
  __Authors:__ SlackMoehrle, Ricardo, Minggo, Walzer, Jare, James, Chengzhe.
 

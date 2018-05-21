@@ -1,6 +1,13 @@
-# Cocos2d-x v3.16 用户手册
+# Cocos2d-x 用户手册
+
+v2018.5.21
 
 欢迎使用 Cocos2d-x 用户手册，本手册包含引擎的介绍，功能组件的使用方法以及引擎在多个平台的环境搭建。能够帮助您快速上手 Cocos2d-x！
+
+## 特别推荐
+
+- Cocos2d-x 3.17 已发布，请参阅 [版本发布说明](http://www.cocos.com/1462)。
+- 3.17 支持全平台的 CMake 构建，请参阅 [CMake 指南](installation/CMake-Guide.md)
 
 ## 快速上手
 
