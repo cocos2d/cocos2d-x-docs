@@ -6,12 +6,9 @@ Let's get started!
 
 Cocos2d-x is a cross-platform game engine. A game engine is a piece of software
 that provides common functionality that all games need. You might have heard this referred to as an API or framework but in this guide, we'll be calling it a
-'game engine'.
+__game engine__.
 
-Game engines include many components that when used together will help speed up
-development time, and often perform better than homemade engines. A game engine
-is usually comprised of some or all of the following components: a renderer,
-2d/3d graphics, collision detection, a physics engine, sound, controller support, animations and more. To be sure we are all on the same page, we should review common game terminology.
+__Game engines__ include many components that when used together will help speed up development time, and often perform better than homemade engines. A game engine is usually comprised of some or all of the following components: *a renderer*, *2d/3d graphics*, *collision detection*, *a physics engine*, *sound*, *controller support*, *animations* and *more*. To be sure we are all on the same page, we should review common game terminology:
 
 * __Director:__ You can think of the `Director` the same way you think about a
 _movie director_. The `Director` controls every aspect of your game. What is shown on the screen, what sounds are played, what happens with player input, and much more.
@@ -33,7 +30,6 @@ needs to be a way to hear them!
 
 * __Physics Engine:__ The physics engine is responsible for emulating the laws of physics realistically within the application.
 
-Game engines usually support multiple platforms thus making it easy to develop your game and then deploy it to multiple platforms without much overhead at all. Since Cocos2d-x is a game engine, it provides a simplified API for developing cross-platform mobile and desktop games. By encapsulating the power inside an easy to use API, you can focus on developing your games and worry less about the implementation of the technical underpinnings. Cocos2d-x will take care of as much or as little of the heavy lifting as you want.
+__Game engines__ usually support multiple platforms thus making it easy to develop your game and then deploy it to multiple platforms without much overhead at all. Since __Cocos2d-x__ is a __game engine__, it provides a simplified API for developing cross-platform mobile and desktop games. By encapsulating the power inside an easy to use API, you can focus on developing your games and worry less about the implementation of the technical underpinnings. Cocos2d-x will take care of as much or as little of the heavy lifting as you want.
 
-Cocos2d-x provides `Scene`, `Transition`, `Sprite`, `Menu`, `Sprite3D`, `Audio`
-objects and much more. Everything you need to create your games are included.
+__Cocos2d-x__ provides `Scene`, `Transition`, `Sprite`, `Menu`, `Sprite3D`, `Audio` objects and much more. Everything you need to create your games are included.
