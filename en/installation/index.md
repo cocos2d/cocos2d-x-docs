@@ -1,5 +1,5 @@
 # Software Installations
-Cocos2d-x can be installed be installed on OS X, Windows, Linux for development with the ability to deploy to iOS, Android, OS X, Windows and even game consoles.
+Cocos2d-x can be installed on OS X, Windows, Linux for development with the ability to deploy to iOS, Android, OS X, Windows and even game consoles.
 
 - [Android Studio](Android-Studio.md)
 - [Android Command-line (**Deprecated**)](Android-terminal.md)
