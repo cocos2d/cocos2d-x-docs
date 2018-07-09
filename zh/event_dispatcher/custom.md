@@ -13,7 +13,7 @@ _listener = EventListenerCustom::create("game_custom_event1", [=](EventCustom* e
     statusLabel->setString(str.c_str());
 });
 
-_eventDispatcher->addEventListenerWithFixedPriority(_listener, 1);
+_eventDispatcher->addEventListenerWithSceneGraphPriority(_listener, this);
 {%- endcodetabs %}
 
 上面制作了一个自定义事件监听器，并预设了响应方法。下面创建自定义事件，并手动分发：

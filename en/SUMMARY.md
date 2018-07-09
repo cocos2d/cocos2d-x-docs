@@ -113,6 +113,7 @@
     - [Windows](installation/Windows.md)
       - [Windows](installation/Windows.md)
       - [Windows Phone (**Deprecated**)](installation/Windows-Phone.md)
+    - [CMake Guide](installation/CMake-Guide.md)
 
 -  [Tools](editors_and_tools/index.md)
     - [Command-Line tool](editors_and_tools/cocosCLTool.md)
