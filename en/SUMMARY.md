@@ -121,3 +121,4 @@
     - [Pre-built Libraries](editors_and_tools/prebuilt_libraries.md)
 
 -  [FAQ of Solutions](faq/index.md)
+    -  [FAQ](faq/index.md)
