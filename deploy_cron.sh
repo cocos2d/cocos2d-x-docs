@@ -43,9 +43,22 @@ echo "-----------------------"
 ## pull latest from github
 echo "Cocos Creator -- pulling latest from GitHub..."
 cd ../creator-docs
-git pull origin master
 
+## pulling legacy version
+echo "Cocos Creator -- pulling v1.9..."
+git pull origin v1.9
 cp -rf config/cocos2d-x.org/. ./
+
+## pulling previous version
+echo "Cocos Creator -- pulling v1.10..."
+git pull origin master
+cp -rf config/cocos2d-x.org/. ./
+
+## pulling next version
+echo "Cocos Creator -- pulling v2..."
+git pull origin next
+cp -rf config/cocos2d-x.org/. ./
+
 
 ## make sure gitbook is up to date
 echo "Cocos Creator -- ensuring GitBook is up to date..."
