@@ -1,6 +1,6 @@
-# Cocos Documentation User Manual
+#Cocos Documentation User Manual
 
-### Contributing to these docs
+###Contributing to these docs
 Contributions to the Cocos documentation are always welcome. To edit a document, please fork the Cocos [docs repository](https://github.com/cocos2d/cocos2d-x-docs).
 
 Notes:
@@ -14,7 +14,7 @@ Notes:
   - Changes must be tested using `gitbook build` and `gitbook serve`, and must be tested in multiple web browsers. For more information, see the [Requirements](#Requirements) section below.
   - Submit completed changes via a *pull request* so they can be reviewed and merged.
 
-## Requirements
+###Requirements
 This documentation site is powered by [GitBook](https://www.gitbook.com/). You need [Node.js](https://nodejs.org/en/) and npm to be able to build it.
 
 To install gitbook:
@@ -29,7 +29,7 @@ To install gitbook plugins:
 gitbook install
 ```
 
-## Preview and Build
+###Preview and Build
 To preview the documentation site, run the following command in the cocos2d-x-docs directory:
 
 ```bash
