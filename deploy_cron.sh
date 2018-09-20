@@ -61,9 +61,9 @@ sudo npm install
 npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
-mv _book/ v1.9/
-rsync --recursive v1.9 ../documentation/creator
-rm -rf v1.9/
+mv _book/ manual/
+rsync --recursive manual ../documentation/creator/1.9
+rm -rf manual/
 git stash
 
 ## pulling previous version
@@ -83,9 +83,9 @@ sudo npm install
 npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
-mv _book/ v1.10/
-rsync --recursive v1.10 ../documentation/creator
-rm -rf v1.10/
+mv _book/ manual/
+rsync --recursive manual ../documentation/creator/1.10
+rm -rf manual/
 git stash
 
 ## pulling next version
@@ -128,13 +128,15 @@ gitbook build
 echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ v1.9/
-rsync --recursive v1.9 ../documentation/creator/api
 rsync --recursive v1.9 ../documentation/api-ref/creator
+mv v1.9/ api/
+rsync --recursive api ../documentation/creator/1.9
+
 
 #rm -rf ../documentation/api-ref/creator/v1.9/
 #mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
 
-rm -rf v1.9/
+rm -rf api/
 git stash
 
 echo "Cocos Creator API - pulling previous version..."
@@ -148,13 +150,15 @@ gitbook build
 echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ v1.10/
-rsync --recursive v1.10 ../documentation/creator/api
 rsync --recursive v1.10 ../documentation/api-ref/creator
+mv v1.10/ api/
+rsync --recursive api ../documentation/creator/1.10
+
 
 #rm -rf ../documentation/api-ref/creator/v1.9/
 #mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
 
-rm -rf v1.10/
+rm -rf api/
 git stash
 
 echo "Cocos Creator API - pulling current version..."
