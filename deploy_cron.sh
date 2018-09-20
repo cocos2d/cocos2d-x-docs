@@ -37,6 +37,8 @@ rsync --recursive cocos2d-x ../documentation
 
 rm -rf cocos2d-x/
 
+git stash
+
 echo "-----------------------"
 echo "Cocos Creator Manual..."
 echo "-----------------------"
