@@ -1,6 +1,6 @@
 ##Cocos2d-x Docs
 
-Q3 2018
+Q4 2018
 =======
 
  __Authors:__ SlackMoehrle, Ricardo, Minggo, Walzer, Jare, James, Chengzhe.
