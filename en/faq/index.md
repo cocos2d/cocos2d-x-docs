@@ -1,7 +1,7 @@
 ## FAQ Of Commonly Asked Technical Questions
 
-###Windows
+### Windows
 #### Needing to re-target the Windows SDK
 
-###XCode
+### XCode
 #### XCode PNG Compression issue
