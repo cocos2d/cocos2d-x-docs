@@ -10,11 +10,11 @@
                 "links": [
                     {
                         "name": "Manual",
-                        "link": "http://docs.cocos.com/creator/manual/en"
+                        "link": "http://www.cocos2d-x.org/docs/creator/manual/en"
                     },
                     {
                         "name": "API",
-                        "link": "http://docs.cocos.com/creator/api/en"
+                        "link": "http://www.cocos2d-x.org/docs/creator/api/en"
                     }
                 ]
             },
@@ -23,7 +23,7 @@
                 "links": [
                     {
                         "name": "Manual",
-                        "link": "http://docs.cocos.com/cocos2d-x/manual/en"
+                        "link": "http://www.cocos2d-x.org/docs/en"
                     },
                     {
                         "name": "API",
@@ -36,5 +36,5 @@
                 "link": "http://docs.anysdk.com/"
             }
         ]
-    }   
+    }
 }
