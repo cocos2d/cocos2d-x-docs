@@ -51,8 +51,6 @@ echo "Cocos Creator -- pulling v1.9..."
 git checkout v1.9
 git pull origin v1.9
 cp -rf config/cocos2d-x.org/. ./
-echo "Cocos Creator -- ensuring GitBook is up to date..."
-gitbook install
 echo "Cocos Creator -- building GitBook docs...."
 echo "If this is your first time build this repo, please stop this process and run:"
 echo "npm install gulp -g"
@@ -60,6 +58,8 @@ echo "npm install"
 echo "DO NOT COMMIT: package-lock.json"
 sudo npm install gulp -g
 sudo npm install
+echo "Cocos Creator -- ensuring GitBook is up to date..."
+gitbook install
 npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
@@ -73,8 +73,6 @@ echo "Cocos Creator -- pulling v1.10..."
 git checkout master
 git pull origin master
 cp -rf config/cocos2d-x.org/. ./
-echo "Cocos Creator -- ensuring GitBook is up to date..."
-gitbook install
 echo "Cocos Creator -- building GitBook docs...."
 echo "If this is your first time build this repo, please stop this process and run:"
 echo "npm install gulp -g"
@@ -82,6 +80,8 @@ echo "npm install"
 echo "DO NOT COMMIT: package-lock.json"
 sudo npm install gulp -g
 sudo npm install
+echo "Cocos Creator -- ensuring GitBook is up to date..."
+gitbook install
 npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
@@ -95,8 +95,6 @@ echo "Cocos Creator -- pulling v2.x.."
 git checkout next
 git pull origin next
 cp -rf config/cocos2d-x.org/. ./
-echo "Cocos Creator -- ensuring GitBook is up to date..."
-gitbook install
 echo "Cocos Creator -- building GitBook docs...."
 echo "If this is your first time build this repo, please stop this process and run:"
 echo "npm install gulp -g"
@@ -104,6 +102,8 @@ echo "npm install"
 echo "DO NOT COMMIT: package-lock.json"
 sudo npm install gulp -g
 sudo npm install
+echo "Cocos Creator -- ensuring GitBook is up to date..."
+gitbook install
 npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
