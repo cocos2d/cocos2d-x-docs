@@ -154,10 +154,10 @@ auto mySprite = Sprite::create("mysprite.png");
 // create a MoveBy Action to where we want the sprite to drop from.
 auto move = MoveBy::create(2, Vec2(200, dirs->getVisibleSize().height -
  newSprite2->getContentSize().height));
-auto move_back = move->reverse();
 
 // create a BounceIn Ease Action
-auto move_ease_in = EaseBounceIn::create(move->clone() );
+auto move_ease_in = EaseBounceIn::create(move->clone());
+auto move_ease_in_back = move_ease_in->reverse();
 
 // create a delay that is run in between sequence events
 auto delay = DelayTime::create(0.25f);
