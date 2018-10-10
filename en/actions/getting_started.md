@@ -9,7 +9,7 @@ auto mySprite = Sprite::create("mysprite.png");
 mySprite->setPosition(Vec2(200, 256));
 
 // MoveBy - lets move the sprite by 500 on the x axis over 2 seconds
-// MoveBy is relative - since x = 200 + 200 move = x is now 400 after the move
+// MoveBy is relative - since x = 200 + 500 move = x is now 700 after the move
 auto moveBy = MoveBy::create(2, Vec2(500, mySprite->getPositionY()));
 
 // MoveTo - lets move the new sprite to 300 x 256 over 2 seconds
