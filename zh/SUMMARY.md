@@ -111,3 +111,6 @@
   - [cocos 命令](editors_and_tools/cocosCLTool.md)
   - [静态库的使用](editors_and_tools/prebuilt_libraries.md)
   - [Creator to Cocos2d-x 插件](editors_and_tools/creator_to_cocos2dx.md)
+
+- [解决方案常见问题](faq/index.md)
+  - [常问问题](faq/index.md)
