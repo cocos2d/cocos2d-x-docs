@@ -5,3 +5,8 @@
 
 ### XCode
 #### XCode PNG Compression issue
+
+### Android
+#### generateJsonModelDebug FAILED
+To solve this issue, please import the project into __Android Studio__, click
+`Build/Refresh Linked C++ Projects`.
