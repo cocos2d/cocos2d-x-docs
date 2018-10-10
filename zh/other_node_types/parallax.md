@@ -20,7 +20,7 @@ paraNode->addChild(background, -1, Vec2(0.4f,0.5f), Vec2::ZERO);
 paraNode->addChild(middle_layer, 1, Vec2(2.2f,1.0f), Vec2(0,-200) );
 
 // top image is moved at a ratio of 3.0x, 2.5y
-paraNode->addChild(top layer, 2, Vec2(3.0f,2.5f), Vec2(200,800) );
+paraNode->addChild(top_layer, 2, Vec2(3.0f,2.5f), Vec2(200,800) );
 {%- endcodetabs %}
 
 需要注意的是，被添加的每个 Node 对象被赋予了一个唯一的 `z-order` 顺序，以便他们堆叠在彼此之上。另外要注意 `addChild()` 调用中两个 `Vec2` 参数，第一个决定这个子节点的移动速度与父节点移动速度的比率，第二个是相对父节点 `ParallaxNode` 的偏移量。

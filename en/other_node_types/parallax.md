@@ -31,7 +31,7 @@ paraNode->addChild(background, -1, Vec2(0.4f,0.5f), Vec2::ZERO);
 paraNode->addChild(middle_layer, 1, Vec2(2.2f,1.0f), Vec2(0,-200) );
 
 // top image is moved at a ratio of 3.0x, 2.5y
-paraNode->addChild(top layer, 2, Vec2(3.0f,2.5f), Vec2(200,800) );
+paraNode->addChild(top_layer, 2, Vec2(3.0f,2.5f), Vec2(200,800) );
 {%- endcodetabs %}
 
 OK, looks and feels familiar, right? Notice a few items! Each `Node` object that
