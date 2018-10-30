@@ -21,22 +21,13 @@ using the step above, __By downloading a .zip archive__.
 
 {% codetabs name="16.x", type="shell" -%}
 Install Python.
-
-    ```sh
-    sudo apt-get install python2.7
-    ```
+    sudo apt-get install python2.
 {%- language name="17.x", type="shell" -%}
 Install Python.
-
-    ```sh
     sudo apt-get install python2.7
-    ```
 {%- language name="18.x", type="shell" -%}
 Install Python.
-
-    ```sh
     sudo apt-get install python-minimal
-    ```
 {%- endcodetabs %}
 
   ```sh
@@ -124,6 +115,9 @@ __coocs2dx_root/build/linux-build__
 
     Everything will be generated in __cocos2dx_root/build/linux-build/bin/cpp-tests/__
     if compiled successfully.
+
+* Some users report issues with __libfmod__. If you encounter issues, please
+* reference this post: [Error while building for linux: libfmod.so.6](https://discuss.cocos2d-x.org/t/error-while-building-for-linux-libfmod-so-6/26553/31?u=doyoque)
 
 * Run `cpp-tests`
 

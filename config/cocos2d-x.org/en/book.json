@@ -7,18 +7,18 @@
         "products": [
             {
                 "name": "API Reference",
-                "link": "http://www.cocos2d-x.org/docs/api-ref/index.html"
+                "link": "http://docs.cocos2d-x.org/api-ref/index.html"
             },
             {
                 "name": "Cocos Creator",
                 "links": [
                     {
                         "name": "Manual",
-                        "link": "http://www.cocos2d-x.org/docs/creator/manual/"
+                        "link": "http://docs.cocos2d-x.org/creator/manual/"
                     },
                     {
                         "name": "API",
-                        "link": "http://www.cocos2d-x.org/docs/creator/api/"
+                        "link": "http://docs.cocos2d-x.org/creator/api/"
                     }
                 ]
             }

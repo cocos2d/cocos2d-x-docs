@@ -8,7 +8,7 @@
 * Mac OS X 10.7+, Xcode 8+
 * Ubuntu 14.04+, CMake 3.1+
 * Windows 7+, VS 2015+
-* Python 2.7.5+, NOT Python 3
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r16+ is required to build Android games (tested with r16)
 * Android Studio 3.0+ to build Android games (tested with 3.0)
 * JRE or JDK 1.6+ is required for web publishing
@@ -18,7 +18,7 @@
 * Mac OS X 10.7+, Xcode 7+
 * Ubuntu 12.10+, CMake 2.6+
 * Windows 7+, VS 2013+ (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r11+ is required to build Android games (tested with r14)
 * Android Studio 2.3.3+ to build Android games (tested with 2.3.3 and 3.0)
 * JRE or JDK 1.6+ is required for web publishing
@@ -28,7 +28,7 @@
 * Mac OS X 10.7+, Xcode 7+
 * Ubuntu 14.04+, gcc, CMake 2.6+
 * Windows 7+, VS 2013 or VS 2015 (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r11+ and API level 19 is required to build Android games
 * Android Studio 2.3+ to build Android games
 * Windows Phone/Store 8.1, VS 2013 Update 4+ or VS 2015
@@ -41,7 +41,7 @@
 * Mac OS X 10.7+, Xcode 7+
 * Ubuntu 14.04+, gcc, CMake 2.6+
 * Windows 7+, VS 2013 or VS 2015 (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r11+ and API level 19 is required to build Android games
 * Windows Phone/Store 8.1, VS 2013 Update 4+ or VS 2015
 * Windows Phone/Store 10.0, VS 2015
@@ -51,7 +51,7 @@
 * Mac OS X 10.7+, Xcode 7+
 * Ubuntu 14.04+, gcc, CMake 2.6+
 * Windows 7+, VS 2013 or VS 2015 (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r11+ and API level 19 is required to build Android games
 * Windows Phone/Store 8.1, VS 2013 Update 4+ or VS 2015
 * Windows Phone/Store 10.0, VS 2015
@@ -61,7 +61,7 @@
 * Mac OS X 10.7+, Xcode 7+
 * Ubuntu 14.04+, gcc, CMake 2.6+
 * Windows 7+, VS 2013 or VS 2015 (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r10c+ is required to build Android games
 * Clang for developing Android games
 * Windows Phone/Store 8.1, VS 2013 Update 4+ or VS 2015
@@ -72,7 +72,7 @@
 * Mac OS X 10.7+, Xcode 5.1+
 * Ubuntu 14.04+, gcc 4.9+, CMake 2.6+
 * Windows 7+, VS 2013 or VS 2015 (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r10c+ is required to build Android games
 * Windows Phone/Store 8.1, VS 2013 Update 4+ or VS 2015
 * Windows Phone/Store 10.0, VS 2015
@@ -82,7 +82,7 @@
 * Mac OS X 10.7+, Xcode 5.1+
 * Ubuntu 14.04+, gcc 4.9+, CMake 2.6+
 * Windows 7+, VS 2013+ (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r10c+ is required to build Android games
 * Windows Phone/Store 8.1, VS 2013 Update 4+
 * JRE or JDK 1.6+ is required for web publishing
@@ -92,7 +92,7 @@
 * Mac OS X 10.7+, Xcode 5.1+
 * Ubuntu 14.04+, gcc 4.9+
 * Windows 7+, VS 2012+ (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r10c+ is required to build Android games
 * Windows Phone/Store 8.0 VS 2012+
 * Windows Phone/Store 8.1 VS 2013 Update 3+
@@ -103,7 +103,7 @@
 * Mac OS X 10.7+, Xcode 5.1+
 * Ubuntu 14.04+, gcc 4.9+
 * Windows 7+, VS 2012+ (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r10c+ is required to build Android games
 * Windows Phone/Store 8.0 VS 2012+
 * Windows Phone/Store 8.1 VS 2013 Update 3+
@@ -113,7 +113,7 @@
 * Mac OS X 10.7+, Xcode 4.6+
 * Ubuntu 12.04+, gcc 4.7
 * Windows 7+, VS 2012+ (requires Visual C++ Redistributable for Visual Studio 2012 x86 and Visual C++ Redistributable for Visual Studio 2010 x86)
-* Python 2.7.5+, but not Python 3+
+* Python 2.7.5+, __NOT Python 3+__
 * NDK r9d is required to build Android games
 * Windows Phone/Store 8.0 VS 2012+
 * Windows Phone/Store 8.1 VS 2013 Update 3+
