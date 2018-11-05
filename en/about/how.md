@@ -7,9 +7,9 @@ We always welcome contributions to our documentation.
   - __en/__ is for English contributions, __zh/__ is for 中文 contributions.
   - code blocks must be wrapped in special code to work correctly:
     - C++ only code block:
-      {% codetabs name="C++", type="cpp" -%}
+      <!--{% codetabs name="C++", type="cpp" -%}
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-      {%- endcodetabs %}
+      {%- endcodetabs %}-->
 
       ![](about-img/codeblock.png "")
 
