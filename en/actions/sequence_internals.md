@@ -10,9 +10,9 @@ are currently set at.
 Let's hash through an example, say you have a __heroSprite__ and it has a position
 of __(0,0)__. If you run an `Action` of:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 MoveBy::create(10, Vec2(400,100));
-{%- endcodetabs %}
+```
 
 This will move __heroSprite__ from *(0,0)* to *(400, 100)* over the course of
 *10 seconds*. __heroSprite__ now has a new position of *(400, 100)* and more
@@ -20,9 +20,9 @@ importantly the `Action` has this position in it's __internal state__. Now, say
 you have an __enemySprite__ with a position of *(200, 200)*. If you were to apply
 this same:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 MoveBy::create(10, Vec2(400,100));
-{%- endcodetabs %}
+```
 
 to your __enemySprite__, it would end up at a position of *(800, 200)* and not
 where you thought it would. Do you see why? It is because the `Action` already
@@ -32,7 +32,7 @@ to your `Node`.
 
 Let's also see this in code, first, incorrect.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create our Sprites
 auto heroSprite = Sprite::create("herosprite.png");
 auto enemySprite = Sprite::create("enemysprite.png");
@@ -46,11 +46,11 @@ heroSprite->runAction(moveBy);
 // run it on our enemy
 enemySprite->runAction(moveBy); // oops, this will not be unique!
 // uses the Actions current internal state as a starting point.
-{%- endcodetabs %}
+```
 
 Correctly, using __clone()__!:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create our Sprites
 auto heroSprite = Sprite::create("herosprite.png");
 auto enemySprite = Sprite::create("enemysprite.png");
@@ -63,7 +63,7 @@ heroSprite->runAction(moveBy);
 
 // run it on our enemy
 enemySprite->runAction(moveBy->clone()); // correct! This will be unique
-{%- endcodetabs %}
+```
 
 ## Reverse
 __Reverse__ is also exactly like it sounds. If you run a series of actions, you
@@ -74,16 +74,16 @@ However, it is not just simply running the `Action` in reverse order. Calling
 
 Using the `Spawn` example above, reversing is simple.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // reverse a sequence, spawn or action
 mySprite->runAction(mySpawn->reverse());
-{%- endcodetabs %}
+```
 
 Most `Action` and `Sequence` objects are reversible!
 
 It's easy to use, but let's make sure we see what is happening. Given:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Sprite
 auto mySprite = Sprite::create("mysprite.png");
 mySprite->setPosition(50, 56);
@@ -104,7 +104,7 @@ newSprite2->runAction(sequence);
 
 // reverse it
 newSprite2->runAction(sequence->reverse());
-{%- endcodetabs %}
+```
 
 What is really happening? If we lay out the steps as a list it might be helpful:
 

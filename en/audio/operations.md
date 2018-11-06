@@ -3,7 +3,7 @@ After you start to play music and sound effects you might need to pause,
 stop or resume after certain operations. This can be done easily.
 
 ### Pause
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -17,10 +17,10 @@ audio->pauseEffect();
 
 // pause all sound effects.
 audio->pauseAllEffects();
-{%- endcodetabs %}
+```
 
 ### Stop
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -34,10 +34,10 @@ audio->stopEffect();
 
 // stops all running sound effects.
 audio->stopAllEffects();
-{%- endcodetabs %}
+```
 
 ### Resume
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -51,4 +51,4 @@ audio->resumeEffect();
 
 // resume all sound effects.
 audio->resumeAllEffects();
-{%- endcodetabs %}
+```

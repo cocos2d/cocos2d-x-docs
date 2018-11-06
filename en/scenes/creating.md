@@ -1,9 +1,9 @@
 ## Creating a Scene
 It is very easy to create a `Scene`
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myScene = Scene::create();
-{%- endcodetabs %}
+```
 
 ## Remember the Scene Graph?
 In __Chapter 2__  of this guide we learned about a __scene graph__ and how it affects
@@ -17,7 +17,7 @@ corner of the screen/display. When you start positioning your game elements this
 is where you should start your calculations from. Let's create a simple `Scene`
 and add a few elements to it:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto dirs = Director::getInstance();
 Size visibleSize = dirs->getVisibleSize();
 
@@ -32,7 +32,7 @@ auto sprite1 = Sprite::create("mysprite.png");
 sprite1->setPosition(Vec2(100, 100));
 
 myScene->addChild(sprite1);
-{%- endcodetabs %}
+```
 
 When we run this code we shall see a simple `Scene` that contains a `Label` and
 a `Sprite`. It doesn't do much but it's a start.

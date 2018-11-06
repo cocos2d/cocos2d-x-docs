@@ -9,10 +9,10 @@ An `AmbientLight` object will apply light evenly for everything in the scene.
 Think of lighting in an office environment. The lights are overhead and when you
 look at objects around the office you see them in the same light. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto light = AmbientLight::create (Color3B::RED);
 addChild(light);
-{%- endcodetabs %}
+```
 
 This produces:
 
@@ -25,10 +25,10 @@ no matter where you are in relationship to it. Also think about being outside on
 a sunny day with the sun beaming down on you. When you look directly at the sun,
 it is an intense light even if you move a few steps in any direction. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto light = DirectionLight::create(Vec3(-1.0f, -1.0f, 0.0f), Color3B::RED);
 addChild(light);
-{%- endcodetabs %}
+```
 
 This produces:
 
@@ -43,10 +43,10 @@ start of the `PointLight` it will be really strong. If you are towards the end
 of the `PointLight` it will be dim. `PointLight` also becomes weaker the larger
 the distance it is projected. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto light = PointLight::create(Vec3(0.0f, 0.0f, 0.0f), Color3B::RED, 10000.0f);
 addChild(light);
-{%- endcodetabs %}
+```
 
 This produces:
 
@@ -61,11 +61,11 @@ and you can only see objects inside that cone pattern. Another example is in dar
 dungeon based games where your path is light by torches. You can only see the
 limited cone shape that those torches emit. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto spotLight = SpotLight::create(Vec3(-1.0f, -1.0f, 0.0f), Vec3(0.0f, 0.0f, 0.0f),
 Color3B::RED, 0.0, 0.5, 10000.0f) ;
 addChild(spotLight);
-{%- endcodetabs %}
+```
 
 This produces:
 
@@ -85,11 +85,11 @@ performance issues the use of multiple light sources is not recommended. The
 default maximum is 1. If you want to open multiple light sources you must define
 the following keys in __info.plist__:
 
-{% codetabs name="Xml", type="xml" -%}
+```xml
 <key> cocos2d.x.3d.max_dir_light_in_shader </key>
 <integer> 1 </integer>
 <key> cocos2d.x.3d.max_point_light_in_shader </key>
 <integer> 1 </integer>
 <key> cocos2d.x.3d.max_spot_light_in_shader </key>
 <integer> 1 </integer>
-{%- endcodetabs %}
+```

@@ -3,7 +3,7 @@ Sometimes, when your app is running, you might wish to see messages being writte
 to the console for informational or debug purposes. This is built into the
 engine, using __log()__. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // a simple string
 log("This would be outputted to the console");
 
@@ -29,7 +29,7 @@ if (b == true)
     log("bool is true");
 else
     log("bool is false");
-{%- endcodetabs %}
+```
 
 And, c++ users, if you prefer you can use __std::cout__ in place of __log()__,
 however, __log()__ might offer easier formatting of complex output.

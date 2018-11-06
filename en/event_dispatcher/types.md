@@ -16,7 +16,7 @@ you must __swallow__ it. To say it another way, you __consume__ it so that it
 doesn't get passed to other objects in highest to lowest priority. This is easy
 to do.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // When "swallow touches" is true, then returning 'true' from the
 // onTouchBegan method will "swallow" the touch event, preventing
 // other listeners from using it.
@@ -29,4 +29,4 @@ listener1->onTouchBegan = [](Touch* touch, Event* event){
 
     return true;
 };
-{%- endcodetabs %}
+```

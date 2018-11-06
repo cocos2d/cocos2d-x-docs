@@ -3,7 +3,7 @@ Sometimes it is necessary to change a value slightly. Perhaps you have a charact
 and you want to allow the player to adjust the strength of attacking an enemy.
 A `Slider` allows users to set a value by moving an indicator. To create a `Slider`:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto slider = Slider::create();
@@ -25,7 +25,7 @@ slider->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 });
 
 this->addChild(slider);
-{%- endcodetabs %}
+```
 
 As you can see in the above example we specify a _.png_ image for each of the
 possible states the slider can be in. A `Slider` is made up of 5 graphics that

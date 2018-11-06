@@ -7,41 +7,41 @@ of ways to do __scene transitions__.
 There are many ways to transition through your __scenes__. Each has specific
 functionality. Let's go through them. Given:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myScene = Scene::create();
-{%- endcodetabs %}
+```
 
 __runWithScene()__ - use this for the first scene only. This is the way to start
 your games first `Scene`.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Director::getInstance()->runWithScene(myScene);
-{%- endcodetabs %}
+```
 
 __replaceScene()__ - replace a scene outright.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Director::getInstance()->replaceScene(myScene);
-{%- endcodetabs %}
+```
 
 __pushScene()__ - suspends the execution of the running scene, pushing it on the
 stack of suspended scenes. Only call this if there is a running scene.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Director::getInstance()->pushScene(myScene);
-{%- endcodetabs %}
+```
 
 __popScene()__ - This scene will replace the running one. The running scene will
 be deleted. Only call this if there is a running scene.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Director::getInstance()->popScene(myScene);
-{%- endcodetabs %}
+```
 
 ### Transition Scenes with effects
 You can add visual effects to your `Scene` transitions
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myScene = Scene::create();
 
 // Transition Fade
@@ -52,4 +52,4 @@ Director::getInstance()->replaceScene(TransitionFlipX::create(2, myScene));
 
 // Transition Slide In
 Director::getInstance()->replaceScene(TransitionSlideInT::create(1, myScene) );
-{%- endcodetabs %}
+```

@@ -44,10 +44,10 @@ There are functions for each step in the process, from tracing all the points,
 to triangulation. The result, can be then passed to a `Sprite` objects __create__
 function to create a `PolygonSprite`. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // Generate polygon info automatically.
 auto pinfo = AutoPolygon::generatePolygon("filename.png");
 
 // Create a sprite with polygon info.
 auto sprite = Sprite::create(pinfo);
-{%- endcodetabs %}
+```

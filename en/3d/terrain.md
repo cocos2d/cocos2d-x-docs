@@ -26,11 +26,11 @@ __Terrain::setLODDistance(float lod1, float lod2, float lod3)__ method.
 Neighboring chunks of `Terrain` objects, which have different __LOD__ may cause
  the __crack__ artifacts. `Terrain` provide two functions to avoid them:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Terrain::CrackFixedType::SKIRT
 
 Terrain::CrackFixedType::INCREASE_LOWER
-{%- endcodetabs %}
+```
 
 __Terrain::CrackFixedType::SKIRT__ will generate four, skirt-like meshes at each
 edge of the chunk.
@@ -43,37 +43,37 @@ Creating a `Terrain` takes a few steps. Example:
 
 The following code snippet is creating a player and place it on the terrain:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto player = Sprite3D::create("chapter9/orc.c3b");
 player->setScale(0.08);
 player->setPositionY(terrain->getHeight(player->getPositionX(),player->getPositionZ()));
-{%- endcodetabs %}
+```
 
 ![](3d-img/9_10.png)
 
 * create all `DetailMap` objects (up to four), you need pass the `DetailMap`
 objects to the __Terrain::DetailMap__ struct:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Terrain::DetailMap r("dirt.dds");
 Terrain::DetailMap g("grass.dds");
 Terrain::DetailMap b("road.dds");
 Terrain::DetailMap a("greenSkin.jpg");
-{%- endcodetabs %}
+```
 
 * to create a `TerrainData` variable with __detail maps__, you need to specify
 the terrain's __height map__ file path and __alpha map__ file path:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Terrain::TerrainData data("chapter9/heightmap16.jpg","TerrainTest/alphamap.png", r, g, b, a);
-{%- endcodetabs %}
+```
 
 * pass the `TerrainData` object to __Terrain::create__, the last parameter determines
 the LOD policy (as talked about above). Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 _terrain = Terrain::create(data, Terrain::CrackFixedType::SKIRT);
-{%- endcodetabs %}
+```
 
 * If you set a `Terrain` objects __camera mask__ and add it to a `Node` or a
 `Scene`, be careful. When `Terrain` is added into a `Node` or a `Scene`, you can

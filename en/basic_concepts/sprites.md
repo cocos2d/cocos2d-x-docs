@@ -17,7 +17,7 @@ a `Sprite`.
 `Sprites` are easy to create and they have configurable properties
 like: __position__, __rotation__, __scale__, __opacity__, __color__ and more.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // This is how to create a sprite
 auto mySprite = Sprite::create("mysprite.png");
 
@@ -29,7 +29,7 @@ mySprite->setRotation(40);
 mySprite->setScale(2.0); // sets both the scale of the X and Y axis uniformly
 
 mySprite->setAnchorPoint(Vec2(0, 0));
-{%- endcodetabs %}
+```
 
 Let's illustrate each property, consider the following screenshot from
 the example code for this chapter:
@@ -65,9 +65,9 @@ sprite will be used as a base coordinate when setting the position of it.
 Using the character from our example game, and setting the anchor point to
 __0, 0__ using:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 mySprite->setAnchorPoint(Vec2(0, 0));
-{%- endcodetabs %}
+```
 
 would result in the lower left corner of our sprite being used as the basis for
 any __setPosition()__ call. Let's see a few of these in action:

@@ -7,7 +7,7 @@ permits the user to make this type of choice. There are 5 different __states__ a
 `Checkbox` can have: __normal__, __selected__ and __disabled__. It is simple to create
 a `CheckBox`:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto checkbox = CheckBox::create("check_box_normal.png",
@@ -30,7 +30,7 @@ checkbox->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 });
 
 this->addChild(checkbox);
-{%- endcodetabs %}
+```
 
 As you can see in the above example we specify a _.png_ image for each of the
 possible states the `Checkbox` can be in. Since there are 5 possible states that

@@ -67,7 +67,7 @@ that are given a different __z-order__ to make them *stack* on top of each other
 
 In Cocos2d-x, you build the __scene graph__ using the *addChild()* API call:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // Adds a child with the z-order of -2, that means
 // it goes to the "left" side of the tree (because it is negative)
 scene->addChild(title_node, -2);
@@ -78,4 +78,4 @@ scene->addChild(label_node);
 // Adds a child with the z-order of 1, that means
 // it goes to the "right" side of the tree (because it is positive)
 scene->addChild(sprite_node, 1);
-{%- endcodetabs %}
+```

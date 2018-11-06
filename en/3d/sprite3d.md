@@ -5,12 +5,12 @@ core foundation of any game. One of the main differences between `Sprite` and
 __x__,  __y__ and __z__. `Sprite3D` works in many ways just like a normal `Sprite`.
 It is easy to load and display a `Sprite3D` object:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sprite = Sprite3D::create("boss.c3b"); //c3b file, created with the FBX-converter
 sprite->setScale(5.f); //sets the object scale in float
 sprite->setPosition(Vec2(200,200)); //sets sprite position
 scene->addChild(sprite,1); //adds sprite to scene, z-index: 1
-{%- endcodetabs %}
+```
 
 This creates and positions a `Sprite3D` object from `.c3b` file. Example:
 
@@ -19,18 +19,18 @@ This creates and positions a `Sprite3D` object from `.c3b` file. Example:
 Now, let's rotate the model in a loop. For this we will create an action and run
 it:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 //rotate around the X axis
 auto rotation = RotateBy::create(15, Vec3(0, 360, 0));
 //our sprite object runs the action
 sprite->runAction(RepeatForever::create(rotation));
-{%- endcodetabs %}
+```
 
 To set an anchor point on the `Sprite` or `Sprite3D` use:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 sprite->setAnchorPoint(Point(0.0f,0.0f));
-{%- endcodetabs %}
+```
 
 ### Attaching 3D models to Sprite3D objects.
 Recall above that a 3D model is a collection of __meshes__. You can attach 3D models
@@ -41,10 +41,10 @@ function. And then we just add the new model to the attachment point as a child
 with __addChild()__. You can think of this as combining multiple simpler 3D models
 to create more complex models. For example adding a model to a `Sprite3D` object:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sp = Sprite3D::create("axe.c3b");
 sprite->getAttachNode("Bip001 R Hand")->addChild(sp);
-{%- endcodetabs %}
+```
 
 ![](3d-img/9_3.png)
 
@@ -62,7 +62,7 @@ We can change the coat that the girl is wearing by changing the visibility of
 the __mesh__ objects we are using. The following example demonstrates how to do
 this:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sprite = Sprite3D::create("ReskinGirl.c3b");
 
 // display the first coat
@@ -75,7 +75,7 @@ girlTop1->setVisible(false);
 // swap to the second coat
 girlTop0->setVisible(false);
 girlTop1->setVisible(true);
-{%- endcodetabs %}
+```
 
 The results:
 

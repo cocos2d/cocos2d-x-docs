@@ -18,10 +18,10 @@ _particle effects_. A few of these tools are:
 
 These tools usually export a `.plist` file that you can read in with Cocos2d-x to use your creation inside your game. Just like with all of the other classes we have worked with so far we use the `create()` method:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create by plist file
 auto particleSystem = ParticleSystem::create("SpinningPeas.plist");
-{%- endcodetabs %}
+```
 
 ### Built-In Particle Effects
 Are you ready to add _particle effects_ to your game? We hope so! Are you not yet
@@ -53,11 +53,11 @@ at this list:
 
 Using `ParticleFireworks` as an example, you can use the built-in effects easily:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto emitter = ParticleFireworks::create();
 
 addChild(emitter, 10);
-{%- endcodetabs %}
+```
 
 The result is a _particle effect_ that looks something like:
 
@@ -67,7 +67,7 @@ But what do you do if your __particle effect__ isn't quite the way you want?
 That's right, you can manually manipulate it! Let's take the same fireworks example
 above and manipulate it even further by manually changing its properties:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto emitter = ParticleFireworks::create();
 
 // set the duration
@@ -83,7 +83,7 @@ emitter->setEndRadius(ParticleSystem::START_RADIUS_EQUAL_TO_END_RADIUS);
 emitter->setEndRadiusVar(0);    // not used when start == end
 
 addChild(emitter, 10);
-{%- endcodetabs %}
+```
 
 <!--### Creating Particles
 Building your own _particle effects_ is a rather complex process of setting

@@ -27,13 +27,13 @@ Let's tie this all together!
 ### Loading a Sprite Sheet
 Load your __sprite sheet__ into the `SpriteFrameCache`, probably in __AppDelegate__:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // load the Sprite Sheet
 auto spritecache = SpriteFrameCache::getInstance();
 
 // the .plist file can be generated with any of the tools mentioned below
 spritecache->addSpriteFramesWithFile("sprites.plist");
-{%- endcodetabs %}
+```
 
 Now that we have a __sprite sheet__ loaded into `SpriteFrameCache` we can create
 `Sprite` objects by utilizing it.
