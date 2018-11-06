@@ -19,32 +19,34 @@ Download Cocos2d-x and unzip it. (maybe: __~/__ or __~/Projects__ )
 Use the following commands to clone our GitHub repo and get your environment setup. If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download
 using the step above, __By downloading a .zip archive__.
 
-{% codetabs name="16.x", type="shell" -%}
-Install Python.
-    sudo apt-get install python2.
-{%- language name="17.x", type="shell" -%}
-Install Python.
-    sudo apt-get install python2.7
-{%- language name="18.x", type="shell" -%}
-Install Python.
-    sudo apt-get install python-minimal
-{%- endcodetabs %}
+Install Python
+```sh
+// Ubuntu 16.x
+sudo apt-get install python2.
 
-  ```sh
-  sudo apt-get install git
+// Ubuntu 17.x
+sudo apt-get install python2.7
 
-  cd <to where you want to clone this repo>
+// Ubuntu 18.x
+sudo apt-get install python-minimal
+```
 
-  cd cocos2d-x-root #where your cocos2d-x directory is located.
+Clone Repo and setup dependencies
+```sh
+sudo apt-get install git
 
-  git clone https://github.com/cocos2d/cocos2d-x.git
+cd <to where you want to clone this repo>
 
-  git submodule update --init
+cd cocos2d-x-root #where your cocos2d-x directory is located.
 
-  git submodule update
+git clone https://github.com/cocos2d/cocos2d-x.git
 
-  ./download-deps.py
-  ```
+git submodule update --init
+
+git submodule update
+
+./download-deps.py
+```
 
 ## Make sure you have a working environment!
 See __Prerequisites__ above. This means a working __Python__, having run __cocos2d-x root/setup.py__, updated your __$PATH__ and run __source ~/.bash_profile__.
@@ -52,44 +54,41 @@ See __Prerequisites__ above. This means a working __Python__, having run __cocos
 ## Dependencies that you need
 Cocos2d-x requires a number of dependencies be installed on your system. Please perform the following steps:
 
-Update your system, execute:
+#### Update your system, execute:
 
   ```sh
   sudo apt-get update
   sudo apt-get upgrade
   ```
 
-{% codetabs name="16.x", type="shell" -%}
+#### Install Dependencies __(Ubuntu 16.x only)__
 
-Install dependencies.
+1. Install dependencies
+```sh
+  // Ubuntu 16.x
+  sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
+```
 
-  ```sh
-    sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
-  ```
+#### Install Dependencies __(Ubuntu 17.x only)__
 
-{%- language name="17.x", type="shell" -%}
-
-Add a repo to `/etc/apt/sources.list`
+1. Add a repo to `/etc/apt/sources.list`
 
   ```sh
   deb http://cz.archive.ubuntu.com/ubuntu xenial main
   ```
-
-Install dependencies.
-
-  ```sh
-  sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
-  ```
-
-{%- language name="18.x", type="shell" -%}
-
-Install dependencies.
+2. Install Dependencies
 
   ```sh
   sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
   ```
 
-{%- endcodetabs %}
+#### Install Dependencies __(Ubuntu 18.x only)__
+
+1. Install dependencies.
+
+  ```sh
+  sudo apt-get install g++ libgdk-pixbuf2.0-dev python-pip cmake libx11-dev libxmu-dev libglu1-mesa-dev libgl2ps-dev libxi-dev libzip-dev libpng-dev libcurl4-gnutls-dev libfontconfig1-dev libsqlite3-dev libglew-dev libssl-dev libgtk-3-dev libglfw3 libglfw3-dev xorg-dev
+  ```
 
 ## Building Cocos2d-x
 * Run __cmake__ to generate __makefile__:
@@ -116,8 +115,7 @@ __coocs2dx_root/build/linux-build__
     Everything will be generated in __cocos2dx_root/build/linux-build/bin/cpp-tests/__
     if compiled successfully.
 
-* Some users report issues with __libfmod__. If you encounter issues, please
-* reference this post: [Error while building for linux: libfmod.so.6](https://discuss.cocos2d-x.org/t/error-while-building-for-linux-libfmod-so-6/26553/31?u=doyoque)
+* Some users report issues with __libfmod__. If you encounter issues, please reference this post: [Error while building for linux: libfmod.so.6](https://discuss.cocos2d-x.org/t/error-while-building-for-linux-libfmod-so-6/26553/31?u=doyoque)
 
 * Run `cpp-tests`
 
