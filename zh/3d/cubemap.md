@@ -6,7 +6,7 @@
 
 在 Cocos2d-x 中，这样创建立方体纹理：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a textureCube object with six texture assets
 auto textureCube = TextureCube::create("skybox/left.jpg",  "skybox/right.jpg", "skybox/top.jpg", "skybox/bottom.jpg", "skybox/front.jpg", "skybox/back.jpg");
 
@@ -24,4 +24,4 @@ auto _state = GLProgramState::create(shader);
 
 // bind cube map texture to uniform
 state->setUniformTexture("u_cubeTex", textureCube);
-{%- endcodetabs %}
+```

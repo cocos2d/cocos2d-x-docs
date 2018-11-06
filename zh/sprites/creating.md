@@ -6,9 +6,9 @@
 
 `Sprite` 能用一个特定的图像去创建:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
-{%- endcodetabs %}
+```
 
 ![](../../en/sprites/sprites-img/i1.png "")
 
@@ -18,9 +18,9 @@ auto mySprite = Sprite::create("mysprite.png");
 
 上一个例子，精灵和原始图像的尺寸一致。但是如果你想创建一个尺寸只有原始图像一部分的精灵，那你可以在创建的时候指定一个矩形，指定矩形需要四个值，初始 x 坐标，初始 y 坐标，矩形宽，矩形高。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-{%- endcodetabs %}
+```
 
 ![](../../en/sprites/sprites-img/i4.png "")
 
@@ -28,9 +28,9 @@ auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
 
 如果你没指定一个矩形，Cocos2d-x 引擎就会自动使用这个图像全部的宽和高，看下面的例子，如果你把矩形的宽高指定为图像的宽高，矩形的初始坐标指定为 (0, 0)，那这就和第一种情况的效果是完全一样的。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,200,200));
 
-{%- endcodetabs %}
+```

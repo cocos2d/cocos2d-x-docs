@@ -4,7 +4,7 @@
 
 创建鼠标事件监听器：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 _mouseListener = EventListenerMouse::create();
 _mouseListener->onMouseMove = CC_CALLBACK_1(MouseTest::onMouseMove, this);
 _mouseListener->onMouseUp = CC_CALLBACK_1(MouseTest::onMouseUp, this);
@@ -44,4 +44,4 @@ void MouseTest::onMouseScroll(Event *event)
     string str = "Mouse Scroll detected, X: ";
     str = str + tostr(e->getScrollX()) + " Y: " + tostr(e->getScrollY());
 }
-{%- endcodetabs %}
+```

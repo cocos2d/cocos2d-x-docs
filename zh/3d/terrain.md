@@ -20,11 +20,11 @@ Alpha贴图用于控制细节图是在地形上何处以及如何绘制的。Alp
 
 可以使用 `Terrain::setLODDistance(float lod1, float lod2, float lod3` 方法设置摄像机的距离。 具有不同细节级别的地形相邻块可能存在裂缝，`Terrain` 提供了两种方式(裙边法，补边法)避免这种情况的出现：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Terrain::CrackFixedType::SKIRT
 
 Terrain::CrackFixedType::INCREASE_LOWER
-{%- endcodetabs %}
+```
 
 __Terrain::CrackFixedType::SKIRT__ 裙边法：在块的每个边缘生成四个裙状网格
 
@@ -34,34 +34,34 @@ __Terrain::CrackFixedType::INCREASE_LOWER__ 补边法：动态调整每个快的
 
 下面代码演示了如何创建一个地形，并在上面放一个精灵
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto player = Sprite3D::create("chapter9/orc.c3b");
 player->setScale(0.08);
 player->setPositionY(terrain->getHeight(player->getPositionX(),player->getPositionZ()));
-{%- endcodetabs %}
+```
 
 ![](../../en/3d/3d-img/9_10.png)
 
 * 通过 `Terrain::DetailMap` 对象创建细节图：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Terrain::DetailMap r("dirt.dds");
 Terrain::DetailMap g("grass.dds");
 Terrain::DetailMap b("road.dds");
 Terrain::DetailMap a("greenSkin.jpg");
-{%- endcodetabs %}
+```
 
 * 构造 `Terrain::TerrainData` 对象，构造函数的第一个参数为高度图的路径，第二个参数为 Alpha 贴图的路径，接下来的四个参数为之前所构造的四个 DetailMap 结构体。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Terrain::TerrainData data("chapter9/heightmap16.jpg","TerrainTest/alphamap.png", r, g, b, a);
-{%- endcodetabs %}
+```
 
 * 调用 `Terrain::create` 创建出地形，第一个参数是之前构造好的 `TerrainData` 对象，第二个参数是细节级别策略。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 _terrain = Terrain::create(data, Terrain::CrackFixedType::SKIRT);
-{%- endcodetabs %}
+```
 
 * 请注意，在地形对象被添加到节点或场景中(进行了 `addChild()` 操作)后，就不能再对地形对象使用转换，比如缩放大小。 否则，`Terrain` 的方法可能会造成难以预料的结果。
 

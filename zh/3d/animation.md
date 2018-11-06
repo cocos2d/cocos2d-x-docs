@@ -8,7 +8,7 @@
 
 示例：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // the animation is contained in the .c3b file
 auto animation = Animation3D::create("orc.c3b");
 
@@ -17,7 +17,7 @@ auto animate = Animate3D::create(animation);
 
 // runs the animation
 sprite->runAction(RepeatForever::create(animate));
-{%- endcodetabs %}
+```
 
 去运行本文档的代码示例看看效果，_记住，3D 动画与 2D 动画基本相同。2D 动画可参考本文档的 [第四章](../actions/index.md)_
 
@@ -25,7 +25,7 @@ sprite->runAction(RepeatForever::create(animate));
 
 当想同时运行多个动画时，该怎么办？你可以创建多个动画，并指定开始时间和动画长度参数，两个参数的单位都是秒。例如：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto animation = Animation3D::create(fileName);
 
 auto runAnimate = Animate3D::create(animation, 0, 2);
@@ -33,7 +33,7 @@ sprite->runAction(runAnimate);
 
 auto attackAnimate = Animate3D::create(animation, 3, 5);
 sprite->runAction(attackAnimate);
-{%- endcodetabs %}
+```
 
 在上面的例子中，有两个动画可以运行，第一个从动画启动时开始然后持续 2 秒，第二个在 3 秒时开始然后持续 5 秒。
 

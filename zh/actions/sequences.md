@@ -8,7 +8,7 @@ __动作序列(Sequence)__ 是一种封装多个动作的对象，当这个对�
 
 ## Sequence 示例
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // create a few actions.
@@ -30,7 +30,7 @@ auto seq = Sequence::create(jump, callbackJump, rotate, callbackRotate, nullptr)
 
 // run it
 mySprite->runAction(seq);
-{%- endcodetabs %}
+```
 
 上面这个 `Sequence` 做了什么? 按照下面的顺序执行了每一个动作。
 
@@ -46,35 +46,35 @@ __Jump__ -> __callbackJump()__ -> __Rotate__ -> __callbackRotate()__
 
 例如，创建两个动作：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create 2 actions and run a Spawn on a Sprite
 auto mySprite = Sprite::create("mysprite.png");
 
 auto moveBy = MoveBy::create(10, Vec2(400,100));
 auto fadeTo = FadeTo::create(2.0f, 120.0f);
-{%- endcodetabs %}
+```
 
 使用 `Spawn`：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // running the above Actions with Spawn.
 auto mySpawn = Spawn::createWithTwoActions(moveBy, fadeTo);
 mySprite->runAction(mySpawn);
-{%- endcodetabs %}
+```
 
 同时调用方法 `runAction()`：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // running the above Actions with consecutive runAction() statements。
 mySprite->runAction(moveBy);
 mySprite->runAction(fadeTo);
-{%- endcodetabs %}
+```
 
 上面两种方式产生的效果是一样的，现在看把一个 `Spawn` 添加到一个 `Sequence` 中是怎样的一种情景，动作的执行流程会看起来像这样：
 
 ![](../../en/actions/actions-img/spawn_in_a_sequence.png "")
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Sprite
 auto mySprite = Sprite::create("mysprite.png");
 
@@ -91,6 +91,6 @@ auto seq = Sequence::create(moveBy, mySpawn, moveBy, nullptr);
 
 // run it
 mySprite->runAction(seq);
-{%- endcodetabs %}
+```
 
 运行本文档的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16) 去看一下效果吧!

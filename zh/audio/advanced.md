@@ -6,7 +6,7 @@
 
 幸运的是，游戏引擎在设计的时候已经考虑到这些情景了，注意在 _AppDelegate.cpp_ 中，有这样几个方法：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // This function will be called when the app is inactive. When comes a phone call,
 // it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
@@ -23,7 +23,7 @@ void AppDelegate::applicationWillEnterForeground() {
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
-{%- endcodetabs %}
+```
 
 看到了那些被注释的行吗？如果你有使用 `SimpleAudioEngine` 在游戏中播放声音，记得取消这些注释。当这些被注释的代码生效，你的游戏就能应对刚才提到的场景。
 
@@ -31,7 +31,7 @@ void AppDelegate::applicationWillEnterForeground() {
 
 加载音乐和音效通常是个耗时间的过程，为了防止由加载产生的延时导致实际播放与游戏播放不协调的现象，在播放音乐和音效前，可以预加载音乐文件。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -50,14 +50,14 @@ audio->preloadEffect("myEffect2.mp3");
 // you wont use it anymore in your game. unload it to free up
 // resources.
 audio->unloadEffect("myEffect1.mp3");
-{%- endcodetabs %}
+```
 
 ## 音量控制
 
 可以像下面这样，通过代码控制音乐和音效的音量：
 
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -65,4 +65,4 @@ auto audio = SimpleAudioEngine::getInstance();
 
 // setting the volume specifying value as a float
 audio->setEffectsVolume(5.0f);
-{%- endcodetabs %}
+```

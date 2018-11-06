@@ -24,11 +24,11 @@ __`AutoPolygon`__ 是一个工具类，它可以在程序运行时，通过跟�
 
 首先将图像资源传入 `AutoPolygon` 进行处理，然后我们使用它生成的对象进行精灵的创建就能得到多边形精灵。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // Generate polygon info automatically.
 auto pinfo = AutoPolygon::generatePolygon("filename.png");
 
 // Create a sprite with polygon info.
 auto sprite = Sprite::create(pinfo);
 
-{%- endcodetabs %}
+```

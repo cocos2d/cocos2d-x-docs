@@ -2,7 +2,7 @@
 
 有时，在你的游戏正在运行的时候，为了了解程序的运行过程或是为了查找一个 BUG，你想看到一些运行时信息，可以! 这个需求引擎已经考虑到了，使用 `log()` 可以把信息输出到控制台，这样使用：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // a simple string
 log("This would be outputted to the console");
 
@@ -29,6 +29,6 @@ if (b == true)
 else
     log("bool is false");
 
-{%- endcodetabs %}
+```
 
 对于使用 C++ 进行游戏开发的用户来说，可能想使用 `std::cout` 而不用 `log()`，实际上 `log()` 更易于使用，它格式化复杂的输出信息更简单。

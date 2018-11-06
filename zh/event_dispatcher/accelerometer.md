@@ -6,13 +6,13 @@
 
 使用加速度传感器，需要先启用
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Device::setAccelerometerEnabled(true);
-{%- endcodetabs %}
+```
 
 创建加速度传感器监听器：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // creating an accelerometer event
 auto listener = EventListenerAcceleration::create(CC_CALLBACK_2(
 AccelerometerTest::onAcceleration, this));
@@ -24,4 +24,4 @@ void AccelerometerTest::onAcceleration(Acceleration* acc, Event* event)
 {
     //  Processing logic here
 }
-{%- endcodetabs %}
+```

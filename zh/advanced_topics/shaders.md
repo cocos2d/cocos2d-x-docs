@@ -14,10 +14,10 @@ Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://
 
 开发者能为任一 Cocos2d-x 的节点对象设置自定义的着色器，添加着色器示例：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 sprite->setGLProgramState(programState);
 sprite3d->setGLProgramState(programState);
-{%- endcodetabs %}
+```
 
 `GLProgramState` 对象包含两个重要的东西
 
@@ -28,22 +28,22 @@ sprite3d->setGLProgramState(programState);
 
 可以很容易的将 uniform 变量设置到  `GLProgramState`：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 glProgramState->setUniformFloat("u_progress", 0.9);
 glProgramState->setUniformVec2("u_position", Vec2(x,y));
 glProgramState->setUniformMat4("u_transform", matrix);
-{%- endcodetabs %}
+```
 
 你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式作为回调函数的例子：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
 {
     float random = CCRANDOM_0_1();
     glProgram->setUniformLocationWith1f(uniform->location, random);
 }
 );
-{%- endcodetabs %}
+```
 
 虽然可以手动设置 `GLProgramState` 对象，但更简单的方法是使用材质对象。
 
@@ -79,7 +79,7 @@ glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Unifor
 
 例如，这是一个材质文件：
 
-{% codetabs name="JavaScript", type="js" -%}
+```javascript
 // A "Material" file can contain one or more materials
 material spaceship
 {
@@ -127,20 +127,20 @@ material spaceship
         }
     }
 }
-{%- endcodetabs %}
+```
 
 将一个材质设置到 `Sprite3D` 的方法：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Material* material = Material::createWithFilename("Materials/3d_effects.material");
 sprite3d->setMaterial(material);
-{%- endcodetabs %}
+```
 
 如果你想改变不同的渲染方法，你可以这样做：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 material->setTechnique("normal");
-{%- endcodetabs %}
+```
 
 ### 渲染方法(Technique)
 
@@ -167,12 +167,12 @@ Cocos2d-x 的材质文件使用一种优化过的文件格式，同时与其它�
 - _id_ 是材质(Meterial)，渲染方法(technique)，通道(pass)的可选属性
 - 材质可以通过设置 _parent_material_id_ 继承其它材质的值
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // When the .material file contains one material
 sprite3D->setMaterial("Materials/box.material");
 // When the .material file contains multiple materials
 sprite3D->setMaterial("Materials/circle.material#wood");
-{%- endcodetabs %}
+```
 
 #### 字段定义
 

@@ -6,7 +6,7 @@
 
 使用 `MoveTo` `MoveBy` 完成节点对象在一个设置的时间后移动。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Move a sprite to a specific location over 2 seconds.
@@ -18,7 +18,7 @@ mySprite->runAction(moveTo);
 auto moveBy = MoveBy::create(2, Vec2(50, 0));
 
 mySprite->runAction(moveBy);
-{%- endcodetabs %}
+```
 
 ![](../../en/actions/actions-img/i1.png "")
 
@@ -26,7 +26,7 @@ mySprite->runAction(moveBy);
 
 使用 `RotateTo` `RotateBy` 完成节点对象在一个设置的时间后顺时针旋转指定角度。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Rotates a Node to the specific angle over 2 seconds
@@ -36,7 +36,7 @@ mySprite->runAction(rotateTo);
 // Rotates a Node clockwise by 40 degree over 2 seconds
 auto rotateBy = RotateBy::create(2.0f, 40.0f);
 mySprite->runAction(rotateBy);
-{%- endcodetabs %}
+```
 
 ![](../../en/actions/actions-img/i3.png "")
 
@@ -44,7 +44,7 @@ mySprite->runAction(rotateBy);
 
 使用 `ScaleBy` `ScaleTo` 完成节点对象的比例缩放。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Scale uniformly by 3x over 2 seconds
@@ -62,7 +62,7 @@ mySprite->runAction(scaleTo);
 // Scale X to 5 and Y to 3x over 2 seconds
 auto scaleTo = ScaleTo::create(2.0f, 3.0f, 3.0f);
 mySprite->runAction(scaleTo);
-{%- endcodetabs %}
+```
 
 ![](../../en/actions/actions-img/i4.png "")
 
@@ -70,7 +70,7 @@ mySprite->runAction(scaleTo);
 
 使用 `FadeIn` `FadeOut` 完成节点对象的淡入，淡出。 `FadeIn` 修改节点对象的透明度属性，从完全透明到完全不透明，`FadeOut` 相反。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // fades in the sprite in 1 seconds
@@ -80,7 +80,7 @@ mySprite->runAction(fadeIn);
 // fades out the sprite in 2 seconds
 auto fadeOut = FadeOut::create(2.0f);
 mySprite->runAction(fadeOut);
-{%- endcodetabs %}
+```
 
 ![](../../en/actions/actions-img/i2.png "")
 
@@ -88,7 +88,7 @@ mySprite->runAction(fadeOut);
 
 使用 `TintTo` `TintBy`，将一个实现了 `NodeRGB` 协议的节点对象进行色彩混合。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Tints a node to the specified RGB values
@@ -98,7 +98,7 @@ mySprite->runAction(tintTo);
 // Tints a node BY the delta of the specified RGB values.
 auto tintBy = TintBy::create(2.0f, 120.0f, 232.0f, 254.0f);
 mySprite->runAction(tintBy);
-{%- endcodetabs %}
+```
 
 ![](../../en/actions/actions-img/i5.png "")
 
@@ -106,7 +106,7 @@ mySprite->runAction(tintBy);
 
 使用 `Animate` 对象可以很容易的通过每隔一个短暂时间进行图像替代的方式，实现一个翻页效果。下面是一个例子：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // now lets animate the sprite we moved
@@ -131,7 +131,7 @@ Animate* animate = Animate::create(animation);
 
 // run it and repeat it forever
 mySprite->runAction(RepeatForever::create(animate));
-{%- endcodetabs %}
+```
 
 ## 变速运动
 
@@ -141,7 +141,7 @@ mySprite->runAction(RepeatForever::create(animate));
 
 Cocos2d-x 支持上图中的大部分变速动作，实现起来也很简单。我们来看个例子，一个精灵从屏幕顶部落下然后不断跳动：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a sprite
 auto mySprite = Sprite::create("mysprite.png");
 
@@ -162,7 +162,7 @@ auto seq1 = Sequence::create(move_ease_in, delay, move_ease_in_back,
 
 // run the sequence and repeat forever.
 mySprite->runAction(RepeatForever::create(seq1));
-{%- endcodetabs %}
+```
 
 复杂的动作很难在这样的文本里表示，要是看效果的话最好去运行一下本指南的 [代码示例](https://github.com/chukong/programmers-guide-samples/tree/v3.16)，或者运行引擎代码的测试项目 `cpp-tests`，在子菜单 `3:Actions - Basic` 中有基本的动作效果展示。
 

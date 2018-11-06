@@ -4,15 +4,15 @@
 
 创建一个菜单用于添加菜单项：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myMenu = Menu::create();
-{%- endcodetabs %}
+```
 
 像我们刚才提到的一个菜单，总会有一些菜单项，比如开始，退出，设置等，没有菜单项的菜单没有存在的意义。Cocos2d-x 提供了一些方法来创建菜单项，比如使用 `Label` 对象，或是使用一张图像。菜单项一般有正常状态和选择状态。菜单项显示时是正常状态，当你点击它时变为选择状态，同时点击菜单还会触发一个回调函数。
 
 使用图像创建菜单：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // creating a menu with a single item
 
 // create a menu item by specifying images
@@ -21,11 +21,11 @@ CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
 
 auto menu = Menu::create(closeItem, NULL);
 this->addChild(menu, 1);
-{%- endcodetabs %}
+```
 
 还可以使用 `MenuItem` 的一个 `vector` 创建菜单：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // creating a Menu from a Vector of items
 Vector<MenuItem*> MenuItems;
 
@@ -38,7 +38,7 @@ MenuItems.pushBack(closeItem);
 
 auto menu = Menu::createWithArray(MenuItems);
 this->addChild(menu, 1);
-{%- endcodetabs %}
+```
 
 运行本文档的代码示例，你就能看到在 _Chapter 6_ 有一个 __Label__ 菜单项组成的菜单。
 
@@ -50,19 +50,19 @@ this->addChild(menu, 1);
 
 一个简单的 lambda 表达式：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a simple Hello World lambda
 auto func = [] () { cout << "Hello World"; };
 
 // now call it someplace in code
 func();
-{%- endcodetabs %}
+```
 
 使用 lambda 表达式作为菜单项的回调函数：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png",
 [&](Ref* sender){
     // your code here
 });
-{%- endcodetabs %}
+```

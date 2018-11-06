@@ -4,7 +4,7 @@
 
 创建一个文本框：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
@@ -14,7 +14,7 @@ textField->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 });
 
 this->addChild(textField);
-{%- endcodetabs %}
+```
 
 这个例子中，创建了一个 `TextField`，指定了回调函数。
 
@@ -22,7 +22,7 @@ this->addChild(textField);
 
 看一个例子：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
@@ -38,7 +38,7 @@ textField->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 });
 
 this->addChild(textField);
-{%- endcodetabs %}
+```
 
 屏幕上一个文本框是这样的：
 

@@ -8,15 +8,15 @@
 
 使用 Lua 脚本：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Sprite and add a LUA component
 auto player = Sprite::create("player.png");
 
 auto luaComponent = ComponentLua::create("player.lua");
 player->addComponent(luaComponent);
-{%- endcodetabs %}
+```
 
-{% codetabs name="Lua", type="lua" -%}
+```lua
 -- player.lua
 
 local player = {
@@ -35,19 +35,19 @@ local player = {
 
 -- it is needed to return player to let c++ nodes know it
 return player
-{%- endcodetabs %}
+```
 
 使用 JavaScript 脚本:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Sprite and add a LUA component
 auto player = Sprite::create("player.png");
 
 auto jsComponent = ComponentJS::create("player.js");
 player->addComponent(jsComponent);
-{%- endcodetabs %}
+```
 
-{% codetabs name="JavaScript", type="js" -%}
+```javascript
 // player.js
 Player = cc.ComponentJS.extend({
     generateProjectile: function (x, y) {
@@ -102,7 +102,7 @@ Player = cc.ComponentJS.extend({
         }, owner);
     }
 });
-{%- endcodetabs %}
+```
 
 注意，两种组件的使用上，有一个重要的区别。使用 Lua 组件，Lua 脚本最后需要返回 Lua 对象，使用 JavaScript 组件，JavaScript 脚本需要扩展 `cc.ComponentJS`。
 

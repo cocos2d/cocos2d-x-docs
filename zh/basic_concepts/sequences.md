@@ -10,7 +10,7 @@
 
 创建 `Sequence` ：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Node::create();
 
 // move to point 50,10 over 2 seconds
@@ -28,11 +28,11 @@ auto delay = DelayTime::create(1);
 mySprite->runAction(Sequence::create(moveTo1, delay, moveBy1, delay.clone(),
 moveTo2, nullptr));
 
-{%- endcodetabs %}
+```
 
 这个例子执行了一个动作的 `Sequence` 序列，那要是想让所有的特定动作同时执行呢？Cocos2d-x 也支持！通过引擎中的 `Spawn` 对象，你能让多个动作同时被解析执行。可能不同动作的执行时间不一致，在这种情况下，他们不会同时结束。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myNode = Node::create();
 
 auto moveTo1 = MoveTo::create(2, Vec2(50,10));
@@ -41,6 +41,6 @@ auto moveTo2 = MoveTo::create(2, Vec2(150,10));
 
 myNode->runAction(Spawn::create(moveTo1, moveBy1, moveTo2, nullptr));
 
-{%- endcodetabs %}
+```
 
 为什么要有同时执行多个动作的需求呢？当然是有原因的啦！比如你的游戏角色被电了，或者在关卡结束打 boss 的时候，想一想类似的场景.

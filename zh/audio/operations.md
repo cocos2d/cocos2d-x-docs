@@ -4,7 +4,7 @@
 
 ## 暂停
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -18,11 +18,11 @@ audio->pauseEffect();
 
 // pause all sound effects.
 audio->pauseAllEffects();
-{%- endcodetabs %}
+```
 
 ## 停止
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -36,11 +36,11 @@ audio->stopEffect();
 
 // stops all running sound effects.
 audio->stopAllEffects();
-{%- endcodetabs %}
+```
 
 ## 恢复
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 
@@ -54,4 +54,4 @@ audio->resumeEffect();
 
 // resume all sound effects.
 audio->resumeAllEffects();
-{%- endcodetabs %}
+```

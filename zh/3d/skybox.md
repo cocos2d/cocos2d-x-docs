@@ -6,7 +6,7 @@ __`天空盒(Skybox)`__ 是整个场景的一个包裹，显示了几何之外�
 
 `Skybox` 的创建：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Skybox object
 auto box = Skybox::create();
 
@@ -15,4 +15,4 @@ box->setTexture(_textureCube);
 
 // attached to scene
 _scene->addChild(box);
-{%- endcodetabs %}
+```

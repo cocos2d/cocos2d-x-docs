@@ -18,7 +18,7 @@
 
 设置吞没：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // When "swallow touches" is true, then returning 'true' from the
 // onTouchBegan method will "swallow" the touch event, preventing
 // other listeners from using it.
@@ -31,4 +31,4 @@ listener1->onTouchBegan = [](Touch* touch, Event* event){
 
     return true;
 };
-{%- endcodetabs %}
+```
