@@ -25,10 +25,10 @@ for 3d objects, and so on.
 
 Users can change the predefined shaders from any Cocos2d-x `Node` by calling:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 sprite->setGLProgramState(programState);
 sprite3d->setGLProgramState(programState);
-{%- endcodetabs %}
+```
 
 The `GLProgramState` object contains two important things:
 
@@ -40,22 +40,22 @@ refer to the [OpenGL Shading Language Specification](https://www.khronos.org/fil
 
 Setting uniforms to a `GLProgramState` is as easy as this:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 glProgramState->setUniformFloat("u_progress", 0.9);
 glProgramState->setUniformVec2("u_position", Vec2(x,y));
 glProgramState->setUniformMat4("u_transform", matrix);
-{%- endcodetabs %}
+```
 
 You can even set callbacks as a uniform value:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
 {
     float random = CCRANDOM_0_1();
     glProgram->setUniformLocationWith1f(uniform->location, random);
 }
 );
-{%- endcodetabs %}
+```
 
 And although it is possible to set `GLProgramState` objects manually, an easier
 way to do it is by using `Material` objects.
@@ -93,7 +93,7 @@ with `Material` you can have more than one texture, and much more features like 
 
 As an example, this is how a material file looks like:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // A "Material" file can contain one or more materials
 material spaceship
 {
@@ -141,20 +141,20 @@ material spaceship
 		}
 	}
 }
-{%- endcodetabs %}
+```
 
 And this is how to set a `Material` to a `Sprite3D`:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Material* material = Material::createWithFilename("Materials/3d_effects.material");
 sprite3d->setMaterial(material);
-{%- endcodetabs %}
+```
 
 And if you want to change between different `Technique`s, you have to do:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 material->setTechnique("normal");
-{%- endcodetabs %}
+```
 
 ### Techniques
 Since you can bind only one `Material` per `Sprite3D`, an additional feature
@@ -192,12 +192,12 @@ __parent_material_id__
 - Vertex and fragment shader file extensions do not matter. The convention in
 Cocos2d-x is to use __.vert__ and __frag__
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // When the .material file contains one material
 sprite3D->setMaterial("Materials/box.material");
 // When the .material file contains multiple materials
 sprite3D->setMaterial("Materials/circle.material#wood");
-{%- endcodetabs %}
+```
 
 <table>
  <tr>

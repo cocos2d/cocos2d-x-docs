@@ -10,7 +10,7 @@ objects that Cocos2d-x provides. This is what a `Sequence` looks like when execu
 
 ### An example sequence
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // create a few actions.
@@ -32,7 +32,7 @@ auto seq = Sequence::create(jump, callbackJump, rotate, callbackRotate, nullptr)
 
 // run it
 mySprite->runAction(seq);
-{%- endcodetabs %}
+```
 
 So what does this `Sequence` action do?
 
@@ -55,36 +55,36 @@ to help achieve specific effects that you cannot otherwise. Combining `Spawn` an
 
 Example, given:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create 2 actions and run a Spawn on a Sprite
 auto mySprite = Sprite::create("mysprite.png");
 
 auto moveBy = MoveBy::create(10, Vec2(400,100));
 auto fadeTo = FadeTo::create(2.0f, 120.0f);
-{%- endcodetabs %}
+```
 
 Using a `Spawn`:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // running the above Actions with Spawn.
 auto mySpawn = Spawn::createWithTwoActions(moveBy, fadeTo);
 mySprite->runAction(mySpawn);
-{%- endcodetabs %}
+```
 
 and consecutive __runAction()__ statements:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // running the above Actions with consecutive runAction() statements.
 mySprite->runAction(moveBy);
 mySprite->runAction(fadeTo);
-{%- endcodetabs %}
+```
 
 Both would produce the same result. However, one can use `Spawn` in a `Sequence`.
 This flowchart shows how this might look:
 
 ![](actions-img/spawn_in_a_sequence.png "")
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Sprite
 auto mySprite = Sprite::create("mysprite.png");
 
@@ -101,6 +101,6 @@ auto seq = Sequence::create(moveBy, mySpawn, moveBy, nullptr);
 
 // run it
 mySprite->runAction(seq);
-{%- endcodetabs %}
+```
 
 Run the example __Programmer Guide Sample__ code to see this in action!

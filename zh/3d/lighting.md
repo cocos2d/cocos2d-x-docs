@@ -8,10 +8,10 @@
 
 代码：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto light = AmbientLight::create (Color3B::RED);
 addChild(light);
-{%- endcodetabs %}
+```
 
 效果：
 
@@ -23,10 +23,10 @@ addChild(light);
 
 代码：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto light = DirectionLight::create(Vec3(-1.0f, -1.0f, 0.0f), Color3B::RED);
 addChild(light);
-{%- endcodetabs %}
+```
 
 效果：
 
@@ -38,10 +38,10 @@ addChild(light);
 
 代码：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto light = PointLight::create(Vec3(0.0f, 0.0f, 0.0f), Color3B::RED, 10000.0f);
 addChild(light);
-{%- endcodetabs %}
+```
 
 效果：
 
@@ -53,11 +53,11 @@ addChild(light);
 
 代码：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto spotLight = SpotLight::create(Vec3(-1.0f, -1.0f, 0.0f), Vec3(0.0f, 0.0f, 0.0f),
 Color3B::RED, 0.0, 0.5, 10000.0f) ;
 addChild(spotLight);
-{%- endcodetabs %}
+```
 
 效果：
 
@@ -69,11 +69,11 @@ addChild(spotLight);
 
 由于移动平台的性能问题，不推荐使用多个光照，默认光照的最大值为一，如果要打开多个光源，则必须要在 _info.plist_ 中定义以下配置：
 
-{% codetabs name="Xml", type="xml" -%}
+```xml
 <key> cocos2d.x.3d.max_dir_light_in_shader </key>
 <integer> 1 </integer>
 <key> cocos2d.x.3d.max_point_light_in_shader </key>
 <integer> 1 </integer>
 <key> cocos2d.x.3d.max_spot_light_in_shader </key>
 <integer> 1 </integer>
-{%- endcodetabs %}
+```

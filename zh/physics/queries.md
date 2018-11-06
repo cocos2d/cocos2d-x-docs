@@ -14,7 +14,7 @@ Cocos2d-x 提供的 `PhysicsWorld` 对象支持点查询，射线查询和矩形
 
 示例：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 void tick(float dt)
 {
     Vec2 d(300 * cosf(_angle), 300 * sinf(_angle));
@@ -48,7 +48,7 @@ void tick(float dt)
 
     _angle += 1.5f * (float)M_PI / 180.0f;
 }
-{%- endcodetabs %}
+```
 
 ![](../../en/physics/physics-img/RayTest.gif)
 
@@ -56,7 +56,7 @@ void tick(float dt)
 
 矩形查询提供了一种快速检查区域中有哪些物体的方法，实现起来非常容易：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto func = [](PhysicsWorld& world, PhysicsShape& shape, void* userData)->bool
 {
     //Return true from the callback to continue rect queries
@@ -64,7 +64,7 @@ auto func = [](PhysicsWorld& world, PhysicsShape& shape, void* userData)->bool
 }
 
 scene->getPhysicsWorld()->queryRect(func, Rect(0,0,200,200), nullptr);
-{%- endcodetabs %}
+```
 
 这是在制作 Logo 击碎时使用矩形查询的例子：
 

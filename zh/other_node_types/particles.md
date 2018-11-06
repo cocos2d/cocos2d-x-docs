@@ -18,10 +18,10 @@
 
 创建方法：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create by plist file
 auto particleSystem = ParticleSystem::create("SpinningPeas.plist");
-{%- endcodetabs %}
+```
 
 ## 内置粒子特效
 
@@ -41,11 +41,11 @@ auto particleSystem = ParticleSystem::create("SpinningPeas.plist");
 
 比如使用内置的烟火特效 `ParticleFireworks`：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto emitter = ParticleFireworks::create();
 
 addChild(emitter, 10);
-{%- endcodetabs %}
+```
 
 是这样的效果:
 
@@ -53,7 +53,7 @@ addChild(emitter, 10);
 
 要是内置的粒子特效不是你想要的那样，也没关系，你可以直接手动设置参数！让我们拿上面的烟火特效示例，并通过手动改变属性进一步控制。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto emitter = ParticleFireworks::create();
 
 // set the duration
@@ -69,4 +69,4 @@ emitter->setEndRadius(ParticleSystem::START_RADIUS_EQUAL_TO_END_RADIUS);
 emitter->setEndRadiusVar(0);    // not used when start == end
 
 addChild(emitter, 10);
-{%- endcodetabs %}
+```

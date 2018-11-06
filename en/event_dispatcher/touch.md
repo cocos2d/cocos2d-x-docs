@@ -8,7 +8,7 @@ something underneath it. Touch events are usually assigned a priority and the
 event with the highest priority is the one that answers. Here is how you create
 a basic touch event listener:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 //  Create a "one by one" touch event listener
 // (processes one touch at a time)
 auto listener1 = EventListenerTouchOneByOne::create();
@@ -31,7 +31,7 @@ listener1->onTouchEnded = [=](Touch* touch, Event* event){
 
 // Add listener
 _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, this);
-{%- endcodetabs %}
+```
 
 As you can see there are 3 distinct events that you can act upon when using a
 touch event listener. They each have a distinct time in which they are called.

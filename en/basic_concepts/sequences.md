@@ -14,7 +14,7 @@ gradually:
 
 This `Sequence` is easy to make:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Node::create();
 
 // move to point 50,10 over 2 seconds
@@ -31,7 +31,7 @@ auto delay = DelayTime::create(1);
 
 mySprite->runAction(Sequence::create(moveTo1, delay, moveBy1, delay.clone(),
 moveTo2, nullptr));
-{%- endcodetabs %}
+```
 
 This example runs a `Sequence`, in order, but what about running all the
 specified __Actions__ at the same time? Cocos2d-x supports this too and it
@@ -39,7 +39,7 @@ is called `Spawn`. `Spawn` will take all the specified `Action` objects and
 executes them at the same time. Some might be longer than others, so they won't
 all finish at the same time if this is the case.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myNode = Node::create();
 
 auto moveTo1 = MoveTo::create(2, Vec2(50,10));
@@ -47,7 +47,7 @@ auto moveBy1 = MoveBy::create(2, Vec2(100,10));
 auto moveTo2 = MoveTo::create(2, Vec2(150,10));
 
 myNode->runAction(Spawn::create(moveTo1, moveBy1, moveTo2, nullptr));
-{%- endcodetabs %}
+```
 
 Why `Spawn` actions? Is there ever a reason? Sure! What if your main
 character has multiple __Actions__ when obtaining a power up? Maybe beating

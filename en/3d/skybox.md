@@ -7,7 +7,7 @@ mountains and other phenomena.
 
 Creating a `Skybox`:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Skybox object
 auto box = Skybox::create();
 
@@ -16,4 +16,4 @@ box->setTexture(_textureCube);
 
 // attached to scene
 _scene->addChild(box);
-{%- endcodetabs %}
+```

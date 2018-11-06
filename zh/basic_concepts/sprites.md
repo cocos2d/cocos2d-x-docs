@@ -8,7 +8,7 @@
 
 精灵在所有游戏中都很重要，每个游戏都有这样的情景：一个舞台，上面站着一个某种形式的主角，那主角就是精灵。`Sprite` 很容易被创建，它有一些可以被配置的属性，比如：位置，旋转角度，缩放比例，透明度，颜色 等等。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // This is how to create a sprite
 auto mySprite = Sprite::create("mysprite.png");
 
@@ -21,7 +21,7 @@ mySprite->setScale(2.0); // sets both the scale of the X and Y axis uniformly
 
 mySprite->setAnchorPoint(Vec2(0, 0));
 
-{%- endcodetabs %}
+```
 
 让我们举例说明每个属性的含义，思考下面不同截图中精灵的区别：
 
@@ -49,10 +49,10 @@ mySprite->setAnchorPoint(Vec2(0, 0));
 
 以我们刚才的展示的精灵为例，设置锚点(0,0)：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 mySprite->setAnchorPoint(Vec2(0, 0));
 
-{%- endcodetabs %}
+```
 
 精灵的左下角就变为了 `setPosition()` 调用，计算坐标的基础。再看看其它的锚点效果：
 

@@ -4,7 +4,7 @@ Basic actions are usually a singular action, thus accomplishing a single objecti
 ### Move
 __Move__ a `Node` over a set period of time.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Move a sprite to a specific location over 2 seconds.
@@ -16,14 +16,14 @@ mySprite->runAction(moveTo);
 auto moveBy = MoveBy::create(2, Vec2(50, 0));
 
 mySprite->runAction(moveBy);
-{%- endcodetabs %}
+```
 
 ![](actions-img/i1.png "")
 
 ### Rotate
 __Rotate__ a `Node` clockwise over 2 seconds.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Rotates a Node to the specific angle over 2 seconds
@@ -33,14 +33,14 @@ mySprite->runAction(rotateTo);
 // Rotates a Node clockwise by 40 degree over 2 seconds
 auto rotateBy = RotateBy::create(2.0f, 40.0f);
 mySprite->runAction(rotateBy);
-{%- endcodetabs %}
+```
 
 ![](actions-img/i3.png "")
 
 ### Scale
 __Scale__ a `Node` by 10 over 2 seconds.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Scale uniformly by 3x over 2 seconds
@@ -58,7 +58,7 @@ mySprite->runAction(scaleTo);
 // Scale X to 5 and Y to 3x over 2 seconds
 auto scaleTo = ScaleTo::create(2.0f, 3.0f, 3.0f);
 mySprite->runAction(scaleTo);
-{%- endcodetabs %}
+```
 
 ![](actions-img/i4.png "")
 
@@ -67,7 +67,7 @@ __Fade__ a `Node`.
 
 It modifies the opacity from 0 to 255. The *reverse* of this action is `FadeOut`
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // fades in the sprite in 1 seconds
@@ -77,14 +77,14 @@ mySprite->runAction(fadeIn);
 // fades out the sprite in 2 seconds
 auto fadeOut = FadeOut::create(2.0f);
 mySprite->runAction(fadeOut);
-{%- endcodetabs %}
+```
 
 ![](actions-img/i2.png "")
 
 ### Tint
 `Tint` a `Node` that implements the `NodeRGB` protocol from current the tint to a custom tint.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // Tints a node to the specified RGB values
@@ -94,14 +94,14 @@ mySprite->runAction(tintTo);
 // Tints a node BY the delta of the specified RGB values.
 auto tintBy = TintBy::create(2.0f, 120.0f, 232.0f, 254.0f);
 mySprite->runAction(tintBy);
-{%- endcodetabs %}
+```
 
 ![](actions-img/i5.png "")
 
 ### Animate
 With `Animate` it is possible to do simple __flipbook__ animation with your `Sprite` objects. This is simply replacing the __display frame__ at set intervals for the duration of the animation. Let's consider this example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 // now lets animate the sprite we moved
@@ -126,7 +126,7 @@ Animate* animate = Animate::create(animation);
 
 // run it and repeat it forever
 mySprite->runAction(RepeatForever::create(animate));
-{%- endcodetabs %}
+```
 
 It's hard to show an animation in text, so please run the example __Programmer
 Guide Sample__ code to see this in action!
@@ -147,7 +147,7 @@ Cocos2d-x supports most of the easing function in the above graph. They are also
 simple to implement. Lets look at a specific use case. Lets drop a `Sprite` object
 from the top of the screen and make it bounce.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a sprite
 auto mySprite = Sprite::create("mysprite.png");
 
@@ -168,6 +168,6 @@ auto seq1 = Sequence::create(move_ease_in, delay, move_ease_in_back,
 
 // run the sequence and repeat forever.
 mySprite->runAction(RepeatForever::create(seq1));
-{%- endcodetabs %}
+```
 
 Run the example __Programmer Guide Sample__ code to see this in action!

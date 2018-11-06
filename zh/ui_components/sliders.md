@@ -4,7 +4,7 @@
 
 创建滑动条：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto slider = Slider::create();
@@ -26,7 +26,7 @@ slider->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 });
 
 this->addChild(slider);
-{%- endcodetabs %}
+```
 
 从上面的例子，可以看出，实现一个滑动条需要提供五张图像，对应滑动条的不同部分不同状态，分别为：滑动条背景，上层进度条，正常显示时的滑动端点，滑动时的滑动端点，不可用时的滑动端点。本次示例的五张图像如下：
 

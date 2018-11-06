@@ -10,7 +10,7 @@ There are 32 supported collision categories. For each shape you can specify whic
 category it belongs to. You can also specify what other categories this shape can
 collide with. This is done with masking bits. For example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sprite1 = addSpriteAtPosition(Vec2(s_centre.x - 150,s_centre.y));
 sprite1->getPhysicsBody()->setCategoryBitmask(0x02);    // 0010
 sprite1->getPhysicsBody()->setCollisionBitmask(0x01);   // 0001
@@ -26,18 +26,18 @@ sprite2->getPhysicsBody()->setCollisionBitmask(0x02);   // 0010
 auto sprite3 = addSpriteAtPosition(Vec2(s_centre.x + 150,s_centre.y + 100),2);
 sprite3->getPhysicsBody()->setCategoryBitmask(0x03);    // 0011
 sprite3->getPhysicsBody()->setCollisionBitmask(0x03);   // 0011
-{%- endcodetabs %}
+```
 
 You can check for collisions by checking and comparing _category_ and _collision_ bitmasks like:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
    || (shapeB->getCategoryBitmask() & shapeA->getCollisionBitmask()) == 0)
 {
    // shapes can't collide
    ret = false;
 }
-{%- endcodetabs %}
+```
 
 ![](physics-img/CollisionFiltering.gif )
 
@@ -97,14 +97,14 @@ created automatically. There are a few terms associated with contacts.
 
 You can get the `PhysicsShape` from a __contact__. From those you can get the bodies.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 bool onContactBegin(PhysicsContact& contact)
 {
     auto bodyA = contact.getShapeA()->getBody();
     auto bodyB = contact.getShapeB()->getBody();
     return true;
 }
-{%- endcodetabs %}
+```
 
 You can get access to __contacts__ by implementing a __contact listener__. The __contact
 listener__ supports several events: __begin__, __pre-solve__, __post-solve__ and __separate__.
@@ -134,7 +134,7 @@ won't be received by default, even if you create the relative __EventListener__.
 
 For example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 bool init()
 {
     //create a static PhysicsBody
@@ -183,6 +183,6 @@ bool onContactBegin(PhysicsContact& contact)
     //bodies can collide
     return true;
 }
-{%- endcodetabs %}
+```
 
 ![](physics-img/CollisionProcessing.gif)

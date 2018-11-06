@@ -21,9 +21,9 @@ __`fbx-conv`__ 允许将 _FBX_ 格式转换为 Cocos2d-x 专有格式。 _FBX_ �
 
 命令行的使用：
 
-{% codetabs name="shell", type="sh" -%}
+```sh
 fbx-conv [-a|-b|-t] FBXFile
-{%- endcodetabs %}
+```
 
 参数含义：
 
@@ -34,9 +34,9 @@ fbx-conv [-a|-b|-t] FBXFile
 
 示例：
 
-{% codetabs name="shell", type="sh" -%}
+```sh
 fbx-conv -a boss.FBX
-{%- endcodetabs %}
+```
 
 工具使用注意点：
 

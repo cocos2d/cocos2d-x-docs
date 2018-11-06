@@ -4,7 +4,7 @@ they are different in what they accomplish. A __By__ is relative to the current
 state of the `Node`. A __To__ action is absolute, meaning it doesn't take into
 account the current state of the `Node`. Let's take a look at a specific example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 mySprite->setPosition(Vec2(200, 256));
 
@@ -23,6 +23,6 @@ auto delay = DelayTime::create(1);
 auto seq = Sequence::create(moveBy, delay, moveTo, nullptr);
 
 mySprite->runAction(seq);
-{%- endcodetabs %}
+```
 
 ![](actions-img/i0.png "")

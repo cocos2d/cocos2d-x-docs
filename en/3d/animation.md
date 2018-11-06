@@ -4,7 +4,7 @@ However, we might want a more rich experience. Enter animation! To run a 3d
 animation, you can use the `Animation3D` and `Animate3D` objects. You then create
 an `Animate3D` action using the `Animation3D` object. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // the animation is contained in the .c3b file
 auto animation = Animation3D::create("orc.c3b");
 
@@ -13,7 +13,7 @@ auto animate = Animate3D::create(animation);
 
 // runs the animation
 sprite->runAction(RepeatForever::create(animate));
-{%- endcodetabs %}
+```
 
 Run the example __Programmer Guide Sample__ code to see this in action! Please
 keep in mind that 3D animations are exactly the same concepts as 2D. Please refer
@@ -24,7 +24,7 @@ What do you do when you want to run multiple __animations__ at the same time?
 Using both the __animation start time__ and __animation length__ parameters you
 can create multiple animations. The unit for both parameters is seconds. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto animation = Animation3D::create(fileName);
 
 auto runAnimate = Animate3D::create(animation, 0, 2);
@@ -32,7 +32,7 @@ sprite->runAction(runAnimate);
 
 auto attackAnimate = Animate3D::create(animation, 3, 5);
 sprite->runAction(attackAnimate);
-{%- endcodetabs %}
+```
 
 In the above example there are two animations that get run. The first starts
 immediately and lasts for *2 seconds*. The second starts after *3 seconds* and lasts for *5 seconds*.

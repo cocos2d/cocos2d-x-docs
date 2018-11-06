@@ -4,7 +4,7 @@ main character? Where would they type it into? Yes, a __text field__, of course.
 A `TextField` widget is used for inputting text. It supports touch event, focus,
 percent positioning and percent content size. To create a `TextField` widget:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
@@ -14,7 +14,7 @@ textField->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 });
 
 this->addChild(textField);
-{%- endcodetabs %}
+```
 
 In this example a `TextField` is created and a __callback__ specified.
 
@@ -23,7 +23,7 @@ like the user to enter a secret password? Do you need to limit the number of
 characters a user can input? `TextField` objects have this all built-it and much
 more! Let's take a look at an example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto textField = TextField::create("","Arial",30);
@@ -39,7 +39,7 @@ textField->addTouchEventListener([&](Ref* sender, Widget::TouchEventType type){
 });
 
 this->addChild(textField);
-{%- endcodetabs %}
+```
 
 On screen a `TextField` might look like this:
 

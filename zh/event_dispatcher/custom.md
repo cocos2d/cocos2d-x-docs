@@ -4,7 +4,7 @@
 
 创建自定义事件监听器：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 _listener = EventListenerCustom::create("game_custom_event1", [=](EventCustom* event){
     std::string str("Custom event 1 received, ");
     char* buf = static_cast<char*>(event->getUserData());
@@ -14,11 +14,11 @@ _listener = EventListenerCustom::create("game_custom_event1", [=](EventCustom* e
 });
 
 _eventDispatcher->addEventListenerWithSceneGraphPriority(_listener, this);
-{%- endcodetabs %}
+```
 
 上面制作了一个自定义事件监听器，并预设了响应方法。下面创建自定义事件，并手动分发：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 static int count = 0;
 ++count;
 
@@ -29,7 +29,7 @@ EventCustom event("game_custom_event1");
 event.setUserData(buf);
 
 _eventDispatcher->dispatchEvent(&event);
-{%- endcodetabs %}
+```
 
 示例创建了一个自定义事件( _EventCustom_ )对象，并设置了 `UserData`，然后调用 `_eventDispatcher->dispatchEvent(&event)` 进行手动事件分发。当预先定义的事件监听器，收到此事件，将会触发对应的响应函数。响应函数中可以获取到事件分发时设置的 `UserData` 完成数据处理。
 

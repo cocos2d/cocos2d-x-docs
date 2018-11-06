@@ -5,11 +5,7 @@ We always welcome contributions to our documentation.
 
   - Fork our [docs repo](https://github.com/cocos2d/cocos2d-x-docs)
   - __en/__ is for English contributions, __zh/__ is for 中文 contributions.
-  - code blocks must be wrapped in special code to work correctly:
-    - C++ only code block:
-
-      ![](about-img/codeblock.png "")
-
+  - code blocks must be wrapped in a markdown codeblock. For Markdown help, please see [GitHub Flavored Markdown](https://github.github.com/gfm/)
   - Test your changes using `gitbook build` and `gitbook serve`. Please test in a few web browsers.
   - Submit a *pull request* with your changes and we will review and merge it.
 

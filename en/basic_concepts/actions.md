@@ -19,7 +19,7 @@ and after 5 seconds the sprite will move to a new position:
 
 `Action` objects are easy to create:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("Blue_Front1.png");
 
 // Move a sprite 50 pixels to the right, and 10 pixels to the top over 2 seconds.
@@ -29,4 +29,4 @@ mySprite->runAction(moveBy);
 // Move a sprite to a specific location over 2 seconds.
 auto moveTo = MoveTo::create(2, Vec2(50,10));
 mySprite->runAction(moveTo);
-{%- endcodetabs %}
+```

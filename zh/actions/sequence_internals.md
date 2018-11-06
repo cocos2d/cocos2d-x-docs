@@ -6,15 +6,15 @@ __克隆(Clone)__ 的功能和字面含义一样，如果你对一个节点对�
 
 我们来看示例，假如你有一个坐标位置是 `(0,0)` 的 `heroSprite`，执行这样一个动作：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 MoveBy::create(10, Vec2(400,100));
-{%- endcodetabs %}
+```
 
 你的 `heroSprite` 就在 10s 的时间中，从 `(0,0)` 移动到了 `(400,100)`，`heroSprite` 有了一个新位置 `(400,100)`，更重要的是动作对象也有了节点位置相关的内部状态了。现在假如你有一个坐标位置是 `(200,200)`的 `emenySprite`。你还使用这个相同的动作，`emenySprite` 就会移动到 `(800,200)`的坐标位置，并不是你期待的结果。因为第二次将这个动作应用的时候，它已经有内部状态了。使用 `clone()` 能避免这种情况，克隆获得一个新的动作对象，新的对象没有之前的内部状态。
 
 从代码中学习用法吧，先看看错误的情况：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create our Sprites
 auto heroSprite = Sprite::create("herosprite.png");
 auto enemySprite = Sprite::create("enemysprite.png");
@@ -28,11 +28,11 @@ heroSprite->runAction(moveBy);
 // run it on our enemy
 enemySprite->runAction(moveBy); // oops, this will not be unique!
 // uses the Actions current internal state as a starting point.
-{%- endcodetabs %}
+```
 
 使用 `clone()` 的正确情况：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create our Sprites
 auto heroSprite = Sprite::create("herosprite.png");
 auto enemySprite = Sprite::create("enemysprite.png");
@@ -45,7 +45,7 @@ heroSprite->runAction(moveBy);
 
 // run it on our enemy
 enemySprite->runAction(moveBy->clone()); // correct! This will be unique
-{%- endcodetabs %}
+```
 
 ## 动作的倒转
 
@@ -54,14 +54,14 @@ __倒转(Reverse)__ 的功能也和字面意思一样，调用 `reverse()` 可�
 
 倒转使用起来很简单：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // reverse a sequence, spawn or action
 mySprite->runAction(mySpawn->reverse());
-{%- endcodetabs %}
+```
 
 思考下面这段代码在执行的时候, 内部发生了什么?
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a Sprite
 auto mySprite = Sprite::create("mysprite.png");
 mySprite->setPosition(50, 56);
@@ -82,7 +82,7 @@ mySprite->runAction(sequence);
 
 // reverse it
 mySprite->runAction(sequence->reverse());
-{%- endcodetabs %}
+```
 
 思考起来可能有点困难，我们将执行的每一步列出来，或许能帮助你理解：
 

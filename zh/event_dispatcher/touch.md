@@ -8,7 +8,7 @@
 
 创建触摸事件监听器：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 //  Create a "one by one" touch event listener
 // (processes one touch at a time)
 auto listener1 = EventListenerTouchOneByOne::create();
@@ -31,7 +31,7 @@ listener1->onTouchEnded = [=](Touch* touch, Event* event){
 
 // Add listener
 _eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, this);
-{%- endcodetabs %}
+```
 
 可以看到，在使用触摸事件监听器时，可以监听三种不同的事件，每一个事件都有自己触发的时机。
 

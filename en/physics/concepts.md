@@ -77,12 +77,12 @@ job.
 
 You can create a `Scene` that contains a `PhysicsWorld` just by calling the function `initWithPhysics()` in your `Scene`. Your `init()` function should have:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 if( !Scene::initWithPhysics() )
 {
 
 }
-{%- endcodetabs %}
+```
 
 Every `PhysicsWorld` has properties associated with it:
 
@@ -102,7 +102,7 @@ The process of updating a `PhysicsWorld` is called __stepping__. By default, the
 
 Lets create a static and 5 dynamic `PhysicsBody` objects that are a box shape:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto physicsBody = PhysicsBody::createBox(Size(65.0f, 81.0f),
 						PhysicsMaterial(0.1f, 1.0f, 0.0f));
 physicsBody->setDynamic(false);
@@ -136,7 +136,7 @@ for (int i = 0; i < 5; ++i)
 
     addChild(sprite);
 }
-{%- endcodetabs %}
+```
 
 The result is a stationary `PhysicsBody` with 5 additional `PhysicsBody` objects
 colliding around it.

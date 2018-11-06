@@ -10,24 +10,24 @@ rotation to all children:
 
 ![](basic_concepts-img/2n_parent_rotation.png "")
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myNode = Node::create();
 
 // rotating by setting
 myNode->setRotation(50);
-{%- endcodetabs %}
+```
 
 Just like with rotation, if you change the scale of the parent the children
 will also get scaled:
 
 ![](basic_concepts-img/2n_parent_scaled.png "")
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myNode = Node::create();
 
 // scaling by setting
 myNode->setScale(2.0); // scales uniformly by 2.0
-{%- endcodetabs %}
+```
 
 Not all changes to the __parent__ are passed down to its __children__. Changing the
 __parent__ __anchor point__ only affects transform operations (*scale*, *position*,

@@ -27,8 +27,8 @@
 - 代码块要以一种特殊的方式包裹，可以模仿已有代码块的包裹方式.
   - 例如 C++ 代码块:
       ```html
-      {% codetabs name="C++", type="cpp" -%}
+      ```cpp
       auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-      {%- endcodetabs %}
+      ```
 
 文档的开发，Cocos2d-x 开源社区的建设，期待你的加入！

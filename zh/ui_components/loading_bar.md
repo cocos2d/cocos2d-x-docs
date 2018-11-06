@@ -4,7 +4,7 @@
 
 创建一个进度条：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto loadingBar = LoadingBar::create("LoadingBarFile.png");
@@ -13,13 +13,13 @@ auto loadingBar = LoadingBar::create("LoadingBarFile.png");
 loadingBar->setDirection(LoadingBar::Direction::RIGHT);
 
 this->addChild(loadingBar);
-{%- endcodetabs %}
+```
 
 上面的例子，我们创建了一个进度条，设置了当进度增加时，进度条向右填充。
 
 在进度的控制中，你肯定需要改变进度条的进度. 示例：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 #include "ui/CocosGUI.h"
 
 auto loadingBar = LoadingBar::create("LoadingBarFile.png");
@@ -32,7 +32,7 @@ loadingBar->setPercent(25);
 loadingBar->setPercent(35);
 
 this->addChild(loadingBar);
-{%- endcodetabs %}
+```
 
 上面例子，使用的进度条图像是：
 

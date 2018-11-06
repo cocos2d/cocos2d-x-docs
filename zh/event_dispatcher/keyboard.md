@@ -4,7 +4,7 @@
 
 创建键盘事件监听器：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // creating a keyboard event listener
 auto listener = EventListenerKeyboard::create();
 listener->onKeyPressed = CC_CALLBACK_2(KeyboardTest::onKeyPressed, this);
@@ -22,7 +22,7 @@ void KeyboardTest::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
 {
         log("Key with keycode %d released", keyCode);
 }
-{%- endcodetabs %}
+```
 
 可以看到，在使用键盘事件监听器时，可以监听两种不同的事件，每一个事件都有自己的触发时机。
 

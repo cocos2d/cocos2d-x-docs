@@ -2,10 +2,10 @@
 
 如果你希望在刚体周围绘制红框来帮助调试，那么可以简单的将这两行添加到物理场景的初始化代码中。你当然也可以学习官方测试项目，加一个菜单，在菜单的回调函数里控制是否打开调试功能。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Director::getInstance()->getRunningScene()->getPhysics3DWorld()->setDebugDrawEnable(true);
 Director::getInstance()->getRunningScene()->setPhysics3DDebugCamera(cameraObjecct);
-{%- endcodetabs %}
+```
 
 ## 禁用物理引擎
 

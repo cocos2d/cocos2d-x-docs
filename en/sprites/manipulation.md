@@ -4,9 +4,9 @@ has that can be manipulated.
 
 Given:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i1.png "")
 
@@ -22,7 +22,7 @@ is __(0.5, 0.5)__.
 
 Setting the __anchor point__ is easy:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // DEFAULT anchor point for all Sprites
 mySprite->setAnchorPoint(0.5, 0.5);
 
@@ -37,7 +37,7 @@ mySprite->setAnchorPoint(1, 0);
 
 // top right
 mySprite->setAnchorPoint(1, 1);
-{%- endcodetabs %}
+```
 
 To represent this visually:
 
@@ -60,17 +60,17 @@ value. We did not use a `setPosition()` statement to achieve this:
 There are more ways to set position than just __anchor point__. `Sprite` objects
 can also be set using the `setPosition()` method.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // position a sprite to a specific position of x = 100, y = 200.
 mySprite->setPosition(Vec2(100, 200));
-{%- endcodetabs %}
+```
 
 #### Rotation
 Changes the __sprite's__ rotation, by a positive or negative number of degrees.
 A positive value rotates the `Sprite` object clockwise, while a negative value
 rotates the `Sprite` object counter-clockwise. The default value is __0__.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // rotate sprite by +20 degrees
 mySprite->setRotation(20.0f);
 
@@ -82,7 +82,7 @@ mySprite->setRotation(60.0f);
 
 // rotate sprite by -60 degrees
 mySprite->setRotation(-60.0f);
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i8.png "")
 
@@ -90,7 +90,7 @@ mySprite->setRotation(-60.0f);
 Changes the __sprite's__ scale, either by x, y or uniformly for both x and y.
 The default value is 1.0 for both x and y.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // increases X and Y size by 2.0 uniformly
 mySprite->setScale(2.0);
 
@@ -99,7 +99,7 @@ mySprite->setScaleX(2.0);
 
 // increases just Y scale by 2.0
 mySprite->setScaleY(2.0);
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i5.png "")
 
@@ -107,13 +107,13 @@ mySprite->setScaleY(2.0);
 Changes the __sprite's__ skew, either by x, y or uniformly for both x and y.
 The default value is 0,0 for both x and y.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // adjusts the X skew by 20.0
 mySprite->setSkewX(20.0f);
 
 // adjusts the Y skew by 20.0
 mySprite->setSkewY(20.0f);
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i7.png "")
 
@@ -129,13 +129,13 @@ value from 0 - 255. Cocos2d-x also provides pre-defined colors that you can pick
 from. Using these will be a bit faster since they are pre-defined. A few examples:
 `Color3B::White` and `Color3B::Red`.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // set the color by passing in a pre-defined Color3B object.
 mySprite->setColor(Color3B::WHITE);
 
 // Set the color by passing in a Color3B object.
 mySprite->setColor(Color3B(255, 255, 255)); // Same as Color3B::WHITE
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i10.png "")
 
@@ -145,10 +145,10 @@ transparent at all. This property expects a value from 0 to 255, where 255 means
 fully opaque and 0 means fully transparent. Think: __zero opacity means invisible__,
 and you'll always understand how this works. The default value is 255 (fully opaque).
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // Set the opacity to 30, which makes this sprite 11.7% opaque.
 // (30 divided by 256 equals 0.1171875...)
 mySprite->setOpacity(30);
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i11.png "")

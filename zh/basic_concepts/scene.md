@@ -36,7 +36,7 @@
 
 如上图，左侧的场景是由很多节点对象组成的，他们根据被指定的 z-order 相互叠加。在 Cocos2d-x 中，通过 `Scene` 的 `addChild()` 方法构建场景图.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // Adds a child with the z-order of -2, that means
 // it goes to the "left" side of the tree (because it is negative)
 scene->addChild(title_node, -2);
@@ -47,6 +47,6 @@ scene->addChild(label_node);
 // Adds a child with the z-order of 1, that means
 // it goes to the "right" side of the tree (because it is positive)
 scene->addChild(sprite_node, 1);
-{%- endcodetabs %}
+```
 
 渲染时 `z-order` 值大的节点对象会后绘制，值小的节点对象先绘制。如果两个节点对象的绘制范围有重叠，`z-order` 值大的可能会覆盖 `z-order` 值小的。

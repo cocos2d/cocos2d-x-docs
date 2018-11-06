@@ -7,9 +7,9 @@ talk about each one.
 ### Creating a Sprite
 A `Sprite` can be created by specifying an image file to use.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i1.png "")
 
@@ -25,9 +25,9 @@ image file, you can do it by specifying a `Rect`.
 
 `Rect` has 4 values: __origin x__, __origin y__, __width__ and __height__.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-{%- endcodetabs %}
+```
 
 ![](sprites-img/i4.png "")
 
@@ -41,8 +41,8 @@ and height of the image file you specify. Take a look at the example below. If
 we use an image with dimensions 200 x 200 the following 2 statements would have
 the same result.
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto mySprite = Sprite::create("mysprite.png");
 
 auto mySprite = Sprite::create("mysprite.png", Rect(0,0,200,200));
-{%- endcodetabs %}
+```

@@ -4,7 +4,7 @@ to its properties. `Action` objects allow the transformation of `Node` propertie
 
 Example of `MoveTo` and `MoveBy` action:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // Move sprite to position 50,10 in 2 seconds.
 auto moveTo = MoveTo::create(2, Vec2(50, 10));
 mySprite1->runAction(moveTo);
@@ -12,4 +12,4 @@ mySprite1->runAction(moveTo);
 // Move sprite 20 points to right in 2 seconds
 auto moveBy = MoveBy::create(2, Vec2(20,0));
 mySprite2->runAction(moveBy);
-{%- endcodetabs %}
+```

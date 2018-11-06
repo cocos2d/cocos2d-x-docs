@@ -6,12 +6,12 @@
 
 创建并加载：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sprite = Sprite3D::create("boss.c3b"); //c3b file, created with the FBX-converter
 sprite->setScale(5.f); //sets the object scale in float
 sprite->setPosition(Vec2(200,200)); //sets sprite position
 scene->addChild(sprite,1); //adds sprite to scene, z-index: 1
-{%- endcodetabs %}
+```
 
 这个对象是通过 _.c3b_ 文件创建的，效果是这样：
 
@@ -19,18 +19,18 @@ scene->addChild(sprite,1); //adds sprite to scene, z-index: 1
 
 创建一个动作使这个模型不断旋转：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 //rotate around the X axis
 auto rotation = RotateBy::create(15, Vec3(0, 360, 0));
 //our sprite object runs the action
 sprite->runAction(RepeatForever::create(rotation));
-{%- endcodetabs %}
+```
 
 设置锚点，与 `Sprite` 方法一样：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 sprite->setAnchorPoint(Point(0.0f,0.0f));
-{%- endcodetabs %}
+```
 
 ## 模型附加
 
@@ -40,10 +40,10 @@ sprite->setAnchorPoint(Point(0.0f,0.0f));
 
 效果如下：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sp = Sprite3D::create("axe.c3b");
 sprite->getAttachNode("Bip001 R Hand")->addChild(sp);
-{%- endcodetabs %}
+```
 
 ![](../../en/3d/3d-img/9_3.png)
 
@@ -59,7 +59,7 @@ sprite->getAttachNode("Bip001 R Hand")->addChild(sp);
 
 我们通过使用网格对象，替换掉外套，下面是演示代码：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sprite = Sprite3D::create("ReskinGirl.c3b");
 
 // display the first coat
@@ -72,7 +72,7 @@ girlTop1->setVisible(false);
 // swap to the second coat
 girlTop0->setVisible(false);
 girlTop1->setVisible(true);
-{%- endcodetabs %}
+```
 
 效果：
 

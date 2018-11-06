@@ -16,7 +16,7 @@
 
 不用担心，相机听起来很复杂，但使用 Cocos2d-x 操作相机很容易。使用 3D 时，无需做任何特殊的操作即可创建 `Camera` 对象，每个场景都会根据 `Director` 对象的投影属性默认创建一个相机。如果需要多台相机，可以使用以下代码创建一个：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto s = Director::getInstance()->getWinSize();
 auto camera = Camera::createPerspective(60, (GLfloat)s.width/s.height, 1, 1000);
 
@@ -25,22 +25,22 @@ camera->setPosition3D(Vec3(0, 100, 100));
 camera->lookAt(Vec3(0, 0, 0), Vec3(0, 1, 0));
 
 addChild(camera); //add camera to the scene
-{%- endcodetabs %}
+```
 
 ## 创建正交相机
 
 默认的相机是透视相机，如果你想创建一个正交相机，这样做：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Camera::createOrthographic();
-{%- endcodetabs %}
+```
 
 示例：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto s = Director::getInstance()->getWinSize();
 auto camera = Camera::createOrthographic(s.width, s.height, 1, 1000);
-{%- endcodetabs %}
+```
 
 ## 在相机中隐藏对象
 
@@ -48,10 +48,10 @@ auto camera = Camera::createOrthographic(s.width, s.height, 1, 1000);
 
 示例：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 //Camera
 camera->setCameraFlag(CameraFlag::USER1);
 
 //Node
 node->setCameraMask(CameraFlag::USER1);
-{%- endcodetabs %}
+```

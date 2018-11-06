@@ -13,7 +13,7 @@ __request__ and receiving the data on a __callback__.
 
 Working with an `HTTPRequest` is quite simple:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 HttpRequest* request = new (std :: nothrow) HttpRequest();
 request->setUrl("http://just-make-this-request-failed.com");
 request->setRequestType(HttpRequest::Type::GET);
@@ -22,13 +22,13 @@ request->setResponseCallback(CC_CALLBACK_2 (HttpClientTest::onHttpRequestComplet
 HttpClient::getInstance()->sendImmediate(request);
 
 request->release();
-{%- endcodetabs %}
+```
 
 Notice that we specified a __setResponseCallback()__ method for when a response is
 received. By doing this we can look at the data returned and use it how we might
 need to. Again, this process is simple and we can do it with ease:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 void HttpClientTest::onHttpRequestCompleted(HttpClient* sender, HttpResponse* response)
 {
   if (!response)
@@ -44,4 +44,4 @@ void HttpClientTest::onHttpRequestCompleted(HttpClient* sender, HttpResponse* re
     log ("% c", (* buffer) [i]);
   }
 }
-{%- endcodetabs %}
+```

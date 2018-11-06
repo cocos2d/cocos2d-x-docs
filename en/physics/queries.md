@@ -17,7 +17,7 @@ attention. You have essentially performed a __ray cast__ here. You scanned until
 you found something interesting to make you stop scanning. You can __ray cast__ at
 a shape to get the point of first intersection. For example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 void tick(float dt)
 {
     Vec2 d(300 * cosf(_angle), 300 * sinf(_angle));
@@ -51,7 +51,7 @@ void tick(float dt)
 
     _angle += 1.5f * (float)M_PI / 180.0f;
 }
-{%- endcodetabs %}
+```
 
 ![](physics-img/RayTest.gif)
 
@@ -59,7 +59,7 @@ void tick(float dt)
 __Rect queries__ provide a fast way to check roughly which shapes are in an area.
 It is pretty easy to implement:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto func = [](PhysicsWorld& world, PhysicsShape& shape, void* userData)->bool
 {
     //Return true from the callback to continue rect queries
@@ -67,7 +67,7 @@ auto func = [](PhysicsWorld& world, PhysicsShape& shape, void* userData)->bool
 }
 
 scene->getPhysicsWorld()->queryRect(func, Rect(0,0,200,200), nullptr);
-{%- endcodetabs %}
+```
 
 A few examples of using a __rect query__ while doing a *logo smash*:
 

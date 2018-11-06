@@ -20,14 +20,14 @@ __图集(Sprite Sheet)__ 是通过专门的工具将多张图片合并成一张�
 
 获取到 `SpriteFrameCache` 的实例，把图集添加到实例中。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // load the Sprite Sheet
 auto spritecache = SpriteFrameCache::getInstance();
 
 // the .plist file can be generated with any of the tools mentioned below
 spritecache->addSpriteFramesWithFile("sprites.plist");
 
-{%- endcodetabs %}
+```
 
 这样我们就完成了，将一个图集添加到 `SpriteFrameCache` 中，现在我们就能利用这个对象创建精灵了！
 

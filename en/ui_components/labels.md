@@ -15,9 +15,9 @@ representation of each character in __.png__ format. If you are using a tool lik
 __Glyph Designer__ these files are created automatically for you. Creating a
 `Label` object from a __bitmap font__:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myLabel = Label::createWithBMFont("bitmapRed.fnt", "Your Text");
-{%- endcodetabs %}
+```
 
 ![](ui_components-img/LabelBMFont.png "")
 
@@ -28,9 +28,9 @@ it is missing characters, make sure they exist in your __.fnt__ file.
 ### Label TTF
 __True Type Fonts__ are different from the __bitmap fonts__ we learned about above. With __true type fonts__ the outline of the font is rendered. This is convenient as you do not need to have a separate font file for each size and color you might wish to use. Creating a `Label` object that uses a __true type font__ is easy. To create one you need to specify a __.ttf__ font file name, text string and a size. Unlike `BMFont`, `TTF` can render size changes without the need for a separate font files. Example, using a __true type font__:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myLabel = Label::createWithTTF("Your Text", "Marker Felt.ttf", 24);
-{%- endcodetabs %}
+```
 
 ![](ui_components-img/LabelTTF.png "")
 
@@ -41,7 +41,7 @@ same properties you can create a `TTFConfig` object to manage them. A `TTFConfig
 
 You can create a `TTFConfig` object for your `Labels` in this way:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // create a TTFConfig files for labels to share
 TTFConfig labelConfig;
 labelConfig.fontFilePath = "myFont.ttf";
@@ -53,7 +53,7 @@ labelConfig.distanceFieldEnabled = false;
 
 // create a TTF Label from the TTFConfig file.
 auto myLabel = Label::createWithTTF(labelConfig, "My Label Text");
-{%- endcodetabs %}
+```
 
 ![](ui_components-img/LabelTTFWithConfig.png "")
 
@@ -65,9 +65,9 @@ characters.
 This is a font that is meant not to have its properties changed. You should think
 of it as __system font, system rules__. Creating a `SystemFont` label:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myLabel = Label::createWithSystemFont("My Label Text", "Arial", 16);
-{%- endcodetabs %}
+```
 
 ![](ui_components-img/LabelWithSystemFont.png "")
 
@@ -80,33 +80,33 @@ and __glow__. You can apply one or more effects to a `Label` object easily:
 
 Label with a __shadow__ effect:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myLabel = Label::createWithTTF("My Label Text", "myFont.ttf", 16);
 
 // shadow effect is supported by all Label types
 myLabel->enableShadow();
-{%- endcodetabs %}
+```
 
 ![](ui_components-img/LabelWithShadow.png "")
 
 Label with a __outline__ effect:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myLabel = Label::createWithTTF("My Label Text","myFont.ttf", 16);
 
 // outline effect is TTF only, specify the outline color desired
 myLabel->enableOutline(Color4B::WHITE, 1));
-{%- endcodetabs %}
+```
 
 ![](ui_components-img/LabelWithOutline.png "")
 
 Label with a __glow__ effect:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto myLabel = Label::createWithTTF("My Label Text", "myFont.ttf", 16);
 
 // glow effect is TTF only, specify the glow color desired.
 myLabel->enableGlow(Color4B::YELLOW);
-{%- endcodetabs %}
+```
 
 ![](ui_components-img/LabelWithGlow.png "")

@@ -8,29 +8,29 @@
 
 使用 TMX 文件创建一个瓦片地图：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // reading in a tiled map.
 auto map = TMXTiledMap::create("TileMap.tmx");
 addChild(map, 0, 99); // with a tag of '99'
-{%- endcodetabs %}
+```
 
 瓦片地图可能有许多层，通过层名获取到一个特定的层。
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // how to get a specific layer
 auto map = TMXTiledMap::create("TileMap.tmx");
 auto layer = map->getLayer("Layer0");
 auto tile = layer->getTileAt(Vec2(1, 63));
-{%- endcodetabs %}
+```
 
 每个瓦片都有独一无二的位置和 ID，这使得我们很容易选择特定的瓦片。
 
 通过位置访问：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 // to obtain a specific tiles id
 unsigned int gid = layer->getTileGIDAt(Vec2(0, 63));
-{%- endcodetabs %}
+```
 
 瓦片地图布局示例：
 

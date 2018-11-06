@@ -16,16 +16,16 @@ This is how `Camera` and `Billboard` objects relate to each other.
 it supports most of the features as a `Sprite` object. We can create one using the
 following create method:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto billboard = BillBoard::create("Blue_Front1.png", BillBoard::Mode::VIEW_POINT_ORIENTED);
-{%- endcodetabs %}
+```
 
 You can also create a `Billboard` object for the camera XOY plane (like the plane
   of a floor) by changing the `BillBoard` objects mode:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto billboard = BillBoard::create("Blue_Front1.png", BillBoard::Mode::VIEW_PLANE_ORIENTED);
-{%- endcodetabs %}
+```
 
 These _create_ methods look a little different since an additional parameter of
 __BillBoard::Mode__ is passed in. There are two __BillBoard::Mode__ types,
@@ -45,12 +45,12 @@ You can also set properties for a `BillBoard` just like with any other `Node`.
 These include, but are not limited to: __scale__, __position__, __rotation__.
 Examples:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 billboard->setScale(0.5f);
 billboard->setPosition3D(Vec3(0.0f, 0.0f, 0.0f));
 billboard->setBlendFunc(BlendFunc::ALPHA_NON_PREMULTIPLIED);
 addChild(billboard);
-{%- endcodetabs %}
+```
 
 ### ParticleSystem3D
 In Chapter 7, you learned about 2D particles and how to use them. When you use 3D
@@ -73,23 +73,23 @@ The first way is to build a particle by passing in a __Particle Universe__ file
 and its corresponding __material file__. Remember from Chapter 7 that a
 __material file__ is what describes the particle. This is required. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto ps = PUParticleSystem3D::create("lineStreak.pu", "pu_mediapack_01.material");
 ps->startParticleSystem();
 this->addChild(ps);
-{%- endcodetabs %}
+```
 
 The second way is to build the particle system only by passing a __particle universe__
 file. When you create a particle this way, besides loading the particle, all
 __material files__ in the same folder as the particle file will automatically be
 loaded. Here is an example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto ps = PUParticleSystem3D::create("electricBeamSystem.pu");
 ps->startParticleSystem();
 
 this->addChild(ps);
-{%- endcodetabs %}
+```
 
   __Note:__ using this method will result in an increase in loading times and
 consumes more memory since everything will be loaded. If you know what __material__
@@ -105,18 +105,18 @@ Once you have your particle, you can interact with it it fairly obvious ways. Yo
 can interact with with the __particle system__ as a whole, starting, stopping,
 pausing, resuming and obtaining the total number of particles:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 virtual void startParticleSystem() override;
 virtual void stopParticleSystem() override;
 virtual void pauseParticleSystem() override;
 virtual void resumeParticleSystem() override;
 virtual int getAliveParticleCount() const override;
-{%- endcodetabs %}
+```
 
 As `PUParticleSystem3D` is derived from `Node` you can run `Action` and `Sequence`
 objects on your particles! Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto ps = PUParticleSystem3D::create("blackHole.pu", "pu_mediapack_01.material");
 ps->setPosition(-25.0f, 0.0f);
 
@@ -125,7 +125,7 @@ auto moveby1 = MoveBy::create(2.0f, Vec2(-50.0f, 0.0f));
 
 ps->runAction(RepeatForever::create(Sequence::create(moveby, moveby1, nullptr)));
 ps->startParticleSystem();
-{%- endcodetabs %}
+```
 
 Combining `Action` and `Sequence` objects could produce an interesting black hole
 effect:
@@ -135,7 +135,7 @@ effect:
 Just like with other 3D objects you can also combine 3D objects using `AttachNode`.
 This allows for creating rich models. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sprite3d = Sprite3D::create("orc.c3b");
 sprite3d->setPosition3D(Vec3(0.0f, 0.0f, 0.0f));
 sprite3d->setRotation3D(Vec3(0.0f, 180.0f, 0.0f));
@@ -152,6 +152,6 @@ handler->startParticleSystem();
 sprite3d->getAttachNode("Bip001 L Hand")->addChild(handler);
 
 this->addChild(sprite3d);
-{%- endcodetabs %}
+```
 
 ![](3d-img/particle4.png)

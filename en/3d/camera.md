@@ -27,7 +27,7 @@ Each `Scene` automatically creates a default camera, based on the projection
 properties of the `Director` object. If you need more than one camera, you can
 use the following code to create one:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto s = Director::getInstance()->getWinSize();
 auto camera = Camera::createPerspective(60, (GLfloat)s.width/s.height, 1, 1000);
 
@@ -36,32 +36,32 @@ camera->setPosition3D(Vec3(0, 100, 100));
 camera->lookAt(Vec3(0, 0, 0), Vec3(0, 1, 0));
 
 addChild(camera); //add camera to the scene
-{%- endcodetabs %}
+```
 
 ### Creating orthogonal camera
 The default `Camera` is a __perspective camera__. If you want to create an
 __orthogonal camera__, it's easy to do by calling:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 Camera::createOrthographic();
-{%- endcodetabs %}
+```
 
 Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto s = Director::getInstance()->getWinSize();
 auto camera = Camera::createOrthographic(s.width, s.height, 1, 1000);
-{%- endcodetabs %}
+```
 
 ### Hiding objects from the camera
 Sometimes you don't want to have all objects visible in a `Camera` view. Hiding
 an object from one camera is very easy. Use __setCameraMask(CameraFlag)__ on the
 `Node` and __setCameraFlag(CameraFlag)__ on the `Camera`. Example:
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 //Camera
 camera->setCameraFlag(CameraFlag::USER1);
 
 //Node
 node->setCameraMask(CameraFlag::USER1);
-{%- endcodetabs %}
+```

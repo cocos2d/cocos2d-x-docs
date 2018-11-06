@@ -14,9 +14,9 @@
 
   * 最终效果：
 
-    {% codetabs name="C++", type="cpp" -%}
+    ```cpp
     auto mySprite = Sprite::create("mysprite.png", Rect(0,0,40,40));
-    {%- endcodetabs %}
+    ```
 
 * 使用 `gitbook serve` 命令测试改动在 GitBook 中的效果
 * 提交 pull request 到 cocos2d/cocos2d-x-docs 仓库

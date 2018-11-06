@@ -8,7 +8,7 @@
 
 Cocos2d-x 有 32 个支持的碰撞类型，对于每个形状都可以指定其所属的类型。还可以指定有哪些类型可以与这个形状进行碰撞，这些是通过掩码来完成的。例如：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 auto sprite1 = addSpriteAtPosition(Vec2(s_centre.x - 150,s_centre.y));
 sprite1->getPhysicsBody()->setCategoryBitmask(0x02);    // 0010
 sprite1->getPhysicsBody()->setCollisionBitmask(0x01);   // 0001
@@ -26,18 +26,18 @@ sprite3->getPhysicsBody()->setCategoryBitmask(0x03);    // 0011
 sprite3->getPhysicsBody()->setCollisionBitmask(0x03);   // 0011
 
 }
-{%- endcodetabs %}
+```
 
 你可以通过检查判断类型和掩码来确定碰撞的发生：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
    || (shapeB->getCategoryBitmask() & shapeA->getCollisionBitmask()) == 0)
 {
    // shapes can't collide
    ret = false;
 }
-{%- endcodetabs %}
+```
 
 ![](../../en/physics/physics-img/CollisionFiltering.gif )
 
@@ -69,14 +69,14 @@ __碰撞(Contact)__ 是一种由物理引擎创建的用于管理两个形状碰
 
 你可以从一个 `contact` 对象中获取到 `PhysicsShape`，从而获取到刚体：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 bool onContactBegin(PhysicsContact& contact)
 {
     auto bodyA = contact.getShapeA()->getBody();
     auto bodyB = contact.getShapeB()->getBody();
     return true;
 }
-{%- endcodetabs %}
+```
 
 你可以通过碰撞监听器来访问碰撞，碰撞监听器支持四种事件：_begin_, _pre-solve_,  _post-solve_, _separate_。
 
@@ -90,7 +90,7 @@ bool onContactBegin(PhysicsContact& contact)
 
 示例：
 
-{% codetabs name="C++", type="cpp" -%}
+```cpp
 bool init()
 {
     //create a static PhysicsBody
@@ -139,6 +139,6 @@ bool onContactBegin(PhysicsContact& contact)
     //bodies can collide
     return true;
 }
-{%- endcodetabs %}
+```
 
 ![](../../en/physics/physics-img/CollisionProcessing.gif)
