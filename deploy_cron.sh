@@ -45,6 +45,7 @@ echo "-----------------------"
 ## pull latest from github
 echo "Cocos Creator -- building documentation..."
 cd ../creator-docs
+rm -rf node_modules/
 
 ## pulling legacy version
 echo "Cocos Creator -- pulling v1.9..."
@@ -118,6 +119,7 @@ echo "------------------------"
 ## pull latest from github
 echo "Cocos Creator API -- building documentation..."
 cd ../creator-api-docs
+rm -rf node_modules/
 
 echo "Cocos Creator API - pulling legacy version..."
 git checkout v1.9
@@ -185,3 +187,9 @@ rm -rf v2.0/
 git stash
 
 cd ..
+
+echo "Copy everything that has been build to where nginx picks it up..."
+cd ~
+rsync --recursive documentation /var/www
+sudo /usr/sbin/nginx -s stop
+sudo /usr/sbin/nginx
