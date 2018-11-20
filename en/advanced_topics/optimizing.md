@@ -48,7 +48,7 @@ Also don't do heavy compute operations in your game loop which means don't let t
 Never!
 
 #### The GPU is often limited by the overdraw(fillrate) and bandwidth.
-If you are creating a 2D game and you don't write complex shaders, you might won't suffer GPU issues.
+If you are creating a 2D game and you don't write complex shaders, you might not suffer GPU issues.
 But the overdraw problem still has trouble and it will slow your graphics performance with too much bandwidth consumption.
 
 Though modern mobile GPU have TBDR(Tiled-based Defered Rendering) architecture, but only PowerVR's HSR(Hidden Surface Removal)
