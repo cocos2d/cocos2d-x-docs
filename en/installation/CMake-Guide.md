@@ -21,7 +21,7 @@ cd cocos2d-x
 mkdir linux-build && cd linux-build
 cmake ..
 make
-``` 
+```
 
 Execute `make help` to see all build targets, `make <target>` build specified target
 
@@ -33,7 +33,7 @@ mkdir win32-build && cd win32-build
 cmake .. -G"Visual Studio 15 2017" -Tv141
 ```
 
-Execute `cmake --build .` to compile, or open __Cocos2d-x.sln__ in Explorer to use the generated project. 
+Execute `cmake --build .` to compile, or open __Cocos2d-x.sln__ in Explorer to use the generated project.
 
 ### Generate macOS Project
 
@@ -69,7 +69,7 @@ PROP_BUILD_TYPE=ndk-build
 
 If you want to add cmake build arguments, please add it at [external Native Build](https://github.com/cocos2d/cocos2d-x/blob/84be684e3858393a6f3efc50e3f95d4e0ac92a20/tests/cpp-empty-test/proj.android/app/build.gradle#L25) block of __app/build.gradle__ file.
 
-## Prebuilt libraries feature
+<!--## Prebuilt libraries feature
 
 To solve long compilation times of the engine source code one can use prebuilt libraries. Using this feature you only need build engine sources once for a specific environment or again when the engine version changes and you wish to utilize the new version.
 
@@ -105,7 +105,7 @@ open bin/TemplateCpp.app
 > Any other cpp project can use prebuilt in this way
 
 When using the prebuilt libraries on Android there is a small difference as CMake can't find system environment when built using Gradle. You need to [supply a path](https://github.com/cocos2d/cocos2d-x/blob/c087be314c2c56a757bf66163b173746b5d6ad34/tests/cpp-empty-test/proj.android/app/build.gradle#L34) as the location of prebuilt libs.
-
+-->
 ## Build Options
 
 ### CMake Common Build Options
@@ -127,7 +127,7 @@ When using the prebuilt libraries on Android there is a small difference as CMak
 
     * `cmake --build ./msvc_build`, cmake will sellect corresponding build tools.
 
-### Cocos2d-x Options
+<!--### Cocos2d-x Options
 
 1. __`GEN_COCOS_PREBUILT`__, control the project have the feature to generate pre-build libraries or not. Default value is `OFF`
 
@@ -141,7 +141,7 @@ When using the prebuilt libraries on Android there is a small difference as CMak
 
     * `arguments "-DCOCOS_PREBUILT_ROOT=/Users/laptop/cocos-prebuilt"` set this value on [cmake block](https://github.com/cocos2d/cocos2d-x/blob/84be684e3858393a6f3efc50e3f95d4e0ac92a20/tests/cpp-empty-test/proj.android/app/build.gradle#L31) of build.gradle file.
 
-1. Any options in [SelectModule.cmake](./Modules/SelectModule.cmake) can be set manually. Do it if you know what you're doing.
+1. Any options in [SelectModule.cmake](./Modules/SelectModule.cmake) can be set manually. Do it if you know what you're doing.-->
 
 ## Useful Links
 
