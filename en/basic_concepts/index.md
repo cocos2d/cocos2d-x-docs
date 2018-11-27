@@ -30,3 +30,5 @@ __Game engines__ include many components that when used together will help speed
 __Game engines__ usually support multiple platforms thus making it easy to develop your game and then deploy it to multiple platforms without much overhead at all. Since __Cocos2d-x__ is a __game engine__, it provides a simplified API for developing cross-platform mobile and desktop games. By encapsulating the power inside an easy to use API, you can focus on developing your games and worry less about the implementation of the technical underpinnings. __Cocos2d-x__ will take care of as much or as little of the heavy lifting as you want.
 
 __Cocos2d-x__ provides `Scene`, `Transition`, `Sprite`, `Menu`, `Sprite3D`, `Audio` objects and much more (Our API Referrence will be your best friend!). Everything you need to create your games is included.
+
+[Let's get started learning concepts and building a game!](getting_started.md)
