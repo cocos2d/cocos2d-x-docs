@@ -231,8 +231,8 @@ git stash
 
 cd ..
 
-echo "Copy everything that has been build to where nginx picks it up..."
-cd ~
-rsync --recursive documentation /var/www
-sudo /usr/sbin/nginx -s stop
-sudo /usr/sbin/nginx
+#echo "Copy everything that has been build to where nginx picks it up..."
+#cd ~
+#rsync --recursive documentation /var/www
+#sudo /usr/sbin/nginx -s stop
+#sudo /usr/sbin/nginx
