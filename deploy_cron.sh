@@ -131,7 +131,7 @@ npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ manual/
-rsync --recursive manual ../documentation/creator/2.10
+rsync --recursive manual ../documentation/creator/2.1
 rm -rf manual/
 git stash
 
