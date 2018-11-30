@@ -91,8 +91,8 @@ rsync --recursive manual ../documentation/creator/1.10
 rm -rf manual/
 git stash
 
-## pulling next version
-echo "Cocos Creator -- pulling v2.x.."
+## pulling 2.0.x version
+echo "Cocos Creator -- pulling v2.0.x.."
 git checkout next
 git pull origin next
 cp -rf config/cocos2d-x.org/. ./
@@ -110,6 +110,28 @@ echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ manual/
 rsync --recursive manual ../documentation/creator
+rm -rf manual/
+git stash
+
+## pulling 2.10 version
+echo "Cocos Creator -- pulling v2.10..."
+git checkout v2.1
+git pull origin v2.1
+cp -rf config/cocos2d-x.org/. ./
+echo "Cocos Creator -- building GitBook docs...."
+echo "If this is your first time build this repo, please stop this process and run:"
+echo "npm install gulp -g"
+echo "npm install"
+echo "DO NOT COMMIT: package-lock.json"
+sudo npm install gulp -g
+sudo npm install
+echo "Cocos Creator -- ensuring GitBook is up to date..."
+gitbook install
+npm run build
+echo "Cocos Creator -- copy everything to deployment directory..."
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
+mv _book/ manual/
+rsync --recursive manual ../documentation/creator/2.10
 rm -rf manual/
 git stash
 
@@ -165,7 +187,7 @@ rsync --recursive api ../documentation/creator/1.10
 rm -rf api/
 git stash
 
-echo "Cocos Creator API - pulling current version..."
+echo "Cocos Creator API - pulling v2.0 version..."
 git checkout v2.0
 git pull origin v2.0
 cp -rf config/cocos2d-x.org/. ./
@@ -184,6 +206,27 @@ rsync --recursive v2.0 ../documentation/api-ref/creator
 #mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
 
 rm -rf v2.0/
+git stash
+
+echo "Cocos Creator API - pulling previous version..."
+git checkout v2.1
+git pull origin v2.1
+cp -rf config/cocos2d-x.org/. ./
+echo "Cocos Creator API -- ensuring GitBook is up to date..."
+gitbook install
+echo "Cocos Creator API -- building GitBook docs...."
+gitbook build
+echo "Cocos Creator API -- copy everything to deployment directory..."
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
+mv _book/ v2.1/
+rsync --recursive v2.1 ../documentation/api-ref/creator
+mv v2.1/ api/
+rsync --recursive api ../documentation/creator/2.1
+
+#rm -rf ../documentation/api-ref/creator/v1.9/
+#mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
+
+rm -rf api/
 git stash
 
 cd ..
