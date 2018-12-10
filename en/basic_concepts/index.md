@@ -1,11 +1,9 @@
 ## Basic Cocos2d-x Concepts
-This chapter assumes you've just gotten started with __Cocos2d-x__, and are ready to
-start working on the game of your dreams. Don't worry, it will be fun!
+This chapter assumes you've just gotten started with __Cocos2d-x__, and are ready to start working on the game of your dreams. Don't worry, it will be fun!
 
 Let's get started!
 
-__Cocos2d-x__ is a __cross-platform game engine__. A __game engine__ is a piece of software
-that provides common functionality that all games need. You might have heard this referred to as an API or framework but in this guide, we'll be calling it a __game engine__.
+__Cocos2d-x__ is a __cross-platform game engine__. A __game engine__ is a piece of software that provides common functionality that all games need. You might have heard this referred to as an API or framework but in this guide, we'll be calling it a __game engine__.
 
 __Game engines__ include many components that when used together will help speed up development time, and often perform better than homemade engines. A __game engine__ is usually comprised of some or all of the following components: *a renderer*, *2d/3d graphics*, *collision detection*, *a physics engine*, *sound*, *controller support*, *animations* and *more*. To be sure we are all on the same page, we should review common game terminology:
 
