@@ -37,6 +37,21 @@ are made when the game starts. Let's take a look at a few of these **Classes** t
   director->runWithScene(scene);
   ```
 
+### Making a few code changes
+So that we can get started making this game a bit more personal, we can change the *Title* of the *glView*. This is a simple change, made in the `AppDelegate` class. Take a look (or use *Find*) for the following lines:
+
+```cpp
+if(!glview) {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+        glview = GLViewImpl::createWithRect("Cocos2d-x-Sample-Game", cocos2d::Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+#else
+        glview = GLViewImpl::create("Cocos2d-x-Sample-Game");
+#endif
+        director->setOpenGLView(glview);
+}
+```
+Notice where the code says: **Cocos2d-x-Sample-Game**. We can change this to **Super Cocos Aliens**. Make sure to change it in both places!
+
 Once you have this step done, keep on reading...
 
 [Who is the Director?](director.md)
