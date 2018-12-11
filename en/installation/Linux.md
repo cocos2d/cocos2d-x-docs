@@ -22,7 +22,7 @@ using the step above, __By downloading a .zip archive__.
 Install Python
 ```sh
 // Ubuntu 16.x
-sudo apt-get install python2.
+sudo apt-get install python2
 
 // Ubuntu 17.x
 sudo apt-get install python2.7
@@ -94,7 +94,7 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 * Run __cmake__ to generate __makefile__:
 
     ```sh
-    cd cocos2d-x-root #where your cocos2d-x directory is located.
+    cd cocos2d-x-root # where your cocos2d-x directory is located.
     cd build
     mkdir linux-build
     cd linux-build
