@@ -19,14 +19,23 @@ are made when the game starts. Let's take a look at a few of these **Classes** t
 `AppDelegate` is a very important class. `AppDelegate` is called once all the platform dependent code is run. The magic starts here! Take a look at it. Let's discuss a few key pieces!
 
   > **Design resolution**  - help to determine how large or small to design your `Sprite` objects (and much more). This is based upon the screen size of the device the game is running on. Because of this, it is always best to test your game on several devices of different screen resolution. Here is the relevant piece from `AppDelegate`:
-```cpp
-static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
-static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
-static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
-static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
+
+  ```cpp
+  static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
+  static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
+  static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
+  static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
   ```
 
-  > **AppDelegate::applicationDidFinishLaunching()** - this is the main place you will start coding your game. This function does a lot for you already, but it may require tweaking, according to your needs. 
+  > **AppDelegate::applicationDidFinishLaunching()** - this is the main place you will start coding your game. This function does a lot for you already, but it may require tweaking, according to your needs. Consider the following lines where the first `Scene` is loaded and run, using the `HelloWorld` class:
+  
+  ```cpp
+  // create a scene. it's an autorelease object
+  auto scene = HelloWorld::createScene();
+
+  // run
+  director->runWithScene(scene);
+  ```
 
 Once you have this step done, keep on reading...
 
