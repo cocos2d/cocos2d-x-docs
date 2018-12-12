@@ -53,8 +53,16 @@ The `Director` has many responsibilities and even more possibilities. As mention
   ```
 
 ### Let's Build A Game - Step 3
-In the previous step we explored the `AppDelegate` class and what it does. 
+In the previous step we explored the `AppDelegate` class and what it does. In the next chapter we will explore **Scenes**. Before we get to that, we should do a bit of house-keeping.
 
+#### Resources
+Every game will have at least a few resources. These could be *fonts*, *sounds effects*, *music* or *sprites*. In this sample game we are using aliens as our characters and blocks to build out our levels. Example:
+
+![](basic_concepts-img/Blue_Front1.png "")
+![](basic_concepts-img/LightBlue_Front1.png "")
+![](basic_concepts-img/White_Front1.png "")
+![](basic_concepts-img/ZigzagForest_Square.png "")
+![](basic_concepts-img/ZigzagGrass_Mud_Round.png "")
 
 Moving on...
 
