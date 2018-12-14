@@ -131,7 +131,7 @@ npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ manual/
-rsync --recursive manual ../documentation/creator/2.1
+rsync --recursive manual ../documentation/creator/2.10
 rm -rf manual/
 git stash
 
@@ -231,8 +231,8 @@ git stash
 
 cd ..
 
-echo "Copy everything that has been build to where nginx picks it up..."
-cd ~
-rsync --recursive documentation /var/www
-sudo /usr/sbin/nginx -s stop
-sudo /usr/sbin/nginx
+#echo "Copy everything that has been build to where nginx picks it up..."
+#cd ~
+#rsync --recursive documentation /var/www
+#sudo /usr/sbin/nginx -s stop
+#sudo /usr/sbin/nginx
