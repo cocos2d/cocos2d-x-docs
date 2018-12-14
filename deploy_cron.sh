@@ -10,7 +10,9 @@ echo "Cocos2d-x-docs..."
 echo "-----------------"
 # First Cocos2d-x docs, we are aready in this repo when executing this script
 ## pull latest from github
+echo "-----------------------------------------------"
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
+echo "-----------------------------------------------"
 git pull origin master
 
 cp -rf config/cocos2d-x.org/. ./
@@ -43,12 +45,14 @@ echo "-----------------------"
 echo "Cocos Creator Manual..."
 echo "-----------------------"
 ## pull latest from github
-echo "Cocos Creator -- building documentation..."
+echo "Cocos Creator -- preparing to build documentation..."
 cd ../creator-docs
 rm -rf node_modules/
 
 ## pulling legacy version
+echo "--------------------------------"
 echo "Cocos Creator -- pulling v1.9..."
+echo "--------------------------------"
 git checkout v1.9
 git pull origin v1.9
 cp -rf config/cocos2d-x.org/. ./
@@ -68,9 +72,14 @@ mv _book/ manual/
 rsync --recursive manual ../documentation/creator/1.9
 rm -rf manual/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator -- v1.9 done"
+echo "---------------------------------"
 
 ## pulling previous version
+echo "---------------------------------"
 echo "Cocos Creator -- pulling v1.10..."
+echo "---------------------------------"
 git checkout master
 git pull origin master
 cp -rf config/cocos2d-x.org/. ./
@@ -90,9 +99,14 @@ mv _book/ manual/
 rsync --recursive manual ../documentation/creator/1.10
 rm -rf manual/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator - v1.10 done"
+echo "---------------------------------"
 
 ## pulling 2.0.x version
+echo "---------------------------------"
 echo "Cocos Creator -- pulling v2.0.x.."
+echo "---------------------------------"
 git checkout next
 git pull origin next
 cp -rf config/cocos2d-x.org/. ./
@@ -112,9 +126,14 @@ mv _book/ manual/
 rsync --recursive manual ../documentation/creator
 rm -rf manual/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator - v2.0.x done"
+echo "---------------------------------"
 
 ## pulling 2.10 version
-echo "Cocos Creator -- pulling v2.10..."
+echo "---------------------------------"
+echo "Cocos Creator -- pulling v2.1...."
+echo "---------------------------------"
 git checkout v2.1
 git pull origin v2.1
 cp -rf config/cocos2d-x.org/. ./
@@ -134,16 +153,21 @@ mv _book/ manual/
 rsync --recursive manual ../documentation/creator/2.1
 rm -rf manual/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator - v2.1 done"
+echo "---------------------------------"
 
 echo "------------------------"
 echo "Cocos Creator API-Ref..."
 echo "------------------------"
 ## pull latest from github
-echo "Cocos Creator API -- building documentation..."
+echo "Cocos Creator API -- preparing to build documentation..."
 cd ../creator-api-docs
 rm -rf node_modules/
 
-echo "Cocos Creator API - pulling legacy version..."
+echo "---------------------------------"
+echo "Cocos Creator API - v1.9..."
+echo "---------------------------------"
 git checkout v1.9
 git pull origin v1.9
 cp -rf config/cocos2d-x.org/. ./
@@ -164,8 +188,13 @@ rsync --recursive api ../documentation/creator/1.9
 
 rm -rf api/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator API - v1.9 done"
+echo "---------------------------------"
 
-echo "Cocos Creator API - pulling previous version..."
+echo "---------------------------------"
+echo "Cocos Creator API - v1.10..."
+echo "---------------------------------"
 git checkout master
 git pull origin master
 cp -rf config/cocos2d-x.org/. ./
@@ -186,8 +215,13 @@ rsync --recursive api ../documentation/creator/1.10
 
 rm -rf api/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator API - v1.10 done"
+echo "---------------------------------"
 
-echo "Cocos Creator API - pulling v2.0 version..."
+echo "---------------------------------"
+echo "Cocos Creator API - v2.0.x..."
+echo "---------------------------------"
 git checkout v2.0
 git pull origin v2.0
 cp -rf config/cocos2d-x.org/. ./
@@ -207,8 +241,13 @@ rsync --recursive v2.0 ../documentation/api-ref/creator
 
 rm -rf v2.0/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator API - v2.0.x"
+echo "---------------------------------"
 
-echo "Cocos Creator API - pulling previous version..."
+echo "---------------------------------"
+echo "Cocos Creator API - v2.1..."
+echo "---------------------------------"
 git checkout v2.1
 git pull origin v2.1
 cp -rf config/cocos2d-x.org/. ./
@@ -228,11 +267,25 @@ rsync --recursive api ../documentation/creator/2.1
 
 rm -rf api/
 git stash
+echo "---------------------------------"
+echo "Cocos Creator API - v2.1 done"
+echo "---------------------------------"
 
 cd ..
 
-echo "Copy everything that has been build to where nginx picks it up..."
+echo "---------------------------------"
+echo "Deploying to web-server location"
+echo "---------------------------------"
+echo "Copy to nginx..."
 cd ~
 rsync --recursive documentation /var/www
+
+echo "---------------------------------"
+echo "Restarting web-server..."
+echo "---------------------------------"
 sudo /usr/sbin/nginx -s stop
 sudo /usr/sbin/nginx
+
+echo "---------------------------------"
+echo "Deployment done!"
+echo "---------------------------------"
