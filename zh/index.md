@@ -6,7 +6,7 @@ v2018.5.21
 
 ## 特别推荐
 
-- Cocos2d-x 3.17 已发布，请参阅 [版本发布说明](http://www.cocos.com/1462)。
+- Cocos2d-x 3.17 已发布，请参阅 [版本发布说明](//www.cocos.com/1462)。
 - 3.17 支持全平台的 CMake 构建，请参阅 [CMake 指南](installation/CMake-Guide.md)
 
 ## 快速上手
@@ -29,6 +29,6 @@ v2018.5.21
 
 感谢 Cocos2d-x 的所有开发者，是你们让这个文档有了存在的意义！
 
-本文档主要翻译自英文文档，同时参考了旧有的 Cocos2d-x 中文文档。由于引擎内容较多，逻辑较复杂，文档可能会存在一些不完善之处。在您阅读的过程中，如果发现了错误的地方，欢迎通过 [中文社区](http://forum.cocos.com/c/cocos2d-x)，或右下角 __Have Feedback__ 向我们反馈。
+本文档主要翻译自英文文档，同时参考了旧有的 Cocos2d-x 中文文档。由于引擎内容较多，逻辑较复杂，文档可能会存在一些不完善之处。在您阅读的过程中，如果发现了错误的地方，欢迎通过 [中文社区](//forum.cocos.com/c/cocos2d-x)，或右下角 __Have Feedback__ 向我们反馈。
 
 > 本文档示例代码在 [GitHub](https://github.com/chukong/programmers-guide-samples) 下载

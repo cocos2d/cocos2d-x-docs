@@ -11,6 +11,6 @@ Please provide feedback for this guide on [GitHub](https://github.com/cocos2d/co
 
 For offline viewing, you can download a copy of our:
 
-  - [deprecated legacy documentation](http://docs.cocos2d-x.org/manual.tar.gz)
-  - [deprecated WIKI](http://docs.cocos2d-x.org/wiki.tar.gz)
-  - [latest API Reference](http://docs.cocos2d-x.org/current-api-reference.tar.gz)
+  - [deprecated legacy documentation](//docs.cocos2d-x.org/manual.tar.gz)
+  - [deprecated WIKI](//docs.cocos2d-x.org/wiki.tar.gz)
+  - [latest API Reference](//docs.cocos2d-x.org/current-api-reference.tar.gz)

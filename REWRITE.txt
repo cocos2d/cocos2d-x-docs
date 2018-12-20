@@ -22,7 +22,7 @@
   rewrite ^/programmersguide/G /docs/en/installation/Windows.html permanent;
   rewrite ^/programmersguide/H /docs/en/installation/Windows-Phone.html permanent;
   rewrite ^/programmersguide/I /docs/en/editors_and_tools/cocosCLTool.html permanent;
-  rewrite ^/programmersguide/J http://sdkbox.com permanent;
+  rewrite ^/programmersguide/J //sdkbox.com permanent;
   rewrite ^/programmersguide /docs/en/index.html permanent;
 
   rewrite ^/programmers-guide/1 /docs/en/index.html permanent;
@@ -48,7 +48,7 @@
   rewrite ^/programmers-guide/G /docs/en/installation/Windows.html permanent;
   rewrite ^/programmers-guide/H /docs/en/installation/Windows-Phone.html permanent;
   rewrite ^/programmers-guide/I /docs/en/editors_and_tools/cocosCLTool.html permanent;
-  rewrite ^/programmers-guide/J http://sdkbox.com permanent;
+  rewrite ^/programmers-guide/J //sdkbox.com permanent;
   rewrite ^/programmers-guide /docs/en/index.html permanent;
 
 # slackmoehrle 11/22/2017 - added these to re-write old numbered chapter URLs
@@ -105,7 +105,7 @@
   rewrite ^/docs/installation/Windows-Phone /docs/en/installation/Windows-Phone.html permanent;
   rewrite ^/docs/editors_and_tools/cocosCLTool /docs/en/editors_and_tools/cocosCLTool.html permanent;
   rewrite ^/docs/editors_and_tools/cocos /docs/en/editors_and_tools/cocosCLTool.html permanent;
-  rewrite ^/docs/services/sdkbox http://sdkbox.com permanent;
+  rewrite ^/docs/services/sdkbox //sdkbox.com permanent;
   rewrite ^/docs/static-pages/programmers-guide.html /docs/en/index.html permanent;
   rewrite ^/docs/static-pages/installation.html /docs/en/installation permanent;
   rewrite ^/docs/editors_and_tools /docs/en/editors_and_tools permanent;

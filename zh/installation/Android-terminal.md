@@ -10,11 +10,11 @@
 
 在正式开始搭建 Cocos2d-x 开发环境之前，你需要一个可用的 Android 开发环境。这包括
 
-* JDK/SDK 1.6+ [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* JDK/SDK 1.6+ [//www.oracle.com/technetwork/java/javase/downloads/index.html](//www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 * Android NDK [https://developer.android.com/tools/sdk/ndk/index.html](https://developer.android.com/tools/sdk/ndk/index.html)
 
-* Apache Ant [http://ant.apache.org/bindownload.cgi](http://ant.apache.org/bindownload.cgi)
+* Apache Ant [//ant.apache.org/bindownload.cgi](//ant.apache.org/bindownload.cgi)
 
 * Python 2.7.X [https://www.python.org/downloads/](https://www.python.org/downloads/) _不是 PYTHON 3_
 
@@ -77,7 +77,7 @@ export PATH=$ANT_ROOT:$PATH
 
 #### 通过 Brew 安装
 
-使用 [__brew__](http://brew.sh/) 安装 NDK 和 SDK 是一种更简单的方式，一个命令，几个环境变量就 OK。这样操作：
+使用 [__brew__](//brew.sh/) 安装 NDK 和 SDK 是一种更简单的方式，一个命令，几个环境变量就 OK。这样操作：
 
 ```sh
 brew tap caskroom/cask
@@ -130,7 +130,7 @@ export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 ## 安装 Cocos2d-x
 
-安装 Cocos2d-x 可能是这个过程中最简单的部分，你可以从 [Cocos2d-x 官网](http://www.cocos.com/download) 下载独立的压缩包，也可以克隆 [GitHub 仓库](https://github.com/cocos2d/cocos2d-x)。不用安装这两个，选择你喜欢的一个。
+安装 Cocos2d-x 可能是这个过程中最简单的部分，你可以从 [Cocos2d-x 官网](//www.cocos.com/download) 下载独立的压缩包，也可以克隆 [GitHub 仓库](https://github.com/cocos2d/cocos2d-x)。不用安装这两个，选择你喜欢的一个。
 
 ### 下载压缩包
 
@@ -184,7 +184,7 @@ git submodule update
 
 ## 安装应用到手机
 
-在手机上开启 [USB 调试](http://stackoverflow.com/questions/16707137/how-to-find-and-turn-on-usb-debugging-mode-on-nexus-4)，然后通过 USB 连接手机，在终端中调整目录到 Android 项目的 bin 目录，运行下面的命令，即可将 _apk_ 安装到你的 Android 手机：
+在手机上开启 [USB 调试](//stackoverflow.com/questions/16707137/how-to-find-and-turn-on-usb-debugging-mode-on-nexus-4)，然后通过 USB 连接手机，在终端中调整目录到 Android 项目的 bin 目录，运行下面的命令，即可将 _apk_ 安装到你的 Android 手机：
 
 ```sh
 > adb install MyGame-debug.apk

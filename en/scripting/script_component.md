@@ -1079,7 +1079,7 @@ the mac version. The process of the windows version is almost the same.
 
 ## Prerequisite
 If you have been not installed the Cocos Code IDE,you can refer to
-[Cocos Code IDE Installation](http://www.Cocos2d-x.org/wiki/Cocos_Code_IDE).
+[Cocos Code IDE Installation](//www.Cocos2d-x.org/wiki/Cocos_Code_IDE).
 
 ## Cocos Code IDE Configuration
 
@@ -1172,7 +1172,7 @@ runtime to debug
 ### Debug on an iOS Device
 
 1.You need a runtime IPA, you can build a custom runtime IPA by Cocos Code IDE,
-then [install runtime IPA](http://www.solutionanalysts.com/blog/how-install-ipa-file-iphone-ipod-ipad-using-itunes-mac-windows)
+then [install runtime IPA](//www.solutionanalysts.com/blog/how-install-ipa-file-iphone-ipod-ipad-using-itunes-mac-windows)
 to iOS device.
 
   - Click `Build Runtime` on the toolbars

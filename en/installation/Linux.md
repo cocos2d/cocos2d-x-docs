@@ -8,7 +8,7 @@ We support Ubuntu 12.10+, however, newer versions of Ubuntu have changed and the
 
 ## Setting up Cocos2d-x
 You can get started with __Cocos2d-x__ by either downloading a self-contained
-__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our
+__.zip__ from the [website](//cocos2d-x.org/download) or by cloning our
 [GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
 __There is no need to do both.__
 
@@ -74,7 +74,7 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 1. Add a repo to `/etc/apt/sources.list`
 
   ```sh
-  deb http://cz.archive.ubuntu.com/ubuntu xenial main
+  deb //cz.archive.ubuntu.com/ubuntu xenial main
   ```
 2. Install Dependencies
 

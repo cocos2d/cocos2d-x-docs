@@ -45,6 +45,6 @@ ways to adjust your __sprite sheet__ for maximum optimization!
 
 Here are a few tools:
 * [Texture Packer](https://www.codeandweb.com/texturepacker) **Recommended**
-* [ShoeBox](http://renderhjs.net/shoebox/)
+* [ShoeBox](//renderhjs.net/shoebox/)
 * [Zwoptex](https://www.zwopple.com/zwoptex/)
-* [Sprite Sheet Packer](http://amakaseev.github.io/sprite-sheet-packer/)
+* [Sprite Sheet Packer](//amakaseev.github.io/sprite-sheet-packer/)

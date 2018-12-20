@@ -14,9 +14,9 @@ We always welcome contributions to our documentation.
 #### For general questions
 You can ask general questions by using:
 
-  -   Forum (preferred way): http://discuss.cocos2d-x.org/
-  -   Weibo: http://t.sina.com.cn/cocos2dx
-  -   Twitter: http://www.twitter.com/cocos2dx
+  -   Forum (preferred way): //discuss.cocos2d-x.org/
+  -   Weibo: //t.sina.com.cn/cocos2dx
+  -   Twitter: //www.twitter.com/cocos2dx
 
 #### Reporting bugs
 To report bugs, please use the [Issue Tracker](https://github.com/cocos2d/cocos2d-x/issues)
@@ -33,7 +33,7 @@ Steps to report a bug:
 #### Submitting patches
 If you want to contribute code, please follow these steps:
 
-(If you are new to git and/or GitHub, you should read [Pro Git](http://progit.org/book/) , especially the section on [Contributing to a project:Small/Large Public Project](http://progit.org/book/ch5-2.html#public_small_project) )
+(If you are new to git and/or GitHub, you should read [Pro Git](//progit.org/book/) , especially the section on [Contributing to a project:Small/Large Public Project](//progit.org/book/ch5-2.html#public_small_project) )
 
   -   Download the latest cocos2d-x develop branch from github:
     ```sh
@@ -80,5 +80,5 @@ You can help us spread the word about Cocos2d-x! We would surely appreciate it!
 
   * Talk about us on Facebook! Our [__Facebook Page__](https://www.facebook.com/cocos2dx/)
   * Tweet, Tweet! Our [__Twitter__](https://twitter.com/cocos2dx)
-  * Read our [__Blog__](http://blog.Cocos2d-x.org/) and promote it on your social media.
-  * Become a [__Regional Coordinator__](http://discuss.Cocos2d-x.org/t/we-need-regional-coordinators/24104)
+  * Read our [__Blog__](//blog.Cocos2d-x.org/) and promote it on your social media.
+  * Become a [__Regional Coordinator__](//discuss.Cocos2d-x.org/t/we-need-regional-coordinators/24104)

@@ -27,7 +27,7 @@ Make sure that you are using __Cocos2d-x v3.12__.
 * Read our document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**
   and create a new project.
 
-* Download [proj.visualstudio](http://aka.ms/vscocosandroidsample)
+* Download [proj.visualstudio](//aka.ms/vscocosandroidsample)
 
 * copy __proj.visualstudio.zip__ into your project's root directory and unzip it. It should
   fall inline with your other project directories. Example:

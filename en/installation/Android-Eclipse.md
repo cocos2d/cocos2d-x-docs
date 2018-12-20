@@ -5,7 +5,7 @@
 ## Prerequisites
 * Completed the **[Android Command-Line Instructions](Android-terminal.md)**
 
-* Eclipse ADT Bundle [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/)
+* Eclipse ADT Bundle [//www.eclipse.org/downloads/](//www.eclipse.org/downloads/)
 
 ## Open the proj.android project with Eclipse.
 

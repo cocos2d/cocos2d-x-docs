@@ -15,11 +15,11 @@ times and take a few minutes to think about what workflow best suites you.
 Before we even talk about Cocos2d-x specific tasks, you need a working Android
 environment. This includes:
 
-* JDK/SDK 1.6+ [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* JDK/SDK 1.6+ [//www.oracle.com/technetwork/java/javase/downloads/index.html](//www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 * Android NDK [https://developer.android.com/tools/sdk/ndk/index.html](https://developer.android.com/tools/sdk/ndk/index.html)
 
-* Apache Ant [http://ant.apache.org/bindownload.cgi](http://ant.apache.org/bindownload.cgi)
+* Apache Ant [//ant.apache.org/bindownload.cgi](//ant.apache.org/bindownload.cgi)
 
 * Python 2.7.5 [https://www.python.org/downloads/](https://www.python.org/downloads/) __NOT PYTHON 3__
 
@@ -112,7 +112,7 @@ are not installed on an OSX system by default. It is neccessary to download it
 using the link above.
 
 #### Brew
-Using [__brew__](http://brew.sh/) is one option for installing the __Android NDK and SDK__.
+Using [__brew__](//brew.sh/) is one option for installing the __Android NDK and SDK__.
 Installing with __brew__ makes the installation simple. A single command, a few
 environment variables and you are done. Example:
 ```sh
@@ -171,7 +171,7 @@ when a new version becomes available.
 ### Cocos2d-x
 Installing __Cocos2d-x__ is probably the easiest part of this process. You can
 get started with __Cocos2d-x__ by either downloading a self-contained
-__.zip__ from the [website](http://cocos2d-x.org/download) or by cloning our
+__.zip__ from the [website](//cocos2d-x.org/download) or by cloning our
 [GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
 __There is no need to do both.__
 
@@ -226,7 +226,7 @@ document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)
 
 ## How to deploy it on your Android phone via command line
 
-Enable **[USB Debugging](http://stackoverflow.com/questions/16707137/how-to-find-and-turn-on-usb-debugging-mode-on-nexus-4)**
+Enable **[USB Debugging](//stackoverflow.com/questions/16707137/how-to-find-and-turn-on-usb-debugging-mode-on-nexus-4)**
 on your phone and then connect your phone via USB.
 
 Change your directory to the the **bin** directory of your android project

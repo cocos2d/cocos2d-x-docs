@@ -10,7 +10,7 @@
 
 * 完成上一节的 **[Android 命令行](Android-terminal/index.html)**，上一节是本节的基础
 
-* 下载 Eclipse ADT [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/)
+* 下载 Eclipse ADT [//www.eclipse.org/downloads/](//www.eclipse.org/downloads/)
 
 ## 导入游戏项目
 

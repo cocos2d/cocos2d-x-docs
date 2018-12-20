@@ -13,12 +13,18 @@
     },
     "pluginsConfig": {
         "github-issue-feedback-language-custom": {
-            "repo": "cocos2d/cocos2d-x-docs",
+            "repo": "cocos-creator/creator-docs",
             "branch": "master"
+        },
+        "search": {
+            "maxIndexSize": 1000000000
+        },
+        "lunr": {
+            "maxIndexSize": 1000000000
         },
         "sharing": {
             "douban": false,
-            "facebook": false,
+            "facebook": true,
             "google": false,
             "hatenaBookmark": false,
             "instapaper": false,
@@ -26,13 +32,13 @@
             "linkedin": false,
             "messenger": false,
             "pocket": false,
-            "qq": false,
+            "qq": true,
             "qzone": false,
             "stumbleupon": false,
-            "twitter": false,
+            "twitter": true,
             "viber": false,
             "vk": false,
-            "weibo": false,
+            "weibo": true,
             "whatsapp": false,
             "all": [
                 "facebook", "google", "twitter",

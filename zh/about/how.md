@@ -24,7 +24,7 @@
 
 ## 参与引擎开发
 
-使用 Cocos2d-x 的过程中，对于一般的问题，欢迎通过 [论坛](http://forum.cocos.com/c/cocos2d-x) 向我们反馈。对于明确是 BUG 的，请参照下述方法反馈。
+使用 Cocos2d-x 的过程中，对于一般的问题，欢迎通过 [论坛](//forum.cocos.com/c/cocos2d-x) 向我们反馈。对于明确是 BUG 的，请参照下述方法反馈。
 
 ### 反馈 BUG
 
@@ -88,4 +88,4 @@ git submodule update --init
 
 当您使用 Cocos2d-x 开发了游戏，希望您能将 Cocos2d-x 的 Logo 放到游戏中，或者把 Cocos2d-x 加到致谢中。让我们一起提高 Cocos2d-x 的知名度，让更多的人参与到 Cocos 开源社区的建设中。
 
-[Cocos2d-x Logo 资源](http://www.cocos2d-x.org/images/logo.png)
+[Cocos2d-x Logo 资源](//www.cocos2d-x.org/images/logo.png)
