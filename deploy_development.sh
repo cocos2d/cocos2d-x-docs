@@ -2,15 +2,13 @@
 
 # This script builds: Cocos2d-x-docs, Cocos Creator Manual, Cocos Creator API-Ref.
 
-# on production this script should be run as:
-# (cd /data/home/docops/cocos2d-x-docs && exec /data/home/docops/cocos2d-x-docs/deploy_cron.sh)
-
 echo "-----------------"
 echo "Cocos2d-x-docs..."
 echo "-----------------"
 # First Cocos2d-x docs, we are aready in this repo when executing this script
 ## pull latest from github
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
+git checkout master
 git pull origin master
 
 cp -rf config/cocos2d-x.org/. ./
