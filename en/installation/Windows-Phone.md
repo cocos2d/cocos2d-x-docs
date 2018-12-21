@@ -5,7 +5,7 @@
 ## Prerequisites
 * A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
-* Register to be a Windows Phone Developer [//msdn.microsoft.com/en-us/library/windowsphone/help/jj206719(v=vs.105](//msdn.microsoft.com/en-us/library/windowsphone/help/jj206719(v=vs.105)
+* Register to be a Windows Phone Developer [https://developer.microsoft.com/en-us/windows](https://developer.microsoft.com/en-us/windows)
 
 ## Setting up Cocos2d-x
 * Download Cocos2d-x and unzip it. (maybe: ~/)
