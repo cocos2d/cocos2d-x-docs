@@ -43,7 +43,7 @@ addChild(billboard);
 
 在 [第七章](../other_node_types/index.md) 中，我们已经学习了如何使用 2D 粒子，当你进行 3D 游戏制作的时候，为了丰富游戏的效果，你可能还需要 3D 粒子。 3D 粒子系统与 2D 粒子系统的许多概念是一样的。
 
-Cocos2d-x 目前支持制作工具 __[Particle Universe](//www.fxpression.com)__ 构建的粒子，Particle Universe 是一个特殊的粒子编辑器，可以让你快速，轻松的构建出各种粒子效果，如爆炸，火焰，血液。 Particle Universe 粒子编辑器生成的粒子文件格式是 _.pu_，Cocos2d-x 直接支持这种格式。 由 `PUParticleSystem3D` 类负责处理。 `PUParticleSystem3D` 提供了两种创建粒子的方法。
+Cocos2d-x 目前支持制作工具 __[Particle Universe](http://www.fxpression.com)__ 构建的粒子，Particle Universe 是一个特殊的粒子编辑器，可以让你快速，轻松的构建出各种粒子效果，如爆炸，火焰，血液。 Particle Universe 粒子编辑器生成的粒子文件格式是 _.pu_，Cocos2d-x 直接支持这种格式。 由 `PUParticleSystem3D` 类负责处理。 `PUParticleSystem3D` 提供了两种创建粒子的方法。
 
 第一种方式传入两个参数： Particle Universe 粒子文件和相应的材质文件。 材质文件描述的是粒子的内容，对于一个粒子特效是必须的 示例：
 

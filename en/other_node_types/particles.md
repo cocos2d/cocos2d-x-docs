@@ -13,8 +13,8 @@ _particle effects_. A few of these tools are:
 
 1. [Effekseer](https://github.com/effekseer/EffekseerForCocos2d-x): Effekseer is a tool editing particle effects.
 2. [Particle Designer](https://71squared.com/particledesigner): A very powerful particle effects editor on Mac.
-3. [V-play particle editor](//v-play.net/2014/02/v-play-particle-editor-for-cocos2d-and-v-play/): A cross-platform particle editor for Cocos2d-x.
-4. [Particle2dx](//www.effecthub.com/particle2dx): An online web particle designer.
+3. [V-play particle editor](http://v-play.net/2014/02/v-play-particle-editor-for-cocos2d-and-v-play/): A cross-platform particle editor for Cocos2d-x.
+4. [Particle2dx](http://www.effecthub.com/particle2dx): An online web particle designer.
 
 These tools usually export a `.plist` file that you can read in with Cocos2d-x to use your creation inside your game. Just like with all of the other classes we have worked with so far we use the `create()` method:
 

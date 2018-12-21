@@ -4,12 +4,12 @@ __SQLite__ is a self-contained SQL database engine. This means there is no serve
 involved. __SQLite__ runs while your game is running and you write code to connect
 to the database and manipulate its contents. This is by no means a comprehensive
 guide, in fact, we cover 1% of what __SQLite__ can do for you. Please read their
-[website](//sqlite.org) for a lot more detail as to what functionality __SQLIte__
+[website](http://sqlite.org) for a lot more detail as to what functionality __SQLIte__
 offers developers.
 
 ### Getting Started.
 In-order to use __SQLite__ you must download it and add it to your project. Please
-see the [SQLite Downloads](//sqlite.org/download.html) page for more details.
+see the [SQLite Downloads](http://sqlite.org/download.html) page for more details.
 For our purposes you will just need __sqlite.h__ and __sqlite.c__ in your project.
 Add these files to your environment and make sure they are part of your build process.
 
@@ -59,7 +59,7 @@ int result = sqlite3_open(dbPath.c_str(), &pdb);
 
 if(result == SQLITE_OK)
   std::cout << "open database successful!" << std::endl;
-else   
+else
   std::cout << "open database failed!" << std::endl;
 ```
 

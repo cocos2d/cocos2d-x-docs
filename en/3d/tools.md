@@ -4,10 +4,10 @@
 3D editors are collections of tools that you use to build your 3D graphics. There
 are both commercial and free tools available. These are the most popular editors:
 
-* [Blender (Free)](//www.blender.org/)
-* [3DS Max](//www.autodesk.com/products/3ds-max/overview)
-* [Cinema4D](//www.maxon.net/products/)
-* [Maya](//www.autodesk.com/products/maya/overview)
+* [Blender (Free)](http://www.blender.org/)
+* [3DS Max](http://www.autodesk.com/products/3ds-max/overview)
+* [Cinema4D](http://www.maxon.net/products/)
+* [Maya](http://www.autodesk.com/products/maya/overview)
 
 Most 3D editors usually save files in a common collection of formats for easy
 use within other editors as well as a standard way for game engines to import
@@ -50,7 +50,7 @@ There are a few things to note about __fbx-conv__:
 ## 3D File Formats
 Cocos2d-x currently supports two 3d file formats:
 
-* [Wavefront Object](//en.wikipedia.org/wiki/Wavefront_.obj_file) files:
+* [Wavefront Object](http:////en.wikipedia.org/wiki/Wavefront_.obj_file) files:
 __.obj__ files
 * Cocos2d-x 3d ad-hoc format:__c3t__, __c3b__ files.
 

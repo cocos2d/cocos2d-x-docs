@@ -33,7 +33,7 @@ Steps to report a bug:
 #### Submitting patches
 If you want to contribute code, please follow these steps:
 
-(If you are new to git and/or GitHub, you should read [Pro Git](//progit.org/book/) , especially the section on [Contributing to a project:Small/Large Public Project](//progit.org/book/ch5-2.html#public_small_project) )
+(If you are new to git and/or GitHub, you should read [Pro Git](http://progit.org/book/) , especially the section on [Contributing to a project:Small/Large Public Project](http://progit.org/book/ch5-2.html#public_small_project) )
 
   -   Download the latest cocos2d-x develop branch from github:
     ```sh

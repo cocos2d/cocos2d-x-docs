@@ -1079,7 +1079,7 @@ the mac version. The process of the windows version is almost the same.
 
 ## Prerequisite
 If you have been not installed the Cocos Code IDE,you can refer to
-[Cocos Code IDE Installation](//www.Cocos2d-x.org/wiki/Cocos_Code_IDE).
+[Cocos Code IDE Installation](//cocos2d-x.org/wiki/Cocos_Code_IDE).
 
 ## Cocos Code IDE Configuration
 

@@ -27,7 +27,7 @@
 
 三大移动 GPU 供应商，也提供了图形分析工具
 
-- ARM Mali GPU: [mali-graphics-debugge](//malideveloper.arm.com/resources/tools/mali-graphics-debugger/)
+- ARM Mali GPU: [mali-graphics-debugge](http://malideveloper.arm.com/resources/tools/mali-graphics-debugger/)
 - Imagination PowerVR GPU: [pvrtune](https://community.imgtec.com/developers/powervr/tools/pvrtune/)
 - Qualcomm Adreno GPU: [adreno-gpu-profiler](https://developer.qualcomm.com/software/adreno-gpu-profiler)
 

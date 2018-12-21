@@ -37,7 +37,7 @@ spritecache->addSpriteFramesWithFile("sprites.plist");
 
 * [Texture Packer](https://www.codeandweb.com/texturepacker)
 * [Zwoptex](https://www.zwopple.com/zwoptex/)
-* [ShoeBox](//renderhjs.net/shoebox/)
-* [Sprite Sheet Packer](//amakaseev.github.io/sprite-sheet-packer/)
+* [ShoeBox](http://renderhjs.net/shoebox/)
+* [Sprite Sheet Packer](http://amakaseev.github.io/sprite-sheet-packer/)
 
 其中 __Texture Packer__ 有一个专门为 Cocos2d-x 写的图集创建指南。[传送门](https://www.codeandweb.com/texturepacker/tutorials/animations-and-spritesheets-in-cocos2d-x)

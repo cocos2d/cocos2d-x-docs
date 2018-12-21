@@ -34,6 +34,6 @@ Example tiled-map layouts:
 
 ![](other_node_types-img/tilemap2.png "timemap2")
 
-How do you make a tiled-map? There are many tools that do this. [Tiled](//mapeditor.org)
+How do you make a tiled-map? There are many tools that do this. [Tiled](http://mapeditor.org)
 is a popular tool. It is actively developed and has a great user community. The
 screen-shots above are actual __Tiled__ projects.

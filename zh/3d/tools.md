@@ -4,10 +4,10 @@
 
 3D 编辑器是用于构建 3D 模型的工具集合，有商业的和免费的可用，这是其中一些受欢迎的编辑器：
 
-* [Blender (Free)](//www.blender.org/)
-* [3DS Max](//www.autodesk.com/products/3ds-max/overview)
-* [Cinema4D](//www.maxon.net/products/)
-* [Maya](//www.autodesk.com/products/maya/overview)
+* [Blender (Free)](http://www.blender.org/)
+* [3DS Max](http://www.autodesk.com/products/3ds-max/overview)
+* [Cinema4D](http://www.maxon.net/products/)
+* [Maya](http://www.autodesk.com/products/maya/overview)
 
 大多数 3D 编辑器都能将文件保存成通用的格式，方便文件在其它编辑器中使用，同时也方便了游戏引擎对 3D 模型的导入和使用。
 
