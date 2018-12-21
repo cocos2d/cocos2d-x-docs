@@ -43,7 +43,8 @@ echo "-----------------------"
 ## pull latest from github
 echo "Cocos Creator -- building documentation..."
 cd ../creator-docs
-rm -rf node_modules/
+sudo -v
+sudo rm -rf node_modules/
 
 ## pulling legacy version
 echo "Cocos Creator -- pulling v1.9..."
