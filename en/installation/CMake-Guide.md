@@ -1,6 +1,6 @@
 # CMake Guide
 
-CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and generates native makefiles and workspaces that can be used in the compiler environment of your choice.
+__CMake__ is an open-source, cross-platform family of tools designed to build, test and package software. __CMake__ is used to control the software compilation process using simple platform and compiler independent configuration files, and generates native makefiles and workspaces that can be used in the compiler environment of your choice.
 
 ## Requirement
 
@@ -8,7 +8,7 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
   ```sh
   cmake --version
   ```
-if the CMake version is lower than 3.1, please upgrade.
+If the __CMake__ version is lower than __3.1__, __please upgrade__.
 
 2. You should use __out-of-source__ builds, this means you need to create a different directory than __cocos2d-x__ to execute the `cmake` command.
 
