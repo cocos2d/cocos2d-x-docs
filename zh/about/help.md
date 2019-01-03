@@ -4,5 +4,5 @@
 
 - [Cocos 中文社区](//forum.cocos.com/)
 - [Cocos2d-x GitHub](https://github.com/cocos2d/cocos2d-x)
-- [API 编程接口](//docs.cocos2d-x.org/api-ref/index.html)
+- [API 编程接口](https://docs.cocos2d-x.org/api-ref/index.html)
 - [Cocos引擎官方微博](http://t.sina.com.cn/cocos2dx)
