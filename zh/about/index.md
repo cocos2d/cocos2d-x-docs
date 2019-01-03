@@ -24,4 +24,4 @@ Cocos2d-x 用户不仅包括个人开发者和游戏开发爱好者，还包括�
 
 ![](./res/powerbycocos.png)
 
-> 您可以从 [官网页面](http://www.cocos.com/download) 下载一个正式发布版本，也可以直接从 [GitHub](https://github.com/cocos2d/cocos2d-x) 克隆。无论您用 C++、JavaScript 还是 Lua 语言进行游戏开发，只需要下载这一个引擎。
+> 您可以从 [官网页面](//www.cocos.com/download) 下载一个正式发布版本，也可以直接从 [GitHub](https://github.com/cocos2d/cocos2d-x) 克隆。无论您用 C++、JavaScript 还是 Lua 语言进行游戏开发，只需要下载这一个引擎。

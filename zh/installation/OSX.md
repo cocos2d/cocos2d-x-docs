@@ -2,7 +2,7 @@
 
 ## 工具准备
 
-1. Cocos2d-x v3.17，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
+1. Cocos2d-x v3.17，下载后解压，下载参见：[Cocos官网页面](//www.cocos.com/download)
 1. Xcode 9 下载后安装，下载参见：[Apple官网页面](https://developer.apple.com/download/more/)
 
 ## 配置步骤

@@ -28,7 +28,7 @@ and Click __Ok__.
 
 ## Import Libcocos2dx Project
 * Same steps as above only using the path of the __libcocos2dx__ project is
-__[your own game project folder]/cocos/2d/platform/android/java__.
+__**your own game project folder**/cocos/2d/platform/android/java__.
 
     ![](Android-Eclipse-img/image5.png)
 

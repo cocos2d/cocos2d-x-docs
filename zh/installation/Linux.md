@@ -3,8 +3,8 @@
 ## 工具准备
 
 1. Ubuntu 16.04，我们已在 `Ubuntu 16.04` 上做了版本功能的完整验证，建议用户使用此发行版，以防止由于版本不同引发编译或运行错误。下载参见：[官网页面](https://www.ubuntu.com/download/desktop)，[aliyun 镜像站](https://mirrors.aliyun.com/ubuntu-releases/16.04/)。
-1. cocos2d-x v3.17，下载后解压，下载参见：[Cocos官网页面](http://www.cocos.com/download)
-1. 建议将默认软件源，替换为国内的软件源, 如`http://mirrors.aliyun.com/ubuntu`, 这样在下载依赖时会有更快的速度
+1. cocos2d-x v3.17，下载后解压，下载参见：[Cocos官网页面](//www.cocos.com/download)
+1. 建议将默认软件源，替换为国内的软件源, 如`//mirrors.aliyun.com/ubuntu`, 这样在下载依赖时会有更快的速度
 
 ## 环境配置
 

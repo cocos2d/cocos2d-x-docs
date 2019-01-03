@@ -11,11 +11,11 @@
                 "links": [
                     {
                         "name": "手册文档",
-                        "link": "http://docs.cocos2d-x.org/creator/zh/"
+                        "link": "//docs.cocos2d-x.org/creator/zh/"
                     },
                     {
                         "name": "API 参考",
-                        "link": "http://docs.cocos2d-x.org/creator-api/zh/"
+                        "link": "//docs.cocos2d-x.org/creator-api/zh/"
                     }  
                 ]
             },
@@ -24,11 +24,11 @@
                 "links": [
                     {
                         "name": "手册文档",
-                        "link": "http://docs.cocos2d-x.org/cocos2d-x/zh/"
+                        "link": "//docs.cocos2d-x.org/cocos2d-x/zh/"
                     },
                     {
                         "name": "API 参考",
-                        "link": "http://docs.cocos2d-x.org/api-ref/index.html"
+                        "link": "//docs.cocos2d-x.org/api-ref/index.html"
                     }
                 ]
             }

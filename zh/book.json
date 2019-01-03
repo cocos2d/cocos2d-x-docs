@@ -11,12 +11,12 @@
                 "links": [
                     {
                         "name": "手册文档",
-                        "link": "http://docs.cocos.com/creator/manual/zh"
+                        "link": "//docs.cocos2d-x.org/creator/zh/"
                     },
                     {
                         "name": "API 参考",
-                        "link": "http://docs.cocos.com/creator/api/zh"
-                    }
+                        "link": "//docs.cocos2d-x.org/creator-api/zh/"
+                    }  
                 ]
             },
             {
@@ -24,17 +24,13 @@
                 "links": [
                     {
                         "name": "手册文档",
-                        "link": "http://docs.cocos.com/cocos2d-x/manual/zh"
+                        "link": "//docs.cocos2d-x.org/cocos2d-x/zh/"
                     },
                     {
                         "name": "API 参考",
-                        "link": "http://docs.cocos2d-x.org/api-ref/index.html"
+                        "link": "//docs.cocos2d-x.org/api-ref/index.html"
                     }
                 ]
-            },
-            {
-                "name": "AnySDK",
-                "link": "http://docs.anysdk.com/"
             }
         ]
     }   

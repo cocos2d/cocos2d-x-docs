@@ -6,32 +6,11 @@ Prebuilt libraries are available on *iOS*, *macOS*, *Android* and *Win32*
 
 In-order to use the prebuilt libraries in your projects you need to compile them. This assumes that you already haave a working Cocos2d-x installation. If you do not, please refer to our [installation guides](../installation/).
 
-Some examples:
-```cpp
-# remove the 'prebuilt' folder
-# without the -m flag, this builds for release mode
-# generates libraries for every platform (ios, mac, android, win32)
-cocos gen-libs -c
+```sh
 
-# remove the 'prebuilt' folder
-# without the -m flag, this builds for release mode
-# generates libraries for just ios
-cocos gen-libs -c -p ios
-
-# remove the 'prebuilt' folder
-# without the -m flag, this builds for release mode
-# generates libraries for just ios and android
-cocos gen-libs -c -p ios -p android
-
-# remove the 'prebuilt' folder
-# with the -m flag, this builds for debug
-# generates libraries for just ios and android
-cocos gen-libs -c -p ios -m debug
 ```
 
 The build process can take between several minutes and several hours, depending upon your hardware and software setup. Once complete the prebuilt libraries are located in: __prebuilt/__, inside your Cocos2d-x root directory. You can easily __symlink__ to these projects, thus allowing these libraries to be used amongst several projects at once, or you can copy them to individual projects or another location that better suits your needs.
-
-You can run __cocos gen-libs --help__ to see all available options broken down by platform.
 
 ### Using The Prebuilt Libraries In Your Projects
 Using the prebuilt libraries in your projects is easy. Simply add the libraries you need into your project and set your __header__ and __include__ search paths. Doing this depends upon the enviroment you are using. The paths you need to add are:

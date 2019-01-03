@@ -13,7 +13,7 @@ and the official document: https://developer.apple.com/library/ios/documentation
 
 There are three major mobile GPU vendors nowadays and they provide decent graphics profiling tools:
 
-- For ARM Mali GPU: http://malideveloper.arm.com/resources/tools/mali-graphics-debugger/
+- For ARM Mali GPU: //malideveloper.arm.com/resources/tools/mali-graphics-debugger/
 - For Imagination PowerVR GPU: https://community.imgtec.com/developers/powervr/tools/pvrtune/
 - For Qualcomm Adreno GPU: https://developer.qualcomm.com/software/adreno-gpu-profiler
 
