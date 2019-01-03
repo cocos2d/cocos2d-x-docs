@@ -1,8 +1,8 @@
 ## Where to get Cocos2d-x and what do I get?
-You can clone the [__GitHub Repo__](https://github.com/cocos2d/cocos2d-x) and follow the steps in the [__README__](https://github.com/cocos2d/cocos2d-x/blob/v3/README.md). You can also download as part of the Cocos package on our [__download page__](//cocos2d-x.org/download). No matter if you choose to develop in C++, JavaScript or Lua, everything you need is in one package. The Cocos family of products has a few different pieces.
+You can clone the [__GitHub Repo__](https://github.com/cocos2d/cocos2d-x) and follow the steps in the [__README__](https://github.com/cocos2d/cocos2d-x/blob/v3/README.md). You can also download as part of the Cocos package on our [__download page__](https://cocos2d-x.org/download). No matter if you choose to develop in C++, JavaScript or Lua, everything you need is in one package. The Cocos family of products has a few different pieces.
 
   * __Cocos2d-x__ - this is the game engine, itself. It includes the engine and the
-  [__cocos__](https://docs.cocos2d-x.org/editors_and_tools/cocosCLTool/index.html) command-line tool. You can download a [__production__](//cocos2d-x.org/download)
+  [__cocos__](https://docs.cocos2d-x.org/editors_and_tools/cocosCLTool/index.html) command-line tool. You can download a [__production__](https://cocos2d-x.org/download)
   release or stay bleeding edge by cloning our [__GitHub Repo__](https://github.com/cocos2d/cocos2d-x).
 
   * __Cocos Creator__ - is a unified game development tool. You can create your

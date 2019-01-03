@@ -4,7 +4,7 @@
 
 ## Environment Requirements
 * Windows, macOS or Ubuntu (a relatively recent version should suffice)
-* Cocos2d-x v3.11 [//cocos2d-x.org/download](//cocos2d-x.org/download)
+* Cocos2d-x v3.11 [https://cocos2d-x.org/download](https://cocos2d-x.org/download)
 * Tizen 2.4 Rev3+ SDK [https://developer.tizen.org/development/tools/download](https://developer.tizen.org/development/tools/download)
 * Java JDK for your platform (a relatively recent version should suffice)
 

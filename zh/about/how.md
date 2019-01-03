@@ -88,4 +88,4 @@ git submodule update --init
 
 当您使用 Cocos2d-x 开发了游戏，希望您能将 Cocos2d-x 的 Logo 放到游戏中，或者把 Cocos2d-x 加到致谢中。让我们一起提高 Cocos2d-x 的知名度，让更多的人参与到 Cocos 开源社区的建设中。
 
-[Cocos2d-x Logo 资源](//cocos2d-x.org/images/logo.png)
+[Cocos2d-x Logo 资源](https://cocos2d-x.org/images/logo.png)

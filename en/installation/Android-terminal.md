@@ -170,7 +170,7 @@ when a new version becomes available.
 ### Cocos2d-x
 Installing __Cocos2d-x__ is probably the easiest part of this process. You can
 get started with __Cocos2d-x__ by either downloading a self-contained
-__.zip__ from the [website](//cocos2d-x.org/download) or by cloning our
+__.zip__ from the [website](https://cocos2d-x.org/download) or by cloning our
 [GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
 __There is no need to do both.__
 
