@@ -59,7 +59,7 @@ int result = sqlite3_open(dbPath.c_str(), &pdb);
 
 if(result == SQLITE_OK)
   std::cout << "open database successful!" << std::endl;
-else   
+else
   std::cout << "open database failed!" << std::endl;
 ```
 

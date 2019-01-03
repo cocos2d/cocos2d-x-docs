@@ -31,7 +31,7 @@ Cocos2d-x 决定自 3.17 版本开始，支持 CMake 的全平台构建。支持
 
     * `cmake --build ./msvc_build` 在执行这个构建过程时，CMake 会自动选择对应的构建工具。
 
-### Cocos2d-x 特有
+<!--### Cocos2d-x 特有
 
 以下 Cocos2d-x 特有的选项和使用预编译库有关。
 
@@ -46,7 +46,7 @@ Cocos2d-x 决定自 3.17 版本开始，支持 CMake 的全平台构建。支持
 1. __COCOS_PREBUILT_ROOT__ 指定预编译库存放的目录，是一个可选选项，对于在 Android 平台中使用预编译库是一个必选选项，因为正常情况下，Android Studio 在进行 CMake 构建过程时，无法获取到环境变量，导致找不到引擎根目录。
 
     * `-DCOCOS_PREBUILT_ROOT=/Users/laptop/cocos-prebuilt` 设置存放预编译库的目录
-
+-->
 ## 各平台构建示例
 
 ### Linux
@@ -105,7 +105,7 @@ cmake .. -G"Visual Studio 15 2017"
 
 另一种方式，由于 Visual Studio 2017 已经直接支持 CMake 工程，可以直接使用。详细请参考 [CMake 支持](https://docs.microsoft.com/zh-cn/cpp/ide/cmake-tools-for-visual-cpp)。
 
-## 预编译库示例
+<!--## 预编译库示例
 
 使用引擎的预编译库，可以避免再次编译引擎代码，将引擎部分的代码编译时间缩减为零！从而有效的降低项目的构建时间。以下示例为使用一个 C++ 工程生成预编译库，并在其它 C++ 工程中使用。
 
@@ -135,7 +135,7 @@ cmake .. -G"Visual Studio 15 2017"
     make TemplateCpp
     open bin/TemplateCpp.app
     ```
-
+-->
 ## CMake 帮助
 
 * CMake 官网: [cmake.org](https://cmake.org/)

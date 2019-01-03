@@ -56,7 +56,7 @@ addChild(billboard);
 In Chapter 7, you learned about 2D particles and how to use them. When you use 3D
 you might also want to use a 3D particle system for rich, advanced effects. Many
 of the same concepts apply for a 3D particle system as they did with a 2D particle
-system. Cocos2d-x currently supports __Particle Universe__ (http://www.fxpression.com/)
+system. Cocos2d-x currently supports __Particle Universe__ (//www.fxpression.com/)
 for particle system construction. __Particle Universe__ provides a special particle
 editor that allows you to quickly and easily set up a variety of effects, such as
 explosions, fire, blood and other special effects. This editor uses a __pu__ file

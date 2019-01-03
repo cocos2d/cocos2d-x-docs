@@ -15,7 +15,7 @@ Working with an `HTTPRequest` is quite simple:
 
 ```cpp
 HttpRequest* request = new (std :: nothrow) HttpRequest();
-request->setUrl("http://just-make-this-request-failed.com");
+request->setUrl("//just-make-this-request-failed.com");
 request->setRequestType(HttpRequest::Type::GET);
 request->setResponseCallback(CC_CALLBACK_2 (HttpClientTest::onHttpRequestCompleted, this));
 

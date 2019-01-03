@@ -1,7 +1,15 @@
 ## FAQ Of Commonly Asked Technical Questions
 
 ### Windows
-#### Needing to re-target the Windows SDK
+#### Re-target the Windows SDK
+If you see these types of errors:
+
+  ![](re-target-errors.jpeg)
+
+This is because the template project was created in an older version of Visual Studio. To fix: 
+  **Right** click on **every project**, select **Retarget Projects** and then click **Ok**. Next, **rebuild** the project.
+
+If you create a new project in the future you will need to repeat these steps.
 
 ### XCode
 #### XCode PNG Compression issue

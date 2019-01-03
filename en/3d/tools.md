@@ -50,7 +50,7 @@ There are a few things to note about __fbx-conv__:
 ## 3D File Formats
 Cocos2d-x currently supports two 3d file formats:
 
-* [Wavefront Object](http://en.wikipedia.org/wiki/Wavefront_.obj_file) files:
+* [Wavefront Object](http:////en.wikipedia.org/wiki/Wavefront_.obj_file) files:
 __.obj__ files
 * Cocos2d-x 3d ad-hoc format:__c3t__, __c3b__ files.
 

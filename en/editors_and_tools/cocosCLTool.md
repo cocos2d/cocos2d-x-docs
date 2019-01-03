@@ -155,7 +155,7 @@ cocos deploy -q -s ~/MyCompany/MyGame -p ios -m release
 You can run __cocos deploy --help__ to see all available options broken down by
 platform.
 
-### Installing additional plugins
+<!-- ### Installing additional plugins
 Using the __Cocos Package Manager__ you can easily add additional functionality to your games, __SDKBOX__. There are a variety of commands to assist with this. Examples:
 
 ```sh
@@ -169,15 +169,15 @@ cocos package info
 cocos package update
 ```
 
-You can run __cocos package --help__ to see all available options broken down by platform.
+You can run __cocos package --help__ to see all available options broken down by platform. -->
 
-#### Installing SDKBOX plugins
+<!-- #### Installing SDKBOX plugins
 __SDKBOX__ plugins can be installed using the __Cocos Package Manager__. Example:
 
 ```sh
 # install a package, in this example, Facebook
 cocos package import facebook
-```
+``` -->
 
 ### Unique command-line options
 __cocos__ has a number of unique options you can use to help build your games. To see all of these options, please run __cocos --help__. Let's us talk about these optios.
@@ -188,4 +188,4 @@ __cocos__ has a number of unique options you can use to help build your games. T
 |__luacompile__| Encrypt the lua scripts in your game. This is invoked once `cocos compile` is invoked with the `-m release` argument. Developers can invoke this manually for encrypting their scripts.|
 |__jscompile__| Encrypt the JavaScript scripts in your game. This is invoked once `cocos compile` is invoked with the `-m release` argument. Developers can invoke this manually for encrypting their scripts.|
 |__gen-simulator__| The simulator powers the  __preview__ function in Cocos Creator. |
-|__gen-templates__| is used for generating the binary templates you can use to get started on a project that uses the __pre-built libraries__. Binary templates are required by Cocos Bundle package and also Cocos Creator.
+<!-- |__gen-templates__| is used for generating the binary templates you can use to get started on a project that uses the __pre-built libraries__. Binary templates are required by Cocos Bundle package and also Cocos Creator. -->
