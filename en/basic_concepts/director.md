@@ -1,11 +1,8 @@
 ## Director
-__Cocos2d-x__ uses the concept of a **Director**, just like in a movie! The `Director` object controls the flow of operations and tells the necessary recipient what to do. Think of yourself as the _Executive Producer_ and you tell the `Director` what to do! One common `Director` task is to control `Scene` replacements and
-transitions. The `Director` is a shared singleton (effectively, there's only one
-instance of the class at a time) object that you can call from anywhere in your
+__Cocos2d-x__ uses the concept of a **Director**, just like in a movie! The `Director` object controls the flow of operations and tells the necessary recipient what to do. Think of yourself as the _Executive Producer_ and you tell the `Director` what to do! One common `Director` task is to control `Scene` replacements and transitions. The `Director` is a shared singleton (effectively, there's only one instance of the class at a time) object that you can call from anywhere in your
 code.
 
-Here is an example of a typical game flow. The `Director` takes care of
-transitioning through this as your game criteria decides:
+Here is an example of a typical game flow. The `Director` takes care of transitioning through this as your game criteria decides:
 
 ![](basic_concepts-img/scenes.png "")
 
@@ -56,13 +53,7 @@ The `Director` has many responsibilities and even more possibilities. As mention
 In the previous step we explored the `AppDelegate` class and what it does. In the next chapter we will explore **Scenes**. Before we get to that, we should do a bit of house-keeping.
 
 #### Resources
-Every game will have at least a few resources. These could be *fonts*, *sounds effects*, *music* or *sprites*. In this sample game we are using aliens as our characters and blocks to build out our levels. Example:
-
-![](basic_concepts-img/Blue_Front1.png "")
-![](basic_concepts-img/LightBlue_Front1.png "")
-![](basic_concepts-img/White_Front1.png "")
-![](basic_concepts-img/ZigzagForest_Square.png "")
-![](basic_concepts-img/ZigzagGrass_Mud_Round.png "")
+Every game will have at least a few resources. These could be *fonts*, *sounds effects*, *music* or *sprites*. In this sample game we are first going to use simple shapes until our game is playable. Much later on we can use real art work.
 
 Moving on...
 

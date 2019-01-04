@@ -12,7 +12,7 @@ Let's take another look, but splitting up the screenshot and identifying the com
 You can see a menu, some sprites and labels, which all have an equivalent in __Cocos2d-x__.  Take a look at a few of your own game design documents, and see what components you have, you'll probably have a few that match up.
 
 ### Let's Build A Game - Step 2
-From the previous step, you now have a working __Cocos2d-x__ project created. This is good, it allows you to verify that your development environment is working. However, it also lets you see what code starts the game and how some basic decisions
+From the previous step, you now have a working __Cocos2d-x__ project created __FirstGame__. This is good, it allows you to verify that your development environment is working. However, it also lets you see what code starts the game and how some basic decisions
 are made when the game starts. Let's take a look at a few of these **Classes** to gain some understanding. Cross-platform code is stored in the **Classes/** directory while platform dependent code is stores in a folder for each platform, i.e **proj.android**, **proj.ios_mac**, **proj.linux**, **proj.win32**.
 
 #### AppDelegate
@@ -43,14 +43,14 @@ So that we can get started making this game a bit more personal, we can change t
 ```cpp
 if(!glview) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-        glview = GLViewImpl::createWithRect("Cocos2d-x-Sample-Game", cocos2d::Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+        glview = GLViewImpl::createWithRect("FirstGame", cocos2d::Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
 #else
-        glview = GLViewImpl::create("Cocos2d-x-Sample-Game");
+        glview = GLViewImpl::create("FirstGame");
 #endif
         director->setOpenGLView(glview);
 }
 ```
-Notice where the code says: **Cocos2d-x-Sample-Game**. We can change this to **Super Cocos Aliens**. Make sure to change it in both places!
+Notice where the code says: **FirstGame**. We can change this to **Bubble Shooter**. Make sure to change it in both places! This doesn't change the name of any IDE project names or directory names.
 
 Once you have this step done, keep on reading...
 
