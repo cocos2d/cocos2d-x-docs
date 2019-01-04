@@ -32,6 +32,6 @@ __Cocos2d-x__ provides `Scene`, `Transition`, `Sprite`, `Menu`, `Sprite3D`, `Aud
 ### Let's Build A Game - Step 1
 Going step-by-step is the best way to make a game. Break the game down into pieces and tackle them one at a time, tieing them together as needed. To get started, please review our [installation docs](../installation/) and our [command-line tools docs](../editors_and_tools/).
 
-Ensure that you have __Cocos2d-x__ installed and you have created a new project to begin development with. __Hint:__ `cocos new -l cpp -p com.mycompany.mygame -d Games/` or similar is what you will end up running. Once you have this step done, keep on reading...
+Ensure that you have __Cocos2d-x__ installed and you have created a new project to begin development with. __Hint:__ `cocos new  FirstGame -l cpp -p com.mycompany.mygame -d Games/` or similar is what you will end up running. Once you have this step done, keep on reading...
 
 [Let's get started learning concepts and building a game!](getting_started.md)
