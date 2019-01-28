@@ -7,10 +7,8 @@ A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 We support Ubuntu 12.10+, however, newer versions of Ubuntu have changed and the steps to install Cocos2d-x and required dependencies are a bit different. This requires some manual effort and this doc will outline what is required.
 
 ## Setting up Cocos2d-x
-You can get started with __Cocos2d-x__ by either downloading a self-contained
-__.zip__ from the [website](https://cocos2d-x.org/download) or by cloning our
-[GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
-__There is no need to do both.__
+You can get started with __Cocos2d-x__ by either downloading a self-contained __.zip__ from the [website](https://cocos2d-x.org/download) or by cloning our
+[GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you. __There is no need to do both.__
 
 ### By downloading a .zip archive
 Download Cocos2d-x and unzip it. (maybe: __~/__ or __~/Projects__ )
@@ -93,37 +91,35 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 ## Building Cocos2d-x
 * Run __cmake__ to generate __makefile__:
 
-    ```sh
-    cd cocos2d-x-root # where your cocos2d-x directory is located.
-    cd build
-    mkdir linux-build
-    cd linux-build
-    cmake ../..
-    ```
+  ```sh
+  cd cocos2d-x-root # where your cocos2d-x directory is located.
+  cd build
+  mkdir linux-build
+  cd linux-build
+  cmake ../..
+  ```
 
-* When __cmake__ finishes, many files & folders will be generated in
-__coocs2dx_root/build/linux-build__
+* When __cmake__ finishes, many files & folders will be generated in __coocs2dx_root/build/linux-build__
 
     ![](Linux-img/1.png "")
 
 * Run __make__ to compile:
 
-    ```sh
-    make -j 4
-    ```
+  ```sh
+  make -j 4
+  ```
 
-    Everything will be generated in __cocos2dx_root/build/linux-build/bin/cpp-tests/__
-    if compiled successfully.
+  Everything will be generated in __cocos2dx_root/build/linux-build/bin/cpp-tests/__
+  if compiled successfully.
 
 * Some users report issues with __libfmod__. If you encounter issues, please reference this post: [Error while building for linux: libfmod.so.6](https://discuss.cocos2d-x.org/t/error-while-building-for-linux-libfmod-so-6/26553/31?u=doyoque)
 
 * Run `cpp-tests`
 
-    ```sh
-    cd cocos2dx_root/build/linux-build/bin/cpp-tests/
-    ./cpp-tests
-    ```
+  ```sh
+  cd cocos2dx_root/build/linux-build/bin/Debug/cpp-tests/
+  ./cpp-tests
+  ```
 
 ## Starting a new project
-Once everything above works, you can start a new project! To do this, read our
-document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.
+Once everything above works, you can start a new project! To do this, read our document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.

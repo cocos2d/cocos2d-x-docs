@@ -13,6 +13,7 @@ echo "-----------------"
 echo "-----------------------------------------------"
 echo "Cocos2d-x-docs -- pulling latest from GitHub..."
 echo "-----------------------------------------------"
+git checkout master
 git pull origin master
 
 cp -rf config/cocos2d-x.org/. ./

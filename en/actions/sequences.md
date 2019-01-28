@@ -40,7 +40,25 @@ It will execute the following actions sequentially:
 
 __Jump__ -> __callbackJump()__ -> __Rotate__ -> __callbackRotate()__
 
-Run the example __Programmer Guide Sample__ code to see this in action!
+### Delays in Sequences
+Sometimes you may want to create a `Sequence` that has a small delay between each `Action`. You can achieve this using `CallFunc`. Example:
+
+```cpp
+// use a sequence incorporating delays between items
+cocos2d::CallFunc* A = cocos2d::CallFunc::create([=]() {
+    // do something
+});
+cocos2d::CallFunc* B = cocos2d::CallFunc::create([=]() {
+    // do something
+});
+cocos2d::CallFunc* C = cocos2d::CallFunc::create([=]() {
+    // do something
+});
+
+cocos2d::DelayTime* delay = cocos2d::DelayTime::create(1);
+
+runAction(cocos2d::Sequence::create(A, delay, B, delay, C, NULL));
+```
 
 ### Spawn
 __Spawn__ is very similar to `Sequence`, except that all actions will run at the same
@@ -102,5 +120,3 @@ auto seq = Sequence::create(moveBy, mySpawn, moveBy, nullptr);
 // run it
 mySprite->runAction(seq);
 ```
-
-Run the example __Programmer Guide Sample__ code to see this in action!
