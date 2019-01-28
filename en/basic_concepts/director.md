@@ -22,7 +22,8 @@ auto s = cocos2d::Director::getInstance()->getWinSize();
 ### What things can the **Director** do?
 The `Director` has many responsibilities and even more possibilities. As mentioned above, the `Director` controls the show. Here are some useful things the `Director` can do without breaking a sweat:
 
-  > __Scenes:__ change scenes, change scenes with a transition effects, etc
+  > __Scenes:__ change scenes, change scenes with a transition effects, etc...
+
   ```cpp
   director->runWithScene(scene); // use when starting your game
 
@@ -30,6 +31,7 @@ The `Director` has many responsibilities and even more possibilities. As mention
   ```
 
   > __Pause/Resume:__ pause your game (if you are using physics there are more steps)
+
   ```cpp
   // stop animations
   cocos2d::Director::getInstance()->stopAnimation();
@@ -37,7 +39,9 @@ The `Director` has many responsibilities and even more possibilities. As mention
   // resume animations
   cocos2d::Director::getInstance()->startAnimation();
   ```
+  
   > __Get internal info:__ get/set properties of your game. Consult the API Reference for more functionality.
+  
   ```cpp
    // turn on display FPS
   cocos2d::Director::GetInstance()->setDisplayStats(true);
