@@ -3,7 +3,7 @@
 ## Q1 2019 revision 4
 =======
 
-__Authors:__ SlackMoehrle, Ricardo, Minggo, Walzer, Jare, James, Chengzhe.
+__Authors:__ SlackMoehrle, Minggo, Walzer, Jare, Chengzhe.
 
 __Special Thanks:__ To our users! Without you there is no reason to even write this guide.
 
