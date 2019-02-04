@@ -3,7 +3,7 @@
 **Build Requirements**
 ------------------
 
-#### v3.17
+#### v3.17, v3.17.1
 ---
 * Mac OS X 10.7+, Xcode 8+
 * Ubuntu 14.04+, CMake 3.1+
