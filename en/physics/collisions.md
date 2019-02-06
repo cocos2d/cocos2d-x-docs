@@ -1,16 +1,16 @@
 ## Collision
-Have you ever been in a car accident? What did you collide with? Just like with
-cars, `PhysicBody` objects can come in contact. __Collisions__ are what happens when `PhysicBody` objects come in contact with each other. When a __collision__ takes place it can be ignored or it can trigger events to be fired.
+Have you ever been in a car accident? What did you collide with? Just like with cars, `PhysicBody` objects can come in contact. __Collisions__ are what happens when `PhysicBody` objects come in contact with each other. When a __collision__ takes place it can be ignored or it can trigger events to be fired.
 
 ### Filtering Collisions
-Collision filtering allows you to enable or prevent collisions between shapes.
-This __physics engine__ supports collision filtering using __category and group bitmasks__.
+Collision filtering allows you to enable or prevent collisions between shapes. This __physics engine__ supports collision filtering using __category and group bitmasks__.
 
-There are 32 supported collision categories. For each shape you can specify which
-category it belongs to. You can also specify what other categories this shape can
+There are 32 supported collision categories. For each shape you can specify which category it belongs to. You can also specify what other categories this shape can
 collide with. This is done with masking bits. For example:
 
 ```cpp
+auto visibleSize = Director::getInstance()->getVisibleSize();
+s_centre = Vec2(visibleSize.width/2, visibleSize.height/2);
+ 
 auto sprite1 = addSpriteAtPosition(Vec2(s_centre.x - 150,s_centre.y));
 sprite1->getPhysicsBody()->setCategoryBitmask(0x02);    // 0010
 sprite1->getPhysicsBody()->setCollisionBitmask(0x01);   // 0001
@@ -41,31 +41,20 @@ if ((shapeA->getCategoryBitmask() & shapeB->getCollisionBitmask()) == 0
 
 ![](physics-img/CollisionFiltering.gif )
 
-Collision groups let you specify an integral group index. You can have all shapes
-with the same group index always collide (positive index) or never collide (negative
-index and zero index). Collisions between shapes of different group indices are
-filtered according the category and mask bits. In other words, group filtering has
+Collision groups let you specify an integral group index. You can have all shapes with the same group index always collide (positive index) or never collide (negative
+index and zero index). Collisions between shapes of different group indices are filtered according the category and mask bits. In other words, group filtering has
 higher precedence than category filtering.
 
 ### Contacts/Joints
-Recall from the terminology above that __joints__ are how contact points are connected
-to each other. Yes, you can think of it just like __joints__ on your own body.
-Each joint type has a definition that derives from `PhysicsJoint`. All joints are
-connected between two different bodies. One body may be static. You can prevent the
-attached bodies from colliding with each other by __joint->setCollisionEnable(false)__.
-Many joint definitions require that you provide some geometric data. Often a joint
-will be defined by anchor points. The rest of the joint definition data depends
-on the joint type.
+Recall from the terminology above that __joints__ are how contact points are connected to each other. Yes, you can think of it just like __joints__ on your own body.
+Each joint type has a definition that derives from `PhysicsJoint`. All joints are connected between two different bodies. One body may be static. You can prevent the attached bodies from colliding with each other by __joint->setCollisionEnable(false)__. Many joint definitions require that you provide some geometric data. Often a joint will be defined by anchor points. The rest of the joint definition data depends on the joint type.
 
-  >-__PhysicsJointFixed:__ A fixed joint fuses the two bodies together at a reference
- point. Fixed joints are useful for creating complex shapes that can be broken
- apart later.
+  >-__PhysicsJointFixed:__ A fixed joint fuses the two bodies together at a reference point. Fixed joints are useful for creating complex shapes that can be broken
+  apart later.
 
- >-__PhysicsJointLimit:__ A limit joint imposes a maximum distance between the two
- bodies, as if they were connected by a rope.
+ >-__PhysicsJointLimit:__ A limit joint imposes a maximum distance between the two bodies, as if they were connected by a rope.
 
- >-__PhysicsJointPin:__ A pin joint allows the two bodies to independently rotate
- around the anchor point as if pinned together.
+ >-__PhysicsJointPin:__ A pin joint allows the two bodies to independently rotate around the anchor point as if pinned together.
 
  >-__PhysicsJointDistance__: Set the fixed distance with two bodies
 
@@ -81,15 +70,12 @@ on the joint type.
 
  >-__PhysicsJointGear:__ Keeps the angular velocity ratio of a pair of bodies constant
 
- >-__PhysicsJointMotor:__ Keeps the relative angular velocity of a pair of bodies
- constant
+ >-__PhysicsJointMotor:__ Keeps the relative angular velocity of a pair of bodies constant
 
 ![](physics-img/joints.PNG )
 
 ### Collision detection
-Contacts are objects created by the __physics engine__ to manage the collision
-between two shapes. __Contact__ objects are not created by the user, they are
-created automatically. There are a few terms associated with contacts.
+Contacts are objects created by the __physics engine__ to manage the collision between two shapes. __Contact__ objects are not created by the user, they are created automatically. There are a few terms associated with contacts.
 
  >-__contact point:__ A contact point is a point where two shapes touch.
 
@@ -106,20 +92,14 @@ bool onContactBegin(PhysicsContact& contact)
 }
 ```
 
-You can get access to __contacts__ by implementing a __contact listener__. The __contact
-listener__ supports several events: __begin__, __pre-solve__, __post-solve__ and __separate__.
+You can get access to __contacts__ by implementing a __contact listener__. The __contact listener__ supports several events: __begin__, __pre-solve__, __post-solve__ and __separate__.
 
-  >-__begin:__ Two shapes just started touching for the first time this step. Return
-true from the callback to process the collision normally or false to cause physics
-engine to ignore the collision entirely. If you return false, the _preSolve()_ and
-_postSolve()_ callbacks will never be run, but you will still receive a separate
-event when the shapes stop overlapping.
+  >-__begin:__ Two shapes just started touching for the first time this step. Return true from the callback to process the collision normally or false to cause physics
+  engine to ignore the collision entirely. If you return false, the __preSolve()__ and __postSolve()__ callbacks will never be run, but you will still receive a separate
+  event when the shapes stop overlapping.
 
- >-__pre-solve:__ Two shapes are touching during this step. Return false from the callback
- to make physics engine ignore the collision this step or true to process it normally.
- Additionally, you may override collision values using _setRestitution()_, _setFriction()_
- or _setSurfaceVelocity()_ to provide custom restitution, friction, or surface velocity
- values.
+ >-__pre-solve:__ Two shapes are touching during this step. Return false from the callback to make physics engine ignore the collision this step or true to process it normally. Additionally, you may override collision values using __setRestitution()__, __setFriction()__
+ or __setSurfaceVelocity()__ to provide custom restitution, friction, or surface velocity values.
 
  >-__post-solve:__ Two shapes are touching and their collision response has been
  processed.
@@ -128,8 +108,7 @@ event when the shapes stop overlapping.
 
 You also can use `EventListenerPhysicsContactWithBodies`,
 `EventListenerPhysicsContactWithShapes`, `EventListenerPhysicsContactWithGroup`
-to listen for the event you're interested with bodies, shapes or groups. Besides this you
-also need to set the physics contact related bitmask value, as the contact event
+to listen for the event you're interested with bodies, shapes or groups. Besides this you also need to set the physics contact related bitmask value, as the contact event
 won't be received by default, even if you create the relative __EventListener__.
 
 For example:
@@ -137,8 +116,11 @@ For example:
 ```cpp
 bool init()
 {
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    s_centre = Vec2(visibleSize.width/2, visibleSize.height/2);
+ 
     //create a static PhysicsBody
-    auto sprite = addSpriteAtPosition(s_centre,1);
+    auto sprite = addSpriteAtPosition(s_centre, 1);
     sprite->setTag(10);
     sprite->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     sprite->getPhysicsBody()->setDynamic(false);
