@@ -1,21 +1,13 @@
 ## Queries
-Have you ever stood in one position and looked around? You see things __near__ to
-you and __far__ from you. You can gauge how close things are to you. __Physics engines__
-provide this same type of __spatial query__. `PhysicsWorld` objects currently support
-__point queryies__, __ray casts__ and __rect queries__.
+Have you ever stood in one position and looked around? You see things __near__ to you and __far__ from you. You can gauge how close things are to you. __Physics engines__
+provide this same type of __spatial query__. `PhysicsWorld` objects currently support __point queries__, __ray casts__ and __rect queries__.
 
 ### Point Queries
-When you touch something, say your desk, you can think of this as a __point query__.
-They allow you to check if there are shapes within a certain distance of a point.
-__Point queries__ are useful for things like __mouse picking__ and __simple sensors__.
-You can also find the closest point on a shape to a given point or find the closest
-shape to a point.
+When you touch something, say your desk, you can think of this as a __point query__. __Point queries__ allow you to check if there are shapes within a certain distance of a point. __Point queries__ are useful for things like __mouse picking__ and __simple sensors__. You can also find the closest point on a shape to a given point or find the closest shape to a point.
 
 ### Ray Cast
-If you are looking around, some object within your sight is bound to catch your
-attention. You have essentially performed a __ray cast__ here. You scanned until
-you found something interesting to make you stop scanning. You can __ray cast__ at
-a shape to get the point of first intersection. For example:
+If you are looking around, some object within your sight is bound to catch your attention. You have essentially performed a __ray cast__ here. You scanned until
+you found something interesting to make you stop scanning. You can __ray cast__ at a shape to get the point of first intersection. For example:
 
 ```cpp
 void tick(float dt)
@@ -56,8 +48,7 @@ void tick(float dt)
 ![](physics-img/RayTest.gif)
 
 ### Rect Queries
-__Rect queries__ provide a fast way to check roughly which shapes are in an area.
-It is pretty easy to implement:
+__Rect queries__ provide a fast way to check roughly which shapes are in an area. It is pretty easy to implement:
 
 ```cpp
 auto func = [](PhysicsWorld& world, PhysicsShape& shape, void* userData)->bool

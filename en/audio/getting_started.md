@@ -6,14 +6,14 @@ Your game will surely need sound! Cocos2d-x provides an audio engine called
 
 | Platform | Supported File Formats | Notes |
 | ------- | ------------------- | ------ |
-| Android | .mp3, .mid, .ogg, .wav | All formats supported by android.media.MediaPlayer can be played |
-| iOS | .aac, .caf, .mp3, .m4a, .wav | All formats supported by AVAudioPlayer |
+| Android | .mp3, .mid, .ogg, .wav | All formats supported by __android.media.MediaPlayer__ can be played |
+| iOS | .aac, .caf, .mp3, .m4a, .wav | All formats supported by __AVAudioPlayer__ can be played |
 | Windows | .mid, .mp3, .wav | none |
 
 ### Supported audio formats:
 
 | Platform | Common Supported File Formats | Notes |
 | ------- | ------------------- | ------ |
-| Android | Ogg, wav | Wav support is not perfect |
-| iOS | caf, m4a | Can play all formats supported by Cocos2d-iPhone CocosDesion |
-| Windows | mid, wav | none |
+| Android | .ogg, .wav | Wav support is not perfect |
+| iOS | .caf, .m4a | Can play all formats supported by Cocos2d-iPhone CocosDesion |
+| Windows | .mid, .wav | none |
