@@ -1,4 +1,4 @@
-## FAQ Of Commonly Asked Technical Questions
+## F.A.Q Of Commonly Asked Technical Questions
 
 ### Windows
 #### Re-target the Windows SDK
@@ -17,11 +17,16 @@ It is possible that your PNG images contain incorrect color profiles. You can
 convert color profiles using __ImageMagick__ and the following
 command:
 
-```sh
-find . -type f -name "*.png" -exec convert {} \;
-```
+   ```sh
+   find . -type f -name "*.png" -exec convert {} \;
+   ```
 
 ### Android
 #### generateJsonModelDebug FAILED
 To solve this issue, please import the project into __Android Studio__, click
 `Build/Refresh Linked C++ Projects`.
+
+#### Android Studio uses the __ninja__ build system
+__Android Studio__, itself, uses __ninja__ to build native codes. There is __ninja__ binary under __Cmake__ folder. If __Android Studio__ cannot find __ninja__ on __Windows__, it is the __Android Studio__ issue. You should set an environment variable that specifies the path to __ninja__:
+
+  ![](Android-Studio_cmake_ninja.png)
