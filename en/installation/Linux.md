@@ -122,15 +122,6 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.
 
-## Known work-arounds
 
-### FMod issues
-Some users report issues with __libfmod__. If you encounter issues, please reference this post: [Error while building for linux: libfmod.so.6](https://discuss.cocos2d-x.org/t/error-while-building-for-linux-libfmod-so-6/26553/31?u=doyoque)
-
-### CMake PIE
-It may be necessary to add the following line to __CMakeLists.txt__ if a __can not be used when making a PIE object;__ compiler is thrown:
-```sh
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -no-pie -fexceptions -std=c++11 -Wno-deprecated-declarations -Wno-reorder")
-```
-
-
+## Troubleshooting
+Please see this [F.A.Q](../faq/index.md#Linux) for troubleshooting help. __Linux__ has a few __known issues.__

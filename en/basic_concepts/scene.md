@@ -57,6 +57,11 @@ scene->addChild(sprite_node, 1);
 ### Let's Build A Game - Step 4
 Continuing with building our game, we need to think about our game and what `Scene` objects we will need. Some games use just a single `Scene` object. This works by removing all `Node` objects from a scene and replacing them with new `Node` objects that make up the next `Scene`. This is a valid approach. Another approach might be to break the game down into a **main menu** and a **game scene**. A third approach might be to break the game down further into a **main menu**, **level 1** -> **level N** and finally a **closing scene**. You may even add a small transition, often called a **cut scene** between the vavious `Scene` objects. Perhaps these **cut scenes** continue telling a story or just visually stimluate the user while the next level is loading in the background.
 
-In this game, let us take the approach of breaking down our game into a **main scene**, **game scene** and a **closing scene**. To do this, we need to make 3 almost entirely identical classes, at least to start with. These classes will change as we work on each one of these parts of our game.
+In this game, let us take the approach of breaking down our game into an **intro scene**, **game scene** and a **closing scene**. To do this, we need to make 3 almost entirely identical classes, at least to start with. These classes will change as we work on each one of these parts of our game. There are arguments amongst programmers on having to many or to few classes. Let's save that debate for a later time. For now, the goal is to be as clear as possible so those new to c++ and game development don't struggle to learn both at the same time. 
+
+Let's add the classes we mentioned above now. Classes are just source files. You can create them from the command-line or your favorite text editor. If you are using an IDE there may even be a __wizard__ you can run if you are new to class creation.
+
+The first class is our **intro scene**. Let's block out a basic class
+
 
 [Lions and tigers and Sprites..oh my!](sprites.md)
