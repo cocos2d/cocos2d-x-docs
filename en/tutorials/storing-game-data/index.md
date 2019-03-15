@@ -74,3 +74,5 @@ sprintf(strTemp, "string is %s", ret.c_str());
 some_label->setString(strTemp);
 ```
 
+## SQLite
+If your needs are more advanced than a simple key/value pair you can evalutate using a database to store and manipulate your games data. __SQLite__ is very popular and commonly used. You can read more about __SQLite__ on the [__SQLite website__]().
