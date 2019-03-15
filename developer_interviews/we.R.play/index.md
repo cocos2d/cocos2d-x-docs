@@ -1,5 +1,6 @@
 # Developer Interview with we.R.play
 
+![](logo.png)
 
 ### Tell everyone a bit about yourself and team.
 I’m __Bilal__ the Lead Developer of __Explottens__. I graduated from FAST university in 2012 and have been working at __we.R.play__ since then. I love making games and in the past 7 years I've created quite a few. Some of the more popular titles include __Scuba Steve, Beatleap, and Bloody Pixel Zombies__. I mostly use __Cocos2d-x__ for development, because it is fast, lightweight, and an open-source program.
