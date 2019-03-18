@@ -75,4 +75,34 @@ some_label->setString(strTemp);
 ```
 
 ## SQLite
-If your needs are more advanced than a simple key/value pair you can evalutate using a database to store and manipulate your games data. __SQLite__ is very popular and commonly used. You can read more about __SQLite__ on the [__SQLite website__]().
+If your needs are more advanced than a simple key/value pair you can evaluate using a database to store and manipulate your game data. __SQLite__ is a very popular and commonly used relational database. You can read more about __SQLite__ on the [__SQLite website__](https://sqlite.org/index.html).
+
+### Setting up SQLite
+Download the [__SQLite__](https://sqlite.org/download.html) bundle that works for your needs. There are both _source code_ and _pre-compiled binary_ releases. If you use the _source code_ release you can simply drop __sqlite.h__ and __sqlite.c__ into your source tree and use __include__ to bring in __SQLite__. If you use _pre-compiled binaries_ you will need to add this as part of your _library search paths_.
+
+### Creating a database
+There are a few ways to create a new __SQLite__ database. 
+
+#### Shipping a default database
+If you download the [__SQLite CLI__](https://sqlite.org/cli.html) you can use the command-line to interact with __SQLite__ and all of it's functionality. If you choose this approach you will need to ship your database with you game as you are not creating it in code. This method allows you to use less _SQL code_ up front, making your coding a bit less. However, you will still need to use _SQL code_ when your game needs to interact with the database.
+
+#### Programatically creating a database
+If you don't wish to ship a default/pre-populated database you can always create a new database on the first launch of the game and then check if the database exists on each subsequent launch. This approach means more code. We will cover this approach in the next sections.
+
+### Working with SQLite programatically
+There are several working pieces that are needed to interact with any database, not just __SQlite__. Let's take a look at what they are:
+
+  > __a connection to the database:__ You can either maintain a persistent database connection while you game is running or open and close the connection as needed. If you maintain a persistent database connection, if the dataase connection gets lost you will need to handle these type of error and re-connect (this is unlikely with __SQLite__). If you open and close as needed you always have a connection but if multiple parts of your game are doing this at the same time you may experience locking issues or database corruption.
+  
+  > __a database to work with:__ either ship one with your game or create one programatically on the first launch. In either case you will need to have a database to work with.
+
+  > __populating the database with default values:__ either shipping a pre-populated database with your game or creating the default values on first launch.
+
+  > __checking values from the database:__ reading data from the database to make decisions in your game.
+
+  > __updating the database as values change:__ as values change, storing them for fuure use (as your game dictates)
+
+  > __closing the database connection when it is not in use:__ 
+
+#### 
+
