@@ -470,5 +470,9 @@ std::string("Master") +
 std::string(" VALUES ('15')");
 ```
 
-
 #### Closing the database connection
+While it isn't totally necessary to close a __SQLite__ database, it is a good idea to play it safe and do so. Database corruption is possible if you don't. Consider closing the database where it makes sense in your code, possible on game exit.
+
+```cpp
+sqlite3_close();
+```
