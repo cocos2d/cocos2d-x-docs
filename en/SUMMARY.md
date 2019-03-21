@@ -121,7 +121,7 @@
 
 -  [Tutorials](tutorials/index.md)
     -  [Storing Game Data](tutorials/storing-game-data/index.md)
-    -  [All About Sprites](tutorials/all-about-sprites/index.md)
+    -  [You're On Camera](tutorials/youre-on-camera/index.md)
 
 -  [FAQ of Solutions](faq/index.md)
     -  [FAQ](faq/index.md)
