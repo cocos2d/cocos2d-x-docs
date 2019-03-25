@@ -1,6 +1,6 @@
 # Developer Interview with AntiSocial Games
 
-![]()
+![](logo.jpg)
 
 ### Tell everyone a bit about yourself and team.
 My name is __Stein Ove Helset__ and together with __Camilla Frøland__, we run __AntiSocial Games__. We’re a Norwegian couple currently living in Malaga, Spain.
