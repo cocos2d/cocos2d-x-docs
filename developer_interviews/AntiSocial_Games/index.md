@@ -39,7 +39,7 @@ Yes, Camilla did all of the art in the game. To create them she used Adobe Photo
 ### Did you create the music yourself? What tools?
 No, we did not create the music our self. The music is made by Eric Matyas (https://soundimage.org).
 
-###. Will you continue to make games in the future?
+### Will you continue to make games in the future?
 Definitely! Making games are so much fun. 
 
 We are going to keep doing our 12 games in 12 months challenge and hopefully, our games will be played and loved by a lot of people.
