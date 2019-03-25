@@ -54,7 +54,7 @@ Try to build a little bit on your game every day. Projects shouldn’t have too 
 
 ----
 
-You can play __Scolors__ on both the [__App Store__](https://itunes.apple.com/us/app/scolors/id1451650715) and [__Play Store__](https://play.google.com/store/apps/details?id=games.antisocial.scolors). You can also view the [__game play trailer__](https://youtu.be/vdwJYh7TlpA). 
+You can play __Scolors__ on both the [__App Store__](https://itunes.apple.com/us/app/scolors/id1451650715) and [__Play Store__](https://play.google.com/store/apps/details?id=games.antisocial.scolors). You can also view the [__game play trailer__](https://youtu.be/htogjLvqwGc). 
 
 ![](1.png)
 ![](2.png)
