@@ -1,6 +1,6 @@
 # Developer Interview with AntiSocial Games
 
-![]()
+![](logo.jpg)
 
 ### Tell everyone a bit about yourself and team.
 My name is __Stein Ove Helset__ and together with __Camilla Frøland__, we run __AntiSocial Games__. We’re a Norwegian couple currently living in Malaga, Spain.
@@ -39,7 +39,7 @@ Yes, Camilla did all of the art in the game. To create them she used Adobe Photo
 ### Did you create the music yourself? What tools?
 No, we did not create the music our self. The music is made by Eric Matyas (https://soundimage.org).
 
-###. Will you continue to make games in the future?
+### Will you continue to make games in the future?
 Definitely! Making games are so much fun. 
 
 We are going to keep doing our 12 games in 12 months challenge and hopefully, our games will be played and loved by a lot of people.
@@ -54,7 +54,7 @@ Try to build a little bit on your game every day. Projects shouldn’t have too 
 
 ----
 
-You can play __Scolors__ on both the [__App Store__](https://itunes.apple.com/us/app/scolors/id1451650715) and [__Play Store__](https://play.google.com/store/apps/details?id=games.antisocial.scolors). You can also view the [__game play trailer__](https://youtu.be/vdwJYh7TlpA). 
+You can play __Scolors__ on both the [__App Store__](https://itunes.apple.com/us/app/scolors/id1451650715) and [__Play Store__](https://play.google.com/store/apps/details?id=games.antisocial.scolors). You can also view the [__game play trailer__](https://youtu.be/htogjLvqwGc). 
 
 ![](1.png)
 ![](2.png)
