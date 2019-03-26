@@ -1,6 +1,6 @@
 # Developer Interview with the Super Mega Space Game! Dev Team
 
-![](smsg_logo_design)
+![](smsg_logo_design.png)
 
 ### Tell everyone a bit about yourself and team.
 Hi! My name is __Martin__. Our team consists of 3 people.
