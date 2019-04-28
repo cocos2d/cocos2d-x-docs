@@ -42,15 +42,15 @@ rm -rf cocos2d-x/
 
 git stash
 
-echo "-----------------------"
+echo "***********************"
 echo "Cocos Creator Manual..."
-echo "-----------------------"
+echo "***********************"
 ## pull latest from github
 echo "Cocos Creator -- preparing to build documentation..."
 cd ../creator-docs
 rm -rf node_modules/
 
-## pulling legacy version
+## pulling v1.9
 echo "--------------------------------"
 echo "Cocos Creator -- pulling v1.9..."
 echo "--------------------------------"
@@ -77,12 +77,12 @@ echo "---------------------------------"
 echo "Cocos Creator -- v1.9 done"
 echo "---------------------------------"
 
-## pulling previous version
-echo "---------------------------------"
+## pulling v1.10
+echo "--------------------------------"
 echo "Cocos Creator -- pulling v1.10..."
-echo "---------------------------------"
-git checkout master
-git pull origin master
+echo "--------------------------------"
+git checkout v1.10
+git pull origin v1.10
 cp -rf config/cocos2d-x.org/. ./
 echo "Cocos Creator -- building GitBook docs...."
 echo "If this is your first time build this repo, please stop this process and run:"
@@ -101,15 +101,15 @@ rsync --recursive manual ../documentation/creator/1.10
 rm -rf manual/
 git stash
 echo "---------------------------------"
-echo "Cocos Creator - v1.10 done"
+echo "Cocos Creator -- v1.10 done"
 echo "---------------------------------"
 
 ## pulling 2.0.x version
 echo "---------------------------------"
 echo "Cocos Creator -- pulling v2.0.x.."
 echo "---------------------------------"
-git checkout next
-git pull origin next
+git checkout v2.0
+git pull origin v2.0
 cp -rf config/cocos2d-x.org/. ./
 echo "Cocos Creator -- building GitBook docs...."
 echo "If this is your first time build this repo, please stop this process and run:"
@@ -124,7 +124,8 @@ npm run build
 echo "Cocos Creator -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ manual/
-rsync --recursive manual ../documentation/creator
+rsync --recursive manual ../documentation/creator/2.0
+rsync --recursive manual ../documentation/creator/
 rm -rf manual/
 git stash
 echo "---------------------------------"
@@ -158,9 +159,37 @@ echo "---------------------------------"
 echo "Cocos Creator - v2.1 done"
 echo "---------------------------------"
 
-echo "------------------------"
+## pulling 2.20 version
+echo "---------------------------------"
+echo "Cocos Creator -- pulling v2.2...."
+echo "---------------------------------"
+git checkout v2.2
+git pull origin v2.2
+cp -rf config/cocos2d-x.org/. ./
+echo "Cocos Creator -- building GitBook docs...."
+echo "If this is your first time build this repo, please stop this process and run:"
+echo "npm install gulp -g"
+echo "npm install"
+echo "DO NOT COMMIT: package-lock.json"
+sudo npm install gulp -g
+sudo npm install
+echo "Cocos Creator -- ensuring GitBook is up to date..."
+gitbook install
+npm run build
+echo "Cocos Creator -- copy everything to deployment directory..."
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
+mv _book/ manual/
+rsync --recursive manual ../documentation/creator/2.2
+rm -rf manual/
+git stash
+echo "---------------------------------"
+echo "Cocos Creator - v2.2 done"
+echo "---------------------------------"
+
+
+echo "************************"
 echo "Cocos Creator API-Ref..."
-echo "------------------------"
+echo "************************"
 ## pull latest from github
 echo "Cocos Creator API -- preparing to build documentation..."
 cd ../creator-api-docs
@@ -182,11 +211,6 @@ mv _book/ v1.9/
 rsync --recursive v1.9 ../documentation/api-ref/creator
 mv v1.9/ api/
 rsync --recursive api ../documentation/creator/1.9
-
-
-#rm -rf ../documentation/api-ref/creator/v1.9/
-#mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
-
 rm -rf api/
 git stash
 echo "---------------------------------"
@@ -196,8 +220,8 @@ echo "---------------------------------"
 echo "---------------------------------"
 echo "Cocos Creator API - v1.10..."
 echo "---------------------------------"
-git checkout master
-git pull origin master
+git checkout v1.10
+git pull origin v1.10
 cp -rf config/cocos2d-x.org/. ./
 echo "Cocos Creator API -- ensuring GitBook is up to date..."
 gitbook install
@@ -209,11 +233,6 @@ mv _book/ v1.10/
 rsync --recursive v1.10 ../documentation/api-ref/creator
 mv v1.10/ api/
 rsync --recursive api ../documentation/creator/1.10
-
-
-#rm -rf ../documentation/api-ref/creator/v1.9/
-#mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
-
 rm -rf api/
 git stash
 echo "---------------------------------"
@@ -234,12 +253,9 @@ echo "Cocos Creator API -- copy everything to deployment directory..."
 cp ../cocos2d-x-docs/redirect.html.en _book/index.html
 mv _book/ api/
 rsync --recursive api ../documentation/creator/
+rsync --recursive api ../documentation/creator/2.0/
 mv api/ v2.0/
 rsync --recursive v2.0 ../documentation/api-ref/creator
-
-#rm -rf ../documentation/api-ref/creator/v1.9/
-#mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
-
 rm -rf v2.0/
 git stash
 echo "---------------------------------"
@@ -262,10 +278,6 @@ mv _book/ v2.1/
 rsync --recursive v2.1 ../documentation/api-ref/creator
 mv v2.1/ api/
 rsync --recursive api ../documentation/creator/2.1
-
-#rm -rf ../documentation/api-ref/creator/v1.9/
-#mv ../documentation/api-ref/creator/api/ ../documentation/api-ref/creator/v1.9/
-
 rm -rf api/
 git stash
 echo "---------------------------------"
