@@ -5,6 +5,8 @@
 # on production this script should be run as:
 # (cd /data/home/docops/cocos2d-x-docs && exec /data/home/docops/cocos2d-x-docs/deploy_cron.sh)
 
+mkdir -p ../documentation/creator
+
 echo "-----------------"
 echo "Cocos2d-x-docs..."
 echo "-----------------"
