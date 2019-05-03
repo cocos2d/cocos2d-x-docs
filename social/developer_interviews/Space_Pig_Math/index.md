@@ -21,10 +21,14 @@ I've had many ideas for many games that I've wanted to make, for ages and ages. 
 I realized some time ago that if I ever want to see any of them come to light, I had to PICK ONE!
 
 Even though there are already many times tables games and apps out there, I chose to do this because:
-  * I saw a need for something better - something that would both do a better job of helping kids build their own understanding of what times tables are, and be genuinely fun and compelling, so they'd actually want to play it!
-  * As noted above, I love code, art, and design and I love the fulfillment of getting to do all three.  Those things have to be aligned in any game, for it to be great, and it's easiest for this alignment to happen if all the design discussions, and art reviews, and code architecture discussions, are happening in your head! LOL!  At the same time, this was an enormous challenge, because literally nothing gets done if you don't do it.
-  * I had to choose something with a small enough scope that it was actually possible for me to do on the side, alone.
-  * My employer (Activision) allows side projects.  You fill out a conflict-of-interest form, and they review it - in my case they determined that an educational app on tablets for kids to practice their times tables would not impact Call of Duty too heavily :)
+
+  - I saw a need for something better - something that would both do a better job of helping kids build their own understanding of what times tables are, and be genuinely fun and compelling, so they'd actually want to play it!
+
+  - As noted above, I love code, art, and design and I love the fulfillment of getting to do all three.  Those things have to be aligned in any game, for it to be great, and it's easiest for this alignment to happen if all the design discussions, and art reviews, and code architecture discussions, are happening in your head! LOL!  At the same time, this was an enormous challenge, because literally nothing gets done if you don't do it.
+
+  - I had to choose something with a small enough scope that it was actually possible for me to do on the side, alone.
+
+  - My employer (Activision) allows side projects.  You fill out a conflict-of-interest form, and they review it - in my case they determined that an educational app on tablets for kids to practice their times tables would not impact Call of Duty too heavily :)
 
 I know a lot of inspiration came from my childhood - both arcade, and the first generation of home consoles.  The one we had was the Intellivision, and my favourite game was Astrosmash.  Anyone who's played Astrosmash, and tries Space Pig Math, will see that inspiration (and the tributes).  Also, I loved the classic arcade games - I was never very good at them, and didn't even get to play all that often.  Sometimes my mom would give me a few quarters when we were at the mall, and there was an Asteroids or a Pac-Man machine outside K-Mart, and I'd try and play, and each game would last less than 60 seconds (total) - and I'd be really bummed out - but I still loved the aesthetic - both visual and audio - and I loved the idea of how much fun these could be, if I was actually good at them... LOL!
 
@@ -135,8 +139,10 @@ Another thing: DON'T SETTLE.
 i.e. don't compromise your vision.  Don't ship something that you know deep down is not good enough, or is not what you wanted.  Another dichotomy here: that doesn't mean it's done when you ship v1.0.  I have a TODO list pages and pages long, of improvements and updates to make to Space Pig Math, but I realized, if I was ever going to ship at all, I had to be very judicious in deciding what are the most important things that MUST be in v1.0.  I'm sure you've heard the term minimum viable product - I'm not a big fan, to be honest.  I feel like people emphasize the minimum part, and don't focus enough on the viable.  Space Pig Math v1.0 was going to be a complete, compelling, fun experience.
 
 At a practical level, there are two main issues:
-finding the time
-using that time efficiently
+
+  * finding the time
+
+  * using that time efficiently
 
 ------------------------------
 Finding the time:
@@ -167,7 +173,7 @@ Another favourite playlist is one song: Orion, by Metallica.
 
 
 ------------------------------
-Space Pig Math - very brief development history:
+#### Space Pig Math - very brief development history:
 
 This game took 6 years to develop.
 
@@ -206,10 +212,13 @@ I pounded my head against the wall for what seemed like ages, trying to figure o
 
 All the details of the design iterations that happened would take a document longer than this entire interview - so that has to wait until another time - but the following is an important insight.  There wasn't a single moment where this happened, but over the course of several weeks, I realized something.  Imagine the following four categories of activities:
 
-1. an activity that requires no thinking, and no skill; eg. simple match-three game.
-2. an activity that requires some thinking, but no skill; eg. puzzle game, with no time pressure.
-3. an activity that requires no thinking, but some skill; eg. simple arcade games.
-4. an activity that requires both thinking, and skill: the current version of Space Pig Math!
+  1. an activity that requires no thinking, and no skill; eg. simple match-three game.
+
+  2. an activity that requires some thinking, but no skill; eg. puzzle game, with no time pressure.
+
+  3. an activity that requires no thinking, but some skill; eg. simple arcade games.
+
+  4. an activity that requires both thinking, and skill: the current version of Space Pig Math!
 
 No wonder kids didn't play for long!  For a kid learning their times tables, my game was constant mental effort and stress!
 
@@ -226,22 +235,24 @@ On March 8, 2019, the status of my game was "Ready for Sale", world-wide, on the
 I am now in a whole new world of learning how to market and promote it.  A good topic for another time :)
 
 In addition to "Think and Grow Rich", there were a number of other books and sources of inspiration, a few of which I have to mention here:
-a little book called "The Greatest Salesman In The World", by Og Mandino.  I still listen to a little bit of the audiobook every morning while driving to work - a habit I expect to continue for the rest of my life.
-"Extreme Ownership - How Navy Seals Lead and Win", by Jocko Willink and Leif Babin, along with the podcast of one of the authors: jockopodcast. Jocko's mantra is: "Discipline Equals Freedom". He posts a picture of his watch on twitter everyday, at 4:30am (or earlier), when he gets up to work out. Countless mornings on my days off, I'd also be up nearly that early - this discipline was fundamental in shipping the game.
-"The One Thing", by Gary Keller and Jay Papasan.  One of the best quotes I've ever read is on the inside cover:  "If you chase two rabbits... you will not catch either one." -Russian Proverb
-"The War of Art", by Steven Pressfield - just read it!
-the movie "La La Land".  I found the story of the filmmaker's passion behind the creation of the movie at least as inspiring as the fictional main characters.  Also, while I will forever regard Metallica and AC/DC as the greatest music ever created, there is something about this soundtrack that has me completely enthralled, to this day.
 
-This list could go on and on, and get even more eclectic... :)
-See the in-game credits for more details.
+  * a little book called "The Greatest Salesman In The World", by Og Mandino.  I still listen to a little bit of the audiobook every morning while driving to work - a habit I expect to continue for the rest of my life.
+
+  * "Extreme Ownership - How Navy Seals Lead and Win", by Jocko Willink and Leif Babin, along with the podcast of one of the authors: jockopodcast. Jocko's mantra is: "Discipline Equals Freedom". He posts a picture of his watch on twitter everyday, at 4:30am (or earlier), when he gets up to work out. Countless mornings on my days off, I'd also be up nearly that early - this discipline was fundamental in shipping the game.
+
+  * "The One Thing", by Gary Keller and Jay Papasan.  One of the best quotes I've ever read is on the inside cover:  "If you chase two rabbits... you will not catch either one." -Russian Proverb
+
+  * "The War of Art", by Steven Pressfield - just read it!
+
+  * the movie "La La Land".  I found the story of the filmmaker's passion behind the creation of the movie at least as inspiring as the fictional main characters.  Also, while I will forever regard Metallica and AC/DC as the greatest music ever created, there is something about this soundtrack that has me completely enthralled, to this day.
+
+This list could go on and on, and get even more eclectic... :) See the in-game credits for more details.
 
 To end, I'd just like to share a recent review on the App Store.  Sometimes it's still hard for me to believe I've shipped, and like I said, I still have a long way to go in promotion, but feedback like this really warms my heart:
 
-04/25/2019
-This game is special
-
-My students LOVE this game, and the more I play it, the more I do also. It is a very well designed math app, with multiple games-within-the-game. Explore it a little bit and you’ll see what I mean.
-
+ > 04/25/2019
+ > This game is special! 
+ > My students LOVE this game, and the more I play it, the more I do also. It is a very well designed math app, with multiple games-within-the-game. Explore it a little bit and you’ll see what I mean.
 
 Thanks for reading.
 
