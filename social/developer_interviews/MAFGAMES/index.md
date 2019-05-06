@@ -3,23 +3,23 @@
 <!--![](logo.png)-->
 
 ### Tell everyone a bit about yourself and team.
-Hi. I’m San Heo in MAFGAMES. We are Korean company. We making fun games with the cocos engine.
+Hi. I’m __San Heo__ at __MAFGAMES__. We are Korean company. We making fun games with the __Cocos engine__.
 
 ### When did you start using Cocos Creator?
-Last December. We heard Cocos Creator can make Facebook Instant Games.
+Last December. We heard __Cocos Creator__ can make __Facebook Instant Games__.
 
 ### Which version of Cocos Creator did you start with?
 Version 2.x
 
 ### Do you develop your games using Cocos Creator? HTML5 or Native?
-Creator : new project.. puzzle + sng
-Cocos2d-x : We have two games. 
+__Creator__: new project..a puzzle + sng
+__Cocos2d-x__: we have two games. 
 
 ### Do you use JavaScript or Typescript?
-Yes, We use Typescript.
+Yes, we use Typescript.
 
 ### If you are developing HTML5 games, where do you release your games and how is the income?
-For Facebook Instant Games.  $1~2 / Day.  So we stopped making html5 game for a while.
+For __Facebook Instant Games__.  $1~2 / Day.  So we stopped making HTML5 game for a while.
 
 ### Do you have any difficulties using Cocos Creator?
 About in game. No. It is good for us. But 3rd party library is still not enough.
@@ -34,7 +34,7 @@ codeless, fast (for developing), GUI
 Not yet. Please let me know.
 
 ### Would you be willing to help promote Cocos Creator? Why or why not?
-Yes. Because I want more developers using Cocos Creator.
+Yes, because I want more developers using Cocos Creator.
 		
 ### Lastly, do you have any advice for either the Cocos Creator development team or those using Cocos Creator to make their games?
 For starters: 
