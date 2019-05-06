@@ -78,8 +78,7 @@ Visual Studio 2012 Professional.  I'm still on 2012 because I had to purchase my
 
 Windows 10 came out while I was working on this, and I know it's a far better operating system - but... I made the disciplined decision to stick with Windows 8, because, like I said above, every minute is precious; I currently had a stable, working environment.  I could take a few hours away from development time, and update to Windows 10, and then, if all went perfectly well, I would still have a stable working environment - so at the time, it was simply not worth the hours and the risk.
 
-Xcode - whatever version I was continuously required to update to.  Current one is 10.1.
-All also used Instruments a bit for debugging and profiling.
+Xcode - whatever version I was continuously required to update to.  Current one is 10.1. All also used Instruments a bit for debugging and profiling.
 
 ### What 3rd party libraries did you need to use? 
 fmod.org for sound engine.
@@ -144,8 +143,7 @@ At a practical level, there are two main issues:
 
   * using that time efficiently
 
-------------------------------
-Finding the time:
+#### Finding the time:
 
 You have to figure what works for you, and the other people in your life.  If you are single, you likely have a lot more flexibility with your time.  If you have a family, other people are much more directly impacted by your choice of how you spend your time.  I'm not saying this would be a cake walk if you're single - you have other stresses and factors to deal with; I'm just describing my experience.
 
@@ -153,9 +151,7 @@ I have a family - thus, this was a constant balancing act.  Sometimes I worked l
 
 Another point: this is a marathon, not a sprint.  You can't tell your family, "just pretend I'm not here for a few months, and then I'll be done, and everything will be great".  You've gotta find a solution that will work when the time is measured in years.    
 
-
-------------------------------
-Using the time:
+#### Using the time:
 
 In two words: Prioritize Ruthlessly.
 There are always dozens of things you could choose to work on.  You have to be very disciplined in choosing what is really the most important thing you need to do to move things forward.  What do you need to test, or prove to yourself, or answer?  At the same time, there is a balance to achieve here - you need to find things to keep you energized, and sometimes you just have to do something fun, or satisfying, even if it's not complex, or "urgent".  For example, I often loved getting some UI element to look just right, or tweaking a font size, or adjusting the amount of glow on something, or just finding and mixing the perfect sound fx.
@@ -168,8 +164,7 @@ One other point re. time: some of the hardest times working on the game were whe
 
 Interesting aside: it seemed that the harder I worked on my side-project, the better I did in my "day job".  I suspect this is likely due to the constant practice in prioritizing and executing on the most important things.
 
-Another tidbit: do everything you can to make your environment conducive to your productivity.  A family friend who loved woodworking made me a standing desk out of an old shipping crate - this was a wonderful gift!  It was bad for me physically to sit too long; so now I switch frequently between sitting and standing.  I also make sure there's lots of fresh air when I'm working, even if that means wearing a hoodie the whole time.  I also often listen to white noise, or just something else in the background, to block out other sounds that might be distracting.  I have a few extremely short playlists, that I'll listen to on infinite loop - for example, while writing this, I've been listening to Judas Priest: Heavy Duty & Defenders of the Faith, for a few hours :)
-Another favourite playlist is one song: Orion, by Metallica. 
+Another tidbit: do everything you can to make your environment conducive to your productivity.  A family friend who loved woodworking made me a standing desk out of an old shipping crate - this was a wonderful gift!  It was bad for me physically to sit too long; so now I switch frequently between sitting and standing.  I also make sure there's lots of fresh air when I'm working, even if that means wearing a hoodie the whole time.  I also often listen to white noise, or just something else in the background, to block out other sounds that might be distracting.  I have a few extremely short playlists, that I'll listen to on infinite loop - for example, while writing this, I've been listening to Judas Priest: Heavy Duty & Defenders of the Faith, for a few hours :) Another favourite playlist is one song: Orion, by Metallica. 
 
 
 ------------------------------
@@ -181,8 +176,7 @@ I started tinkering around with ideas in 2013.  Most of 2013 and 2014 were full 
 
 Jumping ahead to December 8th, 2015, a book I had ordered on Amazon arrived: "Think and Grow Rich", by Napoleon Hill.  This book was core to the achievement of shipping this game.  It's a classic text, published in 1937. It is only superficially about making money. It's more about aligning your mind, and your subconscious, and your whole life, with whatever it is you want to achieve. Some of the language is dated, but the content is sound.
 
-As per instructions in the book, I wrote down my goal (with a Sharpie!) in a journal, with a target date - I would ship the game by December 8th, 2016 - one year to the date from when I got my book; seemed poetic :)
-An aside: my goal actually took several pages in the journal, because I went into detail about what exactly I was going to deliver, including that:
+As per instructions in the book, I wrote down my goal (with a Sharpie!) in a journal, with a target date - I would ship the game by December 8th, 2016 - one year to the date from when I got my book; seemed poetic :) An aside: my goal actually took several pages in the journal, because I went into detail about what exactly I was going to deliver, including that:
 
 "Kids will enjoy playing it, and will want to keep playing it because they're having so much fun.  They will choose to play it.  They'll be getting better at their times tables without even noticing it.
 
