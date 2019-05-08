@@ -1,7 +1,5 @@
 # Developer Interview with San Heo of MAFGames
 
-<!--![](logo.png)-->
-
 ### Tell everyone a bit about yourself and team.
 Hi. I’m __San Heo__ at __MAFGAMES__. We are Korean company. We making fun games with the __Cocos engine__.
 
@@ -43,5 +41,8 @@ For starters:
 	 
 ----
 [__App Store__](https://itunes.apple.com/app/id987072755)
-[__Play Store__]()
 [__YouTube video__](https://youtu.be/rGkNFf-1Lw4)
+
+![](viking1.png)
+![](viking2.png)
+![](viking3.png)
