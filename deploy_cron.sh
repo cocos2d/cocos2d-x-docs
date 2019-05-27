@@ -188,33 +188,6 @@ echo "---------------------------------"
 echo "Cocos Creator - v2.2 done"
 echo "---------------------------------"
 
-## pulling 2.20 version
-echo "---------------------------------"
-echo "Cocos Creator -- pulling v2.2...."
-echo "---------------------------------"
-git checkout v2.2
-git pull origin v2.2
-cp -rf config/cocos2d-x.org/. ./
-echo "Cocos Creator -- building GitBook docs...."
-echo "If this is your first time build this repo, please stop this process and run:"
-echo "npm install gulp -g"
-echo "npm install"
-echo "DO NOT COMMIT: package-lock.json"
-sudo npm install gulp -g
-sudo npm install
-echo "Cocos Creator -- ensuring GitBook is up to date..."
-gitbook install
-npm run build
-echo "Cocos Creator -- copy everything to deployment directory..."
-cp ../cocos2d-x-docs/redirect.html.en _book/index.html
-mv _book/ manual/
-rsync --recursive manual ../documentation/creator/2.2
-rm -rf manual/
-git stash
-echo "---------------------------------"
-echo "Cocos Creator - v2.2 done"
-echo "---------------------------------"
-
 
 echo "************************"
 echo "Cocos Creator API-Ref..."
