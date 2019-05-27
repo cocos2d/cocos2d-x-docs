@@ -161,6 +161,33 @@ echo "---------------------------------"
 echo "Cocos Creator - v2.1 done"
 echo "---------------------------------"
 
+## pulling 2.2 version
+echo "---------------------------------"
+echo "Cocos Creator -- pulling v2.2...."
+echo "---------------------------------"
+git checkout v2.2
+git pull origin v2.2
+cp -rf config/cocos2d-x.org/. ./
+echo "Cocos Creator -- building GitBook docs...."
+echo "If this is your first time build this repo, please stop this process and run:"
+echo "npm install gulp -g"
+echo "npm install"
+echo "DO NOT COMMIT: package-lock.json"
+sudo npm install gulp -g
+sudo npm install
+echo "Cocos Creator -- ensuring GitBook is up to date..."
+gitbook install
+npm run build
+echo "Cocos Creator -- copy everything to deployment directory..."
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
+mv _book/ manual/
+rsync --recursive manual ../documentation/creator/2.2
+rm -rf manual/
+git stash
+echo "---------------------------------"
+echo "Cocos Creator - v2.2 done"
+echo "---------------------------------"
+
 ## pulling 2.20 version
 echo "---------------------------------"
 echo "Cocos Creator -- pulling v2.2...."
@@ -284,6 +311,28 @@ rm -rf api/
 git stash
 echo "---------------------------------"
 echo "Cocos Creator API - v2.1 done"
+echo "---------------------------------"
+
+echo "---------------------------------"
+echo "Cocos Creator API - v2.2..."
+echo "---------------------------------"
+git checkout v2.2
+git pull origin v2.2
+cp -rf config/cocos2d-x.org/. ./
+echo "Cocos Creator API -- ensuring GitBook is up to date..."
+gitbook install
+echo "Cocos Creator API -- building GitBook docs...."
+gitbook build
+echo "Cocos Creator API -- copy everything to deployment directory..."
+cp ../cocos2d-x-docs/redirect.html.en _book/index.html
+mv _book/ v2.2/
+rsync --recursive v2.2 ../documentation/api-ref/creator
+mv v2.2/ api/
+rsync --recursive api ../documentation/creator/2.2
+rm -rf api/
+git stash
+echo "---------------------------------"
+echo "Cocos Creator API - v2.2 done"
 echo "---------------------------------"
 
 cd ..
