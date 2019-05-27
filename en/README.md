@@ -1,1 +1,1 @@
-# Cocos2d-x README
+# Cocos2d-x-docs README

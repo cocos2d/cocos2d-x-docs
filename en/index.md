@@ -1,9 +1,9 @@
 # Cocos2d-x Docs
 
-## Q1 2019 revision 5
+## Q2 2019 r.1
 =======
 
-__Authors:__ SlackMoehrle, Minggo, Walzer, Jare, Chengzhe.
+__Authors:__ SlackMoehrle, Minggo, Walzer, Jare
 
 __Special Thanks:__ To our users! Without you there is no reason to even write this guide.
 
