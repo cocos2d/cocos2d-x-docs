@@ -94,8 +94,8 @@ else
     echo "npm install gulp -g"
     echo "npm install"
     echo "DO NOT COMMIT: package-lock.json"
-    sudo npm install gulp -g
-    sudo npm install
+    npm install gulp -g
+    npm install
     echo "Cocos Creator v1.9 -- ensuring GitBook is up to date..."
     gitbook install
     npm run build
@@ -127,8 +127,8 @@ else
     echo "npm install gulp -g"
     echo "npm install"
     echo "DO NOT COMMIT: package-lock.json"
-    sudo npm install gulp -g
-    sudo npm install
+    npm install gulp -g
+    npm install
     echo "Cocos Creator v1.10 -- ensuring GitBook is up to date..."
     gitbook install
     npm run build
@@ -159,8 +159,8 @@ else
     echo "npm install gulp -g"
     echo "npm install"
     echo "DO NOT COMMIT: package-lock.json"
-    sudo npm install gulp -g
-    sudo npm install
+    npm install gulp -g
+    npm install
     echo "Cocos Creator v2.x -- ensuring GitBook is up to date..."
     gitbook install
     npm run build
@@ -192,8 +192,8 @@ else
     echo "npm install gulp -g"
     echo "npm install"
     echo "DO NOT COMMIT: package-lock.json"
-    sudo npm install gulp -g
-    sudo npm install
+    npm install gulp -g
+    npm install
     echo "Cocos Creator v2.1.x -- ensuring GitBook is up to date..."
     gitbook install
     npm run build
@@ -224,8 +224,8 @@ else
     echo "npm install gulp -g"
     echo "npm install"
     echo "DO NOT COMMIT: package-lock.json"
-    sudo npm install gulp -g
-    sudo npm install
+    npm install gulp -g
+    npm install
     echo "Cocos Creator v2.2.x -- ensuring GitBook is up to date..."
     gitbook install
     npm run build
