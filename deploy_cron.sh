@@ -2,7 +2,7 @@
 
 # This script builds: Cocos2d-x-docs, Cocos Creator Manual, Cocos Creator API-Ref.
 
-function convert_to_integer {
+convert_to_integer() {
  echo "$@" | awk -F "." '{ printf("%03d%03d%03d\n", $1,$2,$3); }';
 }
 
