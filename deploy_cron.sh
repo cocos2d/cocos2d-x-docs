@@ -38,11 +38,11 @@ echo "Cocos2d-x Docs -- pulling latest from GitHub..."
 echo "***********************************************"
 git checkout master
 
-if (git pull origin master | grep -q "$git_string"); then
-    echo "*** Cocos2d-x skipped, GitHub repo up to date... ***"
-else
+#if (git pull origin master | grep -q "$git_string"); then
+#    echo "*** Cocos2d-x skipped, GitHub repo up to date... ***"
+#else
     echo "Building Cocos2d-x docs..."
-    #git pull origin master
+    git pull origin master
     cp -rf config/cocos2d-x.org/. ./
 
     ## make sure gitbook is up to date
@@ -68,7 +68,7 @@ else
     rm -rf cocos2d-x/
 
     git stash
-fi
+#fi
 
 echo "************************"
 echo "Cocos Creator Manuals..."
