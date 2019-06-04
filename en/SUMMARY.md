@@ -120,8 +120,9 @@
     - [Creator to Cocos2d-x](editors_and_tools/creator_to_cocos2dx.md)
 
 -  [Tutorials](tutorials/index.md)
-    -  [Storing Game Data](tutorials/storing-game-data/index.md)
-    -  [You're On Camera](tutorials/youre-on-camera/index.md)
+    - [Storing Game Data](tutorials/storing-game-data/index.md)
+    - [You're On Camera](tutorials/youre-on-camera/index.md)
+    - [Dr. Mario in Cocos Creator](tutorials/dr-mario-style-game.md)
 
 -  [FAQ of Solutions](faq/index.md)
     -  [FAQ](faq/index.md)
