@@ -35,7 +35,7 @@ __popScene()__ - This scene will replace the running one. The running scene will
 be deleted. Only call this if there is a running scene.
 
 ```cpp
-Director::getInstance()->popScene(myScene);
+Director::getInstance()->popScene();
 ```
 
 ### Transition Scenes with effects
