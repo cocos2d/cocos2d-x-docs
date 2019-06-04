@@ -31,7 +31,7 @@ Director::getInstance()->pushScene(myScene);
 __`popScene()`__ 释放当前场景，再从场景栈中弹出栈顶的场景，并将其设置为当前运行场景。如果栈为空，直接结束应用。
 
 ```cpp
-Director::getInstance()->popScene(myScene);
+Director::getInstance()->popScene();
 ```
 
 ## 场景切换的效果设置
