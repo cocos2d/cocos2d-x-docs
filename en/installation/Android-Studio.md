@@ -10,7 +10,11 @@
 
 * launch __Android Studio__. This may take quite some time as additional downloads and setup steps are completed. These steps are necessary for Studio to run properly.
 
-* after the previous step is complete, it is necessary install the SDK and build tools. __SDK Manager__ is located in the __Tools__ menu, __Android__, then select __SDK Manager__. The Window looks like this:
+* after the previous step is complete, it is necessary install the SDK and build tools. __SDK Manager__ is located in: __Tools__ --> __Android__ --> __SDK Manager__. It is also possible to access the __SDK Manager__ without opening a project by selecting it from the dialog box __Android Studio__  presents at startup:
+
+    ![](Android-Studio-img/sdkmanager_at_startup.png "")
+
+  The __SDK Manager__ window looks like this:
 
     ![](Android-Studio-img/sdkmanager.png "")
 
@@ -21,10 +25,14 @@
     ![](Android-Studio-img/sdkmanager_2.png "")
 
 ## Compiling `cpp-tests`
-`cpp-tests` is a project you can run to get familiar with how to code using cocos2d-x. To run this project with __Android Studio__:
-* import the `cpp-tests` project from __cocos2d-x root/tests/cpp-tests/proj.android-studio__ in __Android Studio__. __Android Studio__ will do everything required. You can run `cpp-tests` by clicking on the __play__ button.
+`cpp-tests` is a project you can run to get familiar with how to code using Cocos2d-x. To run this project with __Android Studio__:
+* import the `cpp-tests` project from __cocos2d-x root/tests/cpp-tests/proj.android__ in __Android Studio__. __Android Studio__ will do everything required. You can run `cpp-tests` by clicking on the __Play__ button.
 
     ![](Android-Studio-img/build_cpp_tests.png "")
+
+  > note: __Android Studio__ is going to download many components. It may even throw errors that you just *click to fix*. These errors may include: __gradle__ version updates, installing missing build tools, agreeing to license agreements, etc.
+
+  ![](Android-Studio-img/quick_fix_install.png "")
 
 ## Starting a new project
 Starting a new project requires a few steps:
