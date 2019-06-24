@@ -95,8 +95,8 @@
 -  [Advanced Topics](advanced_topics/index.md)
     - [File System Access](advanced_topics/filesystem.md)
     - [Networking with HTTP](advanced_topics/networking.md)
-    - [Shaders and Materials](advanced_topics/shaders.md)
     - [Optimizing Graphics](advanced_topics/optimizing.md)
+    - [Shaders and Materials](advanced_topics/shaders.md)
     - [SQLite](advanced_topics/sqlite.md)
 
 -  [Software Installations](installation/index.md)
