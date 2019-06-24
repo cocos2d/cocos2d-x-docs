@@ -12,7 +12,7 @@
 
 场景图(Scene Graph)是一种安排场景内对象的数据结构，它把场景内所有的 __节点(Node)__ 都包含在一个 __树(tree)__ 上。(场景图虽然叫做"图"，但实际使用一个树结构来表示)。
 
-![](basic_concepts-img/tree.jpg "Simple Tree")
+![](../../en/basic_concepts/basic_concepts-img/tree.jpg "Simple Tree")
 
 听起来这好像很复杂，可能你会问，我为什么要关注这个技术细节，Cocos2d-x 值得我研究的这么深入吗？值得！这个对你真正了解渲染器是如何绘制场景的非常重要。
 
