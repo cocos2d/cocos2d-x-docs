@@ -1,5 +1,7 @@
 ## Optimizations for OPPO devices
 
+> Note: This document applies to __Cocos2d-x 3.17.2__ and later only.
+
 __Cocos2d-x__ has a few optimizations for __OPPO__ devices. These optimizations will only work on __OPPO__ devices. 
 
 ### OPPO API reference
