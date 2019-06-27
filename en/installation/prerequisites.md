@@ -3,15 +3,23 @@
 **Build Requirements**
 ------------------
 
+#### v3.17.2
+---
+* Mac OS X 10.13+, Xcode 10+
+* Ubuntu 16.04+, CMake 3.1+ (use __apt install__ to get the latest version)
+* Windows 7+, VS 2017+
+* Python 2.7.5+, __Python 2,7.10 reccomended__, __NOT Python 3+__
+* NDK r91c+ is required to build Android games (tested with r19c) __May be called **19.2.xx** from within Android Studio__
+* Android Studio 3.4+ to build Android games (tested with 3.0)
+
 #### v3.17, v3.17.1
 ---
-* Mac OS X 10.7+, Xcode 8+
-* Ubuntu 14.04+, CMake 3.1+
+* Mac OS X 10.13+, Xcode 10+
+* Ubuntu 16.04+, CMake 3.1+ (use __apt install__ to get the latest version)
 * Windows 7+, VS 2015+
-* Python 2.7.5+, __NOT Python 3+__
+* Python 2.7.5+, __Python 2,7.10 reccomended__, __NOT Python 3+__
 * NDK r16+ is required to build Android games (tested with r16)
 * Android Studio 3.0+ to build Android games (tested with 3.0)
-* JRE or JDK 1.6+ is required for web publishing
 
 #### v3.16
 ---

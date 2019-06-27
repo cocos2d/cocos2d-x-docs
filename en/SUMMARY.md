@@ -95,8 +95,9 @@
 -  [Advanced Topics](advanced_topics/index.md)
     - [File System Access](advanced_topics/filesystem.md)
     - [Networking with HTTP](advanced_topics/networking.md)
-    - [Shaders and Materials](advanced_topics/shaders.md)
+    - [OPPO Optimizations](advanced_topics/oppo.md)
     - [Optimizing Graphics](advanced_topics/optimizing.md)
+    - [Shaders and Materials](advanced_topics/shaders.md)
     - [SQLite](advanced_topics/sqlite.md)
 
 -  [Software Installations](installation/index.md)
@@ -120,8 +121,9 @@
     - [Creator to Cocos2d-x](editors_and_tools/creator_to_cocos2dx.md)
 
 -  [Tutorials](tutorials/index.md)
-    -  [Storing Game Data](tutorials/storing-game-data/index.md)
-    -  [You're On Camera](tutorials/youre-on-camera/index.md)
+    - [Storing Game Data](tutorials/storing-game-data/index.md)
+    - [You're On Camera](tutorials/youre-on-camera/index.md)
+    - [Dr. Mario in Cocos Creator](tutorials/dr-mario-style-game.md)
 
 -  [FAQ of Solutions](faq/index.md)
     -  [FAQ](faq/index.md)

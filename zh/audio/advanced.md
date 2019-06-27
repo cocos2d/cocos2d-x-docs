@@ -64,5 +64,7 @@ using namespace CocosDenshion;
 auto audio = SimpleAudioEngine::getInstance();
 
 // setting the volume specifying value as a float
-audio->setEffectsVolume(5.0f);
+// set default volume
+audio->setEffectsVolume(0.5);
+audio->setBackgroundMusicVolume(0.5);
 ```
