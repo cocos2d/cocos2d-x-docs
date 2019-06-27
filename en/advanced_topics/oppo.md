@@ -1,33 +1,54 @@
 ## Optimizations for OPPO devices
 
-> Note: This document applies to __Cocos2d-x 3.17.2__ and later only.
+ > Note: This document applies to __Cocos2d-x 3.17.2__ and later only.
+ __Cocos2d-x__ has a few optimizations for __OPPO__ devices. These optimizations will only work on __OPPO__ devices (specially Reno devices currently) . 
 
-__Cocos2d-x__ has a few optimizations for __OPPO__ devices. These optimizations will only work on __OPPO__ devices. 
+### What's optimized
+There are two places that are optimized:
 
-### OPPO API reference
-The __public__ API calls specific to __OPPO__ device are defined as:
+  * load a scene
+  * engine's internal shaders compiling
 
-```cpp
-class CC_DLL DataManager
-{
-public:
-    static void setProcessID(int pid);
-    static void setFrameSize(int width, int height);
-    static void onSceneLoaderBegin();
-    static void onSceneLoaderEnd();
-    static void onShaderLoaderBegin();
-    static void onShaderLoaderEnd();
-};
+Loading scene optimizations start when `Scene` is created, and ended in `Scene::onEnter()` and therefore you should create resources between them.
+
+### Invoke optimization codes manually
+The application knows where more power is needed, better than engine knows. You can invoke this API to get more power when needed. You can invoke the API in both C++ or Java.
+
+#### Example usage in C++
+
+```c++
+// Scene loading starts, need more power.
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    DataManager::onSceneLoaderBegin();
+#end if
+
+// Scene loading ends.
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    DataManager::onSceneLoaderEnd();
+#end if
+
+// Shader compiling begin, need more power.
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    DataManager::onShaderLoaderBegin();
+#end if
+
+// Shader compiling ends.
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    DataManager::onShaderLoaderEnd();
+#end if
 ```
->  __DataManager::setProcessID();__ - 
 
->  __DataManager::setFrameSize();__ - sets a buffer size of __width * height__.
+#### Example usage in Java:
 
->  __DataManager::onSceneLoaderBegin();__ - if called when a `Scene` is loaded, the OPPO device may provide more resources to the app. This depends upon the devices capabilities.
+```Java
+Cocos2dxDataManager::setOptimise(String thing, float value);
+```
 
->  __DataManager::onSceneLoaderEnd();__ - if called when a `Scene` is ending, the OPPO device may provide more resources to the app. This depends upon the devices capabilities.
+#### Table Of Values
+| item | 1 | 0 |
+| ----  | -- | -- |
+| load_scene| start | end |
+| shader_compile | start | end |
 
->  __DataManager::onShaderLoaderBegin();__ - if called when a `Shader` is loaded, the OPPO device may provide more resources to the app. This depends upon the devices capabilities.
-
->  __DataManager::onShaderLoaderEnd();__ - if called when a `Shader` is ending, the OPPO device may provide more resources to the app. This depends upon the devices capabilities.
+After v3.17.2, the type of `value` changed from `float` to `string` to make it more freshable.
 
