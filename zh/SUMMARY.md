@@ -90,6 +90,7 @@
 - [高级话题](advanced_topics/index.md)
   - [文件接入](advanced_topics/filesystem.md)
   - [网络访问](advanced_topics/networking.md)
+  - [OPPO 优化](advanced_topics/oppo.md)
   - [着色器和材质](advanced_topics/shaders.md)
   - [图形性能优化](advanced_topics/optimizing.md)
   - [SQLite 集成 TODO](advanced_topics/sqlite.md)
