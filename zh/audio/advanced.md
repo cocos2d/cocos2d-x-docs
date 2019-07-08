@@ -12,44 +12,49 @@
 void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
 
-    // if you use SimpleAudioEngine, it must be pause
-    // SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+    // if you use AudioEngine, it must be pause
+    // AudioEngine::pauseAll();
 }
 
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
 
-    // if you use SimpleAudioEngine, it must resume here
-    // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    // if you use AudioEngine, it must resume here
+    // AudioEngine::resumeAll();
 }
 ```
 
-看到了那些被注释的行吗？如果你有使用 `SimpleAudioEngine` 在游戏中播放声音，记得取消这些注释。当这些被注释的代码生效，你的游戏就能应对刚才提到的场景。
+看到了那些被注释的行吗？如果你有使用 `AudioEngine` 在游戏中播放声音，记得取消这些注释。当这些被注释的代码生效，你的游戏就能应对刚才提到的场景。
 
 ## 预加载
 
 加载音乐和音效通常是个耗时间的过程，为了防止由加载产生的延时导致实际播放与游戏播放不协调的现象，在播放音乐和音效前，可以预加载音乐文件。
 
 ```cpp
-#include "SimpleAudioEngine.h"
-using namespace CocosDenshion;
+#include "AudioEngine.h"
+using namespace cocos2d::experimental;
 
-auto audio = SimpleAudioEngine::getInstance();
 
 // pre-loading background music and effects. You could pre-load
 // effects, perhaps on app startup so they are already loaded
 // when you want to use them.
-audio->preloadBackgroundMusic("myMusic1.mp3");
-audio->preloadBackgroundMusic("myMusic2.mp3");
+AudioEngine::preload("myMusic1.mp3");
+AudioEngine::preload("myMusic2.mp3");
 
-audio->preloadEffect("myEffect1.mp3");
-audio->preloadEffect("myEffect2.mp3");
 
 // unload a sound from cache. If you are finished with a sound and
 // you wont use it anymore in your game. unload it to free up
 // resources.
-audio->unloadEffect("myEffect1.mp3");
+AudioEngine::uncache("myEffect1.mp3");
+```
+
+通过回调, 你也可以 __`preload`__ 完成后进行一些操作
+
+```cpp
+AudioEngine::preload("myMusic1.mp3", [](bool success){
+    //do some stuff 
+});
 ```
 
 ## 音量控制
@@ -58,13 +63,10 @@ audio->unloadEffect("myEffect1.mp3");
 
 
 ```cpp
-#include "SimpleAudioEngine.h"
-using namespace CocosDenshion;
-
-auto audio = SimpleAudioEngine::getInstance();
+#include "AudioEngine.h"
+using namespace cocos2d::experimental;
 
 // setting the volume specifying value as a float
 // set default volume
-audio->setEffectsVolume(0.5);
-audio->setBackgroundMusicVolume(0.5);
+AudioEngine::setVolume(audioID, 0.5);
 ```

@@ -5,53 +5,44 @@
 ## 暂停
 
 ```cpp
-#include "SimpleAudioEngine.h"
-using namespace CocosDenshion;
+#include "AudioEngine.h"
+using namespace cocos2d::experimental;
 
-auto audio = SimpleAudioEngine::getInstance();
+auto audioID = AudioEngine::play2d(...);
 
-// pause background music.
-audio->pauseBackgroundMusic();
-
-// pause a sound effect.
-audio->pauseEffect();
+// pause music.
+AudioEngine::pause(audioID);
 
 // pause all sound effects.
-audio->pauseAllEffects();
+AudioEngine::pauseAll();
 ```
 
 ## 停止
 
 ```cpp
-#include "SimpleAudioEngine.h"
-using namespace CocosDenshion;
+#include "AudioEngine.h"
+using namespace cocos2d::experimental;
 
-auto audio = SimpleAudioEngine::getInstance();
+auto audioID = AudioEngine::play2d(...);
 
-// stop background music.
-audio->stopBackgroundMusic();
-
-// stop a sound effect.
-audio->stopEffect();
+// stop music.
+AudioEngine::stop(audioID);
 
 // stops all running sound effects.
-audio->stopAllEffects();
+AudioEngine::stopAll();
 ```
 
 ## 恢复
 
 ```cpp
-#include "SimpleAudioEngine.h"
-using namespace CocosDenshion;
+#include "AudioEngine.h"
+using namespace cocos2d::experimental;
 
-auto audio = SimpleAudioEngine::getInstance();
+auto audioID = AudioEngine::play2d(...);
 
-// resume background music.
-audio->resumeBackgroundMusic();
-
-// resume a sound effect.
-audio->resumeEffect();
+// resume music.
+AudioEngine::resume(audioID);
 
 // resume all sound effects.
-audio->resumeAllEffects();
+AudioEngine::resumeAll();
 ```
