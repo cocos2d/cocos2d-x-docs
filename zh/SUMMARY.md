@@ -19,22 +19,23 @@
 
 ## 基本功能
 
+- [新特性(支持Metal)](metal/index.md)
+  - [Device](metal/device.md)
+  - [PipelineDescriptor](metal/pipelineDescriptor.md)
+  - [Renderer](metal/renderer.md)
 - [精灵(Sprite)](sprites/index.md)
   - [精灵创建](sprites/creating.md)
     - [使用图集](sprites/spritesheets.md)
     - [使用精灵缓存](sprites/spriteframe_cache.md)
   - [精灵控制](sprites/manipulation.md)
   - [多边形精灵](sprites/polygon.md)
-
 - [动作(Action)](actions/index.md)
   - [基本动作](actions/basic.md)
   - [动作序列](actions/sequences.md)
   - [动作的克隆和倒转](actions/sequence_internals.md)
-
 - [场景(Scene)](scenes/index.md)
   - [场景创建](scenes/creating.md)
   - [场景切换](scenes/transitioning.md)
-
 - [UI 组件](ui_components/index.md)
   - [标签(Label)](ui_components/labels.md)
   - [菜单(Menu)](ui_components/menus.md)
