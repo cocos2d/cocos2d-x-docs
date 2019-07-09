@@ -48,4 +48,4 @@ Once everything above works, you can start a new project! To do this, read our
 document on the **[Cocos Command-line tool](../editors_and_tools/cocosCLTool.md)**.
 
 ## Troubleshooting
-Please see this [F.A.Q](../faq/index.md#XCode) for troubleshooting help.
+Please see this [F.A.Q](../faq/macos.md) for troubleshooting help.

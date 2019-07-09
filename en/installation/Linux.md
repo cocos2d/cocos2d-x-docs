@@ -124,4 +124,4 @@ Once everything above works, you can start a new project! To do this, read our d
 
 
 ## Troubleshooting
-Please see this [F.A.Q](../faq/index.md#Linux) for troubleshooting help. __Linux__ has a few __known issues.__
+Please see this [F.A.Q](../faq/linux.md) for troubleshooting help. __Linux__ has a few __known issues.__
