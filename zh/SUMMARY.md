@@ -97,8 +97,7 @@
   - [SQLite 集成 TODO](advanced_topics/sqlite.md)
 
 
-- [如何从就版本迁移](apichange/index.md)
-  - [V4 API 变更列表](apichange/api_change_v4.md)
+- [如何从旧版本迁移](apichange/index.md)
 
 
 ## 环境与工具
