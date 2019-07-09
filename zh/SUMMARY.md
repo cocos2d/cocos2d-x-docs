@@ -1,5 +1,6 @@
 # Cocos2d-x 文档
 
+
 ## 新手入门
 
 - [了解引擎](index.md)
@@ -94,6 +95,11 @@
   - [图形性能优化](advanced_topics/optimizing.md)
   - [着色器和材质](advanced_topics/shaders.md)
   - [SQLite 集成 TODO](advanced_topics/sqlite.md)
+
+
+- [迁移](apichange/index.md)
+  - [V4 API 变更列表](apichange/api_change_v4.md)
+
 
 ## 环境与工具
 
