@@ -1,504 +1,504 @@
 # V3 到 V4 API 变更
 
-### class `cocos2d::ActionManager`
+以下内容列举了主要的接口变更
 
-- REMOVE: `numberOfRunningActionsInTarge`, use `getNumberOfRunningActionsInTarget`instead. 
+### 类 `cocos2d::ActionManager`
 
-### class `cocos2d::Animate3D`
+- 移除 `numberOfRunningActionsInTarge`, 使用 `getNumberOfRunningActionsInTarget` 替代. 
 
-- REMOVE: `getPlayBack`
-- REMOVE: `setPlayBack`
+### 类 `cocos2d::Animate3D`
 
-### class `cocos2d::Animation`
+- 移除 `getPlayBack`
+- 移除 `setPlayBack`
 
-- RENAME: `addSpriteFrameWithFileName` TO  `addSpriteFrameWithFile`
+### 类 `cocos2d::Animation`
 
-### class `cocos2d::Animation3D`
+- 重命名 `addSpriteFrameWithFileName` 为 `addSpriteFrameWithFile`.
 
-- REMOVE: `getOrCreate`, use `create` instead.
+### 类 `cocos2d::Animation3D`
 
-### class `cocos2d::AnimationCache`
+- 移除 `getOrCreate`, 使用 `create` 替代.
 
-- REMOVE: `purgeSharedAnimationCache`, use `destroyInstance` instead.
-- REMOVE: `sharedAnimationCache`, use `getInstance` instead.
-- REMOVE: `animationByName`, use `getAnimation` instead.
-- REMOVE: `removeAnimationByName`, use `removeAnimation` instead.
+### 类 `cocos2d::AnimationCache`
 
-### class `cocos2d::AsyncTaskPool`
+- 移除 `purgeSharedAnimationCache`, 使用 `destroyInstance` 替代.
+- 移除 `sharedAnimationCache`, 使用 `getInstance` 替代.
+- 移除 `animationByName`, 使用 `getAnimation` 替代.
+- 移除 `removeAnimationByName`, 使用 `removeAnimation` 替代.
 
-- FIX TYPO: `destoryInstance` TO `destroyInstance`
+### 类 `cocos2d::AsyncTaskPool`
 
-### NEW class `cocos2d::backend::Program`
+- 拼写修复 `destoryInstance` 为 `destroyInstance`
 
-### REPLACE GLProgram & GLProgramState with Program & ProgramState
+### 替换 GLProgram & GLProgramState 为 Program & ProgramState
 
-### REMOVE class `cocos2d::BatchCommand`
+### 移除 类 `cocos2d::BatchCommand`
 
-### NEW class `cocos2d::CallbackCommand`
+### 新增 类 `cocos2d::CallbackCommand`
 
-### class `cocos2d::CallFunc`
+### 类 `cocos2d::CallFunc`
 
-- REMOVE: `create(cocos2d::Ref *, cocos2d::SEL_CallFunc)`
-- REMOVE: `initWithTarget`
-- REMOVE: `setTargetCallback`
+- 移除 `create(cocos2d::Ref *, cocos2d::SEL_CallFunc)`
+- 移除 `initWithTarget`
+- 移除 `setTargetCallback`
 
-### class `cocos2d::CallFuncN`
+### 类 `cocos2d::CallFuncN`
 
-- REMOVE: `create(cocos2d::Ref *, cocos2d::SEL_CallFuncN)`
-- REMOVE: `initWithTarget`
+- 移除 `create(cocos2d::Ref *, cocos2d::SEL_CallFuncN)`
+- 移除 `initWithTarget`
 
-### class `cocos2d::Camera`
-- REMOVE: `applyFrameBufferObject`
-- REMOVE: `restore`
-- REMOVE: `applyFrameBufferObject`
-- REMOVE: `restoreFrameBufferObject`
-- REMOVE: `restoreViewport`
-- REMOVE: `setFrameBufferObject`
-- REMOVE: `setViewport`
+### 类 `cocos2d::Camera`
+- 移除 `applyFrameBufferObject`
+- 移除 `restore`
+- 移除 `applyFrameBufferObject`
+- 移除 `restoreFrameBufferObject`
+- 移除 `restoreViewport`
+- 移除 `setFrameBufferObject`
+- 移除 `setViewport`
 
-### NEW class `cocos2d::CaptureScreenCallbackCommand`
+### NEW 类 `cocos2d::CaptureScreenCallbackCommand`
 
-### class `cocos2d::Clonable`
+### 类 `cocos2d::Clonable`
 
-- REMOVE: `copy`
+- 移除 `copy`
 
-### class `cocos2d::Configuration`
+### 类 `cocos2d::Configuration`
 
-- REMOVE: `purgeConfiguration`
-- REMOVE: `sharedConfiguration`
-- REMOVE: `getInfoAsMap`
-- NEW: `getMaxAttributes`
+- 移除 `purgeConfiguration`
+- 移除 `sharedConfiguration`
+- 移除 `getInfoAsMap`
+- 新增 `getMaxAttributes`
 
 
-### class `cocos2d::CustomCommand` reform
+### 类 `cocos2d::CustomCommand` reform
 
-### class `cocos2d::Director`
+### 类 `cocos2d::Director`
 
-- REMOVE: `sharedDirector`, use `getInstance` instead.
-- REMOVE: `getClearColor`
-- REMOVE: `getProjectionMatrix`, access through `Camera`
-- REMOVE: `getProjectionMatrixStackSize`
-- REMOVE: `initProjectionMatrixStack`
-- REMOVE: `loadProjectionIdentityMatrix`
-- REMOVE: `loadProjectionMatrix`
-- REMOVE: `multiplyProjectionMatrix`
-- REMOVE: `popProjectionMatrix`
-- REMOVE: `pushProjectionMatrix`
-- REMOVE: `setAlphaBlending`, access though `Renderer`
-- REMOVE: `setDepthTest`, access though `Renderer`
+- 移除 `sharedDirector`, 使用 `getInstance` 替代.
+- 移除 `getClearColor`
+- 移除 `getProjectionMatrix`, access through `Camera`
+- 移除 `getProjectionMatrixStackSize`
+- 移除 `initProjectionMatrixStack`
+- 移除 `loadProjectionIdentityMatrix`
+- 移除 `loadProjectionMatrix`
+- 移除 `multiplyProjectionMatrix`
+- 移除 `popProjectionMatrix`
+- 移除 `pushProjectionMatrix`
+- 移除 `setAlphaBlending`, access though `Renderer`
+- 移除 `setDepthTest`, access though `Renderer`
 
-### class `cocos2d::DrawNode`
+### 类 `cocos2d::DrawNode`
 
-- REMOVE: `drawQuadraticBezier`
+- 移除 `drawQuadraticBezier`
 
-### REMOVE: class `cocos2d::experimental::FrameBuffer`
-### REMOVE: class `cocos2d::experimental::RenderTargetBase`
-### REMOVE: class `cocos2d::experimental::RenderTargetDepthStencil`
-### REMOVE: class `cocos2d::experimental::RenderTargetRenderBuffer`
+### 移除 类 `cocos2d::experimental::FrameBuffer`
+### 移除 类 `cocos2d::experimental::RenderTargetBase`
+### 移除 类 `cocos2d::experimental::RenderTargetDepthStencil`
+### 移除 类 `cocos2d::experimental::RenderTargetRenderBuffer`
 
-### class `cocos2d::FileUtils`
+### 类 `cocos2d::FileUtils`
 
-- REMOVE: `purgeFileUtils`, use `destroyInstance` instead.
-- REMOVE: `sharedFileUtils`, use `getInstance` instead.
-- REMOVE: `getFileData`, use `getDataFromFile` instead.
+- 移除 `purgeFileUtils`, 使用 `destroyInstance` 替代.
+- 移除 `sharedFileUtils`, 使用 `getInstance` 替代.
+- 移除 `getFileData`, 使用 `getDataFromFile` 替代.
 
-### class `cocos2d::Follow`
+### 类 `cocos2d::Follow`
 
-- FIX TYPO: `setBoudarySet` to `setBoundarySet`
+- 拼写修复 `setBoudarySet` 为 `setBoundarySet`
 
-### class `cocos2d::Font`
+### 类 `cocos2d::Font`
 
-- REMOVE: `getHorizontalKerningForTextUTF16`
+- 移除 `getHorizontalKerningForTextUTF16`
 
-### class `cocos2d::GLView`
+### 类 `cocos2d::GLView`
 
-- REMOVE: `getVR`
-- REMOVE: `pollInputEvents`
-- REMOVE: `setCursor`
-- REMOVE: `setDefaultCursor`
-- REMOVE: `setVR`
+- 移除 `getVR`
+- 移除 `pollInputEvents`
+- 移除 `setCursor`
+- 移除 `setDefaultCursor`
+- 移除 `setVR`
 
-### class `cocos2d::Grid3D`
+### 类 `cocos2d::Grid3D`
 
-- REMOVE: `originalVertex`, use `getOriginalVertex` instead
-- REMOVE: `vertex`, use `getVertex` instead
+- 移除 `originalVertex`, 使用 `getOriginalVertex` 替代.
+- 移除 `vertex`, 使用 `getVertex` 替代.
 
-### class `cocos2d::GridBase`
+### 类 `cocos2d::GridBase`
 
-- REMOVE: `create(const cocos2d::Size &, cocos2d::Texture2D *, bool)`
-- REMOVE: `create(const cocos2d::Size &)`
+- 移除 `create(const cocos2d::Size &, cocos2d::Texture2D *, bool)`
+- 移除 `create(const cocos2d::Size &)`
 
-### class `cocos2d::Image`
+### 类 `cocos2d::Image`
 
-- RENAME: `getRenderFormat` to `getPixelFormat`
-- REMOVE: `isPremultipliedAlpha`, use `hasPremultipliedAlpha` instead.
-- RENAME: `premultiplyAlpha` to `premultipliedAlpha`
-- REMOVE: `reversePremultipliedAlpha`
+- 重命名 `getRenderFormat` 为 `getPixelFormat`.
+- 移除 `isPremultipliedAlpha`, 使用 `hasPremultipliedAlpha` 替代.
+- 重命名 `premultiplyAlpha` 为 `premultipliedAlpha`.
+- 移除 `reversePremultipliedAlpha`
 
-### class `cocos2d::IMEDispatcher`
+### 类 `cocos2d::IMEDispatcher`
 
-- REMOVE: `isAnyDelegateAttachedWithIME`
+- 移除 `isAnyDelegateAttachedWithIME`
 
-### REMOVE: class `cocos2d::IndexBuffer`
+### 移除 类 `cocos2d::IndexBuffer`
 
-### class `cocos2d::Label`
+### 类 `cocos2d::Label`
 
-- REMOVE: `getCommonLineHeight`
-- REMOVE: `getFontDefinition`
-- REMOVE: `setFontDefinition`
-- NEW: `setProgramState`
+- 移除 `getCommonLineHeight`
+- 移除 `getFontDefinition`
+- 移除 `setFontDefinition`
+- 新增 `setProgramState`
 
-### class `cocos2d::Layer`
+### 类 `cocos2d::Layer`
 
-- REMOVE: `ccTouchBegan`, use `onTouchBegan` instead.
-- REMOVE: `ccTouchCancelled`, use `onTouchCancelled` instead.
-- REMOVE: `ccTouchEnded`, use `onTouchEnded` instead.
-- REMOVE: `ccTouchesBegan`, use `onTouchesBegan` instead.
-- REMOVE: `ccTouchesCancelled`, use `onTouchesCancelled` instead.
-- REMOVE: `ccTouchesEnded`, use `onTouchesEnded` instead.
-- REMOVE: `ccTouchesMoved`, use `onTouchesMoved` instead.
-- REMOVE: `ccTouchMoved`, use `onTouchMoved` instead.
-- REMOVE: `didAccelerate`
-- REMOVE: `isAccelerometerEnabled`
-- REMOVE: `isKeyboardEnabled`
-- REMOVE: `isKeypadEnabled`
-- REMOVE: `isSwallowsTouches`
-- REMOVE: `isTouchEnabled`
-- REMOVE: `keyBackClicked`
-- REMOVE: `keyMenuClicked`
-- REMOVE: `keyPressed`
-- REMOVE: `keyReleased`
-- REMOVE: `registerWithTouchDispatcher`
-- REMOVE: `setAccelerometerEnabled`
-- REMOVE: `setAccelerometerInterval`
-- REMOVE: `setKeyboardEnabled`
-- REMOVE: `setKeypadEnabled`
-- REMOVE: `setSwallowsTouches`
-- REMOVE: `setTouchEnabled`
-- REMOVE: `setTouchMode`
+- 移除 `ccTouchBegan`, 使用 `onTouchBegan` 替代.
+- 移除 `ccTouchCancelled`, 使用 `onTouchCancelled` 替代.
+- 移除 `ccTouchEnded`, 使用 `onTouchEnded` 替代.
+- 移除 `ccTouchesBegan`, 使用 `onTouchesBegan` 替代.
+- 移除 `ccTouchesCancelled`, 使用 `onTouchesCancelled` 替代.
+- 移除 `ccTouchesEnded`, 使用 `onTouchesEnded` 替代.
+- 移除 `ccTouchesMoved`, 使用 `onTouchesMoved` 替代.
+- 移除 `ccTouchMoved`, 使用 `onTouchMoved` 替代.
+- 移除 `didAccelerate`
+- 移除 `isAccelerometerEnabled`
+- 移除 `isKeyboardEnabled`
+- 移除 `isKeypadEnabled`
+- 移除 `isSwallowsTouches`
+- 移除 `isTouchEnabled`
+- 移除 `keyBackClicked`
+- 移除 `keyMenuClicked`
+- 移除 `keyPressed`
+- 移除 `keyReleased`
+- 移除 `registerWithTouchDispatcher`
+- 移除 `setAccelerometerEnabled`
+- 移除 `setAccelerometerInterval`
+- 移除 `setKeyboardEnabled`
+- 移除 `setKeypadEnabled`
+- 移除 `setSwallowsTouches`
+- 移除 `setTouchEnabled`
+- 移除 `setTouchMode`
 
-### REMOVE: class `cocos2d::LabelBMFont`
+### 移除 类 `cocos2d::LabelBMFont`
 
-### REMOVE: class `cocos2d::LabelTTF`
+### 移除 类 `cocos2d::LabelTTF`
 
 
-### class `cocos2d::Material`
+### 类 `cocos2d::Material`
 
-- RENAME: `createWithGLStateProgram` to `createWithProgramState`
-- NEW: `createWithProgramState`
-- NEW: `getRenderState`
-- NEW: `getStateBlock`
-- NEW: `setStateBlock`
+- 重命名 `createWithGLStateProgram` 为 `createWithProgramState`.
+- 新增 `createWithProgramState`
+- 新增 `getRenderState`
+- 新增 `getStateBlock`
+- 新增 `setStateBlock`
 
 
-### class `cocos2d::MenuItem`
+### 类 `cocos2d::MenuItem`
 
-- REMOVE: `create(cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `initWithTarget`
-- REMOVE: `MenuItemAtlasFont`
+- 移除 `create(cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `initWithTarget`
+- 移除 `MenuItemAtlasFont`
 
-### class `cocos2d::MenuItemAtlasFont`
+### 类 `cocos2d::MenuItemAtlasFont`
 
-- REMOVE: `create(const std::string &, const std::string &, int, int, char, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `initWithString`
+- 移除 `create(const std::string &, const std::string &, int, int, char, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `initWithString`
 
-### class `cocos2d::MenuItemFont`
+### 类 `cocos2d::MenuItemFont`
 
-- REMOVE: `create(const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `fontName`, use `getFontName` instead
-- REMOVE: `fontSize`, use `getFontSize` instead
-- REMOVE: `fontNameObj`, use `getFontNameObj` instead
-- REMOVE: `fontSizeObj`, use `getFontSizeObj` instead
-- REMOVE: `initWithString(const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `create(const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `fontName`, 使用 `getFontName` 替代.
+- 移除 `fontSize`, 使用 `getFontSize` 替代.
+- 移除 `fontNameObj`, 使用 `getFontNameObj` 替代.
+- 移除 `fontSizeObj`, 使用 `getFontSizeObj` 替代.
+- 移除 `initWithString(const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
 
-### class `cocos2d::MenuItemImage`
+### 类 `cocos2d::MenuItemImage`
 
-- REMOVE: `create(const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `create(const std::string &, const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `initWithNormalImage(const std::string &, const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `create(const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `create(const std::string &, const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `initWithNormalImage(const std::string &, const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
 
-### class `cocos2d::MenuItemImage`
+### 类 `cocos2d::MenuItemImage`
 
-- REMOVE: `create(cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `initWithLabel(cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `create(cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `initWithLabel(cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
 
-### class `cocos2d::MenuItemSprite`
+### 类 `cocos2d::MenuItemSprite`
 
-- REMOVE: `create(cocos2d::Node *, cocos2d::Node *, cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `create(cocos2d::Node *, cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
-- REMOVE: `initWithNormalSprite(cocos2d::Node *, cocos2d::Node *, cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `create(cocos2d::Node *, cocos2d::Node *, cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `create(cocos2d::Node *, cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
+- 移除 `initWithNormalSprite(cocos2d::Node *, cocos2d::Node *, cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`
 
-### class `cocos2d::MenuItemToggle`
+### 类 `cocos2d::MenuItemToggle`
 
-- REMOVE: `createWithTarget(cocos2d::Ref *, cocos2d::SEL_MenuHandler, cocos2d::MenuItem *, ...)`
-- REMOVE: `createWithTarget(cocos2d::Ref *, cocos2d::SEL_MenuHandler, const Vector<cocos2d::MenuItem *> &)`
-- REMOVE: `initWithTarget(cocos2d::Ref *, cocos2d::SEL_MenuHandler, cocos2d::MenuItem *, __va_list_tag *)`
-- REMOVE: `selectedItem()`, use `getSelectedItem` instead.
+- 移除 `createWithTarget(cocos2d::Ref *, cocos2d::SEL_MenuHandler, cocos2d::MenuItem *, ..)`
+- 移除 `createWithTarget(cocos2d::Ref *, cocos2d::SEL_MenuHandler, const Vector<cocos2d::MenuItem *> &)`
+- 移除 `initWithTarget(cocos2d::Ref *, cocos2d::SEL_MenuHandler, cocos2d::MenuItem *, __va_list_tag *)`
+- 移除 `selectedItem()`, 使用 `getSelectedItem` 替代.
 
-### class `cocos2d::Mesh`
+### 类 `cocos2d::Mesh`
 
-- REMOVE: `create(const std::vector<float> &, int, const cocos2d::Mesh::IndexArray &, int, const std::vector<MeshVertexAttrib> &, int)`
-- RENAME: `getGLProgramState` TO `getProgramState` 
-- RENAME: `setGLProgramState` TO `setProgramState`
-- REMOVE: `getMeshCommand`
-- NEW: `setVertexLayout`
-
-### class `cocos2d::Node`
-
-- REMOVE: `boundingBox`, used `getBoundingBox`
-- RENAME: `getGLProgram` TO `getProgramState`
-- REMOVE: `getGLProgramState`
-- REMOVE: `getGLServerState`
-- REMOVE: `getRotationX`
-- REMOVE: `getRotationY`
-- REMOVE: `getShaderProgram`
-- REMOVE: `getVertexZ`
-- REMOVE: `getZOrder`
-- REMOVE: `ignoreAnchorPointForPosition`, use `isIgnoreAnchorPointForPosition`
-- REMOVE: `nodeToParentTransform`, use `getNodeToParentTransform`
-- REMOVE: `nodeToWorldTransform`, use `getNodeToWorldTransform`
-- REMOVE: `numberOfRunningActions`, use `getNumberOfRunningActions`
-- REMOVE: `parentToNodeTransform`, use `getParentToNodeTransform`
-- REMOVE: `pauseSchedulerAndActions`
-- RENAME: `setGLProgram` TO `setProgramState`
-- REMOVE: `setGLProgramState`
-- REMOVE: `setGLServerState`
-- REMOVE: `setRotationX`
-- REMOVE: `setRotationY`
-- REMOVE: `setShaderProgram`
-- REMOVE: `setVertexZ`
-- REMOVE: `setZOrder`
-- REMOVE: `unscheduleAllSelectors`
-- REMOVE: `worldToNodeTransform`, use `getWorldToNodeTransform`
+- 移除 `create(const std::vector<float> &, int, const cocos2d::Mesh::IndexArray &, int, const std::vector<MeshVertexAttrib> &, int)`
+- 重命名 `getGLProgramState` 为 `getProgramState`. 
+- 重命名 `setGLProgramState` 为 `setProgramState`.
+- 移除 `getMeshCommand`
+- 新增 `setVertexLayout`
+
+### 类 `cocos2d::Node`
+
+- 移除 `boundingBox`, used `getBoundingBox`
+- 重命名 `getGLProgram` 为 `getProgramState`.
+- 移除 `getGLProgramState`
+- 移除 `getGLServerState`
+- 移除 `getRotationX`
+- 移除 `getRotationY`
+- 移除 `getShaderProgram`
+- 移除 `getVertexZ`
+- 移除 `getZOrder`
+- 移除 `ignoreAnchorPointForPosition`, 使用 `isIgnoreAnchorPointForPosition`
+- 移除 `nodeToParentTransform`, 使用 `getNodeToParentTransform`
+- 移除 `nodeToWorldTransform`, 使用 `getNodeToWorldTransform`
+- 移除 `numberOfRunningActions`, 使用 `getNumberOfRunningActions`
+- 移除 `parentToNodeTransform`, 使用 `getParentToNodeTransform`
+- 移除 `pauseSchedulerAndActions`
+- 重命名 `setGLProgram` 为 `setProgramState`.
+- 移除 `setGLProgramState`
+- 移除 `setGLServerState`
+- 移除 `setRotationX`
+- 移除 `setRotationY`
+- 移除 `setShaderProgram`
+- 移除 `setVertexZ`
+- 移除 `setZOrder`
+- 移除 `unscheduleAllSelectors`
+- 移除 `worldToNodeTransform`, 使用 `getWorldToNodeTransform`
 
-### class `cocos2d::ParticleSystem`
+### 类 `cocos2d::ParticleSystem`
 
-- REMOVE: `getOpacityModifyRGB`
+- 移除 `getOpacityModifyRGB`
 
-### class `cocos2d::ParticleSystemQuad`
+### 类 `cocos2d::ParticleSystemQuad`
 
-- REMOVE: `postStep`
+- 移除 `postStep`
 
-### CHANGE: rewrite class `cocos2d::Pass`
+### 更新类 `cocos2d::Pass`
 
-### class `cocos2d::PhysicsShape`
+### 类 `cocos2d::PhysicsShape`
 
-- FIX TYPO: `getPolyonCenter` TO `getPolygonCenter`
-- FIX TYPO: `getTriaglesCount` TO `getTrianglesCount`
+- 拼写修复 `getPolyonCenter` 为 `getPolygonCenter`
+- 拼写修复 `getTriaglesCount` 为 `getTrianglesCount`
 
-### class `cocos2d::PoolManager`
+### 类 `cocos2d::PoolManager`
 
-- REMOVE: `purgePoolManager`, use `destroyInstance` instead. 
-- REMOVE: `sharedPoolManager`, use `getInstance` instead.
+- 移除 `purgePoolManager`, 使用 `destroyInstance` 替代. 
+- 移除 `sharedPoolManager`, 使用 `getInstance` 替代.
 
-### REMOVE: class `cocos2d::PrimitiveCommand`
+### 移除 类 `cocos2d::PrimitiveCommand`
 
-### class `cocos2d::Profiler`
+### 类 `cocos2d::Profiler`
 
-- REMOVE: `sharedProfiler`, use `getInstance` instead.
+- 移除 `sharedProfiler`, 使用 `getInstance` 替代.
 
-### class `cocos2d::ProgressTimer`
+### 类 `cocos2d::ProgressTimer`
 
-- REMOVE: `setReverseProgress`, use `setReverseDirection` instead.
+- 移除 `setReverseProgress`, 使用 `setReverseDirection` 替代.
 
-### CHANGE: REWRITE cocos2d::Renderer
+### 重新实现 cocos2d::Renderer
 
-- REMOVE: `clear`
-- NEW: `clear(cocos2d::ClearFlag, const cocos2d::Color4F &, float, unsigned int, float)`
-- NEW: `getClearDepth`
-- NEW: `getClearFlag`
-- NEW: `getClearStencil`
-- NEW: `getColorAttachment`
-- NEW: `getCullMode`
-- NEW: `getDepthAttachment`
-- NEW: `getDepthCompareFunction`
-- NEW: `getDepthTest`
-- NEW: `getDepthWrite`
-- REMOVE: `getGroupCommandManager`
-- REMOVE: `initGLView`
-- NEW: `getRenderTargetFlag`
-- NEW: `getScissorRect`
-- NEW: `getScissorTest`
-- NEW: `getStencilAttachment`
-- NEW: `getStencilCompareFunction`
-- NEW: `getStencilDepthPassOperation`
-- NEW: `getStencilFailureOperation`
-- NEW: `getStencilPassDepthFailureOperation`
-- NEW: `getStencilReadMask`
-- NEW: `getStencilReferenceValue`
-- NEW: `getStencilTest`
-- NEW: `getStencilWriteMask`
-- NEW: `getViewport`
-- NEW: `getWinding`
-- NEW: `init`
-- REMOVE: `setClearColor`
-- NEW: `setCullMode`
-- NEW: `setDepthCompareFunction`
-- NEW: `setDepthWrite`
-- NEW: `setRenderTarget`
-- NEW: `setScissorRect`
-- NEW: `setScissorTest`
-- NEW: `setStencilCompareFunction`
-- NEW: `setStencilOperation`
-- NEW: `setStencilTest`
-- NEW: `setStencilWriteMask`
-- NEW: `setViewPort`
-- NEW: `setWinding`
-
-### class `cocos2d::RenderTexture`
-
-- REMOVE: `newCCImage`
-- REMOVE: `newImage(bool)`
-- NEW: `newImage(std::function<void (Image *)>, bool)`
-- REMOVE: `saveToFileAsNonPMA`
+- 移除 `clear`
+- 新增 `clear(cocos2d::ClearFlag, const cocos2d::Color4F &, float, unsigned int, float)`
+- 新增 `getClearDepth`
+- 新增 `getClearFlag`
+- 新增 `getClearStencil`
+- 新增 `getColorAttachment`
+- 新增 `getCullMode`
+- 新增 `getDepthAttachment`
+- 新增 `getDepthCompareFunction`
+- 新增 `getDepthTest`
+- 新增 `getDepthWrite`
+- 移除 `getGroupCommandManager`
+- 移除 `initGLView`
+- 新增 `getRenderTargetFlag`
+- 新增 `getScissorRect`
+- 新增 `getScissorTest`
+- 新增 `getStencilAttachment`
+- 新增 `getStencilCompareFunction`
+- 新增 `getStencilDepthPassOperation`
+- 新增 `getStencilFailureOperation`
+- 新增 `getStencilPassDepthFailureOperation`
+- 新增 `getStencilReadMask`
+- 新增 `getStencilReferenceValue`
+- 新增 `getStencilTest`
+- 新增 `getStencilWriteMask`
+- 新增 `getViewport`
+- 新增 `getWinding`
+- 新增 `init`
+- 移除 `setClearColor`
+- 新增 `setCullMode`
+- 新增 `setDepthCompareFunction`
+- 新增 `setDepthWrite`
+- 新增 `setRenderTarget`
+- 新增 `setScissorRect`
+- 新增 `setScissorTest`
+- 新增 `setStencilCompareFunction`
+- 新增 `setStencilOperation`
+- 新增 `setStencilTest`
+- 新增 `setStencilWriteMask`
+- 新增 `setViewPort`
+- 新增 `setWinding`
+
+### 类 `cocos2d::RenderTexture`
+
+- 移除 `newCCImage`
+- 移除 `newImage(bool)`
+- 新增 `newImage(std::function<void (Image *)>, bool)`
+- 移除 `saveToFileAsNonPMA`
 
-### class `cocos2d::Scene`
+### 类 `cocos2d::Scene`
 
-- REMOVE: `onEnter`
+- 移除 `onEnter`
 
-### class `cocos2d::Scheduler`
+### 类 `cocos2d::Scheduler`
 
-- REMOVE: `isScheduledForTarget`
-- REMOVE: `scheduleSelector`
-- REMOVE: `unscheduleSelector`
-- REMOVE: `unscheduleUpdateForTarget`
+- 移除 `isScheduledForTarget`
+- 移除 `scheduleSelector`
+- 移除 `unscheduleSelector`
+- 移除 `unscheduleUpdateForTarget`
 
-### class `cocos2d::ScriptEngineManager`
+### 类 `cocos2d::ScriptEngineManager`
 
-- REMOVE: `purgeSharedManager`, use `destroyInstance` instead.
-- REMOVE: `sharedManager`, use `getInstance` instead.
+- 移除 `purgeSharedManager`, 使用 `destroyInstance` 替代.
+- 移除 `sharedManager`, 使用 `getInstance` 替代.
 
-### class `cocos2d::Sprite`
+### 类 `cocos2d::Sprite`
 
-- REMOVE: `displayFrame`
-- REMOVE: `getDisplayFrame`
-- NEW: `getProgramState`
-- FIX TYPO: `setStrechEnabled` TO `setStretchEnabled`
-- NEW: `setVertexLayout`
-- NEW: `updateShaders`
+- 移除 `displayFrame`
+- 移除 `getDisplayFrame`
+- 新增 `getProgramState`
+- 拼写修复 `setStrechEnabled` 为 `setStretchEnabled`
+- 新增 `setVertexLayout`
+- 新增 `updateShaders`
 
-### class `cocos2d::Sprite3D`
+### 类 `cocos2d::Sprite3D`
 
-- REMOVE: `getSkin`
-- NEW: `setProgramState`
-- NEW: `setVertexLayout`
-- REMOVE: `setGLProgramState` 
-- REMOVE: `setGLProgram` 
+- 移除 `getSkin`
+- 新增 `setProgramState`
+- 新增 `setVertexLayout`
+- 移除 `setGLProgramState` 
+- 移除 `setGLProgram` 
 
-### class `cocos2d::Sprite3DMaterial`
+### 类 `cocos2d::Sprite3DMaterial`
 
-- RENAME: `createWithGLStateProgram` TO `createWithProgramState`
+- 重命名 `createWithGLStateProgram` 为 `createWithProgramState`.
 
-### class `cocos2d::SpriteFrameCache`
+### 类 `cocos2d::SpriteFrameCache`
 
-- REMOVE: `purgeSharedSpriteFrameCache`, use `destroyInstance` instead
-- REMOVE: `sharedSpriteFrameCache`, use `getInstance` instead
-- REMOVE: `spriteFrameByName`, use `getSpriteFrameByName` instead
+- 移除 `purgeSharedSpriteFrameCache`, 使用 `destroyInstance` 替代.
+- 移除 `sharedSpriteFrameCache`, 使用 `getInstance` 替代.
+- 移除 `spriteFrameByName`, 使用 `getSpriteFrameByName` 替代.
 
-### class `cocos2d::Technique`
+### 类 `cocos2d::Technique`
 
-- RENAME: `createWithGLProgramState` TO `createWithProgramState`
-- NEW: `getStateBlock`
-- NEW: `setMaterial`
+- 重命名 `createWithGLProgramState` 为 `createWithProgramState`.
+- 新增 `getStateBlock`
+- 新增 `setMaterial`
 
-### class `cocos2d::Texture2D`
+### 类 `cocos2d::Texture2D`
 
-- RENAME: `defaultAlphaPixelFormat()` TO `getDefaultAlphaPixelFormat`
-- REMOVE: `bitsPerPixelForFormat()`, use `getBitsPerPixelForFormat` instead.
-- CHANGE: `drawAtPoint(const cocos2d::Vec2 &, float)`
-- CHANGE: `drawInRect(const cocos2d::Rect &, float)`
-- NEW: `getBackendTexture()`
-- REMOVE: `getDescription()`
-- REMOVE: `getGLProgram()`
-- REMOVE: `getName()`
-- REMOVE: `initWithData(const void *, ssize_t, Texture2D::PixelFormat, int, int, const cocos2d::Size &)`
-- REMOVE: `initWithImage(cocos2d::Image *, cocos2d::Texture2D::PixelFormat)`
-- NEW: `initWithBackendTexture(backend::TextureBackend *)`
-- NEW: `initWithData(const void *, ssize_t, backend::PixelFormat, backend::PixelFormat, int, int, const cocos2d::Size &)`
-- NEW: `initWithData(const void *, ssize_t, backend::PixelFormat, int, int, const cocos2d::Size &)`
-- NEW: `initWithImage(cocos2d::Image *, backend::PixelFormat)`
-- REMOVE: `initWithMipmaps(cocos2d::MipmapInfo *, int, Texture2D::PixelFormat, int, int)`
-- NEW: `initWithMipmaps(cocos2d::MipmapInfo *, int, backend::PixelFormat, backend::PixelFormat, int, int)`
-- REMOVE: `releaseGLTexture()`
-- NEW: `isRenderTarget()`
-- REMOVE: `setGLProgram(cocos2d::GLProgram *)`
-- NEW: `setRenderTarget(bool)`
-- REMOVE: `stringForFormat()`, use `getStringForFormat` instead.
+- 重命名 `defaultAlphaPixelFormat` 为 `getDefaultAlphaPixelFormat`.
+- 移除 `bitsPerPixelForFormat()`, 使用 `getBitsPerPixelForFormat` 替代.
+- 签名变更`drawAtPoint(const cocos2d::Vec2 &, float)`
+- 签名变更`drawInRect(const cocos2d::Rect &, float)`
+- 新增 `getBackendTexture()`
+- 移除 `getDescription()`
+- 移除 `getGLProgram()`
+- 移除 `getName()`
+- 移除 `initWithData(const void *, ssize_t, Texture2D::PixelFormat, int, int, const cocos2d::Size &)`
+- 移除 `initWithImage(cocos2d::Image *, cocos2d::Texture2D::PixelFormat)`
+- 新增 `initWithBackendTexture(backend::TextureBackend *)`
+- 新增 `initWithData(const void *, ssize_t, backend::PixelFormat, backend::PixelFormat, int, int, const cocos2d::Size &)`
+- 新增 `initWithData(const void *, ssize_t, backend::PixelFormat, int, int, const cocos2d::Size &)`
+- 新增 `initWithImage(cocos2d::Image *, backend::PixelFormat)`
+- 移除 `initWithMipmaps(cocos2d::MipmapInfo *, int, Texture2D::PixelFormat, int, int)`
+- 新增 `initWithMipmaps(cocos2d::MipmapInfo *, int, backend::PixelFormat, backend::PixelFormat, int, int)`
+- 移除 `releaseGLTexture()`
+- 新增 `isRenderTarget()`
+- 移除 `setGLProgram(cocos2d::GLProgram *)`
+- 新增 `setRenderTarget(bool)`
+- 移除 `stringForFormat()`, 使用 `getStringForFormat` 替代.
 
-### class `cocos2d::TextureAtlas`
+### 类 `cocos2d::TextureAtlas`
 
-- REMOVE: `drawNumberOfQuads`
-- REMOVE: `drawQuads`
-- NEW: getIndices
-- REMOVE: `listenRendererRecreated`
+- 移除 `drawNumberOfQuads`
+- 移除 `drawQuads`
+- 新增 getIndices
+- 移除 `listenRendererRecreated`
 
-### class `cocos2d::TextureCache`
+### 类 `cocos2d::TextureCache`
 
-- REMOVE: `destroyInstance`
-- REMOVE: `getInstance`
-- REMOVE: `purgeSharedTextureCache`
-- REMOVE: `reloadAllTextures`
-- REMOVE: `sharedTextureCache`
-- REMOVE: `addUIImage`
-- REMOVE: `textureForKey`
+- 移除 `destroyInstance`
+- 移除 `getInstance`
+- 移除 `purgeSharedTextureCache`
+- 移除 `reloadAllTextures`
+- 移除 `sharedTextureCache`
+- 移除 `addUIImage`
+- 移除 `textureForKey`
 
 
-### class `cocos2d::TextureCube`
+### 类 `cocos2d::TextureCube`
 
-- NEW: `getBackendTexture`
+- 新增 `getBackendTexture`
 
-### class `cocos2d::TiledGrid3D`
+### 类 `cocos2d::TiledGrid3D`
 
-- REMOVE: `originalTile`, use `getOriginalTile` instead.
-- REMOVE: `tile`, use `getTile` instead.
+- 移除 `originalTile`, 使用 `getOriginalTile` 替代.
+- 移除 `tile`, 使用 `getTile` 替代.
 
-### class `cocos2d::TileMapAtlas`
+### 类 `cocos2d::TileMapAtlas`
 
-- REMOVE: `tileAt`, use `getTileAt` instead.
+- 移除 `tileAt`, 使用 `getTileAt` 替代.
 
-### class `cocos2d::TMXLayer`
+### 类 `cocos2d::TMXLayer`
 
-- REMOVE: `positionAt`, use `getPositionAt` instead.
-- REMOVE: `propertyNamed`, use `getProperty` instead.
-- REMOVE: `tileAt`, use `getTileAt` instead.
-- REMOVE: `tileGIDAt`, use `getTileGIDAt` instead.
+- 移除 `positionAt`, 使用 `getPositionAt` 替代.
+- 移除 `propertyNamed`, 使用 `getProperty` 替代.
+- 移除 `tileAt`, 使用 `getTileAt` 替代.
+- 移除 `tileGIDAt`, 使用 `getTileGIDAt` 替代.
 
 
-### class `cocos2d::TMXMapInfo`
+### 类 `cocos2d::TMXMapInfo`
 
-- REMOVE: `formatWithTMXFile`
-- REMOVE: `formatWithXML`
-- REMOVE: `getStoringCharacters`
+- 移除 `formatWithTMXFile`
+- 移除 `formatWithXML`
+- 移除 `getStoringCharacters`
 
-### class `cocos2d::TMXObjectGroup`
+### 类 `cocos2d::TMXObjectGroup`
 
-- REMOVE: `objectNamed`, use `getObject` instead.
-- REMOVE: `propertyNamed`, use `getProperty` instead.
+- 移除 `objectNamed`, 使用 `getObject` 替代.
+- 移除 `propertyNamed`, 使用 `getProperty` 替代.
 
-### class `cocos2d::TMXTiledMap`
+### 类 `cocos2d::TMXTiledMap`
 
-- REMOVE: `layerNamed`, use `getLayer` instead.
-- REMOVE: `objectGroupNamed`, use `getObjectGroup` instead.
-- REMOVE: `propertiesForGID`, use `getPropertiesForGID` instead.
-- REMOVE: `propertyNamed`, use `getProperty` instead.
+- 移除 `layerNamed`, 使用 `getLayer` 替代.
+- 移除 `objectGroupNamed`, 使用 `getObjectGroup` 替代.
+- 移除 `propertiesForGID`, 使用 `getPropertiesForGID` 替代.
+- 移除 `propertyNamed`, 使用 `getProperty` 替代.
 
-### REMOVE: class `cocos2d::UniformValue`
+### 移除 类 `cocos2d::UniformValue`
 
-### class `cocos2d::UserDefault`
+### 类 `cocos2d::UserDefault`
 
-- REMOVE: `purgeSharedUserDefault`, use `destroyInstance` instead.
-- REMOVE: `sharedUserDefault`, use `getInstance` instead.
+- 移除 `purgeSharedUserDefault`, 使用 `destroyInstance` 替代.
+- 移除 `sharedUserDefault`, 使用 `getInstance` 替代.
 
-### class `cocos2d::ZipUtils`
+### 类 `cocos2d::ZipUtils`
 
-- REMOVE: `ccInflateCCZBuffer`, use `inflateCCZBuffer` instead.
-- REMOVE: `ccInflateCCZFile`, use `inflateCCZFile` instead.
-- REMOVE: `ccInflateGZipFile`, use `inflateGZipFile` instead.
-- REMOVE: `ccInflateMemory`, use `inflateMemory` instead.
-- REMOVE: `ccInflateMemoryWithHint`, use `inflateMemoryWithHint` instead.
-- REMOVE: `ccIsCCZBuffer`, use `isCCZBuffer` instead.
-- REMOVE: `ccIsCCZFile`, use `isCCZFile` instead.
-- REMOVE: `ccIsGZipBuffer`, use `isGZipBuffer` instead.
-- REMOVE: `ccIsGZipFile`, use `isGZipFile` instead.
-- REMOVE: `ccSetPvrEncryptionKey`, use `setPvrEncryptionKey` instead.
-- REMOVE: `ccSetPvrEncryptionKeyPart`, use `setPvrEncryptionKeyPart` instead.
+- 移除 `ccInflateCCZBuffer`, 使用 `inflateCCZBuffer` 替代.
+- 移除 `ccInflateCCZFile`, 使用 `inflateCCZFile` 替代.
+- 移除 `ccInflateGZipFile`, 使用 `inflateGZipFile` 替代.
+- 移除 `ccInflateMemory`, 使用 `inflateMemory` 替代.
+- 移除 `ccInflateMemoryWithHint`, 使用 `inflateMemoryWithHint` 替代.
+- 移除 `ccIsCCZBuffer`, 使用 `isCCZBuffer` 替代.
+- 移除 `ccIsCCZFile`, 使用 `isCCZFile` 替代.
+- 移除 `ccIsGZipBuffer`, 使用 `isGZipBuffer` 替代.
+- 移除 `ccIsGZipFile`, 使用 `isGZipFile` 替代.
+- 移除 `ccSetPvrEncryptionKey`, 使用 `setPvrEncryptionKey` 替代.
+- 移除 `ccSetPvrEncryptionKeyPart`, 使用 `setPvrEncryptionKeyPart` 替代.
