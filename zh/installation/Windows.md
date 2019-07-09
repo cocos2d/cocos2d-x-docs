@@ -58,4 +58,4 @@ For the installer, check these posts:
 * Sample InnoSetup script for Cocos2d-x [here](https://discuss.cocos2d-x.org/t/exe-file-sharing/45569/6).
 
 ## Troubleshooting
-Please see this [F.A.Q](../faq/index.md#Windows) for troubleshooting help.
+Please see this [F.A.Q](../faq/windows.md) for troubleshooting help.
