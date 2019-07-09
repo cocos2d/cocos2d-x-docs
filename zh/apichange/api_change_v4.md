@@ -245,7 +245,7 @@
 
 ### 类 `cocos2d::Node`
 
-- 移除 ~~`boundingBox`~~, used `getBoundingBox`
+- 移除 ~~`boundingBox`~~, 使用 `getBoundingBox` 替代.
 - 重命名 `getGLProgram` 为 `getProgramState`.
 - 移除 ~~`getGLProgramState`~~
 - 移除 ~~`getGLServerState`~~
