@@ -15,6 +15,9 @@ This is because the template project was created in an older version of Visual S
 If you create a new project in the future you will need to repeat these steps.
 
 ### Distributing a Cocos2d-x app on Windows
+
+> __Note:__ this falls outside of the realm of Cocos2d-x. Please consult Microsoft resources for assistance.
+  
 If you try to run a game created with Cocos2d-x on a non-development machine, it may be required for this machine to have the __Visual Studio runtime__ installed. The easiest way is to create an installer for your game, but it is possible to do it without by installing all required pieces manually.
 
 * Use [Dependency Walker](http://www.dependencywalker.com/) to check what DLLs your game requires.
