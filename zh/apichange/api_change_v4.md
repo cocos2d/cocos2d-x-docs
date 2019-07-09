@@ -1,6 +1,6 @@
 # V4 API 变更
 
-以下内容列举了主要的(不是全部)接口变更
+以下内容列举了主要的(不完整)接口变更
 
 ### 类 `cocos2d::ActionManager`
 
@@ -76,7 +76,7 @@
 
 - 移除 ~~`sharedDirector`~~, 使用 `getInstance` 替代.
 - 移除 ~~`getClearColor`~~
-- 移除 ~~`getProjectionMatrix`~~, access through `Camera`
+- 移除 ~~`getProjectionMatrix`~~, 通过 `Camera` 访问
 - 移除 ~~`getProjectionMatrixStackSize`~~
 - 移除 ~~`initProjectionMatrixStack`~~
 - 移除 ~~`loadProjectionIdentityMatrix`~~
@@ -84,8 +84,8 @@
 - 移除 ~~`multiplyProjectionMatrix`~~
 - 移除 ~~`popProjectionMatrix`~~
 - 移除 ~~`pushProjectionMatrix`~~
-- 移除 ~~`setAlphaBlending`~~, access though `Renderer`
-- 移除 ~~`setDepthTest`~~, access though `Renderer`
+- 移除 ~~`setAlphaBlending`~~, 通过 `Renderer` 访问
+- 移除 ~~`setDepthTest`~~, 通过 `Renderer` 访问
 
 ### 类 `cocos2d::DrawNode`
 
