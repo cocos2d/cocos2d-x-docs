@@ -12,3 +12,6 @@ redirect.html.en
 REWRITE.TXT
 index.html.en
 deploy_cron.sh
+deploy_all.sh
+deploy_production.sh
+
