@@ -1,6 +1,6 @@
 # V4 API 变更
 
-以下内容列举了主要的(不完整)接口变更
+以下内容列举了主要的(不完全)接口变更
 
 ### `cocos2d::ActionManager`
 
@@ -39,7 +39,7 @@
 ### `cocos2d::CallFunc`
 
 - 移除 ~~`create(cocos2d::Ref *, cocos2d::SEL_CallFunc)`~~
-- 移除 ~~`initWithTarget`~~
+- 移除 ~~`initWithTarget`~~, 使用 `initWithFunction` 替代
 - 移除 ~~`setTargetCallback`~~
 
 ### `cocos2d::CallFuncN`
@@ -47,14 +47,13 @@
 - 移除 ~~`create(cocos2d::Ref *, cocos2d::SEL_CallFuncN)`~~
 - 移除 ~~`initWithTarget`~~
 
-### `cocos2d::Camera`
+### `cocos2d::Camera` 重构
 - 移除 ~~`applyFrameBufferObject`~~
 - 移除 ~~`restore`~~
-- 移除 ~~`applyFrameBufferObject`~~
 - 移除 ~~`restoreFrameBufferObject`~~
 - 移除 ~~`restoreViewport`~~
 - 移除 ~~`setFrameBufferObject`~~
-- 移除 ~~`setViewport`~~
+- 移除 ~~`setViewport`~~, 通过 `Renderer` 访问
 
 ### 新增 类 `cocos2d::CaptureScreenCallbackCommand`
 
@@ -64,13 +63,15 @@
 
 ### `cocos2d::Configuration`
 
-- 移除 ~~`purgeConfiguration`~~
-- 移除 ~~`sharedConfiguration`~~
-- 移除 ~~`getInfoAsMap`~~
+- 移除 ~~`purgeConfiguration`~~, 使用 `getInstance` 替代.
+- 移除 ~~`sharedConfiguration`~~, 使用 `destroyInstance` 替代.
 - 新增 `getMaxAttributes`
 
 
-### `cocos2d::CustomCommand` reform
+### `cocos2d::RenderCommand` 重构
+### `cocos2d::TriangleCommand` 重构
+### `cocos2d::CustomCommand` 重构
+### `cocos2d::MeshCommand` 重构
 
 ### `cocos2d::Director`
 
@@ -143,9 +144,10 @@
 
 ### `cocos2d::Label`
 
-- 移除 ~~`getCommonLineHeight`~~
-- 移除 ~~`getFontDefinition`~~
-- 移除 ~~`setFontDefinition`~~
+- 移除 ~~`create(const std::string &, const std::string &, float, const cocos2d::Size &, cocos2d::TextHAlignment, cocos2d::TextVAlignment)`~~
+- 移除 ~~`getCommonLineHeight`~~, 使用 `getLineHeight` 替代.
+- 移除 ~~`getFontDefinition`~~, 使用 `onTouchBegan` 替代.
+- 移除 ~~`setFontDefinition`~~, 使用 `onTouchBegan` 替代.
 - 新增 `setProgramState`
 
 ### `cocos2d::Layer`
@@ -164,10 +166,10 @@
 - 移除 ~~`isKeypadEnabled`~~
 - 移除 ~~`isSwallowsTouches`~~
 - 移除 ~~`isTouchEnabled`~~
-- 移除 ~~`keyBackClicked`~~
-- 移除 ~~`keyMenuClicked`~~
-- 移除 ~~`keyPressed`~~
-- 移除 ~~`keyReleased`~~
+- 移除 ~~`keyBackClicked`~~, 使用 `onKeyReleased` 替代.
+- 移除 ~~`keyMenuClicked`~~, 使用 `onKeyReleased` 替代.
+- 移除 ~~`keyPressed`~~, 使用 `onKeyPressed` 替代.
+- 移除 ~~`keyReleased`~~, 使用 `onKeyReleased` 替代.
 - 移除 ~~`registerWithTouchDispatcher`~~
 - 移除 ~~`setAccelerometerEnabled`~~
 - 移除 ~~`setAccelerometerInterval`~~
@@ -195,7 +197,6 @@
 
 - 移除 ~~`create(cocos2d::Ref *, cocos2d::SEL_MenuHandler)`~~
 - 移除 ~~`initWithTarget`~~
-- 移除 ~~`MenuItemAtlasFont`~~
 
 ### `cocos2d::MenuItemAtlasFont`
 
@@ -217,7 +218,7 @@
 - 移除 ~~`create(const std::string &, const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`~~
 - 移除 ~~`initWithNormalImage(const std::string &, const std::string &, const std::string &, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`~~
 
-### `cocos2d::MenuItemImage`
+### `cocos2d::MenuItemLabel`
 
 - 移除 ~~`create(cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`~~
 - 移除 ~~`initWithLabel(cocos2d::Node *, cocos2d::Ref *, cocos2d::SEL_MenuHandler)`~~
@@ -246,28 +247,28 @@
 ### `cocos2d::Node`
 
 - 移除 ~~`boundingBox`~~, 使用 `getBoundingBox` 替代.
-- 重命名 `getGLProgram` 为 `getProgramState`.
-- 移除 ~~`getGLProgramState`~~
+- 移除 ~~`getGLProgram`~~
+- 重命名 `getGLProgramState` 为 `getProgramState`.
 - 移除 ~~`getGLServerState`~~
-- 移除 ~~`getRotationX`~~
-- 移除 ~~`getRotationY`~~
+- 移除 ~~`getRotationX`~~, 使用 `getRotationSkewX` 替代
+- 移除 ~~`getRotationY`~~, 使用 `getRotationSkewY` 替代
 - 移除 ~~`getShaderProgram`~~
-- 移除 ~~`getVertexZ`~~
-- 移除 ~~`getZOrder`~~
+- 移除 ~~`getVertexZ`~~, 使用 `getPositionZ` 替代
+- 移除 ~~`getZOrder`~~, 使用 `getLocalZOrder` 替代
 - 移除 ~~`ignoreAnchorPointForPosition`~~, 使用 `isIgnoreAnchorPointForPosition`
-- 移除 ~~`nodeToParentTransform`~~, 使用 `getNodeToParentTransform`
-- 移除 ~~`nodeToWorldTransform`~~, 使用 `getNodeToWorldTransform`
-- 移除 ~~`numberOfRunningActions`~~, 使用 `getNumberOfRunningActions`
-- 移除 ~~`parentToNodeTransform`~~, 使用 `getParentToNodeTransform`
+- 移除 ~~`nodeToParentTransform`~~, 使用 `getNodeToParentTransform` 替代
+- 移除 ~~`nodeToWorldTransform`~~, 使用 `getNodeToWorldTransform` 替代
+- 移除 ~~`numberOfRunningActions`~~, 使用 `getNumberOfRunningActions` 替代
+- 移除 ~~`parentToNodeTransform`~~, 使用 `getParentToNodeTransform` 替代
 - 移除 ~~`pauseSchedulerAndActions`~~
-- 重命名 `setGLProgram` 为 `setProgramState`.
-- 移除 ~~`setGLProgramState`~~
+- 重命名 `setGLProgramState` 为 `setProgramState`.
+- 移除 ~~`setGLProgram`~~
 - 移除 ~~`setGLServerState`~~
-- 移除 ~~`setRotationX`~~
-- 移除 ~~`setRotationY`~~
+- 移除 ~~`setRotationX`~~, 使用 `setRotationSkewX` 替代
+- 移除 ~~`setRotationY`~~, 使用 `setRotationSkewY` 替代
 - 移除 ~~`setShaderProgram`~~
-- 移除 ~~`setVertexZ`~~
-- 移除 ~~`setZOrder`~~
+- 移除 ~~`setVertexZ`~~, 使用 `setPositionZ` 替代
+- 移除 ~~`setZOrder`~~, 使用 `setLocalZOrder` 替代
 - 移除 ~~`unscheduleAllSelectors`~~
 - 移除 ~~`worldToNodeTransform`~~, 使用 `getWorldToNodeTransform`
 
@@ -279,7 +280,7 @@
 
 - 移除 ~~`postStep`~~
 
-### 更新类 `cocos2d::Pass`
+### `cocos2d::Pass` 重构
 
 ### `cocos2d::PhysicsShape`
 
@@ -348,9 +349,8 @@
 ### `cocos2d::RenderTexture`
 
 - 移除 ~~`newCCImage`~~
-- 移除 ~~`newImage(bool)`~~
-- 新增 `newImage(std::function<void (Image *)>, bool)`
-- 移除 ~~`saveToFileAsNonPMA`~~
+- 移除 ~~`newImage(bool)`~~, 使用 `newImage(std::function<void (Image *)>, bool)` 替代
+- 移除 ~~`saveToFileAsNonPMA`~~, 使用 `saveToFile` 替代
 
 ### `cocos2d::Scene`
 
@@ -370,8 +370,8 @@
 
 ### `cocos2d::Sprite`
 
-- 移除 ~~`displayFrame`~~
-- 移除 ~~`getDisplayFrame`~~
+- 移除 ~~`displayFrame`~~, 使用 `getSpriteFrame` 替代
+- 移除 ~~`getDisplayFrame`~~, 使用 `getSpriteFrame` 替代
 - 新增 `getProgramState`
 - 拼写修复 `setStrechEnabled` 为 `setStretchEnabled`
 - 新增 `setVertexLayout`
@@ -380,9 +380,8 @@
 ### `cocos2d::Sprite3D`
 
 - 移除 ~~`getSkin`~~
-- 新增 `setProgramState`
 - 新增 `setVertexLayout`
-- 移除 ~~`setGLProgramState`~~ 
+- 移除 ~~`setGLProgramState`~~, 使用 `setProgramState` 替代
 - 移除 ~~`setGLProgram`~~ 
 
 ### `cocos2d::Sprite3DMaterial`
@@ -401,9 +400,9 @@
 - 新增 `getStateBlock`
 - 新增 `setMaterial`
 
-### `cocos2d::Texture2D`
+### `cocos2d::Texture2D` 重构
 
-- 重命名 `defaultAlphaPixelFormat` 为 `getDefaultAlphaPixelFormat`.
+- 移除 ~~`defaultAlphaPixelFormat`~~ 使用  `getDefaultAlphaPixelFormat` 替代.
 - 移除 ~~`bitsPerPixelForFormat()`~~, 使用 `getBitsPerPixelForFormat` 替代.
 - 签名变更`drawAtPoint(const cocos2d::Vec2 &, float)`
 - 签名变更`drawInRect(const cocos2d::Rect &, float)`
@@ -429,18 +428,18 @@
 
 - 移除 ~~`drawNumberOfQuads`~~
 - 移除 ~~`drawQuads`~~
-- 新增 getIndices
+- 新增 `getIndices`
 - 移除 ~~`listenRendererRecreated`~~
 
 ### `cocos2d::TextureCache`
 
-- 移除 ~~`destroyInstance`~~
-- 移除 ~~`getInstance`~~
+- 移除 ~~`destroyInstance`~~, 通过 `Director` 访问.
+- 移除 ~~`getInstance`~~, 通过 `Director` 访问.
 - 移除 ~~`purgeSharedTextureCache`~~
 - 移除 ~~`reloadAllTextures`~~
 - 移除 ~~`sharedTextureCache`~~
-- 移除 ~~`addUIImage`~~
-- 移除 ~~`textureForKey`~~
+- 移除 ~~`addUIImage`~~, 使用 `addImage` 替代.
+- 移除 ~~`textureForKey`~~, 使用 `getTextureForKey` 替代.
 
 
 ### `cocos2d::TextureCube`
@@ -466,9 +465,9 @@
 
 ### `cocos2d::TMXMapInfo`
 
-- 移除 ~~`formatWithTMXFile`~~
-- 移除 ~~`formatWithXML`~~
-- 移除 ~~`getStoringCharacters`~~
+- 移除 ~~`formatWithTMXFile`~~, 使用 `create` 替代.
+- 移除 ~~`formatWithXML`~~, 使用 `createWithXML` 替代.
+- 移除 ~~`getStoringCharacters`~~, 使用 `isStoringCharacters` 替代.
 
 ### `cocos2d::TMXObjectGroup`
 
