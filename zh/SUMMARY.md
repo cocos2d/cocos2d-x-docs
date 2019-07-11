@@ -7,7 +7,6 @@
   - [学习资源](about/learn.md)
   - [获取帮助](about/help.md)
   - [参与开发](about/how.md)
-
 - [基本概念](basic_concepts/index.md)
   - [导演(Director)](basic_concepts/director.md)
   - [场景(Scene)](basic_concepts/scene.md)
@@ -16,6 +15,11 @@
   - [序列(Sequence)](basic_concepts/sequences.md)
   - [节点关系](basic_concepts/parent_child.md)
   - [日志输出](basic_concepts/logging.md)
+- [**升级指南**](upgradeGuide/index.md)
+  - [范例](upgradeGuide/tutorials.md)
+    - [例1 Sprite及TriangleCommand教程](upgradeGuide/spriteTutorial.md)
+    - [例2 CustomCommand教程](upgradeGuide/customCommandTutorial.md)
+    - [例3 DepthStencil教程](upgradeGuide/depthStencilTutorial.md)
 
 ## 基本功能
 
