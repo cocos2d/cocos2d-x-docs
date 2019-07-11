@@ -12,5 +12,5 @@
 
 - 范例3
 
-  介绍 ClippingNode 及 Depth/Stencil 设置。
+  介绍如果通过 Renderer 设置全局状态。
 

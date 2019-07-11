@@ -15,14 +15,12 @@
   - [序列(Sequence)](basic_concepts/sequences.md)
   - [节点关系](basic_concepts/parent_child.md)
   - [日志输出](basic_concepts/logging.md)
+
 - [升级指南](upgradeGuide/index.md)
   - [范例](upgradeGuide/tutorials.md)
     - [例1 Sprite及TriangleCommand教程](upgradeGuide/spriteTutorial.md)
     - [例2 CustomCommand教程](upgradeGuide/customCommandTutorial.md)
-    - [例3 DepthStencil教程](upgradeGuide/depthStencilTutorial.md)
-  - [Device](upgradeGuide/device.md)
-  - [PipelineDescriptor](upgradeGuide/pipelineDescriptor.md)
-  - [Renderer](upgradeGuide/renderer.md)
+    - [例3 如何设置全局状态](upgradeGuide/globalStatus.md)
 
 ## 基本功能
 
