@@ -1,6 +1,6 @@
 # Overview
 
-V4 中改变全局状态的唯一途径就是通过 Renderer 对象。接下来将逐一分析如何通过 Renderer 设置全局状态及固定管线函数。
+V4 中改变全局状态的唯一途径就是通过 Renderer 对象。如开启深度测试。接下来将逐一分析如何通过 Renderer 设置全局状态及固定管线函数。
 
 # clear attachment
 
