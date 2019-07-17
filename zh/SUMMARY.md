@@ -8,7 +8,6 @@
   - [学习资源](about/learn.md)
   - [获取帮助](about/help.md)
   - [参与开发](about/how.md)
-
 - [基本概念](basic_concepts/index.md)
   - [导演(Director)](basic_concepts/director.md)
   - [场景(Scene)](basic_concepts/scene.md)
@@ -18,12 +17,14 @@
   - [节点关系](basic_concepts/parent_child.md)
   - [日志输出](basic_concepts/logging.md)
 
+- [升级指南](upgradeGuide/index.md)
+  - [范例](upgradeGuide/tutorials.md)
+    - [例1 Sprite及TriangleCommand教程](upgradeGuide/spriteTutorial.md)
+    - [例2 CustomCommand教程](upgradeGuide/customCommandTutorial.md)
+    - [例3 如何设置全局状态](upgradeGuide/globalStatus.md)
+
 ## 基本功能
 
-- [新特性(支持Metal)](metal/index.md)
-  - [Device](metal/device.md)
-  - [PipelineDescriptor](metal/pipelineDescriptor.md)
-  - [Renderer](metal/renderer.md)
 - [精灵(Sprite)](sprites/index.md)
   - [精灵创建](sprites/creating.md)
     - [使用图集](sprites/spritesheets.md)
