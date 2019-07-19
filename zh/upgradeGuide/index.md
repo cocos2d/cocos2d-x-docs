@@ -14,7 +14,7 @@ CMake的使用教程可以参考[CMake 指南](../installation/CMake-Guide.md)�
 
 # 改动点
 
-更详细的接口变化，请参考[API 改动]()。
+更详细的接口变化，请参考[API 改动](https://docs.cocos2d-x.org/api-ref/index.html)。
 
 ## Director
 

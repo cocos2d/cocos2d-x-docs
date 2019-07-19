@@ -9,15 +9,13 @@ At WWDC 2014, Apple introduced a new graphics technology, [Metal](https://develo
 - Windows: use `cocos` command or CMake
 - Linux: use `cocos` command or CMake
 
-The CMake tutorial can be found in the [CMake Guide] (../installation/CMake-Guide.md).
+A [CMake](../installation/CMake-Guide.md) tutorial is available.
 
-#改点
-
-For more detailed interface changes, please refer to [API Changes] ().
+For more detailed interface changes, please refer to [API Reference](https://docs.cocos2d-x.org/api-ref/index.html).
 
 ## Director
 
-1. Removed the following interface
+1. Removed the following interfaces
 
    ```c++
    CC_DEPRECATED_ATTRIBUTE static Director* sharedDirector();
@@ -37,7 +35,7 @@ For more detailed interface changes, please refer to [API Changes] ().
 
 ## Renderer
 
-The backend layer has been added under Renderer, where the metal-related adaptation files are placed under the metal folder, and the files related to OpenGL ES rendering are placed in the opengl folder. In principle, the graphics API under any platform is not allowed to be used directly except for the source code under the two folders metal and opengl.
+The backend layer has been added under Renderer, where the metal-related adaptation files are placed under the Metal folder, and the files related to OpenGL ES rendering are placed in the opengl folder. In principle, the graphics API under any platform is not allowed to be used directly except for the source code under the two folders metal and OpenGL.
 
 ```
 Renderer
@@ -63,13 +61,12 @@ Renderer
 │ CMakeLists.txt
 ```
 
-# Shader and Program
+## Shader and Program
+Added `GLProgramState`, `GLProgram`, and `backend::ProgramState`. [Example 1](spriteTutorial.md), [Example 2](customCommandTutorial.md) demonstrates how to create and use `backend::ProgramState`.
 
-Added GLProgramState and GLProgram, added backend::ProgramState. [Example 1] (spriteTutorial.md), [Example 2] (customCommandTutorial.md) demonstrates how to create and use backend::ProgramState.
+Metal uses [MSL](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf?language=objc#//apple_ref/doc/uid/TP40014364) as the shader development language. To support the OpenGL ES shader running on the Metal framework, V4 uses [glsl-optimizer](https://github.com/cocos2d/glsl-optimizer) to convert the OpenGL ES shader to a Metal MSL shader.
 
-Metal uses [MSL] (https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf?language=objc#//apple_ref/doc/uid/TP40014364) as the shader development language. To support the OpenGL ES shader running on the Metal framework, V4 uses [glsl-optimizer] (https://github.com/cocos2d/glsl-optimizer) to convert the OpenGL ES shader to a Metal MSL shader.
-
-V4 moves the shader file originally stored in `renderer/` path with ``ccShader_"` to the `renderer/shaders/` path, except that the shader file name is slightly modified (deleted `ccShader_`), The uniform and texture are explicitly declared in the shader file, not the attributes, uniform and texutre names predefined in GLProgram.
+V4 moves the shader file originally stored in `renderer/` path with `ccShader_` to the `renderer/shaders/` path, except that the shader file name is slightly modified (deleted `ccShader_`), The uniform and texture are explicitly declared in the shader file, not the attributes, uniform and texutre names predefined in `GLProgram`.
 
 ## Texture2D
 
@@ -98,6 +95,4 @@ V4 moves the shader file originally stored in `renderer/` path with ``ccShader_"
    Inline bool isRenderTarget() const;
    ```
 
-6. Remove the opengl texture object(`GLuint _name` ) and use `backend::Texture2DBackend* _texture` as the texture object.
-
-# **TO be continue...**
+6. Remove the opengl texture object(`GLuint _name`) and use `backend::Texture2DBackend* _texture` as the texture object.
