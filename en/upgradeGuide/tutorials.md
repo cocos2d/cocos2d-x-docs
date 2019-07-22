@@ -1,16 +1,15 @@
-# Overview
+# Tutorials
 
-本教程以范例的形式，介绍从 V3 升级到 V4 时接口的改动，以及如何使用 V4 接口，以帮助开发者熟悉和理解 V4 接口使用。
+This tutorial takes an example of how to make changes to the interface when upgrading from V3 to V4 and how to use the V4 interface to help developers become familiar with and understand the use of the V4 interface.
 
-- 范例1
+- Example 1
 
-  介绍 Sprite 及 TriangleCommand。
+   Introducing Sprite and TriangleCommand.
 
-- 范例2
+- Example 2
 
-  介绍 LayerColor 及 CustomCommand。
+   Introducing LayerColor and CustomCommand.
 
-- 范例3
+- Example 3
 
-  介绍如果通过 Renderer 设置全局状态。
-
+   Describes how to set the global state through the Renderer.

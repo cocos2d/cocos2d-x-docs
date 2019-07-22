@@ -1,21 +1,21 @@
-# Overview
+# Pipeline Descriptor Overview
 
-作为 `RenderCommand` 的一个私有成员，用于保存当前 `RenderCommand` 所使用的 [PrgramState](#ProgramSate)，[BlendDescriptor](#BlendDescriptor)， 以及 [VertexLayout](#VertexLayout)。
+As a private member of `RenderCommand`, it is used to save the [PrgramState](#ProgramSate), [BlendDescriptor](#BlendDescriptor), and [VertexLayout](#VertexLayout) used by the current `RenderCommand`.
 
 ```c++
 struct CC_DLL PipelineDescriptor
 {
-    backend::ProgramState*          programState = nullptr;
-    backend::BlendDescriptor        blendDescriptor;
-    backend::VertexLayout           vertexLayout;
+    backend::ProgramState* programState = nullptr;
+    backend::BlendDescriptor blendDescriptor;
+    backend::VertexLayout vertexLayout;
 };
 ```
 
 # ProgramSate
 
-## 创建 ProgramState
+## Create ProgramState
 
-创建 `ProgramState` 对象时，需要传入顶点和片元着色器。
+When creating a `ProgramState` object, you need to pass in the vertex and fragment shader.
 
 ```c++
 auto programState = new (std::nothrow) backend::ProgramState(vert, frag);
@@ -24,17 +24,17 @@ auto& pipelineDescriptor = _trianglesCommand.getPipelineDescriptor();
 pipelineDescriptor.programState = programState;
 ```
 
-## 设置 vertex buffer
+## Setting vertex buffer
 
 - TrianglesCommand
 
-  由于 TrianglesCommand batch 的机制，相邻多个 TrianglesCommand 可能会合并成一个。因此 vertex buffer 的创建不在 TrianglesCommand 里面管理，而是放在 Renderer 里通过 TriangleCommandBufferManager 自动管理。
+  Due to the mechanism of the `TrianglesCommand` batch, multiple adjacent `TrianglesCommands` may be merged into one. The creation of vertex buffer is not managed in the `TrianglesCommand`, but is automatically managed by the `TriangleCommandBufferManager` in the `Renderer`.
 
 - CustomCommand
 
   ```c++
-  uint16_t indices[6] = { 0, 1, 2, 2, 3, 0 };
-  V2F_C4B_T2F *_buffer = (V2F_C4B_T2F*)malloc(_bufferCapacity*sizeof(V2F_C4B_T2F));
+  unt16_t indices[6] = { 0, 1, 2, 2, 3, 0 };
+  V2F_C4B_T2F *_buffer = (V2F_C4B_T2F*) malloc(_bufferCapacity*sizeof(V2F_C4B_T2F));
   
   _customCommand.createVertexBuffer(sizeof(V2F_C4B_T2F), _bufferCapacity, CustomCommand::BufferUsage::DYNAMIC);
   _customCommand.createIndexBuffer(CustomCommand::IndexFormat::U_SHORT, sizeof(indices) / sizeof(indices[0]), CustomCommand::BufferUsage::STATIC);
@@ -43,16 +43,16 @@ pipelineDescriptor.programState = programState;
   _customCommand.updateIndexBuffer(indices, sizeof(indices));
   ```
 
-## 设置 Uniform
+## Setting up Uniform
 
-首先通过 ProgramState 对象获取 uniform location：
+First get the uniform location via the ProgramState object:
 
 ```c++
 auto mvpMatrixLocation = programState->getUniformLocation("u_MVPMatrix");
 auto textureLocation = programState->getUniformLocation("u_texture");
 ```
 
-接着根据 uniform location 设置 uniform data：
+Then set uniform data according to uniform location:
 
 ```c++
 const auto& projectionMat = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
@@ -61,13 +61,13 @@ programState->setUniform(mvpMatrixLocation, projectionMat.m, sizeof(projectionMa
 programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
 ```
 
-通过 location 设置 uniform 的优势在于，不必每次都通过 uniform name 查找 location，节省 CPU 开销。
+The advantage of setting uniform through location is that you don't have to look up the location through the uniform name every time, saving CPU overhead.
 
 ## backend
 
 - Set Uniform Buffer
 
-  Metal 中，vertex unifrom 和 fragment uniform 数据分别保存在 ProgramState 的 vertexUniformBuffer 及 fragmentUniformBuffer 中。
+  In Metal, vertex unifrom and fragment uniform data are stored in programState's vertexUniformBuffer and fragmentUniformBuffer respectively.
 
   ```c++
   // Uniform buffer is bound to index 1.
@@ -75,7 +75,7 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
   if(vertexUniformBuffer.size() > 0)
   {
     [_mtlRenderEncoder setVertexBytes:vertexUniformBuffer.data()
-                               length:vertexUniformBuffer.size() 
+                               Length:vertexUniformBuffer.size()
                               atIndex:1];
   }
   
@@ -83,12 +83,12 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
   if(fragmentUniformBuffer.size() > 0)
   {
     [_mtlRenderEncoder setFragmentBytes:fragmentUniformBuffer.data()
-                                 length:fragmentUniformBuffer.size()
+                                 Length:fragmentUniformBuffer.size()
                                 atIndex:1];
   }
   ```
 
-  OpenGL 中，uniform 数据分别保存在各自 location 所在的 VertexUniformInfos 中。
+  In OpenGL, the uniform data is stored in VertexUniformInfos where their respective locations are located.
 
   ```c++
   auto& uniformInfos = _programState->getVertexUniformInfos();
@@ -112,12 +112,11 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
                uniformInfo.type,
                (void*)iter.data.data());
   }
-          
   ```
 
 - Set Texture
 
-  对于 Metal， Texture 数据分别保存在 ProgramState 的 _vertexTextureInfos 和 _fragmentTextureInfos 中。
+  For Metal, Texture data is stored in ProgramState's _vertexTextureInfos and _fragmentTextureInfos, respectively.
 
   ```c++
   const auto& bindTextureInfos = (isVertex) ? _programState->getVertexTextureInfos() : _programState->getFragmentTextureInfos();
@@ -148,7 +147,7 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
   }
   ```
 
-  OpenGL 中，Texture 数据则保存在 ProgramState 的 _vertexTextureInfos 中。
+  In OpenGL, Texture data is stored in ProgramState's _vertexTextureInfos.
 
   ```c++
   const auto& textureInfo = _programState->getVertexTextureInfos();
@@ -175,13 +174,13 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
 
 - Set Vertex Buffer
 
-  以 CustomCommand 为例，通过 CommandBuffer 设置 VertexBuffer。
+  Take CustomCommand as an example, set VertexBuffer through CommandBuffer.
 
   ```c++
   _commandBuffer->setVertexBuffer(0, customCommand->getVertexBuffer());
   ```
 
-  对于 Metal，vertex buffer 总是绑定到 index 0：
+  For Metal, vertex buffer is always bound to index 0：
 
   ```c++
   // Vertex buffer is bound in index 0.
@@ -190,7 +189,7 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
                              atIndex:0];
   ```
 
-  对于 OpenGL，通过 VBO，关联顶点属性数据：
+  For OpenGL, associate the vertex attribute data with VBO:
 
   ```c++
   // Bind vertex buffers and set the attributes.
@@ -224,9 +223,9 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
   }
   ```
 
-  # BlendDescriptor
+# BlendDescriptor
 
-- 设置 Blend 函数
+- Set the Blend function
 
   ```c++
   backend::BlendDescriptor& blendDescriptor = _trianglesCommand.getPipelineDescriptor().blendDescriptor;
@@ -248,13 +247,13 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
   blendDescriptor.destinationAlphaBlendFactor = blendFunc.dst;
   ```
 
-- 创建 Blend 对象
+- Create a Blend function
 
   ```c++
   auto blendState = device->createBlendState(pipelineDescriptor.blendDescriptor);
   ```
 
-- 设置 Blend 对象到 Pipeline
+- Set the Blend object to the Pipeline
 
   ```c++
   backend::RenderPipelineDescriptor renderPipelineDescriptor;
@@ -265,7 +264,7 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
 
 - Apply BlendState
 
-  对于 Metal，blend 状态的设置最终是在 `RenderPipelineMTL::setBlendState` 函数中：
+  For Metal, the setting of the blend state is ultimately in the `RenderPipelineMTL::setBlendState` function:
 
   ```c++
   colorAttachmentDescriptor.blendingEnabled = _blendDescriptorMTL.blendEnabled;
@@ -280,7 +279,7 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
   colorAttachmentDescriptor.destinationAlphaBlendFactor = _blendDescriptorMTL.destinationAlphaBlendFactor;
   ```
 
-  对于 OpenGL，blend 状态的设置则在 `BlendStateGL::apply` 里：
+  For OpenGL, the setting of the blend state is in `BlendStateGL::apply`:
 
   ```c++
   if (_blendEnabled)
@@ -298,7 +297,7 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
 
 # VertexLayout
 
-- 记录每个顶点属性在 vertex buffer 中的 layout。
+- Record the layout of each vertex attribute in the vertex buffer.
 
   ```c++
   //set vertexLayout according to V3F_C4B_T2F structure
@@ -327,7 +326,7 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
 
 - Apply VertexLayout
 
-  在 Metal 中，vertex layout 通过 `RenderPipelineMTL::setVertexLayout` 设到 MTLRenderPipelineDescriptor。
+  In Metal, the vertex layout is set to MTLRenderPipelineDescriptor via `RenderPipelineMTL::setVertexLayout`.
 
   ```c++
   const auto& vertexLayouts = *descriptor.vertexLayouts;
@@ -354,13 +353,13 @@ programState->setTexture(textureLocation, 0, _texture->getBackendTexture());
   }
   ```
 
-  在 OpenGL 中，需要先更新 CommandBuffer 的 vertexLayout：
+  In OpenGL, you need to update the vertexLayout of the CommandBuffer first:
 
   ```c++
   _commandBuffer->updateVertexLayouts(renderPipelineDescriptor.vertexLayouts);
   ```
 
-  然后在 `CommandBufferGL::bindVertexBuffer` 根据 vertexLayout 绑定顶点属性数据。
+  Then bind the vertex attribute data according to vertexLayout in `CommandBufferGL::bindVertexBuffer`.
 
   ```c++
   glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer->getHandler());

@@ -1,10 +1,10 @@
-# Overview
+# Sprite Tutorial
 
-本范例主要用于演示 Sprite 在 V4 中的绘制流程，以帮助开发者熟悉和理解 V4 API 使用。
+This example is mainly used to demonstrate Sprite's drawing process in V4 to help developers understand and understand the V4 API usage.
 
-#创建 Sprite
+# Create Sprite
 
-Sprite 创建方式与 V3 一样，并未改动：
+Sprites are created in the same way as V3 and have not changed:
 
 ```c++
 auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -15,25 +15,25 @@ sprite->setPosition(Vec2(visibleSize / 2) + origin);
 this->addChild(sprite);
 ```
 
-接下来进入到 Sprite 内部，看看与 V3 相比，发生了哪些变化。
+Next, go inside the Sprite and see what happens compared to V3.
 
-## Shader 与 program
+## Shader and program
 
-在 V3，通过 `setGLProgramState` 为 Sprite 指定 shader。
+In V3, the shader is specified for the sprite via `setGLProgramState`.
 
 ```c++
 setGLProgramState(GLProgramState::getOrCreateWithGLProgramName(GLProgram::SHADER_NAME_POSITION_TEXTURE_COLOR_NO_MVP, texture));
 ```
 
-V4 移除了 GLProgramState，删除了在 app 中 直接使用 OpenGL ES API 的代码，OpenGL ES API 的使用只出现在 `renderer/backend/opengl` 文件中。
+V4 removed GLProgramState and removed the code that uses the OpenGL ES API directly in the app. The use of the OpenGL ES API only appears in the `renderer/backend/opengl` file.
 
-V4 在 RenderCommand 类中定义了一个 protected 成员 backend::PipelineDescriptor，用于保存 backend::ProgramState， backend::BlendDescriptor 及 backend::VertexLayout。
+V4 defines a protected member backend::PipelineDescriptor in the RenderCommand class to hold backend::ProgramState, backend::BlendDescriptor and backend::VertexLayout.
 
-因此在初始化阶段，需要完成以下三个步骤：
+So in the initialization phase, you need to complete the following three steps:
 
-1. 创建 backend::ProgramState
+1. Create backend::ProgramState
 
-   通过 `ProgramState(const std::string& vertexShader, const std::string& fragmentShader)` 创建 backend::ProgramState 对象，通过 backend::ProgramState 对象存储 uniform 和 texture，通过创建 `backend::Buffer` 存储顶点数据。
+    Create a backend::ProgramState object with `ProgramState(const std::string& vertexShader, const std::string& fragmentShader)`, store uniform and texture with the backend::ProgramState object, and store vertex data by creating `backend::Buffer`.
 
    ```c++
    auto& pipelineDescriptor = _trianglesCommand.getPipelineDescriptor();
@@ -45,7 +45,7 @@ V4 在 RenderCommand 类中定义了一个 protected 成员 backend::PipelineDes
    _alphaTextureLocation = pipelineDescriptor.programState->getUniformLocation("u_texture1");
    ```
 
-2. 创建 backend::VertexLayout
+2. Create backend::VertexLayout
 
    ```c++
    //set vertexLayout according to V3F_C4B_T2F structure
@@ -83,7 +83,7 @@ V4 在 RenderCommand 类中定义了一个 protected 成员 backend::PipelineDes
    vertexLayout.setLayout(sizeof(V3F_C4B_T2F), backend::VertexStepMode::VERTEX);
    ```
 
-3. 创建 backend::BlendDescriptor 
+3. Create backend::BlendDescriptor 
 
    ```c++
    backend::BlendDescriptor& blendDescriptor = _trianglesCommand.getPipelineDescriptor().blendDescriptor;
@@ -104,9 +104,9 @@ V4 在 RenderCommand 类中定义了一个 protected 成员 backend::PipelineDes
    }
    ```
 
-## 更新 shader
+## Update shader
 
-通过 `Node::setProgramState(backend::ProgramState* programState)`，可以动态替换 shader。例如，当需要开启 alpha test 时，由于OpenGL ES 2.0 不支持 `glAlphaFunc`，此时需要将原来的 fragment shader 替换成 positionTextureColorAlphaTest_frag。
+The shader can be dynamically replaced by `Node::setProgramState(backend::ProgramState* programState)`. For example, when you need to turn on alpha test, since OpenGL ES 2.0 does not support `glAlphaFunc`, you need to replace the original fragment shader with positionTextureColorAlphaTest_frag.
 
 ```c++
 auto programState = new (std::nothrow) backend::ProgramState(positionTextureColor_vert, positionTextureColorAlphaTest_frag);
@@ -116,7 +116,7 @@ programState->setUniform(alphaLocation, &alphaThreshold, sizeof(alphaThreshold))
 CC_SAFE_RELEASE_NULL(programState);
 ```
 
-## 更新 uniform
+## Update uniform
 
 ```c++
 const auto& projectionMat = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
@@ -125,7 +125,7 @@ if (programState && _mvpMatrixLocation)
     programState->setUniform(_mvpMatrixLocation, projectionMat.m, sizeof(projectionMat.m));
 ```
 
-## 更新 texture
+## Update texture
 
 ```c++
 if (_texture == nullptr || _texture->getBackendTexture() == nullptr)
@@ -152,4 +152,4 @@ _trianglesCommand.init(_globalZOrder,
 renderer->addCommand(&_trianglesCommand);
 ```
 
-为了减少 draw call 次数，在 Renderer 中会对 TriangleCommand 进行 batch。因此在 Sprite 中并未创建 backend::Buffer，而是放到了 Renderer 中。[范例2](./customCommandTutorial.md) 将演示当使用 CustomCommand 时如何创建 backend::Buffer 以及如何拷贝顶点数据。
+To reduce the number of draw calls, the TriangleCommand is batched in the Renderer. So instead of creating a `backend::Buffer` in the Sprite, it is placed in the Renderer. [Example 2](./customCommandTutorial.md) will demonstrate how to create backend::Buffer and how to copy vertex data when using CustomCommand.

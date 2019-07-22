@@ -1,22 +1,22 @@
-# Overview
+# Global Status Overview
 
-V4 中改变全局状态的唯一途径就是通过 Renderer 对象。如开启深度测试。接下来将逐一分析如何通过 Renderer 设置全局状态及固定管线函数。
+The only way to change the global state in V4 is through the `Renderer` object. For example, turn on the depth test. Next, we will analyze how to set the global state and fixed pipeline functions through the Renderer.
 
 # clear attachment
 
-通过 `ClearFlag` 指定需要清空的缓冲区
+Specify the buffer to be emptied by `ClearFlag`
 
 ```c++
-_renderer->clear(ClearFlag::ALL, // Clear color, depth and stencil buffer. 
-				_clearColor, 	// the color value used when the color buffer is cleared
-				1, // the depth value used when the depth buffer is cleared 
-				0, // the index used when the stencil buffer is cleared 
-				-10000.0); // specifies the globalOrder value
+_renderer->clear(ClearFlag::ALL, // Clear color, depth and stencil buffer.
+  _clearColor, // the color value used when the color buffer is cleared
+  1, // the depth value used when the depth buffer is cleared
+  0, // the index used when the stencil buffer is cleared
+  -10000.0); // specify the globalOrder value
 ```
 
-# 深度测试
+# Depth Test
 
-在初始化函数中，设置回调函数，用于保存和恢复原先的全局状态。
+In the initialization function, set a callback function to save and restore the original global state.
 
 ```c++
 void Demo::init()
@@ -31,16 +31,16 @@ void Demo::init()
   ```c++
   void Demo::onBeforeDraw()
   {
-      auto renderer = Director::getInstance()->getRenderer();
-      // manually save the global state
-    	_oldDepthTestEnabled = renderer->getDepthTest();
-    	_oldDepthWriteMask = renderer->getDepthWrite();
-    	_oldDepthCmpFunc = renderer->getDepthCompareFunction();
-  	  ... //store other global state, such as cull mode.
-      renderer->setDepthTest(true);
-  	  renderer->setDepthWrite(true);
-    	renderer->setDepthCompareFunction(backend::CompareFunction::LESS_EQUAL);
-    	... //do additional operations.
+    auto renderer = Director::getInstance()->getRenderer();
+    // manually save the global state
+    _oldDepthTestEnabled = renderer->getDepthTest();
+    _oldDepthWriteMask = renderer->getDepthWrite();
+    _oldDepthCmpFunc = renderer->getDepthCompareFunction();
+  ... // store other global state, such as cull mode.
+    renderer->setDepthTest(true);
+    renderer->setDepthWrite(true);
+    renderer->setDepthCompareFunction(backend::CompareFunction::LESS_EQUAL);
+    ... //do additional operations.
   }
   ```
 
@@ -49,18 +49,18 @@ void Demo::init()
   ```c++
   void Demo::onAfterDraw()
   {
-      auto renderer = Director::getInstance()->getRenderer();
-   		// manually restore the global state
-    	renderer->setDepthTest(_oldDepthTestEnabled);
-    	renderer->setDepthWrite(_oldDepthWriteMask);
-  	  renderer->setDepthCompareFunction(_oldDepthCmpFunc);
-    	... //restore other global state
+    auto renderer = Director::getInstance()->getRenderer();
+    // manually restore the global state
+    renderer->setDepthTest(_oldDepthTestEnabled);
+    renderer->setDepthWrite(_oldDepthWriteMask);
+    renderer->setDepthCompareFunction(_oldDepthCmpFunc);
+    ...restore other global state
   }
   ```
 
-# 模板测试
+# Stencil Test
 
-与[深度测试](#深度测试)一样，设置用于保存和恢复原先全局状态的回调函数。
+As with [Depth Test](#Depth Test), set the callback function to save and restore the original global state.
 
 ```c++
 void Demo::init()
@@ -85,16 +85,16 @@ void Demo::init()
       _oldStencilFail = renderer->getStencilFailureOperation();
       _oldStencilPassDepthFail = renderer->getStencilPassDepthFailureOperation();
       _oldStencilPassDepthPass = renderer->getStencilDepthPassOperation();
-    	... // save other global states
+    ... // save other global states
   
       // set stencil states
       renderer->setStencilTest(true);
       renderer->setStencilWriteMask(_writeMask);
-      renderer->setStencilCompareFunction(_compareFunction, 
-                                          _refValue, 
+      renderer->setStencilCompareFunction(_compareFunction,
+                                          _refValue,
                                           _readMask);
       renderer->setStencilOperation(_sfailOp,
-                                    _zfailOp, 
+                                    _zfailOp,
                                     _zpassOp);
   }
   ```
@@ -106,11 +106,11 @@ void Demo::init()
   {
       // manually restore the stencil state
       auto renderer = Director::getInstance()->getRenderer();
-      renderer->setStencilCompareFunction(_oldStencilFunc, 
-                                          _oldStencilRef, 
+      renderer->setStencilCompareFunction(_oldStencilFunc,
+                                          _oldStencilRef,
                                           _oldStencilReadMask);
   
-      renderer->setStencilOperation(_oldFail, 
+      renderer->setStencilOperation(_oldFail,
                                     _oldPassDepthFail,
                                     _oldPassDepthPass);
   
@@ -125,7 +125,7 @@ void Demo::init()
 # Viewport
 
 ```c++
-//保存当前 viewport
+// save current viewport
 _oldViewport = renderer->getViewport(); 
 renderer->setViewPort(viewport.origin.x, 
                       viewport.origin.y, 
@@ -201,8 +201,3 @@ void Demo::init()
                             _oldDepthAttachment, 
                             _oldStencilAttachment);
   ```
-
-  
-
-
-

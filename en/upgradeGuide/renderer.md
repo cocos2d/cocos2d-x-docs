@@ -1,36 +1,37 @@
-# Overview
+# Renderer
 
-与V3相比，V4版本下的 Renderer 变化主要体现在以下三大部分：[初始化](#初始化)，[渲染](#渲染)，[全局状态设置](#全局状态设置)。
+Compared with V3, the Renderer changes in V4 are mainly reflected in the following three parts: [Initialization](#Initialization), [Rendering](#Rendering), [Global State Setting](#Global State Setting).
 
-# 初始化
+# Initialization
 
-## 初始化 Triple Buffering
+## Initialization Triple Buffering
 
-与 OpenGL 状态机机制不同的是，在一帧开始绘制之前，Metal 通过 CommandQueue 创建 CommandBuffer，由 RenderCommandEncoder 将一条条 GPU 指令添加到 CommandBuffer中，最终在结束该帧绘制时，通过提交 CommandBuffer 的方式，通知 GPU 执行。
+Unlike the OpenGL state machine mechanism, before a frame starts drawing, Metal creates a CommandBuffer through the CommandQueue, and the RenderCommandEncoder adds a GPU instruction to the CommandBuffer. Finally, when the frame is drawn, the GPU is notified by submitting the CommandBuffer. carried out.
 
-对于需要频繁更新 Buffer 的渲染情景， 可能存在 CPU 执行比 GPU 快，导致上一帧提交的 CommandBuffer 还未被 GPU 执行完，下一帧 CPU 就已经更新了 Buffer 数据。针对这种情况，Renderer 中实现了 triple buffering 机制。
+For rendering scenarios where Buffers need to be updated frequently, there may be CPU execution faster than the GPU, causing the CommandBuffer submitted in the previous frame to be unexecuted by the GPU, and the next frame CPU has updated the Buffer data. In this case, the triple buffering mechanism is implemented in Renderer.
 
 ```c++
-//对于复杂的场景，预分配的 Buffer 大小可能不够 TriangleCommand batch，通过 TriangleCommandBufferManager 可以实现动态扩展
+// For complex scenes, the pre-allocated Buffer size may not be enough. TriangleCommand 
+// batch, dynamic expansion through TriangleCommandBufferManager
 _triangleCommandBufferManager.init(); 
 _vertexBuffer = _triangleCommandBufferManager.getVertexBuffer();
 _indexBuffer = _triangleCommandBufferManager.getIndexBuffer();
 ```
 
-## 创建 CommandBuffer
+## Create CommandBuffer
 
-与 GPU 渲染相关的状态，都是通过 CommandBuffer 设置到 GPU 渲染管线中。
+The state associated with GPU rendering is set to the GPU rendering pipeline via CommandBuffer.
 
 ```c++
 auto device = backend::Device::getInstance();
 _commandBuffer = device->newCommandBuffer();
 ```
 
-# 渲染
+# Rendering
 
 ## 清屏
 
-在每帧绘制之前设置清屏操作，通过 ClearFlag 指定需要清除的缓冲区。
+Set the clear screen operation before each frame is drawn, and specify the buffer to be cleared by ClearFlag.
 
 ```c++
 Color4F color(0.f, 0.f, 0.f, 0.f);
@@ -41,7 +42,7 @@ renderer->clear(ClearFlag::COLOR, //只清除颜色缓冲区
                 _globalZOrder);
 ```
 
-需要注意的是，如果需要清除 off-screen 缓冲区，需要事先设置 [RenderTarget](#RenderToTexture)。
+  Note: if you need to clear the off-screen buffer, you need to set [RenderTarget](#RenderToTexture) in advance.
 
 ```c++
 auto renderer = Director::getInstance()->getRenderer();
@@ -62,26 +63,26 @@ renderer->addCommand(&_afterClearAttachmentCommand);
 
 ### beginFrame
 
-标记一帧的开始。
+Mark the beginning of a frame.
 
-对于Metal，
+For Metal,
 
-1. 每帧会创建一个 MTLCommandBuffer，并加入到 MTLCommandQueue 队列中。
-2. 更新 tripple buffering。
+1. An MTLCommandBuffer is created for each frame and added to the MTLCommandQueue queue.
+2. Update tripple buffering.
 
 ### beginRenderPass
 
-每个 RenderCommand 对应一个 RenderPass，beginRenderPass表示 RenderPass 的开始，用于设置渲染管线状态，如设置 attachment，设置 viewport，设置 depth/stencil 状态等。当结束RenderPass的，需要调用 [endRenderPass](#endRenderPass)。
+Each RenderCommand corresponds to a RenderPass, and beginRenderPass represents the start of RenderPass, which is used to set the rendering pipeline state, such as setting attachment, setting viewport, setting depth/stencil state, and so on. When ending RenderPass, you need to call [endRenderPass](#endRenderPass).
 
 ### endRenderPass
 
-释放资源。
+Release resources.
 
 ### endFrame
 
-结束一帧的绘制，清空缓存状态。
+End the drawing of one frame and clear the cache state.
 
-## 截屏
+## Screen capture
 
 ```c++
 CaptureScreenCallbackCommand _captureScreenCommand;
@@ -90,9 +91,9 @@ _captureScreenCommand.func = std::bind(onCaptureScreen, std::placeholders::_1, s
 renderer->addCommand(&_captureScreenCommand);
 ```
 
-# 全局状态设置
+# Global status setting
 
-常见的设置包括：viewport， scissor Rectangle，depth，stencil，renderTarget等。
+Common settings include: viewport, scissor Rectangle, depth, stencil, renderTarget, and more.
 
 - viewport
 
@@ -143,7 +144,7 @@ renderer->addCommand(&_captureScreenCommand);
 
   
 
-  当未指定 color/depth/stencil attachment texture 时，采用系统默认提供的 attachment texture，否则使用用户指定的 attachment texture。需要注意的是，当 texture 用作 render target 时，需要指定 textureUsage 为 RENDER_TARGET。
+  When the color/depth/stencil attachment texture is not specified, the attachment texture provided by the system is used by default, otherwise the user-specified attachment texture is used. Note that when texture is used as a render target, you need to specify textureUsage to be RENDER_TARGET.
 
   ```c++
   backend::TextureDescriptor descriptor;
@@ -175,4 +176,3 @@ renderer->addCommand(&_captureScreenCommand);
   };
   renderer->addCommand(&_afterClearAttachmentCommand);
   ```
-

@@ -19,16 +19,16 @@ For more detailed interface changes, please refer to [API Reference](https://doc
 
    ```c++
    CC_DEPRECATED_ATTRIBUTE static Director* sharedDirector();
-   Void setAlphaBlending(bool on);
-   Void setDepthTest(bool on);
-   Void pushProjectionMatrix(size_t index);
-   Void popProjectionMatrix(size_t index);
-   Void loadProjectionIdentityMatrix(size_t index);
-   Void loadProjectionMatrix(const Mat4& mat, size_t index);
-   Void multiplyProjectionMatrix(const Mat4& mat, size_t index);
-   Const Mat4& getProjectionMatrix(size_t index) const;
-   Void initProjectionMatrixStack(size_t stackCount);
-   Size_t getProjectionMatrixStackSize();
+   void setAlphaBlending(bool on);
+   void setDepthTest(bool on);
+   void pushProjectionMatrix(size_t index);
+   void popProjectionMatrix(size_t index);
+   void loadProjectionIdentityMatrix(size_t index);
+   void loadProjectionMatrix(const Mat4& mat, size_t index);
+   void multiplyProjectionMatrix(const Mat4& mat, size_t index);
+   const Mat4& getProjectionMatrix(size_t index) const;
+   void initProjectionMatrixStack(size_t stackCount);
+   size_t getProjectionMatrixStackSize();
    ```
 
 2. Removed the `void setDepthTest(bool on)` interface, set by `Director::getInstance()->getRenderer()->setDepthTest(true) `.
@@ -83,16 +83,16 @@ V4 moves the shader file originally stored in `renderer/` path with `ccShader_` 
    CC_DEPRECATED_ATTRIBUTE unsigned int bitsPerPixelForFormat() const;
    CC_DEPRECATED_ATTRIBUTE unsigned int bitsPerPixelForFormat(Texture2D::PixelFormat format) const;
    GLuint getName() const;
-   Void setGLProgram(GLProgram* program);
+   void setGLProgram(GLProgram* program);
    GLProgram* getGLProgram() const;
    ```
 
 5. Added the following interface to set the render texture.
 
    ```c++
-   Bool initWithBackendTexture(backend::TextureBackend* texture);
-   Void setRenderTarget(bool renderTarget);
-   Inline bool isRenderTarget() const;
+   bool initWithBackendTexture(backend::TextureBackend* texture);
+   void setRenderTarget(bool renderTarget);
+   inline bool isRenderTarget() const;
    ```
 
-6. Remove the opengl texture object(`GLuint _name`) and use `backend::Texture2DBackend* _texture` as the texture object.
+6. Remove the OpenGL texture object(`GLuint _name`) and use `backend::Texture2DBackend* _texture` as the texture object.

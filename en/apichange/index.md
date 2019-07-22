@@ -1,5 +1,4 @@
-# 如何从旧版本迁移
+# How to migrate from an older version
 
-## 从V3迁移到V4
-
-- [V4 API 变更](./api_change_v4.md)
+## Migrating from V3 to V4
+- [V4 API Changes](./api_change_v4.md)

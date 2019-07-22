@@ -1,69 +1,68 @@
-# Overview
+# CustomCommand Tutorial
+This example uses `CreateColor` as an example to demonstrate how to use `CustomCommand` to become familiar with and understand __Cocos2d-x V4__ API usage.
 
-本范例以创建 LayerColor 为例，演示如何使用 CustomCommand，以帮助开发者熟悉和理解 V4 API 使用。
-
-# 创建 LayerColor
+# Create LayerColor
 
 ```c++
-auto layerColor = LayerColor::create(Color4B::RED, 
-                                     visibleSize.width, 
+auto layerColor = LayerColor::create(Color4B::RED,
+                                     visibleSize.width,
                                      visibleSize.height);
 ```
 
-接下来进入到 LayerColor 类内部，看看与 V3 相比，发生了哪些变化。
+Next, go inside the LayerColor class and see what happens compared to V3.
 
-在 V3，创建 shader 过程如下：
+In V3, the process of creating a shader is as follows:
 
 ```c++
 setGLProgramState(GLProgramState::getOrCreateWithGLProgramName(GLProgram::SHADER_NAME_POSITION_COLOR_NO_MVP));
 ```
 
-与[范例1](spriteTutorial.md)一样，在初始化阶段，V4 需要完成以下几个步骤：
+As with [Example 1](spriteTutorial.md), during the initialization phase, V4 needs to complete the following steps:
 
-1. 创建 backend::ProgramState
+1. Create backend::ProgramState
 
    ```c++
    auto& pipelineDescriptor = _customCommand.getPipelineDescriptor();
-   _programState = new (std::nothrow) backend::ProgramState(positionColor_vert, 
+   _programState = new (std::nothrow) backend::ProgramState(positionColor_vert,
                                                             positionColor_frag);
    pipelineDescriptor.programState = _programState;
    _mvpMatrixLocation = pipelineDescriptor.programState->getUniformLocation("u_MVPMatrix");
    ```
 
-2. 创建 backend::VertexLayout
+2. Create backend::VertexLayout
 
    ```c++
    auto& vertexLayout = _customCommand.getPipelineDescriptor().vertexLayout;
    const auto& attributeInfo = _programState->getProgram()->getActiveAttributes();
    auto iter = attributeInfo.find("a_position");
-   if(iter != attributeInfo.end())
+   if (iter != attributeInfo.end())
    {
-       vertexLayout.setAttribute("a_position", 
-                                 iter->second.location, 
-                                 backend::VertexFormat::FLOAT3, 
-                                 0, 
-                                 false);
+       vertexLayout.setAttribute("a_position",
+                                 Iter->second.location,
+                                 Backend::VertexFormat::FLOAT3,
+                                 0,
+                                 False);
    }
    iter = attributeInfo.find("a_color");
-   if(iter != attributeInfo.end())
+   if (iter != attributeInfo.end())
    {
-       vertexLayout.setAttribute("a_color", 
-                                 iter->second.location, 
-                                 backend::VertexFormat::FLOAT4,
-                                 sizeof(_vertexData[0].vertices), 
-                                 false);
+       vertexLayout.setAttribute("a_color",
+                                 Iter->second.location,
+                                 Backend::VertexFormat::FLOAT4,
+                                 Sizeof(_vertexData[0].vertices),
+                                 False);
    }
    vertexLayout.setLayout(sizeof(_vertexData[0]), backend::VertexStepMode::VERTEX);
    ```
 
-3. 创建 backend::BlendDescriptor
+3. Create backend::BlendDescriptor
 
-   CustomCommand 常见的初始化方式有两种：`CustomCommand::init(float globalZOrder)` 和 `CustomCommand::init(float globalZOrder, const BlendFunc& blendFunc)`。因此对于第一种，你需要在手动设置 Blend 状态：
+   `CustomCommand` has two common initialization methods: `CustomCommand::init(float globalZOrder)` and `CustomCommand::init(float globalZOrder, const BlendFunc& blendFunc)`. For the first one, you need to manually set the __blend state__:
 
    ```c++
    backend::BlendDescriptor& blendDescriptor = _customCommand.getPipelineDescriptor().blendDescriptor;
    blendDescriptor.blendEnabled = true;
-   if (_blendFunc == BlendFunc::ALPHA_NON_PREMULTIPLIED)
+   If (_blendFunc == BlendFunc::ALPHA_NON_PREMULTIPLIED)
    {
        blendDescriptor.sourceRGBBlendFactor = backend::BlendFactor::SRC_ALPHA;
        blendDescriptor.destinationRGBBlendFactor = backend::BlendFactor::ONE_MINUS_SRC_ALPHA;
@@ -79,14 +78,14 @@ setGLProgramState(GLProgramState::getOrCreateWithGLProgramName(GLProgram::SHADER
    }
    ```
 
-   对于第二种初始化方式，需要指定 BlendFunc 即可，CustomCommand 初始化函数会根据 BlendFunc 设置对应的 Blend 状态。
+   For the second initialization method, you need to specify `BlendFunc`, and then the `CustomCommand` initialization function will set the corresponding __blend state__ according to `BlendFunc`.
 
    ```c++
    _blendFunc = BlendFunc::ALPHA_PREMULTIPLIED;
    _customCommand.init(_globalZOrder, _blendFunc);
    ```
 
-4. 创建 backend::Buffer
+4. Create backend::Buffer
 
    ```c++
    _customCommand.createIndexBuffer(CustomCommand::IndexFormat::U_SHORT, //index type format
@@ -98,32 +97,31 @@ setGLProgramState(GLProgramState::getOrCreateWithGLProgramName(GLProgram::SHADER
    _customCommand.createVertexBuffer(sizeof(_vertexData[0]), //vertex size
                                      4, //vertex count
                                      CustomCommand::BufferUsage::DYNAMIC);
-   
    _customCommand.setDrawType(CustomCommand::DrawType::ELEMENT);
    _customCommand.setPrimitiveType(CustomCommand::PrimitiveType::TRIANGLE);
    ```
 
-   因为 index 数据在运行过程中并不会改变，所以在创建 index buffer 时，指定 bufferUsage 为 static，并在初始化阶段更新 index buffer。vertex buffer 数据需要动态更新，参考[更新 Vertex buffer](#更新 Vertex buffer)。
+   Because the index data does not change during the run, when the index buffer is created, specify bufferUsage as static and update the index buffer during the initialization phase. The vertex buffer data needs to be updated dynamically. Refer to [Update Vertex buffer](#Update Vertex buffer).
 
-## 更新 Unifrom
+## Update Unifrom
 
 ```c++
 cocos2d::Mat4 projectionMat = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
 auto& pipelineDescriptor = _customCommand.getPipelineDescriptor();
-pipelineDescriptor.programState->setUniform(_mvpMatrixLocation, 
-                                            projectionMat.m, 
-                                            sizeof(projectionMat.m));
+pipelineDescriptor.programState->setUniform(_mvpMatrixLocation,
+                                            projectionMat.m,
+                                            Sizeof(projectionMat.m));
 ```
 
-## 更新 Vertex buffer
+## Update Vertex buffer
 
-CommandBuffer 提供了 `updateVertexBuffer` 接口用于更新顶点缓冲区数据。
+CommandBuffer provides the `updateVertexBuffer` interface for updating vertex buffer data.
 
 ```c++
 _customCommand.updateVertexBuffer(_vertexData, sizeof(_vertexData));
 ```
 
-如果需要更新 vertex buffer 的子块，可以使用 `CustomCommand::updateVertexBuffer(void* data, unsigned int offset, unsigned int length)` 传入偏移量即可。
+If you need to update the sub-block of vertex buffer, you can use `CustomCommand::updateVertexBuffer(void* data, unsigned int offset, unsigned int length)` to pass in the offset.
 
 ## addCommand
 
