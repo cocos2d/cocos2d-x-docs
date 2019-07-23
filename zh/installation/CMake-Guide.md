@@ -55,7 +55,7 @@ Cocos2d-x 决定自 3.17 版本开始，支持 CMake 的全平台构建。支持
 cd cocos2d-x
 mkdir linux-build && cd linux-build
 cmake ..
-make -j 4
+cmake --build .
 ``` 
 在执行 `make -j 4` 命令之前，可以执行 `make help` 查看所有的构建目标，使用 `make <target>` 构建一个特定的目标。
 
@@ -100,6 +100,7 @@ PROP_BUILD_TYPE=ndk-build
 cd cocos2d-x
 mkdir win32-build && cd win32-build
 cmake .. -G"Visual Studio 15 2017"
+cmake --build . 
 ```
 以上命令使用 CMake 生成 Cocos2d-x 测试项目的 Visual Studio 2017 工程。生成后，在文件浏览器中找到 cocos2d-x/win32-build 目录，双击打开 __Cocos2d-x.sln__。设置 cpp-tests 为启动项目，即可正常编译运行。
 
@@ -136,6 +137,177 @@ cmake .. -G"Visual Studio 15 2017"
     open bin/TemplateCpp.app
     ```
 -->
+## 常见问题
+
+
+
+### 如何添加 `C++` 源码?
+
+一般我们会把游戏相关的源码要放在 `Classes/` 目录下. 如果只做这一步是, 我们可能会遇到类似的编译错误.
+
+```
+__/**.cpp:__: undefined reference to `******'
+```
+
+我们还需要在 `CMakeLists.txt` 中添加我们的源码路径
+
+```diff
+@@ -52,10 +52,12 @@ endif()
+ list(APPEND GAME_SOURCE
+      Classes/AppDelegate.cpp
+      Classes/HelloWorldScene.cpp
++     Classes/**/*.cpp
+      )
+ list(APPEND GAME_HEADER
+      Classes/AppDelegate.h
+      Classes/HelloWorldScene.h
++     Classes/**/*.h
+      )
+ 
+```
+
+然后重新更新 *本地工程文件* 
+
+```bash
+~/Projects/MyCppGame/build$ cmake ..
+```
+
+### 如何添加 资源(图片,`shader`,字体等) 文件到项目?
+
+
+在不同的平台上, IDE 管理资源的方式会有差异. 好在 CMake 已经帮我们做了大部分工作. 我们需要做的就是把准备好的资源放到 `Resources/` 目录下.
+
+但是, 在 Mac, Windows 和 Linux 上您可能还是会经常遇到类似于
+```log
+Error while loading: 'HelloWorld2.png'
+```
+的报错. 
+
+我们已经更新了资源, 报错还是出现了, 这很让人困惑. 
+
+如在工程目录中执行下面命令
+
+```bash
+~/Projects/MyCppGame$ find . -name Resources
+```
+会发现 有两个 `Resources/` 目录
+```
+./Resources
+./build/bin/MyCppGame/Resources
+```
+
+其中 第二个 目录是前者的一个副本, 如果变更不一致的情形就会存在同步问题. 新增资源找不到也是一种同步问题.
+
+在 iOS,Android 平台, 生成的*目标对象*是一个程序包. 除了可执行文件,还包括了所需要的资源文件. 资源文件会和可执行程序一起发布, 所以不再依赖原本的资源文件(`Resources/`目录中的内容). 但是 在Windows和Linux上, 生成的*目标对象* 只有一个*可执行文件*, 并不包含资源文件. 比如在Windows上就只有一个`MyCppGame.exe`文件. 为了让*可执行文件*能够找到资源, 我们需要把整个 `Resources/` 拷贝到 和它同一个目录中.
+
+当前我们并没有提供给开发者 拷贝资源文件的 接口, 而是通过
+`CMake` 把这个过程作为一个钩子交给了 本地构建工具. 
+
+Cocos2d-x 提供了类似与下面代码片段的过程
+
+```cmake
+add_custom_command(TARGET MyCppGame POST_BUILD
+                COMMAND cmake -E copy_directory ./Resources ./build/bin/MyCppGame/Resources
+            )
+```
+这里的重点在 `POST_BUILD`. 只有触发了`Build` 才会执行 `POST_BUILD`. 如果源文件发生了变化, 在编译完成后就会触发 拷贝资源的动作. 这里有一个问题, 如果资源文件发生了变化,但是源码没有变化, 拷贝动作会被触发吗? 答案是:不会. 这就是运行时找不到新增资源的原因. 
+
+了解了导致错误的原因, 解决这个问题就不会很难. 一个简单的解决办法就是修改 `Classes/` 中的任意源码(比如添加空行,然后删除,保存), 从而触发 `Build` 和 `POST_BUILD`. 或者通过其他命名手动同步两个文件夹. 
+
+在 Mac 平台也会有相似的问题, 导致问题的原因差异不大.  Mac 项目不需要额外的拷贝, 只需要把 `Resources/` 中的文件标记为 "资源文件". 但这一步是在生成 `cmake ../ -GXcode` 时执行的. 后续 资源文件的更新不会同步到 `Xcode` 工程文件. 解决这个问题的方法也很简单, 重新执行 `cmake` 更新 `Xcode` 工程文件. 
+
+```bash
+~/Projects/MyCppGame/build$ cmake ..
+```
+
+#### 添加字体资源
+
+添加字体资源和添加图片资源的操作是类似的. 和处理图片的过程相似, 就是把 字体 添加到 `Resources/fonts` 目录. 
+
+**如果要在 iOS 上添加字体, 则需要一个额外的步骤.**
+
+在 `proj.ios_mac/ios/Info.plist` 中添加 `UIAppFonts`.
+```diff
+@@ -29,7 +29,9 @@
+     <key>LSRequiresIPhoneOS</key>
+     <true/>
+     <key>UIAppFonts</key>
+-    <array/>
++    <array>
++           <string>fonts/Scissor Cuts.ttf</string>
++    </array>
+     <key>UILaunchStoryboardName</key>
+```
+更新工程文件
+```bash
+~/Projects/MyCppGame/build$ cmake ..
+```
+
+### 如何添加 `Lua` 源码?
+
+可以参考 图片资源的更新方法.
+
+### 如何使用第三方代码库?
+
+有的时候我们需要复用已有的代码库 或者更新 第三方代码库. 我们可以使用 CMake 提供的指令 [`add_subdirectory`](https://cmake.org/cmake/help/v3.0/command/add_subdirectory.html) 导入其他的 CMake 工程. 
+
+> 如果这个代码库不包含可用的`CMakeLists.txt`, 我们需要先把这个工程改造为一个 CMake 工程. 
+
+以`nanomsg`为例, 在下载好源码之后, 执行
+
+```bash
+mkdir deps
+cp -r ~/Downloads/nanomsg-1.1.5 deps/
+```
+
+在 CMakeLists.txt 中添加下面的内容
+
+```diff
+@@ -129,6 +131,16 @@ target_include_directories(${APP_NAME}
+         PRIVATE ${COCOS2DX_ROOT_PATH}/cocos/audio/include/
+ )
+ 
++set(NN_STATIC_LIB ON)
++set(NN_ENABLE_DOC OFF)
++set(NN_TESTS OFF)
++set(NN_TOOLS OFF)
+
++add_subdirectory(deps/nanomsg-1.1.5)
+
++target_link_libraries(${APP_NAME} nanomsg)
++
++target_include_directories(${APP_NAME} PRIVATE deps/nanomsg-1.1.5/src)
++
++
+ # mark app resources
+ setup_cocos_app_config(${APP_NAME})
+
+```
+这里的前4行的`set`的作用是设置`nanomsg`的编译选项.
+
+> 更详细的介绍可以参考 [`target_include_directories`](https://cmake.org/cmake/help/v3.0/command/target_include_directories.html) 和 [`target_link_libraries`](https://cmake.org/cmake/help/v3.0/command/target_link_libraries.html).
+
+之后我们就可以在代码中使用这个库了 
+
+```diff
+@@ -24,6 +24,10 @@
+#include "HelloWorldScene.h"
++#include "nn.h"
+```
+
+### 如何编辑 iOS 工程的 `Info.plist`?
+
+和修改字体的过程一样, 我们需要修改 `proj.ios_mac/ios/Info.plist`. 需要注意的是, 这个文件并没有被 XCode 所直接使用, 它是项目中 `CMakeFiles/MyCppTest.dir/Info.plist` 的模板文件. 我们需要更新目标来更新`Info.plist`,
+
+在修改模板后, 需要执行 `cmake ..` 使之生效. 
+
+### 添加宏和include路径 
+
+如果有遇到头文件找不到的情况, 可以参考
+[target_include_directories](https://cmake.org/cmake/help/v3.0/command/target_include_directories.html).
+
+通过 [target_compile_definitions](https://cmake.org/cmake/help/v3.0/command/target_compile_definitions.html) 可以添加宏. 
+
 ## CMake 帮助
 
 * CMake 官网: [cmake.org](https://cmake.org/)

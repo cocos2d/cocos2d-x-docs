@@ -6,7 +6,8 @@
         "search-title",
         "anchorjs",
         "toggle-chapters",
-        "sharing"
+        "sharing",
+        "tabs"
     ],
     "styles": {
         "website": "./styles/website.css"

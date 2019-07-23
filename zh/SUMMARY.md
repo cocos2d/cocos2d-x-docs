@@ -113,6 +113,7 @@
   - [Linux 平台](installation/Linux.md)
   - [Windows 平台](installation/Windows.md)
   - [CMake 指南](installation/CMake-Guide.md)
+  - [Hello World](installation/quick-start.md)
 
 - [引擎工具](editors_and_tools/cocosCLTool.md)
   - [cocos 命令](editors_and_tools/cocosCLTool.md)
