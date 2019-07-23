@@ -4,7 +4,7 @@
 
 本文档就是最好的入门学习资源，其它一些有用的资源如下：
 
-- [Cocos官网](//www.cocos.com/)
+- [Cocos官网](https://www.cocos.com/)
 - [中文社区](https://forum.cocos.com)
 - [引擎官方测试项目](https://github.com/cocos2d/cocos2d-x/tree/v3/tests)
 
