@@ -1,5 +1,6 @@
 # Cocos2d-x 文档
 
+
 ## 新手入门
 
 - [了解引擎](index.md)
@@ -7,7 +8,6 @@
   - [学习资源](about/learn.md)
   - [获取帮助](about/help.md)
   - [参与开发](about/how.md)
-
 - [基本概念](basic_concepts/index.md)
   - [导演(Director)](basic_concepts/director.md)
   - [场景(Scene)](basic_concepts/scene.md)
@@ -17,6 +17,12 @@
   - [节点关系](basic_concepts/parent_child.md)
   - [日志输出](basic_concepts/logging.md)
 
+- [升级指南](upgradeGuide/index.md)
+  - [范例](upgradeGuide/tutorials.md)
+    - [例1 Sprite及TriangleCommand教程](upgradeGuide/spriteTutorial.md)
+    - [例2 CustomCommand教程](upgradeGuide/customCommandTutorial.md)
+    - [例3 如何设置全局状态](upgradeGuide/globalStatus.md)
+
 ## 基本功能
 
 - [精灵(Sprite)](sprites/index.md)
@@ -25,16 +31,13 @@
     - [使用精灵缓存](sprites/spriteframe_cache.md)
   - [精灵控制](sprites/manipulation.md)
   - [多边形精灵](sprites/polygon.md)
-
 - [动作(Action)](actions/index.md)
   - [基本动作](actions/basic.md)
   - [动作序列](actions/sequences.md)
   - [动作的克隆和倒转](actions/sequence_internals.md)
-
 - [场景(Scene)](scenes/index.md)
   - [场景创建](scenes/creating.md)
   - [场景切换](scenes/transitioning.md)
-
 - [UI 组件](ui_components/index.md)
   - [标签(Label)](ui_components/labels.md)
   - [菜单(Menu)](ui_components/menus.md)
@@ -85,7 +88,6 @@
   - [背景音乐](audio/playing.md)
   - [声音控制](audio/operations.md)
   - [高级功能](audio/advanced.md)
-  - [Audio Engine TODO](audio/engines.md)
 
 - [高级话题](advanced_topics/index.md)
   - [文件接入](advanced_topics/filesystem.md)
@@ -94,6 +96,10 @@
   - [图形性能优化](advanced_topics/optimizing.md)
   - [着色器和材质](advanced_topics/shaders.md)
   - [SQLite 集成 TODO](advanced_topics/sqlite.md)
+
+
+- [如何从旧版本迁移](apichange/index.md)
+  - [V4 API 变更](apichange/api_change_v4.md)
 
 ## 环境与工具
 
