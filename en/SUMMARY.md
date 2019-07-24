@@ -1,5 +1,12 @@
 # Cocos2d-x Documentation
 
+- [v4 Upgrade Guide](upgradeGuide/index.md)
+  - [Examples](upgradeGuide/tutorials.md)
+    - [Sprite & TriangleCommand](upgradeGuide/spriteTutorial.md)
+    - [CustomCommand](upgradeGuide/customCommandTutorial.md)
+    - [Global Status](upgradeGuide/globalStatus.md)
+    - [v4 API Changes](apichange/api_change_v4.md)
+
 -  [Getting Started](index.md)
     - [About Cocos2d-x](about/getting_started.md)
     - [Why Cocos2d-x](about/why.md)
@@ -126,4 +133,8 @@
     - [Dr. Mario in Cocos Creator](tutorials/dr-mario-style-game.md)
 
 -  [FAQ of Solutions](faq/index.md)
-    -  [FAQ](faq/index.md)
+    - [Android](faq/android.md)
+    - [CMake](faq/cmake.md)
+    - [Linux](faq/linux.md)
+    - [MacOS](faq/macos.md)
+    - [Windows](faq/windows.md)

@@ -1,6 +1,6 @@
-# Cocos2d-x Docs
+# Cocos2d-x v4 Docs
 
-## Q3 2019 r.1
+## Q3 2019 r.2
 =======
 
 __Authors:__ SlackMoehrle, Minggo, Walzer, Jare
@@ -11,6 +11,11 @@ Please provide feedback for this guide on [GitHub](https://github.com/cocos2d/co
 
 For offline viewing, you can download a copy of our:
 
+  - [Creator 1.9](https://docs.cocos2d-x.org/creator_1.9_docs.tar.gz)
+  - [Creator 1.10](https://docs.cocos2d-x.org/creator_1.10_docs.tar.gz)
+  - [Creator 2.0](https://docs.cocos2d-x.org/creator_2.0_docs.tar.gz)
+  - [Creator 2.1](https://docs.cocos2d-x.org/creator_2.1_docs.tar.gz)
+  - [Creator 2.2](https://docs.cocos2d-x.org/creator_2.2_docs.tar.gz)
   - [deprecated legacy documentation](https://docs.cocos2d-x.org/manual.tar.gz)
   - [deprecated WIKI](https://docs.cocos2d-x.org/wiki.tar.gz)
-  - [latest API Reference](https://docs.cocos2d-x.org/current-api-reference.tar.gz)
+  - [Cocos2d-x Latest API Reference](https://docs.cocos2d-x.org/current-api-reference.tar.gz)

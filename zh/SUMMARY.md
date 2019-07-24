@@ -119,4 +119,8 @@
   - [Creator to Cocos2d-x 插件](editors_and_tools/creator_to_cocos2dx.md)
 
 - [解决方案常见问题](faq/index.md)
-  - [常问问题](faq/index.md)
+  - [Android](faq/android.md)
+  - [CMake](faq/cmake.md)
+  - [Linux](faq/linux.md)
+  - [MacOS](faq/macos.md)
+  - [Windows](faq/windows.md)

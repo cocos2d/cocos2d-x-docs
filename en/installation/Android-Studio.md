@@ -70,4 +70,4 @@ There are a few required steps to build in release mode:
   Note: It is important to note that __Android Studio__ uses a location to install __SDK versions__ and __build tools__ that is not the same as if you were doing command-line development. Double check that you have everything you need installed from inside __Android Studio__.
 
 ## Troubleshooting
-Please see this [F.A.Q](../faq/index.md#Android) for troubleshooting help.
+Please see this [F.A.Q](../faq/android.md) for troubleshooting help.
