@@ -1,6 +1,6 @@
 # Cocos2d-x v4 Docs
 
-## Q3 2019 r.1
+## Q3 2019 r.2
 =======
 
 __Authors:__ SlackMoehrle, Minggo, Walzer, Jare

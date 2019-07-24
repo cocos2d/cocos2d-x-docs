@@ -133,4 +133,8 @@
     - [Dr. Mario in Cocos Creator](tutorials/dr-mario-style-game.md)
 
 -  [FAQ of Solutions](faq/index.md)
-    -  [FAQ](faq/index.md)
+    - [Android](faq/android.md)
+    - [CMake](faq/cmake.md)
+    - [Linux](faq/linux.md)
+    - [MacOS](faq/macos.md)
+    - [Windows](faq/windows.md)
