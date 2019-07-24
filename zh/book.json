@@ -32,6 +32,21 @@
                     }
                 ]
             }
+        ],
+        "version": [
+            {
+                "name": "3.x",
+                "links": [
+                    {
+                        "name": "3.x",
+                        "link": "https://docs.cocos2d-x.org/cocos2d-x/v3/en"
+                    },
+                    {
+                        "name": "4.x",
+                        "link": "https://docs.cocos2d-x.org/cocos2d-x/v4/en"
+                    }
+                ]
+            }
         ]
     }   
 }
