@@ -350,7 +350,6 @@
 
 - 移除 ~~`newCCImage`~~
 - 移除 ~~`newImage(bool)`~~, 使用 `newImage(std::function<void (Image *)>, bool)` 替代
-- 移除 ~~`saveToFileAsNonPMA`~~, 使用 `saveToFile` 替代
 
 ### `cocos2d::Scene`
 

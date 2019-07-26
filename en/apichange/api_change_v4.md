@@ -349,7 +349,6 @@ The following is a list of major (incomplete) interface changes.
 
 - Remove ~~`newCCImage`~~
 - Remove ~~`newImage(bool)`~~, use `newImage(std::function<void (Image *)>, bool)` instead
-- Remove ~~`saveToFileAsNonPMA`~~, use `saveToFile` instead
 
 ### `cocos2d::Scene`
 
