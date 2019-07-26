@@ -54,8 +54,8 @@ Cocos2d-x 决定自 3.17 版本开始，支持 CMake 的全平台构建。支持
 ```sh
 cd cocos2d-x
 mkdir linux-build && cd linux-build
-cmake ..
-cmake --build .
+cmake .. -G"Unix MakeFiles"
+make -j 4
 ``` 
 在执行 `make -j 4` 命令之前，可以执行 `make help` 查看所有的构建目标，使用 `make <target>` 构建一个特定的目标。
 
@@ -92,7 +92,7 @@ mkdir win32-build && cd win32-build
 cmake .. -G"Visual Studio 15 2017"
 cmake --build . 
 ```
-以上命令使用 CMake 生成 Cocos2d-x 测试项目的 Visual Studio 2017 工程。生成后，在文件浏览器中找到 cocos2d-x/win32-build 目录，双击打开 __Cocos2d-x.sln__。设置 cpp-tests 为启动项目，即可正常编译运行。
+以上命令使用 CMake 生成 Cocos2d-x 测试项目的 Visual Studio 2017 工程。生成后，可以在文件浏览器中找到 cocos2d-x/win32-build 目录，双击打开 __Cocos2d-x.sln__。设置 cpp-tests 为启动项目，即可正常编译运行。
 
 另一种方式，由于 Visual Studio 2017 已经直接支持 CMake 工程，可以直接使用。详细请参考 [CMake 支持](https://docs.microsoft.com/zh-cn/cpp/ide/cmake-tools-for-visual-cpp)。
 
@@ -133,13 +133,13 @@ cmake --build .
 
 ### 如何添加 `C/C++` 源码?
 
-一般我们会把把源码放在 `Classes/` 目录下. 但如果只做这一步, 我们会遇到类似的编译报错.
+一般我们会把源码放在 `Classes/` 目录下. 但如果只做这一步, 我们会遇到类似的编译报错.
 
 ```
 __/**.cpp:__: undefined reference to `******'
 ```
 
-我们还需要在 `CMakeLists.txt` 中添加我们的源码路径
+我们还需要在 `CMakeLists.txt` 中添加新增源码的路径
 
 ```diff
 @@ -52,10 +52,12 @@ endif()
@@ -167,7 +167,7 @@ __/**.cpp:__: undefined reference to `******'
 
 在不同的平台上, 不同的构建系统 管理资源的方式会有差异. 好在 CMake 已经帮我们做了大部分工作. 我们需要做的就是把准备好的资源放到 `Resources/` 目录下.
 
-但在实际操作中, 我们在 Windows 和 Linux 上您可能还是会经常遇到类似于
+但在实际操作中, 我们可能还是在 Windows 和 Linux 上遇到类似
 ```log
 Error while loading: 'HelloWorld2.png'
 ```
@@ -188,7 +188,7 @@ Error while loading: 'HelloWorld2.png'
 
 这里的第二个目录是前者的一个副本, 如果出现变更不一致的情形就会存在*同步问题*. 
 
-在 Mac, iOS 和 Android 平台上, 构建工具(gradle,Xcode)生成的*目标*是一个程序包. 程序包中除了可执行文件,还包括了所需要的其他资源文件. 资源文件会和可执行程序一起发布, 所以目标不再依赖原本的资源文件(`Resources/`目录中的内容). 但是 在Windows和Linux上, 生成的*目标对象* 只有一个*可执行文件*, 并不包含资源文件. 比如在Windows上就只有一个`MyCppGame.exe`文件. 为了让*可执行文件*能够找到资源, 我们需要把整个 `Resources/` 拷贝到 和它同一个目录中.
+在 Mac, iOS 和 Android 平台上, 构建工具(gradle,Xcode)生成的*目标*是一个程序包. 程序包中除了可执行文件,还包括了所需要的其他资源文件. 资源文件会和可执行程序一起发布, 所以目标不再依赖原本的资源文件(`Resources/`)目录中的内容. 但是 在Windows和Linux上, 生成的*目标对象* 只有一个*可执行文件*, 并不包含资源文件. 比如在Windows上就只有一个`MyCppGame.exe`文件. 为了让*可执行文件*能够找到资源, 我们需要把整个 `Resources/` 拷贝到 和它同一个目录中.
 
 当前我们并没有提供给开发者 拷贝资源文件的 接口, 而是通过`CMake` 提供的机制把这个过程作为一个钩子交给了 本地构建工具. 
 
@@ -288,7 +288,7 @@ cp -r ~/Downloads/nanomsg-1.1.5 deps/
 
 ### 如何编辑 iOS 工程的 `Info.plist`?
 
-和修改字体的过程一样, 我们需要修改 `proj.ios_mac/ios/Info.plist`. 需要注意的是, 这个文件并没有被 Xcode 所直接使用, 它是项目中 `CMakeFiles/MyCppTest.dir/Info.plist` 的模板文件. 我们需要更新目标来更新`Info.plist`,
+和修改字体的过程一样, 我们需要修改 `proj.ios_mac/ios/Info.plist`.  这个文件并没有被 Xcode 所直接使用, 它是项目中 `CMakeFiles/MyCppTest.dir/Info.plist` 的模板文件. 我们需要更新目标来更新`Info.plist`,
 
 在修改模板后, 需要执行 `cmake ..` 使之生效. 
 
@@ -300,7 +300,7 @@ cp -r ~/Downloads/nanomsg-1.1.5 deps/
 
 - [target_include_directories](https://cmake.org/cmake/help/v3.0/command/target_include_directories.html) 添加头文件搜索目录
 
-- [target_compile_definitions](https://cmake.org/cmake/help/v3.0/command/target_compile_definitions.html) 可以添加宏定义
+- [target_compile_definitions](https://cmake.org/cmake/help/v3.0/command/target_compile_definitions.html) 添加宏定义
 
 - [target_compile_options](https://cmake.org/cmake/help/latest/command/target_compile_options.html) 添加编译参数
 
