@@ -54,7 +54,7 @@ Cocos2d-x 决定自 3.17 版本开始，支持 CMake 的全平台构建。支持
 ```sh
 cd cocos2d-x
 mkdir linux-build && cd linux-build
-cmake .. -G"Unix MakeFiles"
+cmake .. -G"Unix Makefiles"
 make -j 4
 ``` 
 在执行 `make -j 4` 命令之前，可以执行 `make help` 查看所有的构建目标，使用 `make <target>` 构建一个特定的目标。
