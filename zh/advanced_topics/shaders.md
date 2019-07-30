@@ -15,37 +15,47 @@ Cocos2d-x 使用的着色器语言是 [OpenGL ES Shading Language v1.0](https://
 开发者能为任一 Cocos2d-x 的节点对象设置自定义的着色器，添加着色器示例：
 
 ```cpp
-sprite->setGLProgramState(programState);
-sprite3d->setGLProgramState(programState);
+sprite->setProgramState(programState);
+sprite3d->setProgramState(programState);
 ```
 
-`GLProgramState` 对象包含两个重要的东西
+`ProgramState` 对象包含两个重要的东西
 
-- `GLProgram`：从根本上来说就是着色器。包含一个顶点着色器和一个像素着色器。
+- `Program`：从根本上来说就是着色器。包含一个顶点着色器和一个像素着色器。
 - 状态属性：根本上来说就是着色器的 uniform 变量
 
 如果你不熟悉 uniform 变量也不知道为什么需要它，请参考刚才提到的 [语言规范](https://www.khronos.org/files/opengles_shading_language.pdf)
 
-可以很容易的将 uniform 变量设置到  `GLProgramState`：
+可以很容易的将 uniform 变量设置到  `ProgramState`：
 
 ```cpp
-glProgramState->setUniformFloat("u_progress", 0.9);
-glProgramState->setUniformVec2("u_position", Vec2(x,y));
-glProgramState->setUniformMat4("u_transform", matrix);
+float progress = 0.9;
+Vec2 position = Vec2(x, y);
+Mat4 transform = ...;
+
+auto locOfProgress = programState->getUniformLocation("u_progress");
+auto locOfPosition = programState->getUniformLocation("u_position");
+auto locOfTransform = programState->getUniformLocation("u_transform");
+
+programState->setUniform(locOfProgress, &progress, sizof(progress));
+programState->setUniform(locOfPosition, &position, sizof(position));
+programState->setUniform(locOfTransform, &transform , sizof(transform));
 ```
 
 你还可以将一个回调函数设置成 uniform 变量，下面是一个 lambda 表达式作为回调函数的例子：
 
 ```cpp
-glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
+auto locOfProgress = programState->getUniformLocation("u_progress");
+
+programState->setCallbackUniform(locOfProgress, [](ProgramState* programState, const UniformLocation &uniform)
 {
     float random = CCRANDOM_0_1();
-    glProgram->setUniformLocationWith1f(uniform->location, random);
+    programState->setUniform(uniform, &random, sizeof(random));
 }
 );
 ```
 
-虽然可以手动设置 `GLProgramState` 对象，但更简单的方法是使用材质对象。
+虽然可以手动设置 `ProgramState` 对象，但更简单的方法是使用材质对象。
 
 ## 什么是材质
 
@@ -154,7 +164,7 @@ material->setTechnique("normal");
 
 - `RenderState`：包含 GPU 状态信息，如 _depthTest_, _cullFace_,
     _stencilTest_，等
-- `GLProgramState`：包含要使用的着色器，和一些 uniform 变量
+- `ProgramState`：包含要使用的着色器，和一些 uniform 变量
 
 ### 材质文件格式
 
@@ -613,31 +623,29 @@ __数据类型__:
 - scalar 代表标量，可以用浮点型(float)，整形(int)，布尔型(bool)
 - vector 代表矢量，用逗号分隔的一系列浮点数表示
 
-### 预定义的 uniform 变量
+### 内建 uniform 变量名
 
-下面是 Cocos2d-x 预定义的一些 uniform 变量，你可以在自定义的着色器中使用它们。
+下面是 Cocos2d-x 内部使用的一些 uniform 变量，你可以在自定义的着色器中使用它们。
 
-* `CC_PMatrix`: A `mat4` with the projection matrix
-* `CC_MVMatrix`: A `mat4` with the Model View matrix
-* `CC_MVPMatrix`: A `mat4` with the Model View Projection matrix
-* `CC_NormalMatrix`: A `mat4` with Normal Matrix
-* `CC_Time`: a `vec4` with the elapsed time since the game was started
-   * CC_Time[0] = time / 10;
-   * CC_Time[1] = time;
-   * CC_Time[2] = time * 2;
-   * CC_Time[3] = time * 4;
-* `CC_SinTime`: a `vec4` with the elapsed time since the game was started:
-   * CC_SinTime[0] = time / 8;
-   * CC_SinTime[1] = time / 4;
-   * CC_SinTime[2] = time / 2;
-   * CC_SinTime[3] = sinf(time);
-* `CC_CosTime`: a `vec4` with the elapsed time since the game was started:
-   * CC_CosTime[0] = time / 8;
-   * CC_CosTime[1] = time / 4;
-   * CC_CosTime[2] = time / 2;
-   * CC_CosTime[3] = cosf(time);
-* `CC_Random01`: A `vec4` with four random numbers between 0.0f and 1.0f
-* `CC_Texture0`: A `sampler2D`
-* `CC_Texture1`: A `sampler2D`
-* `CC_Texture2`: A `sampler2D`
-* `CC_Texture3`: A `sampler2D`
+* `u_PMatrix`: A `mat4` with the projection matrix
+* `u_MVMatrix`: A `mat4` with the Model View matrix
+* `u_MVPMatrix`: A `mat4` with the Model View Projection matrix
+* `u_NormalMatrix`: A `mat4` with Normal Matrix
+* `u_Time`: a `vec4` with the elapsed time since the game was started
+   * u_Time[0] = time / 10;
+   * u_Time[1] = time;
+   * u_Time[2] = time * 2;
+   * u_Time[3] = time * 4;
+* `u_SinTime`: a `vec4` with the elapsed time since the game was started:
+   * u_SinTime[0] = time / 8;
+   * u_SinTime[1] = time / 4;
+   * u_SinTime[2] = time / 2;
+   * u_SinTime[3] = sinf(time);
+* `u_CosTime`: a `vec4` with the elapsed time since the game was started:
+   * u_CosTime[0] = time / 8;
+   * u_CosTime[1] = time / 4;
+   * u_CosTime[2] = time / 2;
+   * u_CosTime[3] = cosf(time);
+* `u_Random01`: A `vec4` with four random numbers between 0.0f and 1.0f
+* `u_texture`: A `sampler2D`
+* `u_texture1`: A `sampler2D`
