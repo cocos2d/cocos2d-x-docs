@@ -11,7 +11,7 @@ At WWDC 2014, Apple introduced a new graphics technology, [Metal](https://develo
 
 A [CMake](../installation/CMake-Guide.md) tutorial is available.
 
-For more detailed interface changes, please refer to [API Reference](https://docs.cocos2d-x.org/api-ref/index.html).
+For more detailed interface changes, please refer to [API Reference](../apichange/api_change_v4.md).
 
 ## Director
 

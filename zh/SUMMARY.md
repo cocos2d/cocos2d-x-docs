@@ -22,6 +22,7 @@
     - [例1 Sprite及TriangleCommand教程](upgradeGuide/spriteTutorial.md)
     - [例2 CustomCommand教程](upgradeGuide/customCommandTutorial.md)
     - [例3 如何设置全局状态](upgradeGuide/globalStatus.md)
+    - [V4 API 变更](apichange/api_change_v4.md)
 
 ## 基本功能
 
@@ -96,10 +97,6 @@
   - [图形性能优化](advanced_topics/optimizing.md)
   - [着色器和材质](advanced_topics/shaders.md)
   - [SQLite 集成 TODO](advanced_topics/sqlite.md)
-
-
-- [如何从旧版本迁移](apichange/index.md)
-  - [V4 API 变更](apichange/api_change_v4.md)
 
 ## 环境与工具
 
