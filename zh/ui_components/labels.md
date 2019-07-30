@@ -86,7 +86,7 @@ myLabel->enableShadow();
 描边效果:
 
 ```cpp
-auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
+auto myLabel = Label::createWithTTF("My Label Text", "myFont.ttf", 16);
 
 // outline effect is TTF only, specify the outline color desired
 myLabel->enableOutline(Color4B::WHITE, 1));
@@ -97,7 +97,7 @@ myLabel->enableOutline(Color4B::WHITE, 1));
 发光效果:
 
 ```cpp
-auto myLabel = Label::createWithTTF("myFont.ttf", "My Label Text", 16);
+auto myLabel = Label::createWithTTF("My Label Text", "myFont.ttf", 16);
 
 // glow effect is TTF only, specify the glow color desired.
 myLabel->enableGlow(Color4B::YELLOW);
