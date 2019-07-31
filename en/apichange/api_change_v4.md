@@ -146,8 +146,8 @@ The following is a list of major (incomplete) interface changes.
 
 - Remove ~~`create(const std::string &, const std::string &, float, const cocos2d::Size &, cocos2d::TextHAlignment, cocos2d::TextVAlignment)`~~
 - Remove ~~`getCommonLineHeight`~~, use `getLineHeight` instead.
-- Remove ~~`getFontDefinition`~~, use `onTouchBegan` instead.
-- Remove ~~`setFontDefinition`~~, use `onTouchBegan` instead.
+- Remove ~~`getFontDefinition`~~.
+- Remove ~~`setFontDefinition`~~.
 - Added `setProgramState`
 
 ### `cocos2d::Layer`
