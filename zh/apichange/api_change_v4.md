@@ -146,8 +146,8 @@
 
 - 移除 ~~`create(const std::string &, const std::string &, float, const cocos2d::Size &, cocos2d::TextHAlignment, cocos2d::TextVAlignment)`~~
 - 移除 ~~`getCommonLineHeight`~~, 使用 `getLineHeight` 替代.
-- 移除 ~~`getFontDefinition`~~, 使用 `onTouchBegan` 替代.
-- 移除 ~~`setFontDefinition`~~, 使用 `onTouchBegan` 替代.
+- 移除 ~~`getFontDefinition`~~
+- 移除 ~~`setFontDefinition`~~
 - 新增 `setProgramState`
 
 ### `cocos2d::Layer`
