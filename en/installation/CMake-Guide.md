@@ -57,16 +57,6 @@ The default build is for running on actual iOS hardware, if you want to run in t
 
 ### Android Studio
 
-We use the Gradle for Android applications, and Gradle use cmake to build the native code, see  [gradle.properties](https://github.com/cocos2d/cocos2d-x/blob/84be684e3858393a6f3efc50e3f95d4e0ac92a20/tests/cpp-empty-test/proj.android/gradle.properties#L38): `PROP_NDK_MODE`, it controls how native builds work.
-
-```sh
-# android native code build type
-# none, native code will never be compiled.
-# cmake, native code will be compiled by CMakeLists.txt
-# ndk-build, native code will be compiled by Android.mk
-PROP_BUILD_TYPE=ndk-build
-```
-
 If you want to add cmake build arguments, please add it at [external Native Build](https://github.com/cocos2d/cocos2d-x/blob/84be684e3858393a6f3efc50e3f95d4e0ac92a20/tests/cpp-empty-test/proj.android/app/build.gradle#L25) block of __app/build.gradle__ file.
 
 <!--## Prebuilt libraries feature
