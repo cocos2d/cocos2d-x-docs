@@ -1,4 +1,4 @@
-# Cocos2d-x v3 Docs
+# Cocos2d-x v4 Docs
 
 ## Q3 2019 r.2
 =======
@@ -10,8 +10,6 @@ __Special Thanks:__ To our users! Without you there is no reason to even write t
 Please provide feedback for this guide on [GitHub](https://github.com/cocos2d/cocos2d-x-docs)
 
 For offline viewing, you can download a copy of our:
-
-  For offline viewing, you can download a copy of our:
 
   - [Creator 1.9](https://docs.cocos2d-x.org/creator_1.9_docs.tar.gz)
   - [Creator 1.10](https://docs.cocos2d-x.org/creator_1.10_docs.tar.gz)

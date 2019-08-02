@@ -12,16 +12,18 @@ auto textureCube = TextureCube::create("skybox/left.jpg",  "skybox/right.jpg", "
 
 // set cube map texture parameters
 Texture2D::TexParams tRepeatParams;
-tRepeatParams.magFilter = GL_NEAREST;
-tRepeatParams.minFilter = GL_NEAREST;
-tRepeatParams.wrapS = GL_MIRRORED_REPEAT;
-tRepeatParams.wrapT = GL_MIRRORED_REPEAT;
+tRepeatParams.magFilter = backend::SamplerFilter::LINEAR;;
+tRepeatParams.minFilter = backend::SamplerFilter::LINEAR;;
+tRepeatParams.sAddressMode = backend::SamplerAddressMode::MIRROR_REPEAT;
+tRepeatParams.tAddressMode = backend::SamplerAddressMode::MIRROR_REPEAT;
 textureCube->setTexParameters(tRepeatParams);
 
 // create and set our custom shader
-auto shader = GLProgram::createWithFilenames("cube_map.vert", "cube_map.frag");
-auto _state = GLProgramState::create(shader);
+auto vertShader = FileUtils::getStringFromFile("cube_map.vert");
+auto fragShader = FileUtils::getStringFromFile("cube_map.frag");
+auto programState = new backend::ProgramState(vertShader.c_str(), fragShader.c_str());
 
 // bind cube map texture to uniform
-state->setUniformTexture("u_cubeTex", textureCube);
+auto cubTexLoc = programState->getUniformLocation("u_cubeTex");
+programState->setTexture(cubTexLoc ,0, textureCube->getBackendTexture());
 ```
