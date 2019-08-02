@@ -1,8 +1,7 @@
 # CMake Guide
-
 __CMake__ is an open-source, cross-platform family of tools designed to build, test and package software. __CMake__ is used to control the software compilation process using simple platform and compiler independent configuration files, and generates native makefiles and workspaces that can be used in the compiler environment of your choice.
 
-## Requirement
+## Requirements
 
 1. Open your terminal and execute:
   ```sh
@@ -10,11 +9,12 @@ __CMake__ is an open-source, cross-platform family of tools designed to build, t
   ```
 If the __CMake__ version is lower than __3.1__, __please upgrade__.
 
-2. You should use __out-of-source__ builds, this means you need to create a different directory than __cocos2d-x__ to execute the `cmake` command.
+2. You should use __out-of-source__ builds, this means you need to create a different directory than __Cocos2d-x__ to execute the `cmake` command.
 
 ## Step by Step
 
 ### Linux
+To compile __Cocos2d-x__ for Linux:
 
 ```sh
 cd cocos2d-x
@@ -26,6 +26,7 @@ make
 Execute `make help` to see all build targets, `make <target>` build specified target
 
 ### Generate Visual Studio projects
+To generate a Visual Studio project to compile __Cocos2d-x__:
 
 ```sh
 cd cocos2d-x
@@ -36,6 +37,7 @@ cmake .. -G"Visual Studio 15 2017" -Tv141
 Execute `cmake --build .` to compile, or open __Cocos2d-x.sln__ in Explorer to use the generated project.
 
 ### Generate macOS Project
+To generate an XCode project to compile __Cocos2d-x__:
 
 ```sh
 cd cocos2d-x
@@ -45,7 +47,7 @@ open Cocos2d-x.xcodeproj
 ```
 
 ### Generate iOS Project
-
+To generate an XCode project to compile __Cocos2d-x__:
 ```sh
 cd cocos2d-x
 mkdir ios-build && cd ios-build
