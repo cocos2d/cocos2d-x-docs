@@ -11,6 +11,8 @@ At WWDC 2014, Apple introduced a new graphics technology, [Metal](https://develo
 
 A [CMake](../installation/CMake-Guide.md) tutorial is available.
 
+About How to [migrate](migration.md).
+
 For more detailed interface changes, please refer to [API Reference](../apichange/api_change_v4.md).
 
 ## Director
