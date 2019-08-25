@@ -6,7 +6,8 @@
     - [CustomCommand](upgradeGuide/customCommandTutorial.md)
     - [Global Status](upgradeGuide/globalStatus.md)
     - [v4 API Changes](apichange/api_change_v4.md)
-
+- [How to migrate](upgradeGuide/migration.md)
+  
 -  [Getting Started](index.md)
     - [About Cocos2d-x](about/getting_started.md)
     - [Why Cocos2d-x](about/why.md)
