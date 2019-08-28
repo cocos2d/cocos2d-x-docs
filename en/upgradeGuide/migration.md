@@ -1,8 +1,18 @@
 # Overview
 
-A simple guide for how to migrate from v4 engine into v3 using cmake and xcode.
+There are mainly two scenarios needs for you to go on this workaround.
+
+- Scenario 1
+
+  Imagine you already have your own project with a v3 engine embedded, and you want to upgrade v3 engine to new v4, please go to [v3 -> v4](#v3---v4).
+
+- Scenario 2
+
+  Imagine that you want to start a new game with v4 engine from scratch, i.e. use `cocos new` to create a template project. Besides, you may need cocoapods to manage some dependency for certain reason, please go to [Using cmake and cocoapods](#using-cmake-and-cocoapods).
 
 # Step by Step
+
+## v3 -> v4
 
 1. fetch and pull latest [v4](https://github.com/cocos2d/cocos2d-x/tree/v4) branch.
 
@@ -68,9 +78,54 @@ A simple guide for how to migrate from v4 engine into v3 using cmake and xcode.
 
 8. compile and run.
 
-   
+##  Using cmake and cocoapods
 
- 
+1. fetch and pull latest [v4](https://github.com/cocos2d/cocos2d-x/tree/v4) branch.
+
+2. [use cmake to generate project](https://github.com/cocos2d/cocos2d-x/blob/v4/cmake/README.md#generate-macos-project).
+
+3. open new generated project, Select your target in the **TARGETS** group, go to **Build Settings** tab
+
+   - add `$(inherited)` to **Other Linker Flags** field in the **Linking** section if no exist. 
+   - add `$(inherited)` to **Header Search Paths** and **Library Search Paths** fields in the **Search Paths** if no exist.
+   - Add `$(inherited)` to **Preprocessor Macros** filed in the **Apple Clang - Preprocessing** section if no exist.
+
+4. skip this if you have already install the [CocoaPods]([https://cocoapods.org](https://cocoapods.org/).
+
+5. create a default Podfile
+
+   ```cmake
+   pod init
+   ```
+
+6.  manage your dependencies in the [Podfile](https://guides.cocoapods.org/using/the-podfile.html).
+
+7. [install the pods](https://guides.cocoapods.org/using/pod-install-vs-update.html).
+
+   ```cmake
+   pod install
+   ```
+
+8. open the `.xcworkspace` and compile it, you will get the following error message, `error: ../gamePods/Pods/Target Support Files/Pods-gamePods/Pods-gamePods.debug.xcconfig: unable to open file (in target "gamePods" in project "gamePods") (in target 'gamePods')`
+
+   To fix it, click **Pods** folder in your game project, and in the right panel you will see its location, click the folder icon, then select the correct path of **Pods** in the appeared window(Pods path is locate at the same directory as `.xcworkspace`).
+
+9. Compile again, got the new error message, `error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.`
+
+   To fix it, modify the *.xcconfig* file to move **PODS_PODFILE_DIR_PATH** and **PODS_ROOT** from last two lines to first two lines, and set the values to 
+
+   ```cmake
+   PODS_PODFILE_DIR_PATH = ${SRCROOT}/"path_of_Pods"
+   PODS_ROOT = ${SRCROOT}/"path_of_Pods"/Pods
+   ```
+
+   "path_of_Pods" specifies the path of your Pods folder. Generally it's your build directory.
+
+10. Recompile. 
+
+    Untill now, it can compile successfully.
+
+
 
 
 
