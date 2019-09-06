@@ -74,11 +74,11 @@ open Cocos2d-x.xcodeproj
 ```sh
 cd cocos2d-x
 mkdir ios-build && cd ios-build
-cmake .. -GXcode -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake
+cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos
 open Cocos2d-x.xcodeproj
 ```
 
-默认构建的是为运行在 iOS 设备的工程，如果想构建运行在模拟器的工程，请加参数 `-DIOS_PLATFORM=SIMULATOR` 或 `-DIOS_PLATFORM=SIMULATOR64`。
+参数`-DCMAKE_OSX_SYSROOT=iphoneos`是可选的，默认构建的是为运行在 iOS 设备的工程。如果想构建运行在模拟器的工程，请加参数 `-DCMAKE_OSX_SYSROOT=iphonesimulator`。 需要注意的是，只有在 XCode 11 之后的模拟器才能支持运行 Apple Metal 应用。 
 
 ### Android
 
