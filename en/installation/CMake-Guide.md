@@ -51,11 +51,11 @@ To generate an XCode project to compile __Cocos2d-x__:
 ```sh
 cd cocos2d-x
 mkdir ios-build && cd ios-build
-cmake .. -GXcode -DCMAKE_TOOLCHAIN_FILE=../cmake/ios.toolchain.cmake
+cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos
 open Cocos2d-x.xcodeproj
 ```
 
-The default build is for running on actual iOS hardware, if you want to run in the simulator, please add `-DIOS_PLATFORM=SIMULATOR` for architecture i386 or `-DIOS_PLATFORM=SIMULATOR64` for x86_64.
+The parameter `-DCMAKE_OSX_SYSROOT=iphoneos` is optional, it generates a build for running on the iOS device. If you want to run in the simulator, please add `-DCMAKE_OSX_SYSROOT=iphonesimulator` instead, but remember you can't run a metal-support app in the simulator until Xcode 11.
 
 ### Android Studio
 
