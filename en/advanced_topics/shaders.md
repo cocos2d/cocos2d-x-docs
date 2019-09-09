@@ -26,38 +26,39 @@ for 3d objects, and so on.
 Users can change the predefined shaders from any Cocos2d-x `Node` by calling:
 
 ```cpp
-sprite->setGLProgramState(programState);
-sprite3d->setGLProgramState(programState);
+sprite->setProgramState(programState);
+sprite3d->setProgramState(programState);
 ```
 
-The `GLProgramState` object contains two important things:
+The `ProgramState` object contains two important things:
 
-- A `GLProgram`: Basically this is _the_ shader. It contains a vertex and fragment shader.
+- A `Program`: Basically this is _the_ shader. It contains a vertex and fragment shader.
 - And the __state__, which basically are the uniforms of the shader.
 
 In case you are not familiar with the term _uniform_ and why it is needed, please
 refer to the [OpenGL Shading Language Specification](https://www.khronos.org/files/opengles_shading_language.pdf)
 
-Setting uniforms to a `GLProgramState` is as easy as this:
+Setting uniforms to a `ProgramState` is as easy as this:
 
 ```cpp
-glProgramState->setUniformFloat("u_progress", 0.9);
-glProgramState->setUniformVec2("u_position", Vec2(x,y));
-glProgramState->setUniformMat4("u_transform", matrix);
+auto mvpMatrixLocation = _programState->getUniformLocation("u_MVPMatrix");
+const auto& projectionMat = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+_programState->setUniform(mvpMatrixLocation, projectionMat.m, sizeof(projectionMat.m)));
 ```
 
 You can even set callbacks as a uniform value:
 
 ```cpp
-glProgramState->setUniformCallback("u_progress", [](GLProgram* glProgram, Uniform* uniform)
+auto location = _programState->getUniformLocation("u_progress");
+_programState->setCallbackUniform(location, [](backend::ProgramState *programState, backend::UniformLocation uniform)
 {
     float random = CCRANDOM_0_1();
-    glProgram->setUniformLocationWith1f(uniform->location, random);
+    programState->setUniform(uniform, &random, sizeof(random));
 }
 );
 ```
 
-And although it is possible to set `GLProgramState` objects manually, an easier
+And although it is possible to set `ProgramState` objects manually, an easier
 way to do it is by using `Material` objects.
 
 ### What is a Material
@@ -644,33 +645,10 @@ __Types__:
  <li class=MsoNormal><a name=vector><span class=Non-literalCode>vector</span></a><span
      class=Non-literalCode> </span>is a comma separated list of floats.</li>
 </ul>
+### Predefined macros
+
+When running on metal framework, a specific macro definition `#define METAL\n` was insert at head of fragment shader. As for non-metal situation, such as running on android, the macro definition `#version 100\n precision highp float;\n precision highp int;\n` was inserted to the head of vertex shader and the macro definition `precision highp float;\n precision highp int;\n` was inserted to the head of fragment shader.
 
 ### Predefined uniforms
 
-The following are predefined uniforms used by Cocos2d-x that can be used in
-your shaders:
-
-* `CC_PMatrix`: A `mat4` with the projection matrix
-* `CC_MVMatrix`: A `mat4` with the Model View matrix
-* `CC_MVPMatrix`: A `mat4` with the Model View Projection matrix
-* `CC_NormalMatrix`: A `mat4` with Normal Matrix
-* `CC_Time`: a `vec4` with the elapsed time since the game was started
-   * CC_Time[0] = time / 10;
-   * CC_Time[1] = time;
-   * CC_Time[2] = time * 2;
-   * CC_Time[3] = time * 4;
-* `CC_SinTime`: a `vec4` with the elapsed time since the game was started:
-   * CC_SinTime[0] = time / 8;
-   * CC_SinTime[1] = time / 4;
-   * CC_SinTime[2] = time / 2;
-   * CC_SinTime[3] = sinf(time);
-* `CC_CosTime`: a `vec4` with the elapsed time since the game was started:
-   * CC_CosTime[0] = time / 8;
-   * CC_CosTime[1] = time / 4;
-   * CC_CosTime[2] = time / 2;
-   * CC_CosTime[3] = cosf(time);
-* `CC_Random01`: A `vec4` with four random numbers between 0.0f and 1.0f
-* `CC_Texture0`: A `sampler2D`
-* `CC_Texture1`: A `sampler2D`
-* `CC_Texture2`: A `sampler2D`
-* `CC_Texture3`: A `sampler2D`
+Predefined uniforms were removed form v4.
