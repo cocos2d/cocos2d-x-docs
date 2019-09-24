@@ -168,7 +168,7 @@ renderer->setWinding(winding);
 
 # Set render target
 
-设置用于保存和恢复 attachment 的回调函数。
+Set callbacks to execute some operations before start and after finish rendered to a texture.
 
 ```c++
 void Demo::init()

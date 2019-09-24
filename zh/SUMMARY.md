@@ -1,8 +1,14 @@
 # Cocos2d-x 文档
 
-
 ## 新手入门
 
+- [v4 升级指南](upgradeGuide/index.md)
+  - [范例](upgradeGuide/tutorials.md)
+    - [例1 Sprite及TriangleCommand教程](upgradeGuide/spriteTutorial.md)
+    - [例2 CustomCommand教程](upgradeGuide/customCommandTutorial.md)
+    - [例3 如何设置全局状态](upgradeGuide/globalStatus.md)
+  - [V4 API 变更](apichange/api_change_v4.md)
+  - [如何迁移](upgradeGuide/migration.md)
 - [了解引擎](index.md)
   - [引擎优势](about/index.md)
   - [学习资源](about/learn.md)
@@ -16,13 +22,6 @@
   - [序列(Sequence)](basic_concepts/sequences.md)
   - [节点关系](basic_concepts/parent_child.md)
   - [日志输出](basic_concepts/logging.md)
-
-- [升级指南](upgradeGuide/index.md)
-  - [范例](upgradeGuide/tutorials.md)
-    - [例1 Sprite及TriangleCommand教程](upgradeGuide/spriteTutorial.md)
-    - [例2 CustomCommand教程](upgradeGuide/customCommandTutorial.md)
-    - [例3 如何设置全局状态](upgradeGuide/globalStatus.md)
-    - [V4 API 变更](apichange/api_change_v4.md)
 
 ## 基本功能
 
