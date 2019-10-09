@@ -38,6 +38,8 @@
    your_v4_path/cocos2d-x/external/bullet/include/bullet
    ```
 
+   对于每个 target 的搜索路径，可以通过添加 `$(inherited)` 继承来自 project 的设置。
+
 6. 选中 **TARGETS** 组, 依次找到 **Build Settings** —> **Linking** —> **Other Linker Flags**，
 
    展开 **Other Linker Flags**，双击 **Debug** 或 **Release**。
@@ -45,7 +47,7 @@
    在弹出的窗口中，参考下表填入 v4 引擎依赖的库文件。
 
    ```c
-   //for you reference
+   //for you reference, following external library is target for iOS
    your_v4_path/cocos2d-x/external/Box2D/prebuilt/ios/libbox2d.a
    your_v4_path/cocos2d-x/external/jpeg/prebuilt/ios/libjpeg.a
    your_v4_path/cocos2d-x/external/freetype2/prebuilt/ios/libfreetype.a
@@ -56,7 +58,6 @@
    your_v4_path/cocos2d-x/external/bullet/prebuilt/ios/libLinearMath.a
    your_v4_path/cocos2d-x/external/bullet/prebuilt/ios/libBulletMultiThreaded.a
    your_v4_path/cocos2d-x/external/bullet/prebuilt/ios/libMiniCL.a
-   your_v4_path/cocos2d-x/external/tiff/prebuilt/ios/libtiff.a
    your_v4_path/cocos2d-x/external/websockets/prebuilt/ios/libwebsockets.a
    your_v4_path/cocos2d-x/external/uv/prebuilt/ios/libuv_a.a
    your_v4_path/cocos2d-x/external/openssl/prebuilt/ios/libssl.a
@@ -66,13 +67,14 @@
    your_v4_path/cocos2d-x/external/png/prebuilt/ios/libpng.a
    your_v4_path/cocos2d-x/external/curl/prebuilt/ios/libcurl.a
    your_v4_path/cocos2d-x/external/openssl/prebuilt/ios/libcrypto.a
-   -framework Metal
+   your_v4_path/cocos2d-x/external/chipmunk/prebuilt/ios/libchipmunk.a
+   your_v4_path/cocos2d-x/external/glfw3/prebuilt/ios/libglfw3.a
    ```
-
+   
 7. 选中 **TARGETS** 组, 找到 **Build Phases**
 
    - 展开 **Target Dependecies**, 单击 "+" 按钮。在弹出的窗口中找到 **cocos2d**，单击 **Add** 添加到项目中。
-   - 展开 **Link Binary With Libraries**, 单击"+" 按钮。在弹出的窗口中添加 **libcocos2d.a** 以及 第三方库（通常包含 “libext” 字样）。
+   - 展开 **Link Binary With Libraries**, 单击"+" 按钮。在弹出的窗口中添加 **Metal.framewrok**，**libcocos2d.a** 以及 第三方库（通常包含 “libext” 字样）。
 
 8. 重新编译即可。
 

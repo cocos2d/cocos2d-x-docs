@@ -40,6 +40,8 @@ There are mainly two scenarios needs for you to go on this workaround.
    your_v4_path/cocos2d-x/external/bullet/include/bullet
    ```
 
+   then you can simply add `$(inherited)` to **User Header Search Paths** of your target in the **TARGETS** group to  inherit from the project settings .
+
 6. select your target in the **TARGETS** group, then got **Build Settings** —> **Linking** —> **Other Linker Flags**
 
    Expand the **Other Linker Flags** section, double click the **Debug** or **Release**. 
@@ -47,7 +49,7 @@ There are mainly two scenarios needs for you to go on this workaround.
    In the appeared window, set the v4 needed libraries.
 
    ```c
-   //for you reference
+   //for you reference, following external library is target for iOS
    your_v4_path/cocos2d-x/external/Box2D/prebuilt/ios/libbox2d.a
    your_v4_path/cocos2d-x/external/jpeg/prebuilt/ios/libjpeg.a
    your_v4_path/cocos2d-x/external/freetype2/prebuilt/ios/libfreetype.a
@@ -58,7 +60,6 @@ There are mainly two scenarios needs for you to go on this workaround.
    your_v4_path/cocos2d-x/external/bullet/prebuilt/ios/libLinearMath.a
    your_v4_path/cocos2d-x/external/bullet/prebuilt/ios/libBulletMultiThreaded.a
    your_v4_path/cocos2d-x/external/bullet/prebuilt/ios/libMiniCL.a
-   your_v4_path/cocos2d-x/external/tiff/prebuilt/ios/libtiff.a
    your_v4_path/cocos2d-x/external/websockets/prebuilt/ios/libwebsockets.a
    your_v4_path/cocos2d-x/external/uv/prebuilt/ios/libuv_a.a
    your_v4_path/cocos2d-x/external/openssl/prebuilt/ios/libssl.a
@@ -68,13 +69,17 @@ There are mainly two scenarios needs for you to go on this workaround.
    your_v4_path/cocos2d-x/external/png/prebuilt/ios/libpng.a
    your_v4_path/cocos2d-x/external/curl/prebuilt/ios/libcurl.a
    your_v4_path/cocos2d-x/external/openssl/prebuilt/ios/libcrypto.a
-   -framework Metal
+   your_v4_path/cocos2d-x/external/glfw3/prebuilt/ios/libglfw3.a
+   your_v4_path/cocos2d-x/external/chipmunk/prebuilt/ios/libchipmunk.a
    ```
-
+   
 7. select your target in the **TARGETS** group, goto **Build Phases**
 
    - expand the **Target Dependecies** section, click the "+" button. In the appeared window, find the **cocos2d** item itn the list and click the Add button.
-   - expand the **Link Binary With Libraries** section, click the "+" button. In the appeared window, add the **libcocos2d.a** and external libraries(library name start with "libext").
+   - expand the **Link Binary With Libraries** section, click the "+" button. In the appeared window, 
+     - add the **libcocos2d.a** 
+     - add external libraries(library name start with "libext")
+     - add **Metal.framework**
 
 8. compile and run.
 
