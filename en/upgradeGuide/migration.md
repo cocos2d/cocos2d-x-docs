@@ -71,15 +71,15 @@ There are mainly two scenarios needs for you to go on this workaround.
    your_v4_path/cocos2d-x/external/openssl/prebuilt/ios/libcrypto.a
    your_v4_path/cocos2d-x/external/glfw3/prebuilt/ios/libglfw3.a
    your_v4_path/cocos2d-x/external/chipmunk/prebuilt/ios/libchipmunk.a
-   -framework Metal
    ```
-
-   If `-framework Metal` no works, you can reference step 7, add the **Metal.framework** to **Link Binary With Libraries** section.
-
+   
 7. select your target in the **TARGETS** group, goto **Build Phases**
 
    - expand the **Target Dependecies** section, click the "+" button. In the appeared window, find the **cocos2d** item itn the list and click the Add button.
-   - expand the **Link Binary With Libraries** section, click the "+" button. In the appeared window, add the **libcocos2d.a** and external libraries(library name start with "libext").
+   - expand the **Link Binary With Libraries** section, click the "+" button. In the appeared window, 
+     - add the **libcocos2d.a** 
+     - add external libraries(library name start with "libext")
+     - add **Metal.framework**
 
 8. compile and run.
 

@@ -69,15 +69,12 @@
    your_v4_path/cocos2d-x/external/openssl/prebuilt/ios/libcrypto.a
    your_v4_path/cocos2d-x/external/chipmunk/prebuilt/ios/libchipmunk.a
    your_v4_path/cocos2d-x/external/glfw3/prebuilt/ios/libglfw3.a
-   -framework Metal
    ```
-
-   如果 `-framework Metal` 添加方式无法生效，可以参考步骤 7，在 **Link Binary With Libraries** 添加 **Metal.framework**。
-
+   
 7. 选中 **TARGETS** 组, 找到 **Build Phases**
 
    - 展开 **Target Dependecies**, 单击 "+" 按钮。在弹出的窗口中找到 **cocos2d**，单击 **Add** 添加到项目中。
-   - 展开 **Link Binary With Libraries**, 单击"+" 按钮。在弹出的窗口中添加 **libcocos2d.a** 以及 第三方库（通常包含 “libext” 字样）。
+   - 展开 **Link Binary With Libraries**, 单击"+" 按钮。在弹出的窗口中添加 **Metal.framewrok**，**libcocos2d.a** 以及 第三方库（通常包含 “libext” 字样）。
 
 8. 重新编译即可。
 
