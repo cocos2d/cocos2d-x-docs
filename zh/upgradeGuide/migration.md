@@ -12,33 +12,64 @@
 
 ## v3 -> v4
 
+假设当前使用的是这个工程 `v3.17.2_path/cocos2d-x/build/cocos2d_tests.xcodeproj`，并且希望将 v3 引擎升级至 v4。
+
 1. 拉取最新的 [v4](https://github.com/cocos2d/cocos2d-x/tree/v4) 分支。
 
 2. [通过 cmake 构建项目](https://github.com/cocos2d/cocos2d-x/blob/v4/cmake/README.md#generate-macos-project)。
 
 3. v4 项目工程位于 `cocos2d-x/build/engine/cocos/core/` 下。
 
-4. 打开你基于 v3 引擎开发的项目工程，右键 v3 工程，删除对 v3 工程的引用，同时将 3 中路径下的 v4 工程拖拽至此。
+   如果你想自己指定 v4 引擎的生成路径，参考如下设置：
 
-5. 选中 **PROJECT** 组, 依次找到 **Build Settings** —> **Search Paths** —> **User Header Search Paths**，
+   - 打开位于 `your_v4_path/cocos2d-x/cocos/` 路径下的 `CMakeLists.txt`，参考下图进行修改
+
+     ![image](../../en/upgradeGuide/pics/migration1.png)
+
+   ```cmake
+   cmake_minimum_required(VERSION 3.15)
+   
+   ...
+   
+   if(NOT DEFINED BUILD_ENGINE_DONE)
+       set(COCOS2DX_ROOT_PATH ${CMAKE_CURRENT_LIST_DIR}/..)
+       set(CMAKE_MODULE_PATH ${COCOS2DX_ROOT_PATH}/cmake/Modules/)
+   
+       include(CocosBuildSet)
+   endif()
+   ```
+
+   - 指定 v4 引擎项目路径
+
+     在 `your_v4_path/cocos2d-x/cocos/` 路径下，执行 CMake 命令 
+
+     ```cmake
+     cmake -B newPath/build_V4_Engine -GXcode
+     ```
+
+     其中，`-B <path-to-build>` 表示显示地指定编译路径。
+
+   - 至此，V4 引擎工程文件位于上述指定的路径下，即 `newPath/build_V4_Engine`。
+
+4. 打开你基于 v3 引擎开发的项目工程（`cocos2d_tests.xcodeproj`），右键 v3 工程，删除对 v3 工程的引用，同时将 3 中路径下的 v4 工程拖拽至此。
+
+5. 在 **PROJECT** 组选中 `cocos2d_tests`, 依次找到 **Build Settings** —> **Search Paths** —> **User Header Search Paths**，
 
    展开 **User Header Search Paths**, 鼠标双击 **Debug** 或 **Release**。
+
+   ![image-20191012152601734](../../en/upgradeGuide/pics/migration2.png)
 
    在弹出的窗口中，删除原先 v3 工程的头文件搜索路径，并参考下表填入 v4 引擎所引用的头文件路径。
 
    ```c
-   //for you reference
    your_v4_path/cocos2d-x/cocos
-   your_v4_path/cocos2d-x/cocos/editor-support
-   your_v4_path/cocos2d-x/extensions
-   your_v4_path/cocos2d-x/external
-   your_v4_path/cocos2d-x/external/chipmunk/include
-   your_v4_path/cocos2d-x/external/Box2D/include
-   your_v4_path/cocos2d-x/external/bullet/include
-   your_v4_path/cocos2d-x/external/bullet/include/bullet
    ```
 
-   对于每个 target 的搜索路径，可以通过添加 `$(inherited)` 继承来自 project 的设置。
+   ![image-20191012153348410](../../en/upgradeGuide/pics/migration3.png)
+
+   对于每个 target 的搜索路径（如 `cpp-empty-test Mac`），可以通过添加 `$(inherited)` 继承来自 project 的设置。
+
+   ![image-20191012153521537](../../en/upgradeGuide/pics/migration4.png)
 
 6. 选中 **TARGETS** 组, 依次找到 **Build Settings** —> **Linking** —> **Other Linker Flags**，
 
@@ -70,11 +101,16 @@
    your_v4_path/cocos2d-x/external/chipmunk/prebuilt/ios/libchipmunk.a
    your_v4_path/cocos2d-x/external/glfw3/prebuilt/ios/libglfw3.a
    ```
-   
+
 7. 选中 **TARGETS** 组, 找到 **Build Phases**
 
    - 展开 **Target Dependecies**, 单击 "+" 按钮。在弹出的窗口中找到 **cocos2d**，单击 **Add** 添加到项目中。
+
+     ![image-20191012153758062](../../en/upgradeGuide/pics/migration5.png)
+
    - 展开 **Link Binary With Libraries**, 单击"+" 按钮。在弹出的窗口中添加 **Metal.framewrok**，**libcocos2d.a** 以及 第三方库（通常包含 “libext” 字样）。
+
+     ![image-20191012154848840](../../en/upgradeGuide/pics/migration6.png)
 
 8. 重新编译即可。
 
