@@ -4,13 +4,33 @@
 A supported environment. See **[Installation Prerequisites](prerequisites.md)**
 
 ## Setting up Cocos2d-x
-* Download Cocos2d-x and unzip it. (maybe: ~/)
+You can get started with __Cocos2d-x__ by either downloading a self-contained
+__.zip__ from the [website](https://cocos2d-x.org/download) or by cloning our
+[GitHub Repo](https://github.com/cocos2d/cocos2d-x). Pick what works for you.
+__There is no need to do both.__ Make sure you have a working environment. This means
+a working __Python__, having run __<cocos2d-x root>/setup.py>__ and updated your
+__$PATH__.
+
+### By downloading a .zip archive
+* Download Cocos2d-x and unzip it. (maybe: c:\Users\your_user_id)
 
     ![](Windows-img/1.png "")
 
-* Make sure you have a working environment see __Prerequisites__ above. This means
-a working __Python__, having run __<cocos2d-x root>/setup.py>__ and updated your
-__$PATH__.
+### Cloning from GitHub
+Use the following commands to clone our GitHub repo and get your environment setup. If you are not familar with GitHub's workflow, [learn it](https://guides.github.com/activities/hello-world/) or download
+using the step above, __By downloading a .zip archive__.
+
+```sh
+c:\<to where you want to clone this repo>
+
+git clone git@github.com:cocos2d/cocos2d-x.git
+
+git submodule update --init
+
+git submodule update
+
+./download-deps.py
+```
 
 ## Compile and run the `cpp-tests` project
 * Open __cocos2d-win32.vc2012.sln__ in the __build__ folder
