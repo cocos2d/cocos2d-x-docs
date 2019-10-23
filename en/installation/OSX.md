@@ -33,15 +33,31 @@ git submodule update
 ```
 
 ## Build and Run
-* In __<cocos2d-x root>/build__, open __cocos2d_tests.xcodeproj__
-* Choose __cpp-tests Mac__ from targets drop-down box
-* Click __run__ to compile and run __cpp-tests__
+__Use cmake__
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir mac-build
+cd mac-build
+cmake ..
+make
+```
 
-## Running on an iOS Device
-In order to run on iOS Device an iOS Developer Program membership is needed.
-You can purchase one from Apple: [https://developer.apple.com/programs/ios/](https://developer.apple.com/programs/ios/).
-The steps to run on iOS device are the same as running in a simulator except you
-select you device from the device list.
+__Use Xcode__
+
+First use CMake to generate Xcode project,
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir mac-build
+cd mac-build
+cmake .. -GXcode
+```
+then open `cpp-tests.xcodeproj` and select `cpp-tests` to run.
+
+__Use cocos command line tools__
+```bash
+cd COCOS2DX/tests/cpp-tests
+cocos run -p mac
+```
 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our

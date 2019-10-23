@@ -2,15 +2,36 @@
 
 ## 工具准备
 
-1. Cocos2d-x v3.17，下载后解压，下载参见：[Cocos官网页面](//www.cocos.com/download)
-1. Xcode 9 下载后安装，下载参见：[Apple官网页面](https://developer.apple.com/download/more/)
+1. Cocos2d-x v4，下载后解压，下载参见：[Cocos官网页面](//www.cocos.com/download)
+1. Xcode 11 下载后安装，下载参见：[Apple官网页面](https://developer.apple.com/download/more/)
 
-## 配置步骤
+## 编译并运行
 
-1. 打开 `cocos2d-x-3.17/build/cocos2d_tests.xcodeproj`
-1. 在 Xcode 顶部工具栏选择 `cpp-tests Mac`，`My Mac`，点击运行，项目将自动编译运行，效果如图：
+__使用 cmake__
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir mac-build
+cd mac-build
+cmake ..
+make
+```
 
-    ![](iOS-img/macOS-install-run.png)
+__使用 Xcode__
+
+先用 CMake 生成 Xcode 工程,
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir mac-build
+cd mac-build
+cmake .. -GXcode
+```
+然后打开 `cpp-tests.xcodeproj`，选择 `cpp-tests` 运行.
+
+__使用 cocos 命令行工具__
+```bash
+cd COCOS2DX/tests/cpp-tests
+cocos run -p mac
+```
 
 ## 如何调试(Debug)
 

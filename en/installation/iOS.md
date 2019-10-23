@@ -38,15 +38,33 @@ See __Prerequisites__ above. This means a working __Python__, having run __<coco
 updated your __$PATH__ and run __source ~/.bash_profile__.
 
 ## Build and Run
-### iOS
-* Enter __<cocos2d-x root>/build__ and open __cocos2d_tests.xcodeproj__
-* Choose __cpp-tests iOS__ from targets drop-down box
-* Click __run__ to compile and run __cpp-tests__
 
-### macOS
-* In __<cocos2d-x root>/build__, open __cocos2d_tests.xcodeproj__
-* Choose __cpp-tests Mac__ from targets drop-down box
-* Click __run__ to compile and run __cpp-tests__
+__Use cmake__
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir ios-build
+cd ios-build
+cmake ..
+make
+```
+
+__Use Xcode__
+
+First use CMake to generate Xcode project,
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir ios-build
+cd ios-build
+cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS
+```
+then open `cpp-tests.xcodeproj` and select `cpp-tests` to run.
+
+__Use cocos command line tools__
+```bash
+cd COCOS2DX/tests/cpp-tests
+cocos run -p ios
+```
+
 
 ## Running on an iOS Device
 In order to run on iOS Device an iOS Developer Program membership is needed.
