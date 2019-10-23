@@ -7,8 +7,8 @@
 
 ## 特别推荐
 
-- Cocos2d-x 3.17 已发布，请参阅 [版本发布说明](//www.cocos.com/1462)。
-- 3.17 支持全平台的 CMake 构建，请参阅 [CMake 指南](installation/CMake-Guide.md)
+- Cocos2d-x v4 已发布，请参阅 [版本发布说明](//www.cocos.com/1462)。
+- v4 支持全平台的 CMake 构建，请参阅 [CMake 指南](installation/CMake-Guide.md)
 
 ## 快速上手
 

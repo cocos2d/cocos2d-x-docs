@@ -1,7 +1,7 @@
 ## Cocos command-line tool
 
 ### What is the `cocos` command-line tool?
-Cocos2d-x comes with a command-line tool called __cocos__. It is a cross-platform tool that allows you to create new Cocos2d-x applications as well as __run__ them and __deploy__ them. __cocos__ works for all cocos2d-x supported platforms, which include: __ios__, __android__, __mac__, __linux__, __win32__, __wp8_1__, __wp10__ and __web__. You don't need to use an IDE unless you want to. It has many options, so let's go through them grouped by function.
+Cocos2d-x comes with a command-line tool called __cocos__. It is a cross-platform tool that allows you to create new Cocos2d-x applications as well as __run__ them and __deploy__ them. __cocos__ works for all cocos2d-x supported platforms, which include: __ios__, __android__, __mac__, __linux__, and __win32__. You don't need to use an IDE unless you want to. It has many options, so let's go through them grouped by function.
 
 ### Setting up `cocos`
 it is a good idea to run __<cocos2d-x root>/setup.py__ to properly setup your

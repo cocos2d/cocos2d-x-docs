@@ -33,15 +33,32 @@ git submodule update
 ```
 
 ## Compile and run the `cpp-tests` project
-* Open __cocos2d-win32.vc2012.sln__ in the __build__ folder
 
-    ![](Windows-img/2.png "")
+__Use cmake__
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir win32-build
+cd win32-build
+cmake ..
+make
+```
 
-* Right click the __TestCpp__ project, and select __Set as StartUp Project__.
+__Use Visual Studio__
 
-    ![](Windows-img/3.png "")
+First use CMake to generate Visual Studio project,
+```bash
+cd COCOS2DX/tests/cpp-tests
+mkdir win32-build
+cd win32-build
+cmake .. -G"Visual Studio 15 2017" -Tv141
+```
+then open `cpp-tests.vsproj` and select `cpp-tests` to run.
 
-* Compile and run the __TestCpp__ project.
+__Use cocos command line tools__
+```bash
+cd COCOS2DX/tests/cpp-tests
+cocos run -p win32
+```
 
 ## Starting a new project
 Once everything above works, you can start a new project! To do this, read our
