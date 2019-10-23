@@ -28,7 +28,7 @@
 * Windows 7+
 * VS 2017+
 * CMake 3.1+
-*Python 2.7.5+, __P建议 ython 2,7.10, __而不是 Python 3+__
+* Python 2.7.5+, __P建议 ython 2,7.10, __而不是 Python 3+__
 
 #### Android
 * Python 2.7.5+, __P建议 ython 2,7.10, __而不是 Python 3+__
