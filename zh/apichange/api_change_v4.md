@@ -2,6 +2,26 @@
 
 以下内容列举了主要的(不完全)接口变更
 
+### `删除 experimental 名字空间`
+
+因删除 `experimental` 名字空间导致的接口变化：
+
+__CPP__
+
+* `cocos2d::experimental::AudioEngine` -> `cocos2d::AudioEngine`
+* `cocos2d::experimental::ui::WebView` -> `cocos2d::ui::WebView`
+* `cocos2d::experimental::ui::VideoPlayer` -> `cocos2d::ui::WebView`
+* `cocos2d::experimental::TMXLayer` -> `cocos2d::FastTMXLayer`
+* `cocos2d::experimental::TMXTileMap` -> `cocos2d::FastTMXTileMap`
+
+__Lua__
+
+* `ccexp:AudieoEngine` -> `cc:AudieoEngine`
+* `ccexp:WebView` -> `ccui:WebView`
+* `ccexp:VideoPlayer` -> `ccui:VideoPlayer`
+* `ccexp:TMXTileMap` -> `cc:FastTMXTileMap`
+* `ccexp:TMXLayer` -> `cc:FastTMXLayer`
+
 ### `cocos2d::ActionManager`
 
 - 移除 ~~`numberOfRunningActionsInTarge`~~, 使用 `getNumberOfRunningActionsInTarget` 替代. 
