@@ -2,6 +2,26 @@
 
 The following is a list of major (incomplete) interface changes.
 
+### `Remove experimental namesapce`
+
+API change because of removing `experimental` namespace:
+
+__CPP__
+
+* `cocos2d::experimental::AudioEngine` -> `cocos2d::AudioEngine`
+* `cocos2d::experimental::ui::WebView` -> `cocos2d::ui::WebView`
+* `cocos2d::experimental::ui::VideoPlayer` -> `cocos2d::ui::WebView`
+* `cocos2d::experimental::TMXLayer` -> `cocos2d::FastTMXLayer`
+* `cocos2d::experimental::TMXTileMap` -> `cocos2d::FastTMXTileMap`
+
+__Lua__
+
+* `ccexp:AudieoEngine` -> `cc:AudieoEngine`
+* `ccexp:WebView` -> `ccui:WebView`
+* `ccexp:VideoPlayer` -> `ccui:VideoPlayer`
+* `ccexp:TMXTileMap` -> `cc:FastTMXTileMap`
+* `ccexp:TMXLayer` -> `cc:FastTMXLayer`
+
 ### `cocos2d::ActionManager`
 
 - Remove ~~`numberOfRunningActionsInTarge`~~, use `getNumberOfRunningActionsInTarget` instead.
