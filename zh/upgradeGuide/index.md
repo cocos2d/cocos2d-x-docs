@@ -1,6 +1,6 @@
 # Overview
 
-在 WWDC 2014 上，Apple 为游戏开发者推出了新的图形技术 [Metal](https://developer.apple.com/documentation/metal?language=objc)。Metal 是一种用 C++ 编写的 low-level API。 它代表了 Apple 最新的图形 API 设计。与 OpenGL 不同的是，Metal 不像 OpenGL 那样是跨平台的，它是根据 Apple 最新硬件架构专门设计的 API，因此它能够为 3D 图形提高最多10倍的渲染性能。由于 Apple 声称将弃用 OpenGL，为此 V4 对 Renderer 做了适配，对于 Apple 平台，使用 Metal api 进行渲染，否则，沿用原 OpenGL ES API 渲染。
+在 WWDC 2014 上，Apple 为游戏开发者推出了新的图形技术 [Metal](https://developer.apple.com/documentation/metal?language=objc)。Metal 是一种用 C++ 编写的 low-level API。 它代表了 Apple 最新的图形 API 设计。与 OpenGL 不同的是，Metal 不像 OpenGL 那样是跨平台的，它是根据 Apple 最新硬件架构专门设计的 API，因此它能够为 3D 图形提高最多10倍的渲染性能。由于 Apple 声称将弃用 OpenGL，为此 V4 对 Renderer 做了适配，对于 Apple 平台，使用 Metal api 进行渲染。V4 需要运行在支持 Metal 的设备上，详情请参考 [Metal Wikipedia](https://en.wikipedia.org/wiki/Metal_(API)#Supported_GPUs) 。
 
 # How to run
 

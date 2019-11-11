@@ -1,5 +1,5 @@
 # Overview
-At WWDC 2014, Apple introduced a new graphics technology, [Metal](https://developer.apple.com/documentation/metal?language=objc), for game developers. Metal is a low-level API written in C++. It represents Apple's latest graphics API design. Unlike OpenGL, Metal is not cross-platform. It is an API designed specifically for Apple's latest hardware architecture, so it can boost rendering performance by up to 10x for 3D graphics. Since Apple will deprecate OpenGL, __Cocos2d-x v4__ adopts __Metal__ for it's rendering engine on Apple platforms. If metal, is unavailable on your platform, OpenGL will then be used to render.
+At WWDC 2014, Apple introduced a new graphics technology, [Metal](https://developer.apple.com/documentation/metal?language=objc), for game developers. Metal is a low-level API written in C++. It represents Apple's latest graphics API design. Unlike OpenGL, Metal is not cross-platform. It is an API designed specifically for Apple's latest hardware architecture, so it can boost rendering performance by up to 10x for 3D graphics. Since Apple will deprecate OpenGL, __Cocos2d-x v4__ adopts __Metal__ for it's rendering engine on Apple platforms. V4 only works on those devices that support Metal for iOS/macOS platforms. [See here to view the supported devices.](https://en.wikipedia.org/wiki/Metal_(API)#Supported_GPUs)
 
 # How to run
 
