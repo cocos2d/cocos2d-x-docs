@@ -107,6 +107,7 @@
     - [Optimizing Graphics](advanced_topics/optimizing.md)
     - [Shaders and Materials](advanced_topics/shaders.md)
     - [SQLite](advanced_topics/sqlite.md)
+    - [Upgrade Spine](advanced_topics/spine.md)
 
 -  [Software Installations](installation/index.md)
     - [Prerequisites](installation/prerequisites.md)

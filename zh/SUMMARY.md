@@ -96,6 +96,7 @@
   - [图形性能优化](advanced_topics/optimizing.md)
   - [着色器和材质](advanced_topics/shaders.md)
   - [SQLite 集成 TODO](advanced_topics/sqlite.md)
+  - [升级 Spine](advanced_topics/spine.md)
 
 ## 环境与工具
 
