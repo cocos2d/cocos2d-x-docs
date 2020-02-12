@@ -93,10 +93,9 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 
   ```sh
   cd cocos2d-x-root # where your cocos2d-x directory is located.
-  cd build
-  mkdir linux-build
-  cd linux-build
-  cmake ../..
+mkdir -p build/linux-build
+cd build/linux-build
+cmake ../..
   ```
 
 * When __cmake__ finishes, many files & folders will be generated in __coocs2dx_root/build/linux-build__
@@ -115,7 +114,7 @@ Cocos2d-x requires a number of dependencies be installed on your system. Please 
 * Run `cpp-tests`
 
   ```sh
-  cd cocos2dx_root/build/linux-build/bin/Debug/cpp-tests/
+  cd cocos2dx_root/build/linux-build/bin/cpp-tests/
   ./cpp-tests
   ```
 
