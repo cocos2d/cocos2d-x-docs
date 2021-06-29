@@ -25,9 +25,9 @@ cd <to where you want to clone this repo>
 
 git clone git@github.com:cocos2d/cocos2d-x.git
 
-git submodule update --init
+cd cocos2d-x
 
-git submodule update
+git submodule update --init
 
 ./download-deps.py
 ```
